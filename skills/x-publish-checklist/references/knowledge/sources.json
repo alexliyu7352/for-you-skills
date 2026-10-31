@@ -1,0 +1,2388 @@
+{
+  "report_sha256": "039d8e0a1b3152dfae7730f4d514914a18c79328c0a6ac796892dab86f4f0908",
+  "snapshot": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+  "comparison_snapshot": "606b254b45be798bfaecfa8c23f5a9c51bc8000c",
+  "research_through": "2026-10-29",
+  "sources": {
+    "S001": {
+      "number": 1,
+      "title": "[1] V8.2 first available media and video frames.",
+      "links": [
+        {
+          "label": "Immediate return during media selection",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L314"
+        },
+        {
+          "label": "Combining main-post and quoted media",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L178"
+        },
+        {
+          "label": "Actual submission to the embedding service",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder_v82.py#L68-L92"
+        },
+        {
+          "label": "Registered processing plan",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/plan_post_embedding_v82.py#L14-L31"
+        },
+        {
+          "label": "Other renderers process images individually",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L76-L92"
+        }
+      ]
+    },
+    "S002": {
+      "number": 2,
+      "title": "[2] Updated weighted scoring and author diversity.",
+      "links": [
+        {
+          "label": "Annotations on misreading weights and combined scoring",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L28-L139"
+        },
+        {
+          "label": "Author count and multiplier",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+        }
+      ]
+    },
+    "S003": {
+      "number": 3,
+      "title": "[3] Hootsuite's general posting-frequency advice, April 18, 2025.",
+      "links": [
+        {
+          "label": "Original context of two or three posts daily",
+          "url": "https://blog.hootsuite.com/how-often-to-post-on-social-media/"
+        }
+      ]
+    },
+    "S004": {
+      "number": 4,
+      "title": "[4] The X Algorithm Playbook frequency interpretation checked in the report.",
+      "links": [
+        {
+          "label": "Claims turning a single response into daily post counts and thread slots",
+          "url": "https://tang-vu.github.io/x-algorithm-playbook/rules/04-timing-frequency.html"
+        }
+      ]
+    },
+    "S005": {
+      "number": 5,
+      "title": "[5] Model inputs and recommendation pipeline.",
+      "links": [
+        {
+          "label": "Overall pipeline",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md"
+        },
+        {
+          "label": "Phoenix model explanation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md"
+        }
+      ]
+    },
+    "S006": {
+      "number": 6,
+      "title": "[6] X's official definitions of longer posts and Articles, and distribution advice.",
+      "links": [
+        {
+          "label": "Longer posts",
+          "url": "https://help.x.com/en/using-x/types-of-posts"
+        },
+        {
+          "label": "Article distribution through short teasers, excerpts, and threads",
+          "url": "https://help.x.com/en/using-x/articles"
+        }
+      ]
+    },
+    "S007": {
+      "number": 7,
+      "title": "[7] The original Gridlok article checked in the report, April 3, 2026.",
+      "links": [
+        {
+          "label": "Claims about 150 times, external links, and Premium",
+          "url": "https://gridlok.co/blog/x-open-sourced-its-algorithm-what-the-phoenix-source-code-actually-says/"
+        }
+      ]
+    },
+    "S008": {
+      "number": 8,
+      "title": "[8] The original SocialPilot article checked in the report, dated September 2026 on the page.",
+      "links": [
+        {
+          "label": "Claims about daily author quotas and external links",
+          "url": "https://www.socialpilot.co/blog/twitter-algorithm"
+        }
+      ]
+    },
+    "S009": {
+      "number": 9,
+      "title": "[9] The original Bangerkit article checked in the report, October 8, 2026.",
+      "links": [
+        {
+          "label": "Personalized weighting and cold-start conditions",
+          "url": "https://bangerkit.io/guides/x-algorithm-2026"
+        }
+      ]
+    },
+    "S010": {
+      "number": 10,
+      "title": "[10] X's official Premium explanation.",
+      "links": [
+        {
+          "label": "Reply-ranking priority for different plans",
+          "url": "https://help.x.com/en/using-x/x-premium"
+        }
+      ]
+    },
+    "S011": {
+      "number": 11,
+      "title": "[11] Public update dates, pinned commits, and time zones.",
+      "links": [
+        {
+          "label": "Public commit on October 28 UTC",
+          "url": "https://github.com/xai-org/x-algorithm/commit/5ed796374ea48ee26058aab66ab10c266bea2bef"
+        },
+        {
+          "label": "Public commit on October 29 UTC",
+          "url": "https://github.com/xai-org/x-algorithm/commit/606b254b45be798bfaecfa8c23f5a9c51bc8000c"
+        },
+        {
+          "label": "Officially listed October 8 and October 13 updates",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L32-L44"
+        }
+      ]
+    },
+    "S012": {
+      "number": 12,
+      "title": "[12] Synchronization of public defaults and usage paths in Home Mixer and VM Ranker.",
+      "links": [
+        {
+          "label": "Cron synchronization explanation for main production defaults",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L434"
+        },
+        {
+          "label": "Synchronization time in the Home Mixer parameter file",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L1"
+        },
+        {
+          "label": "Local weighting, cold start, and RPC fallback",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker.rs#L59-L135"
+        },
+        {
+          "label": "VM request includes heads, cached scores, and compute_value_model",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L26-L68"
+        },
+        {
+          "label": "VM Ranker obtains coefficients from its own params",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/value_model.rs#L71-L118"
+        },
+        {
+          "label": "Handling when a cached weighted score is available",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L282-L327"
+        }
+      ]
+    },
+    "S013": {
+      "number": 13,
+      "title": "[13] CREAD multi-threshold training and dwell-time reconstruction.",
+      "links": [
+        {
+          "label": "Official October 8 update explanation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L42-L44"
+        },
+        {
+          "label": "Configuration enabling CREAD in home_direct_packed",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L260-L282"
+        },
+        {
+          "label": "Non-Gallery and Gallery CREAD ranges and loss settings",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L784-L810"
+        },
+        {
+          "label": "Generating logarithmically spaced thresholds",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L110-L125"
+        },
+        {
+          "label": "Multi-threshold labels, classification loss, and time-reconstruction loss",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L128-L187"
+        },
+        {
+          "label": "Reconstructing time by multiplying probabilities by threshold intervals",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L3363-L3389"
+        },
+        {
+          "label": "Using CREAD loss during training",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L4815-L4859"
+        }
+      ]
+    },
+    "S014": {
+      "number": 14,
+      "title": "[14] Binary click-dwell target, ld retrieval branch, and different signal definitions.",
+      "links": [
+        {
+          "label": "Click-dwell coefficient 0.4",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L483-L488"
+        },
+        {
+          "label": "CLICK_DWELL_TIME binary configuration with threshold 10",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783"
+        },
+        {
+          "label": "Strictly above threshold and sigmoid probability",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L190-L212"
+        },
+        {
+          "label": "The click_dwell_time field used by Home Mixer",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L108-L113"
+        },
+        {
+          "label": "Candidate entry point for reading Phoenix scores",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/phoenix_scorer.rs#L131-L141"
+        },
+        {
+          "label": "ld positive examples and multi-branch configuration",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L304"
+        },
+        {
+          "label": "Named home and ld configurations",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L514-L539"
+        },
+        {
+          "label": "Retrieval-inference branch weights",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2293-L2323"
+        }
+      ]
+    },
+    "S015": {
+      "number": 15,
+      "title": "[15] October history of engagement coefficients on the same path.",
+      "links": [
+        {
+          "label": "October 9 defaults for Favorite, Video open, dwell, and other signals",
+          "url": "https://github.com/xai-org/x-algorithm/blob/cb45b5501423126adfc508052116c2d67c0e3fec/home-mixer/params/param.rs#L314-L419"
+        },
+        {
+          "label": "October 13 Favorite=0.6",
+          "url": "https://github.com/xai-org/x-algorithm/blob/e1a0375a903899984545c663bb0bccb3cdcdf046/home-mixer/params/param.rs#L320"
+        },
+        {
+          "label": "October 13 Video open=0.02",
+          "url": "https://github.com/xai-org/x-algorithm/blob/e1a0375a903899984545c663bb0bccb3cdcdf046/home-mixer/params/param.rs#L341-L346"
+        },
+        {
+          "label": "October 13 continuous-dwell coefficient increased to 0.006",
+          "url": "https://github.com/xai-org/x-algorithm/blob/e1a0375a903899984545c663bb0bccb3cdcdf046/home-mixer/params/param.rs#L401-L406"
+        },
+        {
+          "label": "October 14 Favorite=0.66",
+          "url": "https://github.com/xai-org/x-algorithm/blob/17c96bf346df3d62b90f1bb01830d432dba74485/home-mixer/params/param.rs#L320"
+        },
+        {
+          "label": "October 14 Not interested=-52.272",
+          "url": "https://github.com/xai-org/x-algorithm/blob/17c96bf346df3d62b90f1bb01830d432dba74485/home-mixer/params/param.rs#L414-L419"
+        },
+        {
+          "label": "The same coefficient group in the October 29 public snapshot",
+          "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/params/param.rs#L396-L513"
+        }
+      ]
+    },
+    "S016": {
+      "number": 16,
+      "title": "[16] Addition and activation of FairShare initial filtering in October.",
+      "links": [
+        {
+          "label": "Filter added on October 21",
+          "url": "https://github.com/xai-org/x-algorithm/blob/7f2ca2b914cadac591ea7fceec0c477e473d3dee/home-mixer/filters/fair_share_ranking_filter.rs#L1-L109"
+        },
+        {
+          "label": "October 21: 2800 slots and switch=false",
+          "url": "https://github.com/xai-org/x-algorithm/blob/7f2ca2b914cadac591ea7fceec0c477e473d3dee/home-mixer/params/param.rs#L1188-L1199"
+        },
+        {
+          "label": "October 22: switch=true",
+          "url": "https://github.com/xai-org/x-algorithm/blob/989fb91254d461bf4b9df53fb12d5c9a61c2b354/home-mixer/params/param.rs#L1200-L1211"
+        },
+        {
+          "label": "October 21 public commit",
+          "url": "https://github.com/xai-org/x-algorithm/commit/7f2ca2b914cadac591ea7fceec0c477e473d3dee"
+        },
+        {
+          "label": "October 22 public commit",
+          "url": "https://github.com/xai-org/x-algorithm/commit/989fb91254d461bf4b9df53fb12d5c9a61c2b354"
+        }
+      ]
+    },
+    "S017": {
+      "number": 17,
+      "title": "[17] New features, switches, and video paths in the October 28/29 snapshots.",
+      "links": [
+        {
+          "label": "Page logging, decode, and exploration switches added in 5ed7963",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L309-L365"
+        },
+        {
+          "label": "Page logging defaults in 606b254",
+          "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/params/param.rs#L309-L365"
+        },
+        {
+          "label": "Carousel switch remains false in 606b254",
+          "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/params/param.rs#L1191-L1196"
+        },
+        {
+          "label": "New open times immersive dwell coefficient remains zero in 606b254",
+          "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/params/param.rs#L1245-L1269"
+        },
+        {
+          "label": "New Carousel formula in 606b254",
+          "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/util/video_carousel.rs#L178-L209"
+        },
+        {
+          "label": "immersive_page_rl_cread configuration added in 606b254",
+          "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/phoenix/xrex/configs/xrecsys.py#L421-L432"
+        },
+        {
+          "label": "Carousel video eligibility and portrait aspect ratio",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/video_carousel.rs#L151-L160"
+        },
+        {
+          "label": "VQV's strict video-length threshold",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L19-L44"
+        }
+      ]
+    },
+    "S018": {
+      "number": 18,
+      "title": "[18] Actual selection of conversation modules and ancestor posts.",
+      "links": [
+        {
+          "label": "Assembly of root, intermediate ancestors, and current post",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/convo_marshaller.rs#L12-L63"
+        },
+        {
+          "label": "Thunder includes only parent and root",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L84-L95"
+        },
+        {
+          "label": "Phoenix reply-ancestor data",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/phoenix_reply_ancestors_hydrator.rs#L79-L97"
+        },
+        {
+          "label": "Timeline assembly after For You ranking",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/for_you_server.rs#L71-L88"
+        }
+      ]
+    },
+    "S019": {
+      "number": 19,
+      "title": "[19] Thread deduplication occurs after scoring.",
+      "links": [
+        {
+          "label": "Keeping the highest-scoring candidate in a conversation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/dedup_conversation_filter.rs#L14-L48"
+        },
+        {
+          "label": "Scoring, selection, then post-selection filtering",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/candidate-pipeline/candidate_pipeline.rs#L129-L148"
+        },
+        {
+          "label": "Scorers and subsequent conversation deduplication in the Phoenix pipeline",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L466-L507"
+        },
+        {
+          "label": "Sending post and author IDs for each candidate",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L53-L67"
+        }
+      ]
+    },
+    "S020": {
+      "number": 20,
+      "title": "[20] Already-seen filtering also checks parent posts and repost originals.",
+      "links": [
+        {
+          "label": "Composition of the relevant IDs",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L13-L17"
+        },
+        {
+          "label": "Evaluating already-seen data",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs#L16-L31"
+        },
+        {
+          "label": "Already-served data uses a separate check",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_served_posts_filter.rs#L14-L30"
+        },
+        {
+          "label": "Actual registration in the candidate pipeline",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L444"
+        }
+      ]
+    },
+    "S021": {
+      "number": 21,
+      "title": "[21] Public defaults for weights and author diversity.",
+      "links": [
+        {
+          "label": "VM Ranker parameters",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs"
+        },
+        {
+          "label": "Home Mixer parameters",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L396-L513"
+        }
+      ]
+    },
+    "S022": {
+      "number": 22,
+      "title": "[22] Time windows and source-specific caps are not daily posting quotas.",
+      "links": [
+        {
+          "label": "PopularPosts per-author selection over the past 24 hours",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/popular_posts.rs#L27-L85"
+        },
+        {
+          "label": "Conditions enabling the PopularPosts source",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/popular_posts_source.rs#L20-L35"
+        },
+        {
+          "label": "Post-age filtering",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs"
+        },
+        {
+          "label": "Excluding already-seen content by reader and post ID",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs"
+        }
+      ]
+    },
+    "S023": {
+      "number": 23,
+      "title": "[23] X's official explanation of thread display.",
+      "links": [
+        {
+          "label": "Two or three connected posts from followed authors; expansion for four or more",
+          "url": "https://help.x.com/en/using-x/create-a-thread"
+        }
+      ]
+    },
+    "S024": {
+      "number": 24,
+      "title": "[24] Scope and switches of reply-candidate filtering.",
+      "links": [
+        {
+          "label": "Filtering conditions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/oon_retweet_reply_filter.rs#L15-L27"
+        },
+        {
+          "label": "Switch default",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L67-L78"
+        },
+        {
+          "label": "Containing candidate pipeline",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L429"
+        }
+      ]
+    },
+    "S025": {
+      "number": 25,
+      "title": "[25] Hootsuite's small experiment on long single posts versus threads, January 31, 2024.",
+      "links": [
+        {
+          "label": "Six pieces of content, experimental methods, and results",
+          "url": "https://blog.hootsuite.com/experiment-x-threads-vs-longform-posts/"
+        }
+      ]
+    },
+    "S026": {
+      "number": 26,
+      "title": "[26] Official Heavy Ranker file from 2023.",
+      "links": [
+        {
+          "label": "Original date, prediction definitions, and weights",
+          "url": "https://github.com/twitter/the-algorithm-ml/blob/main/projects/home/recap/README.md"
+        }
+      ]
+    },
+    "S027": {
+      "number": 27,
+      "title": "[27] Current coefficients in two locations, probability multiplication, and mutual-follow conditions.",
+      "links": [
+        {
+          "label": "Home Mixer prediction coefficients and official interpretive annotations",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L367-L513"
+        },
+        {
+          "label": "Same-named VM Ranker defaults",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L155"
+        },
+        {
+          "label": "Prediction-term multiplication and summation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L57-L139"
+        },
+        {
+          "label": "Subsequent shifting of positive and negative scores",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L161-L179"
+        },
+        {
+          "label": "Mutual-follow candidates must not be replies or reposts",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L19-L22"
+        },
+        {
+          "label": "General reply coefficient plus mutual-follow boost",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L84-L99"
+        }
+      ]
+    },
+    "S028": {
+      "number": 28,
+      "title": "[28] Dwell events and reading after opening are different targets.",
+      "links": [
+        {
+          "label": "Dwelled and NotDwelled labels",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/constants.py#L68-L76"
+        },
+        {
+          "label": "Dwell targets enabled by home_direct_packed",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L260-L282"
+        },
+        {
+          "label": "Binary click-dwell target with threshold 10 and other dwell targets",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L755-L810"
+        },
+        {
+          "label": "Binary output retains probability during inference",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L532-L553"
+        },
+        {
+          "label": "Serving returns model outputs",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/inference/model_runner.py#L4205-L4214"
+        }
+      ]
+    },
+    "S029": {
+      "number": 29,
+      "title": "[29] An actual repost adds a network-based retrieval path.",
+      "links": [
+        {
+          "label": "Reposts indexed by reposter",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/thunder/posts/post_store.rs#L156-L195"
+        },
+        {
+          "label": "Retrieval of original posts, reposts, and other candidates",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/thunder/posts/post_store.rs#L250-L282"
+        },
+        {
+          "label": "Fetching candidates from Thunder using the reader's follow list",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L27-L40"
+        },
+        {
+          "label": "Reposts retain their relationship to the original post",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L97-L114"
+        },
+        {
+          "label": "X's official repost explanation",
+          "url": "https://help.x.com/en/using-x/repost-faqs"
+        }
+      ]
+    },
+    "S030": {
+      "number": 30,
+      "title": "[30] Original-author and reposter follower networks, reply exceptions, and attached content.",
+      "links": [
+        {
+          "label": "Determining network membership from the candidate author",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/in_network_candidate_hydrator.rs#L20-L35"
+        },
+        {
+          "label": "Different conditions for OON reposts and replies",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/oon_retweet_reply_filter.rs#L15-L27"
+        },
+        {
+          "label": "Public switch defaults for Phoenix OON replies",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L67-L78"
+        },
+        {
+          "label": "Served types covered by reply exceptions and ancestor hydration",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/phoenix_reply_ancestors_hydrator.rs#L11-L29"
+        },
+        {
+          "label": "Reposts entered in the secondary index by reposter",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/thunder/posts/post_store.rs#L156-L195"
+        },
+        {
+          "label": "Fetching candidates using the reader's follow list",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L27-L40"
+        },
+        {
+          "label": "Retaining reply-ancestor and repost-source IDs",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L84-L113"
+        },
+        {
+          "label": "Thunder conditions for replies of different depths",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/thunder/posts/post_store.rs#L341-L364"
+        },
+        {
+          "label": "Conversation-module assembly of root, ancestors, and focal",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/convo_marshaller.rs#L20-L68"
+        },
+        {
+          "label": "Visibility handling for quoted, reposted, and conversation-attached content",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L70-L169"
+        },
+        {
+          "label": "Different sources in upper-level For You assembly",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs#L219-L237"
+        },
+        {
+          "label": "PushToHome builds data for posts specified by the request",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/push_to_home_source.rs#L18-L65"
+        }
+      ]
+    },
+    "S031": {
+      "number": 31,
+      "title": "[31] Candidate retrieval reads the current reader's history.",
+      "links": [
+        {
+          "label": "Reader behavior sequence",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/retrieval_sequence_query_hydrator.rs#L30-L64"
+        },
+        {
+          "label": "Phoenix retrieval request",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L141"
+        },
+        {
+          "label": "Candidate representations of post semantics and author",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L1799-L1838"
+        },
+        {
+          "label": "Official explanation of semantic IDs",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md#L101-L121"
+        }
+      ]
+    },
+    "S032": {
+      "number": 32,
+      "title": "[32] Long-dwell targets enter retrieval training and inference.",
+      "links": [
+        {
+          "label": "October 13 update explanation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L38-L40"
+        },
+        {
+          "label": "ld positive examples and multi-branch configuration",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L296"
+        },
+        {
+          "label": "Registration of named configurations",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L514-L539"
+        },
+        {
+          "label": "Inference uses branch weights",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2293-L2323"
+        },
+        {
+          "label": "Serving calls the model",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/inference/model_runner.py#L5552-L5568"
+        }
+      ]
+    },
+    "S033": {
+      "number": 33,
+      "title": "[33] Public timing, training branches, and scope of read-to-end retrieval.",
+      "links": [
+        {
+          "label": "Update officially dated October 13",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L38-L40"
+        },
+        {
+          "label": "Public commit containing the October 28 README addition",
+          "url": "https://github.com/xai-org/x-algorithm/commit/5ed796374ea48ee26058aab66ab10c266bea2bef"
+        },
+        {
+          "label": "October 13 public commit adding ld",
+          "url": "https://github.com/xai-org/x-algorithm/commit/e1a0375a903899984545c663bb0bccb3cdcdf046"
+        },
+        {
+          "label": "ld positive examples and three-branch configuration already public on October 13",
+          "url": "https://github.com/xai-org/x-algorithm/blob/e1a0375a903899984545c663bb0bccb3cdcdf046/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L296"
+        },
+        {
+          "label": "October 8 configuration without ld",
+          "url": "https://github.com/xai-org/x-algorithm/blob/35650fb89f3b14dc6234312535f642779d891d88/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L296"
+        },
+        {
+          "label": "Branches, weights, and HOME datasets in existing named configurations",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L312"
+        },
+        {
+          "label": "Named combined and home-only configurations",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L514-L539"
+        },
+        {
+          "label": "Calculating each branch's training loss from positive and negative action examples",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2711-L2739"
+        },
+        {
+          "label": "Using branch weights during inference",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2293-L2323"
+        },
+        {
+          "label": "Model reads action markers rather than determining complete reading itself",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L621-L647"
+        },
+        {
+          "label": "Default ld positive examples and weights in general model settings",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2897-L2924"
+        },
+        {
+          "label": "Cold-post pool filters by post likes and views",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/cold_pool_filter.py#L26-L63"
+        }
+      ]
+    },
+    "S034": {
+      "number": 34,
+      "title": "[34] Index windows and retrieval datasets: production data is not actual delivered impressions.",
+      "links": [
+        {
+          "label": "Index windows for Main and Sid modes",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/config/mod.rs#L168-L224"
+        },
+        {
+          "label": "Routing to the corresponding window by index name",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/store/base.rs#L1195-L1220"
+        },
+        {
+          "label": "HOME, HOME_COLD, and HOME_HOT all reference 1fav_1day",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282"
+        },
+        {
+          "label": "HOME_COLD and HOME_HOT split data from the same source",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L437-L479"
+        },
+        {
+          "label": "Phoenix source activation conditions and actual retrieval requests",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L149"
+        },
+        {
+          "label": "Retrieval is still followed by filtering, scoring, and selection",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L507"
+        }
+      ]
+    },
+    "S035": {
+      "number": 35,
+      "title": "[35] Cold-start eligibility, experimental groups, and data boundaries.",
+      "links": [
+        {
+          "label": "Defaults for two hours, Home impressions, followers, slots, and other conditions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L661"
+        },
+        {
+          "label": "Determining the viewer arm",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L81-L88"
+        },
+        {
+          "label": "Non-reply/non-repost requirement, follower cap, and author corpus",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L188-L233"
+        },
+        {
+          "label": "Selection requires all eligibility conditions simultaneously",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L285-L309"
+        },
+        {
+          "label": "Topic requests and cold-start switch",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L378-L420"
+        },
+        {
+          "label": "The October 9 snapshot already has the same main thresholds",
+          "url": "https://github.com/xai-org/x-algorithm/blob/cb45b5501423126adfc508052116c2d67c0e3fec/home-mixer/params/param.rs#L477-L544"
+        },
+        {
+          "label": "Separate fields for Home counts and general view counts",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/engagement_counts_hydrator.rs#L16-L48"
+        },
+        {
+          "label": "Count-cache TTL of sixty seconds",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/engagement_counts_hydrator.rs#L59-L65"
+        }
+      ]
+    },
+    "S036": {
+      "number": 36,
+      "title": "[36] Cold-start Beta sampling and personalized second-stage selection.",
+      "links": [
+        {
+          "label": "Defaults for priors, sample count, and exposure ratio",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L633-L661"
+        },
+        {
+          "label": "Highest-score selection and Beta parameters",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L236-L255"
+        },
+        {
+          "label": "First take the top k sampled posts, then select one by score",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L257-L282"
+        },
+        {
+          "label": "Sampling switch, the uniquely selected candidate, and score increase",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L311-L333"
+        }
+      ]
+    },
+    "S037": {
+      "number": 37,
+      "title": "[37] Like-event index-update thresholds, throttling, and age boundaries.",
+      "links": [
+        {
+          "label": "Event counts, cache branch, and ignoring non-Favorite events",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L96-L156"
+        },
+        {
+          "label": "Writing the next power-of-two threshold and update time",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L14-L57"
+        },
+        {
+          "label": "49-hour post age, 48-hour update period, one-minute interval, and count cap",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L28-L70"
+        },
+        {
+          "label": "Sending Favorite index events to the candidate processor",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/stream_forwarders/favoritePhoenixIndexingEventForwarder.strato#L3-L17"
+        }
+      ]
+    },
+    "S038": {
+      "number": 38,
+      "title": "[38] Actual production conditions for 1fav, 32fav, search, and reply indexes.",
+      "links": [
+        {
+          "label": "Count races among search_unfiltered, 32fav, and 1fav",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L46-L98"
+        },
+        {
+          "label": "Reply indexes 1fav_reply and 32fav_reply",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L277-L298"
+        },
+        {
+          "label": "The post_creation index at creation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L301-L309"
+        },
+        {
+          "label": "Rereading engagement counts and author data",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L437-L455"
+        },
+        {
+          "label": "Routing order for sources, communities, reposts, replies, and visibility",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L470-L529"
+        }
+      ]
+    },
+    "S039": {
+      "number": 39,
+      "title": "[39] What the 48-hour check actually examines: candidate IDs, source windows, and repost originals.",
+      "links": [
+        {
+          "label": "48-hour constant",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43"
+        },
+        {
+          "label": "AgeFilter calculates age from the candidate ID and uses less than or equal to",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31"
+        },
+        {
+          "label": "Candidate pipeline containing the age filter",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L444"
+        },
+        {
+          "label": "Separate fields for a repost's own ID and original-post ID",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L103-L113"
+        },
+        {
+          "label": "Core-data hydration does not replace the candidate ID with the original-post ID",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/core_data_candidate_hydrator.rs#L141-L149"
+        },
+        {
+          "label": "Deduplicating originals and reposts by original-post ID",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/retweet_deduplication_filter.rs#L19-L29"
+        },
+        {
+          "label": "Original-post and parent-related IDs used for already-seen checks",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L13-L17"
+        },
+        {
+          "label": "Determining already-seen candidates",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs#L16-L31"
+        },
+        {
+          "label": "Determining already-served candidates",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_served_posts_filter.rs#L14-L30"
+        },
+        {
+          "label": "Visibility handling of attached content such as repost originals",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L70-L169"
+        },
+        {
+          "label": "Upper-level For You sources and their filters",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs#L219-L237"
+        },
+        {
+          "label": "Activation and data construction for the PushToHome source",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/push_to_home_source.rs#L18-L65"
+        }
+      ]
+    },
+    "S040": {
+      "number": 40,
+      "title": "[40] Bookmarks and subsequent retrieval of similar content.",
+      "links": [
+        {
+          "label": "Reading bookmarks and other interactions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs#L31-L105"
+        },
+        {
+          "label": "Public switches and per-type data caps",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L716-L732"
+        },
+        {
+          "label": "Default enabling of SimClusters",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L48-L53"
+        },
+        {
+          "label": "Seed data and candidate queries",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L213-L329"
+        }
+      ]
+    },
+    "S041": {
+      "number": 41,
+      "title": "[41] Three locations for bookmarks: combined scoring, personal subsequent retrieval, and immersive training.",
+      "links": [
+        {
+          "label": "Shared combined-weight fields have no separate bookmark term",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L7-L47"
+        },
+        {
+          "label": "Actual terms in the shared weighted formula",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L92-L139"
+        },
+        {
+          "label": "Fetching interactions for the current reader and reading BookmarkMetadata",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs#L31-L111"
+        },
+        {
+          "label": "Interaction-signal switches, per-type caps, and candidate-age defaults",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L716-L738"
+        },
+        {
+          "label": "Public activation default for SimClusters",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L48-L53"
+        },
+        {
+          "label": "SimClusters seed-age, score, and count limits",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L25-L36"
+        },
+        {
+          "label": "SimClusters activation conditions, seeds, and candidate queries",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L213-L329"
+        },
+        {
+          "label": "Immersive retrieval positive examples include bookmarks",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L283-L293"
+        },
+        {
+          "label": "Immersive positive examples in model settings",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2868-L2878"
+        },
+        {
+          "label": "Each branch trains on its own positive and negative examples",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2711-L2739"
+        }
+      ]
+    },
+    "S042": {
+      "number": 42,
+      "title": "[42] Conditional boost to reply predictions for mutual follows.",
+      "links": [
+        {
+          "label": "General coefficient and boost defaults",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L396-L408"
+        },
+        {
+          "label": "VM Ranker general reply default",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L4"
+        },
+        {
+          "label": "VM Ranker mutual-follow boost default",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L145-L155"
+        },
+        {
+          "label": "Candidate eligibility",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L19-L22"
+        },
+        {
+          "label": "Additive calculation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L84-L99"
+        },
+        {
+          "label": "Actual query for the bidirectional relationship",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/bidirectional_follow_hydrator.rs#L15-L61"
+        },
+        {
+          "label": "Passing into combined scoring",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs#L8-L87"
+        }
+      ]
+    },
+    "S043": {
+      "number": 43,
+      "title": "[43] Profile clicks and following the author are distinct targets.",
+      "links": [
+        {
+          "label": "Profile-click default",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L425-L430"
+        },
+        {
+          "label": "Author-follow default",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L459-L464"
+        },
+        {
+          "label": "The two terms are combined separately",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L92-L139"
+        },
+        {
+          "label": "VM Ranker profile-dwell and follow defaults",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L78-L89"
+        }
+      ]
+    },
+    "S044": {
+      "number": 44,
+      "title": "[44] Author bio and content representation.",
+      "links": [
+        {
+          "label": "Author name, account, and bio",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L186-L215"
+        },
+        {
+          "label": "Text and bio limits",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50"
+        }
+      ]
+    },
+    "S045": {
+      "number": 45,
+      "title": "[45] Negative predictions and hard filtering for reader blocks and mutes.",
+      "links": [
+        {
+          "label": "Home Mixer negative coefficients",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L490-L513"
+        },
+        {
+          "label": "VM Ranker negative coefficients",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L108-L131"
+        },
+        {
+          "label": "Reader-relationship filtering",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/author_socialgraph_filter.rs#L15-L54"
+        },
+        {
+          "label": "Filtering order before scoring",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L469"
+        }
+      ]
+    },
+    "S046": {
+      "number": 46,
+      "title": "[46] Construction and transmission of length and line-break data.",
+      "links": [
+        {
+          "label": "Text-content features",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/content_features.rs#L8-L19"
+        },
+        {
+          "label": "Encoding candidate experiment data",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_debias_payload.rs#L33-L68"
+        },
+        {
+          "label": "VM Ranker candidate request",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L53-L73"
+        },
+        {
+          "label": "Processing Article titles, covers, and media",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92"
+        }
+      ]
+    },
+    "S047": {
+      "number": 47,
+      "title": "[47] Local scope of V8.2 text truncation.",
+      "links": [
+        {
+          "label": "4000-character limit and truncation function",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50"
+        },
+        {
+          "label": "Processing post.full_text",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L165-L167"
+        },
+        {
+          "label": "Connecting the renderer to the embedding service",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder_v82.py#L69-L92"
+        }
+      ]
+    },
+    "S048": {
+      "number": 48,
+      "title": "[48] Different scopes of video targets and ten-second eligibility.",
+      "links": [
+        {
+          "label": "VQV eligibility evaluation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L19-L33"
+        },
+        {
+          "label": "Video-length threshold",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L688-L693"
+        },
+        {
+          "label": "Video-open and VQV coefficients",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L417-L431"
+        },
+        {
+          "label": "VM Ranker video-open and VQV defaults",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L12-L27"
+        },
+        {
+          "label": "VM Ranker continued-watching default",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L66-L89"
+        },
+        {
+          "label": "Continued-watching settings in local combined scoring",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs#L35-L42"
+        },
+        {
+          "label": "Immersive retrieval positive examples",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L283-L292"
+        }
+      ]
+    },
+    "S049": {
+      "number": 49,
+      "title": "[49] Actual indexing eligibility for videos over ten seconds and three builders.",
+      "links": [
+        {
+          "label": "Accepted video types and the 10000-millisecond constant",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L23-L24"
+        },
+        {
+          "label": "Per-media conditions in hasValidImmersiveVideo",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L403-L417"
+        },
+        {
+          "label": "1fav_video calls the video-eligibility function",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L263-L275"
+        },
+        {
+          "label": "video and nsfw_video call the video-eligibility function",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L311-L340"
+        },
+        {
+          "label": "Main flow in which Fav and PostCreation call video indexing",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L477-L524"
+        },
+        {
+          "label": "Ten-second and media-NSFW checks in another isMediaEligible",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L125-L137"
+        },
+        {
+          "label": "Where getTweetypieResponse uses hasEligibleMedia",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L182-L204"
+        }
+      ]
+    },
+    "S050": {
+      "number": 50,
+      "title": "[50] Video-index windows, Evergreen naming, and branches without the same ten-second check.",
+      "links": [
+        {
+          "label": "Main and Sid windows for video indexes",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/config/mod.rs#L168-L224"
+        },
+        {
+          "label": "Files actually read by video-retrieval datasets",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282"
+        },
+        {
+          "label": "Builders for evergreen_video and evergreen_nsfw_video",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L26-L43"
+        },
+        {
+          "label": "Evergreen-event branch calling only hasImmersiveVideo",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L457-L468"
+        },
+        {
+          "label": "Conditions in hasImmersiveVideo and isImaginePost",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L385-L400"
+        },
+        {
+          "label": "Imagine indexing does not call hasValidImmersiveVideo",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L342-L352"
+        },
+        {
+          "label": "General 1fav is built first, with separate video-index checks",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L506-L524"
+        },
+        {
+          "label": "General 1fav builder has no added video-duration condition",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L78-L88"
+        }
+      ]
+    },
+    "S051": {
+      "number": 51,
+      "title": "[51] Special-video eligibility at 64 likes and subsequent checks.",
+      "links": [
+        {
+          "label": "Public default for deluxe_fav_count_threshold",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py#L104-L120"
+        },
+        {
+          "label": "Author, video, likes, and motion_reveal",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_special_video_filter.py#L16-L49"
+        },
+        {
+          "label": "Technique screen must still pass after video retrieval",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_special_video_screen.py#L13-L49"
+        },
+        {
+          "label": "Special-video classification, cross-validation, and write order",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_special_video.py#L23-L54"
+        },
+        {
+          "label": "Kafka entry points for special video, beginning frames, and media-injected",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/generators.py#L109-L144"
+        },
+        {
+          "label": "Sixty-second deduplication cache for related tasks",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_rate_limit.py#L11-L42"
+        }
+      ]
+    },
+    "S052": {
+      "number": 52,
+      "title": "[52] What 64 and 512 each mean in video comparison checks.",
+      "links": [
+        {
+          "label": "Candidates including quoted videos, threshold 64, and exclusion for existing NSFW",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection_filter.py#L19-L47"
+        },
+        {
+          "label": "Named constant 512",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/constants.py#L34-L40"
+        },
+        {
+          "label": "Inference requires frames; 512 switches reasoning and comparison with reference videos",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L101-L159"
+        },
+        {
+          "label": "A match becomes SpamManipulatedMedia classification",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L174-L189"
+        },
+        {
+          "label": "Execution dependencies of filter, media, checks, and sink",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L19-L43"
+        },
+        {
+          "label": "Reading existing NSFW results and failure handling",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prior_nsfw.py#L16-L34"
+        }
+      ]
+    },
+    "S053": {
+      "number": 53,
+      "title": "[53] Beginning checks for long videos and other eligibility at threshold 512.",
+      "links": [
+        {
+          "label": "Ten-second crop, thirty-second video, and constant 512",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/constants.py#L29-L33"
+        },
+        {
+          "label": "Author, long video/broadcast, prior, AdultContent, and 512",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_leading_frames_filter.py#L29-L83"
+        },
+        {
+          "label": "Dependencies of beginning-frame tasks and cross-validation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_adult_content_leading_frames.py#L24-L55"
+        },
+        {
+          "label": "Cross-validation when PTOS and safemodel disagree",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_cross_validation.py#L67-L131"
+        },
+        {
+          "label": "Cross-evaluation and writing back soft classes",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_cross_validation.py#L133-L152"
+        },
+        {
+          "label": "Finally applying adult-content and spam labels by classification",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L214-L248"
+        }
+      ]
+    },
+    "S054": {
+      "number": 54,
+      "title": "[54] Engagement baiting, hashtag abuse, and normal hashtag features.",
+      "links": [
+        {
+          "label": "Prerequisite handling of test accounts, PageRank, and gray badges",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194"
+        },
+        {
+          "label": "Baiting, farming, card manipulation, and other spam branches",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248"
+        },
+        {
+          "label": "Named classes including SpamHashTagAbuse",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/state.py#L37-L46"
+        },
+        {
+          "label": "Safety writes execute only in PTOS production",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L48-L49"
+        },
+        {
+          "label": "Disabling conditions outside PTOS production",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/disable_rules.py#L6-L11"
+        },
+        {
+          "label": "Spam-classification prompt is not public",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prompts.py#L11-L31"
+        },
+        {
+          "label": "SimClusters entity extractor takes at most four hashtags",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/simclusters/simclusters_v2/summingbird/common/TweetEntityExtractor.scala#L14-L40"
+        },
+        {
+          "label": "Phoenix history data includes CLICK_HASHTAG",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L25-L36"
+        },
+        {
+          "label": "Feature list containing CLICK_HASHTAG",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/id_list_features.py#L108-L120"
+        }
+      ]
+    },
+    "S055": {
+      "number": 55,
+      "title": "[55] Binary target with threshold 10 and its labeling function.",
+      "links": [
+        {
+          "label": "Named home_direct_packed settings",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L263-L285"
+        },
+        {
+          "label": "Numeric threshold 10 in the code",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783"
+        },
+        {
+          "label": "Original strictly-greater-than function",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L190-L212"
+        }
+      ]
+    },
+    "S056": {
+      "number": 56,
+      "title": "[56] Other dwell targets and inference outputs.",
+      "links": [
+        {
+          "label": "Other dwell targets",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L747-L810"
+        },
+        {
+          "label": "Binary output retains probability",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L532-L553"
+        }
+      ]
+    },
+    "S057": {
+      "number": 57,
+      "title": "[57] Cold-start candidate filtering and subsequent selection.",
+      "links": [
+        {
+          "label": "Original-post and follower eligibility",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L188-L193"
+        },
+        {
+          "label": "Home-impression conditions and selection",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L296-L333"
+        }
+      ]
+    },
+    "S058": {
+      "number": 58,
+      "title": "[58] Cold-start numeric defaults.",
+      "links": [
+        {
+          "label": "200 impressions, fifty thousand followers, and 7200 seconds",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L624"
+        }
+      ]
+    },
+    "S059": {
+      "number": 59,
+      "title": "[59] Official definition of public view counts.",
+      "links": [
+        {
+          "label": "X View counts",
+          "url": "https://help.x.com/en/using-x/view-counts"
+        }
+      ]
+    },
+    "S060": {
+      "number": 60,
+      "title": "[60] Cold-start target position, author diversity, and final display.",
+      "links": [
+        {
+          "label": "Nonzero-score positions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L91-L104"
+        },
+        {
+          "label": "The random-range upper bound is exclusive",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L216-L225"
+        },
+        {
+          "label": "Replaying the cold-start decision on ranking scores",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L263-L279"
+        },
+        {
+          "label": "Author counts calculated from candidate scores",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L203"
+        },
+        {
+          "label": "Author and OON adjustments applied after cold start",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L315-L327"
+        },
+        {
+          "label": "VM author-diversity default",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L169-L197"
+        },
+        {
+          "label": "Author diversity disabled in Home Mixer local scoring",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs#L45-L49"
+        },
+        {
+          "label": "Interleaving ads and other modules",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/blender_selector.rs#L56-L87"
+        }
+      ]
+    },
+    "S061": {
+      "number": 61,
+      "title": "[61] FairShare source grouping, proportional allocation, and model-candidate cap.",
+      "links": [
+        {
+          "label": "Activation conditions, budget, and proportional allocation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L10-L109"
+        },
+        {
+          "label": "Cold and ZeroFav use distinct served types",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L199-L204"
+        },
+        {
+          "label": "FairShare executes before model scoring",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L469"
+        },
+        {
+          "label": "Candidate cap in the Phoenix request",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/phoenix_request.rs#L18-L20"
+        },
+        {
+          "label": "Only the first MAX_CANDIDATES are used to build the request",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/phoenix_request.rs#L185-L195"
+        },
+        {
+          "label": "Public initial-filter budget and activation default",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L1277-L1288"
+        },
+        {
+          "label": "Retrieval count 200 is a different parameter",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L16-L21"
+        },
+        {
+          "label": "Cold-candidate count is actually passed into the retrieval request",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L124-L141"
+        }
+      ]
+    },
+    "S062": {
+      "number": 62,
+      "title": "[62] New-reader conditions cannot become account-warming rules for new authors.",
+      "links": [
+        {
+          "label": "Condition using query.user_id",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/new_user_min_engagement_filter.rs#L31-L90"
+        },
+        {
+          "label": "This filter's activation default is false",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L832-L860"
+        }
+      ]
+    },
+    "S063": {
+      "number": 63,
+      "title": "[63] Age and deduplication of old originals and new repost candidates.",
+      "links": [
+        {
+          "label": "48-hour constant",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43"
+        },
+        {
+          "label": "Checking the candidate's own ID",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31"
+        },
+        {
+          "label": "Repost's own ID and original-post ID",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L103-L113"
+        },
+        {
+          "label": "Merging reposts by original-post ID",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/retweet_deduplication_filter.rs#L19-L29"
+        }
+      ]
+    },
+    "S064": {
+      "number": 64,
+      "title": "[64] Determining whether an edited version is superseded.",
+      "links": [
+        {
+          "label": "Definition of an old version",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/tweet.rs#L69-L71"
+        },
+        {
+          "label": "Filtering conditions and exceptions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L214-L224"
+        }
+      ]
+    },
+    "S065": {
+      "number": 65,
+      "title": "[65] Model evaluation of reply content and public scope.",
+      "links": [
+        {
+          "label": "Sending the conversation and signals to the model",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_reply_ranking.py#L44-L78"
+        },
+        {
+          "label": "Writing back scores and conditional labeling",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_write.py#L124-L148"
+        },
+        {
+          "label": "Other labeling eligibility and exceptions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_write.py#L39-L74"
+        },
+        {
+          "label": "Evaluation prompt is not public",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/prompts.py#L6-L24"
+        }
+      ]
+    },
+    "S066": {
+      "number": 66,
+      "title": "[66] Complete eligibility for multilevel self-reply spam checks.",
+      "links": [
+        {
+          "label": "Ancestors, author, same-author parent, root's thousand-follower condition, and exemptions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L25-L124"
+        },
+        {
+          "label": "Eligibility filtering before media reading, classification, and writing",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/plan_multi_step_reply_spam.py#L12-L28"
+        },
+        {
+          "label": "Both general and recovery streams register this plan",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/generators.py#L16-L40"
+        },
+        {
+          "label": "Specific model prompt is not public",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/prompts.py#L6-L35"
+        }
+      ]
+    },
+    "S067": {
+      "number": 67,
+      "title": "[67] Reply-classifier safeguards and scope of zero-score writes.",
+      "links": [
+        {
+          "label": "Latest reply must be marked; retain only the same author; exclude single-result cases",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L32-L88"
+        },
+        {
+          "label": "Sampling long conversations, per-post media cap, and root-post indication",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L21-L22"
+        },
+        {
+          "label": "Selecting beginning and end when ancestors exceed ten records, and input content",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L90-L134"
+        },
+        {
+          "label": "Excluding the root when parsing results",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L157-L175"
+        },
+        {
+          "label": "Writing ReplyRankingScore 0 only to replies classified as spam",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L151-L198"
+        },
+        {
+          "label": "Additional author and test-account conditions for RiskyHighVizReply labeling",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_write.py#L39-L79"
+        },
+        {
+          "label": "Publishing scores to cache, Kafka, and Strato",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/strato_loader.py#L20-L53"
+        }
+      ]
+    },
+    "S068": {
+      "number": 68,
+      "title": "[68] Visibility dependencies for quoted originals and conversation ancestors.",
+      "links": [
+        {
+          "label": "Querying attached-content visibility",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L70-L105"
+        },
+        {
+          "label": "Determining removal of attached content",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L140-L169"
+        },
+        {
+          "label": "Removing the entire candidate",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancillary_vf_filter.rs#L7-L17"
+        },
+        {
+          "label": "Difference between Drop and actions such as content warnings",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/vf_filter.rs#L22-L26"
+        }
+      ]
+    },
+    "S069": {
+      "number": 69,
+      "title": "[69] Public features and safety rules for external URLs.",
+      "links": [
+        {
+          "label": "has_url feature",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/content_features.rs#L8-L19"
+        },
+        {
+          "label": "Feature transmission",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_debias_payload.rs"
+        },
+        {
+          "label": "Malicious-URL rules",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L919-L937"
+        }
+      ]
+    },
+    "S070": {
+      "number": 70,
+      "title": "[70] Low-quality URLs in redirect chains.",
+      "links": [
+        {
+          "label": "Actual conditions and post labeling",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L4-L21"
+        },
+        {
+          "label": "Post-label enforcement",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L919-L937"
+        }
+      ]
+    },
+    "S071": {
+      "number": 71,
+      "title": "[71] Problematic pinned URLs and account labels.",
+      "links": [
+        {
+          "label": "Pinned-URL rules",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L6-L44"
+        },
+        {
+          "label": "Account-label enforcement",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L204-L208"
+        },
+        {
+          "label": "Account rules in the recommendation path",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L142-L164"
+        }
+      ]
+    },
+    "S072": {
+      "number": 72,
+      "title": "[72] Official Under the Hood entry point and how to read its reports.",
+      "links": [
+        {
+          "label": "Official entry point and pilot explanation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L466-L470"
+        },
+        {
+          "label": "Under the Hood",
+          "url": "https://x.com/i/jf/under_the_hood"
+        },
+        {
+          "label": "Report fields and units",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx#L25-L51"
+        },
+        {
+          "label": "Label names and explanations of effects",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato"
+        }
+      ]
+    },
+    "S073": {
+      "number": 73,
+      "title": "[73] Actual conditions of low-quality URL v1 and v2.",
+      "links": [
+        {
+          "label": "v1: not a reply or repost, and mentioned users do not follow the author",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot#L2-L47"
+        },
+        {
+          "label": "v2 does not check mentions, only redirect chains and author conditions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L2-L21"
+        },
+        {
+          "label": "Recommendation enforcement for the SPAM_HIGH_RECALL post label",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L933-L937"
+        },
+        {
+          "label": "This post rule is registered in HomeRecommendations",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L198-L212"
+        }
+      ]
+    },
+    "S074": {
+      "number": 74,
+      "title": "[74] Seven-day account label for problematic pinned URLs.",
+      "links": [
+        {
+          "label": "Pinned after and before states, URL resolution, exemptions, and seven-day expiration",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L2-L44"
+        },
+        {
+          "label": "SpamHighRecall account rule",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L204-L208"
+        },
+        {
+          "label": "Recommendation entry point where the account rule executes",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L142-L164"
+        }
+      ]
+    },
+    "S075": {
+      "number": 75,
+      "title": "[75] How specific account labels affect recommendation eligibility.",
+      "links": [
+        {
+          "label": "Author rules differ between Home and HomeRecommendations",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L164"
+        },
+        {
+          "label": "NSFW, spam, impersonation, abuse, and other named account rules",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L155-L243"
+        },
+        {
+          "label": "Exact definitions of NonAuthors and NonFollowers",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/engine.rs#L74-L76"
+        },
+        {
+          "label": "Official visibility explanations for account labels",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato#L117-L180"
+        },
+        {
+          "label": "Home filtering distinguishes removal from content warnings",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/vf_filter.rs#L8-L26"
+        }
+      ]
+    },
+    "S076": {
+      "number": 76,
+      "title": "[76] Public scope of safety rules and verification of the October 29 refactor.",
+      "links": [
+        {
+          "label": "Public defaults, experiment configuration, and unpublished prompts/partial bot rules",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L447"
+        },
+        {
+          "label": "Home and HomeRecommendations rules in the original version",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L212"
+        },
+        {
+          "label": "Rule composition at the same entry points in the latest version",
+          "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/levels.rs#L195-L258"
+        },
+        {
+          "label": "Latest ClientSwitch and existing defaults",
+          "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/models/viewer.rs#L120-L143"
+        },
+        {
+          "label": "Latest insults conditions rewritten using ClientHas",
+          "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/tweet_rules.rs#L162-L205"
+        }
+      ]
+    },
+    "S077": {
+      "number": 77,
+      "title": "[77] Insults-label application conditions, reader scope, and entry-point differences.",
+      "links": [
+        {
+          "label": "insults, followers, authors, and legacy-client fallback",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L161-L204"
+        },
+        {
+          "label": "Separate visibility queries for in-network, out-of-network, and attached content",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L67-L110"
+        },
+        {
+          "label": "Tests of the same label at different safety levels",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/oon_tweet_label.rs#L192-L268"
+        },
+        {
+          "label": "PTOS test-account and author-eligibility evaluation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194"
+        },
+        {
+          "label": "English, specific insults classification, and author exceptions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L258-L268"
+        },
+        {
+          "label": "Official report's explanation of insults-label effects",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato#L99-L104"
+        }
+      ]
+    },
+    "S078": {
+      "number": 78,
+      "title": "[78] LOW_QUALITY/MISINFO warnings, source, and interaction policies.",
+      "links": [
+        {
+          "label": "Public-interest label rule applying to Everyone and its time conditions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L62-L79"
+        },
+        {
+          "label": "Source routing for LOW_QUALITY and the four MISINFO labels",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec.rs#L759-L789"
+        },
+        {
+          "label": "Fallback to NonCompliant even when limit is missing",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/verdict.rs#L77-L83"
+        },
+        {
+          "label": "Restriction reasons corresponding to MISINFO sources",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/verdict.rs#L225-L258"
+        },
+        {
+          "label": "Assembly of warnings and final limited engagements",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/treatment.rs#L81-L115"
+        },
+        {
+          "label": "Interaction actions resolved from feature-switch policy",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs#L49-L80"
+        },
+        {
+          "label": "Test policies for NonCompliant and limited_replies",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs#L189-L207"
+        },
+        {
+          "label": "Tests for label source, older posts, and missing source",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/label_interstitial.rs#L119-L165"
+        }
+      ]
+    },
+    "S079": {
+      "number": 79,
+      "title": "[79] Default account-label aggregation for three of the latest five records.",
+      "links": [
+        {
+          "label": "Three-of-five, mediaOnly=false, 60 days, seven-day TTL, and author exclusions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425"
+        },
+        {
+          "label": "Taking the window, then counting existing post labels",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L251-L283"
+        },
+        {
+          "label": "Evaluating trigger events and user exclusions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L119-L142"
+        },
+        {
+          "label": "mediaOnly as a configurable option and its scan scope",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L152-L177"
+        },
+        {
+          "label": "Another possible-NSFW default requires eleven matches among ten records",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L360-L394"
+        },
+        {
+          "label": "Feature switches can override public JSON",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L430-L432"
+        }
+      ]
+    },
+    "S080": {
+      "number": 80,
+      "title": "[80] Account-aggregation events, timeline, reposts, and expiration.",
+      "links": [
+        {
+          "label": "Applied events and label-dependent trigger rules",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L12-L28"
+        },
+        {
+          "label": "Reverse-ordered userTimeline, repost-original labels, and event time",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L56-L83"
+        },
+        {
+          "label": "Writing account labels with current time plus TTL",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L89-L106"
+        },
+        {
+          "label": "Stream's ten-minute delay and maxLag target",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Forwarder.strato#L3-L20"
+        },
+        {
+          "label": "A separate NSFW media-event path",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/NsfwTweetMediaProcessor.bot#L3-L30"
+        },
+        {
+          "label": "A separate path aggregating one-day events by post ID",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/derived-feature/ApplyNsfwUserLabel.df#L19-L45"
+        },
+        {
+          "label": "Labeling or review-submission conditions and validity periods on the separate path",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/derived-feature/ApplyNsfwUserLabelOrCreateReport.df#L2-L81"
+        }
+      ]
+    },
+    "S081": {
+      "number": 81,
+      "title": "[81] Processing duplicate-text clusters into COPYPASTA_SPAM.",
+      "links": [
+        {
+          "label": "General duplicate-text and CJK jobs, eligibility, and label writing",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextProd.bot#L2-L74"
+        },
+        {
+          "label": "Replies jobs, eligibility, and label writing",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextRepliesProd.bot#L2-L58"
+        },
+        {
+          "label": "The public repository does not include all spam rules",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L440-L447"
+        }
+      ]
+    },
+    "S082": {
+      "number": 82,
+      "title": "[82] Under the Hood report eligibility and data periods.",
+      "links": [
+        {
+          "label": "Account age, post count, and time conditions",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L17-L22"
+        },
+        {
+          "label": "Best effort explanation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L47-L65"
+        },
+        {
+          "label": "Fallback to the previous period when the month is not ready",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L423-L458"
+        },
+        {
+          "label": "Service switch",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/params.strato#L15-L22"
+        },
+        {
+          "label": "Page explanation of previous-month aggregation",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/index.tsx#L14-L32"
+        }
+      ]
+    },
+    "S083": {
+      "number": 83,
+      "title": "[83] How V8.2 separately truncates long-post text and Article titles.",
+      "links": [
+        {
+          "label": "Character caps for different text types",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L36-L52"
+        },
+        {
+          "label": "Separate calls from post.full_text and Article branches",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L174"
+        },
+        {
+          "label": "The Article branch reads only the title",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L317-L321"
+        }
+      ]
+    },
+    "S084": {
+      "number": 84,
+      "title": "[84] Engagement-count inputs and combined-scoring function in the Home model.",
+      "links": [
+        {
+          "label": "Named Home configuration enables engagement counts",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L260-L322"
+        },
+        {
+          "label": "The combined-scoring function weights predicted values",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143"
+        }
+      ]
+    },
+    "S085": {
+      "number": 85,
+      "title": "[85] DPP content-diversity selection and subsequent score handling.",
+      "links": [
+        {
+          "label": "DPP candidate construction, content representations, and selection results",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/dpp_model.rs"
+        },
+        {
+          "label": "DPP kernel calculation and selection",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/dpp.rs"
+        },
+        {
+          "label": "Conditions for executing DPP in serving",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/mod.rs"
+        },
+        {
+          "label": "Final top-K selection by score",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/top_k_score_selector.rs"
+        }
+      ]
+    },
+    "S086": {
+      "number": 86,
+      "title": "[86] OON multiplier, author diversity, and timing of multiplier application.",
+      "links": [
+        {
+          "label": "VM Ranker parameters",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs"
+        },
+        {
+          "label": "Post-weighting score transformation and multipliers",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs"
+        },
+        {
+          "label": "Conditions on relationships and request types",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs"
+        }
+      ]
+    },
+    "S087": {
+      "number": 87,
+      "title": "[87] Article and NoteTweet identities, body-input fields, and upstream mappings.",
+      "links": [
+        {
+          "label": "Separate extraction of NoteTweet ID and Article ID",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java#L255-L263"
+        },
+        {
+          "label": "Dispatch conditions for the two object types",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java#L301-L311"
+        },
+        {
+          "label": "ArticleMetadata and Post fields",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/data_types.py#L637-L732"
+        },
+        {
+          "label": "Assigning post_metadata.text to full_text",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/post_mapper.py#L130-L174"
+        },
+        {
+          "label": "Article-title and media mapping",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/post_mapper.py#L273-L289"
+        },
+        {
+          "label": "External-content metadata retrieval entry point",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/strato_loader.py#L26-L56"
+        }
+      ]
+    },
+    "S088": {
+      "number": 88,
+      "title": "[88] Differences between V5 and V8.2 content and media processing.",
+      "links": [
+        {
+          "label": "V5 reading order for Article covers, text, and media",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92"
+        },
+        {
+          "label": "V5 image budget and existing image data",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L107-L120"
+        },
+        {
+          "label": "V8.2 assembly of text, Article, and media",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L184"
+        },
+        {
+          "label": "V8.2 ordinary-media selection and Article title",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L320"
+        },
+        {
+          "label": "Passing V5 processing results to the embedding service",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder.py#L55-L90"
+        },
+        {
+          "label": "Media processing and vector generation in the V8.2 plan",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/plan_post_embedding_v82.py"
+        }
+      ]
+    },
+    "S089": {
+      "number": 89,
+      "title": "[89] Upstream conditions for retrieving Article media.",
+      "links": [
+        {
+          "label": "is_high_fav and selection of posts to process",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/media_loader.py#L130-L170"
+        },
+        {
+          "label": "Article-cover and embedded-media retrieval branches",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/media_loader.py#L293-L303"
+        },
+        {
+          "label": "Public default media-retrieval threshold 64",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py#L104-L120"
+        }
+      ]
+    },
+    "S090": {
+      "number": 90,
+      "title": "[90] Clicks, expansion, detail dwell, and Article page identifiers.",
+      "links": [
+        {
+          "label": "Action IDs for clicks, Show more expansion, and Recap dwell",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L443-L490"
+        },
+        {
+          "label": "IDs for detail impressions and detail dwell",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L513-L548"
+        },
+        {
+          "label": "Separate mappings for IsShowMoreExpanded and IsClicked",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/constants.py#L125-L163"
+        },
+        {
+          "label": "Show more expansion belongs to the historical interaction-event set",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L75-L98"
+        },
+        {
+          "label": "Separate slots for DWELL_TIME and CLICK_DWELL_TIME",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L684-L693"
+        },
+        {
+          "label": "Article page enumeration",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L1274-L1298"
+        }
+      ]
+    },
+    "S091": {
+      "number": 91,
+      "title": "[91] Known paths and gaps from reading labels to training and serving.",
+      "links": [
+        {
+          "label": "Training reads existing action vectors and continuous values",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py#L810-L831"
+        },
+        {
+          "label": "Home Mixer fetches aggregated history from an external service",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/scoring_sequence_query_hydrator.rs#L92-L117"
+        },
+        {
+          "label": "The public repository lacks production data sources and internal telemetry",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md#L9-L21"
+        },
+        {
+          "label": "CLICK_DWELL_TIME binary-classification threshold 10",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783"
+        },
+        {
+          "label": "Labels use strictly greater than the threshold; output is probability",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L190-L212"
+        },
+        {
+          "label": "Binary outputs do not undergo continuous-value inverse scaling",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L532-L553"
+        },
+        {
+          "label": "Separate feature processing for historical dwell and click dwell",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_feature_prep.py#L945-L975"
+        }
+      ]
+    },
+    "S092": {
+      "number": 92,
+      "title": "[92] Rule scope for Article publication status and media visibility.",
+      "links": [
+        {
+          "label": "Filter condition for an associated Article that is not Published",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L247-L252"
+        },
+        {
+          "label": "Rule registered at TimelineHomeHydration",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L215-L256"
+        },
+        {
+          "label": "Public tests for different lifecycle states",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/article.rs#L19-L70"
+        },
+        {
+          "label": "The other two safety levels used by Home Mixer",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L60-L106"
+        },
+        {
+          "label": "VF media determination includes Article body media and covers",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/compound.rs#L44-L66"
+        },
+        {
+          "label": "Same Article rule in the next snapshot",
+          "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/tweet_rules.rs#L251-L256"
+        },
+        {
+          "label": "Registration scope in the next snapshot",
+          "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/levels.rs#L258-L297"
+        }
+      ]
+    },
+    "S093": {
+      "number": 93,
+      "title": "[93] Subscription eligibility and Article media access permissions.",
+      "links": [
+        {
+          "label": "Populating candidate subscription-author fields",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/subscription_hydrator.rs#L48-L80"
+        },
+        {
+          "label": "Whether the reader subscribes to the corresponding author",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ineligible_subscription_filter.rs#L8-L29"
+        },
+        {
+          "label": "Registration of subscription handling in the Phoenix candidate pipeline",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L383-L444"
+        },
+        {
+          "label": "Handling media-authorization failure",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/article_client.rs#L81-L101"
+        },
+        {
+          "label": "Subscriber and author permission-error examples",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/article_client.rs#L210-L220"
+        }
+      ]
+    },
+    "S094": {
+      "number": 94,
+      "title": "[94] Scope of checks for candidate sources, format fields, and final prediction combination.",
+      "links": [
+        {
+          "label": "Public Phoenix candidate sources",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L345-L381"
+        },
+        {
+          "label": "Processing order after scoring and selection",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L446-L508"
+        },
+        {
+          "label": "FairShare groups by candidate source",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L44-L65"
+        },
+        {
+          "label": "Candidate input fields for the final value model",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L1-L22"
+        },
+        {
+          "label": "Prediction scores have no separate Article-completion or Show more term",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs#L1-L31"
+        },
+        {
+          "label": "Engagement-prediction combination function",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143"
+        }
+      ]
+    },
+    "S095": {
+      "number": 95,
+      "title": "[95] Using Longer Posts in replies and quotes.",
+      "links": [
+        {
+          "label": "X Premium how to: Longer posts",
+          "url": "https://help.x.com/en/using-x/x-premium-how-to"
+        }
+      ]
+    },
+    "S096": {
+      "number": 96,
+      "title": "[96] August 2026 observational sample of Article views, not a format experiment using the same text.",
+      "links": [
+        {
+          "label": "The original NotPeople author's sample, statistics table, and promotional-investment explanation",
+          "url": "https://notpeople.ai/blog/how-to-make-money-on-x-2026"
+        }
+      ]
+    },
+    "S097": {
+      "number": 97,
+      "title": "[97] Historical Article earnings arrangements and the current rewards program cannot substitute for recommendation coefficients.",
+      "links": [
+        {
+          "label": "Historical creator updates and Article campaign explanation",
+          "url": "https://blog.x.com/en/business/creator-updates-and-article-contest-replacement"
+        },
+        {
+          "label": "Current Original Content Rewards and the old program's end date",
+          "url": "https://help.x.com/en/using-x/original-content-rewards"
+        }
+      ]
+    },
+    "S098": {
+      "number": 98,
+      "title": "[98] Evidence for dwell-value units and upstream gaps for click dwell.",
+      "links": [
+        {
+          "label": "Proto path converts milliseconds to seconds only for DWELL_TIME",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/crates/serving/xai-recsys-engine/src/util.rs#L131-L149"
+        },
+        {
+          "label": "Arrow continuous values are copied unchanged, slot by slot",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/crates/serving/xai-recsys-engine/src/util.rs#L394-L404"
+        },
+        {
+          "label": "Training reads existing continuous-value columns",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py#L810-L831"
+        },
+        {
+          "label": "Click-dwell binary classification declares only the numeric threshold",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783"
+        },
+        {
+          "label": "Home's returned dwell_time is explicitly used for predicted_dwell_sec",
+          "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scored_posts_server.rs#L143-L148"
+        }
+      ]
+    },
+    "E001": {
+      "number": null,
+      "title": "Humanizer",
+      "links": [
+        {
+          "label": "Humanizer",
+          "url": "https://github.com/blader/humanizer/blob/main/SKILL.md"
+        }
+      ]
+    },
+    "E002": {
+      "number": null,
+      "title": "Chinese rules for Anti-Vibe Writing",
+      "links": [
+        {
+          "label": "Chinese rules for Anti-Vibe Writing",
+          "url": "https://github.com/weijt606/anti-vibe-writing/blob/main/skills/anti-vibe-writing/references/chinese-patterns-to-remove.md"
+        }
+      ]
+    }
+  }
+}

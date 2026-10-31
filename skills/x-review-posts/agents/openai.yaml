@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Published X Posts"
+  short_description: "Inspect published X content and suggest improvements"
+  default_prompt: "Use $x-review-posts to review these published X posts and suggest changes."

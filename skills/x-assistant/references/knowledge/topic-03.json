@@ -1,0 +1,4871 @@
+{
+  "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+  "claims": [
+    {
+      "id": "K03-001",
+      "title": "No universal exposure winner has been established between long Posts and Articles",
+      "kind": "unknown",
+      "conclusion": "The original report did not find sufficient evidence that one format consistently wins for the same draft; the final scoring examined has no fixed Article bonus, but there are differences in format, content reading, and some visibility handling.",
+      "conditions": [
+        "Limited to the public code and observational research checked in the report"
+      ],
+      "practical_meaning": "When reviewing a draft, separate format differences from causation in exposure; do not say that the algorithms are completely identical or that Articles always double exposure.",
+      "check": {
+        "when": "The draft compares recommendation performance between the two formats",
+        "needed": [
+          "The native formats being compared",
+          "The corresponding functions or a comparable experiment"
+        ],
+        "verify": [
+          "Whether local processing differences have been converted into exposure multipliers",
+          "Whether the scope of the research is stated"
+        ],
+        "if_missing": "State instead that evidence establishing format as the cause of exposure differences has not yet been found, and explain the known product differences."
+      },
+      "limits": [
+        "The absence of an explicit format coefficient does not rule out differences learned by the model or external experiments."
+      ],
+      "source_units": [
+        "U0231",
+        "U0235",
+        "U0236",
+        "U0260",
+        "U0282"
+      ],
+      "evidence": [
+        {
+          "source_id": "S094",
+          "link_indices": [
+            3,
+            4,
+            5
+          ],
+          "supports": "Boundaries of the final inputs and prediction fusion examined"
+        }
+      ],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-002",
+      "title": "Choose a long Post according to the reading task",
+      "kind": "editorial",
+      "conclusion": "Editorial inference: prefer a long Post for one clear question and one coherent argument that a few paragraphs of evidence can explain, or when the content needs to join an existing discussion.",
+      "conditions": [
+        "The full argument and its applicability conditions can be retained in one Post"
+      ],
+      "practical_meaning": "First define the question this piece answers; do not add sections merely for the sake of the format.",
+      "check": {
+        "when": "Preparing to choose a publishing format",
+        "needed": [
+          "The complete draft",
+          "The publishing context"
+        ],
+        "verify": [
+          "Whether one Post already states the judgment, evidence, and conditions",
+          "Whether the content needs to join a discussion as a reply or quote"
+        ],
+        "if_missing": "First narrow the piece to one complete question, then decide whether to move to an Article."
+      },
+      "limits": [
+        "This is a judgment about organizing material, not a ranking of platform exposure."
+      ],
+      "source_units": [
+        "U0232",
+        "U0270",
+        "U0271",
+        "U0282"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-003",
+      "title": "Use Articles for research with multiple sections, or split it by complete questions",
+      "kind": "editorial",
+      "conclusion": "Editorial inference: an Article can serve investigations, tutorials, and reference guides that need hierarchical sections, embedded material, and later consultation; especially long research can be split into Articles around complete questions that each answer independently, with an introductory Post that can also be understood on its own.",
+      "conditions": [
+        "The material genuinely contains multiple questions, examples, or reference tasks"
+      ],
+      "practical_meaning": "Use the body for the full argument and the introduction for the core conclusions and evidence, then let readers decide whether to continue.",
+      "check": {
+        "when": "Long research is difficult to fit into one Post",
+        "needed": [
+          "A list of sections and materials",
+          "Each piece's independent question",
+          "A draft introduction"
+        ],
+        "verify": [
+          "Whether the sections help readers find content",
+          "Whether each separate piece is complete",
+          "Whether the introduction is useful on its own"
+        ],
+        "if_missing": "Organize the material first; do not determine length by an assumed traffic bonus."
+      },
+      "limits": [
+        "Recommendation performance still requires observing reader responses; splitting a piece does not create an additional exposure quota."
+      ],
+      "source_units": [
+        "U0232",
+        "U0270",
+        "U0271"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-004",
+      "title": "Official product scope of Longer Posts",
+      "kind": "official",
+      "conclusion": "The official description cited in the original report gives Longer Posts a per-Post limit of 25,000 characters; each remains a single Post and can also be used for replies and quotes.",
+      "conditions": [
+        "The original report checked the official help pages as of 2026-10-29"
+      ],
+      "practical_meaning": "When choosing a long Post, check the character count and the actual editor's capabilities; consider the format for replies and quotes as well.",
+      "check": {
+        "when": "The draft makes claims about the limit or uses of long Posts",
+        "needed": [
+          "The help page at that time",
+          "The actual editor and features available to the account"
+        ],
+        "verify": [
+          "Whether characters are being called tokens",
+          "Whether the draft incorrectly says long Posts cannot be used for replies or quotes"
+        ],
+        "if_missing": "Retain the report's date and verify the product interface when publishing."
+      },
+      "limits": [
+        "The product limit is not V8.2's 4000-character content-input limit."
+      ],
+      "source_units": [
+        "U0233"
+      ],
+      "evidence": [
+        {
+          "source_id": "S006",
+          "link_indices": [
+            0
+          ],
+          "supports": "Definition and limit of Longer posts"
+        },
+        {
+          "source_id": "S095",
+          "link_indices": [
+            0
+          ],
+          "supports": "Explanation of using long Posts for replies and quotes"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K03-005",
+      "title": "Articles have a separate editor and article structure",
+      "kind": "official",
+      "conclusion": "The official Article product cited in the original report supports a separate editor, hierarchical headings, embedded media, and embedded Posts; published Articles appear in the profile's Articles tab.",
+      "conditions": [
+        "The original report checked the official help pages as of 2026-10-29"
+      ],
+      "practical_meaning": "Use the article structure to organize content when readers need to consult it by section or when materials need to be embedded across sections.",
+      "check": {
+        "when": "Discussing Article product capabilities or choosing it to carry research",
+        "needed": [
+          "The Article editor",
+          "The intended headings, media, and Posts"
+        ],
+        "verify": [
+          "Whether the actual editor can present the required structure",
+          "Whether the Articles entry point is accessible after publication"
+        ],
+        "if_missing": "Preview in the editor before deciding on the publication approach."
+      },
+      "limits": [
+        "Rich-text capabilities do not guarantee that every Markdown element will paste correctly."
+      ],
+      "source_units": [
+        "U0233"
+      ],
+      "evidence": [
+        {
+          "source_id": "S006",
+          "link_indices": [
+            1
+          ],
+          "supports": "Article product definition, editing, and distribution features"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K03-006",
+      "title": "The comparison must use the two native formats",
+      "kind": "editorial",
+      "conclusion": "Methodological judgment: a comparison of long Posts and Articles should use native long Posts and native Articles respectively; external blog links or multi-Post threads cannot substitute for either group.",
+      "conditions": [
+        "The question concerns the effect of publishing the same material through either native editor"
+      ],
+      "practical_meaning": "List the experimental groups clearly before writing research conclusions, so results from link-driving Posts or threads are not used to answer a different question.",
+      "check": {
+        "when": "Citing research comparing formats",
+        "needed": [
+          "The actual content and formats of both groups",
+          "The research question"
+        ],
+        "verify": [
+          "Whether an Article group exists",
+          "Whether the comparison includes complete long Posts rather than links or threads"
+        ],
+        "if_missing": "Narrow the conclusion to the formats the research actually compared."
+      },
+      "limits": [
+        "Even with matching formats, audience, timing, and promotion still need to be controlled."
+      ],
+      "source_units": [
+        "U0233",
+        "U0269"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-007",
+      "title": "BotMaker identifies NoteTweet and Article separately",
+      "kind": "code",
+      "conclusion": "BotMaker feature extraction handles noteTweetId and articleId separately and has different object-dispatch conditions; the system has fields that distinguish the formats.",
+      "conditions": [
+        "The public BotMaker path checked in the report"
+      ],
+      "practical_meaning": "Do not describe an Article as merely a renamed extra-long Post, or describe identity fields as recommendation rewards.",
+      "check": {
+        "when": "The draft explains the formats' identities within the system",
+        "needed": [
+          "The corresponding FeaturesOfTweet fields and dispatch code"
+        ],
+        "verify": [
+          "Whether noteTweetId and articleId are listed separately",
+          "Whether identity features are confused with ranking coefficients"
+        ],
+        "if_missing": "State only the observed fields; do not infer a fixed scoring bonus."
+      },
+      "limits": [
+        "These belong to an anti-abuse feature context and do not directly prove how ranking uses them."
+      ],
+      "source_units": [
+        "U0234",
+        "U0235"
+      ],
+      "evidence": [
+        {
+          "source_id": "S087",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Separate extraction and dispatch of the two identities"
+        }
+      ],
+      "related_unknowns": [
+        "Q44",
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-008",
+      "title": "A Grox Post can contain both text and Article metadata",
+      "kind": "code",
+      "conclusion": "The public Grox Post model retains full_text and optional article_metadata; ArticleMetadata includes a title, cover, and media.",
+      "conditions": [
+        "The public data model checked in the report"
+      ],
+      "practical_meaning": "A review must distinguish the text carried by the Post from Article metadata, without assuming that they are mutually exclusive.",
+      "check": {
+        "when": "Explaining Article input fields",
+        "needed": [
+          "The Post and ArticleMetadata type definitions"
+        ],
+        "verify": [
+          "Whether the coexistence of full_text and article_metadata is retained",
+          "Whether title, cover, and media are listed accurately"
+        ],
+        "if_missing": "Explain the known fields and list the body-text source as a separate gap."
+      },
+      "limits": [
+        "A field's existence does not prove that its content has been populated and is not evidence of a ranking reward."
+      ],
+      "source_units": [
+        "U0234",
+        "U0235"
+      ],
+      "evidence": [
+        {
+          "source_id": "S087",
+          "link_indices": [
+            2
+          ],
+          "supports": "Field definitions for Post and ArticleMetadata"
+        }
+      ],
+      "related_unknowns": [
+        "Q44"
+      ]
+    },
+    {
+      "id": "K03-009",
+      "title": "Exact rules for truncating body text in V8.2",
+      "kind": "code",
+      "conclusion": "When post.full_text is nonempty, V8.2 first calls _strip_dangling_media_urls and then truncates with MAX_POST_TEXT=4000; _truncate first converts a null value to an empty string and applies strip, returns the stripped text for a negative limit, and otherwise uses text[:limit].rstrip().",
+      "conditions": [
+        "This local renderer_v82 function checked in the report",
+        "The input field has already been populated upstream"
+      ],
+      "practical_meaning": "Check whether the first 4000 characters convey the subject; preserve the cleanup, conditions, and character-slicing order when explaining the boundary.",
+      "check": {
+        "when": "The draft claims the system reads only the first 4000 characters",
+        "needed": [
+          "The renderer_v82 conditions and constants",
+          "The supplied full_text"
+        ],
+        "verify": [
+          "Whether the claim is confined to this renderer",
+          "Whether characters are incorrectly described as tokens or as the editor's publishing limit"
+        ],
+        "if_missing": "Reframe the statement as this local text-input rule; do not generalize it to the entire platform."
+      },
+      "limits": [
+        "The example omits other input assembly; it does not guarantee that the full text has been obtained upstream."
+      ],
+      "source_units": [
+        "U0235",
+        "U0237",
+        "U0238",
+        "U0240"
+      ],
+      "evidence": [
+        {
+          "source_id": "S047",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "4000 characters, the truncation function, and full_text processing"
+        },
+        {
+          "source_id": "S083",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Field limits and assembly branches"
+        }
+      ],
+      "related_unknowns": [
+        "Q44"
+      ]
+    },
+    {
+      "id": "K03-010",
+      "title": "V8.2 can include both the Article title and Post text in its input",
+      "kind": "code",
+      "conclusion": "_article_block reads article_metadata.title and retains its first 200 characters; the two if statements for full_text and the Article branch are not mutually exclusive, so a Post with Article metadata also includes that text whenever full_text is nonempty.",
+      "conditions": [
+        "V8.2 as checked in the report",
+        "The corresponding fields are nonempty"
+      ],
+      "practical_meaning": "Both the Article title and its carrier Post's introduction should convey the subject; a review must not claim that long Posts have their body read while Articles always have only their title read.",
+      "check": {
+        "when": "Explaining what V8.2 reads from an Article",
+        "needed": [
+          "full_text",
+          "article_metadata.title",
+          "The code for both branches"
+        ],
+        "verify": [
+          "Whether the 200-character title boundary is retained",
+          "Whether the nonempty full_text branch is checked"
+        ],
+        "if_missing": "Describe only the visible fields; do not treat delivery of the Article body as established."
+      },
+      "limits": [
+        "This function does not establish what text is actually populated for all Articles in production."
+      ],
+      "source_units": [
+        "U0235",
+        "U0237",
+        "U0238",
+        "U0239"
+      ],
+      "evidence": [
+        {
+          "source_id": "S083",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Title truncation, the two independent branches, and Article title reading"
+        }
+      ],
+      "related_unknowns": [
+        "Q44"
+      ]
+    },
+    {
+      "id": "K03-011",
+      "title": "V8.2 output is used for content representation, not directly to calculate exposure",
+      "kind": "code",
+      "conclusion": "The text processed by V8.2 and the selected media are sent to an embedding service to form a content representation; the local truncation function does not directly calculate exposure volume.",
+      "conditions": [
+        "The observed call path from renderer_v82 to embedder_v82"
+      ],
+      "practical_meaning": "Input clarity can be improved, but the 4000-character cutoff cannot be converted into a fixed traffic gain or loss.",
+      "check": {
+        "when": "Using content-truncation rules to explain exposure",
+        "needed": [
+          "Renderer output",
+          "The embedder service call"
+        ],
+        "verify": [
+          "Whether representation generation is distinguished from retrieval, ranking, and actual display"
+        ],
+        "if_missing": "State only the input and its representation purpose; leave exposure effects to comparable data."
+      },
+      "limits": [
+        "The production consumers of the vectors and their coverage proportions have not yet been fully traced."
+      ],
+      "source_units": [
+        "U0240"
+      ],
+      "evidence": [
+        {
+          "source_id": "S047",
+          "link_indices": [
+            2
+          ],
+          "supports": "Sending processed results to the embedding service"
+        }
+      ],
+      "related_unknowns": [
+        "Q44",
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-012",
+      "title": "Experimental scope of the local renderer checks",
+      "kind": "observation",
+      "conclusion": "The report directly called the public processing functions with in-memory objects whose fields were already populated, checking only inputs and outputs; it did not run an embedding model or publish to real accounts.",
+      "conditions": [
+        "Local function checks; other fields were held constant as specified by the experiment"
+      ],
+      "practical_meaning": "Label cited results as field-reading verification, not as platform exposure experiments.",
+      "check": {
+        "when": "Citing the subsequent text or media experiment results",
+        "needed": [
+          "Object fields and renderer version",
+          "Local output"
+        ],
+        "verify": [
+          "Whether the already-populated fields are disclosed",
+          "Whether function output is treated as model understanding or production performance"
+        ],
+        "if_missing": "Retain the original report's local-verification limitation and add no conclusions about production effects."
+      },
+      "limits": [
+        "The cited links provide the invoked code, not independent production logs."
+      ],
+      "source_units": [
+        "U0241"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "V5 and V8.2 processing functions used for the local checks"
+        }
+      ],
+      "related_unknowns": [
+        "Q44",
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-013",
+      "title": "Boundary check using 4000 characters plus a trailing character",
+      "kind": "observation",
+      "conclusion": "With other fields fixed and full_text containing 4000 copies of the character U+5B57 followed by U+5C3E, the report records V8.2 body-text output of 4000 characters without U+5C3E, verifying that this slice operated by character.",
+      "conditions": [
+        "An in-memory object with populated fields",
+        "No embedding model was run and no Post was published online"
+      ],
+      "practical_meaning": "Use character counts when reviewing truncation boundaries; do not convert them into token counts.",
+      "check": {
+        "when": "Explaining the precise meaning of 4000",
+        "needed": [
+          "The complete input text",
+          "The output from that invocation",
+          "The character count"
+        ],
+        "verify": [
+          "Whether the characters on either side of the boundary match",
+          "Whether the trailing character is truncated"
+        ],
+        "if_missing": "Retain only the source-code rule; do not claim to have completed a new reproduction experiment."
+      },
+      "limits": [
+        "Verifies only this renderer's output."
+      ],
+      "source_units": [
+        "U0241",
+        "U0242"
+      ],
+      "evidence": [
+        {
+          "source_id": "S047",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "This local slicing rule; the numeric output comes from the report's local check"
+        }
+      ],
+      "related_unknowns": [
+        "Q44"
+      ]
+    },
+    {
+      "id": "K03-014",
+      "title": "Changing only text after character 4000 can leave that output unchanged",
+      "kind": "observation",
+      "conclusion": "The report held all other fields fixed and changed only the content after character 4000; the V8.2 output text remained unchanged.",
+      "conditions": [
+        "The same renderer, the same object with populated fields, and identical other inputs"
+      ],
+      "practical_meaning": "Do not place all essential identifying information beyond this local window; also retain the complete body for readers.",
+      "check": {
+        "when": "Discussing representation changes after edits to the latter part of a piece",
+        "needed": [
+          "Both sets of inputs and outputs",
+          "The other fields held fixed"
+        ],
+        "verify": [
+          "Whether the change is actually beyond the truncation boundary",
+          "Whether the claim is limited to that text output"
+        ],
+        "if_missing": "Do not claim that the latter part of the text is useless to every system or reader."
+      },
+      "limits": [
+        "Other models, inputs, and production paths are outside the experiment's scope."
+      ],
+      "source_units": [
+        "U0242"
+      ],
+      "evidence": [
+        {
+          "source_id": "S047",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Truncation logic that makes changes to the tail invisible"
+        }
+      ],
+      "related_unknowns": [
+        "Q44"
+      ]
+    },
+    {
+      "id": "K03-015",
+      "title": "Verification that a 201-character Article title and full_text coexist",
+      "kind": "observation",
+      "conclusion": "The report supplied both full_text and a 201-character Article title; both appeared in the V8.2 output, with only the first 200 characters of the title retained.",
+      "conditions": [
+        "Fields were populated in advance",
+        "A local function test with other fields held fixed"
+      ],
+      "practical_meaning": "The beginning of the Article title should identify the topic accurately; the carrier Post's text can still provide further explanation.",
+      "check": {
+        "when": "Explaining the relationship between Article title and body-text input",
+        "needed": [
+          "full_text",
+          "A 201-character title",
+          "The output"
+        ],
+        "verify": [
+          "Whether the fact that both coexist is retained",
+          "Whether the title is truncated at 200 characters"
+        ],
+        "if_missing": "Describe only the verified field reading; do not claim that Article body text is universally absent."
+      },
+      "limits": [
+        "The test did not examine how the production upstream populates Article carrier-Post text."
+      ],
+      "source_units": [
+        "U0241",
+        "U0242"
+      ],
+      "evidence": [
+        {
+          "source_id": "S083",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Title length and assembly of text and title together"
+        }
+      ],
+      "related_unknowns": [
+        "Q44"
+      ]
+    },
+    {
+      "id": "K03-016",
+      "title": "Text and Article mappings in the public mapper",
+      "kind": "code",
+      "conclusion": "The public mapper assigns post_metadata.text to full_text; its Article metadata mapping lists title and media, with no separate body property.",
+      "conditions": [
+        "The post_mapper and external content-fetching entry point checked in the report"
+      ],
+      "practical_meaning": "Explain inputs using their actual fields; do not infer from the full_text variable name that the complete text of every format has been obtained.",
+      "check": {
+        "when": "Tracing the body-text sources for long Posts and Articles",
+        "needed": [
+          "post_mapper",
+          "The external content-service entry point"
+        ],
+        "verify": [
+          "The source assigned to full_text",
+          "Whether the Article mapping actually has a body property"
+        ],
+        "if_missing": "Explicitly list the observed mappings and the upstream portions that are not public."
+      },
+      "limits": [
+        "The absence of a separate body property does not mean Article body text is ignored in every path."
+      ],
+      "source_units": [
+        "U0243"
+      ],
+      "evidence": [
+        {
+          "source_id": "S087",
+          "link_indices": [
+            3,
+            4,
+            5
+          ],
+          "supports": "Text assignment, Article mapping, and the external metadata entry point"
+        }
+      ],
+      "related_unknowns": [
+        "Q44"
+      ]
+    },
+    {
+      "id": "K03-017",
+      "title": "Production sources of full text and Article bodies remain incompletely traced",
+      "kind": "unknown",
+      "conclusion": "The original report did not find the complete production implementation showing how the upstream content service populates long-Post full text and Article carrier-Post text, or whether it provides Article body text separately.",
+      "conditions": [
+        "The public mapper is known; the complete production population chain is missing"
+      ],
+      "practical_meaning": "Mark body-text sources as unresolved in a review; do not arbitrarily choose between 'every format already has its full text' and 'all Article body text is ignored.'",
+      "check": {
+        "when": "The draft makes a universal claim about whether full text reaches the model",
+        "needed": [
+          "Production content-service mappings",
+          "Actual field samples",
+          "Other body-text services and consumers"
+        ],
+        "verify": [
+          "Whether evidence connects field production, transmission, and consumption"
+        ],
+        "if_missing": "Use wording limited to 'observed fields/renderers' and retain the gap."
+      },
+      "limits": [
+        "Neither local variable names nor missing metadata fields can replace production evidence."
+      ],
+      "source_units": [
+        "U0243"
+      ],
+      "evidence": [
+        {
+          "source_id": "S087",
+          "link_indices": [
+            3,
+            4,
+            5
+          ],
+          "supports": "The start and end boundaries of the public chain; the report's search account explains the complete-production gap"
+        }
+      ],
+      "related_unknowns": [
+        "Q44"
+      ]
+    },
+    {
+      "id": "K03-018",
+      "title": "Length and line breaks are transmissible features, not a length-reward formula",
+      "kind": "code",
+      "conclusion": "The program constructs content features such as weighted_text_len and newline_count and passes them into the relevant requests; their existence does not prove that more length earns more points or that there is a fixed optimal character count.",
+      "conditions": [
+        "The content features, encoding, and VM Ranker request checked in the report"
+      ],
+      "practical_meaning": "Choose length according to the argument's needs and retain necessary conditions; do not pad text simply because these features exist.",
+      "check": {
+        "when": "The draft claims long text or more line breaks always confer an advantage",
+        "needed": [
+          "Feature definitions",
+          "Transmission code",
+          "Comparable outcome data"
+        ],
+        "verify": [
+          "Whether an input feature is treated as a fixed positive coefficient",
+          "Whether an optimal character count is stated without experiments"
+        ],
+        "if_missing": "State instead that length and line breaks can be inputs, while the direction of their effects is unknown."
+      },
+      "limits": [
+        "These fields do not establish a universal exposure response."
+      ],
+      "source_units": [
+        "U0244"
+      ],
+      "evidence": [
+        {
+          "source_id": "S046",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Construction, encoding, and transmission of content features into requests"
+        }
+      ],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-019",
+      "title": "Openings, titles, and introductions should establish the topic first",
+      "kind": "editorial",
+      "conclusion": "Editorial inference: a long Post's opening should state the question, subject, and main findings; an Article's title and outward-facing introduction should explain its topic, without hiding all identifying information in the later text.",
+      "conditions": [
+        "Based on known local input windows, not on known exposure gains"
+      ],
+      "practical_meaning": "Check whether readers who see only the opening, title, or introduction can still tell what was studied.",
+      "check": {
+        "when": "Reviewing an opening or an Article's external introduction",
+        "needed": [
+          "The title",
+          "The beginning of the body",
+          "The carrier Post or introductory Post"
+        ],
+        "verify": [
+          "Whether the question, subject, and main findings appear",
+          "Whether identifying the topic depends on reaching the end"
+        ],
+        "if_missing": "Move essential identifying information earlier while retaining the complete evidence and conditions."
+      },
+      "limits": [
+        "There is an input-based rationale, but no established answer for how much exposure would increase."
+      ],
+      "source_units": [
+        "U0245"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q44",
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-020",
+      "title": "V5 reads Article titles, covers, and embedded media",
+      "kind": "code",
+      "conclusion": "The V5 sequence includes the Article title, Article cover, Post text, and ordinary Post media, followed by Article embedded media; the image budget affects how many images are ultimately retained.",
+      "conditions": [
+        "The V5 renderer checked in the report",
+        "Usable image data is already available for the media",
+        "Subject to the image budget"
+      ],
+      "practical_meaning": "Both Article covers and embedded material should accurately express the content; specify the renderer when discussing the lead image.",
+      "check": {
+        "when": "Explaining the order of Article media inputs",
+        "needed": [
+          "The V5 renderer",
+          "Availability of image data",
+          "The image budget"
+        ],
+        "verify": [
+          "Whether the cover's precedence over ordinary attachments is retained",
+          "Whether the budget is included when determining the final count"
+        ],
+        "if_missing": "Describe reading only when usable data is available and within budget."
+      },
+      "limits": [
+        "V8.2's media-selection rules cannot be applied directly to V5."
+      ],
+      "source_units": [
+        "U0235",
+        "U0246"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "V5 ordering of Article, text, and media, and the image budget"
+        }
+      ],
+      "related_unknowns": [
+        "Q44",
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-021",
+      "title": "V8.2 selects media directly from post.media; its Article branch adds only the title",
+      "kind": "code",
+      "conclusion": "V8.2 selects usable media from post.media; within this function, the Article branch only appends the title and does not separately iterate over article_metadata.cover_media or article_metadata.media.",
+      "conditions": [
+        "The renderer_v82 checked in the report; no assumptions about upstream field population"
+      ],
+      "practical_meaning": "Check ordinary attachments and Article metadata separately; do not say that the first ordinary media item must be the Article cover read by every renderer.",
+      "check": {
+        "when": "The draft claims this path necessarily reads an Article's lead image or cover",
+        "needed": [
+          "post.media",
+          "The Article cover and embedded-media fields",
+          "The V8.2 branch"
+        ],
+        "verify": [
+          "Whether field sources are distinguished",
+          "Whether lack of iteration within the function is extrapolated into no image representation anywhere on the platform"
+        ],
+        "if_missing": "Explain the local field reading and list production coverage as unresolved."
+      },
+      "limits": [
+        "Upstream may prepopulate or copy media; the actual consumers and traffic have not been fully confirmed."
+      ],
+      "source_units": [
+        "U0235",
+        "U0246"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "V8.2 media selection, assembly, and Article-title branch"
+        }
+      ],
+      "related_unknowns": [
+        "Q44",
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-022",
+      "title": "Verification of V5 ordering for three kinds of available images",
+      "kind": "observation",
+      "conclusion": "When the same in-memory object supplied an Article cover, an ordinary Post attachment, and an Article embedded image, the report records V5 output in that order: cover, attachment, embedded image.",
+      "conditions": [
+        "All three sets of image data were already available",
+        "The budget was sufficient",
+        "A local function test"
+      ],
+      "practical_meaning": "Under the V5 assumptions, treat the cover as the first image to focus on while checking that the subsequent material is complete.",
+      "check": {
+        "when": "Citing the V5 cover-first test",
+        "needed": [
+          "The three media fields in the same object",
+          "A sufficient image budget",
+          "The output order"
+        ],
+        "verify": [
+          "Whether media availability is explicit",
+          "Whether the field identities of all three images are retained"
+        ],
+        "if_missing": "Do not treat production behavior with unloaded media as the same experiment."
+      },
+      "limits": [
+        "No model was run, so ranking or exposure cannot be inferred."
+      ],
+      "source_units": [
+        "U0247"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The corresponding reading order; test observations come from the original report"
+        }
+      ],
+      "related_unknowns": [
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-023",
+      "title": "V5 retains only the cover when its image budget is one",
+      "kind": "observation",
+      "conclusion": "In the above test with all three kinds of images available, setting the V5 image budget to one resulted in only the Article cover being returned, as recorded in the report.",
+      "conditions": [
+        "The same object as in the three-image test",
+        "An image budget of 1"
+      ],
+      "practical_meaning": "Check the budget first when explaining why 'only the cover remains'; do not describe this as all Articles always having only their covers read.",
+      "check": {
+        "when": "The draft infers an Article rule from a single-image output",
+        "needed": [
+          "The image budget",
+          "The media fields",
+          "The output"
+        ],
+        "verify": [
+          "Whether image availability is controlled",
+          "Whether the one-image budget is stated"
+        ],
+        "if_missing": "Limit the conclusion to those test parameters."
+      },
+      "limits": [
+        "This cannot establish that production uniformly uses a one-image budget."
+      ],
+      "source_units": [
+        "U0247"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Order and budget together determine that only the cover remains"
+        }
+      ],
+      "related_unknowns": [
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-024",
+      "title": "Verification that V8.2 selects the ordinary attachment from the same object",
+      "kind": "observation",
+      "conclusion": "When the same object supplied an Article cover, ordinary attachment, and embedded image, the report records V8.2 returning the ordinary Post attachment.",
+      "conditions": [
+        "All three images were already available",
+        "Other fields were fixed",
+        "A local function invocation"
+      ],
+      "practical_meaning": "Retain the fields selected by each renderer when comparing renderers; do not refer vaguely to the 'lead image.'",
+      "check": {
+        "when": "Citing differences between V5 and V8.2",
+        "needed": [
+          "The three media fields",
+          "The V8.2 output"
+        ],
+        "verify": [
+          "Whether an ordinary attachment is incorrectly called the Article cover",
+          "Whether the claim is limited to that invocation"
+        ],
+        "if_missing": "List fields and renderers separately; do not assume how production traffic is split."
+      },
+      "limits": [
+        "Neither embedding understanding quality nor actual exposure was measured."
+      ],
+      "source_units": [
+        "U0247"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "V8.2 logic for selecting from the ordinary media field"
+        }
+      ],
+      "related_unknowns": [
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-025",
+      "title": "V8.2 local output is empty when images exist only in Article metadata",
+      "kind": "observation",
+      "conclusion": "When the report placed images only in Article metadata and not in the ordinary Post media field, that V8.2 invocation returned an empty image list.",
+      "conditions": [
+        "The field configuration of a prepopulated in-memory object",
+        "A local V8.2 test"
+      ],
+      "practical_meaning": "Check fields and the loading chain first when locating missing media; an empty output does not establish that all production Articles lack image representations.",
+      "check": {
+        "when": "Explaining why Article images did not enter a particular representation",
+        "needed": [
+          "post.media",
+          "Article metadata",
+          "Upstream population records"
+        ],
+        "verify": [
+          "Whether only the Article fields contain images",
+          "Whether possible upstream copying of media has been checked"
+        ],
+        "if_missing": "Retain the fact of this empty output and mark production coverage as unknown."
+      },
+      "limits": [
+        "Does not cover other renderers, field copying, or consumers."
+      ],
+      "source_units": [
+        "U0247",
+        "U0248"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "The code scope that locally does not read Article image fields"
+        }
+      ],
+      "related_unknowns": [
+        "Q44",
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-026",
+      "title": "Renderer tests do not prove production traffic coverage",
+      "kind": "unknown",
+      "conclusion": "Field-reading tests cannot establish whether all production Articles have image representations; upstream field population, consumers of different vector versions, which path traffic uses, and configuration remain unresolved.",
+      "conditions": [
+        "The local function tests and public plans in the report"
+      ],
+      "practical_meaning": "Format advice should cover titles, introductions, covers, and embedded images without depending on a single unknown production path.",
+      "check": {
+        "when": "Extrapolating renderer results to platform-wide processing",
+        "needed": [
+          "Production field samples",
+          "Consumer configuration",
+          "Versions and traffic allocation"
+        ],
+        "verify": [
+          "Whether a complete production call chain is available",
+          "Whether a default or local test is being treated as full coverage"
+        ],
+        "if_missing": "State explicitly that only the specified fields and renderer were verified."
+      },
+      "limits": [
+        "The existence of a public plan does not mean every reader uses the same version."
+      ],
+      "source_units": [
+        "U0248"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "Visible scope of the V5 service connection and V8.2 registered plans"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q44",
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-027",
+      "title": "The local V5 test did not exhibit V8.2's 4000-character cutoff",
+      "kind": "observation",
+      "conclusion": "The report did not observe V8.2's 4000-character cutoff in its local V5 test; input limits after the embedding service are outside this conclusion.",
+      "conditions": [
+        "The V5 function and test input used in the report"
+      ],
+      "practical_meaning": "Do not treat 4000 as a uniform length limit for all content-representation versions.",
+      "check": {
+        "when": "Comparing text truncation in V5 and V8.2",
+        "needed": [
+          "Both renderer versions",
+          "Subsequent service input limits"
+        ],
+        "verify": [
+          "Whether 4000 is attributed only to local V8.2 processing",
+          "Whether downstream service limits are distinguished"
+        ],
+        "if_missing": "Retain the version differences and investigate downstream limits separately."
+      },
+      "limits": [
+        "This does not prove that V5 together with its downstream service always accepts unlimited text."
+      ],
+      "source_units": [
+        "U0248"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            0,
+            4
+          ],
+          "supports": "V5 text processing and the subsequent embedding-service boundary"
+        }
+      ],
+      "related_unknowns": [
+        "Q44",
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-028",
+      "title": "The Article media-fetching path has a default is_high_fav threshold of 64",
+      "kind": "code",
+      "conclusion": "The public MediaLoader enters the Article cover and embedded-media fetching branch only when is_high_fav is true, with a related default threshold of 64; it is also subject to conditions such as Post selection, the task, and existing media state.",
+      "conditions": [
+        "The MediaLoader and public configuration checked in the report",
+        "The specific task receives and selects the relevant Post"
+      ],
+      "practical_meaning": "Check that loading branch and existing data when investigating media input, rather than looking only at like counts.",
+      "check": {
+        "when": "The draft explains when Article media is fetched",
+        "needed": [
+          "is_high_fav",
+          "Threshold configuration",
+          "Post selection, task, and media state"
+        ],
+        "verify": [
+          "Whether the other prerequisites are retained",
+          "Whether the default is treated as the value of every production request"
+        ],
+        "if_missing": "Call it the public default for this media-fetching path and retain production configuration as unknown."
+      },
+      "limits": [
+        "This number does not directly determine Article recommendation eligibility or exposure."
+      ],
+      "source_units": [
+        "U0249"
+      ],
+      "evidence": [
+        {
+          "source_id": "S089",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "is_high_fav, the Article media branch, and the default of 64"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-029",
+      "title": "The Article 64-like media threshold is not recommendation eligibility",
+      "kind": "myth",
+      "conclusion": "MediaLoader does not establish that 'an Article must first have 64 likes to be recommended'; the number here controls only one observed media-fetching branch.",
+      "conditions": [
+        "The original claim conflates media loading with recommendation eligibility"
+      ],
+      "practical_meaning": "Remove promises that '64 likes unlock Article recommendations' and instead check the actual fields and paths.",
+      "check": {
+        "when": "Copy presents 64 as an Article traffic milestone",
+        "needed": [
+          "Media-loading source code",
+          "The recommendation-eligibility chain"
+        ],
+        "verify": [
+          "Whether the code is actually connected to candidate filtering or scoring",
+          "Whether it is only a media-fetching condition"
+        ],
+        "if_missing": "Retain only the loading rule and seek separate evidence for recommendation eligibility."
+      },
+      "limits": [
+        "Nor can it guarantee in reverse that every path below 64 already has the same media."
+      ],
+      "source_units": [
+        "U0249"
+      ],
+      "evidence": [
+        {
+          "source_id": "S089",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The role of 64 only within this media-fetching process"
+        }
+      ],
+      "related_unknowns": [
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-030",
+      "title": "Check an Article's title, cover, introduction, and embedded images separately",
+      "kind": "editorial",
+      "conclusion": "Editorial inference: an ordinary image Post should not hide all results in its fourth image; for an Article, check the title, cover, body introduction, and embedded images individually, and do not equate the first item in an ordinary media list with the cover used by every Article renderer.",
+      "conditions": [
+        "Different renderers read different fields"
+      ],
+      "practical_meaning": "Give every entry point that may appear independently enough information about the topic and conclusions.",
+      "check": {
+        "when": "Reviewing Article media organization",
+        "needed": [
+          "The title",
+          "The cover",
+          "The outward-facing introduction",
+          "Embedded images"
+        ],
+        "verify": [
+          "Whether each part accurately conveys the topic",
+          "Whether the cover is confused with ordinary attachments",
+          "Whether the core results exist only in later material"
+        ],
+        "if_missing": "First add enough information to make each entry point understandable, then check the editor's presentation."
+      },
+      "limits": [
+        "This is an editorial inference from input differences, with no guaranteed exposure multiplier."
+      ],
+      "source_units": [
+        "U0250"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q44",
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-031",
+      "title": "Clicks, expansion, detail impressions, and dwell have separate action IDs",
+      "kind": "code",
+      "conclusion": "The protocol separately defines CLIENT_TWEET_CLICK=29, CLIENT_TWEET_SHOW_MORE_EXPAND=45, CLIENT_TWEET_DETAILS_IMPRESSION=72, CLIENT_TWEET_DETAIL_DWELL=103, and CLIENT_TWEET_RECAP_DWELLED=11.",
+      "conditions": [
+        "The recsys.proto enumeration checked in the report"
+      ],
+      "practical_meaning": "Name these separately when analyzing reading behavior; do not merge expansion, clicks, detail dwell, and recap dwell into one action.",
+      "check": {
+        "when": "The draft explains expansion or dwell signals",
+        "needed": [
+          "Action enumerations and IDs",
+          "The claimed event relationship"
+        ],
+        "verify": [
+          "Whether all five names and IDs are accurate",
+          "Whether the names are treated as complete frontend trigger definitions"
+        ],
+        "if_missing": "Use their separate names and leave unverified overlaps or timing unknown."
+      },
+      "limits": [
+        "Separate enumeration values do not prove that actions cannot occur together in the client, or that the full text was read."
+      ],
+      "source_units": [
+        "U0235",
+        "U0251",
+        "U0252"
+      ],
+      "evidence": [
+        {
+          "source_id": "S090",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The separate enumeration values of the five actions"
+        }
+      ],
+      "related_unknowns": [
+        "Q07",
+        "Q13",
+        "Q45"
+      ]
+    },
+    {
+      "id": "K03-032",
+      "title": "Show more also enters interaction history and feature mappings",
+      "kind": "code",
+      "conclusion": "SHOW_MORE_EXPAND exists in the historical interaction-event set and maps to IsShowMoreExpanded; it is not merely an isolated protocol name.",
+      "conditions": [
+        "The historical events and constant mappings checked in the report"
+      ],
+      "practical_meaning": "It is valid to say expansion has subsequent data uses, but how it affects specific predictions still requires investigation.",
+      "check": {
+        "when": "The draft claims the expansion signal is entirely useless or exists in name only",
+        "needed": [
+          "The historical event set",
+          "The IsShowMoreExpanded mapping"
+        ],
+        "verify": [
+          "Whether the actual mapping and historical use are retained",
+          "Whether an independent reward is inferred too far"
+        ],
+        "if_missing": "State that it is recorded and mapped, without quantifying its effect."
+      },
+      "limits": [
+        "The existence of a history feature does not mean every expansion has a fixed score."
+      ],
+      "source_units": [
+        "U0253"
+      ],
+      "evidence": [
+        {
+          "source_id": "S090",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "The show-more feature mapping and historical set"
+        }
+      ],
+      "related_unknowns": [
+        "Q45"
+      ]
+    },
+    {
+      "id": "K03-033",
+      "title": "Final fusion has no separate expansion or Article-completion reward term",
+      "kind": "code",
+      "conclusion": "The final prediction-score fields examined contain no independent show_more_score or article_completion_score; this neither proves expansion is useless nor permits assigning a fixed reward score to one expansion.",
+      "conditions": [
+        "The final score fields and fusion scope checked in the report"
+      ],
+      "practical_meaning": "Remove unsourced claims about 'how many points one expansion adds' or a 'fixed reward for completing an Article.'",
+      "check": {
+        "when": "The draft assigns a fixed score to expansion or Article completion",
+        "needed": [
+          "The final score fields",
+          "The complete mapping and experiments"
+        ],
+        "verify": [
+          "Whether a corresponding independent field exists",
+          "Whether history features are confused with final scores"
+        ],
+        "if_missing": "Explain that no such independent reward field has been found, while retaining possible indirect effects."
+      },
+      "limits": [
+        "An upstream model can form predictions from history and other signals."
+      ],
+      "source_units": [
+        "U0253"
+      ],
+      "evidence": [
+        {
+          "source_id": "S094",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "Fields and fusion functions without separately listed corresponding prediction terms"
+        },
+        {
+          "source_id": "S090",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "Expansion does have data uses"
+        }
+      ],
+      "related_unknowns": [
+        "Q45",
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-034",
+      "title": "Article page enumerations cannot substitute for reading-event mappings",
+      "kind": "code",
+      "conclusion": "The protocol includes page values such as PAGE_ARTICLE and PAGE_ARTICLE_PREVIEW; page fields differ from action fields, so their presence does not establish a connected chain from Article opening to reading labels and prediction terms.",
+      "conditions": [
+        "The page enumerations checked in the report"
+      ],
+      "practical_meaning": "Distinguish the page and action layers when explaining Article identifiability, and retain the mapping gap.",
+      "check": {
+        "when": "The draft claims opening an Article equals a particular reward event",
+        "needed": [
+          "Page enumerations",
+          "Client actions",
+          "Aggregated labels",
+          "Prediction terms"
+        ],
+        "verify": [
+          "Whether mapping evidence is provided at each layer"
+        ],
+        "if_missing": "State only that the page is identifiable; the complete reading chain has not yet been confirmed."
+      },
+      "limits": [
+        "The existence of a page enumeration does not establish the timing start, reading completion, or attribution rules."
+      ],
+      "source_units": [
+        "U0254"
+      ],
+      "evidence": [
+        {
+          "source_id": "S090",
+          "link_indices": [
+            5
+          ],
+          "supports": "Article and preview page enumerations"
+        }
+      ],
+      "related_unknowns": [
+        "Q45"
+      ]
+    },
+    {
+      "id": "K03-035",
+      "title": "The client-to-training-label chain for Articles and long Posts is not fully public",
+      "kind": "unknown",
+      "conclusion": "The training code reads already-aggregated behavior vectors and continuous values, while Home Mixer history comes from an external behavior-aggregation service; the Article timing start, attribution after returning to Home, background dwell, and whether long-Post expansion simultaneously triggers a click have not been fully traced.",
+      "conditions": [
+        "The public training reads and external history entry point",
+        "The official repository does not also publish production data sources and internal telemetry"
+      ],
+      "practical_meaning": "Do not guarantee that reading events use the same definitions for both formats; data absent from the dashboard remains missing.",
+      "check": {
+        "when": "Using reading paths to compare format exposure or explain one piece's data",
+        "needed": [
+          "Client event rules",
+          "Aggregation, deduplication, and attribution implementations",
+          "Training-field mappings"
+        ],
+        "verify": [
+          "Whether timing start/end and background handling are covered",
+          "Whether already-aggregated fields are treated as event-generation code"
+        ],
+        "if_missing": "State explicitly that the complete client-to-label chain has not been connected."
+      },
+      "limits": [
+        "Internal training-label names cannot supply reading data that creators cannot see."
+      ],
+      "source_units": [
+        "U0235",
+        "U0255"
+      ],
+      "evidence": [
+        {
+          "source_id": "S091",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Training inputs, the external aggregation service, and the statement of public scope"
+        }
+      ],
+      "related_unknowns": [
+        "Q45",
+        "Q49"
+      ]
+    },
+    {
+      "id": "K03-036",
+      "title": "The verified CLICK_DWELL_TIME target is a raw value strictly greater than 10",
+      "kind": "code",
+      "conclusion": "DWELL_TIME and CLICK_DWELL_TIME are separate slots; the examined home_direct_packed configures the latter as binary classification with a threshold of 10.0, labels it by whether the raw value is strictly greater than the threshold, and produces a probability as model output.",
+      "conditions": [
+        "The named configuration and loss function checked in the report"
+      ],
+      "practical_meaning": "Describe it as a 'probability target for exceeding the code threshold of 10,' not as dwell seconds or a fixed reward each time the threshold is met.",
+      "check": {
+        "when": "The draft explains the click-dwell target or a 'ten-second target'",
+        "needed": [
+          "Definitions of both slots",
+          "home_direct_packed",
+          "The label comparison",
+          "The output type"
+        ],
+        "verify": [
+          "Whether strict greater-than is retained",
+          "Whether it is described as continuous seconds",
+          "Whether label qualification is used to infer a fixed reward"
+        ],
+        "if_missing": "Use the exact numeric threshold and binary-classification description."
+      },
+      "limits": [
+        "The raw production unit, Article attribution, and complete serving adapter remain unconfirmed."
+      ],
+      "source_units": [
+        "U0256"
+      ],
+      "evidence": [
+        {
+          "source_id": "S090",
+          "link_indices": [
+            4
+          ],
+          "supports": "The two separate continuous-value slots"
+        },
+        {
+          "source_id": "S091",
+          "link_indices": [
+            3,
+            4,
+            5
+          ],
+          "supports": "Threshold 10, strict comparison, and probability output"
+        }
+      ],
+      "related_unknowns": [
+        "Q05",
+        "Q45"
+      ]
+    },
+    {
+      "id": "K03-037",
+      "title": "DWELL_TIME unit conversion cannot establish the units of CLICK_DWELL_TIME",
+      "kind": "unknown",
+      "conclusion": "The visible adapter establishes conversion of DWELL_TIME from milliseconds to seconds; it does not establish the raw production unit of CLICK_DWELL_TIME, Article-reading attribution, or conversion from raw events into that slot.",
+      "conditions": [
+        "The Proto adapter converts only the specified slot; the Arrow path copies existing values slot by slot"
+      ],
+      "practical_meaning": "Separate the units of the two dwell fields in review; do not directly call threshold 10 ten seconds of Article reading.",
+      "check": {
+        "when": "The draft describes the CLICK_DWELL_TIME threshold in seconds",
+        "needed": [
+          "The slot name",
+          "The specific adapter",
+          "The raw production unit and attribution"
+        ],
+        "verify": [
+          "Whether the unit evidence belongs to the same field",
+          "Whether upstream conversion has been skipped"
+        ],
+        "if_missing": "Narrow the statement to a raw label exceeding the code threshold of 10, with the unit left for verification."
+      },
+      "limits": [
+        "Identical names or adjacent fields do not constitute complete proof of units."
+      ],
+      "source_units": [
+        "U0256"
+      ],
+      "evidence": [
+        {
+          "source_id": "S098",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "Explicit conversion only for DWELL_TIME, unchanged copying, and the threshold declaration"
+        }
+      ],
+      "related_unknowns": [
+        "Q05",
+        "Q45"
+      ]
+    },
+    {
+      "id": "K03-038",
+      "title": "A longer Article does not imply necessarily higher dwell or recommendations",
+      "kind": "myth",
+      "conclusion": "The duration for which an article exists, actual reading time, model-predicted dwell, and whether the reader reaches the end are different quantities; body length cannot be inserted into a fixed multiplier to conclude that an Article necessarily receives more recommendations.",
+      "conditions": [
+        "Specific reader inputs, predictions, and comparable results are missing"
+      ],
+      "practical_meaning": "Retain the material necessary for the reading task and use comparable account samples to judge exposure.",
+      "check": {
+        "when": "The draft uses length to directly prove Articles always win",
+        "needed": [
+          "Actual behavior definitions",
+          "Prediction targets",
+          "A comparable experiment"
+        ],
+        "verify": [
+          "Whether length, dwell, completion, and prediction are confused",
+          "Whether reader conditions are omitted"
+        ],
+        "if_missing": "Recast it as a hypothesis to be tested, without a fixed exposure conclusion."
+      },
+      "limits": [
+        "Neither length features nor reading targets constitute a causal experiment using the same draft."
+      ],
+      "source_units": [
+        "U0257"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q45",
+        "Q46",
+        "Q49"
+      ]
+    },
+    {
+      "id": "K03-039",
+      "title": "No evidence of Article-specific candidate slots was found in the examined candidate flow",
+      "kind": "unknown",
+      "conclusion": "The report checked Home Mixer sources, filters, scorers, parameters, and the main candidate flow; the public entry points include Thunder, Phoenix, TweetMixer, and SimClusters, and no dedicated candidate slots allocated by Article identity were found.",
+      "conditions": [
+        "A bounded public search scope that does not include every external service or production experiment"
+      ],
+      "practical_meaning": "Do not promise that Articles have guaranteed slots because of their format; specific source and eligibility evidence is required.",
+      "check": {
+        "when": "The draft claims Articles have an exclusive allocation of candidate inventory",
+        "needed": [
+          "Candidate sources and the main flow",
+          "Format branches or configuration"
+        ],
+        "verify": [
+          "Whether explicit allocation logic based on Article identity has been found",
+          "Whether the public search scope is exceeded"
+        ],
+        "if_missing": "State that none was found in the examined flow, without claiming there are absolutely no differences anywhere on the platform."
+      },
+      "limits": [
+        "External candidate services may supply different inventories."
+      ],
+      "source_units": [
+        "U0235",
+        "U0258"
+      ],
+      "evidence": [
+        {
+          "source_id": "S094",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The candidate sources and processing flow examined"
+        }
+      ],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-040",
+      "title": "FairShare groups by candidate source, not guaranteed allocations by article format",
+      "kind": "code",
+      "conclusion": "FairShare groups by candidate source; its quotas cannot be interpreted as guaranteed exposure separately for Articles and long Posts.",
+      "conditions": [
+        "The FairShare ranking-filter path checked in the report"
+      ],
+      "practical_meaning": "When a review encounters format quotas, check the actual grouping key and distinguish candidate retention from display.",
+      "check": {
+        "when": "Using FairShare to argue for format traffic",
+        "needed": [
+          "Grouping fields",
+          "Source proportions",
+          "Subsequent ranking and display"
+        ],
+        "verify": [
+          "Whether the groups really are Article or long Post",
+          "Whether slots are described as exposure"
+        ],
+        "if_missing": "Reframe it as processing grouped by candidate source."
+      },
+      "limits": [
+        "This rule does not provide a causal exposure difference between formats."
+      ],
+      "source_units": [
+        "U0258"
+      ],
+      "evidence": [
+        {
+          "source_id": "S094",
+          "link_indices": [
+            2
+          ],
+          "supports": "FairShare grouping logic based on candidate source"
+        }
+      ],
+      "related_unknowns": [
+        "Q10",
+        "Q17",
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-041",
+      "title": "Final CandidateScoringInputs has no format boolean field",
+      "kind": "code",
+      "conclusion": "The examined CandidateScoringInputs contains neither is_article nor is_long_post; the fusion function mainly combines predictions such as engagement and dwell and handles the corresponding eligibility and multipliers.",
+      "conditions": [
+        "The final value-scoring inputs and fusion function checked in the report"
+      ],
+      "practical_meaning": "These functions cannot support a formula assigning Articles a fixed multiplier.",
+      "check": {
+        "when": "The draft claims final scoring directly rewards a format",
+        "needed": [
+          "CandidateScoringInputs",
+          "The fusion function"
+        ],
+        "verify": [
+          "Whether a format input or branch actually appears",
+          "Whether the roles of predictions and eligibility are retained"
+        ],
+        "if_missing": "Confine the statement precisely to the final functions examined; do not generalize it into all models being completely identical."
+      },
+      "limits": [
+        "Upstream content representations and behavior history can still affect predictions."
+      ],
+      "source_units": [
+        "U0235",
+        "U0259"
+      ],
+      "evidence": [
+        {
+          "source_id": "S094",
+          "link_indices": [
+            3,
+            4,
+            5
+          ],
+          "supports": "Final inputs, prediction fields, and fusion"
+        },
+        {
+          "source_id": "S002",
+          "link_indices": [
+            0
+          ],
+          "supports": "Scoring conditions and the scope of fusion"
+        }
+      ],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-042",
+      "title": "Switching to an Article does not reset the author count in the author-diversity function",
+      "kind": "code",
+      "conclusion": "When author diversity is enabled, the function first orders the current batch's candidates by the supplied ranking scores, then counts successive items for each author ID; merely changing a long Post into an Article has no mechanism to clear that count.",
+      "conditions": [
+        "Author-diversity processing is enabled",
+        "The same candidate batch",
+        "The same author ID"
+      ],
+      "practical_meaning": "Do not treat publishing format as a way around same-author handling; explain that this concerns the current batch, not a daily quota.",
+      "check": {
+        "when": "The draft claims switching format grants a new author allowance",
+        "needed": [
+          "The switch",
+          "Ranking scores",
+          "Author ID",
+          "The current candidate batch"
+        ],
+        "verify": [
+          "Whether sorting precedes counting",
+          "Whether the format change actually changes the author ID or counting branch"
+        ],
+        "if_missing": "Remove promises of a reset allowance and retain the fact that this function works by author."
+      },
+      "limits": [
+        "This is not a platform-wide daily limit on the number of articles."
+      ],
+      "source_units": [
+        "U0259"
+      ],
+      "evidence": [
+        {
+          "source_id": "S002",
+          "link_indices": [
+            1
+          ],
+          "supports": "Sorting, author counting, and multipliers"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-043",
+      "title": "No explicit format multiplier does not rule out model or inventory differences",
+      "kind": "unknown",
+      "conclusion": "Upstream models can form different predictions from content representations and behavior history, external services may return different inventories, and production experiments may exist; the absence of an explicit format multiplier in the examined code cannot establish the direction of these differences.",
+      "conditions": [
+        "A local conclusion about the public final fusion"
+      ],
+      "practical_meaning": "When comparing formats, distinguish observed functions from unresolved production differences; do not claim the algorithms are completely identical.",
+      "check": {
+        "when": "The draft infers complete equivalence between formats from the absence of is_article",
+        "needed": [
+          "Upstream model inputs",
+          "External source configuration",
+          "Experiments and production data"
+        ],
+        "verify": [
+          "Whether not finding an explicit coefficient is equated with no differences at all"
+        ],
+        "if_missing": "State instead that no fixed multiplier was observed and that actual effects require comparable data."
+      },
+      "limits": [
+        "Without evidence, the reverse claim that Articles are necessarily favored is also unsupported."
+      ],
+      "source_units": [
+        "U0231",
+        "U0260"
+      ],
+      "evidence": [
+        {
+          "source_id": "S094",
+          "link_indices": [
+            0,
+            3,
+            5
+          ],
+          "supports": "Boundaries of the public sources and final fusion"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q44",
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-044",
+      "title": "Historical Article earnings weights are not recommendation-ranking coefficients",
+      "kind": "official",
+      "conclusion": "A historical creator announcement cited in the original report said Articles might receive a higher revenue-allocation weight; this concerned income arrangements. The report also cites the old earnings program ending in September 2026; current reward rules require separate checking.",
+      "conditions": [
+        "Historical announcements and the report's rule record as of 2026-10-29"
+      ],
+      "practical_meaning": "State the date and program when citing income policies; do not use them to prove higher current organic exposure for Articles.",
+      "check": {
+        "when": "The draft uses Article earnings weighting to explain For You",
+        "needed": [
+          "Announcement date",
+          "The corresponding earnings program",
+          "Current reward rules",
+          "Ranking evidence"
+        ],
+        "verify": [
+          "Whether the 'weight' comes from income allocation rather than ranking",
+          "Whether the old program has ended"
+        ],
+        "if_missing": "Separate income conclusions from recommendation conclusions and state the historical scope."
+      },
+      "limits": [
+        "Income arrangements themselves do not provide a same-draft format exposure multiplier."
+      ],
+      "source_units": [
+        "U0261"
+      ],
+      "evidence": [
+        {
+          "source_id": "S097",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Historical earnings announcement, the old program's end, and the new rewards page"
+        }
+      ],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-045",
+      "title": "The rule filtering unpublished Articles is registered under TimelineHomeHydration",
+      "kind": "code",
+      "conclusion": "ArticleTweetContent filters Posts associated with an Article whose state is not Published and is registered under TimelineHomeHydration; public examples cover Draft, SoftDeleted, missing state, and Published.",
+      "conditions": [
+        "The Post is associated with an Article",
+        "The specified visibility level",
+        "The corresponding lifecycle state"
+      ],
+      "practical_meaning": "Check the actual Published state after publication or revision; passing this rule is not a recommendation guarantee.",
+      "check": {
+        "when": "An Article cannot be accessed through an entry point, or state rules are being explained",
+        "needed": [
+          "Article state",
+          "The associated carrier Post",
+          "The safety level",
+          "Test examples"
+        ],
+        "verify": [
+          "Whether the claim is confined to TimelineHomeHydration",
+          "Whether Draft, SoftDeleted, missing state, and Published are distinguished"
+        ],
+        "if_missing": "Check publication state and the actual entry point first; do not broadly attribute the issue to format downranking."
+      },
+      "limits": [
+        "Published passes only this check; it does not mean all eligibility checks are passed or the content will be displayed."
+      ],
+      "source_units": [
+        "U0235",
+        "U0262"
+      ],
+      "evidence": [
+        {
+          "source_id": "S092",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Filter conditions, registration entry point, and lifecycle tests"
+        }
+      ],
+      "related_unknowns": [
+        "Q48"
+      ]
+    },
+    {
+      "id": "K03-046",
+      "title": "TimelineHomeHydration cannot be directly equated with an entry point before Phoenix ranking",
+      "kind": "unknown",
+      "conclusion": "Elsewhere, Home Mixer uses TimelineHome and TimelineHomeRecommendations, whose names and levels differ from TimelineHomeHydration; how actual requests connect these levels still requires deployment and request data.",
+      "conditions": [
+        "The rule registration and Home Mixer call sites checked in the report"
+      ],
+      "practical_meaning": "Retain entry-point names in review; do not say every Article uniformly passes an extra gate before Phoenix ranking.",
+      "check": {
+        "when": "Generalizing the Article-state rule to all recommendation paths",
+        "needed": [
+          "The rule level",
+          "The Home Mixer request level",
+          "The production request chain"
+        ],
+        "verify": [
+          "Whether the three levels are conflated",
+          "Whether connection evidence exists"
+        ],
+        "if_missing": "Identify each entry point explicitly and mark the cross-level relationship as unresolved."
+      },
+      "limits": [
+        "Passing or failing a local rule does not establish platform-wide visibility."
+      ],
+      "source_units": [
+        "U0263"
+      ],
+      "evidence": [
+        {
+          "source_id": "S092",
+          "link_indices": [
+            1,
+            3
+          ],
+          "supports": "The registration level and Home Mixer's other two safety levels"
+        }
+      ],
+      "related_unknowns": [
+        "Q48"
+      ]
+    },
+    {
+      "id": "K03-047",
+      "title": "Article covers and body media enter visibility media checks",
+      "kind": "code",
+      "conclusion": "Article covers and body media can be used in the visibility system's 'has media' check; that boolean condition is not an image or video prediction value in a ranking model.",
+      "conditions": [
+        "The visibility-filtering composite features checked in the report"
+      ],
+      "practical_meaning": "Having a cover should not be described directly as downranking; safety labels and specific conditions still need examination.",
+      "check": {
+        "when": "The draft claims an Article with a cover is automatically penalized",
+        "needed": [
+          "The media check",
+          "Specific labels",
+          "Other conditions of the rule"
+        ],
+        "verify": [
+          "Whether a has-media variable is equated with a negative ranking term"
+        ],
+        "if_missing": "Describe only media participation in the visibility check; do not invent automatic downranking."
+      },
+      "limits": [
+        "Actual safety enforcement still depends on labels, audience, and other prerequisites."
+      ],
+      "source_units": [
+        "U0235",
+        "U0264"
+      ],
+      "evidence": [
+        {
+          "source_id": "S092",
+          "link_indices": [
+            4
+          ],
+          "supports": "Article media entering VF's media-presence check"
+        }
+      ],
+      "related_unknowns": [
+        "Q48"
+      ]
+    },
+    {
+      "id": "K03-048",
+      "title": "Subscription-audience eligibility depends on attributes and the current reader",
+      "kind": "code",
+      "conclusion": "IneligibleSubscriptionFilter checks whether a candidate carries subscription_author_id and whether the current reader subscribes to that author; an Article carrier Post with this attribute is subject to the corresponding eligibility restrictions, while a public Article does not automatically become paid content merely because of its format.",
+      "conditions": [
+        "The candidate carries subscription_author_id",
+        "The current reader's subscription status",
+        "Registration in the corresponding flow"
+      ],
+      "practical_meaning": "Confirm the intended audience before publishing; check audience settings first when analyzing low reach.",
+      "check": {
+        "when": "An Article is to be published for the public or for subscribers",
+        "needed": [
+          "The candidate's subscription-author attribute",
+          "The reader's subscription status",
+          "Audience settings"
+        ],
+        "verify": [
+          "Whether the judgment is based on attributes rather than the Article name",
+          "Whether paid-access eligibility is described as a public-recommendation advantage"
+        ],
+        "if_missing": "Verify audience attributes; do not infer permissions from format."
+      },
+      "limits": [
+        "A general filter does not prove that permission policies are identical at every entry point."
+      ],
+      "source_units": [
+        "U0265"
+      ],
+      "evidence": [
+        {
+          "source_id": "S093",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Subscription-field population, reader eligibility, and flow registration"
+        }
+      ],
+      "related_unknowns": [
+        "Q48"
+      ]
+    },
+    {
+      "id": "K03-049",
+      "title": "Failure to fetch Article media may result from permissions",
+      "kind": "code",
+      "conclusion": "An Article media API may leave fields unavailable because of permissions; a missing field does not directly prove the article originally had no media.",
+      "conditions": [
+        "Article-client authorization failure or subscriber/author permission-related circumstances"
+      ],
+      "practical_meaning": "Check caller identity and permissions while investigating missing media; do not rush to delete or recreate the material.",
+      "check": {
+        "when": "Article media fields are empty or unreadable",
+        "needed": [
+          "The article's original media",
+          "API errors",
+          "The visitor's permissions"
+        ],
+        "verify": [
+          "Whether authorization failed",
+          "Whether a fetch failure is being treated as absence of content"
+        ],
+        "if_missing": "Leave the cause of the missing data unknown and check permissions and entry points first."
+      },
+      "limits": [
+        "A missing field also does not guarantee that permissions are the cause."
+      ],
+      "source_units": [
+        "U0265"
+      ],
+      "evidence": [
+        {
+          "source_id": "S093",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "Authorization-failure handling and permission-error examples"
+        }
+      ],
+      "related_unknowns": [
+        "Q47",
+        "Q48"
+      ]
+    },
+    {
+      "id": "K03-050",
+      "title": "Editing a published Article first unpublishes it before republication",
+      "kind": "official",
+      "conclusion": "The official help page cited in the original report explains that editing a published Article first unpublishes it, after which the author republishes it; when choosing an Article, confirm the intended audience and the final published state.",
+      "conditions": [
+        "The official publishing workflow at the time checked by the report"
+      ],
+      "practical_meaning": "After frequent revisions, checking entry-point access and Published state is more useful than inferring a format penalty solely from falling views.",
+      "check": {
+        "when": "Preparing to revise an Article or after revising it",
+        "needed": [
+          "Editor state",
+          "The publish button's result",
+          "The public or subscriber entry point"
+        ],
+        "verify": [
+          "Whether republication is complete",
+          "Whether the target readers can access it"
+        ],
+        "if_missing": "First verify the state and entry point; do not yet attribute exposure issues to format."
+      },
+      "limits": [
+        "Cache-update timing and production synchronization across entry points have not been fully confirmed."
+      ],
+      "source_units": [
+        "U0266"
+      ],
+      "evidence": [
+        {
+          "source_id": "S006",
+          "link_indices": [
+            1
+          ],
+          "supports": "Official Article editing, unpublishing, and republication workflow"
+        }
+      ],
+      "related_unknowns": [
+        "Q48"
+      ]
+    },
+    {
+      "id": "K03-051",
+      "title": "Median normalized Article views were 5.7 times the baseline in the NotPeople sample",
+      "kind": "observation",
+      "conclusion": "In September 2026, NotPeople published observations based on August creator data: the main table contained 42 Articles, 843 ordinary Posts linking to Articles, and 64 Posts without Article links; using each author's average Post views as the baseline, median normalized Article views were 5.7 times the baseline.",
+      "conditions": [
+        "The observational sample and normalization baseline are as specified in that report",
+        "Not a randomized experiment"
+      ],
+      "practical_meaning": "Treat the result as a lead worth testing yourself; always state the sample, baseline, and statistic together when citing it.",
+      "check": {
+        "when": "The draft cites a 5.7-times Article result",
+        "needed": [
+          "The original table",
+          "Sample counts",
+          "The author-average baseline",
+          "The normalized median"
+        ],
+        "verify": [
+          "Whether the median is incorrectly presented as an increase for every Article",
+          "Whether the comparison-group composition or timing is omitted"
+        ],
+        "if_missing": "Retain the observational description without promising an effect from changing the same draft's format."
+      },
+      "limits": [
+        "Raw per-Post data was not published; all confounders cannot be independently controlled."
+      ],
+      "source_units": [
+        "U0267"
+      ],
+      "evidence": [
+        {
+          "source_id": "S096",
+          "link_indices": [
+            0
+          ],
+          "supports": "Sample, timing, table, and the normalized median of 5.7 times the baseline"
+        }
+      ],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-052",
+      "title": "NotPeople comparison-group and promotion differences prevent same-draft causal inference",
+      "kind": "observation",
+      "conclusion": "Most comparison items in that sample were traffic-driving Posts rather than the same complete long Post; Articles typically received support from 6–28 related Posts. Topic, effort, promotion volume, and time available to accumulate views were not uniformly controlled, and raw per-Post data was not published.",
+      "conditions": [
+        "The same NotPeople observational study"
+      ],
+      "practical_meaning": "Say only that Articles performed better for this group of creators, not that changing the same draft to an Article increases exposure by 5.7 times.",
+      "check": {
+        "when": "Using these data to recommend a fixed format bonus",
+        "needed": [
+          "Full comparison texts",
+          "The number of promotional Posts",
+          "Topic and effort",
+          "The observation window",
+          "Raw per-Post data"
+        ],
+        "verify": [
+          "Whether the entire promotional arrangement is attributed to the editor",
+          "Whether raw-data availability has been checked"
+        ],
+        "if_missing": "Narrow the conclusion to the sample association and list the factors that need control."
+      },
+      "limits": [
+        "The sample results also do not prove the approach is ineffective or necessarily effective for other accounts."
+      ],
+      "source_units": [
+        "U0268"
+      ],
+      "evidence": [
+        {
+          "source_id": "S096",
+          "link_indices": [
+            0
+          ],
+          "supports": "Comparison-group composition, support from 6–28 promotional Posts, and observational limitations"
+        }
+      ],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-053",
+      "title": "Hootsuite's thread-versus-long-Post experiment had no Article group",
+      "kind": "observation",
+      "conclusion": "The small Hootsuite experiment discussed earlier compared threads with long Posts and had no Article group, so it cannot answer whether long Posts or Articles are more likely to receive recommendations.",
+      "conditions": [
+        "The experiment's actual groups"
+      ],
+      "practical_meaning": "Check the comparison subjects before citing research; do not borrow an experiment without Articles to support an Article conclusion.",
+      "check": {
+        "when": "The draft uses Hootsuite to establish an Article advantage or disadvantage",
+        "needed": [
+          "The original experimental groups",
+          "Content formats"
+        ],
+        "verify": [
+          "Whether there actually is an Article group"
+        ],
+        "if_missing": "Use it only for its original thread-versus-long-Post question."
+      },
+      "limits": [
+        "The absence of an Article group does not establish the direction of Article effects."
+      ],
+      "source_units": [
+        "U0269"
+      ],
+      "evidence": [
+        {
+          "source_id": "S025",
+          "link_indices": [
+            0
+          ],
+          "supports": "The original experiment's methods and groups"
+        }
+      ],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-054",
+      "title": "The original report found no verifiable randomized same-draft format comparison",
+      "kind": "unknown",
+      "conclusion": "The original report found no randomized comparison using the same draft that could isolate exposure differences caused by editor format after controlling for readers, publication time, and promotional effort.",
+      "conditions": [
+        "Within the original report's research scope",
+        "Not a permanent rejection of every possible study"
+      ],
+      "practical_meaning": "When the same draft suits both formats, first accumulate comparable samples from the account itself rather than promising a fixed winner.",
+      "check": {
+        "when": "The sole objective in choosing format is greater exposure",
+        "needed": [
+          "A direct format experiment",
+          "Controls for content, audience, timing, effort, and window"
+        ],
+        "verify": [
+          "Whether the study is randomized or sufficiently comparable",
+          "Whether the comparison uses the same complete draft"
+        ],
+        "if_missing": "Explain the lack of direct causal evidence and use comparable observations from the account."
+      },
+      "limits": [
+        "Self-testing still needs its design limitations stated and cannot automatically be called a rigorous A/B test."
+      ],
+      "source_units": [
+        "U0269",
+        "U0271"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-055",
+      "title": "Choose the format for deep subscriber material according to the intended audience",
+      "kind": "editorial",
+      "conclusion": "Editorial inference: for regular delivery of in-depth material to subscribers, an Article with the corresponding audience controls may be chosen; the basis of the choice is the intended audience.",
+      "conditions": [
+        "The account actually has the corresponding audience feature",
+        "Subscribers are indeed the target"
+      ],
+      "practical_meaning": "Verify permissions, content commitments, and access entry points first; do not present paid-access eligibility as a public-recommendation advantage.",
+      "check": {
+        "when": "Preparing to publish in-depth subscriber material",
+        "needed": [
+          "The target audience",
+          "Audience-control features",
+          "Access verification"
+        ],
+        "verify": [
+          "Whether subscribers can access it",
+          "Whether higher public exposure is incorrectly inferred"
+        ],
+        "if_missing": "Use the permissions and publishing methods actually supported by the account."
+      },
+      "limits": [
+        "Audience controls change who can see the material and do not guarantee exposure."
+      ],
+      "source_units": [
+        "U0270",
+        "U0271"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46",
+        "Q48"
+      ]
+    },
+    {
+      "id": "K03-056",
+      "title": "Choose the OCR example's format according to the amount of material to deliver",
+      "kind": "editorial",
+      "conclusion": "The original report's editorial example: if there is just one finding, 'tax amounts on blurry invoices are easy to misread,' accompanied by error samples, correct comparisons, and conditions, a long Post is sufficient; if the piece must explain sample groupings, two tools, different image qualities, multiple fields, failure cases, and retest records, an Article better accommodates the complete process.",
+      "conditions": [
+        "This is an example explaining reading tasks, not a new OCR test finding"
+      ],
+      "practical_meaning": "List the material necessary to support the conclusion, then choose a format that can deliver it all.",
+      "check": {
+        "when": "Choosing between a long Post and an Article for a test report",
+        "needed": [
+          "Real samples",
+          "Field results",
+          "Failure and retest records"
+        ],
+        "verify": [
+          "Whether one Post can retain all conditions that change the conclusion",
+          "Whether section-by-section consultation is needed"
+        ],
+        "if_missing": "Organize around complete questions; do not remove or alter essential conditions merely to shorten or lengthen the piece."
+      },
+      "limits": [
+        "Suitability for a longer article does not mean the program rewards article length."
+      ],
+      "source_units": [
+        "U0272"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-057",
+      "title": "An introductory Post should first deliver a judgment that is useful on its own",
+      "kind": "editorial",
+      "conclusion": "The copy example first explains that 'overall text-recognition accuracy' is insufficient to decide whether an invoice can be posted directly to the accounts: date, tax amount, and buyer information should be checked separately; even a single incorrect character in the entire text may be in the tax amount. It then explains that the article contains original images, field-by-field results, and conditions requiring manual review, and directs target readers to the tax-amount comparison.",
+      "conditions": [
+        "The example must be supported by real test material",
+        "A demonstration of introductory-copy writing"
+      ],
+      "practical_meaning": "Give the conclusion, rationale, and intended readers before the full-text entry point, so readers gain information even without opening the article.",
+      "check": {
+        "when": "Reviewing an Article's introductory Post",
+        "needed": [
+          "The core judgment",
+          "One piece of evidence",
+          "The intended audience",
+          "The material contained in the full text"
+        ],
+        "verify": [
+          "Whether it is understandable on its own",
+          "Whether it merely creates suspense with 'the answer is in the full text'",
+          "Whether attachments are described accurately"
+        ],
+        "if_missing": "Add an evidence-backed conclusion and its conditions; do not fabricate test results."
+      },
+      "limits": [
+        "The example wording itself does not establish the actual accuracy of OCR tools."
+      ],
+      "source_units": [
+        "U0273",
+        "U0274",
+        "U0275"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-058",
+      "title": "Official advice to distribute excerpts does not create additional traffic quotas",
+      "kind": "official",
+      "conclusion": "The official help page cited in the original report recommends excerpt Posts that lead to the full Article; this is a method of organizing distribution, not a promise that each introductory Post receives an additional traffic quota.",
+      "conditions": [
+        "The official distribution advice at the time checked in the original report"
+      ],
+      "practical_meaning": "Extract passages with independent value from the full text, and record the effort and results of each separately.",
+      "check": {
+        "when": "The draft directly converts the number of introductory Posts into exposure",
+        "needed": [
+          "Official distribution guidance",
+          "Each introductory Post's independent content",
+          "Actual data"
+        ],
+        "verify": [
+          "Whether advice is being written as a guarantee",
+          "Whether every reader is required to open the full text"
+        ],
+        "if_missing": "Retain the excerpt-distribution method and remove fixed exposure promises."
+      },
+      "limits": [
+        "The effect of introductory Posts also depends on content, audience, and promotional effort."
+      ],
+      "source_units": [
+        "U0275"
+      ],
+      "evidence": [
+        {
+          "source_id": "S006",
+          "link_indices": [
+            1
+          ],
+          "supports": "Official Article guidance on excerpts, short teasers, and distribution"
+        }
+      ],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-059",
+      "title": "Verify code, formulas, and tables before publishing rich-text Articles",
+      "kind": "editorial",
+      "conclusion": "Editorial advice: Article rich-text support does not guarantee that code, formulas, and tables all remain correct after pasting Markdown; complex research should be previewed in the actual editor before publication.",
+      "conditions": [
+        "The draft contains structured material such as code, formulas, or tables"
+      ],
+      "practical_meaning": "Check rendering, symbols, column alignment, and readability individually; do not publish solely because the editor supports rich text.",
+      "check": {
+        "when": "Moving a technical report into the Article editor",
+        "needed": [
+          "An actual preview",
+          "Original code, formulas, and tables"
+        ],
+        "verify": [
+          "Whether critical symbols and structure are retained",
+          "Whether it is legible on mobile or in the available preview"
+        ],
+        "if_missing": "Adjust the representation before publishing; do not assume rendering is lossless."
+      },
+      "limits": [
+        "This is pre-publication QA advice, not an algorithmic scoring condition."
+      ],
+      "source_units": [
+        "U0276"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K03-060",
+      "title": "Split excessive material by complete questions and retain a download entry point",
+      "kind": "editorial",
+      "conclusion": "Editorial advice: when the body or attachments are too long, split them into pieces around complete questions that each can answer independently, and retain an entry point for downloading the complete version; do not remove conditions that change the conclusion merely to fit into one long Post.",
+      "conditions": [
+        "The material genuinely exceeds a suitable reading length or the editor's capacity"
+      ],
+      "practical_meaning": "Protect evidence, limitations, and reproduction material first, then compress wording or split the piece.",
+      "check": {
+        "when": "Shortening, splitting, or cutting a long draft",
+        "needed": [
+          "The complete text",
+          "A list of conditions",
+          "Attachments and the download entry point"
+        ],
+        "verify": [
+          "Whether each piece completely answers its question",
+          "Whether cuts change the conclusion",
+          "Whether the complete version can be obtained"
+        ],
+        "if_missing": "Restore essential conditions and choose a more suitable format to carry the material."
+      },
+      "limits": [
+        "Splitting material itself provides no additional quota or exposure guarantee."
+      ],
+      "source_units": [
+        "U0276"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-061",
+      "title": "First define which outcome a format test should improve",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: if the goal is discovery by relevant readers, record exposure, profile visits, and follows actually available to the account; if the goal is for readers to use a tutorial, record qualified inquiries, material access, or other clearly defined outcomes.",
+      "conditions": [
+        "Use fields actually available to the account",
+        "Define the goal before examining results"
+      ],
+      "practical_meaning": "Write down the primary outcome and its definition before the test; do not use views alone to represent every kind of value.",
+      "check": {
+        "when": "Comparing the performance of long Posts and Articles",
+        "needed": [
+          "Target readers and their task",
+          "Available dashboard fields",
+          "Outcome definitions"
+        ],
+        "verify": [
+          "Whether the metrics correspond to the goal",
+          "Whether they can be obtained consistently with the same definitions"
+        ],
+        "if_missing": "Use an actually observable proxy outcome and state its scope."
+      },
+      "limits": [
+        "These outcomes do not automatically establish format causality."
+      ],
+      "source_units": [
+        "U0277"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46",
+        "Q49"
+      ]
+    },
+    {
+      "id": "K03-062",
+      "title": "Missing creator reading data cannot be invented from internal labels",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: leave reading duration and completion rate blank when the dashboard does not provide them; do not reconstruct creator data from similarly named internal model dwell or reading labels.",
+      "conditions": [
+        "The account dashboard genuinely lacks the corresponding fields or definitions"
+      ],
+      "practical_meaning": "Distinguish observed, unavailable, and undefined data in reports; do not treat internal names as measured values.",
+      "check": {
+        "when": "Reporting Article reading performance",
+        "needed": [
+          "The dashboard's actual fields",
+          "Definitions of denominator, deduplication, timing, and window"
+        ],
+        "verify": [
+          "Whether duration or completion is invented from internal model labels",
+          "Whether missing values are identified"
+        ],
+        "if_missing": "Retain missingness and use genuinely available metrics with clear definitions instead."
+      },
+      "limits": [
+        "Internal training fields and public statistics may use different attribution."
+      ],
+      "source_units": [
+        "U0277"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q45",
+        "Q49"
+      ]
+    },
+    {
+      "id": "K03-063",
+      "title": "Public views are not counts of people who completed reading",
+      "kind": "official",
+      "conclusion": "The official views definition cited in the original report allows the author's own views and repeat views and includes entry points beyond Home; those counts are insufficient to establish that the full text was opened, much less that it was read to the end.",
+      "conditions": [
+        "The official Post-views definition; it cannot replace Article-specific metrics without verification"
+      ],
+      "practical_meaning": "Label views in reports as view counts, not unique readers, full-text openers, or completed readers.",
+      "check": {
+        "when": "Using public view counts to compare reading depth",
+        "needed": [
+          "The official views definition",
+          "Dashboard-field definitions"
+        ],
+        "verify": [
+          "Whether repeat views and the author's own views are included",
+          "Whether counts from different entry points are treated as Home impressions",
+          "Whether reading completion is inferred"
+        ],
+        "if_missing": "Retain only the view-count meaning and leave unconfirmed reading metrics blank."
+      },
+      "limits": [
+        "The official Post-views definition does not fill in every Article dashboard field."
+      ],
+      "source_units": [
+        "U0278"
+      ],
+      "evidence": [
+        {
+          "source_id": "S059",
+          "link_indices": [
+            0
+          ],
+          "supports": "Views allow repeat views, the author's own views, and views from multiple entry points"
+        }
+      ],
+      "related_unknowns": [
+        "Q49"
+      ]
+    },
+    {
+      "id": "K03-064",
+      "title": "Alternate formats across multiple similar original pieces",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: choose multiple original pieces with similar difficulty, topics, and effort, alternate between long Posts and Articles, and keep publication-time distributions similar.",
+      "conditions": [
+        "Both formats suit the selected material",
+        "There are multiple comparable samples"
+      ],
+      "practical_meaning": "Build piece-level records to reduce the risk of judging from one viral piece alone.",
+      "check": {
+        "when": "Designing a format comparison for the account",
+        "needed": [
+          "Content samples",
+          "Difficulty, topic, and effort",
+          "Publication times"
+        ],
+        "verify": [
+          "Whether the two groups are comparable",
+          "Whether format is completely tied to a time slot or topic"
+        ],
+        "if_missing": "Continue accumulating comparable samples and call the results observations."
+      },
+      "limits": [
+        "This cannot guarantee control of all unobserved factors and is not equivalent to a randomized experiment."
+      ],
+      "source_units": [
+        "U0279"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-065",
+      "title": "Separate a format-only comparison from an Article-plus-introduction comparison",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: first give both groups the same promotional conditions to observe format differences; create a separate group comparing 'Article plus introductory Post' with the existing publishing method to evaluate the complete arrangement, accounting for extra promotional Posts and time spent.",
+      "conditions": [
+        "The respective objectives are editor differences and publishing-package effects"
+      ],
+      "practical_meaning": "Report effort and outcomes separately for each group, so gains from repeated promotion are not attributed to the Article editor.",
+      "check": {
+        "when": "Testing the effect of introductory Posts accompanying an Article",
+        "needed": [
+          "Promotion count and timing",
+          "The two publishing methods",
+          "Effort records"
+        ],
+        "verify": [
+          "Whether promotional conditions are equal",
+          "Whether the combined approach requires extra effort",
+          "Whether the conclusion clearly identifies what is being evaluated"
+        ],
+        "if_missing": "Split the test into two questions and retain the effort differences."
+      },
+      "limits": [
+        "An effective combined approach cannot by itself prove a fixed format bonus."
+      ],
+      "source_units": [
+        "U0279"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-066",
+      "title": "Use consistent observation windows and record exceptional distribution factors",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: examine data for every piece at 24 hours and 7 days after publication, and separately record reposts by large accounts, paid promotion, trending events, and account growth.",
+      "conditions": [
+        "Each piece uses the same windows measured from publication",
+        "Data definitions are consistent"
+      ],
+      "practical_meaning": "Compare content of the same age and annotate exceptional distribution; do not mix different accumulation periods.",
+      "check": {
+        "when": "Creating a format-comparison table",
+        "needed": [
+          "Publication time",
+          "24-hour and 7-day data",
+          "Large-account reposts, promotion, trending events, and account growth"
+        ],
+        "verify": [
+          "Whether windows are consistent",
+          "Whether exceptional distribution factors are omitted"
+        ],
+        "if_missing": "Mark inconsistent windows or missing data and avoid directly ranking results to declare a winner."
+      },
+      "limits": [
+        "Recording confounders does not mean their effects have been completely eliminated."
+      ],
+      "source_units": [
+        "U0280"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46",
+        "Q49"
+      ]
+    },
+    {
+      "id": "K03-067",
+      "title": "Record the Article, introductory Posts, and complete content group separately",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: record the Article itself, its introductory Posts, and the complete group separately; their individual views cannot be added together and treated as unique readers.",
+      "conditions": [
+        "There are multiple entry points or multiple promotional pieces"
+      ],
+      "practical_meaning": "Retain each component's data and definition; explicitly allow repeats if reporting total views.",
+      "check": {
+        "when": "Summarizing the distribution of an Article series",
+        "needed": [
+          "Data for each piece and introductory Post",
+          "Whether a deduplicated-user definition exists"
+        ],
+        "verify": [
+          "Whether overlapping audiences are counted repeatedly as additional readers"
+        ],
+        "if_missing": "Report only component counts and leave the unique-person count blank."
+      },
+      "limits": [
+        "Public views provide no guarantee of deduplication across Posts."
+      ],
+      "source_units": [
+        "U0280"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q49"
+      ]
+    },
+    {
+      "id": "K03-068",
+      "title": "Examine medians and variation when comparing multiple pieces across formats",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: examine both medians and variation across multiple pieces, so one unusually high-volume result does not determine the choice for all content.",
+      "conditions": [
+        "Multiple records are sufficiently comparable"
+      ],
+      "practical_meaning": "Record typical outcomes and the degree of instability, then choose the arrangement that better suits the account and task.",
+      "check": {
+        "when": "Summarizing the account's format trial",
+        "needed": [
+          "Each piece's results",
+          "Sample size",
+          "Exceptional events"
+        ],
+        "verify": [
+          "Whether only the total or maximum is considered",
+          "Whether typical values and variation are shown"
+        ],
+        "if_missing": "State that the sample is insufficient and continue observing rather than declaring a fixed winner."
+      },
+      "limits": [
+        "This is not a universal significance threshold provided by the original report."
+      ],
+      "source_units": [
+        "U0280"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-069",
+      "title": "Sequential republication of the same draft is not a rigorous A/B test",
+      "kind": "editorial",
+      "conclusion": "Methodological judgment: fully reposting the same draft twice is affected by prior exposure, follower feedback, and changes in the topic's timeliness; if both enter the same candidate batch, already-seen, same-author, and similar-content handling may also be involved, so the results alone cannot identify format causality.",
+      "conditions": [
+        "The same draft is published sequentially without randomized control of audience and timing"
+      ],
+      "practical_meaning": "Call this kind of trial an observation and record order and repeated-exposure conditions.",
+      "check": {
+        "when": "A draft or self-test calls sequential republication a rigorous A/B test",
+        "needed": [
+          "Both publication times",
+          "Audience overlap",
+          "Existing exposure",
+          "Promotional conditions at each time"
+        ],
+        "verify": [
+          "Whether order and timeliness are ignored",
+          "Whether all differences in the later publication are attributed to format"
+        ],
+        "if_missing": "Reduce the causal wording and supplement the comparison with more similar original pieces."
+      },
+      "limits": [
+        "Trial publication still has observational value, but cannot by itself quantify exposure changes caused by format."
+      ],
+      "source_units": [
+        "U0281"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-070",
+      "title": "V8.2 returns after selecting the first media item with usable content in order",
+      "kind": "code",
+      "conclusion": "_collect_post_media checks media in order: upon the first image with usable content it executes return \"Post image:\", [medium.convo_image.content]; if it encounters a usable video first, it obtains a set of frames and returns.",
+      "conditions": [
+        "The local V8.2 function checked in the report",
+        "Media data is available",
+        "Media-list order is followed"
+      ],
+      "practical_meaning": "The first usable image in an image-only Post should convey the topic; for mixed media, check the actual order and availability.",
+      "check": {
+        "when": "The draft claims this path reads every image or a fixed cover",
+        "needed": [
+          "The media list",
+          "Availability of image content and video frames",
+          "Function branches"
+        ],
+        "verify": [
+          "Whether it accurately says 'first usable' rather than an unqualified first image",
+          "Whether the branch for a video encountered first is retained"
+        ],
+        "if_missing": "Describe only this function's selection of usable media; do not generalize to every model."
+      },
+      "limits": [
+        "An arrangement of attractive cover, question in the second image, and results in the third and fourth may leave this input without the main content."
+      ],
+      "source_units": [
+        "U0283",
+        "U0284",
+        "U0285"
+      ],
+      "evidence": [
+        {
+          "source_id": "S001",
+          "link_indices": [
+            0
+          ],
+          "supports": "Selection logic that immediately returns the first usable image or video"
+        }
+      ],
+      "related_unknowns": [
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-071",
+      "title": "Selected Post and quoted-Post media remain subject to a total-count cap after merging",
+      "kind": "code",
+      "conclusion": "The media selected from the V8.2 Post and quoted Post are subsequently merged and constrained by a total-count cap, then sent to the service by the embedder; for image-only Posts, _collect_post_media does not continue collecting every image.",
+      "conditions": [
+        "The selection, merging, and service-call path checked in the report"
+      ],
+      "practical_meaning": "When reviewing quoted material, inspect both the Post's and quoted Post's media and budget, rather than only a local single-image return.",
+      "check": {
+        "when": "Explaining the final image list sent into a representation",
+        "needed": [
+          "The Post's selection result",
+          "The quoted Post's selection result",
+          "The total-count budget",
+          "The embedder call"
+        ],
+        "verify": [
+          "Whether a local return is treated as the complete final input",
+          "Whether the total-count cap is omitted"
+        ],
+        "if_missing": "Describe selection, merging, capping, and delivery to the service separately."
+      },
+      "limits": [
+        "This does not establish that all material enters the same representation."
+      ],
+      "source_units": [
+        "U0286"
+      ],
+      "evidence": [
+        {
+          "source_id": "S001",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Local selection, main/quoted Post merging, and the service call"
+        }
+      ],
+      "related_unknowns": [
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-072",
+      "title": "'All X models always read only the first image' exceeds the code evidence",
+      "kind": "myth",
+      "conclusion": "Other renderers in the same repository process media item by item; the fact that one V8.2 content-representation path returns at the first usable media item does not mean all of X always reads only the lead image.",
+      "conditions": [
+        "Distinguish renderers from production consumers"
+      ],
+      "practical_meaning": "Retain the local rule in review while maintaining reading and safety accuracy across all images.",
+      "check": {
+        "when": "Copy presents the lead-image rule as the platform's sole reading method",
+        "needed": [
+          "The renderer version",
+          "Other renderers",
+          "Actual consumers"
+        ],
+        "verify": [
+          "Whether other item-by-item implementations are retained",
+          "Whether a universal claim is inferred from a local result"
+        ],
+        "if_missing": "Change the wording to 'this V8.2 path prioritizes the first usable media item.'"
+      },
+      "limits": [
+        "Actual coverage of each path still requires production-configuration evidence."
+      ],
+      "source_units": [
+        "U0286"
+      ],
+      "evidence": [
+        {
+          "source_id": "S001",
+          "link_indices": [
+            4
+          ],
+          "supports": "Other renderers' item-by-item processing implementations"
+        }
+      ],
+      "related_unknowns": [
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-073",
+      "title": "The four-image OCR example shows the problem of a lead image without results",
+      "kind": "editorial",
+      "conclusion": "The original report assumes four OCR images ordered as a suspenseful title, test material, result comparison, and error cases; neither a person seeing only the first image nor a process selecting only that image receives the test's main content.",
+      "conditions": [
+        "A hypothetical media-layout example",
+        "Not an exposure experiment"
+      ],
+      "practical_meaning": "During review, simulate seeing only the first image and check whether the test subject, task, and main conclusion are clear.",
+      "check": {
+        "when": "The lead image contains only an attractive cover or suspense",
+        "needed": [
+          "The four-image order",
+          "The lead image's standalone content"
+        ],
+        "verify": [
+          "Whether the research is understandable from the lead image alone",
+          "Whether results are entirely hidden in later images"
+        ],
+        "if_missing": "Move one evidence-backed main result earlier."
+      },
+      "limits": [
+        "This alone cannot quantify whether readers continue through the images."
+      ],
+      "source_units": [
+        "U0287"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K03-074",
+      "title": "The lead image can become a compact results page",
+      "kind": "editorial",
+      "conclusion": "Editorial advice: state the test subject and task in the lead image, include one result that best demonstrates the difference, and indicate when manual review is needed; use the second image for samples and settings, the third for remaining results, and the fourth for limitations and failure examples.",
+      "conditions": [
+        "The principle is illustrated through the OCR layout example",
+        "Results must be supported by real material"
+      ],
+      "practical_meaning": "Make the lead image stand on its own, with later images completing reproduction details and limitations.",
+      "check": {
+        "when": "Reordering tutorial or comparison images",
+        "needed": [
+          "The main finding",
+          "Conditions",
+          "Sample settings",
+          "Remaining results and failure examples"
+        ],
+        "verify": [
+          "Whether the lead image states the subject, task, result, and applicability conditions",
+          "Whether later images complete the evidence"
+        ],
+        "if_missing": "First choose a finding supported by the existing material, then design the lead image."
+      },
+      "limits": [
+        "This is an editorial organization approach, not a fixed algorithmic template of four images."
+      ],
+      "source_units": [
+        "U0288"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K03-075",
+      "title": "One lead-image finding is enough; do not compress the entire text into it",
+      "kind": "editorial",
+      "conclusion": "Editorial advice: the lead image may retain only one main finding, but tool names, comparison conditions, and the subject of the conclusion must be clear; if twenty tiny footnotes are needed to make it valid, narrow the question the image answers.",
+      "conditions": [
+        "Lead-image space is limited and the image must be independently understandable"
+      ],
+      "practical_meaning": "Remove secondary visual burdens and narrow the proposition without removing the conditions that make it valid.",
+      "check": {
+        "when": "The lead image is crowded or uses excessively small text",
+        "needed": [
+          "The main conclusion",
+          "Necessary conditions",
+          "Names of tools and subjects"
+        ],
+        "verify": [
+          "Whether the entire text is being forced into one image",
+          "Whether essential limitations were removed for brevity"
+        ],
+        "if_missing": "Narrow the question and move supplementary material into later images or the body."
+      },
+      "limits": [
+        "'Twenty footnotes' is the original text's example of complexity, not a system threshold."
+      ],
+      "source_units": [
+        "U0289"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K03-076",
+      "title": "The body text and lead image should jointly convey the main finding",
+      "kind": "editorial",
+      "conclusion": "Editorial advice: state the main finding in the body text too, so the test subject remains understandable when images fail to open; when images do open, the text and lead image can be checked against each other, and core material does not depend entirely on later images.",
+      "conditions": [
+        "An illustrated tutorial or test report"
+      ],
+      "practical_meaning": "Use brief text to explain the subject, result, and essential conditions, and check consistency between text and image.",
+      "check": {
+        "when": "Only images carry the draft's conclusion",
+        "needed": [
+          "The body text",
+          "The lead image",
+          "Subsequent images"
+        ],
+        "verify": [
+          "Whether the body text works when images are unavailable",
+          "Whether the text and lead image address the same result"
+        ],
+        "if_missing": "Add the main finding to the body without creating lengthy duplication."
+      },
+      "limits": [
+        "This is advice for accessibility and input clarity, with no guaranteed recommendation increase."
+      ],
+      "source_units": [
+        "U0290"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K03-077",
+      "title": "VQV length eligibility is explicitly measured in milliseconds",
+      "kind": "code",
+      "conclusion": "One video-viewing signal is named VQV; its related eligibility first checks whether video length exceeds a configured threshold, whose public value is 10000 milliseconds. This is a video-duration condition, not the numeric threshold for dwell after a click.",
+      "conditions": [
+        "The VQV eligibility path and default parameters checked in the report"
+      ],
+      "practical_meaning": "When explaining 'ten seconds,' state that the check concerns video length and identify the specific path; do not borrow the unit from CLICK_DWELL_TIME.",
+      "check": {
+        "when": "The draft discusses the VQV ten-second threshold",
+        "needed": [
+          "Video duration",
+          "The VQV eligibility function",
+          "The public threshold"
+        ],
+        "verify": [
+          "Whether video length is distinguished from the time a reader has watched",
+          "Whether eligibility is treated as a score"
+        ],
+        "if_missing": "Describe the named field and millisecond unit, and investigate scoring separately."
+      },
+      "limits": [
+        "Meeting the length condition alone does not establish how many points or how much exposure results."
+      ],
+      "source_units": [
+        "U0291"
+      ],
+      "evidence": [
+        {
+          "source_id": "S048",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "VQV eligibility and the 10000-millisecond video-length setting"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q45"
+      ]
+    },
+    {
+      "id": "K03-078",
+      "title": "Home Mixer and VM Ranker VqvWeight defaults are 0 in this version",
+      "kind": "code",
+      "conclusion": "The examined versions of Home Mixer and VM Ranker both have public VqvWeight defaults of 0, and the public coefficients of some continued-viewing terms are also 0.",
+      "conditions": [
+        "Defaults in the fixed public versions and related paths",
+        "Not a guarantee for every production traffic allocation"
+      ],
+      "practical_meaning": "Do not pad video length solely for a coefficient that defaults to zero; investigate actual indexing thresholds separately.",
+      "check": {
+        "when": "The draft claims qualifying for VQV earns a fixed bonus",
+        "needed": [
+          "Parameters in both locations",
+          "Continued-viewing configuration",
+          "Actual enabled values"
+        ],
+        "verify": [
+          "Whether paths and defaults are distinguished accurately",
+          "Whether length eligibility is directly treated as a nonzero reward"
+        ],
+        "if_missing": "State clearly that the public default is zero without guessing every production request."
+      },
+      "limits": [
+        "A zero coefficient does not eliminate other viewing signals or indexing conditions."
+      ],
+      "source_units": [
+        "U0292"
+      ],
+      "evidence": [
+        {
+          "source_id": "S048",
+          "link_indices": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "Both VQV defaults and some continued-viewing settings"
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ]
+    },
+    {
+      "id": "K03-079",
+      "title": "Video-open and immersive-viewing signals may still have separate roles",
+      "kind": "code",
+      "conclusion": "Public configuration contains a separate nonzero video-open term, and immersive retrieval uses a video-quality viewing signal; a zero VQV or continued-viewing coefficient in one place does not mean all video-viewing behavior is useless.",
+      "conditions": [
+        "The configuration and immersive retrieval positive examples checked in the report"
+      ],
+      "practical_meaning": "When evaluating video paths, check opening, viewing, retrieval, and fusion separately; do not use one default to cover every behavior.",
+      "check": {
+        "when": "The draft uses a zero coefficient to claim video viewing has no value at all",
+        "needed": [
+          "Video-open parameters",
+          "Immersive positive examples",
+          "The relevant paths"
+        ],
+        "verify": [
+          "Whether the nonzero open term is omitted",
+          "Whether training positives are distinguished from fusion coefficients"
+        ],
+        "if_missing": "Retain each specific role without a universal 'useless' conclusion."
+      },
+      "limits": [
+        "The existence of a signal also does not imply a fixed exposure return for every view."
+      ],
+      "source_units": [
+        "U0292"
+      ],
+      "evidence": [
+        {
+          "source_id": "S048",
+          "link_indices": [
+            2,
+            3,
+            6
+          ],
+          "supports": "Nonzero video-open settings and immersive viewing positives"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K03-080",
+      "title": "Edit according to content needs and check entry-point eligibility separately",
+      "kind": "editorial",
+      "conclusion": "Editorial advice: the preview and description should explain the problem being solved; after opening, show the subject and result promptly, retain necessary steps, and cut waiting. An operation explainable in eight seconds does not need filler shots solely for VQV. If the target is a specific video index, separately check eligibility requiring strictly more than ten seconds.",
+      "conditions": [
+        "Content completeness and the target entry point are evaluated separately"
+      ],
+      "practical_meaning": "First produce an effective short version; extend it only when background or steps are necessary.",
+      "check": {
+        "when": "Editing videos around five, eight, or ten seconds",
+        "needed": [
+          "The problem to solve",
+          "The necessary process",
+          "The target index"
+        ],
+        "verify": [
+          "Whether additional duration provides information",
+          "Whether VQV is confused with video-index conditions"
+        ],
+        "if_missing": "Keep a complete, useful short version and make its entry-point tradeoffs explicit."
+      },
+      "limits": [
+        "Changing duration does not guarantee other eligibility conditions or reader response."
+      ],
+      "source_units": [
+        "U0293"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-081",
+      "title": "Video frames and transcripts are inputs, not fixed caption or HD rewards",
+      "kind": "code",
+      "conclusion": "The V8.2 representation flow can use extracted video frames and speech transcripts; this establishes only that these inputs exist, not a fixed caption bonus or Full HD reward formula, and a local frame cap cannot be described as the entire system seeing only four moments.",
+      "conditions": [
+        "The V8.2 assembly path checked in the report",
+        "The relevant frame and transcript data has been obtained"
+      ],
+      "practical_meaning": "Captions and clarity serve understanding and readability; when describing the algorithm, state only the observed inputs.",
+      "check": {
+        "when": "The draft claims captions, Full HD, or four frames necessarily produce a particular traffic outcome",
+        "needed": [
+          "Frame and transcript fields",
+          "Renderer limits",
+          "The specific scoring formula"
+        ],
+        "verify": [
+          "Whether a corresponding reward function exists",
+          "Whether a local frame budget is generalized to every system"
+        ],
+        "if_missing": "Remove fixed rewards and platform-wide reading caps, while retaining the input facts."
+      },
+      "limits": [
+        "An input's existence does not prove that every video successfully generates or uses the same representation."
+      ],
+      "source_units": [
+        "U0294"
+      ],
+      "evidence": [
+        {
+          "source_id": "S001",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "V8.2 media-frame selection and related input assembly"
+        },
+        {
+          "source_id": "S044",
+          "link_indices": [
+            1
+          ],
+          "supports": "The scope of this renderer's input limits"
+        }
+      ],
+      "related_unknowns": [
+        "Q47"
+      ]
+    },
+    {
+      "id": "K03-082",
+      "title": "The duration condition for three video indexes is strictly greater than 10000 milliseconds",
+      "kind": "code",
+      "conclusion": "The index processor sets minLongVideoDurationMillis=10*1000 and checks videoInfo.durationMillis>minLongVideoDurationMillis; exactly 10000 milliseconds fails this condition, while 10001 milliseconds passes it.",
+      "conditions": [
+        "Applies to the connected video, 1fav_video, and nsfw_video builder chains",
+        "Other conditions are evaluated separately"
+      ],
+      "practical_meaning": "When deliberately targeting these indexes, check the actual video duration rather than relying on a player's rounded 'ten seconds.'",
+      "check": {
+        "when": "The draft explains the ten-second video-index boundary",
+        "needed": [
+          "Media VideoInfo.durationMillis",
+          "The strict comparison expression",
+          "The target builder"
+        ],
+        "verify": [
+          "Whether > is used rather than >=",
+          "Whether video length is treated as time the reader has watched",
+          "Whether the default zero VQV coefficient confuses the issue"
+        ],
+        "if_missing": "Describe accurately one indexing-eligibility condition requiring strictly more than ten seconds."
+      },
+      "limits": [
+        "No exposure reward is calculated here; this and VQV scoring eligibility govern separate steps."
+      ],
+      "source_units": [
+        "U0295",
+        "U0296",
+        "U0297",
+        "U0298"
+      ],
+      "evidence": [
+        {
+          "source_id": "S049",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "The 10000 constant, strict comparison, and three builders"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-083",
+      "title": "hasValidImmersiveVideo checks every item in the entire media set",
+      "kind": "code",
+      "conclusion": "The function first requires at least one accepted video media item, then applies forall to every media entity: the type must be TweetVideo or AmplifyVideo, VideoInfo must exist, and duration must be strictly greater than ten seconds. Each video in a multi-video Post must pass, and including images or other media may also disqualify the entire set.",
+      "conditions": [
+        "The hasValidImmersiveVideo checked in the report",
+        "The Post's actual media collection"
+      ],
+      "practical_meaning": "List media item by item when reviewing or investigating eligibility; finding just one sufficiently long video is not enough.",
+      "check": {
+        "when": "A multi-video or mixed image/video Post seeks entry to a specific video index",
+        "needed": [
+          "The complete media entities",
+          "Each item's type, VideoInfo, and duration"
+        ],
+        "verify": [
+          "Whether every item passes the type and duration conditions",
+          "Whether an image or another short video has been overlooked"
+        ],
+        "if_missing": "Acknowledge only the individual conditions already met; do not declare the entire Post eligible."
+      },
+      "limits": [
+        "Source, content, and other conditions outside the builder must also be met."
+      ],
+      "source_units": [
+        "U0299"
+      ],
+      "evidence": [
+        {
+          "source_id": "S049",
+          "link_indices": [
+            1
+          ],
+          "supports": "The existence requirement and forall conditions for each media item"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-084",
+      "title": "1fav_video comes from the Fav branch for ordinary eligible Posts",
+      "kind": "code",
+      "conclusion": "The Fav branch for ordinary eligible Posts calls build1FavVideoIndex, and that builder calls hasValidImmersiveVideo; being strictly longer than ten seconds is only one indexing-eligibility condition.",
+      "conditions": [
+        "General source and content eligibility is satisfied",
+        "The Fav path",
+        "All media is eligible"
+      ],
+      "practical_meaning": "When discussing 1fav_video, state the event path and media prerequisites together; do not treat the name as a likes-for-exposure formula.",
+      "check": {
+        "when": "The draft explains what triggers 1fav_video",
+        "needed": [
+          "The Fav event path",
+          "The builder",
+          "Video eligibility"
+        ],
+        "verify": [
+          "Whether source and content conditions are retained",
+          "Whether the path connects to the actual eligibility function"
+        ],
+        "if_missing": "State only that this index may be built when these conditions are satisfied."
+      },
+      "limits": [
+        "Retrieval, filtering, and ranking are still required after writing."
+      ],
+      "source_units": [
+        "U0300",
+        "U0301",
+        "U0302"
+      ],
+      "evidence": [
+        {
+          "source_id": "S049",
+          "link_indices": [
+            2,
+            4
+          ],
+          "supports": "The 1fav_video builder and main Fav flow"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-085",
+      "title": "The video index can be built without waiting for a like",
+      "kind": "code",
+      "conclusion": "The Fav or PostCreation branch for ordinary eligible Posts can call buildVideoIndex, and that builder also calls hasValidImmersiveVideo.",
+      "conditions": [
+        "The relevant event branch and other source, content, and media conditions hold"
+      ],
+      "practical_meaning": "Do not uniformly describe video-index creation as unlocked only after receiving a like.",
+      "check": {
+        "when": "The draft explains video-index entry points",
+        "needed": [
+          "The Fav and PostCreation branches",
+          "buildVideoIndex",
+          "Media eligibility"
+        ],
+        "verify": [
+          "Whether PostCreation is omitted",
+          "Whether all prerequisites are retained"
+        ],
+        "if_missing": "Describe the two visible event entry points; actual writes require checking processing results."
+      },
+      "limits": [
+        "The existence of a creation entry point does not guarantee event success or final display."
+      ],
+      "source_units": [
+        "U0300",
+        "U0301",
+        "U0302"
+      ],
+      "evidence": [
+        {
+          "source_id": "S049",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "The video builder and Fav/PostCreation calls"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-086",
+      "title": "The nsfw_video builder has additional content conditions",
+      "kind": "code",
+      "conclusion": "The Fav branch for specified adult videos calls buildNsfwVideoIndex; the builder additionally checks an adult-content flag and calls hasValidImmersiveVideo, so source and content prerequisites cannot be omitted.",
+      "conditions": [
+        "The corresponding adult-video Fav branch",
+        "An adult-content flag",
+        "Complete video eligibility"
+      ],
+      "practical_meaning": "Retain the special-content routing when analyzing this index; do not treat it as a universal entry point for ordinary videos.",
+      "check": {
+        "when": "The draft cites nsfw_video as proof of general eligibility",
+        "needed": [
+          "The event branch",
+          "The adult-content flag",
+          "hasValidImmersiveVideo"
+        ],
+        "verify": [
+          "Whether a special-content index is generalized",
+          "Whether strict duration and all-media conditions are omitted"
+        ],
+        "if_missing": "Limit the statement to this branch; do not make a uniform promise for all videos."
+      },
+      "limits": [
+        "Index eligibility is neither safety certification nor an exposure guarantee."
+      ],
+      "source_units": [
+        "U0300",
+        "U0301",
+        "U0302"
+      ],
+      "evidence": [
+        {
+          "source_id": "S049",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "The nsfw_video builder, flag, and calling branch"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-087",
+      "title": "Retrieval and ranking still follow inclusion in the three video indexes",
+      "kind": "code",
+      "conclusion": "video, 1fav_video, and nsfw_video can all be traced to hasValidImmersiveVideo; duration eligibility is only one prerequisite among source, media, content, and other conditions, and retrieval and ranking still follow inclusion.",
+      "conditions": [
+        "The three connected builder chains",
+        "The subsequent candidate flow applies"
+      ],
+      "practical_meaning": "Record 'meets index conditions,' 'written to the index,' 'retrieved,' and 'actually exposed' separately.",
+      "check": {
+        "when": "The draft equates being longer than ten seconds with receiving traffic",
+        "needed": [
+          "Complete eligibility",
+          "Index-write records",
+          "Retrieval and display evidence"
+        ],
+        "verify": [
+          "Whether exposure is promised by skipping multiple unverified steps"
+        ],
+        "if_missing": "State only the local eligibility condition and leave final display unknown."
+      },
+      "limits": [
+        "Public static code cannot reconstruct an individual piece's actual exposure."
+      ],
+      "source_units": [
+        "U0302"
+      ],
+      "evidence": [
+        {
+          "source_id": "S049",
+          "link_indices": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "Duration eligibility and prerequisites for the three indexes"
+        },
+        {
+          "source_id": "S034",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "Actual retrieval requests and subsequent candidate processing"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-088",
+      "title": "Video-index windows in days and video lengths in seconds are different conditions",
+      "kind": "code",
+      "conclusion": "1fav_video has windows such as 2 days, 2 to 4 days, 4 to 14 days, and 4 to 30 days; video and nsfw_video have their own windows as well. Days describe data retention or selection ranges, not video length.",
+      "conditions": [
+        "The Main and Sid index-window configurations checked in the report"
+      ],
+      "practical_meaning": "List data-age ranges and video duration separately when explaining indexes; do not combine them into a single threshold.",
+      "check": {
+        "when": "The draft cites names such as 2day or 4to14day",
+        "needed": [
+          "The index name",
+          "Window configuration",
+          "The video-duration function"
+        ],
+        "verify": [
+          "Whether data age is mistaken for viewing time or video length",
+          "Whether the actual associated index has been checked"
+        ],
+        "if_missing": "State units and roles separately according to the configuration."
+      },
+      "limits": [
+        "A longer index window does not guarantee delivery of older content and is not a general creator exemption."
+      ],
+      "source_units": [
+        "U0303"
+      ],
+      "evidence": [
+        {
+          "source_id": "S050",
+          "link_indices": [
+            0
+          ],
+          "supports": "Time windows for video indexes"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q25"
+      ]
+    },
+    {
+      "id": "K03-089",
+      "title": "Actual file mappings for four named video-retrieval datasets",
+      "kind": "code",
+      "conclusion": "The public mappings are IMMERSIVE2Day→video_2day.parquet, IMMERSIVE4Day→video_4day.parquet, and EVERGREEN→video_4to14day.parquet, all belonging to video; IMMERSIVENSFW→nsfw_video_2day.parquet belongs to nsfw_video. Their corresponding producers can therefore be traced to the strictly-greater-than-ten-seconds condition.",
+      "conditions": [
+        "The retrieval dataset mappings and corresponding builders checked in the report"
+      ],
+      "practical_meaning": "Determine eligibility from the actual file and producer, rather than guessing a source solely from the enum name.",
+      "check": {
+        "when": "Explaining the duration chain for a video-retrieval dataset",
+        "needed": [
+          "The enum",
+          "The filename",
+          "The associated index",
+          "The producer"
+        ],
+        "verify": [
+          "Whether the four mappings are accurate",
+          "Whether each connects back to the correct builder"
+        ],
+        "if_missing": "Retain only the observed read mappings; do not add conditions to chains that are not connected."
+      },
+      "limits": [
+        "A read configuration does not prove that every production request enables that source."
+      ],
+      "source_units": [
+        "U0304",
+        "U0305"
+      ],
+      "evidence": [
+        {
+          "source_id": "S050",
+          "link_indices": [
+            1
+          ],
+          "supports": "Retrieval enums and actual parquet files"
+        },
+        {
+          "source_id": "S049",
+          "link_indices": [
+            3
+          ],
+          "supports": "Duration eligibility for the corresponding video and nsfw_video indexes"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q20"
+      ]
+    },
+    {
+      "id": "K03-090",
+      "title": "The complete producer for IMMERSIVE32FavVideo14To30Day remains incompletely traced",
+      "kind": "unknown",
+      "conclusion": "This public dataset reads 32fav_video_14to30day.parquet; the original report did not fully trace its producer, so the name alone cannot establish that every video passed the above ten-second eligibility check, nor can it fill in proof of ordinary 32fav's For You consumption chain.",
+      "conditions": [
+        "Only this video dataset's read location is confirmed"
+      ],
+      "practical_meaning": "Retain the known file mapping and list production conditions and actual uses as separate unresolved items.",
+      "check": {
+        "when": "The draft infers thresholds or ordinary 32fav consumption from the 32fav_video name",
+        "needed": [
+          "The dataset read",
+          "The complete producer",
+          "Actual source configuration"
+        ],
+        "verify": [
+          "Whether duration or ordinary-Post conditions are added solely from the name"
+        ],
+        "if_missing": "State that the producer is not connected, without adding a conclusion that exposure is unlocked."
+      },
+      "limits": [
+        "Incomplete tracing also cannot establish that the dataset is unused."
+      ],
+      "source_units": [
+        "U0304",
+        "U0305"
+      ],
+      "evidence": [
+        {
+          "source_id": "S050",
+          "link_indices": [
+            1
+          ],
+          "supports": "The named video dataset and file read"
+        }
+      ],
+      "related_unknowns": [
+        "Q15",
+        "Q21"
+      ]
+    },
+    {
+      "id": "K03-091",
+      "title": "The EVERGREEN retrieval name differs from the actual evergreen indexes",
+      "kind": "code",
+      "conclusion": "The EVERGREEN retrieval enum actually reads video_4to14day.parquet and can be traced through the video producer to the ten-second check; the actual evergreen_video and evergreen_nsfw_video are a separate set of indexes and cannot be merged based on similar names.",
+      "conditions": [
+        "The read mappings and independent builders checked in the report"
+      ],
+      "practical_meaning": "Whenever mentioning Evergreen, specify whether it means the enum or an index before discussing conditions.",
+      "check": {
+        "when": "The draft claims all Evergreen paths either have or lack a ten-second limit",
+        "needed": [
+          "The enum-to-file mapping",
+          "The evergreen builders"
+        ],
+        "verify": [
+          "Whether the two kinds of names are confused",
+          "Whether the correct producer is followed"
+        ],
+        "if_missing": "Describe them separately as two objects."
+      },
+      "limits": [
+        "Similar names do not establish identical data sources, eligibility, or traffic."
+      ],
+      "source_units": [
+        "U0306"
+      ],
+      "evidence": [
+        {
+          "source_id": "S050",
+          "link_indices": [
+            1,
+            2
+          ],
+          "supports": "The file read by EVERGREEN and the actual evergreen builders"
+        }
+      ],
+      "related_unknowns": [
+        "Q20"
+      ]
+    },
+    {
+      "id": "K03-092",
+      "title": "The actual evergreen branches do not repeat the ten-second check in this processor",
+      "kind": "code",
+      "conclusion": "EvergreenVideo and EvergreenNsfwVideo events use independent branches that call only hasImmersiveVideo before creating evergreen indexes; that function checks only for an accepted video type and does not read durationMillis, and neither builder adds a ten-second comparison.",
+      "conditions": [
+        "The two independent event branches in this processor",
+        "Upstream list eligibility is unknown"
+      ],
+      "practical_meaning": "This can rebut 'all branches here uniformly require >10 seconds,' but cannot promise that production evergreen necessarily accepts short videos.",
+      "check": {
+        "when": "The draft discusses short-video eligibility for evergreen",
+        "needed": [
+          "The event branches",
+          "hasImmersiveVideo",
+          "The builders",
+          "The upstream list"
+        ],
+        "verify": [
+          "Whether a duration comparison is genuinely absent",
+          "Whether upstream conditions are still missing"
+        ],
+        "if_missing": "Confine the statement to no repeated check at this location, leaving upstream eligibility unknown."
+      },
+      "limits": [
+        "The absence of an observed local threshold does not mean production necessarily accepts short clips."
+      ],
+      "source_units": [
+        "U0307"
+      ],
+      "evidence": [
+        {
+          "source_id": "S050",
+          "link_indices": [
+            2,
+            3,
+            4
+          ],
+          "supports": "Independent evergreen branches and the function that checks video type only"
+        }
+      ],
+      "related_unknowns": [
+        "Q20"
+      ]
+    },
+    {
+      "id": "K03-093",
+      "title": "The Imagine builder uses Grok metadata rather than the same video-eligibility function",
+      "kind": "code",
+      "conclusion": "The ordinary Fav video branch calls buildImagineIndex; it checks isImaginePost using Grok post metadata in the media and does not call hasValidImmersiveVideo.",
+      "conditions": [
+        "The Imagine branch checked in the report",
+        "The corresponding Grok media metadata"
+      ],
+      "practical_meaning": "Do not generalize the restrictions of the three video indexes into a common restriction on every candidate containing video.",
+      "check": {
+        "when": "The draft claims all video candidates must be >10 seconds",
+        "needed": [
+          "The Fav branch",
+          "The Imagine builder",
+          "isImaginePost"
+        ],
+        "verify": [
+          "Whether the independent metadata conditions have been checked",
+          "Whether another builder's conditions are incorrectly applied"
+        ],
+        "if_missing": "Describe each builder according to its actual conditions."
+      },
+      "limits": [
+        "Not calling the same function does not guarantee that all upstream or other conditions are identical."
+      ],
+      "source_units": [
+        "U0308"
+      ],
+      "evidence": [
+        {
+          "source_id": "S050",
+          "link_indices": [
+            4,
+            5,
+            6
+          ],
+          "supports": "Imagine detection, the builder, and the Fav call"
+        }
+      ],
+      "related_unknowns": [
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-094",
+      "title": "A five-second video can qualify for general 1fav while failing specialized video indexes",
+      "kind": "code",
+      "conclusion": "Conditional example: a five-second video meeting all other eligibility conditions can first have general 1fav, topic, 32fav, and other indexes built in the ordinary Fav branch, with 32fav still subject to its own like-count threshold; the general build1FavIndex does not check video duration, but this video cannot be written through this path to video or 1fav_video because it is too short.",
+      "conditions": [
+        "Five seconds is an example of program conditions",
+        "All other source and content eligibility conditions are met",
+        "32fav separately requires its like-count condition"
+      ],
+      "practical_meaning": "Report general-index and specialized-video-index eligibility separately; do not treat short clips as having no entry point at all.",
+      "check": {
+        "when": "The draft says videos shorter than ten seconds have no candidate eligibility whatsoever",
+        "needed": [
+          "The general Fav flow",
+          "The 1fav builder",
+          "The video builders",
+          "32fav eligibility"
+        ],
+        "verify": [
+          "Whether other conditions are retained",
+          "Whether a five-second exposure experiment is incorrectly claimed"
+        ],
+        "if_missing": "Use a conditional example without promising actual indexing or exposure."
+      },
+      "limits": [
+        "This example did not test short-clip exposure and does not guarantee equal opportunity with longer videos."
+      ],
+      "source_units": [
+        "U0309"
+      ],
+      "evidence": [
+        {
+          "source_id": "S050",
+          "link_indices": [
+            6,
+            7
+          ],
+          "supports": "General indexes are built first and 1fav has no duration check"
+        },
+        {
+          "source_id": "S038",
+          "link_indices": [
+            0
+          ],
+          "supports": "The independent count condition for general 32fav"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-095",
+      "title": "Ordinary HOME reads 1fav_1day, so short videos do have a possible Home candidate entry point",
+      "kind": "code",
+      "conclusion": "The public ordinary HOME dataset explicitly references 1fav_1day; failing the ten-second condition for the three specialized video indexes therefore does not mean short videos have no Home candidate eligibility at all.",
+      "conditions": [
+        "Other general 1fav and HOME retrieval conditions hold",
+        "The public dataset configuration"
+      ],
+      "practical_meaning": "Retain content that suits a short version while explaining that what is lost is a specific video entry point.",
+      "check": {
+        "when": "The draft generalizes ten-second eligibility to all Home eligibility",
+        "needed": [
+          "The HOME dataset",
+          "The general 1fav builder",
+          "Subsequent retrieval and ranking"
+        ],
+        "verify": [
+          "Whether a restriction on one index type is described as a restriction across all of Home"
+        ],
+        "if_missing": "State that a general entry point may exist while final display remains unknown."
+      },
+      "limits": [
+        "Writing to a general index is still neither an exposure guarantee nor proof of equal opportunity with longer videos."
+      ],
+      "source_units": [
+        "U0310"
+      ],
+      "evidence": [
+        {
+          "source_id": "S034",
+          "link_indices": [
+            2,
+            4,
+            5
+          ],
+          "supports": "HOME's 1fav source and subsequent retrieval processing"
+        },
+        {
+          "source_id": "S050",
+          "link_indices": [
+            7
+          ],
+          "supports": "General 1fav does not check video length"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-096",
+      "title": "Use useful content to extend beyond ten seconds when targeting the three video indexes",
+      "kind": "editorial",
+      "conclusion": "Editorial inference: when the actual target is video, 1fav_video, or nsfw_video, ten seconds or less fails their duration condition; a version longer than ten seconds can be made with complete background, procedural steps, results, or applicability limitations.",
+      "conditions": [
+        "The added material has value",
+        "The other conditions of each index must also be met"
+      ],
+      "practical_meaning": "Add information to supply the duration rather than just filler shots; check every media item's actual duration before publishing.",
+      "check": {
+        "when": "Considering a longer video for a particular entry point",
+        "needed": [
+          "The target index",
+          "Current duration",
+          "Useful material that can be added"
+        ],
+        "verify": [
+          "Whether duration is strictly greater than ten seconds",
+          "Whether the new content is useful",
+          "Whether other media and source conditions hold"
+        ],
+        "if_missing": "If there is no worthwhile material to add, retain the short version and accept the entry-point tradeoff."
+      },
+      "limits": [
+        "Adding filler shots changes only duration and cannot guarantee recommendations or reader response."
+      ],
+      "source_units": [
+        "U0311"
+      ],
+      "evidence": [
+        {
+          "source_id": "S049",
+          "link_indices": [
+            1,
+            2,
+            3
+          ],
+          "supports": "The duration conditions of the three underlying builders; the extension method is an editorial inference"
+        }
+      ],
+      "related_unknowns": [
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-097",
+      "title": "A complete five- or eight-second short version can be retained",
+      "kind": "editorial",
+      "conclusion": "Editorial inference: retain a short version when five or eight seconds fully explains a small question; it may still have a general Post-index entry point while losing duration eligibility under the three builders in this section. Whether to make an additional complete version of more than ten seconds depends on the target entry point and useful content that can be added.",
+      "conditions": [
+        "The short version already fully addresses the question",
+        "Other eligibility for the general entry point is separately satisfied"
+      ],
+      "practical_meaning": "Choose the version according to the goal and content value; make opportunity tradeoffs explicit without promising an exposure level.",
+      "check": {
+        "when": "Deciding whether a short version must be lengthened",
+        "needed": [
+          "Content completeness",
+          "The target entry point",
+          "The longer version's added value"
+        ],
+        "verify": [
+          "Whether clarity is sacrificed for a traffic assumption",
+          "Whether the loss of specific entry points is explained"
+        ],
+        "if_missing": "Retain the effective short version and do not quantify unproven exposure differences."
+      },
+      "limits": [
+        "The existence of a general entry point does not mean equal opportunity with the longer version."
+      ],
+      "source_units": [
+        "U0312"
+      ],
+      "evidence": [
+        {
+          "source_id": "S049",
+          "link_indices": [
+            1,
+            2,
+            3
+          ],
+          "supports": "Duration conditions of the specific indexes"
+        },
+        {
+          "source_id": "S050",
+          "link_indices": [
+            6,
+            7
+          ],
+          "supports": "Possible general-index entry points; the version tradeoff is an editorial inference"
+        }
+      ],
+      "related_unknowns": [
+        "Q23"
+      ]
+    },
+    {
+      "id": "K03-098",
+      "title": "Downstream of the isMediaEligible ten-second check remains incompletely traced",
+      "kind": "unknown",
+      "conclusion": "The eventProcessing isMediaEligible checks video length >10000 milliseconds and that media is not NSFW; getTweetypieResponse assembles hasEligibleMedia and adds the condition that the author is not NSFW. Only the latter's definition and export were found in the public tree, with no other actual callers found.",
+      "conditions": [
+        "The report's public search scope",
+        "This chain is distinguished from hasValidImmersiveVideo"
+      ],
+      "practical_meaning": "Record this condition, but use the connected hasValidImmersiveVideo chain to establish the three video indexes; do not add other lists to this chain without evidence.",
+      "check": {
+        "when": "The draft uses isMediaEligible to claim a universal threshold for all video",
+        "needed": [
+          "The function definition",
+          "Its export",
+          "Actual callers",
+          "Downstream consumers"
+        ],
+        "verify": [
+          "Whether an actual call has been found",
+          "Whether two different eligibility functions are being mixed"
+        ],
+        "if_missing": "Mark it as a visible condition whose downstream remains incompletely traced, without broadening coverage."
+      },
+      "limits": [
+        "Failure to find a caller does not prove it is never used in production."
+      ],
+      "source_units": [
+        "U0313"
+      ],
+      "evidence": [
+        {
+          "source_id": "S049",
+          "link_indices": [
+            5,
+            6
+          ],
+          "supports": "The ten-second and NSFW media conditions, and assembly of the author condition"
+        }
+      ],
+      "related_unknowns": [
+        "Q22"
+      ]
+    },
+    {
+      "id": "K03-099",
+      "title": "SpecialVideo's default minimum fav is 64, without a 512 switch",
+      "kind": "code",
+      "conclusion": "SpecialVideo requires an obtainable author, a video in the Post or quoted Post, and post.get_fav_count() no lower than deluxe_fav_count_threshold, whose public default is 64. Once eligible, it enables motion_reveal for the video and then fetches media data; there is no equivalent 512 switch here.",
+      "conditions": [
+        "The task has been received",
+        "The author can be obtained",
+        "A Post or quoted-Post video exists",
+        "fav>=the public default of 64; the actual parameter may vary"
+      ],
+      "practical_meaning": "List author, video, fav, and subsequent media retrieval as four steps in review; do not simply write '64 likes automatically completes moderation.'",
+      "check": {
+        "when": "Explaining the special-video 64-like threshold",
+        "needed": [
+          "The actual task",
+          "The author",
+          "Post and quoted media",
+          "fav and the threshold"
+        ],
+        "verify": [
+          "Whether >= rather than > is used",
+          "Whether quoted video and motion_reveal are retained",
+          "Whether a 512 stage is invented"
+        ],
+        "if_missing": "Explain only this filter's eligibility and public default."
+      },
+      "limits": [
+        "Passing eligibility does not guarantee media retrieval, completed classification, a violation finding, or exposure."
+      ],
+      "source_units": [
+        "U0314",
+        "U0315",
+        "U0316",
+        "U0317"
+      ],
+      "evidence": [
+        {
+          "source_id": "S051",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Default 64, author and video conditions, motion_reveal, and media fetching"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q33",
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-100",
+      "title": "SpecialVideo still requires a technique screen after media retrieval",
+      "kind": "code",
+      "conclusion": "After media retrieval, the process must still confirm that a processable video exists and check technique signals such as motion_reveal_frames; only a positive screen proceeds to content-category, policy, and cross-validation tasks.",
+      "conditions": [
+        "The SpecialVideo prerequisite filter has passed",
+        "A processable video has been obtained",
+        "Screen signals satisfy the conditions"
+      ],
+      "practical_meaning": "Distinguish selection for checking, a positive screen, and a final violation finding; reaching 64 likes does not mean moderation necessarily runs to completion.",
+      "check": {
+        "when": "The draft claims a qualifying video is necessarily fully classified or found in violation",
+        "needed": [
+          "Media-fetch results",
+          "The technique signal",
+          "Screen output",
+          "The subsequent plan"
+        ],
+        "verify": [
+          "Whether a processable video actually exists",
+          "Whether the screen is positive",
+          "Whether eligibility is treated as a conclusion"
+        ],
+        "if_missing": "Stop at the verified step without filling in subsequent judgments."
+      },
+      "limits": [
+        "A positive screen is also not a final violation finding."
+      ],
+      "source_units": [
+        "U0318"
+      ],
+      "evidence": [
+        {
+          "source_id": "S051",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "The technique screen and subsequent task dependencies"
+        }
+      ],
+      "related_unknowns": [
+        "Q33",
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-101",
+      "title": "MediaInjected's default eligibility at 64 also excludes already-NSFW results",
+      "kind": "code",
+      "conclusion": "MediaInjectedAdultInfraredVideoSpamDetection first requires an author, a video in the Post or quoted Post, at least the same public default of 64 likes, and existing results that have not classified the content as NSFW.",
+      "conditions": [
+        "The corresponding task has been received",
+        "The author and video are available",
+        "fav>=the threshold",
+        "The content is not among existing NSFW results"
+      ],
+      "practical_meaning": "Check existing state and quoted content; do not infer execution solely from the like count.",
+      "check": {
+        "when": "Explaining the MediaInjected trigger threshold",
+        "needed": [
+          "The author",
+          "Post and quoted videos",
+          "fav configuration",
+          "Prior NSFW results"
+        ],
+        "verify": [
+          "Whether all prerequisites are retained",
+          "Whether 64 is described as safety certification or a traffic unlock"
+        ],
+        "if_missing": "Explain the conditions after task receipt; without state, passing cannot be determined."
+      },
+      "limits": [
+        "Filter eligibility is not successful inference, and the actual public default need not cover all production requests."
+      ],
+      "source_units": [
+        "U0314",
+        "U0315",
+        "U0316",
+        "U0319"
+      ],
+      "evidence": [
+        {
+          "source_id": "S052",
+          "link_indices": [
+            0,
+            5
+          ],
+          "supports": "Inclusion of quoted video, the default condition of 64, and reading existing NSFW results"
+        },
+        {
+          "source_id": "S051",
+          "link_indices": [
+            0
+          ],
+          "supports": "The shared fav default"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q33",
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-102",
+      "title": "MediaInjected inference also requires frames and violating-reference material",
+      "kind": "code",
+      "conclusion": "When MediaInjected actually performs inference, it confirms that video frames have been obtained and loads reference material from confirmed violating videos for comparison; without frames or with unavailable reference material, reaching an eligibility number does not mean a check has been completed.",
+      "conditions": [
+        "The prerequisite filter passes",
+        "Video frames have been obtained",
+        "Reference material is available"
+      ],
+      "practical_meaning": "Record eligibility, material retrieval, and inference-completion status separately when investigating task results.",
+      "check": {
+        "when": "The draft equates reaching 64 or 512 with a completed check",
+        "needed": [
+          "Video frames",
+          "Reference-material loading status",
+          "Task dependencies and results"
+        ],
+        "verify": [
+          "Whether frames really exist",
+          "Whether reference material is available",
+          "Whether inference has run"
+        ],
+        "if_missing": "Report only achieved eligibility; do not claim the check succeeded."
+      },
+      "limits": [
+        "Reference material and actual model judgments are not fully public, so eligibility cannot predict a violation."
+      ],
+      "source_units": [
+        "U0319"
+      ],
+      "evidence": [
+        {
+          "source_id": "S052",
+          "link_indices": [
+            2,
+            4
+          ],
+          "supports": "Inference only when frames exist, reference comparison, and task dependencies"
+        }
+      ],
+      "related_unknowns": [
+        "Q33",
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-103",
+      "title": "MediaInjected switches use_reasoning at 512",
+      "kind": "code",
+      "conclusion": "MediaInjected switches use_reasoning when fav is at least 512, adjusting the prompt and output mode for comparison reasoning; it does not wait until 512 likes to read the video for the first time.",
+      "conditions": [
+        "This MediaInjected task",
+        "Earlier eligibility, frames, and reference material requirements are all met",
+        "fav reaches the default switch value of 512"
+      ],
+      "practical_meaning": "Separate eligibility at 64 from the inference method at 512 in review; do not describe them as two rounds of traffic testing.",
+      "check": {
+        "when": "Explaining the role of 512 likes in MediaInjected",
+        "needed": [
+          "The named 512 constant",
+          "The use_reasoning branch",
+          "Actual inference conditions"
+        ],
+        "verify": [
+          "Whether a mode switch is incorrectly described as first reading or a second distribution round"
+        ],
+        "if_missing": "Describe it as a reasoning-mode switch after the task prerequisites are satisfied."
+      },
+      "limits": [
+        "A production guarantee that every video receives an event upon reaching the threshold is still missing."
+      ],
+      "source_units": [
+        "U0314",
+        "U0315",
+        "U0316",
+        "U0320"
+      ],
+      "evidence": [
+        {
+          "source_id": "S052",
+          "link_indices": [
+            1,
+            2
+          ],
+          "supports": "The 512 constant and use_reasoning branch"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q33",
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-104",
+      "title": "MediaInjected violation output first becomes a SpamManipulatedMedia policy",
+      "kind": "code",
+      "conclusion": "A violation finding in this check produces a SpamManipulatedMedia policy and then enters shared write processing; the policy follows the general Spam author conditions, rather than the video task directly writing account labels of the kind produced by the three-of-five rule.",
+      "conditions": [
+        "The check ultimately finds a violation",
+        "The retained policy enters the shared sink",
+        "The sink's author and execution conditions are satisfied"
+      ],
+      "practical_meaning": "Trace enforcement to the policy and writer; do not jump directly from a video threshold to account labels.",
+      "check": {
+        "when": "The draft claims 512 or a single video check directly triggers three-of-five account labeling",
+        "needed": [
+          "The task's output policy",
+          "The shared sink",
+          "The general Spam author branch"
+        ],
+        "verify": [
+          "Whether different tasks and label sources are mixed",
+          "Whether author prerequisites are retained"
+        ],
+        "if_missing": "Describe only the connected policy and write path, and investigate account labels separately."
+      },
+      "limits": [
+        "Eligibility or a single model output alone does not determine final account state."
+      ],
+      "source_units": [
+        "U0320"
+      ],
+      "evidence": [
+        {
+          "source_id": "S052",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "The violation policy and shared-sink dependencies"
+        },
+        {
+          "source_id": "S054",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Author preprocessing and the general Spam branch"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q33",
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-105",
+      "title": "AdultContentLeadingFrames requires a long video or eligible broadcast, plus prior results",
+      "kind": "code",
+      "conclusion": "AdultContentLeadingFrames requires author data and either a video of at least 30 seconds or a broadcast with usable identification data, and can check both the Post and quoted content; prior PTOS results must also exist and not already be marked NSFW. This filter does not use a 64-like threshold, and without prior results it skips even at 512.",
+      "conditions": [
+        "The author can be obtained",
+        "Video>=30 seconds or the broadcast conditions are met",
+        "Prior PTOS exists",
+        "Existing results are not NSFW"
+      ],
+      "practical_meaning": "Check media type, duration, prior results, and existing state before discussing 512; the number cannot be the sole condition.",
+      "check": {
+        "when": "Explaining eligibility for checking the opening of a long video",
+        "needed": [
+          "The author",
+          "Post and quoted videos or broadcasts",
+          "Prior PTOS",
+          "Existing NSFW state"
+        ],
+        "verify": [
+          "Whether the video-duration requirement is also incorrectly imposed on broadcasts",
+          "Whether prior results are omitted",
+          "Whether 64 is incorrectly applied"
+        ],
+        "if_missing": "When prior results or other conditions are missing, state only that this filter does not pass."
+      },
+      "limits": [
+        "This is eligibility for this task, not the only entry point for all video moderation."
+      ],
+      "source_units": [
+        "U0315",
+        "U0316",
+        "U0321"
+      ],
+      "evidence": [
+        {
+          "source_id": "S053",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "30 seconds, author, video or broadcast, prior results, and NSFW conditions"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q33",
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-106",
+      "title": "LeadingFrames allows 512 to substitute for the prior AdultContent-category condition",
+      "kind": "code",
+      "conclusion": "Once prior results exist, processing continues only if any existing annotation listed the AdultContent category or current fav is at least 512; category here does not mean NSFW labeling was previously completed, and already-NSFW Posts were excluded in the preceding step.",
+      "conditions": [
+        "Prerequisite author, media, prior, and non-NSFW conditions are all satisfied",
+        "Either AdultContent category or fav>=512"
+      ],
+      "practical_meaning": "Eligibility below 512 is possible because of the prior category, while exceeding 512 still cannot bypass other conditions; state the logical OR accurately.",
+      "check": {
+        "when": "The draft claims all videos have their opening checked only after 512",
+        "needed": [
+          "Prior annotations",
+          "fav",
+          "Prerequisite filter results"
+        ],
+        "verify": [
+          "Whether 'category or 512' is retained",
+          "Whether category is confused with the NSFW label",
+          "Whether other prerequisites are omitted"
+        ],
+        "if_missing": "Give a conditional judgment rather than deciding solely from the public like count."
+      },
+      "limits": [
+        "512 is neither a universal boundary for this task to begin reading video nor safety certification."
+      ],
+      "source_units": [
+        "U0314",
+        "U0315",
+        "U0316",
+        "U0322",
+        "U0323"
+      ],
+      "evidence": [
+        {
+          "source_id": "S053",
+          "link_indices": [
+            1
+          ],
+          "supports": "Prior results, AdultContent category or 512, and NSFW-exclusion logic"
+        }
+      ],
+      "related_unknowns": [
+        "Q33",
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-107",
+      "title": "LeadingFrames uses 30 seconds, the first ten seconds, and 512 for different purposes",
+      "kind": "code",
+      "conclusion": "In LeadingFrames, 30 seconds governs video eligibility; after qualification, the video or broadcast is configured to clip its first 10 seconds, then proceeds to content classification, policy, and cross-validation. 512 determines whether that step still requires a prior AdultContent category.",
+      "conditions": [
+        "The long video or eligible broadcast has passed the complete filter"
+      ],
+      "practical_meaning": "State the unit, subject, and step whenever mentioning a number in review, to avoid confusing video length, clip length, and fav.",
+      "check": {
+        "when": "Copy lists 30 seconds, 10 seconds, and 512 together",
+        "needed": [
+          "Media eligibility",
+          "Clipping configuration",
+          "The category and fav branch"
+        ],
+        "verify": [
+          "Whether 'the first ten seconds' is misrepresented as a requirement that the entire video be only ten seconds",
+          "Whether 512 is described as views",
+          "Whether subsequent classification is retained"
+        ],
+        "if_missing": "Restate the three steps separately instead of combining them into one traffic threshold."
+      },
+      "limits": [
+        "The first-ten-seconds clip is this task's input; it does not establish that the entire safety system sees only that same segment."
+      ],
+      "source_units": [
+        "U0322",
+        "U0323"
+      ],
+      "evidence": [
+        {
+          "source_id": "S053",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Definitions of the three numbers, clipping settings, and the subsequent plan"
+        }
+      ],
+      "related_unknowns": [
+        "Q33",
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-108",
+      "title": "Subsequent adult-content assessment includes model cross-validation",
+      "kind": "code",
+      "conclusion": "The relevant plans include cross-validation between PTOS and another sex-and-nudity model; disagreements enter an additional adjudication process, so one model output does not determine the final label.",
+      "conditions": [
+        "The relevant leading-frame or special-video plan actually runs",
+        "Subsequent inputs and model results are available"
+      ],
+      "practical_meaning": "Retain the multiple models and disagreement handling when explaining safety enforcement; do not treat a single classification step as the final result.",
+      "check": {
+        "when": "The draft infers that a particular frame necessarily causes a label",
+        "needed": [
+          "Plan dependencies",
+          "PTOS results",
+          "The other model's results",
+          "Disagreement adjudication"
+        ],
+        "verify": [
+          "Whether cross-validation and the final result have been traced",
+          "Whether task eligibility is treated as a model verdict"
+        ],
+        "if_missing": "Describe only the checking process; the specific decision is unknown."
+      },
+      "limits": [
+        "Actual prompts, reference material, error rates, and real inputs and outputs are not all public."
+      ],
+      "source_units": [
+        "U0324"
+      ],
+      "evidence": [
+        {
+          "source_id": "S053",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "Task dependencies and cross-validation between PTOS and safemodel"
+        }
+      ],
+      "related_unknowns": [
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-109",
+      "title": "Special-video cross-validation may convert a hard category to soft",
+      "kind": "code",
+      "conclusion": "Some special-video tasks switch to soft handling when cross-validation fails or does not support the hard category; the labels ultimately written depend on the retained policy classification.",
+      "conditions": [
+        "Only the special-task branches checked in the original report",
+        "Determined by the specific cross-validation results and policy"
+      ],
+      "practical_meaning": "Do not infer a final hard label from cumulative likes or one initial decision; examine the classification actually used by the writer.",
+      "check": {
+        "when": "The draft directly equates a safety-task hit with a fixed label",
+        "needed": [
+          "Cross-validation output",
+          "hard/soft handling",
+          "The finally retained policy",
+          "The sink"
+        ],
+        "verify": [
+          "Whether a fallback exists",
+          "Which classification the writer actually consumes"
+        ],
+        "if_missing": "Retain the possibility of soft handling; label outcomes require actual records."
+      },
+      "limits": [
+        "Fallbacks in some branches cannot be generalized into a universal exemption across all safety tasks."
+      ],
+      "source_units": [
+        "U0324"
+      ],
+      "evidence": [
+        {
+          "source_id": "S053",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "Soft write-back and handling from final classification to labels"
+        }
+      ],
+      "related_unknowns": [
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-110",
+      "title": "Three safety-task types use different Kafka entry points and 60-second deduplication",
+      "kind": "code",
+      "conclusion": "The SpecialVideo, leading-frame, and MediaInjected plans receive tasks through different Kafka topics, with a separate 60-second deduplication cache; the generator and filter describe processing after task receipt.",
+      "conditions": [
+        "The entry points and deduplication implementation checked in the report",
+        "Not the complete event-production schedule"
+      ],
+      "practical_meaning": "Check task sources and deduplication before explaining triggers; do not treat every public like as an event guaranteed to arrive.",
+      "check": {
+        "when": "The draft describes an immediate safety-check trigger at 64 or 512",
+        "needed": [
+          "The Kafka generator",
+          "Task filtering",
+          "The deduplication cache",
+          "Event records"
+        ],
+        "verify": [
+          "Whether a corresponding topic exists",
+          "Whether the event may be deduplicated",
+          "Whether it is incorrectly called fully real time"
+        ],
+        "if_missing": "Explain only the consumer-side path and list production-delivery timing as unresolved."
+      },
+      "limits": [
+        "The deduplication interval does not guarantee a fixed moderation delay or exposure-recovery time."
+      ],
+      "source_units": [
+        "U0325"
+      ],
+      "evidence": [
+        {
+          "source_id": "S051",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "The three plan entry points and 60-second deduplication for the relevant tasks"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q33"
+      ]
+    },
+    {
+      "id": "K03-111",
+      "title": "Crossing the 64th or 512th like does not guarantee a producer sends a task",
+      "kind": "unknown",
+      "conclusion": "The public generator and filter do not fully establish that every video necessarily receives a production event at exactly its 64th or 512th like, nor that fav data at each step matches the public interface in real time.",
+      "conditions": [
+        "The observed logic is consumer-side filtering",
+        "Complete event production, delivery, and count synchronization are missing"
+      ],
+      "practical_meaning": "Do not treat public like counts as a moderation progress bar; individual cases require event, count, and task-completion records.",
+      "check": {
+        "when": "A video's likes stall near a threshold, or the draft claims one check is guaranteed",
+        "needed": [
+          "The production event schedule",
+          "Delivery and deduplication records",
+          "Count synchronization",
+          "Task-success status"
+        ],
+        "verify": [
+          "Whether guaranteed delivery for each item is established",
+          "Whether internal fav equals the contemporaneous public value",
+          "Whether the check completed"
+        ],
+        "if_missing": "Explain that triggering or blocking cannot be determined solely from public numbers."
+      },
+      "limits": [
+        "Lack of proof of a guaranteed check also does not mean production checks do not exist."
+      ],
+      "source_units": [
+        "U0325"
+      ],
+      "evidence": [
+        {
+          "source_id": "S051",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "Visible consumer and deduplication boundaries"
+        },
+        {
+          "source_id": "S052",
+          "link_indices": [
+            4
+          ],
+          "supports": "MediaInjected execution dependencies"
+        },
+        {
+          "source_id": "S053",
+          "link_indices": [
+            2
+          ],
+          "supports": "LeadingFrames plan dependencies"
+        }
+      ],
+      "related_unknowns": [
+        "Q33"
+      ]
+    },
+    {
+      "id": "K03-112",
+      "title": "64 and 512 are fav-based safety conditions, not two traffic-test rounds",
+      "kind": "myth",
+      "conclusion": "These thresholds read fav counts, not view counts or dwell predictions; they adjust safety-task eligibility or method and cannot establish that 'passing 64 likes certifies safety,' 'the next batch of exposure arrives only after 512,' or 'stalling at a number necessarily means the safety system blocked it.'",
+      "conditions": [
+        "The specific tasks and public defaults differ"
+      ],
+      "practical_meaning": "Annotate each task, field, and role in review, and remove wording that turns safety checks into a traffic-progression table.",
+      "check": {
+        "when": "The draft interprets 64 and 512 as exposure stages or proof of safety",
+        "needed": [
+          "The specific filter",
+          "The fav field",
+          "Subsequent inference and writing",
+          "Actual exposure data"
+        ],
+        "verify": [
+          "Whether views, fav, and dwell are mixed",
+          "Whether passing a threshold is treated as a conclusion",
+          "Whether distribution throttling is diagnosed from numbers"
+        ],
+        "if_missing": "Rewrite them as conditions of named tasks, leaving unverifiable causes of individual cases unknown."
+      },
+      "limits": [
+        "The same number in Article media fetching and video safety tasks is also not the same threshold."
+      ],
+      "source_units": [
+        "U0314",
+        "U0326"
+      ],
+      "evidence": [
+        {
+          "source_id": "S051",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "SpecialVideo fav and screen"
+        },
+        {
+          "source_id": "S052",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The different roles of 64 and 512 in MediaInjected"
+        },
+        {
+          "source_id": "S053",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "LeadingFrames' independent eligibility"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q33",
+        "Q34"
+      ]
+    },
+    {
+      "id": "K03-113",
+      "title": "Video review should examine the cover, body segments, and quoted material together",
+      "kind": "editorial",
+      "conclusion": "Editorial inference: video review should examine the cover, body segments, and quoted material together and confirm that sensitive-content labeling is appropriate; recommendation representations and safety tasks read content differently, so selection of limited media by one representation does not establish that the safety system sees only the same image or opening segment.",
+      "conditions": [
+        "Both Post media and quoted media may enter the relevant safety tasks",
+        "Labels are based on actual content"
+      ],
+      "practical_meaning": "Check every asset and its context, correcting misleading covers or missing labels rather than designing edits to evade checking.",
+      "check": {
+        "when": "Publishing or reviewing videos and quoted videos",
+        "needed": [
+          "The cover",
+          "The body video",
+          "Quoted material",
+          "Sensitive-content settings"
+        ],
+        "verify": [
+          "Whether every asset matches its description",
+          "Whether sensitive labeling suits the actual content",
+          "Whether a representation budget is misused to infer the scope of safety reading"
+        ],
+        "if_missing": "Complete the review using the actual visible material; do not declare unviewed segments safe."
+      },
+      "limits": [
+        "This is comprehensive review advice; unknown classification prompts do not support a clip duration guaranteed to be safe."
+      ],
+      "source_units": [
+        "U0327"
+      ],
+      "evidence": [
+        {
+          "source_id": "S051",
+          "link_indices": [
+            1,
+            2,
+            3
+          ],
+          "supports": "Post and quoted videos, the technique screen, and subsequent safety plans"
+        },
+        {
+          "source_id": "S052",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Quoted-video and reference-frame checks"
+        },
+        {
+          "source_id": "S053",
+          "link_indices": [
+            1,
+            2
+          ],
+          "supports": "Media scope and plan of the leading-frame task; the review advice is an inference"
+        }
+      ],
+      "related_unknowns": [
+        "Q34",
+        "Q47"
+      ]
+    }
+  ]
+}

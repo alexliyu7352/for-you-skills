@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Before Publishing"
+  short_description: "Review an X draft with specific edits and evidence"
+  default_prompt: "Use $x-publish-checklist to review this X draft before publishing."

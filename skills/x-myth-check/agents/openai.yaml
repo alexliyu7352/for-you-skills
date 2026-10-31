@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check X Claims"
+  short_description: "Verify X algorithm claims against original sources"
+  default_prompt: "Use $x-myth-check to check whether this X algorithm claim is supported."

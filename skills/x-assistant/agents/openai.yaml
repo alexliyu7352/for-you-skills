@@ -1,0 +1,4 @@
+interface:
+  display_name: "X Assistant"
+  short_description: "Route X questions and creator tasks with evidence"
+  default_prompt: "Use $x-assistant to help me decide what to publish on X."

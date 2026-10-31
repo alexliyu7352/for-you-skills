@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagnose X Reach"
+  short_description: "Investigate X exposure patterns with scoped evidence"
+  default_prompt: "Use $x-reach-diagnosis to help diagnose this X exposure pattern."
