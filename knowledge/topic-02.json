@@ -1,0 +1,4325 @@
+{
+  "topic": "Reader matching, reading-related retrieval and dwell modeling, like indexes, bookmarks, follow relationships, profiles, and negative feedback",
+  "claims": [
+    {
+      "id": "K02-001",
+      "title": "Phoenix retrieval reads the current reader's behavior history",
+      "kind": "code",
+      "conclusion": "Retrieval hydration passes query.user_id, obtains the current reader's behavior sequence, and sends it to the Phoenix retrieval service; candidate selection can differ by reader before display.",
+      "conditions": [
+        "The Phoenix source and behavior-sequence path in the fixed version examined are enabled."
+      ],
+      "practical_meaning": "When explaining reader matching, describe how the system first finds candidates for the reader; readers of pricing and client communication content may receive different candidates from camera-review readers. This is a hypothetical illustration.",
+      "check": {
+        "when": "When a draft claims everyone initially receives the same content for testing, or explains how unfamiliar readers encounter a post.",
+        "needed": [
+          "The specific retrieval path",
+          "The reader identity and sequence for the current request"
+        ],
+        "verify": [
+          "Distinguish the reader user_id from author identity",
+          "Label the pricing/camera scenario as a personalization example, not a two-account experiment"
+        ],
+        "if_missing": "Only state that the public mechanism permits personalized retrieval; a particular display cannot be reconstructed."
+      },
+      "limits": [
+        "No actual account request logs or two-account controlled experiment are available."
+      ],
+      "source_units": [
+        "U0124",
+        "U0125"
+      ],
+      "evidence": [
+        {
+          "source_id": "S031",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "query.user_id, behavior-sequence reading, and retrieval requests"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-002",
+      "title": "Candidate representations include both the author and post content",
+      "kind": "code",
+      "conclusion": "The public candidate model combines author and post-content representations; the official explanation says a post's semantic ID comes from a multimodal representation, paired with a hashed author ID.",
+      "conditions": [
+        "Limited to the examined Phoenix two-tower candidate representation and corresponding public explanation."
+      ],
+      "practical_meaning": "Topic choice and content provide matching cues, and author information is also an input; check whether the article's audience, problem, and material are clear.",
+      "check": {
+        "when": "When explaining what the system can see or asserting that author identity is wholly irrelevant.",
+        "needed": [
+          "Model version",
+          "Candidate input fields"
+        ],
+        "verify": [
+          "List content and author representations separately",
+          "Do not infer a fixed keyword bonus from the existence of an input"
+        ],
+        "if_missing": "Retain facts about inputs without quantifying matching strength or final effects."
+      },
+      "limits": [
+        "Representations are not fixed manually assigned labels; independent exposure effects for each field are not provided."
+      ],
+      "source_units": [
+        "U0125"
+      ],
+      "evidence": [
+        {
+          "source_id": "S031",
+          "link_indices": [
+            2
+          ],
+          "supports": "Candidate representation combines author and content"
+        },
+        {
+          "source_id": "S031",
+          "link_indices": [
+            3
+          ],
+          "supports": "Official explanation of multimodal semantic IDs and hashed author IDs"
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-003",
+      "title": "An author's own browsing does not specify the audience for future posts",
+      "kind": "myth",
+      "conclusion": "This path reads the current reader's history. An author repeatedly reading and liking technology posts can influence subsequent content they receive as a reader, but this code does not prove their future posts will consequently target technology readers; author information remains an input, so author history cannot be declared wholly irrelevant either.",
+      "conditions": [
+        "The comparison concerns the examined retrieval path, not all author features across the system."
+      ],
+      "practical_meaning": "Do not treat browsing a topic to \"warm up\" an account as a proven post-targeting method; first articulate the target readers' problem.",
+      "check": {
+        "when": "When a draft recommends training the audience for future articles through one's own likes or browsing.",
+        "needed": [
+          "The claimed target of the effect",
+          "Corresponding author features or causal experiments"
+        ],
+        "verify": [
+          "Confirm whose history the code reads",
+          "Check for independent evidence linking author browsing to the audience for their posts"
+        ],
+        "if_missing": "Explain that this path establishes reader personalization only and does not support that targeting promise."
+      },
+      "limits": [
+        "It has not been established that all author history has no effect on every model."
+      ],
+      "source_units": [
+        "U0126"
+      ],
+      "evidence": [
+        {
+          "source_id": "S031",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Reader sequences and author representations are separate inputs, limiting supported inferences"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-004",
+      "title": "Ground titles in readers' problems and tasks",
+      "kind": "editorial",
+      "conclusion": "Broad topics can become actionable questions: turn \"Essential lessons for freelancers\" into \"How to reduce the scope of delivery when a quote is considered too expensive,\" and \"AI has improved again\" into \"How to verify a meeting summary that omits veto conditions.\" This is writing guidance inspired by content matching.",
+      "conditions": [
+        "Applies to drafts whose body contains the corresponding methods, cases, or evidence."
+      ],
+      "practical_meaning": "Constrain the body with a clear audience and task, and deliver the material promised by the title.",
+      "check": {
+        "when": "When reviewing a broad title or a body whose audience is hard to define.",
+        "needed": [
+          "The title",
+          "What target readers are trying to do",
+          "Material the body can provide"
+        ],
+        "verify": [
+          "Identify the specific problem, audience, and task",
+          "Check that the body actually answers the title"
+        ],
+        "if_missing": "Identify missing tasks or material first; do not impose a title template without a basis."
+      },
+      "limits": [
+        "This is not a validated algorithmic title formula, and no fixed wording guarantees exposure."
+      ],
+      "source_units": [
+        "U0127"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-005",
+      "title": "Understand topic consistency through reader tasks; no fixed purity formula was found",
+      "kind": "myth",
+      "conclusion": "Writing about quotes and then additional revisions may still serve the same readers; the examined paths yielded no formula requiring 80% same-topic content, a fixed number of hashtags, or an account reset after one topic change. Language being a possible model feature also does not imply a fixed penalty for mixing Chinese and English.",
+      "conditions": [
+        "\"Not found\" is limited to paths examined in the report."
+      ],
+      "practical_meaning": "Checking whether topics serve the same needs is more useful than restricting yourself to unverified topic ratios; choose language first for reader comprehension.",
+      "check": {
+        "when": "When a draft proposes topic purity, fixed hashtag counts, topic-change resets, or penalties for mixing Chinese and English.",
+        "needed": [
+          "The specific source of the claimed formula",
+          "Reader tasks served by the account's topics"
+        ],
+        "verify": [
+          "Do not jump from the existence of content representations to a fixed ratio",
+          "Separate language features from fixed penalties",
+          "Check for adjacent needs within the same audience"
+        ],
+        "if_missing": "Mark these numbers or penalty claims as unverified; do not supply invented algorithm rules."
+      },
+      "limits": [
+        "Adjacent citations support matching mechanisms; they do not directly establish the absence of topic or language rules in every platform path."
+      ],
+      "source_units": [
+        "U0128"
+      ],
+      "evidence": [
+        {
+          "source_id": "S031",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "Defines the evidentiary limits of reader-content matching; it cannot establish topic-purity or language-penalty formulas"
+        }
+      ],
+      "related_unknowns": [
+        "Q43"
+      ]
+    },
+    {
+      "id": "K02-006",
+      "title": "The official reading-related Phoenix retrieval update is dated October 13, 2026",
+      "kind": "official",
+      "conclusion": "The official update notes date Phoenix learning to find posts people will keep reading to October 13, 2026; few comments do not mean reading-related signals are absent.",
+      "conditions": [
+        "Paraphrase the official explanation accurately without replacing its wording with a verified client-event definition."
+      ],
+      "practical_meaning": "When analyzing tutorials or reference posts, consider the value of actual reading alongside replies.",
+      "check": {
+        "when": "When a draft claims the system only considers likes and comments, or describes this retrieval update.",
+        "needed": [
+          "The official update entry",
+          "The intended date convention"
+        ],
+        "verify": [
+          "State the official feature date",
+          "Distinguish the product wording \"read to the end\" from a complete event definition"
+        ],
+        "if_missing": "Describe the official update without adding a specific completion threshold or full-rollout time."
+      },
+      "limits": [
+        "The official wording does not disclose complete collection and attribution rules for each reading event."
+      ],
+      "source_units": [
+        "U0129"
+      ],
+      "evidence": [
+        {
+          "source_id": "S032",
+          "link_indices": [
+            0
+          ],
+          "supports": "Official October 13 explanation of reading-related retrieval"
+        }
+      ],
+      "related_unknowns": [
+        "Q07",
+        "Q13",
+        "Q14"
+      ]
+    },
+    {
+      "id": "K02-007",
+      "title": "The positive action for ld is CLIENT_TWEET_RECAP_DWELLED",
+      "kind": "code",
+      "conclusion": "The named two-tower configuration includes ld_positive_actions: [CLIENT_TWEET_RECAP_DWELLED]; ld is a retrieval head alongside existing heads and uses action flags already generated.",
+      "conditions": [
+        "Limited to cases where the named configuration actually enables ld."
+      ],
+      "practical_meaning": "When explaining how reading can help find candidates, identify this event and head; reading need not be subsumed under comments and likes.",
+      "check": {
+        "when": "When checking the ld positive-action name or describing it as the model verifying every word of the full text.",
+        "needed": [
+          "The named configuration",
+          "The positive-action list",
+          "Action-reading code"
+        ],
+        "verify": [
+          "Retain the complete event name",
+          "Confirm the model receives a flag rather than measuring full-text progress here"
+        ],
+        "if_missing": "State only that a dwell-related event is a positive example; do not add frontend generation rules."
+      },
+      "limits": [
+        "The event name does not mean 100% completion of the text and is not CLICK_DWELL_TIME."
+      ],
+      "source_units": [
+        "U0130",
+        "U0131",
+        "U0132",
+        "U0143",
+        "U0155"
+      ],
+      "evidence": [
+        {
+          "source_id": "S032",
+          "link_indices": [
+            1,
+            2
+          ],
+          "supports": "ld positive actions and named-configuration registration"
+        },
+        {
+          "source_id": "S033",
+          "link_indices": [
+            9
+          ],
+          "supports": "The model reads existing action flags"
+        }
+      ],
+      "related_unknowns": [
+        "Q07",
+        "Q13",
+        "Q14"
+      ]
+    },
+    {
+      "id": "K02-008",
+      "title": "ld has a training path calculating loss from each head's positive and negative examples",
+      "kind": "code",
+      "conclusion": "The public model calculates training loss from each head's positive and negative examples; ld is more than an idea in a comment. Reading-related positive examples help the model learn which candidates to retrieve.",
+      "conditions": [
+        "The training configuration includes ld, and training samples contain the corresponding action flags."
+      ],
+      "practical_meaning": "Distinguish \"reading used to train retrieval\" from \"engagement directly adding points to a post\"; training effects require separate model or experimental evidence.",
+      "check": {
+        "when": "When explaining the learning stage of reading-related retrieval.",
+        "needed": [
+          "Head configuration",
+          "Training actions and loss calls"
+        ],
+        "verify": [
+          "Check whether ld is registered",
+          "Explain that training loss affects model learning rather than awarding the author points per event"
+        ],
+        "if_missing": "Confirm only the public training capability; do not claim every production model uses it."
+      },
+      "limits": [
+        "A mapping of all production checkpoints to training configurations is not provided."
+      ],
+      "source_units": [
+        "U0130",
+        "U0132",
+        "U0138"
+      ],
+      "evidence": [
+        {
+          "source_id": "S033",
+          "link_indices": [
+            5,
+            6,
+            7
+          ],
+          "supports": "ld configuration and per-head positive/negative training loss"
+        }
+      ],
+      "related_unknowns": [
+        "Q14",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-009",
+      "title": "ld has an inference head weight and a service invocation path",
+      "kind": "code",
+      "conclusion": "Public inference uses retrieval head weights, and the service invokes the corresponding model; reading-related signals can therefore contribute to candidate retrieval scores. Ranking has separate dwell targets, so metrics and weights from the two stages must not be conflated.",
+      "conditions": [
+        "The actual request selects a model configuration containing ld."
+      ],
+      "practical_meaning": "When answering whether reading affects only later ranking, explain that it can also enter retrieval while preserving path and target names.",
+      "check": {
+        "when": "When a draft groups all reading signals into one final bonus.",
+        "needed": [
+          "Retrieval configuration",
+          "Ranking targets",
+          "Actual service selection"
+        ],
+        "verify": [
+          "Identify retrieval and ranking separately",
+          "Do not interpret the ld weight as points per reading event"
+        ],
+        "if_missing": "Describe the two visible paths separately without treating the production mapping as fully known."
+      },
+      "limits": [
+        "A named service capability does not prove all requests use it simultaneously."
+      ],
+      "source_units": [
+        "U0130",
+        "U0132",
+        "U0138"
+      ],
+      "evidence": [
+        {
+          "source_id": "S032",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "Inference uses head weights and the service invokes the model"
+        },
+        {
+          "source_id": "S013",
+          "link_indices": [
+            1,
+            5,
+            6
+          ],
+          "supports": "Separate CREAD training and time-output paths in the ranking model"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q14"
+      ]
+    },
+    {
+      "id": "K02-010",
+      "title": "The complete reading-completion definition of the ld client event remains untraced in public evidence",
+      "kind": "unknown",
+      "conclusion": "The model reads the CLIENT_TWEET_RECAP_DWELLED flag; the report did not find complete frontend generation rules and cannot confirm whether or how visibility, word count, scrolling, expansion, and dwell are combined. It cannot be defined as 100% full-text completion or a fixed ten seconds.",
+      "conditions": [
+        "This describes a gap in the report's evidence."
+      ],
+      "practical_meaning": "Improve the opening promise and the body's delivery, but do not invent a rule that forcing 100% reading guarantees a second distribution.",
+      "check": {
+        "when": "When a draft describes the ld event as a precise completion rate, ten-second reading, or mandatory redistribution.",
+        "needed": [
+          "Complete client-event rules",
+          "The mapping from reading progress to the event",
+          "Production request configuration"
+        ],
+        "verify": [
+          "Separate the known flag from unknown generation conditions",
+          "Do not transfer the CLICK_DWELL_TIME threshold to ld"
+        ],
+        "if_missing": "Use \"dwell/reading-related positive example\" and state that the completion definition is unconfirmed."
+      },
+      "limits": [
+        "An unknown definition does not mean the event is useless or necessarily unrelated to completion."
+      ],
+      "source_units": [
+        "U0132",
+        "U0143",
+        "U0155"
+      ],
+      "evidence": [
+        {
+          "source_id": "S033",
+          "link_indices": [
+            9
+          ],
+          "supports": "Available evidence stops at reading action flags"
+        },
+        {
+          "source_id": "S014",
+          "link_indices": [
+            1,
+            5
+          ],
+          "supports": "The click-dwell binary target and ld have separate definitions; thresholds cannot be transferred"
+        }
+      ],
+      "related_unknowns": [
+        "Q07",
+        "Q13"
+      ]
+    },
+    {
+      "id": "K02-011",
+      "title": "For reference posts with few replies, first check usability",
+      "kind": "editorial",
+      "conclusion": "Readers may finish tutorials, reports, and reference comparisons and use them directly; with few replies, first check whether tables answer the question, steps can be followed, and exceptions are explained, without immediately turning the post into an argument or repeatedly teasing a later payoff.",
+      "conditions": [
+        "This is editing advice, not an inference about a particular post's actual reading performance."
+      ],
+      "practical_meaning": "Assess quiet content by how well it helps complete a task, rather than pursuing reply counts alone.",
+      "check": {
+        "when": "When reviewing tutorials, reports, or actionable reference material and worrying about few comments.",
+        "needed": [
+          "The reader's task",
+          "Tables, steps, and exceptions",
+          "Visible feedback"
+        ],
+        "verify": [
+          "Can the material be used to complete the task?",
+          "Are there empty sentences delaying the answer?"
+        ],
+        "if_missing": "Identify missing material; do not invent dwell, bookmark, or hidden distribution performance."
+      },
+      "limits": [
+        "Few replies alone do not prove strong reading; traffic effects of improved usability still require observation."
+      ],
+      "source_units": [
+        "U0133"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-012",
+      "title": "The October 8 named two-tower configuration did not yet contain ld",
+      "kind": "code",
+      "conclusion": "In the October 8, 2026 public snapshot 35650fb, the examined named two-tower configuration had only home and immersive heads, without ld.",
+      "conditions": [
+        "Limited to the specified snapshot and named configuration."
+      ],
+      "practical_meaning": "Use the prior version as a checkable comparison when dating ld's public addition.",
+      "check": {
+        "when": "When a draft says ld was already a head in this configuration.",
+        "needed": [
+          "The fixed commit",
+          "Configuration location"
+        ],
+        "verify": [
+          "Compare head lists",
+          "Do not interpret ld's absence from a local configuration as the entire system previously having no reading signals"
+        ],
+        "if_missing": "Retain the boundary of the examined snapshot; do not speculate about earlier private versions."
+      },
+      "limits": [
+        "This is not the starting point for all models or all historical reading mechanisms."
+      ],
+      "source_units": [
+        "U0134",
+        "U0135",
+        "U0136"
+      ],
+      "evidence": [
+        {
+          "source_id": "S033",
+          "link_indices": [
+            4
+          ],
+          "supports": "Head list in the October 8 snapshot"
+        }
+      ],
+      "related_unknowns": [
+        "Q14"
+      ]
+    },
+    {
+      "id": "K02-013",
+      "title": "The October 13 public commit added ld configuration and model handling",
+      "kind": "code",
+      "conclusion": "At 08:05:54 UTC on October 13, 2026, public commit e1a0375 added ld_positive_actions, the ld head, and w_ld=0.75; corresponding model handling was added in the same commit.",
+      "conditions": [
+        "The date is the public commit timestamp, in UTC."
+      ],
+      "practical_meaning": "Record \"addition to public code\" separately from \"changes in an individual's traffic on a particular day.\"",
+      "check": {
+        "when": "When review requires establishing when ld appeared in public code.",
+        "needed": [
+          "Commit SHA",
+          "Commit timestamp and timezone",
+          "Configuration and model diffs"
+        ],
+        "verify": [
+          "Specify the public-commit date convention fully",
+          "Confirm the files changed in the same commit"
+        ],
+        "if_missing": "List only verified public timestamps; do not fill in a full-deployment time."
+      },
+      "limits": [
+        "The commit time is not when all production traffic switched."
+      ],
+      "source_units": [
+        "U0135",
+        "U0136",
+        "U0137"
+      ],
+      "evidence": [
+        {
+          "source_id": "S033",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "The commit, date, and public configuration adding ld"
+        }
+      ],
+      "related_unknowns": [
+        "Q14"
+      ]
+    },
+    {
+      "id": "K02-014",
+      "title": "The October 28 README addition recorded the October 13 update",
+      "kind": "official",
+      "conclusion": "The README in public commit 5ed7963 on October 28, 2026 added an explanation labeling reading-related retrieval as an October 13 update; the documentation addition and labeled feature date are separate dates.",
+      "conditions": [
+        "Distinguish the date written in the README from its public commit date."
+      ],
+      "practical_meaning": "When comparing different online \"update dates,\" first distinguish feature dates from documentation dates.",
+      "check": {
+        "when": "When a draft treats the October 28 README addition as ld's first appearance.",
+        "needed": [
+          "README history",
+          "Labeled feature date",
+          "Public commit date"
+        ],
+        "verify": [
+          "List the two dates separately",
+          "Match them to the October 13 code commit"
+        ],
+        "if_missing": "Report both public timestamps without substituting either for deployment records."
+      },
+      "limits": [
+        "No common switch time for all production cohorts is provided."
+      ],
+      "source_units": [
+        "U0135",
+        "U0136",
+        "U0137"
+      ],
+      "evidence": [
+        {
+          "source_id": "S033",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The feature date in the README and the commit adding it"
+        }
+      ],
+      "related_unknowns": [
+        "Q01",
+        "Q14"
+      ]
+    },
+    {
+      "id": "K02-015",
+      "title": "ld production coverage and its causal effect on traffic remain unknown",
+      "kind": "unknown",
+      "conclusion": "Public commits and the README do not list every production cluster, checkpoint, experiment cohort, or enablement time; a change in views on one day alone cannot establish the ld update as its cause.",
+      "conditions": [
+        "When explaining a specific account, date, or production coverage."
+      ],
+      "practical_meaning": "Treat the update as a hypothesis to test while retaining differences in content, audience, and other configurations.",
+      "check": {
+        "when": "When a draft claims ld was enabled for everyone that day or attributes traffic changes to it.",
+        "needed": [
+          "Per-request model and configuration",
+          "Experiment cohorts",
+          "Deployment and checkpoint records",
+          "Comparable traffic observations"
+        ],
+        "verify": [
+          "Separate public code existence from actual enablement",
+          "Calendar correlation does not replace causal comparison"
+        ],
+        "if_missing": "Mark production coverage and causal effects as unverified; give no universal rollout guarantee."
+      },
+      "limits": [
+        "Missing production mappings do not prove it was not deployed."
+      ],
+      "source_units": [
+        "U0137",
+        "U0138",
+        "U0142"
+      ],
+      "evidence": [
+        {
+          "source_id": "S033",
+          "link_indices": [
+            0,
+            1,
+            2,
+            5,
+            6,
+            10
+          ],
+          "supports": "Public dates, named configurations, and differences from generic settings define the visible evidence boundary"
+        }
+      ],
+      "related_unknowns": [
+        "Q14",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-016",
+      "title": "combined and home-only can both contain ld; 0.75 is a retrieval head weight",
+      "kind": "code",
+      "conclusion": "The named combined configuration has head_names=[home, immersive, ld] and w_ld=0.75; the named home-only version retains home and ld. Generic model settings have w_ld=0.0; inclusion of ld depends on the actual configuration. 0.75 does not mean each reading adds 0.75 points to a post.",
+      "conditions": [
+        "State the difference between named configurations and generic model settings."
+      ],
+      "practical_meaning": "When citing a weight, specify its retrieval head and configuration so that a model coefficient is not turned into creator points.",
+      "check": {
+        "when": "When a draft says \"each reading adds 0.75\" or \"all requests use 0.75.\"",
+        "needed": [
+          "Configuration name",
+          "head_names",
+          "w_ld",
+          "Actual inference configuration"
+        ],
+        "verify": [
+          "Verify that the configuration contains ld",
+          "Explain that the weight applies to a head, not a count of completed actions"
+        ],
+        "if_missing": "Refer to the named public configuration; leave actual request values for verification."
+      },
+      "limits": [
+        "Training heads and inference weights do not provide a conversion to exposure."
+      ],
+      "source_units": [
+        "U0138",
+        "U0140",
+        "U0141",
+        "U0142"
+      ],
+      "evidence": [
+        {
+          "source_id": "S033",
+          "link_indices": [
+            5,
+            6,
+            8,
+            10
+          ],
+          "supports": "Named configurations, generic defaults, and inference weight application"
+        }
+      ],
+      "related_unknowns": [
+        "Q14",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-017",
+      "title": "The ld configuration has no author-follower-count condition restricting it to small accounts",
+      "kind": "code",
+      "conclusion": "The examined ld configurations appear alongside home and immersive and include HOME, HOME_COLD, and HOME_HOT; these sections contain no author-follower-count condition restricting them to small accounts.",
+      "conditions": [
+        "Limited to these configuration sections; complete production eligibility is not known."
+      ],
+      "practical_meaning": "Neither small nor large authors should treat ld as a guaranteed entitlement exclusive to their follower scale.",
+      "check": {
+        "when": "When a draft says ld is only for small accounts or large accounts cannot receive reading-related retrieval.",
+        "needed": [
+          "Original code for the claimed small-account threshold",
+          "Named configuration",
+          "Actual deployment scope"
+        ],
+        "verify": [
+          "Look for explicit author follower-count fields and conditions",
+          "Do not treat the HOME_COLD name as evidence of follower scale"
+        ],
+        "if_missing": "State that the examined configuration lacks this condition; complete production coverage remains unknown."
+      },
+      "limits": [
+        "Absence of a follower condition does not imply enablement for all accounts and requests."
+      ],
+      "source_units": [
+        "U0138",
+        "U0139"
+      ],
+      "evidence": [
+        {
+          "source_id": "S033",
+          "link_indices": [
+            5,
+            6
+          ],
+          "supports": "Heads and HOME datasets in the named configurations"
+        }
+      ],
+      "related_unknowns": [
+        "Q14"
+      ]
+    },
+    {
+      "id": "K02-018",
+      "title": "HOME_COLD filters by post state; it does not mean a small-account section",
+      "kind": "code",
+      "conclusion": "Public HOME_COLD filtering reads post fav_count and view_count and adds a freshness condition; a post's cold state, an author's follower count, and sufficiency of a reader's history are different concepts. HOME_COLD and HOME_HOT split the same HOME source.",
+      "conditions": [
+        "Limited to the Home cold/hot split in RetrievalDataset."
+      ],
+      "practical_meaning": "When explaining \"cold,\" identify the post as its subject; do not conflate it with author or reader cold start.",
+      "check": {
+        "when": "When a draft calls HOME_COLD exclusive to small accounts, a one-like pool, or a section for users without history.",
+        "needed": [
+          "Cold-pool filter fields",
+          "Whether the subject is the post, author, or reader"
+        ],
+        "verify": [
+          "Retain the fav_count, view_count, and freshness conditions",
+          "Distinguish view_count_on_home used for author cold start"
+        ],
+        "if_missing": "Call it only a cold-post pool; do not supply unseen eligibility numbers."
+      },
+      "limits": [
+        "The name does not establish author follower scale or special exposure treatment."
+      ],
+      "source_units": [
+        "U0139",
+        "U0186"
+      ],
+      "evidence": [
+        {
+          "source_id": "S033",
+          "link_indices": [
+            11
+          ],
+          "supports": "Cold posts are filtered by likes, views, and freshness"
+        },
+        {
+          "source_id": "S034",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "HOME, HOME_COLD, and HOME_HOT share a source and are split from it"
+        }
+      ],
+      "related_unknowns": [
+        "Q14",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-019",
+      "title": "CLICK_DWELL_TIME is a binary target with a strict threshold of 10",
+      "kind": "code",
+      "conclusion": "In home_direct_packed, CLICK_DWELL_TIME is configured as binary with threshold=10.0; its label formula is gt_binary=(gt_raw.astype(float32)>threshold).astype(float32), and the output is the probability that the raw value exceeds the threshold.",
+      "conditions": [
+        "Limited to this named target; do not assume the threshold unit is seconds."
+      ],
+      "practical_meaning": "Describe \"the probability of crossing a numeric threshold,\" separately from CREAD time outputs and ld positive actions.",
+      "check": {
+        "when": "When explaining the click-dwell definition, threshold, or model output.",
+        "needed": [
+          "Configuration name",
+          "Target type",
+          "Evidence for upstream units",
+          "Output form"
+        ],
+        "verify": [
+          "Retain the strict greater-than sign",
+          "Separate raw values, binary labels, and predicted probabilities"
+        ],
+        "if_missing": "Confirm the threshold of 10 and probability output; leave units and attribution unknown."
+      },
+      "limits": [
+        "This is not a linear score per second viewed or a verified ten-second Article reading reward."
+      ],
+      "source_units": [
+        "U0144",
+        "U0155",
+        "U0157",
+        "U0158",
+        "U0159"
+      ],
+      "evidence": [
+        {
+          "source_id": "S055",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Named configuration, numeric threshold, and strict greater-than label function"
+        },
+        {
+          "source_id": "S056",
+          "link_indices": [
+            1
+          ],
+          "supports": "Binary outputs remain probabilities"
+        }
+      ],
+      "related_unknowns": [
+        "Q05",
+        "Q45"
+      ]
+    },
+    {
+      "id": "K02-020",
+      "title": "The official October 8 update mentions improved dwell prediction; the named configuration uses CREAD",
+      "kind": "official",
+      "conclusion": "The official October 8, 2026 update mentions improved dwell prediction; public home_direct_packed configuration uses CREAD to learn multiple time thresholds simultaneously and reconstruct a time value, unlike a single click-dwell binary classification.",
+      "conditions": [
+        "Attribute the official improvement statement and public method description separately."
+      ],
+      "practical_meaning": "Explain how the model distinguishes dwell durations without expanding \"better\" into an unprovided improvement percentage.",
+      "check": {
+        "when": "When a draft introduces CREAD or reduces all dwell to threshold 10.",
+        "needed": [
+          "Official explanation",
+          "Named configuration",
+          "Loss and decoding implementation"
+        ],
+        "verify": [
+          "List CREAD separately from CLICK_DWELL_TIME",
+          "Do not add accuracy or traffic improvement figures"
+        ],
+        "if_missing": "Describe the method without quantifying unprovided formal results."
+      },
+      "limits": [
+        "The official improvement wording is not a complete reproducible experiment."
+      ],
+      "source_units": [
+        "U0144",
+        "U0165"
+      ],
+      "evidence": [
+        {
+          "source_id": "S011",
+          "link_indices": [
+            2
+          ],
+          "supports": "Official October 8 update notes"
+        },
+        {
+          "source_id": "S013",
+          "link_indices": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "Named CREAD configuration, multi-threshold training, and decoding"
+        }
+      ],
+      "related_unknowns": [
+        "Q06"
+      ]
+    },
+    {
+      "id": "K02-021",
+      "title": "The non-Gallery CREAD head has 30 thresholds from 2 to 120 seconds",
+      "kind": "code",
+      "conclusion": "The public named non-Gallery dwell head sets 30 logarithmically spaced thresholds from 2 to 120 seconds; this is the head's time-modeling range.",
+      "conditions": [
+        "Limited to the examined non-Gallery head in home_direct_packed."
+      ],
+      "practical_meaning": "Explain the range over which this model distinguishes dwell duration; article length should still follow the material.",
+      "check": {
+        "when": "When a draft calls 120 seconds a full-text length limit or maximum recommended reading time.",
+        "needed": [
+          "Head name",
+          "norm_scale",
+          "Number of thresholds"
+        ],
+        "verify": [
+          "Confirm non-Gallery norm_scale=120.0",
+          "Distinguish the modeling range from posting eligibility"
+        ],
+        "if_missing": "State only the named head's range; do not generalize to all content or models."
+      },
+      "limits": [
+        "This is neither a word-count nor video-duration limit, nor does it guarantee reading beyond the range has no other effects."
+      ],
+      "source_units": [
+        "U0145",
+        "U0146",
+        "U0147",
+        "U0155",
+        "U0156"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "Non-Gallery range, threshold count, and logarithmic generation"
+        }
+      ],
+      "related_unknowns": [
+        "Q06",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-022",
+      "title": "The Gallery Page immersive CREAD head has 30 thresholds from 2 to 240 seconds",
+      "kind": "code",
+      "conclusion": "The public named Gallery Page immersive head extends from 2 to 240 seconds, also with 30 logarithmically spaced thresholds; its range differs from the non-Gallery head.",
+      "conditions": [
+        "Limited to the examined Gallery Page immersive CREAD head."
+      ],
+      "practical_meaning": "Use the corresponding head when discussing immersive dwell; neither 120 seconds nor the click threshold of 10 is a substitute.",
+      "check": {
+        "when": "When a draft gives all CREAD heads the same time range.",
+        "needed": [
+          "Page-to-head mapping",
+          "norm_scale",
+          "Configuration version"
+        ],
+        "verify": [
+          "Check norm_scale=240.0",
+          "Retain the 30 thresholds and page scope"
+        ],
+        "if_missing": "Identify the named configuration without claiming all immersive requests use it."
+      },
+      "limits": [
+        "240 seconds is not a recommendation eligibility or video-duration limit."
+      ],
+      "source_units": [
+        "U0145",
+        "U0146",
+        "U0147",
+        "U0155",
+        "U0156"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "Gallery Page immersive range and threshold generation"
+        }
+      ],
+      "related_unknowns": [
+        "Q06",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-023",
+      "title": "CREAD thresholds are logarithmically spaced",
+      "kind": "code",
+      "conclusion": "The 30 thresholds can be conceptually restated as t_k=2.0×(norm_scale/2.0)^(k/29), k=0…29; non-Gallery norm_scale=120.0, and Gallery Page=240.0. Gaps are smaller at shorter times and larger at longer times.",
+      "conditions": [
+        "This formula is the original text's conceptual restatement of the source, not verbatim source code."
+      ],
+      "practical_meaning": "Explain why the 30 questions are not equally spaced in seconds; worked examples must use the corresponding range.",
+      "check": {
+        "when": "When checking the threshold formula or a claim of uniform buckets.",
+        "needed": [
+          "30 thresholds",
+          "Starting point 2",
+          "The corresponding head's norm_scale"
+        ],
+        "verify": [
+          "Check the exponent denominator 29 and the range of k",
+          "Check that the first and last thresholds equal 2 and norm_scale"
+        ],
+        "if_missing": "Retain the conceptual formula without inventing a complete threshold table."
+      },
+      "limits": [
+        "The number of time intervals is not a reading count or total score."
+      ],
+      "source_units": [
+        "U0145",
+        "U0146",
+        "U0147"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "Range parameters and the logarithmic threshold-generation function"
+        }
+      ],
+      "related_unknowns": [
+        "Q06"
+      ]
+    },
+    {
+      "id": "K02-024",
+      "title": "CREAD multi-threshold labels use strict greater-than comparison",
+      "kind": "code",
+      "conclusion": "targets=(gt_raw[...,None]>threshold_arr).astype(float32). Observed time must exceed a threshold to receive label 1; equal or lower values receive 0. The model predicts the probability of exceeding each time threshold separately.",
+      "conditions": [
+        "Limited to CREAD label construction; the corresponding head configuration determines the time range."
+      ],
+      "practical_meaning": "Preserve equality boundaries in threshold explanations and examples; reaching and exceeding a threshold are different conditions.",
+      "check": {
+        "when": "When a draft gives an example where exactly reaching a threshold is a positive example.",
+        "needed": [
+          "Ground-truth value",
+          "Threshold array",
+          "Comparison operation"
+        ],
+        "verify": [
+          "Use > rather than >= for each threshold",
+          "Distinguish label values from model probabilities"
+        ],
+        "if_missing": "Explain the symbolic boundary; do not assign a specific label without a ground-truth value."
+      },
+      "limits": [
+        "These labels are training questions, not creator rewards for each threshold."
+      ],
+      "source_units": [
+        "U0146",
+        "U0147",
+        "U0148"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            4
+          ],
+          "supports": "Strict greater-than comparison in multi-threshold labels"
+        }
+      ],
+      "related_unknowns": [
+        "Q06"
+      ]
+    },
+    {
+      "id": "K02-025",
+      "title": "CREAD decoding reconstructs time by multiplying probabilities by time intervals",
+      "kind": "code",
+      "conclusion": "Decoding applies sigmoid to threshold logits to obtain phi, then computes deltas=[t1−0,t2−t1,…,t30−t29] and restored_time=Σ(phi_k×deltas_k). The preceding threshold for the first interval is 0, and interval widths differ.",
+      "conditions": [
+        "Use this head's ordered thresholds and corresponding logits."
+      ],
+      "practical_meaning": "Call the output reconstructed time; do not simply add 30 probabilities into 30 points or 30 effective readings.",
+      "check": {
+        "when": "When reviewing a CREAD decoding formula or time calculation.",
+        "needed": [
+          "Thresholds",
+          "Corresponding logits or probabilities",
+          "Intervals"
+        ],
+        "verify": [
+          "Start the first interval at 0",
+          "Multiply each probability by its corresponding time width before summing"
+        ],
+        "if_missing": "Explain the formula; without model outputs, do not fabricate a real post's predicted time."
+      },
+      "limits": [
+        "The output is predicted time, not proof a reader actually completed the full text."
+      ],
+      "source_units": [
+        "U0149",
+        "U0150",
+        "U0151"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            5
+          ],
+          "supports": "Sigmoid probabilities, adjacent-threshold intervals, and weighted time reconstruction"
+        }
+      ],
+      "related_unknowns": [
+        "Q06"
+      ]
+    },
+    {
+      "id": "K02-026",
+      "title": "A three-threshold example illustrates CREAD time-reconstruction multiplication",
+      "kind": "editorial",
+      "conclusion": "With illustrative thresholds of 2, 5, and 10 seconds and predicted probabilities of 0.8, 0.5, and 0.2, intervals are 2, 3, and 5 seconds, yielding 0.8×2+0.5×3+0.2×5=4.1 seconds. The actual named configuration has 30 thresholds.",
+      "conditions": [
+        "The three thresholds and probabilities are hypothetical teaching inputs."
+      ],
+      "practical_meaning": "Use a short example to explain contributions from different interval widths, clearly labeling it as unrelated to account results.",
+      "check": {
+        "when": "When using the original 4.1-second example or another CREAD numerical example.",
+        "needed": [
+          "Assumed thresholds and probabilities",
+          "Calculation steps"
+        ],
+        "verify": [
+          "Recalculate all intervals and products",
+          "Label three thresholds as demonstration only"
+        ],
+        "if_missing": "Do not treat example values as real model measurements."
+      },
+      "limits": [
+        "This does not run the actual model and is not a prediction for any post."
+      ],
+      "source_units": [
+        "U0152"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            5
+          ],
+          "supports": "Supports only the reconstruction algorithm; inputs and 4.1 seconds are explanatory arithmetic"
+        }
+      ],
+      "related_unknowns": [
+        "Q06"
+      ]
+    },
+    {
+      "id": "K02-027",
+      "title": "CREAD training compares both classification and reconstructed time",
+      "kind": "code",
+      "conclusion": "Besides multi-threshold binary classification loss, cread_loss_compute compares reconstructed time with actual dwell; ground truth is first clipped to the head's configured range before time-reconstruction loss is calculated.",
+      "conditions": [
+        "Actual training uses this CREAD loss."
+      ],
+      "practical_meaning": "Explain both learning objectives: answering threshold questions correctly and reconstructing time close to ground truth.",
+      "check": {
+        "when": "When a draft calls CREAD merely 30 independent classifiers or omits time-reconstruction training.",
+        "needed": [
+          "Head range",
+          "Loss function",
+          "Training call"
+        ],
+        "verify": [
+          "Confirm ground-truth clipping",
+          "Describe classification and reconstruction losses separately"
+        ],
+        "if_missing": "Retain both mechanisms without inferring training quality."
+      },
+      "limits": [
+        "Training objectives are not creator points or exposure promises."
+      ],
+      "source_units": [
+        "U0153"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            4,
+            6
+          ],
+          "supports": "Classification and time-reconstruction losses, ground-truth clipping, and training calls"
+        }
+      ],
+      "related_unknowns": [
+        "Q06"
+      ]
+    },
+    {
+      "id": "K02-028",
+      "title": "CREAD reconstruction uses Huber, a weight of 0.5, and a 5-second time setting",
+      "kind": "code",
+      "conclusion": "The examined named configuration selects Huber restoration loss with a relative reconstruction weight of 0.5 and a Huber time setting of 5 seconds.",
+      "conditions": [
+        "Limited to this named configuration; these are not universal constants for all models."
+      ],
+      "practical_meaning": "When citing 0.5 or 5 seconds, explain that they govern training-error handling, avoiding confusion with reading thresholds.",
+      "check": {
+        "when": "When a draft calls 5 seconds an effective-reading threshold or 0.5 a reward.",
+        "needed": [
+          "Restoration loss type",
+          "Relative weight",
+          "Huber time parameter"
+        ],
+        "verify": [
+          "Check the loss settings containing each number",
+          "Do not mix them with click-dwell 10 or retrieval w_ld"
+        ],
+        "if_missing": "Report only the examined training settings."
+      },
+      "limits": [
+        "5 seconds is not a qualifying reading threshold, and 0.5 is not a score per reading."
+      ],
+      "source_units": [
+        "U0153"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            2,
+            4
+          ],
+          "supports": "Named Huber settings and reconstruction-loss implementation"
+        }
+      ],
+      "related_unknowns": [
+        "Q06",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-029",
+      "title": "CREAD loss also uses valid-sample masks, negative masks, and weights",
+      "kind": "code",
+      "conclusion": "CREAD loss also depends on valid-sample masks, negative masks, and weights; classification and reconstruction coefficients alone cannot reconstruct all training contributions.",
+      "conditions": [
+        "Retain conditions determining whether samples are valid and included when explaining training."
+      ],
+      "practical_meaning": "Check sample conditions before interpreting a reading-loss formula; do not treat one number as every sample's uniform contribution.",
+      "check": {
+        "when": "When a draft gives a formula in which every reading produces identical loss or benefit.",
+        "needed": [
+          "Valid-sample conditions",
+          "Negative masks",
+          "Weights"
+        ],
+        "verify": [
+          "Check how masks apply to each term",
+          "Distinguish sample conditions from model predictions"
+        ],
+        "if_missing": "State only that these conditions participate; do not invent unprovided per-sample values."
+      },
+      "limits": [
+        "Static coefficients cannot reconstruct a particular training sample or exposure effect."
+      ],
+      "source_units": [
+        "U0153"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            4,
+            6
+          ],
+          "supports": "Masks, weights, and calls in loss calculation"
+        }
+      ],
+      "related_unknowns": [
+        "Q06"
+      ]
+    },
+    {
+      "id": "K02-030",
+      "title": "The two CREAD training weights are 0.1; older Tweedie and MAE weights are 0",
+      "kind": "code",
+      "conclusion": "In the public home_direct_packed base, dwell_cread_loss_weight and dwell_cread_immersive_loss_weight are both 0.1; dwell_tweedie_loss_weight and dwell_mae_loss_weight are both 0.",
+      "conditions": [
+        "Limited to the public home_direct_packed base configuration."
+      ],
+      "practical_meaning": "Identify which learning terms this configuration uses; do not treat 0.1 as a reading coefficient at the fusion stage.",
+      "check": {
+        "when": "When checking whether CREAD and older dwell losses are enabled.",
+        "needed": [
+          "The named base",
+          "The four loss_weight fields"
+        ],
+        "verify": [
+          "Retain every field name and value",
+          "Distinguish non-Gallery and immersive CREAD terms"
+        ],
+        "if_missing": "Report only the examined configuration; do not generalize to all checkpoints."
+      },
+      "limits": [
+        "A loss weight of 0 does not mean the whole system no longer uses similar information."
+      ],
+      "source_units": [
+        "U0154"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            1
+          ],
+          "supports": "Training-loss selection in the public base"
+        }
+      ],
+      "related_unknowns": [
+        "Q06",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-031",
+      "title": "CREAD training weights and Home Mixer's continuous-dwell 0.006 belong to different stages",
+      "kind": "code",
+      "conclusion": "CREAD loss_weight determines how the model learns; Home Mixer multiplies the continuous-dwell prediction by 0.006 to fuse predictions. They are not interchangeable and cannot directly calculate exposure growth.",
+      "conditions": [
+        "Specify the examined service, public configuration, and date; do not mix defaults."
+      ],
+      "practical_meaning": "When discussing numbers, identify training versus fusion first; calculating a fusion contribution also requires the corresponding prediction and other processing.",
+      "check": {
+        "when": "When a draft treats 0.1, 0.5, and 0.006 as the same kind of reading reward.",
+        "needed": [
+          "The coefficient's stage",
+          "Predicted value",
+          "Service and version"
+        ],
+        "verify": [
+          "Label training selection and fusion multipliers separately",
+          "Do not equate a single-term change with a final exposure change"
+        ],
+        "if_missing": "Explain the stage distinction without quantifying effects absent predictions or production data."
+      },
+      "limits": [
+        "Fusion scores also depend on other predictions, filters, candidate competition, and post-processing."
+      ],
+      "source_units": [
+        "U0154"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            1,
+            6
+          ],
+          "supports": "Training-loss weights and their use in training"
+        },
+        {
+          "source_id": "S015",
+          "link_indices": [
+            3,
+            6
+          ],
+          "supports": "Home Mixer continuous-dwell fusion coefficient 0.006"
+        }
+      ],
+      "related_unknowns": [
+        "Q03",
+        "Q06",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-032",
+      "title": "view_count_on_home is a Home impression count, not reading time",
+      "kind": "code",
+      "conclusion": "view_count_on_home is a Home impression count carried by the candidate and used for cold-start eligibility and exploration; fewer than 200 is one eligibility condition. It is separate from general view_count and is neither the public total view count nor a test quota of 200 unique readers.",
+      "conditions": [
+        "Limited to author cold-start eligibility; other conditions must also hold."
+      ],
+      "practical_meaning": "Do not interchange dwell metrics, impression counts, and unique-reader counts; public numbers cannot establish this eligibility.",
+      "check": {
+        "when": "When a draft calls 200 views a fixed test pool or reading-completion threshold.",
+        "needed": [
+          "Actual view_count_on_home",
+          "Other eligibility fields",
+          "Counting definition"
+        ],
+        "verify": [
+          "Confirm this is a Home count with comparison <200",
+          "Distinguish impression counts from people and time"
+        ],
+        "if_missing": "Do not substitute public total views for the Home field or guarantee 200 displays."
+      },
+      "limits": [
+        "Only eligibility covered in this scope is retained; complete cold-start conditions require separate checking."
+      ],
+      "source_units": [
+        "U0155",
+        "U0156"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            0,
+            3,
+            6
+          ],
+          "supports": "Home impression threshold, combined eligibility, and separation from general view count"
+        },
+        {
+          "source_id": "S036",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Context in which the count participates in exploration and selection"
+        }
+      ],
+      "related_unknowns": [
+        "Q08",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K02-033",
+      "title": "Home Mixer's public click_dwell_time fusion coefficient is 0.4",
+      "kind": "code",
+      "conclusion": "Public Home Mixer parameters give click_dwell_time a coefficient of 0.4, and the shared fusion function reads that prediction field; this weights a prediction, not each completed reading by 0.4 points.",
+      "conditions": [
+        "Limited to the examined public Home Mixer default; do not bridge the untraced adapter."
+      ],
+      "practical_meaning": "State this fusion parameter separately without automatically joining threshold 10 to a reward for each qualifying real event.",
+      "check": {
+        "when": "When a draft says \"watching ten seconds immediately adds 0.4\" or \"0.04 per second.\"",
+        "needed": [
+          "Service and version",
+          "Prediction field",
+          "Actual configuration"
+        ],
+        "verify": [
+          "Separate prediction coefficients from action counts",
+          "Do not fill unknown units and mappings into a complete formula"
+        ],
+        "if_missing": "Describe the coefficient and model head separately, retaining the mapping gap."
+      },
+      "limits": [
+        "A single coefficient cannot determine an article's total score or exposure."
+      ],
+      "source_units": [
+        "U0155",
+        "U0157"
+      ],
+      "evidence": [
+        {
+          "source_id": "S014",
+          "link_indices": [
+            0,
+            3
+          ],
+          "supports": "Public 0.4 coefficient and actual fusion field"
+        }
+      ],
+      "related_unknowns": [
+        "Q05",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-034",
+      "title": "The adapter from the click-dwell service output to Home Mixer's field remains untraced",
+      "kind": "unknown",
+      "conclusion": "The named CLICK_DWELL_TIME binary output can be traced to the service response, and Home Mixer reads click_dwell_time, but a complete public adapter converting the service value into that prediction field was not found. Facts at both ends do not establish verification of the entire production mapping.",
+      "conditions": [
+        "Limited to the report's bounded examination of public paths."
+      ],
+      "practical_meaning": "Separate the head definition, service output, adapter, and fusion when explaining scoring; do not invent an end-to-end calculation.",
+      "check": {
+        "when": "When a draft claims complete verification of the production formula from CLICK_DWELL_TIME to 0.4.",
+        "needed": [
+          "Complete adapter",
+          "Field mapping",
+          "Per-request model and configuration"
+        ],
+        "verify": [
+          "Check output fields, scaling, units, and target slots",
+          "Matching field names cannot substitute for transformation evidence"
+        ],
+        "if_missing": "State explicitly that the intermediate mapping is unverified; stop at the known endpoints."
+      },
+      "limits": [
+        "Failure to find a public implementation does not prove no production adapter exists."
+      ],
+      "source_units": [
+        "U0157"
+      ],
+      "evidence": [
+        {
+          "source_id": "S014",
+          "link_indices": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "Binary target, fusion input field, and Phoenix candidate-reading entry point"
+        },
+        {
+          "source_id": "S056",
+          "link_indices": [
+            1
+          ],
+          "supports": "Binary output remains a probability, providing evidence for the known output endpoint"
+        }
+      ],
+      "related_unknowns": [
+        "Q05"
+      ]
+    },
+    {
+      "id": "K02-035",
+      "title": "A previous CPU experiment confirmed the strict numerical click-dwell boundary",
+      "kind": "observation",
+      "conclusion": "The report records a previous direct execution of the original function: inputs 9, 10, 10.0001, and 20 produced labels 0, 0, 1, and 1; equality to 10 still gives 0. This verifies numerical comparison, not physical units or exposure effects.",
+      "conditions": [
+        "The execution result is recorded in the user's existing report; it was not rerun during this distillation."
+      ],
+      "practical_meaning": "When describing the experiment, say \"input values\" and identify the test level; boundary examples can explain strict greater-than comparison.",
+      "check": {
+        "when": "When a draft portrays this CPU result as testing real readers completing ten seconds or validating traffic.",
+        "needed": [
+          "Original function",
+          "Experiment inputs and outputs",
+          "The proposition to establish"
+        ],
+        "verify": [
+          "Check that the label for 10 is 0",
+          "Explain that a function test cannot verify upstream collection, Article attribution, or production display"
+        ],
+        "if_missing": "Retain the report's account with its scope; do not upgrade it into a real-reader experiment."
+      },
+      "limits": [
+        "Cited sources support the function logic; this knowledge base does not include original execution logs."
+      ],
+      "source_units": [
+        "U0158",
+        "U0159",
+        "U0160"
+      ],
+      "evidence": [
+        {
+          "source_id": "S055",
+          "link_indices": [
+            1,
+            2
+          ],
+          "supports": "Threshold and original function support the boundary calculation, not an execution log"
+        },
+        {
+          "source_id": "S098",
+          "link_indices": [
+            3
+          ],
+          "supports": "Click configuration declares only a numeric threshold, without upstream units"
+        }
+      ],
+      "related_unknowns": [
+        "Q05",
+        "Q45"
+      ]
+    },
+    {
+      "id": "K02-036",
+      "title": "CLICK_DWELL_TIME production units and reading attribution still need verification",
+      "kind": "unknown",
+      "conclusion": "The original text called click-dwell inputs seconds, exceeding what the function experiment establishes. This target has a numeric threshold of 10; upstream units, aggregation and attribution, and whether Article reading enters this slot remain unverified. Evidence that DWELL_TIME uses seconds cannot automatically transfer to CLICK_DWELL_TIME.",
+      "conditions": [
+        "Separate continuous DWELL_TIME from CLICK_DWELL_TIME."
+      ],
+      "practical_meaning": "Replace a draft's \"ten-second click-dwell reward\" with a numeric-threshold explanation bounded by its sources.",
+      "check": {
+        "when": "When click-dwell seconds, Article reading attribution, or per-second point conversions are claimed.",
+        "needed": [
+          "Original production definition of CLICK_DWELL_TIME",
+          "Timing and aggregation rules",
+          "Article-event attribution"
+        ],
+        "verify": [
+          "Check that unit evidence specifically concerns CLICK_DWELL_TIME",
+          "Do not infer other slots from the DWELL_TIME conversion"
+        ],
+        "if_missing": "Say \"raw value strictly greater than 10\"; leave units and attribution unknown."
+      },
+      "limits": [
+        "Not confirming the unit does not establish that it is not seconds."
+      ],
+      "source_units": [
+        "U0144",
+        "U0155",
+        "U0160"
+      ],
+      "evidence": [
+        {
+          "source_id": "S098",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "DWELL_TIME conversion to seconds, copying continuous slots, existing training columns, and the evidentiary limit that the click target declares only a threshold"
+        }
+      ],
+      "related_unknowns": [
+        "Q05",
+        "Q45"
+      ]
+    },
+    {
+      "id": "K02-037",
+      "title": "Dwell-oriented writing should fulfill its promise rather than delay the answer",
+      "kind": "editorial",
+      "conclusion": "If a pricing tutorial promises a comparison, provide the two quotes first; if it promises a failure case, explain what happened. Instead of stretching \"three key points\" into ten and repeatedly teasing a later payoff, supply concrete material: requirements removed, fee adjustments, and questions the client raised.",
+      "conditions": [
+        "Applies to tutorial and case-study drafts with real, usable material."
+      ],
+      "practical_meaning": "Let examples and explanations determine length; remove transitions that only delay the answer.",
+      "check": {
+        "when": "When review finds an unfulfilled title promise or repeated suspense.",
+        "needed": [
+          "Opening post/title promise",
+          "Body structure",
+          "Available examples"
+        ],
+        "verify": [
+          "Locate the first essential material",
+          "Replace repeated previews with concrete process details"
+        ],
+        "if_missing": "Identify missing evidence or cases without inventing client or fee facts."
+      },
+      "limits": [
+        "This is an editorial choice; no arrangement is guaranteed to improve dwell or exposure."
+      ],
+      "source_units": [
+        "U0161",
+        "U0162"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-038",
+      "title": "Images should be readable and help complete the reader's task",
+      "kind": "editorial",
+      "conclusion": "A quote-comparison image should clearly show which items were removed on each side; if text is too small and still unreadable when enlarged, an image expansion has not completed the task.",
+      "conditions": [
+        "Applies to images and tables carrying essential information."
+      ],
+      "practical_meaning": "Review text, comparisons, and emphasis at actual display size; split images or simplify information where needed.",
+      "check": {
+        "when": "When a draft substitutes image-expansion actions for image usability.",
+        "needed": [
+          "Original image",
+          "Mobile display appearance",
+          "Key comparison points"
+        ],
+        "verify": [
+          "Check readability both in thumbnail and expanded views",
+          "Confirm the information answers the reader's question"
+        ],
+        "if_missing": "Without the image, flag the needed check; do not claim it was readable or expanded."
+      },
+      "limits": [
+        "This does not establish that image expansion has no model effects."
+      ],
+      "source_units": [
+        "U0163"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-039",
+      "title": "Organize reading around task needs, not dragging it past ten seconds",
+      "kind": "editorial",
+      "conclusion": "A comparison table that answers a question in seconds may complete the task; a test report needing more reading should retain results, samples, and counterexamples. Give every paragraph a reason to keep reading, while observing actual effects; CREAD does not prove any opening always wins.",
+      "conditions": [
+        "Judge necessary length by the content task, not by unverified click-dwell units."
+      ],
+      "practical_meaning": "Keep useful material and remove padding; assess short and long pieces by whether readers get their answer.",
+      "check": {
+        "when": "When a draft recommends universally longer text, stretching to ten seconds, or a guaranteed winning opening.",
+        "needed": [
+          "Reader task",
+          "Required amount of evidence",
+          "Actual visible feedback"
+        ],
+        "verify": [
+          "Could a quick departure mean the task was completed?",
+          "Do long paragraphs provide results, samples, or counterexamples?"
+        ],
+        "if_missing": "Give only editing advice; do not infer backend dwell or traffic outcomes."
+      },
+      "limits": [
+        "Doubling article length has not been shown to double time or exposure."
+      ],
+      "source_units": [
+        "U0164"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q05",
+        "Q06"
+      ]
+    },
+    {
+      "id": "K02-040",
+      "title": "Reproducible evidence for CREAD's formal accuracy and exposure improvements is unavailable",
+      "kind": "unknown",
+      "conclusion": "The report obtained no reproducible formal evaluation set, complete error metrics, or online experimental results. It can explain CREAD's method and official improvement claims, but cannot invent accuracy gains, traffic increases for long articles, or loss of an advantage for short posts.",
+      "conditions": [
+        "Limited to the material obtained in this investigation."
+      ],
+      "practical_meaning": "Separate mechanisms from effect claims; comparisons of long and short content need separately designed comparable observations.",
+      "check": {
+        "when": "When a draft gives CREAD effect percentages or concludes long articles always win.",
+        "needed": [
+          "Formal evaluation set",
+          "Before/after error metrics",
+          "Online traffic-split results",
+          "Actual model coverage"
+        ],
+        "verify": [
+          "Check for direct evaluation sources for percentages",
+          "Do not infer exposure effects from loss configuration"
+        ],
+        "if_missing": "Report the effect-evidence gap while retaining the official qualitative statement."
+      },
+      "limits": [
+        "Missing public quantitative evidence does not mean the improvement is ineffective."
+      ],
+      "source_units": [
+        "U0165"
+      ],
+      "evidence": [
+        {
+          "source_id": "S011",
+          "link_indices": [
+            2
+          ],
+          "supports": "Official improvement statement"
+        },
+        {
+          "source_id": "S013",
+          "link_indices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "Publicly inspectable methods and configurations, without complete formal evidence of effects"
+        }
+      ],
+      "related_unknowns": [
+        "Q06",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-041",
+      "title": "1fav and 32fav are real index names; indexing and display are separate stages",
+      "kind": "code",
+      "conclusion": "Public code contains 1fav and 32fav indexes, but indexing, dataset reading, personalized retrieval, filtering, scoring, and final display are separate steps; index conditions promise no exposure.",
+      "conditions": [
+        "Discuss the production and consumption paths visible in the fixed version."
+      ],
+      "practical_meaning": "Explain where the names originate, separating \"entering a data bucket\" from \"actually being seen by unfamiliar readers.\"",
+      "check": {
+        "when": "When a draft claims the first or thirty-second like necessarily unlocks a traffic pool.",
+        "needed": [
+          "Index-production conditions",
+          "Actual consumer",
+          "Subsequent request path"
+        ],
+        "verify": [
+          "Check every stage",
+          "Do not skip stages between retrieval and display"
+        ],
+        "if_missing": "Retain established index facts without promising final exposure."
+      },
+      "limits": [
+        "Without request logs, a post's complete path cannot be reconstructed."
+      ],
+      "source_units": [
+        "U0166"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            0,
+            3
+          ],
+          "supports": "Favorite events and forwarding index updates"
+        },
+        {
+          "source_id": "S038",
+          "link_indices": [
+            0,
+            4
+          ],
+          "supports": "Production and routing of 1fav/32fav"
+        },
+        {
+          "source_id": "S034",
+          "link_indices": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "supports": "Storage, dataset reading, retrieval, filtering, and scoring"
+        }
+      ],
+      "related_unknowns": [
+        "Q15",
+        "Q16",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-042",
+      "title": "The Favorite event processor requires a readable favorite count",
+      "kind": "code",
+      "conclusion": "After receiving a Favorite event, favoriteEventProcessor must obtain its favorite count; if the count is missing, it sends no index request for that event. This processor ignores non-Favorite events. It then queries the index-update cache before selecting a conditional branch.",
+      "conditions": [
+        "Describes only this Favorite event processor."
+      ],
+      "practical_meaning": "Visible likes do not prove every internal step is synchronized; retain event-count and cache conditions when explaining the flow.",
+      "check": {
+        "when": "When a draft says every like must send an update or the system never handles unlikes.",
+        "needed": [
+          "Event type",
+          "Count in the event",
+          "Cache state"
+        ],
+        "verify": [
+          "Check that processing continues only when the count exists",
+          "Separate this processor ignoring non-Favorite events from system-wide behavior"
+        ],
+        "if_missing": "A specific event's index request cannot be determined; public numbers are not a substitute."
+      },
+      "limits": [
+        "This does not prove the entire system ignores unlikes."
+      ],
+      "source_units": [
+        "U0167",
+        "U0168",
+        "U0169"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            0
+          ],
+          "supports": "Event type, count reading, missing-count handling, and cache branches"
+        }
+      ],
+      "related_unknowns": [
+        "Q16"
+      ]
+    },
+    {
+      "id": "K02-043",
+      "title": "The first uncached update does not require count to equal 1",
+      "kind": "code",
+      "conclusion": "Without an index-update cache, event-update eligibility requires post age below 49 hours and count below 2^30; this branch does not require count==1 for the first index request.",
+      "conditions": [
+        "The Favorite event contains a count and no update cache exists; subsequent processing must still succeed."
+      ],
+      "practical_meaning": "The first successfully handled event may already reflect several likes; the first public like is not a precise internal starting point.",
+      "check": {
+        "when": "When a draft says missing the first like prevents indexing or the first request must occur on the first like.",
+        "needed": [
+          "Whether cache exists",
+          "Post creation time",
+          "Event count"
+        ],
+        "verify": [
+          "Check age <49h",
+          "Check count <2^30",
+          "Do not add count==1"
+        ],
+        "if_missing": "Explain branch conditions only; do not infer a particular post's first processing time."
+      },
+      "limits": [
+        "Passing eligibility does not mean every index is successfully readable."
+      ],
+      "source_units": [
+        "U0168",
+        "U0169"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Uncached branch, age limit, and count ceiling"
+        }
+      ],
+      "related_unknowns": [
+        "Q16",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-044",
+      "title": "Cached like-index updates must satisfy five conditions simultaneously",
+      "kind": "code",
+      "conclusion": "With a cache, all conditions must hold: time since first index update ≤48 hours, post age <49 hours, current likes ≥nextTriggerThreshold, current likes <2^30, and time since latest index update ≥1 minute.",
+      "conditions": [
+        "The Favorite event contains a count and a cache record exists."
+      ],
+      "practical_meaning": "When checking claims that a particular like unlocks something, the count is only one condition; timing and cache can also block the update.",
+      "check": {
+        "when": "When a draft calculates index updates or distribution expansion for every additional like.",
+        "needed": [
+          "First-update time",
+          "Latest-update time",
+          "Post age",
+          "Count",
+          "nextTriggerThreshold"
+        ],
+        "verify": [
+          "Use the correct ≤, <, and ≥ for each condition",
+          "Require all conditions simultaneously"
+        ],
+        "if_missing": "Eligibility cannot be determined if any essential field is missing."
+      },
+      "limits": [
+        "These conditions govern sending updates, not successful indexing or final display."
+      ],
+      "source_units": [
+        "U0168",
+        "U0169",
+        "U0170",
+        "U0171",
+        "U0172"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Threshold, age, update window, throttling, and count ceiling in the cached branch"
+        }
+      ],
+      "related_unknowns": [
+        "Q16",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-045",
+      "title": "Missing post creation time is replaced with 0 in the age check",
+      "kind": "code",
+      "conclusion": "This event-age check substitutes 0 for a missing creation time; at the current date that makes the post too old, rather than indefinitely eligible.",
+      "conditions": [
+        "Limited to this event-processing age check and the actual current date."
+      ],
+      "practical_meaning": "Missing internal creation time does not justify claiming a post will keep receiving updates forever.",
+      "check": {
+        "when": "When a draft treats a missing time as bypassing the age limit.",
+        "needed": [
+          "Whether the actual creation-time field exists",
+          "Fallback value",
+          "Current time"
+        ],
+        "verify": [
+          "Check the fallback is 0",
+          "Compare with the same age formula"
+        ],
+        "if_missing": "State that the field is missing; do not calculate as though the post were new with zero age."
+      },
+      "limits": [
+        "This is not a universal rule for all missing timestamp fields."
+      ],
+      "source_units": [
+        "U0168",
+        "U0169"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            2
+          ],
+          "supports": "Missing-time fallback and maximum age in the post-age check"
+        }
+      ],
+      "related_unknowns": [
+        "Q16"
+      ]
+    },
+    {
+      "id": "K02-046",
+      "title": "The 48h, 49h, and 1min update timers and the 48h candidate-age rule are not interchangeable",
+      "kind": "code",
+      "conclusion": "Exclusion occurs only after more than 48 hours since the first update; reaching a post age of 49 hours excludes it; less than one minute since the last update throttles it. A separate Home AgeFilter checks candidate age against 48 hours. These cannot become one universal posting countdown.",
+      "conditions": [
+        "First identify whether the subject is event updates or candidate filtering."
+      ],
+      "practical_meaning": "Specify each clock's starting point and equality boundary; identical \"48-hour\" labels do not define one article lifespan.",
+      "check": {
+        "when": "When a draft treats several time constants as the same countdown from posting.",
+        "needed": [
+          "Clock starting point",
+          "Compared object",
+          "Comparison operator",
+          "Pipeline location"
+        ],
+        "verify": [
+          "List first update, latest update, and post creation times separately",
+          "Separate candidate-age checks from index-request sending"
+        ],
+        "if_missing": "Give each rule separately; unknown timestamps do not establish passing or failure."
+      },
+      "limits": [
+        "Passing the age condition at one stage does not prevent filtering at another."
+      ],
+      "source_units": [
+        "U0172"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            2
+          ],
+          "supports": "Three time boundaries for index updates"
+        },
+        {
+          "source_id": "S039",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Separate candidate-age constant, comparison, and pipeline"
+        }
+      ],
+      "related_unknowns": [
+        "Q16",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-047",
+      "title": "After a successful update, the next threshold is the power of two strictly above the current count",
+      "kind": "code",
+      "conclusion": "For count>0, nextTriggerThreshold=2^(floor(log2(count))+1). After an update is successfully sent, count=1 gives a next threshold of 2; count=32 or 33 both give 64. Intermediate counts are not replayed retrospectively.",
+      "conditions": [
+        "The formula gives the next trigger threshold after successfully sending an update, with count>0."
+      ],
+      "practical_meaning": "Explain threshold jumps accurately; cumulative likes are not a guaranteed step-by-step exposure upgrade.",
+      "check": {
+        "when": "When a draft presents 1, 2, 4, 8, 16, 32, and so on as a mechanical upgrade path.",
+        "needed": [
+          "Count at processing time",
+          "Successful-update status",
+          "Cached threshold"
+        ],
+        "verify": [
+          "Use the power of two strictly above the current count",
+          "Check that both 32 and 33 yield 64"
+        ],
+        "if_missing": "Calculate hypothetical thresholds only; do not claim a real update occurred."
+      },
+      "limits": [
+        "Reaching the threshold still requires satisfying throttling and age conditions."
+      ],
+      "source_units": [
+        "U0173",
+        "U0174",
+        "U0175"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            1
+          ],
+          "supports": "Next power-of-two threshold and cache write"
+        }
+      ],
+      "related_unknowns": [
+        "Q16"
+      ]
+    },
+    {
+      "id": "K02-048",
+      "title": "The public next-trigger function has a special case for count equal to 0",
+      "kind": "code",
+      "conclusion": "The public function sets the next index trigger threshold to 2 when count==0; the positive-count log2 formula cannot be applied directly to zero.",
+      "conditions": [
+        "Limited to this threshold-update function, not indexing rules for all zero-like posts."
+      ],
+      "practical_meaning": "Retain the zero branch in boundary tests and formula explanations.",
+      "check": {
+        "when": "When a draft calculates an index threshold for zero count.",
+        "needed": [
+          "Current count",
+          "Function branch"
+        ],
+        "verify": [
+          "For count==0, the output is 2",
+          "Do not calculate log2(0)"
+        ],
+        "if_missing": "Explain the special branch only; do not infer all zero-like posts are indexed."
+      },
+      "limits": [
+        "Zero-value function behavior and production receipt of a qualifying event are separate questions."
+      ],
+      "source_units": [
+        "U0174",
+        "U0175"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            1
+          ],
+          "supports": "The count==0 special case for nextTriggerThreshold"
+        }
+      ],
+      "related_unknowns": [
+        "Q16"
+      ]
+    },
+    {
+      "id": "K02-049",
+      "title": "Reaching 32 likes half a minute after an update at 16 likes is still throttled",
+      "kind": "editorial",
+      "conclusion": "Suppose a post's index was just updated at 16 likes and it reaches 32 half a minute later. Despite crossing the next count threshold, that event fails because less than one minute has elapsed since the previous update. A later qualifying event must still occur and be successfully processed.",
+      "conditions": [
+        "This is an example derived from code conditions, without real account data."
+      ],
+      "practical_meaning": "Use this counterexample to explain why the thirty-second like is not an immediate index refresh.",
+      "check": {
+        "when": "When review needs to test a promise of immediate updates upon reaching a like count.",
+        "needed": [
+          "Assumed previous update",
+          "Current count",
+          "Event interval"
+        ],
+        "verify": [
+          "Check count and time together",
+          "Do not assume the system automatically compensates for the throttled event"
+        ],
+        "if_missing": "Retain the conditional counterexample without inferring the actual next update time."
+      },
+      "limits": [
+        "It does not establish when a particular post receives its next qualifying event."
+      ],
+      "source_units": [
+        "U0176"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            1,
+            2
+          ],
+          "supports": "The threshold and one-minute throttle jointly support this conditional inference"
+        }
+      ],
+      "related_unknowns": [
+        "Q16"
+      ]
+    },
+    {
+      "id": "K02-050",
+      "title": "31, 32, or 33 likes cannot diagnose waiting for a like to unlock exposure",
+      "kind": "myth",
+      "conclusion": "Public counts stalled at 31, 32, or 33 cannot determine index state or prove the post is waiting for another like to unlock exposure; the public program does not promise a new batch of unfamiliar readers after reaching 32.",
+      "conditions": [
+        "Applies to diagnoses based solely on public like counts."
+      ],
+      "practical_meaning": "Prioritize adding material and answering specific questions; diagnosing internal processing requires event and request evidence.",
+      "check": {
+        "when": "When a draft recommends reaching 32 likes as a guaranteed distribution switch.",
+        "needed": [
+          "Event-processing logs",
+          "Index state",
+          "Reader-request and display records"
+        ],
+        "verify": [
+          "Do not treat like counts as an internal progress bar",
+          "Do not jump from index thresholds to exposure quantities"
+        ],
+        "if_missing": "Explain that public numbers cannot establish internal state; reject fixed exposure conversions."
+      },
+      "limits": [
+        "This also does not mean like counts have no effect at any stage."
+      ],
+      "source_units": [
+        "U0177"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Event, threshold, throttle, and cache conditions"
+        },
+        {
+          "source_id": "S034",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "Actual retrieval and subsequent filtering/scoring remain separate"
+        }
+      ],
+      "related_unknowns": [
+        "Q15",
+        "Q16",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-051",
+      "title": "The candidate processor rereads data and counts, then routes by source and eligibility",
+      "kind": "code",
+      "conclusion": "After an index event reaches the candidate processor, it refetches post and author data and engagement counts, then routes according to source, Community, reply, repost, visibility, and other conditions. The generally eligible Fav branch builds 1fav, backup, and topic-related indexes, then separately evaluates 32fav and video indexes.",
+      "conditions": [
+        "Receiving an index event does not make every branch applicable."
+      ],
+      "practical_meaning": "Retain refetching and routing when explaining why the same like may not enter every list.",
+      "check": {
+        "when": "When a draft equates one Favorite event with inclusion in all indexes.",
+        "needed": [
+          "Source type",
+          "Refetched count",
+          "Post type",
+          "Visibility"
+        ],
+        "verify": [
+          "Identify the branch before checking its index builder",
+          "Do not assume the event count equals the refetched count"
+        ],
+        "if_missing": "Describe the flow only; without internal fields, do not decide whether a particular post was indexed."
+      },
+      "limits": [
+        "Successful refetching and satisfied conditions still do not mean final display."
+      ],
+      "source_units": [
+        "U0178"
+      ],
+      "evidence": [
+        {
+          "source_id": "S038",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "Order of refetching counts/data and routing by source and eligibility"
+        },
+        {
+          "source_id": "S038",
+          "link_indices": [
+            0
+          ],
+          "supports": "Specific builders for 1fav, 32fav, and others"
+        }
+      ],
+      "related_unknowns": [
+        "Q16",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-052",
+      "title": "The 1fav builder does not recheck a minimum of 1 like; zero records a race",
+      "kind": "code",
+      "conclusion": "build1FavIndex in the generally eligible Fav branch does not again require favoriteCount≥1; if the refetched count is 0, it records 1fav_uec_count_race and still sends an indexName=1fav event. Event triggering and refetched counts may be out of sync.",
+      "conditions": [
+        "The eligible Fav branch must already have been reached; this does not apply to arbitrary zero-like posts."
+      ],
+      "practical_meaning": "Public like counts are not an exact internal progress bar; retain the count race when describing 1fav.",
+      "check": {
+        "when": "When a draft assumes the 1fav name guarantees all internal counts are synchronized at 1.",
+        "needed": [
+          "Event source",
+          "Branch eligibility",
+          "Refetched favoriteCount",
+          "Race record"
+        ],
+        "verify": [
+          "Check that the zero branch still sends",
+          "Do not generalize to indexing all zero-like platform content"
+        ],
+        "if_missing": "Explain that race handling exists without inferring a post's actual synchronization state."
+      },
+      "limits": [
+        "This does not prove the system intentionally lists every zero-like post."
+      ],
+      "source_units": [
+        "U0179",
+        "U0180",
+        "U0181",
+        "U0182",
+        "U0183"
+      ],
+      "evidence": [
+        {
+          "source_id": "S038",
+          "link_indices": [
+            0
+          ],
+          "supports": "The 1fav builder, zero-count race metric, and continued sending"
+        }
+      ],
+      "related_unknowns": [
+        "Q16",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-053",
+      "title": "32fav production requires refetched favoriteCount≥32",
+      "kind": "code",
+      "conclusion": "The 32fav builder in the generally eligible Fav branch separately requires the refetched favoriteCount≥32; this is greater than or equal to 32, not recognition solely of the \"32nd event.\"",
+      "conditions": [
+        "General Fav branch eligibility and upstream event conditions must first hold."
+      ],
+      "practical_meaning": "Confirm the production threshold when checking thirty-second-like claims, while distinguishing event count, current count, and consumer.",
+      "check": {
+        "when": "When a draft says only the 32nd event can index a post or missing it prevents entry.",
+        "needed": [
+          "Refetched favoriteCount",
+          "Branch eligibility",
+          "Event-processing status"
+        ],
+        "verify": [
+          "Use >=32",
+          "The count comes from refetched data"
+        ],
+        "if_missing": "State index-production eligibility only; do not promise display to unfamiliar readers."
+      },
+      "limits": [
+        "The specific For You serving consumer for ordinary 32fav remains untraced."
+      ],
+      "source_units": [
+        "U0179",
+        "U0180"
+      ],
+      "evidence": [
+        {
+          "source_id": "S038",
+          "link_indices": [
+            0,
+            3,
+            4
+          ],
+          "supports": "32fav numeric condition, count refetching, and its general Fav branch"
+        }
+      ],
+      "related_unknowns": [
+        "Q15",
+        "Q16",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-054",
+      "title": "search_unfiltered is built before reply and general-visibility routing",
+      "kind": "code",
+      "conclusion": "Visible production conditions for search_unfiltered are a Fav event, a non-Community post, no repost, and count≥1; it is built before subsequent reply and general-visibility routing.",
+      "conditions": [
+        "Limited to this search index's production path."
+      ],
+      "practical_meaning": "Search indexing does not prove For You eligibility or display.",
+      "check": {
+        "when": "When a draft cites search_unfiltered as proof of Home recommendation eligibility.",
+        "needed": [
+          "Index name",
+          "Event and post type",
+          "Count",
+          "Execution order"
+        ],
+        "verify": [
+          "Check >=1 and non-Community/non-repost conditions",
+          "Distinguish the search index from later general-candidate routing"
+        ],
+        "if_missing": "State search-index conditions only; do not substitute them for Home evidence."
+      },
+      "limits": [
+        "The name \"unfiltered\" also does not prove all platform visibility rules are bypassed."
+      ],
+      "source_units": [
+        "U0179",
+        "U0180"
+      ],
+      "evidence": [
+        {
+          "source_id": "S038",
+          "link_indices": [
+            0,
+            4
+          ],
+          "supports": "search_unfiltered conditions and routing order"
+        }
+      ],
+      "related_unknowns": [
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-055",
+      "title": "Replies use separate 1fav_reply and 32fav_reply indexes",
+      "kind": "code",
+      "conclusion": "Eligible replies under Fav events have 1fav_reply and 32fav_reply branches, excluding self-reply and replies filtered here; 32fav_reply additionally requires count≥32.",
+      "conditions": [
+        "Limited to this reply branch in the candidate processor."
+      ],
+      "practical_meaning": "Do not conflate ordinary-post 1fav/32fav with reply indexes or infer that reply-index existence guarantees broad reach for replies.",
+      "check": {
+        "when": "When a draft uses reply indexes to prove all Home sources retrieve replies.",
+        "needed": [
+          "Reply eligibility",
+          "Whether it is self-reply",
+          "Count",
+          "Corresponding consumer"
+        ],
+        "verify": [
+          "Preserve the separate index names",
+          "Distinguish production from production-serving consumption"
+        ],
+        "if_missing": "Confirm reply-index production capability; leave consumption and actual display for verification."
+      },
+      "limits": [
+        "This does not establish whether every production Home source uses the index."
+      ],
+      "source_units": [
+        "U0179",
+        "U0180"
+      ],
+      "evidence": [
+        {
+          "source_id": "S038",
+          "link_indices": [
+            1,
+            4
+          ],
+          "supports": "Reply indexes, self-reply exclusion, and count threshold"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q19"
+      ]
+    },
+    {
+      "id": "K02-056",
+      "title": "The PostCreation branch has a separate post_creation index",
+      "kind": "code",
+      "conclusion": "For generally eligible posts, the PostCreation branch builds a separate post_creation index on a creation event; the first like is not the shared starting point of every system index.",
+      "conditions": [
+        "Eligibility for this PostCreation branch must hold."
+      ],
+      "practical_meaning": "When explaining when a new post can generate data, do not reduce all mechanisms to its first like.",
+      "check": {
+        "when": "When a draft claims no index exists without the first like.",
+        "needed": [
+          "Event source",
+          "post_creation builder",
+          "Eligibility conditions"
+        ],
+        "verify": [
+          "Separate creation events from Favorite events",
+          "Do not equate index existence with guaranteed exposure"
+        ],
+        "if_missing": "Confirm a separate creation path without inferring actual use of a particular post."
+      },
+      "limits": [
+        "This does not mean every post is unconditionally indexed or displayed."
+      ],
+      "source_units": [
+        "U0179",
+        "U0180"
+      ],
+      "evidence": [
+        {
+          "source_id": "S038",
+          "link_indices": [
+            2,
+            4
+          ],
+          "supports": "PostCreation index building and routing"
+        }
+      ],
+      "related_unknowns": [
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-057",
+      "title": "Ordinary index branches skip Community posts and reposts; replies and adult conditions route separately",
+      "kind": "code",
+      "conclusion": "The ordinary flow skips Community posts and reposts, routes replies separately, and also branches on general visibility and adult-content conditions, including specific handling for adult videos. \"Every original post with one like must reach outsiders\" therefore omits eligibility.",
+      "conditions": [
+        "Limited to the index processor's ordinary branch and its exceptions."
+      ],
+      "practical_meaning": "Explain post type and visibility before indexing conditions, rather than giving only a like threshold.",
+      "check": {
+        "when": "When a draft treats originality plus the first like as sufficient for recommendation.",
+        "needed": [
+          "Community/repost/reply attributes",
+          "General visibility",
+          "Adult-content and video attributes",
+          "Specific branch"
+        ],
+        "verify": [
+          "Distinguish skipping, separate branches, and final display",
+          "Do not describe exclusion from one branch as disappearance from every path"
+        ],
+        "if_missing": "Identify required eligibility only; without fields, do not judge a particular post."
+      },
+      "limits": [
+        "This is not a platform-wide policy for all adult or Community content."
+      ],
+      "source_units": [
+        "U0184"
+      ],
+      "evidence": [
+        {
+          "source_id": "S038",
+          "link_indices": [
+            4
+          ],
+          "supports": "Routing by source, Community, repost, reply, visibility, and adult video"
+        }
+      ],
+      "related_unknowns": [
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-058",
+      "title": "rankall storage includes 1fav 24h/48h and 32fav 24h windows",
+      "kind": "code",
+      "conclusion": "Public rankall window settings contain 24-hour and 48-hour windows for 1fav and a 24-hour window for 32fav; index names route to the corresponding windows. This establishes data bucketing, not that every reader-request type consumes every bucket.",
+      "conditions": [
+        "Limited to the examined public storage configuration and schema."
+      ],
+      "practical_meaning": "Give accurate windows when discussing index retention without treating them as guaranteed exposure periods.",
+      "check": {
+        "when": "When a draft treats bucket windows as the duration every post must be pushed.",
+        "needed": [
+          "Storage schema",
+          "Index name",
+          "Window",
+          "Actual consumer"
+        ],
+        "verify": [
+          "Distinguish the 24h and 48h buckets",
+          "Separate storage from request usage"
+        ],
+        "if_missing": "Report data windows; leave reader consumption and exposure unknown without evidence."
+      },
+      "limits": [
+        "Storage windows are separate timers from Home AgeFilter and the like-update window."
+      ],
+      "source_units": [
+        "U0185",
+        "U0186",
+        "U0187"
+      ],
+      "evidence": [
+        {
+          "source_id": "S034",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Main/Sid window configuration and routing by index name"
+        }
+      ],
+      "related_unknowns": [
+        "Q15",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-059",
+      "title": "HOME, HOME_COLD, and HOME_HOT explicitly reference 1fav_1day data",
+      "kind": "code",
+      "conclusion": "Public RetrievalDataset definitions for HOME, HOME_COLD, and HOME_HOT all explicitly reference 1fav_1day.parquet. HOME_COLD and HOME_HOT split the same HOME source using cold-post conditions; they do not respectively mean a one-like pool and a 32-like pool.",
+      "conditions": [
+        "Limited to the examined public dataset definitions; actual requests must still enable the source."
+      ],
+      "practical_meaning": "Trace evidence that ordinary Home datasets read 1fav and correct cold/hot threshold guesses based on names.",
+      "check": {
+        "when": "When a draft equates HOME_HOT with 32fav or says 1fav is produced but never read.",
+        "needed": [
+          "RetrievalDataset enum",
+          "Data-file path",
+          "Cold/hot filtering"
+        ],
+        "verify": [
+          "Preserve the filename 1fav_1day.parquet",
+          "Distinguish dataset references from use in every serving request"
+        ],
+        "if_missing": "Confirm the public read definition; do not invent actual request configuration or displays."
+      },
+      "limits": [
+        "Dataset reading still does not guarantee retrieval of every indexed item."
+      ],
+      "source_units": [
+        "U0186",
+        "U0187"
+      ],
+      "evidence": [
+        {
+          "source_id": "S034",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "Dataset paths and cold/hot splits from the same source"
+        }
+      ],
+      "related_unknowns": [
+        "Q14",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-060",
+      "title": "No specific For You serving consumer for ordinary 32fav_1day was found",
+      "kind": "unknown",
+      "conclusion": "The report confirmed the ordinary 32fav ≥32 production condition, index events, and 24-hour storage window, but did not trace a specific For You serving consumer or production traffic configuration for ordinary 32fav_1day in the fixed public tree.",
+      "conditions": [
+        "This is an evidence gap in the fixed-version public investigation."
+      ],
+      "practical_meaning": "State that a 32fav data bucket is built; do not promise the thirty-second like opens a new entry point to unfamiliar readers or claim the index is necessarily unused.",
+      "check": {
+        "when": "When a draft connects 32fav production directly to For You display or instead declares it abandoned.",
+        "needed": [
+          "Serving consumer for ordinary 32fav_1day",
+          "Actual configuration",
+          "Production traffic mapping"
+        ],
+        "verify": [
+          "Do not substitute another dataset",
+          "Distinguish not found from nonexistent"
+        ],
+        "if_missing": "Explicitly preserve uncertainty about the consumer."
+      },
+      "limits": [
+        "Undisclosed consumers or configurations may exist; do not invent them."
+      ],
+      "source_units": [
+        "U0186",
+        "U0187",
+        "U0188"
+      ],
+      "evidence": [
+        {
+          "source_id": "S038",
+          "link_indices": [
+            0,
+            4
+          ],
+          "supports": "Visible production conditions for ordinary 32fav"
+        },
+        {
+          "source_id": "S034",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "Known storage scope and ordinary HOME explicitly reading 1fav"
+        }
+      ],
+      "related_unknowns": [
+        "Q15",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-061",
+      "title": "IMMERSIVE32FavVideo14To30Day is a separate video dataset",
+      "kind": "code",
+      "conclusion": "The public enum IMMERSIVE32FavVideo14To30Day reads 32fav_video_14to30day.parquet; it is a separate video dataset and cannot establish the For You consumer for ordinary-post 32fav_1day.",
+      "conditions": [
+        "Preserve the dataset name, media type, and time window exactly."
+      ],
+      "practical_meaning": "When encountering similar 32fav names, first distinguish ordinary-post paths from immersive video paths.",
+      "check": {
+        "when": "When a draft uses the video 32fav dataset to prove unlocking by an ordinary post's thirty-second like.",
+        "needed": [
+          "Complete enum name",
+          "Actual file path",
+          "Media type",
+          "Consumer scope"
+        ],
+        "verify": [
+          "Check the video and 14to30day suffixes",
+          "Do not transfer it to ordinary 32fav_1day"
+        ],
+        "if_missing": "Retain only the separate dataset fact; the ordinary consumer remains unknown."
+      },
+      "limits": [
+        "This claim does not fully trace this video dataset's production rules."
+      ],
+      "source_units": [
+        "U0188"
+      ],
+      "evidence": [
+        {
+          "source_id": "S034",
+          "link_indices": [
+            2
+          ],
+          "supports": "Video enum and file path in RetrievalDataset; supports only this dataset's existence/reading"
+        }
+      ],
+      "related_unknowns": [
+        "Q15",
+        "Q21"
+      ]
+    },
+    {
+      "id": "K02-062",
+      "title": "Entering a HOME dataset still requires personalized retrieval, filtering, scoring, and selection",
+      "kind": "code",
+      "conclusion": "Even when HOME reads a dataset, candidates still face seen-content, relationship, age, and other filters, followed by scoring and selection. Impressions in account analytics are observed results; identifying the pool or why a candidate was selected requires internal request logs, which like counts cannot replace.",
+      "conditions": [
+        "Applies to specific reader requests and candidate pipelines."
+      ],
+      "practical_meaning": "Distinguish analytics impression results from mechanism diagnosis; do not guess pools or rankings from likes when explaining a post's lack of exposure.",
+      "check": {
+        "when": "When a draft infers actual display causes directly from indexing or likes.",
+        "needed": [
+          "Actual request configuration",
+          "Candidate set",
+          "Filter results",
+          "Predictions and ranking",
+          "Display logs"
+        ],
+        "verify": [
+          "Check each stage from retrieval to display",
+          "Do not treat observed impressions as internal path logs"
+        ],
+        "if_missing": "Explain possible stages without inventing a specific failure point."
+      },
+      "limits": [
+        "Static source code cannot reconstruct every actual request for a post."
+      ],
+      "source_units": [
+        "U0189"
+      ],
+      "evidence": [
+        {
+          "source_id": "S034",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "Actual Phoenix retrieval and subsequent filtering, scoring, and selection"
+        }
+      ],
+      "related_unknowns": [
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-063",
+      "title": "The shared fusion formula has no separate bookmark weight",
+      "kind": "code",
+      "conclusion": "The examined shared fusion-weight fields and actual weighting function contain no separate bookmark term. This describes only that fusion stage, not the entire system ignoring bookmarks.",
+      "conditions": [
+        "Limited to the public shared fusion weights and function, not all features or models."
+      ],
+      "practical_meaning": "State \"no direct bookmark coefficient\" alongside \"bookmarks can be used in other paths.\"",
+      "check": {
+        "when": "When a draft assigns fixed points per bookmark or says bookmarks have no algorithmic use.",
+        "needed": [
+          "The claimed fusion function",
+          "Other bookmark-consuming paths"
+        ],
+        "verify": [
+          "Check actual weight fields and formula",
+          "Do not generalize one stage's missing field to system-wide nonuse"
+        ],
+        "if_missing": "State only that this fusion stage has no separate term; do not estimate bookmark points."
+      },
+      "limits": [
+        "Bookmarks used as preference or training data need not have a separate fusion coefficient."
+      ],
+      "source_units": [
+        "U0190",
+        "U0197",
+        "U0198"
+      ],
+      "evidence": [
+        {
+          "source_id": "S002",
+          "link_indices": [
+            0
+          ],
+          "supports": "The examined shared fusion formula"
+        },
+        {
+          "source_id": "S041",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Neither weight fields nor the weighted formula contains a separate bookmark term"
+        }
+      ],
+      "related_unknowns": [
+        "Q18"
+      ]
+    },
+    {
+      "id": "K02-064",
+      "title": "BookmarkMetadata is read as a bookmark signal for the current reader",
+      "kind": "code",
+      "conclusion": "Public explicit-engagement hydration obtains BookmarkMetadata for the current reader and collects it as a bookmark signal; relevant public switches default to enabled, but source and request conditions must still hold.",
+      "conditions": [
+        "The actual signal switch and source are enabled, and usable bookmark data exists."
+      ],
+      "practical_meaning": "When explaining whom bookmarks affect, first identify the bookmarker's preference data, not traffic owed to the author.",
+      "check": {
+        "when": "When a draft calls bookmark signals a direct store of value for the author.",
+        "needed": [
+          "Reader identity",
+          "Bookmark signals",
+          "Switches and request conditions"
+        ],
+        "verify": [
+          "Distinguish bookmarker from bookmarked author",
+          "Separate defaults from values active for the request"
+        ],
+        "if_missing": "Explain data usage without assuming every request reads the same data."
+      },
+      "limits": [
+        "Reading bookmark signals does not guarantee later retrieval of the original post."
+      ],
+      "source_units": [
+        "U0191"
+      ],
+      "evidence": [
+        {
+          "source_id": "S040",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "BookmarkMetadata reading, signal switches, and source defaults"
+        },
+        {
+          "source_id": "S041",
+          "link_indices": [
+            2
+          ],
+          "supports": "Bookmark data is read for the current reader"
+        }
+      ],
+      "related_unknowns": [
+        "Q18",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-065",
+      "title": "SimClusters merges bookmarked post IDs into similar-content query seeds for the bookmarker",
+      "kind": "code",
+      "conclusion": "SimClusters merges IDs of posts the current reader recently engaged with as seeds, which can include bookmarks. If reader A bookmarks an invoice-organization tutorial, that ID can seed A's later similar-content queries; results may be related content by other authors.",
+      "conditions": [
+        "Source enablement, signal eligibility, age, and other conditions must hold."
+      ],
+      "practical_meaning": "Reusable tutorials have reader value; describe the mechanism as later preference retrieval for the bookmarker, without guaranteeing the original post or author's next post is recommended.",
+      "check": {
+        "when": "When a draft claims one bookmark guarantees long-term subsequent exposure for the author.",
+        "needed": [
+          "Bookmarker signals",
+          "Seed eligibility",
+          "Subsequent request",
+          "Retrieval results"
+        ],
+        "verify": [
+          "The initial subject is the bookmarker",
+          "Separate similar content from the same author or original post"
+        ],
+        "if_missing": "Provide the mechanism and hypothetical example without reconstructing actual later retrieval or net exposure."
+      },
+      "limits": [
+        "The original invoice scenario is illustrative, not a real-account experiment."
+      ],
+      "source_units": [
+        "U0191",
+        "U0192",
+        "U0197",
+        "U0198"
+      ],
+      "evidence": [
+        {
+          "source_id": "S040",
+          "link_indices": [
+            0,
+            3
+          ],
+          "supports": "Bookmark reading, interaction-seed merging, and similar-content queries"
+        },
+        {
+          "source_id": "S041",
+          "link_indices": [
+            2,
+            6
+          ],
+          "supports": "Current-reader and SimClusters seed-query path"
+        }
+      ],
+      "related_unknowns": [
+        "Q18"
+      ]
+    },
+    {
+      "id": "K02-066",
+      "title": "CLIENT_TWEET_BOOKMARK is a positive training action for immersive retrieval",
+      "kind": "code",
+      "conclusion": "The named two-tower immersive_positive_actions includes CLIENT_TWEET_BOOKMARK alongside likes, replies, reposts, quality video views, follows, shares, and other actions; the model calculates training loss from that head's positive and negative examples.",
+      "conditions": [
+        "Scoped to training for the immersive retrieval head and its corresponding named configuration."
+      ],
+      "practical_meaning": "Bookmarks can teach preferences, but this does not assign direct points to each bookmark in ordinary Home.",
+      "check": {
+        "when": "When a draft says bookmarks are entirely unused or treats immersive training actions as direct ordinary-Home bonuses.",
+        "needed": [
+          "Head name",
+          "positive_actions",
+          "Training-loss call"
+        ],
+        "verify": [
+          "Preserve the full CLIENT_TWEET_BOOKMARK name",
+          "Separate training use from fusion fields"
+        ],
+        "if_missing": "State only this head's training use; do not invent an ordinary-Home bookmark coefficient."
+      },
+      "limits": [
+        "No guarantee that each bookmark immediately changes a particular article's exposure."
+      ],
+      "source_units": [
+        "U0193",
+        "U0194",
+        "U0195",
+        "U0196",
+        "U0197",
+        "U0198"
+      ],
+      "evidence": [
+        {
+          "source_id": "S041",
+          "link_indices": [
+            7,
+            8,
+            9
+          ],
+          "supports": "Immersive positive examples include bookmarks, and each head trains on its own positive and negative examples"
+        }
+      ],
+      "related_unknowns": [
+        "Q18",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-067",
+      "title": "SimClusters has a public limit of 15 records per interaction-signal category",
+      "kind": "code",
+      "conclusion": "Public parameters retain at most 15 records per interaction-signal category; bookmark signals entering later seed paths are also subject to record limits.",
+      "conditions": [
+        "Uses the examined public defaults; each interaction category is counted separately."
+      ],
+      "practical_meaning": "Do not assume all historical bookmarks are used simultaneously in every request; retain \"per category,\" not 15 in total.",
+      "check": {
+        "when": "When a draft claims all bookmark history is used permanently in every retrieval request.",
+        "needed": [
+          "Signal category",
+          "Per-category limit",
+          "Actual configuration"
+        ],
+        "verify": [
+          "Confirm 15 is a per-category cap",
+          "Do not call it an author's exposure quota"
+        ],
+        "if_missing": "Describe the public default without claiming which signals a particular request retained."
+      },
+      "limits": [
+        "Actual requests depend on configuration and available data."
+      ],
+      "source_units": [
+        "U0191",
+        "U0199"
+      ],
+      "evidence": [
+        {
+          "source_id": "S041",
+          "link_indices": [
+            3
+          ],
+          "supports": "Default record count for each interaction-signal category"
+        },
+        {
+          "source_id": "S040",
+          "link_indices": [
+            1
+          ],
+          "supports": "Public switches and per-category record limits"
+        }
+      ],
+      "related_unknowns": [
+        "Q18",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-068",
+      "title": "SimClusters requires source enablement, a request not limited to the network, no cached-post request, and usable signals",
+      "kind": "code",
+      "conclusion": "This SimClusters path requires an enabled source, a request not restricted to in-network content, a request without cached posts already present, and usable signals; an enabled default does not mean every production request uses it.",
+      "conditions": [
+        "These conditions jointly determine whether this source participates."
+      ],
+      "practical_meaning": "When explaining why a refresh after bookmarking lacks similar content, the bookmark alone does not establish that the source ran.",
+      "check": {
+        "when": "When a draft equates an enabled default with retrieval on every request.",
+        "needed": [
+          "Source switch",
+          "in-network-only status",
+          "Cached-candidate status",
+          "Signal availability"
+        ],
+        "verify": [
+          "Check every source-enablement condition",
+          "Separate defaults from actual values"
+        ],
+        "if_missing": "Describe only a possible participating path; the specific request cannot be determined."
+      },
+      "limits": [
+        "Other sources may still use bookmarks or provide related content."
+      ],
+      "source_units": [
+        "U0191",
+        "U0199"
+      ],
+      "evidence": [
+        {
+          "source_id": "S041",
+          "link_indices": [
+            4,
+            6
+          ],
+          "supports": "Source defaults and request-enablement conditions"
+        }
+      ],
+      "related_unknowns": [
+        "Q18",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-069",
+      "title": "SimClusters seeds are limited to 90 days; age uses post creation time",
+      "kind": "code",
+      "conclusion": "This path limits seed-post age to within 90 days, using the creation time encoded by the post ID, not the bookmark time. Bookmarking a two-year-old article today may still fail this seed-age check.",
+      "conditions": [
+        "Limited to this SimClusters seed path; the example is a conditional inference."
+      ],
+      "practical_meaning": "Distinguish \"bookmarked today\" from \"published today\"; bookmarking does not make the original post young again.",
+      "check": {
+        "when": "When a draft says bookmarking an old post resets its recommendation age here.",
+        "needed": [
+          "Seed-post ID/creation time",
+          "Current time",
+          "Seed-age rule"
+        ],
+        "verify": [
+          "Use post age, not bookmark age",
+          "Label the two-year-old example hypothetical"
+        ],
+        "if_missing": "The bookmark date alone cannot establish seed eligibility."
+      },
+      "limits": [
+        "This does not prove old bookmarks are useless in all other features, models, or paths."
+      ],
+      "source_units": [
+        "U0199",
+        "U0200"
+      ],
+      "evidence": [
+        {
+          "source_id": "S041",
+          "link_indices": [
+            5,
+            6
+          ],
+          "supports": "Seed-age ceiling, seed-ID creation-time check, and query"
+        }
+      ],
+      "related_unknowns": [
+        "Q18"
+      ]
+    },
+    {
+      "id": "K02-070",
+      "title": "SimClusters candidates separately have a 48-hour default and similarity-score and count limits",
+      "kind": "code",
+      "conclusion": "In addition to the 90-day seed limit, SimClusters candidates default to an age within 48 hours, with separate similarity-score and result-count limits; seed age and candidate age are different conditions.",
+      "conditions": [
+        "Limited to this source and the examined public defaults."
+      ],
+      "practical_meaning": "When explaining what bookmarking old content can retrieve, distinguish seed from returned-candidate eligibility; 90 days is not a candidate display window.",
+      "check": {
+        "when": "When a draft merges seed and candidate ages into one deadline.",
+        "needed": [
+          "Seed age",
+          "Candidate age",
+          "Similarity score",
+          "Result count",
+          "Actual configuration"
+        ],
+        "verify": [
+          "Check the distinct objects governed by 90 days and 48 hours",
+          "Do not invent score/count values absent from the original"
+        ],
+        "if_missing": "List visible limits only; the actual result set requires request data."
+      },
+      "limits": [
+        "The 48-hour default does not mean a bookmarked original is displayed again for 48 hours."
+      ],
+      "source_units": [
+        "U0199"
+      ],
+      "evidence": [
+        {
+          "source_id": "S041",
+          "link_indices": [
+            3,
+            5,
+            6
+          ],
+          "supports": "Candidate-age default, similarity-score and result-count limits, and query"
+        }
+      ],
+      "related_unknowns": [
+        "Q18",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-071",
+      "title": "Bookmarks cannot be converted into redeemable exposure credits for authors",
+      "kind": "unknown",
+      "conclusion": "Existing paths show bookmarks participating in later personalized retrieval and immersive training, but provide no conversion from one bookmark to a quantity of later exposure, nor a guarantee that the original or the author's next post will be recommended again.",
+      "conditions": [
+        "Net effects require real requests or controlled experiments."
+      ],
+      "practical_meaning": "Tutorials can state when to use them, field meanings, and update dates so returning bookmarkers can use them; observe traffic effects separately.",
+      "check": {
+        "when": "When a draft equates one bookmark to a number of impressions or a long-term traffic deposit.",
+        "needed": [
+          "Subsequent requests and retrieval results",
+          "Display logs",
+          "Comparable experiments"
+        ],
+        "verify": [
+          "Distinguish mechanism existence from net exposure effects",
+          "Check whether similar content is being equated with same-author content"
+        ],
+        "if_missing": "Explain uses and limits; leave unquantifiable effects unknown."
+      },
+      "limits": [
+        "Inability to convert bookmarks into exposure does not mean they lack value."
+      ],
+      "source_units": [
+        "U0192",
+        "U0196",
+        "U0197",
+        "U0200",
+        "U0201"
+      ],
+      "evidence": [
+        {
+          "source_id": "S041",
+          "link_indices": [
+            0,
+            1,
+            2,
+            6,
+            7,
+            9
+          ],
+          "supports": "Three bookmark uses and their respective scopes, without a per-event exposure-exchange mechanism"
+        }
+      ],
+      "related_unknowns": [
+        "Q18"
+      ]
+    },
+    {
+      "id": "K02-072",
+      "title": "Bookmarkable resources should preserve a reusable procurement checklist",
+      "kind": "editorial",
+      "conclusion": "For \"How to choose a meeting-summary tool,\" go beyond rankings and retain checks for veto conditions, proposals versus decisions, items awaiting confirmation, and verification against the original recording. Record each tool's version, test date, results, and applicable scope.",
+      "conditions": [
+        "Applies to tool comparisons, procurement, and repeatable testing content."
+      ],
+      "practical_meaning": "Make the recommendation a reference readers can use next time, rather than merely asking for bookmarks.",
+      "check": {
+        "when": "When a comparison lacks repeatable test criteria and a recording method.",
+        "needed": [
+          "Test dimensions",
+          "Example inputs",
+          "Tool version",
+          "Date",
+          "Applicable scope",
+          "Verification material"
+        ],
+        "verify": [
+          "Use comparable inputs across tools",
+          "Keep versions and conditions beside results",
+          "Readers can check the original recording"
+        ],
+        "if_missing": "List missing test information; do not fabricate tool-test results."
+      },
+      "limits": [
+        "This is not an executed procurement test and promises neither more bookmarks nor exposure."
+      ],
+      "source_units": [
+        "U0202",
+        "U0203"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-073",
+      "title": "Meeting-summary test: preserve the veto condition and the decision not to use it",
+      "kind": "editorial",
+      "conclusion": "Use the example input \"If customer data must be uploaded, we will not use it\" to check whether the summary retains both the condition and \"will not use it\"; record pass, omission, or misstatement.",
+      "conditions": [
+        "This is only a replaceable test input; the tool being evaluated must actually be run."
+      ],
+      "practical_meaning": "Readers can use it to check whether a summary drops an essential constraint.",
+      "check": {
+        "when": "When a draft provides a veto-condition test table or reviews a particular summary.",
+        "needed": [
+          "Original input",
+          "Actual tool summary",
+          "Version and date"
+        ],
+        "verify": [
+          "Check the condition about uploading customer data",
+          "Check preservation of the negative conclusion",
+          "Record pass/omission/misstatement"
+        ],
+        "if_missing": "Without actual output, leave results blank; do not claim a pass."
+      },
+      "limits": [
+        "One sample cannot represent a tool's overall quality."
+      ],
+      "source_units": [
+        "U0203",
+        "U0204"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-074",
+      "title": "Meeting-summary test: do not turn a proposal into a decision",
+      "kind": "editorial",
+      "conclusion": "Use the example input \"This is only a suggestion to try it; we have not agreed to purchase it\" to check whether the summary incorrectly turns a proposal into a decision; record pass, omission, or misstatement.",
+      "conditions": [
+        "This is only a test input, not a substitute for real output."
+      ],
+      "practical_meaning": "Help readers distinguish proposals from resolutions so summaries do not invent procurement commitments.",
+      "check": {
+        "when": "When a draft checks proposal/decision fidelity or builds a test table.",
+        "needed": [
+          "Original input",
+          "Actual tool summary",
+          "Version and date"
+        ],
+        "verify": [
+          "A suggested trial must remain a proposal",
+          "No purchase agreement must not become agreement"
+        ],
+        "if_missing": "Do not enter a conclusion without the actual summary."
+      },
+      "limits": [
+        "More examples are needed to assess tool performance."
+      ],
+      "source_units": [
+        "U0203",
+        "U0204"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-075",
+      "title": "Meeting-summary test: a budget awaiting confirmation must not become approved",
+      "kind": "editorial",
+      "conclusion": "Use the example input \"We will confirm the budget next week\" to check whether the summary invents budget approval; record pass, omission, or misstatement.",
+      "conditions": [
+        "This is only a reusable example input."
+      ],
+      "practical_meaning": "Give readers a way to check whether uncertainty and scheduling are preserved.",
+      "check": {
+        "when": "When a draft checks pending items or compares summary tools.",
+        "needed": [
+          "Original input",
+          "Actual summary",
+          "Version and date"
+        ],
+        "verify": [
+          "The budget remains awaiting confirmation",
+          "Check preservation of the next-week timing"
+        ],
+        "if_missing": "Without output, do not claim success or failure."
+      },
+      "limits": [
+        "This is not a tested conclusion about any specific tool."
+      ],
+      "source_units": [
+        "U0203",
+        "U0204"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-076",
+      "title": "An ending explaining when and how to reuse material is more concrete than a fixed bookmark slogan",
+      "kind": "editorial",
+      "conclusion": "An ending can say: \"Next time you choose a meeting-summary tool, test these three types of sentence and compare with the original to see whether undecided matters become decisions.\" Once when and how to use a table are clear, a fixed \"Remember to bookmark\" is unnecessary; news flashes and temporary notices need not all become tool tables.",
+      "conditions": [
+        "Choose an ending for the content's purpose; reference tables are not a universal format."
+      ],
+      "practical_meaning": "Ground the call to action in actual reuse and retain exceptions for unsuitable content.",
+      "check": {
+        "when": "When a draft ends only with a bookmark slogan or forces every piece into a tool table.",
+        "needed": [
+          "Content purpose",
+          "Reusable material",
+          "Ending"
+        ],
+        "verify": [
+          "Explain the use case and steps",
+          "Check whether news/notices have lasting reuse value"
+        ],
+        "if_missing": "Without a reuse scenario, end concisely rather than inventing a reason to bookmark."
+      },
+      "limits": [
+        "This is editing advice, with no fixed CTA bonus, penalty, or effect guarantee."
+      ],
+      "source_units": [
+        "U0205",
+        "U0206"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q18",
+        "Q42"
+      ]
+    },
+    {
+      "id": "K02-077",
+      "title": "Direct-message sharing and link copying are separate predictions; public repost counts cannot substitute",
+      "kind": "code",
+      "conclusion": "Public fusion includes direct-message-sharing and link-copying predictions, distinct from bookmark uses in SimClusters/immersive. No long chain of public reposts does not establish no reader-to-reader sharing, but the program cannot tell us how often a particular post was actually used privately.",
+      "conditions": [
+        "Distinguish a prediction term's existence from actual behavior statistics for the post."
+      ],
+      "practical_meaning": "Record sharing within genuinely visible metrics during review; quiet comments or few public reposts do not prove nobody shared it.",
+      "check": {
+        "when": "When a draft equates public repost counts with all distribution or bookmarks with direct-message sharing.",
+        "needed": [
+          "Actually visible sharing metrics",
+          "Metric definitions",
+          "Corresponding prediction fields"
+        ],
+        "verify": [
+          "Record bookmarks, direct messages, and link copying separately",
+          "Do not infer private-use counts for a post from code existence"
+        ],
+        "if_missing": "Explain the possibility of private sharing while leaving counts unknown."
+      },
+      "limits": [
+        "Model predictions are not per-event logs of actual direct messages or link copying."
+      ],
+      "source_units": [
+        "U0207"
+      ],
+      "evidence": [
+        {
+          "source_id": "S002",
+          "link_indices": [
+            0
+          ],
+          "supports": "Fusion contains direct-message-sharing and link-copying terms"
+        },
+        {
+          "source_id": "S021",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Corresponding public prediction coefficients"
+        },
+        {
+          "source_id": "S040",
+          "link_indices": [
+            0,
+            3
+          ],
+          "supports": "Separate later-retrieval path for bookmarks, for comparison"
+        }
+      ],
+      "related_unknowns": [
+        "Q18"
+      ]
+    },
+    {
+      "id": "K02-078",
+      "title": "The mutual-follow bonus applies only to mutual follows and candidates that are neither replies nor ordinary reposts",
+      "kind": "code",
+      "conclusion": "Eligibility is !is_reply && !is_retweet && is_mutual_follow_author; the bidirectional relationship is queried and passed to fusion. It tests whether the current reader and author follow each other, not whether the author has replied to comments.",
+      "conditions": [
+        "Reader and author follow each other",
+        "Candidate is not a reply",
+        "Candidate is not an ordinary repost"
+      ],
+      "practical_meaning": "The relationship bonus applies for the current reader; the same post is ineligible for a different reader without that mutual relationship.",
+      "check": {
+        "when": "When a draft equates author comment replies, mass reciprocal following, or arbitrary replies with the mutual-follow bonus.",
+        "needed": [
+          "Current reader/author bidirectional relationship",
+          "Candidate reply/retweet attributes"
+        ],
+        "verify": [
+          "Check each Boolean condition",
+          "Distinguish mutual following from having replied to a comment"
+        ],
+        "if_missing": "Eligibility cannot be determined without relationship or candidate attributes."
+      },
+      "limits": [
+        "The author does not have a fixed bonus for every reader."
+      ],
+      "source_units": [
+        "U0208",
+        "U0209",
+        "U0210"
+      ],
+      "evidence": [
+        {
+          "source_id": "S042",
+          "link_indices": [
+            3,
+            5,
+            6
+          ],
+          "supports": "Candidate eligibility, bidirectional relationship reading, and passing it to fusion"
+        }
+      ],
+      "related_unknowns": [
+        "Q11",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-079",
+      "title": "For eligible mutual follows, the reply-prediction coefficient is 5+15=20",
+      "kind": "code",
+      "conclusion": "Both public defaults have a regular reply coefficient of 5 and an extra mutual-follow bonus of 15, added to give 20 when eligible; this changes only the reply-prediction coefficient, rather than multiplying all engagement terms by four.",
+      "conditions": [
+        "Current reader and author follow each other, and the candidate is neither a reply nor an ordinary repost",
+        "The examined public defaults are used"
+      ],
+      "practical_meaning": "Give the conditional formula and identify the reply probability as its subject; do not turn it into 20 points per actual reply.",
+      "check": {
+        "when": "When a draft says mutual following quadruples all engagement or exposure.",
+        "needed": [
+          "Candidate eligibility",
+          "Reply-prediction probability",
+          "Service and actual coefficients"
+        ],
+        "verify": [
+          "The bonus applies to the reply-prediction term",
+          "Separate defaults from actual configuration"
+        ],
+        "if_missing": "Explain the public conditional coefficient only; do not quantify final displays."
+      },
+      "limits": [
+        "Total score also includes other predictions, multipliers, and later adjustments."
+      ],
+      "source_units": [
+        "U0210"
+      ],
+      "evidence": [
+        {
+          "source_id": "S042",
+          "link_indices": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "supports": "Home Mixer/VM Ranker regular and mutual-follow defaults and the additive implementation"
+        }
+      ],
+      "related_unknowns": [
+        "Q11",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-080",
+      "title": "The extra mutual-follow dwell bonus is zero in these public settings",
+      "kind": "code",
+      "conclusion": "The examined settings give an additional mutual-follow dwell bonus of 0; the reply term's +15 cannot also be applied to dwell.",
+      "conditions": [
+        "Limited to the two examined public defaults and their mutual-follow fields."
+      ],
+      "practical_meaning": "Check replies and dwell separately when discussing mutual follows; do not broadly claim all reading engagement is boosted.",
+      "check": {
+        "when": "When a draft extends the mutual-follow reply bonus to dwell.",
+        "needed": [
+          "Mutual-follow dwell-bonus field",
+          "Service and version"
+        ],
+        "verify": [
+          "Verify the extra bonus is 0",
+          "Do not interpret a zero extra bonus as zero total dwell weight"
+        ],
+        "if_missing": "State only this extra term's default; do not infer all production settings."
+      },
+      "limits": [
+        "A zero extra bonus does not mean the base dwell prediction has no effect."
+      ],
+      "source_units": [
+        "U0210"
+      ],
+      "evidence": [
+        {
+          "source_id": "S042",
+          "link_indices": [
+            0,
+            2,
+            4
+          ],
+          "supports": "Mutual-follow defaults and implementation applying bonuses by field"
+        }
+      ],
+      "related_unknowns": [
+        "Q11",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-081",
+      "title": "The mutual-follow example with a fixed 2% reply probability changes only that term's contribution",
+      "kind": "editorial",
+      "conclusion": "Assume the same reply probability of 2%: with the regular coefficient 5, the contribution is 0.02×5=0.10; after mutual-follow eligibility, 5+15=20 gives 0.02×20=0.40. This is not four times the exposure.",
+      "conditions": [
+        "Reply-prediction probability is fixed at 2%",
+        "Only the reply term is compared",
+        "Other factors are not calculated"
+      ],
+      "practical_meaning": "Use the example to show that a fourfold coefficient concerns one term at a fixed prediction, not total score, people, or exposure.",
+      "check": {
+        "when": "When a draft cites 0.10/0.40 or a fourfold mutual-follow effect.",
+        "needed": [
+          "Assumed reply probability",
+          "Eligibility conditions",
+          "Whether other factors are held fixed"
+        ],
+        "verify": [
+          "Recalculate 0.02×5 and 0.02×20",
+          "State that other predictions and later adjustments are omitted"
+        ],
+        "if_missing": "Give hypothetical arithmetic without claiming a real account increased fourfold."
+      },
+      "limits": [
+        "Mutual following may also accompany different predicted probabilities; the example deliberately fixes probability."
+      ],
+      "source_units": [
+        "U0211",
+        "U0212"
+      ],
+      "evidence": [
+        {
+          "source_id": "S042",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "Reply coefficients, eligibility, and addition support the hypothetical example"
+        }
+      ],
+      "related_unknowns": [
+        "Q11"
+      ]
+    },
+    {
+      "id": "K02-082",
+      "title": "VM Ranker's ordinary OON default multiplier is 0.75",
+      "kind": "code",
+      "conclusion": "The examined VM Ranker multiplier for ordinary out-of-network candidates (OON) is 0.75. Comparing only this term while holding other conditions fixed, an out-of-network candidate needs about 1÷0.75=1.3333 times an in-network candidate's pre-multiplier score to tie after this adjustment.",
+      "conditions": [
+        "Ordinary VM Ranker OON conditions",
+        "Only this multiplier is compared, with other conditions fixed"
+      ],
+      "practical_meaning": "Explain differences in scoring conditions inside and outside the network, without treating 0.75 as 25% fewer impressions to unfamiliar readers.",
+      "check": {
+        "when": "When a draft cites the OON coefficient or the out-of-network tie formula.",
+        "needed": [
+          "Service and request type",
+          "Relationship attributes",
+          "Comparable pre-multiplier scores"
+        ],
+        "verify": [
+          "Use arithmetic with other conditions fixed",
+          "Separate score ratios from exposure ratios"
+        ],
+        "if_missing": "Describe the default and hypothetical comparison only; actual reach differences cannot be calculated."
+      },
+      "limits": [
+        "Actual results also depend on candidates, predictions, other multipliers, and selection."
+      ],
+      "source_units": [
+        "U0213"
+      ],
+      "evidence": [
+        {
+          "source_id": "S086",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "OON default, multiplier application, and relationship conditions"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K02-083",
+      "title": "OON multipliers depend on request and candidate conditions, not a follower-count points table",
+      "kind": "code",
+      "conclusion": "A topic request has its own configuration, and code permits related OON settings for certain in-network replies and reposts; the mutual-follow reply coefficient 5+15 is a separate condition. These relationship uses cannot become \"so many followers earn so many points.\"",
+      "conditions": [
+        "Identify request type and candidate attributes before checking which configuration applies."
+      ],
+      "practical_meaning": "Distinguish follows, mutual follows, candidate type, and request type before explaining results solely by author follower count.",
+      "check": {
+        "when": "When a draft combines OON, mutual following, and follower counts into one bonus table.",
+        "needed": [
+          "Topic/ordinary request",
+          "In-/out-of-network relationship",
+          "reply/retweet attributes",
+          "Actual parameters"
+        ],
+        "verify": [
+          "Trace applicable parameters condition by condition",
+          "Do not replace relationship Booleans with follower scale"
+        ],
+        "if_missing": "Explain known conditions only; do not determine a multiplier without actual configuration."
+      },
+      "limits": [
+        "A condition permitting use does not prove every request enables it."
+      ],
+      "source_units": [
+        "U0214"
+      ],
+      "evidence": [
+        {
+          "source_id": "S086",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Configuration conditions for topic requests, relationships, and candidate types"
+        },
+        {
+          "source_id": "S042",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "Separate mutual-follow reply eligibility and addition"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q11"
+      ]
+    },
+    {
+      "id": "K02-084",
+      "title": "Replying under a large account is ineligible for the non-reply mutual-follow bonus",
+      "kind": "code",
+      "conclusion": "A candidate left under a large account is itself a reply and violates !is_reply; it may be read on the conversation page, but this mutual-follow bonus provides no evidence that \"racing to be the first comment everywhere\" works.",
+      "conditions": [
+        "Discusses only this non-reply mutual-follow bonus, without denying other conversation-reading entry points."
+      ],
+      "practical_meaning": "Write informative replies to participate in discussion, but do not use an original-post bonus to justify first-comment strategies.",
+      "check": {
+        "when": "When a draft uses the mutual-follow coefficient of 20 to prove first comments under large accounts guarantee more exposure.",
+        "needed": [
+          "Whether the candidate is a reply",
+          "The specific bonus path cited",
+          "Actual exposure evidence"
+        ],
+        "verify": [
+          "Establish reply=true first",
+          "Separate possible conversation-page reading from a For You bonus"
+        ],
+        "if_missing": "Explain that this evidence does not apply; other effects remain unknown without experiments."
+      },
+      "limits": [
+        "This does not mean all replies lack value or can never reach unfamiliar readers."
+      ],
+      "source_units": [
+        "U0215"
+      ],
+      "evidence": [
+        {
+          "source_id": "S042",
+          "link_indices": [
+            3
+          ],
+          "supports": "Mutual-follow candidate eligibility explicitly excludes replies"
+        },
+        {
+          "source_id": "S024",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Replies have separate sources, switches, and filtering scope"
+        }
+      ],
+      "related_unknowns": [
+        "Q11",
+        "Q19"
+      ]
+    },
+    {
+      "id": "K02-085",
+      "title": "Use specific answerable situations to invite relevant readers' contributions",
+      "kind": "editorial",
+      "conclusion": "Small-restaurant content can list real constraints of two delivery-packaging options and ask owners which causes complaints more often; programming content can provide the error message, environment, and ruled-out causes so experienced readers can add cases.",
+      "conditions": [
+        "The question serves the body's topic, and the author provides sufficient context."
+      ],
+      "practical_meaning": "Let comments add cases and conditions, helping form a group that returns to read.",
+      "check": {
+        "when": "When an engagement question is too broad or exists only to increase comments.",
+        "needed": [
+          "Target readers",
+          "Actual constraints/errors",
+          "Environment",
+          "Ruled-out causes"
+        ],
+        "verify": [
+          "Can only people with relevant experience give useful answers?",
+          "Does the body provide the context needed to answer?"
+        ],
+        "if_missing": "Add context and the task first; do not substitute vague engagement slogans."
+      },
+      "limits": [
+        "This is not a validated fixed question template for improving recommendations."
+      ],
+      "source_units": [
+        "U0216"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q11",
+        "Q42"
+      ]
+    },
+    {
+      "id": "K02-086",
+      "title": "Verify counterexamples before using them in later content; mutual follows can grow from ongoing discussion",
+      "kind": "editorial",
+      "conclusion": "After readers provide counterexamples, verify them and add them to the next piece; clarify in discussion when conclusions apply only to some situations. Mutual following can occur between people who actually want to keep reading and exchanging ideas; existing code does not prove mass mutual-follow strategies work.",
+      "conditions": [
+        "First verify readers' additional facts and their applicable scope."
+      ],
+      "practical_meaning": "Turn interaction into corrections and new material; do not substitute mutual-follow counts for audience relevance.",
+      "check": {
+        "when": "When review or account advice concerns follow back, maintaining discussion, or subsequent topics.",
+        "needed": [
+          "Reader contributions",
+          "Verifiable evidence",
+          "Scope of the conclusion",
+          "Actual willingness to exchange ideas"
+        ],
+        "verify": [
+          "Verify counterexamples before using them",
+          "Check for independent evidence of mutual-follow strategy effectiveness"
+        ],
+        "if_missing": "Recommend verification and discussion without promising exposure from mass reciprocal following."
+      },
+      "limits": [
+        "Relationship coefficients cannot substitute for causal experiments on reciprocal following."
+      ],
+      "source_units": [
+        "U0217"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q11"
+      ]
+    },
+    {
+      "id": "K02-087",
+      "title": "The public direct coefficient for profile_click is 0",
+      "kind": "code",
+      "conclusion": "In the examined public fusion defaults, profile_click for opening the author's profile has a direct coefficient of 0. This is the prediction term's value at this weighting stage, not evidence that profile clicks have no later effects or are unused by every model.",
+      "conditions": [
+        "Limited to the public fusion defaults and corresponding service."
+      ],
+      "practical_meaning": "The profile should still communicate account value to visitors; click counts cannot directly become points at this stage.",
+      "check": {
+        "when": "When a draft calls profile clicks a direct bonus or, conversely, declares profiles useless.",
+        "needed": [
+          "Service and parameters",
+          "The behavior and subsequent goal being discussed"
+        ],
+        "verify": [
+          "Distinguish the direct coefficient from subsequent follows/inquiries",
+          "Limit the claim to this weighting stage"
+        ],
+        "if_missing": "State only that this default direct coefficient is 0; do not globally deny other uses."
+      },
+      "limits": [
+        "Profile clicks may lead to other actions; this claim does not establish their causal effect."
+      ],
+      "source_units": [
+        "U0218",
+        "U0219",
+        "U0220"
+      ],
+      "evidence": [
+        {
+          "source_id": "S043",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Profile-click default and separate fusion term"
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-088",
+      "title": "The public direct coefficient for follow_author is 4, applied to a follow prediction",
+      "kind": "code",
+      "conclusion": "The examined public fusion default gives follow_author a coefficient of 4, a prediction target distinct from profile_click; each new follower does not add four points to a post.",
+      "conditions": [
+        "The cited value is a prediction-target coefficient, not a count of completed follower growth."
+      ],
+      "practical_meaning": "Profile advice can distinguish visiting from wanting to keep following and show what the account will continue providing.",
+      "check": {
+        "when": "When a draft equates a new follower to four points or merges profile clicks and follows into one term.",
+        "needed": [
+          "Predicted follow value",
+          "Corresponding default",
+          "Actual target field"
+        ],
+        "verify": [
+          "The multiplier applies to a prediction, not follower growth",
+          "List it separately from profile_click"
+        ],
+        "if_missing": "Report only coefficient and target; do not convert an individual new follower into points."
+      },
+      "limits": [
+        "This term alone does not determine final exposure."
+      ],
+      "source_units": [
+        "U0218",
+        "U0219",
+        "U0220"
+      ],
+      "evidence": [
+        {
+          "source_id": "S043",
+          "link_indices": [
+            1,
+            2,
+            3
+          ],
+          "supports": "Follow-author default and separate prediction fusion"
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-089",
+      "title": "V8.2 content representation reads the author's name, account, and truncated bio",
+      "kind": "code",
+      "conclusion": "The public V8.2 renderer reads the author's name, account, and bio; a character limit is applied to the bio before it enters text input. This proves the model can see the bio in this flow, not that keyword stuffing adds points.",
+      "conditions": [
+        "Limited to the V8.2 content-representation processor and corresponding inputs."
+      ],
+      "practical_meaning": "A bio can accurately explain what you provide and keep key information clear; keyword stuffing is not a fixed optimization formula.",
+      "check": {
+        "when": "When a draft says the model cannot see the bio at all or recommends filling it with keywords to increase weight.",
+        "needed": [
+          "Renderer version",
+          "Bio input and truncation",
+          "Actual bio"
+        ],
+        "verify": [
+          "Retain author name, account, and bio as three inputs",
+          "Distinguish input existence from bonus effects"
+        ],
+        "if_missing": "Confirm this processor reads the bio without quantifying keyword effects or coverage across all models."
+      },
+      "limits": [
+        "This scope provides no numeric character limit; do not invent one. Not all production content representations necessarily use V8.2."
+      ],
+      "source_units": [
+        "U0221"
+      ],
+      "evidence": [
+        {
+          "source_id": "S044",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Author-field inputs and bio character-limit handling"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q44",
+        "Q47"
+      ]
+    },
+    {
+      "id": "K02-090",
+      "title": "A bio should explain what readers attracted by a post can receive next",
+      "kind": "editorial",
+      "conclusion": "After an AI-summary failure case attracts readers, \"Love technology, explore the future\" says little about future content. Be specific, for example: \"Testing AI tools in Chinese-language workflows. Keeping test conditions, failure cases, and reproducible steps.\"",
+      "conditions": [
+        "Bio promises should match what the account can consistently deliver."
+      ],
+      "practical_meaning": "Check continuity of reader expectations from post to bio, enabling a decision about whether to follow.",
+      "check": {
+        "when": "When review or account advice finds specific posts paired with a vague bio.",
+        "needed": [
+          "Topic of the post attracting visitors",
+          "The account's subsequent content",
+          "Current bio"
+        ],
+        "verify": [
+          "Does the bio explain audience, scope, and material?",
+          "Avoid promising content the account does not actually provide"
+        ],
+        "if_missing": "Suggest revisions from available material without assuming the account will cover one topic forever."
+      },
+      "limits": [
+        "This is reader-communication advice, not a bio-keyword bonus formula."
+      ],
+      "source_units": [
+        "U0222",
+        "U0223",
+        "U0225"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-091",
+      "title": "Use verifiable pinned content to deliver the bio's promise",
+      "kind": "editorial",
+      "conclusion": "Pin the piece that best demonstrates the bio: a clear topic, checkable sources, and explicit limits. A recipe account can promise \"single servings, a frying pan, substitutable ingredients\" and fulfill it with a pinned recipe; the format varies by account.",
+      "conditions": [
+        "The pinned post matches the account's actual capabilities, target readers, and later content."
+      ],
+      "practical_meaning": "Read the post, bio, and pinned post together to ensure visitors understand what they will receive in future.",
+      "check": {
+        "when": "When profile promises are abstract or the pinned post is disconnected from the content attracting readers.",
+        "needed": [
+          "Bio promise",
+          "Candidate pinned post",
+          "Sources and limits"
+        ],
+        "verify": [
+          "Can the pinned post actually demonstrate the promise?",
+          "Judge recipes, tools, and other content by their own tasks"
+        ],
+        "if_missing": "Identify gaps in promises and evidence; do not invent tested results."
+      },
+      "limits": [
+        "No pinned format has been shown to produce a fixed recommendation increase."
+      ],
+      "source_units": [
+        "U0224",
+        "U0225"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-092",
+      "title": "Editing a bio can clarify its promise, but no evidence shows changing words resets the recommendation audience",
+      "kind": "myth",
+      "conclusion": "Reading the profile together with the post attracting visitors can improve understanding of the account's future value; the original text contains no evidence that changing a few bio words resets the recommendation audience.",
+      "conditions": [
+        "Editorial communication effects and algorithmic audience resets are different claims."
+      ],
+      "practical_meaning": "Edit the bio to express content accurately, without making an unverified reset effect the objective or promise.",
+      "check": {
+        "when": "When a draft describes bio edits as resetting account labels or the recommendation audience.",
+        "needed": [
+          "Evidence of the specific reset mechanism",
+          "Comparable before/after audience experiments",
+          "Bio and content"
+        ],
+        "verify": [
+          "Do not infer audience resets from V8.2 reading the bio",
+          "Separate editing advice from causal algorithm claims"
+        ],
+        "if_missing": "Explain only the bio's communication value; mark audience-reset claims unverified."
+      },
+      "limits": [
+        "Absence of evidence does not mean the bio affects no model input."
+      ],
+      "source_units": [
+        "U0225"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q02",
+        "Q44"
+      ]
+    },
+    {
+      "id": "K02-093",
+      "title": "Fusion includes not-interested, mute, block, and report predictions together",
+      "kind": "code",
+      "conclusion": "The shared fusion formula includes negative predictions such as not interested, mute, block, and report; an increasing reply term alone does not establish that the full score increases. Negative predictions also operate at a different level from controls the reader has already applied.",
+      "conditions": [
+        "Discuss predictions for the current reader and candidate, with the corresponding fusion configuration."
+      ],
+      "practical_meaning": "When analyzing argumentative posts, consider signals of not wanting to see more alongside reply counts; the reply coefficient alone cannot determine whether to continue.",
+      "check": {
+        "when": "When a draft equates arguments generating more replies with guaranteed recommendation growth.",
+        "needed": [
+          "Reply prediction",
+          "Each negative prediction",
+          "Service coefficients",
+          "Other fusion terms"
+        ],
+        "verify": [
+          "Preserve every negative target name",
+          "Distinguish predicted probabilities from actual completed actions",
+          "Do not substitute one positive term for the total score"
+        ],
+        "if_missing": "State only that offsets may occur; without all predictions, the total-score direction cannot be calculated."
+      },
+      "limits": [
+        "Argument or criticism is not automatically negative feedback; actual predictions/behavior data are needed."
+      ],
+      "source_units": [
+        "U0226",
+        "U0229"
+      ],
+      "evidence": [
+        {
+          "source_id": "S002",
+          "link_indices": [
+            0
+          ],
+          "supports": "Joint fusion of positive and negative predictions"
+        },
+        {
+          "source_id": "S045",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Negative coefficients in the two services"
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-094",
+      "title": "An existing reader block or mute of the author triggers relationship filtering that removes related candidates",
+      "kind": "code",
+      "conclusion": "In the examined candidate pipeline, author_socialgraph_filter uses existing relationship data and removes related candidates when the reader has blocked or muted the author. This filters an established relationship, unlike predicting that the reader \"might mute/block.\"",
+      "conditions": [
+        "Limited to this candidate pipeline and the existing relationship between the current reader and author."
+      ],
+      "practical_meaning": "Reader controls are more than predictions that may affect a score; an existing block/mute can prevent related candidates before scoring.",
+      "check": {
+        "when": "When a draft describes all negative feedback as only small deductions or equates it with a platform-wide ban.",
+        "needed": [
+          "Current reader relationship",
+          "Candidate author",
+          "Pipeline entry point"
+        ],
+        "verify": [
+          "Distinguish actual relationship state from prediction",
+          "Limit the affected readers and candidate pipeline"
+        ],
+        "if_missing": "Without knowing whether someone blocked or muted the author, do not infer an individual case; state only the mechanism."
+      },
+      "limits": [
+        "The author does not disappear for every reader at every entry point."
+      ],
+      "source_units": [
+        "U0227"
+      ],
+      "evidence": [
+        {
+          "source_id": "S045",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "Relationship filter and pre-scoring filtering order"
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ]
+    },
+    {
+      "id": "K02-095",
+      "title": "Product criticism can retain methods and counterexamples without becoming personal attacks",
+      "kind": "editorial",
+      "conclusion": "Product comparisons can identify discrepancies between marketing and tests, supplying methods and counterexamples; even sharp discussion need not insult users' intelligence or repeatedly name unrelated people. Additional replies may not come from the audience you hope to retain.",
+      "conditions": [
+        "Criticism centers on verifiable tests and relevant issues."
+      ],
+      "practical_meaning": "Focus conflict on evidence and conditions, sustaining discussion useful for the next piece.",
+      "check": {
+        "when": "When review finds insults or irrelevant mentions used to prolong comments.",
+        "needed": [
+          "Specific tests",
+          "Original marketing claims",
+          "Counterexamples",
+          "Relevance of named people to the issue"
+        ],
+        "verify": [
+          "Is the criticism verifiable?",
+          "Remove personal attacks irrelevant to the argument",
+          "Check whether replies serve the target audience"
+        ],
+        "if_missing": "Keep evidence-based criticism and reduce certainty where evidence is lacking."
+      },
+      "limits": [
+        "No wording is guaranteed to avoid negative feedback or action under other rules."
+      ],
+      "source_units": [
+        "U0228"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-096",
+      "title": "Comment quality can distinguish added conditions, case questions, and exchanged insults",
+      "kind": "editorial",
+      "conclusion": "When comparing two pieces, assess whether comments add test conditions, ask follow-up questions about cases, or exchange insults. The first two can supply later material; even many insults do not justify continuing based solely on the reply coefficient.",
+      "conditions": [
+        "Comment text is visible, and assessment relates to the account's goals."
+      ],
+      "practical_meaning": "Use the information quality contributed by comments to inform later topics, rather than choosing a style to repeat solely by counts.",
+      "check": {
+        "when": "When reviewing argumentative posts or deciding whether to continue a content style.",
+        "needed": [
+          "Comment text",
+          "Article goal",
+          "Useful additions and questions"
+        ],
+        "verify": [
+          "Extract verifiable new conditions, counterexamples, and cases",
+          "Separate quantity from informational value"
+        ],
+        "if_missing": "Without comment text, do not assume comment quality or the negative-feedback proportion."
+      },
+      "limits": [
+        "Comment classification is not a substitute measurement of model scores."
+      ],
+      "source_units": [
+        "U0229"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K02-097",
+      "title": "Home Mixer and VM Ranker have different negative defaults",
+      "kind": "code",
+      "conclusion": "The two services have different public negative defaults; cite service and version when giving coefficients for not interested, mute, block, report, and similar targets, rather than merging them into one number set for all requests.",
+      "conditions": [
+        "Limited to the two public parameter sets in the same fixed snapshot; actual requests may additionally be affected by configuration."
+      ],
+      "practical_meaning": "Choose a service before constructing a numerical example; do not cherry-pick across services to exaggerate effects.",
+      "check": {
+        "when": "When a draft gives a universal negative-feedback deduction table or infers total score from reply growth.",
+        "needed": [
+          "Service name",
+          "Fixed version",
+          "Negative fields",
+          "Actual configuration"
+        ],
+        "verify": [
+          "Compare the two default sets",
+          "Calculate within one path only"
+        ],
+        "if_missing": "Report that differences exist; do not call defaults platform-wide without evidence of common configuration."
+      },
+      "limits": [
+        "The original text in this scope lists no specific negative values; do not invent a table for completeness."
+      ],
+      "source_units": [
+        "U0229"
+      ],
+      "evidence": [
+        {
+          "source_id": "S045",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Negative defaults listed separately in Home Mixer and VM Ranker"
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "entry": "x-assistant",
+  "response_language": "Follow the user's language, regardless of the English source language.",
+  "selection": "Honor explicit specialist selection. Otherwise choose the primary intent; add a step only when its output is needed for the user's task.",
+  "routes": [
+    {
+      "skill": "x-explain",
+      "intent": "A general factual or practical X/Twitter question without a claim-verification, review or diagnosis request.",
+      "minimum_input": "The question and relevant conversation context; no draft or account required.",
+      "fallback": "references/workflows/x-explain.md",
+      "result": "Direct answer, applicable conditions, practical action, original citations and unresolved limits."
+    },
+    {
+      "skill": "x-myth-check",
+      "intent": "A statement, viral tip, formula or guide whose truth/support is in question.",
+      "minimum_input": "The exact statement or accessible source; split supplied material into testable claims.",
+      "fallback": "references/workflows/x-myth-check.md",
+      "result": "Per-claim verdict, corrected wording, conditions, sources and practical consequence."
+    },
+    {
+      "skill": "x-format-advisor",
+      "intent": "Choose or compare long Post, Article and Thread for specific content or a publishing goal.",
+      "minimum_input": "Available topic/draft and goal; infer from material and mark assumptions.",
+      "fallback": "references/workflows/x-format-advisor.md",
+      "result": "Recommended format, material-specific packaging, alternative conditions and evidence."
+    },
+    {
+      "skill": "x-publish-checklist",
+      "intent": "Review or improve unpublished text/media and its publishing arrangements.",
+      "minimum_input": "Draft or actual publishing plan; review available parts and identify missing components.",
+      "fallback": "references/workflows/x-publish-checklist.md",
+      "result": "Full applicable-check ledger, measured text, usable opening, media plan, concrete edits and citations."
+    },
+    {
+      "skill": "x-review-posts",
+      "intent": "Inspect published posts/account or analyze supplied screenshots/exports for content improvements.",
+      "minimum_input": "Confirmed URL/account or supplied observation material; reuse existing evidence.",
+      "fallback": "references/workflows/x-review-posts.md",
+      "result": "Coverage-aware observations, per-post findings, prioritized specific improvements and citations."
+    },
+    {
+      "skill": "x-reach-diagnosis",
+      "intent": "Explain an observed exposure pattern or investigate low reach, longevity, format differences or suspected suppression.",
+      "minimum_input": "Observed phenomenon; identify measurement gaps without requiring all private analytics.",
+      "fallback": "references/workflows/x-reach-diagnosis.md",
+      "result": "Known observations, evidence-conditioned hypotheses, missing discriminators and next action."
+    }
+  ],
+  "combinations": [
+    {
+      "condition": "An undecided draft needs both format choice and review.",
+      "steps": [
+        "x-format-advisor",
+        "x-publish-checklist"
+      ],
+      "handoff": "Pass selected format, original material and rationale; review once in that format."
+    },
+    {
+      "condition": "Reach diagnosis requires reading linked posts that have not been observed.",
+      "steps": [
+        "x-review-posts",
+        "x-reach-diagnosis"
+      ],
+      "handoff": "Limit the first step to necessary collection; reuse identities, timestamps, metric scopes and coverage."
+    },
+    {
+      "condition": "An account review also asks what to publish next.",
+      "steps": [
+        "x-review-posts"
+      ],
+      "handoff": "Add diagnosis or format selection only for a concrete unresolved decision, not automatically."
+    },
+    {
+      "condition": "A follow-up supplies a selected format, screenshot or missing fact.",
+      "steps": [],
+      "handoff": "Resume the affected step with retained context; invalidate only evidence changed by the new material."
+    }
+  ],
+  "no_match": "For an X product question beyond the report, use x-explain and current primary sources. For an unrelated task, do not apply this package.",
+  "fallback_base": "The installed x-assistant skill root (the directory containing SKILL.md)."
+}

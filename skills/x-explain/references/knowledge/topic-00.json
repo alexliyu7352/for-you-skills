@@ -1,0 +1,339 @@
+{
+  "topic": "Report scope and use of evidence",
+  "claims": [
+    {
+      "id": "K00-001",
+      "title": "Questions awaiting verification should distinguish what is known, the gaps, and the current assessment",
+      "kind": "editorial",
+      "conclusion": "The following questions still require deployment records, event definitions, or real request data. What the public code already establishes, what information is currently missing, and what assessments can be made are listed separately under each item.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0512"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K00-002",
+      "title": "Research snapshots and the report revision date",
+      "kind": "editorial",
+      "conclusion": "The revision date is 2026-10-29 (Los Angeles time). This text was compiled from a shared conversation, a 23-page research report, and the latest version 7 manuscript. The original analysis is pinned to `5ed796374ea48ee26058aab66ab10c266bea2bef`; the October update was checked through `606b254b45be798bfaecfa8c23f5a9c51bc8000c`. Code snapshot dates in the text use the commits’ UTC dates; for major versions that fall on different calendar days across time zones, Los Angeles time is also listed. Dates in the official update notes are retained as written in the originals.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0660"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K00-003",
+      "title": "How historical parameters and the visibility refactor were checked",
+      "kind": "editorial",
+      "conclusion": "Historical parameters were compared using values from the same file across different commits; differences between Home Mixer and VM Ranker within the same commit were listed separately. Static checks covered conditions, call paths, index writes and reads, version differences, and formulas. The earlier examination of the latest visibility refactor also expanded and compared 14 groups of rule lists and fields. These were structural checks; the production safety service was not run.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0661"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K00-004",
+      "title": "Historical assertion groups must not be combined and presented as official integration tests",
+      "kind": "editorial",
+      "conclusion": "The original research retained results for 143 assertions from Python reimplementations of ranking and filtering, including consistency checks against 26 source files. The earlier manuscript-writing stage separately recorded 22 local assertions and checks against 8 source files for candidate counting, long/short interleaving, conversation display, and deduplication, as well as 14 weighted assertions and checks against 4 source files for reposts and dwell. These groups differ in scope; their counts must not be added together and advertised as that many official integration tests. This report revision read the results from the original verification package and did not present historical records as if all checks had been rerun in this round.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0662"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K00-005",
+      "title": "The verification scope of local functions, numeric results, and miniature simulations",
+      "kind": "editorial",
+      "conclusion": "Numeric boundaries, time loss, and some output forms came from earlier CPU checks that directly called the original Python/JAX functions or extracted unchanged pure functions. Those checks alone cannot establish the physical units of production events; upstream gaps concerning the CLICK_DWELL_TIME threshold of 10 and the definition of Article reading were retained following the supplementary checks in this report revision. Attention checks included self-built miniature computations, and ranking examples included mathematical reimplementations; neither is equivalent to running the complete production model. This report revision also rechecked source code for the author multiplier, cold-start eligibility, FairShare, dwell loss, media truncation, and related parameters, and recalculated the main numerical examples in the text.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0663"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K00-006",
+      "title": "An official recommendation score cannot be calculated from arbitrary body text",
+      "kind": "editorial",
+      "conclusion": "The named model output `CLICK_DWELL_TIME` has been traced through to the service response; the complete adapter that converts it into the identically named Home Mixer field has still not been found. Production model weights, some prompts, upstream event definitions, and per-request configurations have not been fully disclosed, so a credible “official recommendation score” cannot be calculated for arbitrary body text. The research also did not sign in to a user account to verify whether Under the Hood was available, or conduct real-account growth or causal exposure experiments.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0664"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K00-007",
+      "title": "Code facts, examples, and editorial advice have different roles",
+      "kind": "editorial",
+      "conclusion": "The character scenarios, price-quote copy, OCR drafts, and fixed-probability worked examples in the text are all illustrative. Parameters and eligibility are code facts; how to arrange the lead image, schedule updates, and choose topics are editorial suggestions based on those facts, and their effects still require actual reader data.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0665"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K00-008",
+      "title": "The scope of the Article candidate and visibility search",
+      "kind": "editorial",
+      "conclusion": "The Article/long Post investigation in this report revision also examined Home Mixer sources, filters, scorers, params, and candidate_pipeline, along with related types, visibility, and action interfaces. The candidate and visibility portion retained a bounded search record covering 103 files; the events portion recorded gaps between protocols, training reads, historical features, service conversions, and aggregation services. The search found no dedicated format multiplier, which does not prove that external services or undisclosed experiments have no format preferences.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0666"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K00-009",
+      "title": "V5 and V8.2 function checks and cross-version comparisons",
+      "kind": "editorial",
+      "conclusion": "A further 10 direct function checks were performed on the V5/V8.2 content processors, and all passed. The tests used lightweight in-memory objects with populated fields and substituted environment dependencies. They did not call the embedding service, load model weights, or simulate exposure. Of the 14 content-path files compared, 12 had identical blobs across the two commits; the other two files only added organization-badge image fields, leaving the relevant Article mappings unchanged. The number of earlier numeric assertions does not increase because of this textual revision, and these function checks are not described as a live format experiment.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0667"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K00-010",
+      "title": "The evidentiary roles of third-party observations and official product materials",
+      "kind": "editorial",
+      "conclusion": "The newly added empirical material consists of third-party authors’ own observational samples. Their comparison groups, promotional effort, and portions that cannot be independently recalculated are explained item by item. Official product pages are described according to retrieval results from 2026-10-29; page feature descriptions, historical revenue arrangements, and evidence about For You ranking are assessed separately.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0668"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K00-011",
+      "title": "Writing references used to reduce AI-like prose in the original text",
+      "kind": "editorial",
+      "conclusion": "The prose revision drew on [Humanizer](https://github.com/blader/humanizer/blob/main/SKILL.md) and [Anti-Vibe Writing’s Chinese-language rules](https://github.com/weijt606/anti-vibe-writing/blob/main/skills/anti-vibe-writing/references/chinese-patterns-to-remove.md): combine repetitive previews, use concrete subjects and verbs, reduce vague transitions, and retain conditions, data, and citations that would change the conclusion.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0669"
+      ],
+      "evidence": [
+        {
+          "source_id": "E001",
+          "link_indices": [
+            0
+          ],
+          "supports": "Writing rules consulted for the prose revision of the original report."
+        },
+        {
+          "source_id": "E002",
+          "link_indices": [
+            0
+          ],
+          "supports": "Writing rules consulted for the prose revision of the original report."
+        }
+      ],
+      "related_unknowns": []
+    }
+  ]
+}

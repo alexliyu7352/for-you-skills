@@ -1,0 +1,4592 @@
+{
+  "topic": "Cold start, FairShare, corrections and older posts, age and editing, reply scoring, multiple layers of reply spam, quote visibility, external links, and pinned posts",
+  "claims": [
+    {
+      "id": "K04-001",
+      "title": "200 is the Home-impression eligibility ceiling",
+      "kind": "code",
+      "conclusion": "The cold-start check is view_count_on_home.is_some_and(|imp| imp < impression_threshold), with a public default of threshold=200; the Home-impression field must be available and strictly below 200.",
+      "conditions": [
+        "The public defaults inspected",
+        "Other cold-start eligibility requirements are also satisfied"
+      ],
+      "practical_meaning": "200 determines whether a candidate may participate in this exploration selection; it is not a guarantee of initially showing the post to 200 people.",
+      "check": {
+        "when": "When explaining the cold-start threshold of 200",
+        "needed": [
+          "The candidate's view_count_on_home for that run",
+          "The actual impression_threshold"
+        ],
+        "verify": [
+          "Confirm that the field has a value",
+          "Compare using <200 rather than <=200"
+        ],
+        "if_missing": "If only the public view count is available, do not conclude that this eligibility requirement has been met or that eligibility has ended."
+      },
+      "limits": [
+        "Passing eligibility still requires subsequent selection",
+        "Public defaults cannot substitute for each request's configuration"
+      ],
+      "source_units": [
+        "U0328",
+        "U0329",
+        "U0330"
+      ],
+      "evidence": [
+        {
+          "source_id": "S057",
+          "link_indices": [
+            1
+          ],
+          "supports": "The is_some_and check and selection decision for Home impressions"
+        },
+        {
+          "source_id": "S058",
+          "link_indices": [
+            0
+          ],
+          "supports": "The default impression threshold of 200"
+        }
+      ],
+      "related_unknowns": [
+        "Q08",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-002",
+      "title": "The two-hour limit and fewer than 200 Home impressions must both hold",
+      "kind": "code",
+      "conclusion": "age <=7200 seconds and view_count_on_home <200 are joined by &&; both the post age and Home count must be available. Assuming the other conditions hold, a one-hour-old post with Home=199 passes these two checks; a ten-minute-old post with Home=200 does not; a three-hour-old post fails even with Home=10.",
+      "conditions": [
+        "The inspected max_post_age default is 7200 seconds",
+        "Check the fields for the same candidate batch in that run"
+      ],
+      "practical_meaning": "Low impressions cannot offset being too old, and being young cannot offset reaching the impression ceiling.",
+      "check": {
+        "when": "When reviewing a claim that being young or having low impressions is sufficient for cold start",
+        "needed": [
+          "Candidate age",
+          "Home impressions",
+          "The age and impression defaults"
+        ],
+        "verify": [
+          "Check age<=7200 and imp<200 individually",
+          "Confirm that && has not been rewritten as an OR condition"
+        ],
+        "if_missing": "Leave eligibility unknown; do not fill in internal fields using the time shown publicly or the total view count."
+      },
+      "limits": [
+        "Only the age and impression requirements are assessed here",
+        "All examples assume that the other eligibility requirements are met"
+      ],
+      "source_units": [
+        "U0330",
+        "U0333",
+        "U0334",
+        "U0335",
+        "U0336",
+        "U0338",
+        "U0339"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            0,
+            3
+          ],
+          "supports": "The age and impression defaults and the requirement that both hold"
+        }
+      ],
+      "related_unknowns": [
+        "Q08",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-003",
+      "title": "Basic eligibility is determined by reply and ordinary repost IDs",
+      "kind": "code",
+      "conclusion": "This cold-start basic-eligibility check requires no in_reply_to_tweet_id and no ordinary repost ID; the function does not check for plagiarism and does not exclude quoted_tweet_id. It should therefore be described as covering 'candidates that are neither replies nor ordinary reposts,' rather than as certification of original content.",
+      "conditions": [
+        "The cold-start basic-eligibility function",
+        "Both the reply ID and ordinary repost ID are empty"
+      ],
+      "practical_meaning": "A reply is not exempted from this exclusion because it is young, has low impressions, or comes from someone who mutually follows the viewer; the quote format itself is not excluded by this function.",
+      "check": {
+        "when": "When determining whether a post format can participate in this cold-start path",
+        "needed": [
+          "Reply ID",
+          "Ordinary repost ID",
+          "Quote ID"
+        ],
+        "verify": [
+          "Distinguish the reply, retweet, and quote fields",
+          "Check against the actual basic-eligibility requirements"
+        ],
+        "if_missing": "When the fields are unknown, do not substitute a visually displayed quote card or an 'original' label."
+      },
+      "limits": [
+        "Not excluding quotes does not mean that quotes necessarily pass all eligibility checks",
+        "The absence of a plagiarism check here does not mean other platform paths do not check"
+      ],
+      "source_units": [
+        "U0330",
+        "U0334",
+        "U0335",
+        "U0336",
+        "U0337",
+        "U0338",
+        "U0339"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            2
+          ],
+          "supports": "The field conditions for candidates that are neither replies nor ordinary reposts"
+        }
+      ],
+      "related_unknowns": [
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-004",
+      "title": "The 50,000-follower ceiling includes the boundary and requires a count to exist",
+      "kind": "code",
+      "conclusion": "The author's follower count must be known and <=50000; exactly 50000 passes the follower requirement, while a missing value cannot pass is_some_and.",
+      "conditions": [
+        "Using the inspected public ceiling of 50,000 followers",
+        "Other eligibility requirements are checked separately"
+      ],
+      "practical_meaning": "When checking a small account's eligibility, verify the value, the inclusive boundary, and whether the field exists.",
+      "check": {
+        "when": "When reviewing the 50,000-follower cold-start threshold",
+        "needed": [
+          "The candidate author's follower-count field",
+          "follower_cap"
+        ],
+        "verify": [
+          "Confirm that 50000 is included",
+          "Do not treat a missing field as zero followers"
+        ],
+        "if_missing": "An account being small does not by itself establish that the follower field for this candidate satisfies the requirement."
+      },
+      "limits": [
+        "Passing the follower requirement does not guarantee selection or display"
+      ],
+      "source_units": [
+        "U0330",
+        "U0334",
+        "U0335",
+        "U0336",
+        "U0337",
+        "U0338",
+        "U0339"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "The default follower ceiling and is_some_and eligibility"
+        }
+      ],
+      "related_unknowns": [
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-005",
+      "title": "Viewer and author experiment assignments are also cold-start eligibility requirements",
+      "kind": "code",
+      "conclusion": "Cold start also checks the combination of viewer arm and author corpus; satisfying only the age, follower, and impression conditions is still insufficient.",
+      "conditions": [
+        "cold_start_corpus_eligible(viewer_arm, author_corpus) holds"
+      ],
+      "practical_meaning": "If a particular account or viewer does not see an exploration effect, the three public numerical conditions alone are insufficient to establish that the program has failed.",
+      "check": {
+        "when": "When assessing whether a candidate actually obtained cold-start eligibility",
+        "needed": [
+          "viewer arm",
+          "author corpus",
+          "The actual parameters for that run"
+        ],
+        "verify": [
+          "Check the viewer arm decision and author corpus eligibility",
+          "Check the assignments together with the numerical thresholds"
+        ],
+        "if_missing": "Without assignment data, explain only the public conditions; do not reconstruct a match for this run."
+      },
+      "limits": [
+        "The public excerpts do not provide assignment results for every production request"
+      ],
+      "source_units": [
+        "U0330",
+        "U0334",
+        "U0335",
+        "U0336"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            1,
+            2,
+            3
+          ],
+          "supports": "viewer arm, author corpus, and combined eligibility"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-006",
+      "title": "Cold start requires its switch to be enabled and the request not to be a topic request",
+      "kind": "code",
+      "conclusion": "Cold-start processing additionally requires the corresponding switch to be enabled and excludes topic requests.",
+      "conditions": [
+        "The cold-start switch is enabled",
+        "The request is not a topic request"
+      ],
+      "practical_meaning": "Before discussing whether 'every young post is explored,' specify the request type and actual switch setting.",
+      "check": {
+        "when": "When applying cold-start rules to a particular request",
+        "needed": [
+          "Request type",
+          "The cold-start switch value"
+        ],
+        "verify": [
+          "Check the topic request decision",
+          "Check whether the switch is enabled"
+        ],
+        "if_missing": "Without the request type or switch value, do not promise that this step executes."
+      },
+      "limits": [
+        "Public defaults do not cover every experiment and request"
+      ],
+      "source_units": [
+        "U0336"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            4
+          ],
+          "supports": "The topic request and cold-start switch checks"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-007",
+      "title": "Cold start only processes candidates already retrieved and still present",
+      "kind": "code",
+      "conclusion": "Cold start can only process candidates that have entered this batch and passed earlier filtering; posts that were not retrieved or were removed by conditions such as already-seen or blocking filters are not re-added at this step merely because they are young.",
+      "conditions": [
+        "The post has entered the current candidate batch",
+        "It has passed earlier filters"
+      ],
+      "practical_meaning": "When diagnosing low impressions, first establish candidate eligibility and the retrieval source; do not focus only on cold-start age.",
+      "check": {
+        "when": "When explaining low impressions or a supposed failure to pass cold start",
+        "needed": [
+          "Retrieval-source records",
+          "Earlier-filter records",
+          "The candidate list entering the scorer"
+        ],
+        "verify": [
+          "Confirm that the candidate actually reached this step",
+          "Distinguish not being retrieved, being filtered out, and not being selected for exploration"
+        ],
+        "if_missing": "Without pipeline records, do not attribute public numbers to a particular step."
+      },
+      "limits": [
+        "Static code cannot reconstruct an individual post's actual candidate trajectory"
+      ],
+      "source_units": [
+        "U0336"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "Cold start operates on candidates"
+        },
+        {
+          "source_id": "S061",
+          "link_indices": [
+            2
+          ],
+          "supports": "The processing order of candidate filtering and scoring"
+        }
+      ],
+      "related_unknowns": [
+        "Q09",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K04-008",
+      "title": "Nonzero-score candidate positions use floor(0.97×N)",
+      "kind": "code",
+      "conclusion": "Eligibility also requires position_among_nonzero < floor(0.97×nonzero_count). When N=100, the last three posts are excluded; when N=20, rounding down excludes the last one. 'Excluding approximately the bottom 3%' is only an approximation.",
+      "conditions": [
+        "Compare ranking positions among nonzero-score candidates",
+        "N is the number of those nonzero-score candidates"
+      ],
+      "practical_meaning": "Rounding down has a noticeable effect in a small candidate pool; use the exact formula when checking.",
+      "check": {
+        "when": "When checking cold-start ranking eligibility or a claim about the 'bottom 3%'",
+        "needed": [
+          "The number N of nonzero-score candidates",
+          "The candidate's zero-based position"
+        ],
+        "verify": [
+          "Calculate floor(0.97×N)",
+          "Use a strict less-than comparison for the position"
+        ],
+        "if_missing": "Without the candidate pool and position, do not determine whether an individual post passes."
+      },
+      "limits": [
+        "The current nonzero-score pool is neither all posts on the platform nor the publicly displayed list"
+      ],
+      "source_units": [
+        "U0334",
+        "U0335",
+        "U0348"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            3
+          ],
+          "supports": "The position condition in combined eligibility"
+        },
+        {
+          "source_id": "S060",
+          "link_indices": [
+            0
+          ],
+          "supports": "Calculation of nonzero-score candidate positions"
+        }
+      ],
+      "related_unknowns": [
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-009",
+      "title": "The local validation of 199 versus 200 establishes only the boundary",
+      "kind": "observation",
+      "conclusion": "The report's earlier local reimplementation held other conditions fixed and found that 199 passes while 200 fails; it validates the eligibility comparison, not a process that first distributes every post to 200 people and then advances it to a higher tier.",
+      "conditions": [
+        "The local reimplementation described in the original report",
+        "Other conditions are held fixed"
+      ],
+      "practical_meaning": "This result can test how the threshold is expressed; it cannot justify inventing a traffic-pool advancement mechanism.",
+      "check": {
+        "when": "When citing this local validation",
+        "needed": [
+          "The conditions held fixed in the original test",
+          "The comparison that was actually validated"
+        ],
+        "verify": [
+          "Limit the conclusion to the 199/200 boundary",
+          "Do not present a single-condition test as a production distribution experiment"
+        ],
+        "if_missing": "If the complete experiment is unavailable, accurately convey only the validation scope stated in the original report."
+      },
+      "limits": [
+        "This was not a production A/B test",
+        "It did not demonstrate a guaranteed audience size or an advancement process"
+      ],
+      "source_units": [
+        "U0331"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q08",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-010",
+      "title": "Public view counts cannot substitute for Home impressions",
+      "kind": "code",
+      "conclusion": "Cold start reads view_count_on_home; public view counts can come from other entry points and include repeated views. A public count of 180 or 210 cannot identify a supposed test-pool tier; knowing only that the public count is 180 also does not allow the assumption that the Home field is 180.",
+      "conditions": [
+        "The comparison is between the internal Home count and the public view count"
+      ],
+      "practical_meaning": "When recording public data, state the measurement definition; similar numbers do not establish that two metrics are the same.",
+      "check": {
+        "when": "When using public view counts to judge cold-start progress",
+        "needed": [
+          "The definition of the actually visible metric",
+          "The corresponding record of view_count_on_home"
+        ],
+        "verify": [
+          "Distinguish Home, other entry points, and repeated views",
+          "Check whether the data corresponds record by record"
+        ],
+        "if_missing": "Without corresponding internal records, leave cold-start eligibility unknown."
+      },
+      "limits": [
+        "The official definition of view counts does not provide an individual post's internal Home field"
+      ],
+      "source_units": [
+        "U0332",
+        "U0338",
+        "U0339"
+      ],
+      "evidence": [
+        {
+          "source_id": "S057",
+          "link_indices": [
+            1
+          ],
+          "supports": "Eligibility uses the Home count"
+        },
+        {
+          "source_id": "S059",
+          "link_indices": [
+            0
+          ],
+          "supports": "The definition of public view counts covering multiple entry points and repeated views"
+        },
+        {
+          "source_id": "S035",
+          "link_indices": [
+            6
+          ],
+          "supports": "Separate fields for Home and general view counts"
+        }
+      ],
+      "related_unknowns": [
+        "Q08"
+      ]
+    },
+    {
+      "id": "K04-011",
+      "title": "The count cache has a TTL of sixty seconds",
+      "kind": "code",
+      "conclusion": "The engagement counts hydrator retrieves view_count and view_count_on_home in separate fields and configures a count cache with a sixty-second TTL; interpret the decision using the Home field obtained by the candidate for that run.",
+      "conditions": [
+        "The inspected public engagement counts hydrator",
+        "Whether the cache is hit depends on actual execution"
+      ],
+      "practical_meaning": "The instant the public total view count crosses 200 is not evidence that the recommendation mechanism has switched at precisely that moment.",
+      "check": {
+        "when": "When determining whether counts are real-time or when cold start ends",
+        "needed": [
+          "The time the candidate read the value",
+          "Cache-hit records",
+          "Service latency and count-update logs"
+        ],
+        "verify": [
+          "Check the sixty-second TTL configuration",
+          "Separate the value read from the time of the public count change"
+        ],
+        "if_missing": "Without runtime logs, do not claim a fixed delay or a real-time switching moment."
+      },
+      "limits": [
+        "TTL does not mean every read is delayed by exactly sixty seconds",
+        "Actual cache hits and service synchronization status are not known"
+      ],
+      "source_units": [
+        "U0340"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            6,
+            7
+          ],
+          "supports": "Separate count fields and the sixty-second TTL"
+        }
+      ],
+      "related_unknowns": [
+        "Q08"
+      ]
+    },
+    {
+      "id": "K04-012",
+      "title": "The main cold-start thresholds already existed on October 9",
+      "kind": "code",
+      "conclusion": "The 2026-10-09 public snapshot checked by the report already contained these main thresholds; the two-hour requirement and fewer than 200 Home impressions cannot be described as newly added on October 28.",
+      "conditions": [
+        "Limited to the history of the public snapshots that were checked"
+      ],
+      "practical_meaning": "When discussing update timing, distinguish a feature already existing, changes to defaults, and deployment time.",
+      "check": {
+        "when": "When reviewing when cold start was added",
+        "needed": [
+          "The pinned October 9 snapshot",
+          "The later snapshot being compared"
+        ],
+        "verify": [
+          "Check the same parameters and thresholds",
+          "Do not equate a commit date with the date of full deployment"
+        ],
+        "if_missing": "Without a version comparison, do not conclude when the feature was added."
+      },
+      "limits": [
+        "Showing that an earlier snapshot contained it does not establish its initial launch date"
+      ],
+      "source_units": [
+        "U0333"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            5
+          ],
+          "supports": "The October 9 snapshot already contained the main thresholds"
+        }
+      ],
+      "related_unknowns": [
+        "Q01",
+        "Q02"
+      ]
+    },
+    {
+      "id": "K04-013",
+      "title": "Beta sampling uses actual likes and Home counts",
+      "kind": "code",
+      "conclusion": "Thompson sampling is enabled by default and reads fav_count and view_count_on_home. Restating the formula: n=impression_scale×view_count_on_home (default scale=1); x=min(max(fav_count,0),n); alpha=0.75+x; beta=49.25+max(n−x,0); each post has sampled_reward=sample(Beta(alpha,beta)).",
+      "conditions": [
+        "Candidates that pass all cold-start eligibility checks",
+        "Thompson sampling is enabled and its parameters are valid"
+      ],
+      "practical_meaning": "Actual likes and Home impressions are used here for the exploration distribution, a different use from the main fusion's 'coefficient multiplied by behavior prediction.'",
+      "check": {
+        "when": "When explaining how cold start uses early engagement",
+        "needed": [
+          "fav_count",
+          "view_count_on_home",
+          "impression_scale",
+          "alpha0, beta0, and the sampling switch"
+        ],
+        "verify": [
+          "Retain the nonnegative clipping of fav_count and its cap at n",
+          "Check alpha0=0.75 and beta0=49.25",
+          "Sample from a Beta distribution for each post"
+        ],
+        "if_missing": "Without runtime fields, provide only the formula; do not calculate a particular candidate's actual reward."
+      },
+      "limits": [
+        "The formula is a restatement from the original report, not a verbatim source-code quotation",
+        "General total view counts cannot replace Home in the denominator"
+      ],
+      "source_units": [
+        "U0341",
+        "U0342",
+        "U0343"
+      ],
+      "evidence": [
+        {
+          "source_id": "S036",
+          "link_indices": [
+            0,
+            1,
+            3
+          ],
+          "supports": "Defaults, Beta parameters, the sampling switch, and selection"
+        }
+      ],
+      "related_unknowns": [
+        "Q08",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-014",
+      "title": "1.5% is the exploration prior mean",
+      "kind": "code",
+      "conclusion": "0.75/(0.75+49.25)=1.5% is the prior mean of the Beta exploration distribution; it is neither a guaranteed 1.5% share of traffic for each post nor Phoenix's prediction of the current viewer's probability of liking it.",
+      "conditions": [
+        "Using the alpha0 and beta0 inspected in the report"
+      ],
+      "practical_meaning": "This number describes the sampling distribution before evidence is incorporated; keep it separate from impression promises and personalized predictions.",
+      "check": {
+        "when": "When reviewing the meaning of '1.5%'",
+        "needed": [
+          "The prior parameters",
+          "The denominator of the percentage being claimed"
+        ],
+        "verify": [
+          "Verify the prior-mean calculation",
+          "Confirm that it has not been rewritten as a traffic share or a model prediction of liking"
+        ],
+        "if_missing": "If the denominator and path cannot be confirmed, do not use this percentage to promise outcomes."
+      },
+      "limits": [
+        "The prior mean is not the result of a single sample"
+      ],
+      "source_units": [
+        "U0344"
+      ],
+      "evidence": [
+        {
+          "source_id": "S036",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Prior parameters and Beta construction"
+        }
+      ],
+      "related_unknowns": [
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-015",
+      "title": "Cold-start selection has two stages: sampling and personalized comparison",
+      "kind": "code",
+      "conclusion": "The public defaults first retain the top_k=2 posts with the highest sampled values, then choose whichever of those two has the highest ranking score for the current viewer. A higher observed like rate guarantees neither a higher sample on every run nor the final win.",
+      "conditions": [
+        "Sampling is enabled and valid",
+        "The default is top_k=2",
+        "The candidates are already eligible"
+      ],
+      "practical_meaning": "Exploration considers both statistical uncertainty and fit for the current viewer; it cannot be reduced to sorting by observed like rate.",
+      "check": {
+        "when": "When determining which post will receive cold-start exploration",
+        "needed": [
+          "All eligible candidates",
+          "The sampled_reward values for each run",
+          "The ranking scores for the current viewer",
+          "top_k"
+        ],
+        "verify": [
+          "First take the top k by sampled value",
+          "Then select one post by score for the current viewer"
+        ],
+        "if_missing": "Without the candidate pool, sampled values, and scores, do not predict a single winning post."
+      },
+      "limits": [
+        "Random sampling results and current-viewer scores are both actual-request data"
+      ],
+      "source_units": [
+        "U0341",
+        "U0342",
+        "U0343",
+        "U0344",
+        "U0346"
+      ],
+      "evidence": [
+        {
+          "source_id": "S036",
+          "link_indices": [
+            0,
+            2,
+            3
+          ],
+          "supports": "The top k by sampling and secondary selection by score"
+        }
+      ],
+      "related_unknowns": [
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-016",
+      "title": "A checkable counterexample when only two candidates are eligible",
+      "kind": "code",
+      "conclusion": "If exactly two candidates are eligible for that run and top_k=2, both enter the final comparison; the one with the higher score wins, rather than invariably the one with the higher observed like rate. Sampling affects which candidates enter this final comparison only when there are more than two candidates.",
+      "conditions": [
+        "Exactly two posts meet all eligibility requirements",
+        "The default is top_k=2",
+        "The final scores being compared are different"
+      ],
+      "practical_meaning": "This is a concrete counterexample to the claim that 'the highest early like rate always gets exploration.'",
+      "check": {
+        "when": "When checking a claim that the highest like rate must win",
+        "needed": [
+          "The number of eligible candidates",
+          "The two posts' scores",
+          "top_k"
+        ],
+        "verify": [
+          "Confirm that both posts are retained by top_k",
+          "Compare the scores for the current viewer rather than only like rate"
+        ],
+        "if_missing": "If the candidate count is unknown, do not claim that this special case describes the actual request."
+      },
+      "limits": [
+        "This conditional example is not an observation of actual traffic",
+        "It does not describe tie-break behavior when scores are equal"
+      ],
+      "source_units": [
+        "U0345"
+      ],
+      "evidence": [
+        {
+          "source_id": "S036",
+          "link_indices": [
+            2
+          ],
+          "supports": "Retaining k posts by sampling, then selecting by score"
+        }
+      ],
+      "related_unknowns": [
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-017",
+      "title": "Invalid or disabled sampling falls back to highest-score selection",
+      "kind": "code",
+      "conclusion": "When Thompson sampling is disabled, selection uses score directly; top_k=0 or prior parameters that do not satisfy the conditions also cause a fallback to highest-score selection.",
+      "conditions": [
+        "The corresponding sampling switch or parameters trigger the fallback"
+      ],
+      "practical_meaning": "When explaining actual cold start, first check whether Beta sampling was used at all; a function name alone does not justify assuming random exploration.",
+      "check": {
+        "when": "When analyzing the cold-start fallback path",
+        "needed": [
+          "The sampling switch",
+          "top_k",
+          "Validity of the prior parameters"
+        ],
+        "verify": [
+          "Check the disabled-sampling, zero-k, and invalid-prior branches",
+          "Confirm that the fallback selects the highest score"
+        ],
+        "if_missing": "Without configuration data, explain the possible paths side by side without asserting which executed."
+      },
+      "limits": [
+        "The public fallback logic does not provide the proportion of production calls using it"
+      ],
+      "source_units": [
+        "U0345"
+      ],
+      "evidence": [
+        {
+          "source_id": "S036",
+          "link_indices": [
+            1,
+            2,
+            3
+          ],
+          "supports": "Highest-score selection, parameter validation, and the sampling switch"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-018",
+      "title": "Concentrated likes from a profile page do not establish control over exploration position",
+      "kind": "myth",
+      "conclusion": "The original report does not support the claim that 'concentrating likes from the profile page lets you control cold-start position': early fav_count does participate, but the denominator is the Home count, and the process is also constrained by sources, experiment assignments, other eligibility requirements, sampling, and the score for the current viewer.",
+      "conditions": [
+        "Evaluating only inferences from the inspected cold-start mechanism"
+      ],
+      "practical_meaning": "Actual feedback can be recorded and used to improve content; like counts from a particular source cannot be converted into a stable ranking manipulation.",
+      "check": {
+        "when": "When reviewing claims about manipulating exploration position with concentrated likes",
+        "needed": [
+          "Engagement sources and count definitions",
+          "Complete eligibility requirements",
+          "Candidate and scoring records for that run"
+        ],
+        "verify": [
+          "Distinguish likes as an input from final selection",
+          "Check for omission of the Home denominator, assignments, and score"
+        ],
+        "if_missing": "Without actual-request data, do not promise position or traffic effects."
+      },
+      "limits": [
+        "This does not deny that likes are an input",
+        "It does not guarantee an effect from concentrated engagement"
+      ],
+      "source_units": [
+        "U0346"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            1,
+            2,
+            3
+          ],
+          "supports": "Assignments and eligibility"
+        },
+        {
+          "source_id": "S036",
+          "link_indices": [
+            1,
+            2,
+            3
+          ],
+          "supports": "Count-based sampling and final selection by score"
+        }
+      ],
+      "related_unknowns": [
+        "Q08",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-019",
+      "title": "The default target is the sixteenth candidate in score order",
+      "kind": "code",
+      "conclusion": "ColdStartSlotMin=15 and ColdStartSlotMax=16; random_range(lo..hi) excludes the upper bound, so the default can select only zero-based index 15, the sixteenth candidate in score order. If the score pool has fewer than sixteen posts, lo>=hi and this step produces no target.",
+      "conditions": [
+        "The inspected slot defaults are [15,16)",
+        "A target is obtained only if the score pool is large enough"
+      ],
+      "practical_meaning": "This is not a choice between fifteenth and sixteenth place, and a target cannot be generated on every run.",
+      "check": {
+        "when": "When reviewing 'sixteenth place' or the target slot",
+        "needed": [
+          "The slot min/max",
+          "The size of the score pool",
+          "The zero-based index definition"
+        ],
+        "verify": [
+          "Check that the upper bound is excluded",
+          "Check lo>=hi when there are fewer than sixteen posts"
+        ],
+        "if_missing": "Without the pool size and parameters, do not guarantee that a target exists."
+      },
+      "limits": [
+        "This is the position of the target score, not the final visible position"
+      ],
+      "source_units": [
+        "U0347"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            0
+          ],
+          "supports": "Slot defaults"
+        },
+        {
+          "source_id": "S060",
+          "link_indices": [
+            1
+          ],
+          "supports": "The upper bound and range check for random_range"
+        }
+      ],
+      "related_unknowns": [
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-020",
+      "title": "Selection raises the score using max, for at most one post per run",
+      "kind": "code",
+      "conclusion": "At most one post is selected per run, and its score becomes max(original score,target score); a candidate already above the target needs no further score increase.",
+      "conditions": [
+        "The candidate is selected by this step",
+        "A valid target score exists"
+      ],
+      "practical_meaning": "Understand this as reaching a target score floor, not as a fixed additional bonus or multiple reserved slots.",
+      "check": {
+        "when": "When calculating the cold-start score adjustment",
+        "needed": [
+          "Original score",
+          "Target score",
+          "Selected candidate ID"
+        ],
+        "verify": [
+          "Apply max rather than a fixed addition",
+          "Check the single selected candidate for that run"
+        ],
+        "if_missing": "Without both scores, do not estimate the size of the increase."
+      },
+      "limits": [
+        "This describes only the score adjustment at this stage",
+        "Subsequent processing still affects the final result"
+      ],
+      "source_units": [
+        "U0348"
+      ],
+      "evidence": [
+        {
+          "source_id": "S036",
+          "link_indices": [
+            3
+          ],
+          "supports": "The single selected candidate and the max-based score increase"
+        }
+      ],
+      "related_unknowns": [
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-021",
+      "title": "The cold-start target does not guarantee the sixteenth position on the final page",
+      "kind": "code",
+      "conclusion": "The shared VM flow can apply author diversity and the OON multiplier after cold start, followed by sorting, visibility filtering, and interleaving with ads and modules; cold_start_lift_to_rank=15 does not guarantee that the post will be the sixteenth visible item on the final Home timeline.",
+      "conditions": [
+        "Subject to the scoring and display path used by the particular request"
+      ],
+      "practical_meaning": "The target rank is an intermediate calculation, not a reserved seat on the final page.",
+      "check": {
+        "when": "When mapping a cold-start rank to final display",
+        "needed": [
+          "Subsequent score adjustments",
+          "Final sorting and visibility results",
+          "Interleaving records"
+        ],
+        "verify": [
+          "Trace whether further adjustments occur after cold start",
+          "Separate the candidate's score rank from the item's page position"
+        ],
+        "if_missing": "Without records for the complete chain, do not promise a visible rank or display."
+      },
+      "limits": [
+        "Public code cannot determine the final interface for every request"
+      ],
+      "source_units": [
+        "U0349"
+      ],
+      "evidence": [
+        {
+          "source_id": "S060",
+          "link_indices": [
+            2,
+            4,
+            7
+          ],
+          "supports": "Cold-start decision replay, subsequent author/OON adjustments, and interleaving"
+        }
+      ],
+      "related_unknowns": [
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-022",
+      "title": "Local Home Mixer and VM have different author-diversity defaults",
+      "kind": "code",
+      "conclusion": "The local Home Mixer weights explicitly disable author diversity, while the public VM default enables it; whether the request uses the local fallback changes the subsequent processing path.",
+      "conditions": [
+        "Limited to the versions and paths inspected in the original report"
+      ],
+      "practical_meaning": "To check how a target score becomes a rank, first establish the actual service and fallback path.",
+      "check": {
+        "when": "When comparing processing after cold start or default configurations",
+        "needed": [
+          "Whether RPC fallback occurred",
+          "The actual source of weights",
+          "The corresponding service parameters"
+        ],
+        "verify": [
+          "Distinguish the local Home Mixer defaults from VM defaults",
+          "Check the author diversity switch"
+        ],
+        "if_missing": "Without knowing the path, do not generalize one set of defaults to all requests."
+      },
+      "limits": [
+        "The same commit does not mean all paths have identical defaults"
+      ],
+      "source_units": [
+        "U0349"
+      ],
+      "evidence": [
+        {
+          "source_id": "S012",
+          "link_indices": [
+            2,
+            4
+          ],
+          "supports": "Local weighting, RPC fallback, and the source of VM parameters"
+        },
+        {
+          "source_id": "S060",
+          "link_indices": [
+            5,
+            6
+          ],
+          "supports": "Author diversity enabled in VM and disabled in local Home Mixer"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-023",
+      "title": "The two-hour window does not require continuous replying",
+      "kind": "editorial",
+      "conclusion": "Two hours is the time window for exploration eligibility; the original report found no requirement for authors to keep replying throughout the first two hours. Add missing conditions to the content, and check before answering questions that introduce a new scenario.",
+      "conditions": [
+        "Add information in response to actual questions"
+      ],
+      "practical_meaning": "Use effort after publication to correct errors, supply missing conditions, and solve specific questions, rather than mechanically maintain a reply frequency.",
+      "check": {
+        "when": "When planning replies after publication",
+        "needed": [
+          "The questions actually received",
+          "Evidence and conditions that need to be added"
+        ],
+        "verify": [
+          "Confirm that each reply addresses a specific gap",
+          "Distinguish editorial advice from programmatic eligibility"
+        ],
+        "if_missing": "When there is no new information, do not treat continuous replying as a required algorithmic action."
+      },
+      "limits": [
+        "This is editorial advice",
+        "No causal effect of reply frequency on impressions has been established"
+      ],
+      "source_units": [
+        "U0350"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "Cold-start timing and the scope of eligibility"
+        },
+        {
+          "source_id": "S036",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "Cold-start selection rather than the author's reply frequency"
+        }
+      ],
+      "related_unknowns": [
+        "Q08",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-024",
+      "title": "Cold-start observations should record subject matter, changes, and time",
+      "kind": "editorial",
+      "conclusion": "When evaluating a post, record its subject matter, what was changed, and the observation time; a temporarily unchanged public count is insufficient to label it a 'failure to pass cold start.'",
+      "conditions": [
+        "Conducting a review of posting outcomes"
+      ],
+      "practical_meaning": "Comparable observation records help distinguish content changes from observation windows and reduce forced attribution of temporary stagnation to an internal mechanism.",
+      "check": {
+        "when": "When reviewing early impressions",
+        "needed": [
+          "Subject matter",
+          "Publication and observation times",
+          "Change records",
+          "Definitions of the visible metrics"
+        ],
+        "verify": [
+          "Align observation windows",
+          "Record observable changes separately from speculation about internal eligibility"
+        ],
+        "if_missing": "If records are missing, describe the phenomenon and leave the cause unknown."
+      },
+      "limits": [
+        "This editorial observation method does not provide a causal diagnosis"
+      ],
+      "source_units": [
+        "U0350"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q08",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-025",
+      "title": "NewUserMinEngagementFilter refers to new viewers and is disabled by default",
+      "kind": "code",
+      "conclusion": "NewUserMinEngagementFilter reads query.user_id, meaning the viewer currently looking at the recommendation feed; its public enablement default is false. It therefore cannot establish that new authors must first age their accounts for a few days or accumulate a few likes.",
+      "conditions": [
+        "Limited to the inspected public implementation and default of this filter"
+      ],
+      "practical_meaning": "When explaining account cold start, first check whom the parameter refers to; avoid transferring a viewer condition to an author.",
+      "check": {
+        "when": "When reviewing rules about warming up new accounts or first accumulating engagement",
+        "needed": [
+          "The filter being cited",
+          "Whom query.user_id refers to",
+          "The Enable default"
+        ],
+        "verify": [
+          "Confirm that NewUser refers to the viewer",
+          "Check that the enablement default is false"
+        ],
+        "if_missing": "Without other direct evidence, do not infer a required number of account-warming days or likes for authors."
+      },
+      "limits": [
+        "This filter does not establish that all other author-eligibility requirements are absent"
+      ],
+      "source_units": [
+        "U0351"
+      ],
+      "evidence": [
+        {
+          "source_id": "S062",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The subject of query.user_id and the enablement default of false"
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ]
+    },
+    {
+      "id": "K04-026",
+      "title": "New authors can start by clearly presenting themselves and one concrete answer",
+      "kind": "editorial",
+      "conclusion": "New authors can write a clear bio, organize their pinned content, answer a specific question with complete supporting material, and then add information in response to actual questions; 50,000 followers, two hours, and 200 Home impressions only help explain one exploration path and cannot guarantee traffic to newly registered accounts.",
+      "conditions": [
+        "An initial body of content and an entry point to profile information are needed"
+      ],
+      "practical_meaning": "An actionable step is to show readers what the account offers and make its initial content independently checkable.",
+      "check": {
+        "when": "When reviewing content or giving advice for a new author",
+        "needed": [
+          "Bio",
+          "Pinned content",
+          "One specific audience question",
+          "Supporting material"
+        ],
+        "verify": [
+          "Check whether identity and content focus are clear",
+          "Confirm that the answer is complete and can be supplemented based on feedback"
+        ],
+        "if_missing": "When information is incomplete, prioritize the content and background; do not promise an impression count after thresholds are met."
+      },
+      "limits": [
+        "Editorial advice is not a recommendation-score formula"
+      ],
+      "source_units": [
+        "U0352"
+      ],
+      "evidence": [
+        {
+          "source_id": "S057",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The limited scope of cold-start eligibility and selection"
+        },
+        {
+          "source_id": "S058",
+          "link_indices": [
+            0
+          ],
+          "supports": "The public defaults of 50,000 followers, 7200 seconds, and 200"
+        }
+      ],
+      "related_unknowns": [
+        "Q09"
+      ]
+    },
+    {
+      "id": "K04-027",
+      "title": "FairShare allocates slots by source before model scoring",
+      "kind": "code",
+      "conclusion": "Excess candidates are truncated before scoring; FairShareRankingFilter allocates limited slots in proportion to their sources, reducing the bias of truncating solely by position in a flattened list.",
+      "conditions": [
+        "This preliminary-filtering step is reached",
+        "Truncation occurs when the candidate count exceeds the budget"
+      ],
+      "practical_meaning": "It affects the opportunity to enter the model and cannot be directly equated with impression allocation or the final ranking of new posts.",
+      "check": {
+        "when": "When explaining FairShare's role",
+        "needed": [
+          "The input list for preliminary filtering",
+          "Source distribution",
+          "The candidate budget",
+          "The scoring execution order"
+        ],
+        "verify": [
+          "Confirm that it occurs before model scoring",
+          "Distinguish retaining candidates from final display"
+        ],
+        "if_missing": "Without request data, describe only the mechanism; do not estimate reach gains."
+      },
+      "limits": [
+        "It does not guarantee that all new posts enter the model or receive impressions"
+      ],
+      "source_units": [
+        "U0353"
+      ],
+      "evidence": [
+        {
+          "source_id": "S016",
+          "link_indices": [
+            0
+          ],
+          "supports": "The newly added preliminary-filtering implementation"
+        },
+        {
+          "source_id": "S061",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Allocation by source and its position before scoring"
+        }
+      ],
+      "related_unknowns": [
+        "Q10"
+      ]
+    },
+    {
+      "id": "K04-028",
+      "title": "FairShare was publicly added and enabled by default on successive dates",
+      "kind": "code",
+      "conclusion": "7f2ca2b914cadac591ea7fceec0c477e473d3dee added FairShare on 2026-10-21 00:52:08 UTC (PDT 10-20 17:52:08), with EnableFairShareRanking=false and a budget of 2800; 989fb91254d461bf4b9df53fb12d5c9a61c2b354 changed it to true on 10-22 06:49:38 UTC (PDT 10-21 23:49:38), with the budget still 2800.",
+      "conditions": [
+        "The listed pinned public commits",
+        "PDT is the Los Angeles time stated in the report"
+      ],
+      "practical_meaning": "This is a concrete example of a feature existing before its public default changes; reported dates should specify the time zone.",
+      "check": {
+        "when": "When reviewing the date FairShare was added or enabled",
+        "needed": [
+          "The two pinned commits",
+          "UTC and PDT times",
+          "The switch and budget diff"
+        ],
+        "verify": [
+          "Check the addition and default change separately",
+          "Retain the complete time-zone information and commit identifiers"
+        ],
+        "if_missing": "Without deployment records, report only public history; do not announce full rollout."
+      },
+      "limits": [
+        "Commit time is not the time of full rollout",
+        "A file's existence does not establish the share of traffic affected or the outcome"
+      ],
+      "source_units": [
+        "U0354",
+        "U0355",
+        "U0356"
+      ],
+      "evidence": [
+        {
+          "source_id": "S016",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The added implementation, false/true defaults, budget, and the two commits"
+        }
+      ],
+      "related_unknowns": [
+        "Q01",
+        "Q02",
+        "Q10"
+      ]
+    },
+    {
+      "id": "K04-029",
+      "title": "FairShare groups by served_type rather than post age",
+      "kind": "code",
+      "conclusion": "It first groups by each candidate's own served_type; only when that is missing does it use the served type of the first retrieval source. Cold has a separate ForYouPhoenixRetrievalCold type, and ZeroFav also has its own category; grouping does not read age, the author's follower count, or like rate.",
+      "conditions": [
+        "FairShare source grouping is running"
+      ],
+      "practical_meaning": "It protects sources' proportional opportunities to enter the model; it does not directly exempt all new posts from truncation.",
+      "check": {
+        "when": "When determining which FairShare group a post belongs to",
+        "needed": [
+          "The candidate's served_type",
+          "The order of retrieval sources"
+        ],
+        "verify": [
+          "Use the candidate's served_type first",
+          "Use the first retrieval source only if that field is missing",
+          "Check the Cold and ZeroFav categories"
+        ],
+        "if_missing": "Without source fields, do not guess the group from youth, few likes, or a small account."
+      },
+      "limits": [
+        "Source names are not equivalent to post-by-post ordering by age or quality"
+      ],
+      "source_units": [
+        "U0357"
+      ],
+      "evidence": [
+        {
+          "source_id": "S061",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The grouping fallback rule and Cold/ZeroFav served types"
+        }
+      ],
+      "related_unknowns": [
+        "Q10"
+      ]
+    },
+    {
+      "id": "K04-030",
+      "title": "FairShare allocates its budget using the largest-remainder method",
+      "kind": "code",
+      "conclusion": "total=sum(source_counts); when total>budget, allocation_i=floor(source_count_i×budget/total), and remaining slots are added back in descending order of remainder; equal remainders are handled in the order the source groups appeared.",
+      "conditions": [
+        "The total candidate count exceeds the budget"
+      ],
+      "practical_meaning": "Checking quotas requires the original source counts and group order; simply rounding percentages to the nearest whole number can produce the wrong result.",
+      "check": {
+        "when": "When calculating FairShare quotas",
+        "needed": [
+          "source_counts",
+          "budget",
+          "The order in which source groups appeared"
+        ],
+        "verify": [
+          "First round down",
+          "Allocate remaining slots by largest remainder",
+          "Break ties in the order the groups appeared"
+        ],
+        "if_missing": "Without the group order, leave allocation in ties unknown."
+      },
+      "limits": [
+        "The formula restates the process in the original report",
+        "The quotas count candidates, not viewers"
+      ],
+      "source_units": [
+        "U0358",
+        "U0359",
+        "U0360"
+      ],
+      "evidence": [
+        {
+          "source_id": "S061",
+          "link_indices": [
+            0
+          ],
+          "supports": "Proportional allocation with rounding down, remainder allocation, and tie order"
+        }
+      ],
+      "related_unknowns": [
+        "Q10"
+      ]
+    },
+    {
+      "id": "K04-031",
+      "title": "FairShare still takes the first posts in each group's original order",
+      "kind": "code",
+      "conclusion": "After a source receives allocation_i, the first allocation_i posts in that group's original order are retained; this function does not first reorder posts within a group by age, low impressions, or high likes.",
+      "conditions": [
+        "The source has received a quota"
+      ],
+      "practical_meaning": "Even when a source is protected, candidates later in that group may still be removed.",
+      "check": {
+        "when": "When determining whether FairShare retains a candidate",
+        "needed": [
+          "The original order within the source group",
+          "That group's quota"
+        ],
+        "verify": [
+          "Take the first allocation_i in the original order",
+          "Do not additionally assume priority by age or like count"
+        ],
+        "if_missing": "Without the original within-group order, the specific retained list cannot be determined."
+      },
+      "limits": [
+        "A source quota does not guarantee that every member of the source survives"
+      ],
+      "source_units": [
+        "U0358",
+        "U0359",
+        "U0360"
+      ],
+      "evidence": [
+        {
+          "source_id": "S061",
+          "link_indices": [
+            0
+          ],
+          "supports": "Truncation in the original order within a group"
+        }
+      ],
+      "related_unknowns": [
+        "Q10"
+      ]
+    },
+    {
+      "id": "K04-032",
+      "title": "FairShare retains everything when the budget is not exceeded",
+      "kind": "code",
+      "conclusion": "When total<=budget, FairShare retains all candidates; this step causes no additional elimination.",
+      "conditions": [
+        "The total candidate count does not exceed the budget for that run"
+      ],
+      "practical_meaning": "Insufficient impressions may arise at other stages; every instance of low impressions cannot be attributed to FairShare.",
+      "check": {
+        "when": "When determining whether FairShare actually truncated candidates",
+        "needed": [
+          "The total input count at this step",
+          "The budget for that run"
+        ],
+        "verify": [
+          "Compare total<=budget",
+          "If it holds, confirm that this step does not truncate"
+        ],
+        "if_missing": "Without the candidate count, do not conclude that truncation occurred."
+      },
+      "limits": [
+        "Other filtering, scoring, and display steps still affect candidates"
+      ],
+      "source_units": [
+        "U0358",
+        "U0359",
+        "U0360"
+      ],
+      "evidence": [
+        {
+          "source_id": "S061",
+          "link_indices": [
+            0
+          ],
+          "supports": "All candidates are retained when the total does not exceed the budget"
+        }
+      ],
+      "related_unknowns": [
+        "Q10"
+      ]
+    },
+    {
+      "id": "K04-033",
+      "title": "A source-quota example from 3000 to 2800",
+      "kind": "code",
+      "conclusion": "Assume A=1200, B=1200, and Cold C=600, totaling 3000, with a budget of 2800; proportional allocation gives A=1120, B=1120, and C=560, removing 80, 80, and 40 respectively, or 200 in total.",
+      "conditions": [
+        "The source counts and budget are assumed to match the example",
+        "This only demonstrates allocation arithmetic"
+      ],
+      "practical_meaning": "The Cold source is also truncated; protection does not mean retaining everything.",
+      "check": {
+        "when": "When checking the FairShare example table",
+        "needed": [
+          "The assumed source counts 1200/1200/600",
+          "The budget of 2800"
+        ],
+        "verify": [
+          "Calculate 1120/1120/560 proportionally",
+          "Verify that retained and removed counts total 2800 and 200 respectively"
+        ],
+        "if_missing": "When the actual source distribution is unknown, do not present example quotas as the platform's official quotas."
+      },
+      "limits": [
+        "This slot-allocation example is not a production experiment",
+        "A/B/C are hypothetical sources"
+      ],
+      "source_units": [
+        "U0361",
+        "U0362"
+      ],
+      "evidence": [
+        {
+          "source_id": "S061",
+          "link_indices": [
+            0
+          ],
+          "supports": "The proportional-allocation algorithm underlying the example"
+        }
+      ],
+      "related_unknowns": [
+        "Q10"
+      ]
+    },
+    {
+      "id": "K04-034",
+      "title": "40% more Cold slots does not mean 40% more impressions",
+      "kind": "code",
+      "conclusion": "If the flattened order happens to be A, B, C, directly taking the first 2800 leaves only 400 from C; proportional preliminary filtering can retain 560, still removing 40. 560 is 40% more than 400, but this is only the change in slots for candidates entering the model under the assumptions above.",
+      "conditions": [
+        "Using the counts in the preceding example",
+        "The flattened order is A, B, C"
+      ],
+      "practical_meaning": "A comparison must first align the units of candidates and impressions; a percentage increase in candidates cannot be converted into a reach increase for new posts.",
+      "check": {
+        "when": "When reviewing a claim of a 40% FairShare effect",
+        "needed": [
+          "The original example counts",
+          "The flattened order",
+          "The metric being claimed"
+        ],
+        "verify": [
+          "Verify 560/400−1=40%",
+          "Check whether it has been incorrectly described as impressions, user counts, or an official A/B result"
+        ],
+        "if_missing": "Without an actual impression distribution, report only the quota example."
+      },
+      "limits": [
+        "These are not official source quotas",
+        "This is not a measurement of production outcomes"
+      ],
+      "source_units": [
+        "U0363"
+      ],
+      "evidence": [
+        {
+          "source_id": "S061",
+          "link_indices": [
+            0
+          ],
+          "supports": "Proportional allocation and within-group truncation used to explain the example"
+        }
+      ],
+      "related_unknowns": [
+        "Q10"
+      ]
+    },
+    {
+      "id": "K04-035",
+      "title": "2800 is the candidate budget for each model request",
+      "kind": "code",
+      "conclusion": "Before the Phoenix request is built, FairShare decides which candidates to retain from each source; the request still uses take(PHOENIX_CLIENT_MAX_CANDIDATES), whose limit is also 2800.",
+      "conditions": [
+        "The inspected public request-construction path and defaults"
+      ],
+      "practical_meaning": "2800 describes the upper limit of candidates sent into the model, not the number of viewers for a particular post.",
+      "check": {
+        "when": "When explaining 2800 or the relationship between preliminary filtering and the request",
+        "needed": [
+          "PhoenixScoresResultSize",
+          "PHOENIX_CLIENT_MAX_CANDIDATES",
+          "The processing order"
+        ],
+        "verify": [
+          "Check that FairShare precedes take",
+          "Distinguish the per-request candidate budget from impressions for one post"
+        ],
+        "if_missing": "If only the number is available without the parameter name and counted object, do not interpret it as a traffic-pool tier."
+      },
+      "limits": [
+        "The candidate budget does not promise the final number displayed"
+      ],
+      "source_units": [
+        "U0364"
+      ],
+      "evidence": [
+        {
+          "source_id": "S061",
+          "link_indices": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "FairShare's position in the sequence, the request limit, and the public budget"
+        }
+      ],
+      "related_unknowns": [
+        "Q10",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K04-036",
+      "title": "The two values of 200 govern cold retrieval count and per-post Home impressions respectively",
+      "kind": "code",
+      "conclusion": "PhoenixColdStartMaxResults defaults to 200 and limits the number of cold candidates requested for retrieval; ColdStartImpressionThreshold defaults to 200 and checks a single post's accumulated Home impressions. Neither can be combined with the 2800-candidate budget into 'first show it to 200 people, then advance to 2800 people.'",
+      "conditions": [
+        "Check the three named parameters inspected and the objects they apply to"
+      ],
+      "practical_meaning": "When numbers are identical, first state their units and stages; avoid joining different parameters into a distribution ladder.",
+      "check": {
+        "when": "When reviewing claims of 200/2800 traffic pools",
+        "needed": [
+          "The full parameter names",
+          "Where each parameter is passed",
+          "The objects being counted"
+        ],
+        "verify": [
+          "Distinguish candidate counts, Home impressions, and the model budget",
+          "Confirm that the cold-candidate limit is passed into the retrieval request"
+        ],
+        "if_missing": "If the named parameters and call sites cannot be found, do not accept the ladder claim."
+      },
+      "limits": [
+        "None of these three numbers independently establishes guaranteed traffic for each post"
+      ],
+      "source_units": [
+        "U0364"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            0
+          ],
+          "supports": "The per-post cold-start Home-impression threshold"
+        },
+        {
+          "source_id": "S061",
+          "link_indices": [
+            3,
+            5,
+            6,
+            7
+          ],
+          "supports": "The 2800 model budget and the default of 200 for cold retrieval, with its purpose"
+        }
+      ],
+      "related_unknowns": [
+        "Q08",
+        "Q09",
+        "Q10",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K04-037",
+      "title": "FairShare execution also depends on switches and request conditions",
+      "kind": "code",
+      "conclusion": "FairShare requires the public switch to be enabled, the request not to be a cache request, a scoring sequence to exist, and the Phoenix ranker kill switch not to be activated; deduplication, age, already-seen, relationship, and other filters still precede it.",
+      "conditions": [
+        "All listed enablement conditions hold",
+        "The candidate passes earlier filters"
+      ],
+      "practical_meaning": "Low impressions may arise during retrieval, preliminary filtering, scoring, or display; the public view count cannot directly identify the stage.",
+      "check": {
+        "when": "When diagnosing whether a request passed through FairShare",
+        "needed": [
+          "The actual switch value",
+          "The cache-request flag",
+          "scoring sequence",
+          "kill switch",
+          "Earlier-filter records"
+        ],
+        "verify": [
+          "Check each enablement condition",
+          "Confirm that the candidate reached FairShare"
+        ],
+        "if_missing": "Without logs, keep the possibilities at different stages open rather than fixing on a single cause."
+      },
+      "limits": [
+        "Static public defaults do not mean every request qualifies"
+      ],
+      "source_units": [
+        "U0365"
+      ],
+      "evidence": [
+        {
+          "source_id": "S061",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Enablement conditions and earlier candidate filtering"
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q10",
+        "Q17"
+      ]
+    },
+    {
+      "id": "K04-038",
+      "title": "FairShare's actual effect on reach still lacks production evidence",
+      "kind": "unknown",
+      "conclusion": "This change can reduce the influence of end-of-list position on some sources, but a post must still enter a source, pass eligibility, be retained within its group, and undergo model comparison; the report obtained neither before-and-after impression distributions nor a production A/B test, so it cannot determine how much additional reach cold sources actually received.",
+      "conditions": [
+        "Limited to the original report's public-code evidence"
+      ],
+      "practical_meaning": "The source-slot allocation method can be established; actual benefits require separate measurement.",
+      "check": {
+        "when": "When answering how much FairShare increases impressions",
+        "needed": [
+          "Actual source proportions and order",
+          "Model scores before and after retention",
+          "Impression distributions or a production A/B test"
+        ],
+        "verify": [
+          "Distinguish a structural improvement from a measured effect",
+          "Check whether the experiment controls for other changes"
+        ],
+        "if_missing": "Without formal outcome data, do not provide a reach increase."
+      },
+      "limits": [
+        "An unknown effect is not proof of no effect"
+      ],
+      "source_units": [
+        "U0366"
+      ],
+      "evidence": [
+        {
+          "source_id": "S016",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The feature and its default-setting history"
+        },
+        {
+          "source_id": "S061",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Source-proportional preliminary filtering and subsequent model steps"
+        }
+      ],
+      "related_unknowns": [
+        "Q10"
+      ]
+    },
+    {
+      "id": "K04-039",
+      "title": "Already-seen filtering checks the candidate, the reposted original, and the direct parent",
+      "kind": "code",
+      "conclusion": "The related-ID set is once(candidate.tweet_id).chain(candidate.retweeted_tweet_id).chain(candidate.in_reply_to_tweet_id); a match for any related ID in the already-seen data supplied with the current request may cause the candidate to be removed.",
+      "conditions": [
+        "The candidate enters this already-seen filtering path",
+        "A related ID matches the already-seen data for this request"
+      ],
+      "practical_meaning": "A new reply or repost having a new ID of its own does not mean it can bypass already-seen conditions on the older original or parent post.",
+      "check": {
+        "when": "When explaining why a new reply or repost may not reappear on Home",
+        "needed": [
+          "The candidate's tweet_id",
+          "retweeted_tweet_id",
+          "in_reply_to_tweet_id",
+          "The request's already-seen data"
+        ],
+        "verify": [
+          "Check each of the three related IDs",
+          "Confirm that the filter is actually registered in this candidate path"
+        ],
+        "if_missing": "Without records for that request, identify only the risk; do not assert that a match occurred."
+      },
+      "limits": [
+        "Only the direct parent ID is explicitly included here; this does not mean every ancestor in the entire thread is traversed at this point"
+      ],
+      "source_units": [
+        "U0367",
+        "U0368",
+        "U0369"
+      ],
+      "evidence": [
+        {
+          "source_id": "S020",
+          "link_indices": [
+            0,
+            1,
+            3
+          ],
+          "supports": "The composition of related IDs, already-seen checks, and registration in the candidate flow"
+        }
+      ],
+      "related_unknowns": [
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-040",
+      "title": "A Bloom filter match does not necessarily mean the post was actually seen",
+      "kind": "code",
+      "conclusion": "Already-seen filtering uses both explicitly listed seen_ids and an approximate Bloom filter; one cannot infer that every match means the viewer actually saw that post.",
+      "conditions": [
+        "The match may come from the Bloom filter"
+      ],
+      "practical_meaning": "When investigating erroneous filtering, distinguish explicit records from approximate-structure matches rather than treating a programmatic decision as a fact about viewer behavior.",
+      "check": {
+        "when": "When interpreting a filter match as evidence that a viewer saw the post",
+        "needed": [
+          "Whether the match came from seen_ids or the Bloom filter",
+          "Original behavioral records"
+        ],
+        "verify": [
+          "Identify the match source",
+          "Avoid treating an approximate match as direct proof of an actual view"
+        ],
+        "if_missing": "Without original behavioral evidence, call it a filter match, not a confirmed view."
+      },
+      "limits": [
+        "The original report does not provide the false-positive rate here"
+      ],
+      "source_units": [
+        "U0369"
+      ],
+      "evidence": [
+        {
+          "source_id": "S020",
+          "link_indices": [
+            1
+          ],
+          "supports": "Explicit already-seen records and Bloom checks"
+        }
+      ],
+      "related_unknowns": [
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-041",
+      "title": "Previously served and already seen are separate checks",
+      "kind": "code",
+      "conclusion": "A separate set of previously served data also checks related IDs; having been served and having been seen must be described separately.",
+      "conditions": [
+        "The corresponding candidate-filtering flow is used"
+      ],
+      "practical_meaning": "When analyzing repeat reach, consider both serving records and viewing records; do not combine their counts into a single fact.",
+      "check": {
+        "when": "When diagnosing repeat recommendations or candidate removal",
+        "needed": [
+          "Previously served records",
+          "Already-seen records",
+          "Related post IDs"
+        ],
+        "verify": [
+          "Check previously_served and previously_seen separately",
+          "Identify which dataset caused the block"
+        ],
+        "if_missing": "If only one set of records is known, do not infer the behavior represented by the other."
+      },
+      "limits": [
+        "Being served does not directly prove the viewer actually saw the post"
+      ],
+      "source_units": [
+        "U0369"
+      ],
+      "evidence": [
+        {
+          "source_id": "S020",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "Related IDs and the two independent filters"
+        }
+      ],
+      "related_unknowns": [
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-042",
+      "title": "A new correction reply under an old post may still be blocked because the parent was seen",
+      "kind": "code",
+      "conclusion": "Example: yesterday's database test A omitted the cold-cache condition, and today a reply B is added under A; if a viewer's already-seen set for this request contains A and B's direct parent is A, this step may exclude B even though it was newly posted.",
+      "conditions": [
+        "B has in_reply_to_tweet_id=A",
+        "The already-seen data for this request matches A"
+      ],
+      "practical_meaning": "Leaving an important correction only in replies to an old post cannot guarantee that the original readers will encounter it again through Home.",
+      "check": {
+        "when": "When deciding where to publish an important correction",
+        "needed": [
+          "The parent-child relationship between the original post and the correction",
+          "Whether the update can be read independently"
+        ],
+        "verify": [
+          "Check the effect of an already-seen older parent on a new reply",
+          "Distinguish this programmatic counterexample from an actual match for a viewer"
+        ],
+        "if_missing": "Without actual already-seen data, state only that filtering is possible; do not claim that all readers were actually blocked."
+      },
+      "limits": [
+        "The example is derived from the ID check",
+        "It does not mean notifications, the conversation page, or the profile page are inaccessible"
+      ],
+      "source_units": [
+        "U0370",
+        "U0374"
+      ],
+      "evidence": [
+        {
+          "source_id": "S020",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The condition under which a parent ID enters already-seen filtering"
+        }
+      ],
+      "related_unknowns": [
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-043",
+      "title": "Answer small questions in the original conversation and also publish a standalone update for major corrections",
+      "kind": "editorial",
+      "conclusion": "Questions about how to start something or an incorrect parameter can be answered in the original conversation; when new results change the original conclusion, clearly leave a correction in the original post or discussion and also prepare a new post that can be understood independently.",
+      "conditions": [
+        "There is a substantive correction or a specific reader question"
+      ],
+      "practical_meaning": "This lets people reading the older material find the correction and lets people who encounter only the new post understand the change.",
+      "check": {
+        "when": "When deciding where a correction should appear",
+        "needed": [
+          "The original conclusion",
+          "The new result that changes the conclusion",
+          "Whether the original post can be edited",
+          "The background readers need"
+        ],
+        "verify": [
+          "Distinguish a local clarification from an update that changes the main conclusion",
+          "Check that the old location contains a clear correction",
+          "Check that the new post provides a complete standalone explanation"
+        ],
+        "if_missing": "If new results have not yet been verified, mark them as awaiting validation instead of presenting a completed correction."
+      },
+      "limits": [
+        "This is advice about editing and access to information",
+        "It does not guarantee recommendation of the standalone update"
+      ],
+      "source_units": [
+        "U0371"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-044",
+      "title": "A standalone correction should state the omission, what is corrected, and what still holds",
+      "kind": "editorial",
+      "conclusion": "The original report's example opens with 'Yesterday's database test omitted the cold-cache condition after a restart,' explains that follow-up testing requires revising the first-query conclusion, and lists the test conditions, the parts being corrected, and the parts that still hold together. The original post and follow-up test materials are attached afterward; if follow-up testing is incomplete, state clearly which conclusion can no longer be maintained for now.",
+      "conditions": [
+        "A major update needs a standalone post"
+      ],
+      "practical_meaning": "A correction should be understandable to new readers, findable by old readers, and allow the basis for the change to be checked.",
+      "check": {
+        "when": "When reviewing a standalone correction post",
+        "needed": [
+          "The original claim",
+          "The omitted conditions",
+          "Follow-up test results",
+          "The original-post link",
+          "Follow-up test materials"
+        ],
+        "verify": [
+          "Make clear at the opening what changed",
+          "Distinguish what has been overturned, revised, remains valid, and awaits validation",
+          "Attach traceable materials"
+        ],
+        "if_missing": "If follow-up test results are missing, state which conclusions cannot currently be maintained and which tasks remain incomplete."
+      },
+      "limits": [
+        "The example demonstrates a way to write, not an algorithmically optimal opening"
+      ],
+      "source_units": [
+        "U0372",
+        "U0373"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K04-045",
+      "title": "Other entry points to correction replies must be distinguished from re-encountering them on Home",
+      "kind": "editorial",
+      "conclusion": "Readers may still see replies through notifications, the conversation page, or the profile page; the specific risk supported by already-seen filtering is that leaving important corrections only under old posts does not guarantee that original readers will encounter them again on Home.",
+      "conditions": [
+        "Discussing Home distribution and access to corrections"
+      ],
+      "practical_meaning": "Check whether the correction is easy to find, and avoid describing a restriction on one Home path as invisibility across the platform.",
+      "check": {
+        "when": "When explaining whether original readers can see a correction reply",
+        "needed": [
+          "The entry point being discussed",
+          "Where the correction is located",
+          "Available notification and original-post paths"
+        ],
+        "verify": [
+          "Describe Home-candidate risks separately from other access methods",
+          "Do not promise that any entry point reaches every reader"
+        ],
+        "if_missing": "Without observations for each entry point, report only the Home risk that has been checked."
+      },
+      "limits": [
+        "The statements about other entry points explain reading paths; they are not verified guarantees of reach"
+      ],
+      "source_units": [
+        "U0374"
+      ],
+      "evidence": [
+        {
+          "source_id": "S020",
+          "link_indices": [
+            0,
+            1,
+            3
+          ],
+          "supports": "The supported scope of already-seen filtering"
+        }
+      ],
+      "related_unknowns": [
+        "Q24",
+        "Q27"
+      ]
+    },
+    {
+      "id": "K04-046",
+      "title": "The 48-hour check for ordinary candidates uses the candidate's own creation time",
+      "kind": "code",
+      "conclusion": "This ordinary-candidate path has MAX_POST_AGE=48×60×60 seconds; AgeFilter uses is_within_age(candidate.tweet_id), retains age<=48 hours, and excludes candidates only when they are older.",
+      "conditions": [
+        "The candidate passes through this ordinary AgeFilter",
+        "The candidate's own tweet_id is used"
+      ],
+      "practical_meaning": "Describe 48 hours as the age-eligibility requirement for this candidate path, not a fixed lifetime for posts across the platform.",
+      "check": {
+        "when": "When reviewing a claim that posts stop being recommended after 48 hours",
+        "needed": [
+          "The actual candidate ID",
+          "Its creation time",
+          "The source and filter used"
+        ],
+        "verify": [
+          "Check age<=MAX_POST_AGE",
+          "Confirm that the reposted original's ID has not been substituted",
+          "Limit the statement to this candidate flow"
+        ],
+        "if_missing": "Without the source and candidate ID, do not conclude that posts expire across the platform."
+      },
+      "limits": [
+        "This does not uniformly cover all Home sources",
+        "The publicly displayed time does not replace the internal candidate ID"
+      ],
+      "source_units": [
+        "U0375",
+        "U0380",
+        "U0381",
+        "U0382",
+        "U0383"
+      ],
+      "evidence": [
+        {
+          "source_id": "S063",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The 48-hour constant and age checking by candidate ID"
+        },
+        {
+          "source_id": "S039",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The precise comparison and the flow in which it appears"
+        }
+      ],
+      "related_unknowns": [
+        "Q24",
+        "Q25"
+      ]
+    },
+    {
+      "id": "K04-047",
+      "title": "Exactly 48 hours still passes this age comparison",
+      "kind": "code",
+      "conclusion": "AgeFilter uses <=, so exactly 48 hours is retained and only older candidates are removed; time keeps advancing during actual requests, and the inclusive boundary accurately describes the rule rather than offering a posting technique worth timing to the second.",
+      "conditions": [
+        "Assessing only this age-comparison expression"
+      ],
+      "practical_meaning": "Retain the exact boundary when reviewing the wording; in practice, complete candidate and timing records are still needed.",
+      "check": {
+        "when": "When checking the 48-hour boundary or a strategy based on exact-second timing",
+        "needed": [
+          "The candidate's creation time",
+          "The actual request time",
+          "The comparison operator"
+        ],
+        "verify": [
+          "Confirm that exactly 48 hours still passes",
+          "Do not turn an instantaneous boundary into an impression guarantee"
+        ],
+        "if_missing": "Without actual time fields, do not make second-level eligibility judgments."
+      },
+      "limits": [
+        "Passing the age requirement does not guarantee that other conditions or display requirements are met"
+      ],
+      "source_units": [
+        "U0384"
+      ],
+      "evidence": [
+        {
+          "source_id": "S039",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The 48-hour value and less-than-or-equal comparison"
+        }
+      ],
+      "related_unknowns": [
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-048",
+      "title": "A recent repost keeps its own ID rather than substituting the original post's age",
+      "kind": "code",
+      "conclusion": "Thunder places the repost's own ID in tweet_id and the original post's ID in retweeted_tweet_id; core-data hydration does not replace the former with the latter. Therefore, a recent repost that has been retrieved will not be removed by this AgeFilter solely because the original post is older.",
+      "conditions": [
+        "The repost has been obtained by the source and retrieved",
+        "The candidate's own ID is recent enough"
+      ],
+      "practical_meaning": "The same older content can have a recent repost candidate pass the age check while a separate candidate for the original post is checked using the original's older age.",
+      "check": {
+        "when": "When determining whether a recent repost of an older original can pass the age requirement",
+        "needed": [
+          "The repost candidate's tweet_id",
+          "retweeted_tweet_id",
+          "The candidate ID after hydration"
+        ],
+        "verify": [
+          "Calculate the repost's age and original post's age separately",
+          "Confirm that hydration did not replace the ID",
+          "Apply AgeFilter only to the current candidate ID"
+        ],
+        "if_missing": "Without actual candidate fields, do not promise that the repost has bypassed or reset a lifetime."
+      },
+      "limits": [
+        "This only rules out failure of this requirement due to the original post's age",
+        "It does not guarantee retrieval, passing other filters, or final display"
+      ],
+      "source_units": [
+        "U0375",
+        "U0380",
+        "U0385"
+      ],
+      "evidence": [
+        {
+          "source_id": "S063",
+          "link_indices": [
+            1,
+            2
+          ],
+          "supports": "The object of the age comparison and the two IDs"
+        },
+        {
+          "source_id": "S039",
+          "link_indices": [
+            1,
+            3,
+            4
+          ],
+          "supports": "Thunder fields and preservation of the ID during hydration"
+        }
+      ],
+      "related_unknowns": [
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-049",
+      "title": "The original post must still be retrievable and pass requirements such as visibility",
+      "kind": "code",
+      "conclusion": "Even when a recent repost passes the age check for its own ID, the original post's data must still be retrievable and pass screening such as visibility checks.",
+      "conditions": [
+        "The candidate carries a reposted original"
+      ],
+      "practical_meaning": "Before reposting older material, check the original post's status and accessibility; passing the age check is only one requirement.",
+      "check": {
+        "when": "When explaining why a repost of older content still is not displayed",
+        "needed": [
+          "The result of retrieving the original post",
+          "The visibility result for the attached original",
+          "The candidate's other eligibility requirements"
+        ],
+        "verify": [
+          "Check whether the original post's data is available",
+          "Check the visibility action applied to the attached content"
+        ],
+        "if_missing": "Without runtime results, do not attribute failure to the original post's age or declare that all eligibility checks passed."
+      },
+      "limits": [
+        "Passing one filter does not mean passing the entire chain"
+      ],
+      "source_units": [
+        "U0386"
+      ],
+      "evidence": [
+        {
+          "source_id": "S039",
+          "link_indices": [
+            9
+          ],
+          "supports": "Visibility handling for attached content such as reposted originals"
+        }
+      ],
+      "related_unknowns": [
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-050",
+      "title": "Reposting does not clear the original post's seen history, and multiple reposts may be deduplicated",
+      "kind": "code",
+      "conclusion": "Already-seen and previously-served checks read the reposted original's ID; deduplication within the same batch also merges by the original ID. Even if ten people repost, that reader's candidate batch does not necessarily gain ten positions, and the original does not become completely new content for everyone.",
+      "conditions": [
+        "The related original-post IDs are the same",
+        "The corresponding already-seen, previously-served, and deduplication steps are used"
+      ],
+      "practical_meaning": "Reposts can form separate candidate records, but display positions cannot be estimated as a linear function of the number of people reposting.",
+      "check": {
+        "when": "When reviewing a claim that 'reposting resets the lifecycle' or that multiple reposts add positions",
+        "needed": [
+          "The original-post ID",
+          "The batch's repost list",
+          "Already-seen and previously-served data"
+        ],
+        "verify": [
+          "Check deduplication by original-post ID",
+          "Check filtering of related IDs",
+          "Do not equate the number of reposts with new slots"
+        ],
+        "if_missing": "Without the candidate pool and records, explain only the limits; do not estimate the actual number of positions."
+      },
+      "limits": [
+        "This does not mean all reposts are necessarily removed"
+      ],
+      "source_units": [
+        "U0386"
+      ],
+      "evidence": [
+        {
+          "source_id": "S020",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Already-seen and previously-served checks of the original-post ID"
+        },
+        {
+          "source_id": "S039",
+          "link_indices": [
+            5
+          ],
+          "supports": "Deduplication by original-post ID"
+        }
+      ],
+      "related_unknowns": [
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-051",
+      "title": "The HOME dataset's one-day file does not imply a platform-wide one-day lifetime",
+      "kind": "code",
+      "conclusion": "The public ordinary HOME, HOME_COLD, and HOME_HOT definitions all reference a 1fav_1day index data file; this describes the file read by the specified datasets, and the enum cannot establish that all production requests or other sources retrieve only one day of content.",
+      "conditions": [
+        "Limited to the retrieval dataset definitions inspected in the original report"
+      ],
+      "practical_meaning": "Name the dataset and data file explicitly; avoid turning a data range into a display deadline.",
+      "check": {
+        "when": "When explaining the time window of ordinary HOME",
+        "needed": [
+          "The dataset enum",
+          "The corresponding file",
+          "The source configuration of the actual request"
+        ],
+        "verify": [
+          "Check that all three categories reference 1fav_1day",
+          "Distinguish dataset definitions from all production requests"
+        ],
+        "if_missing": "Without request configuration, do not announce that the entire platform recommends only content from the past day."
+      },
+      "limits": [
+        "A source-data window does not directly determine final impressions"
+      ],
+      "source_units": [
+        "U0379",
+        "U0380",
+        "U0381"
+      ],
+      "evidence": [
+        {
+          "source_id": "S034",
+          "link_indices": [
+            2,
+            3,
+            4
+          ],
+          "supports": "The data files, partitioning, and actual request conditions for the three HOME categories"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q25"
+      ]
+    },
+    {
+      "id": "K04-052",
+      "title": "Each rankall index has its own retention window",
+      "kind": "code",
+      "conclusion": "The 1fav indexes in rankall include 24/48-hour windows, while 32fav has windows such as 24 hours; these are the data ranges of individual indexes, not the impression lifetime of a piece of content across all entry points.",
+      "conditions": [
+        "Check the specific index and mode"
+      ],
+      "practical_meaning": "When encountering one day or two days, first identify the index and mode, then discuss which entry point might be lost.",
+      "check": {
+        "when": "When reviewing index retention periods and recommendation lifetimes",
+        "needed": [
+          "The index name",
+          "Modes such as Main/Sid",
+          "The corresponding window configuration"
+        ],
+        "verify": [
+          "Check each window and route",
+          "Do not combine different indexes into a single expiration time"
+        ],
+        "if_missing": "Without the specific index and mode, do not pick one time value to represent the entire platform."
+      },
+      "limits": [
+        "An index's existence does not guarantee that a particular retrieval request reads it"
+      ],
+      "source_units": [
+        "U0379",
+        "U0380",
+        "U0381"
+      ],
+      "evidence": [
+        {
+          "source_id": "S034",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Index windows by mode and routing by name"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q25"
+      ]
+    },
+    {
+      "id": "K04-053",
+      "title": "The 49-hour, 48-hour, and one-minute Favorite-update limits refer to different things",
+      "kind": "code",
+      "conclusion": "Favorite-event updates require post age<49 hours; when a cache already exists, time since the first update must be <=48 hours and the update interval must be >=one minute. This involves both post time and index-update records, and cannot substitute for the final AgeFilter check of candidate age.",
+      "conditions": [
+        "The Favorite-event update path",
+        "The corresponding update-period branch applies only when a cache already exists"
+      ],
+      "practical_meaning": "When checking index behavior after a like, distinguish post age, time since the first update, and time since the most recent update.",
+      "check": {
+        "when": "When explaining 49 hours or the interval between like-triggered index updates",
+        "needed": [
+          "The post's creation time",
+          "Whether a cache exists",
+          "Records of the first and most recent updates",
+          "Event time"
+        ],
+        "verify": [
+          "Retain the respective operators in <49, <=48, and >=one minute",
+          "Check which object each time quantity refers to"
+        ],
+        "if_missing": "Without event and cache records, do not infer that a publicly visible like has immediately updated the index."
+      },
+      "limits": [
+        "This table in the original report lists time boundaries without claiming they are all the eligibility requirements for this update path",
+        "This differs from whether a candidate passes the 48-hour AgeFilter"
+      ],
+      "source_units": [
+        "U0379",
+        "U0380",
+        "U0381"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "The Favorite/cache branches and the 49/48-hour and one-minute conditions"
+        }
+      ],
+      "related_unknowns": [
+        "Q16",
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-054",
+      "title": "The different time windows answer different questions",
+      "kind": "code",
+      "conclusion": "Candidate age, retrieval datasets, index retention periods, and Favorite-event update periods each refer to different objects; one day, two days, and 49 hours cannot be selectively treated as a fixed post lifetime across the platform.",
+      "conditions": [
+        "Comparing multiple paths together"
+      ],
+      "practical_meaning": "To explain when content might lose a particular entry point, first specify the object being checked and the flow used.",
+      "check": {
+        "when": "When giving an overall answer about how long older posts can remain active",
+        "needed": [
+          "The candidate source",
+          "The index/dataset name",
+          "The different time fields",
+          "Update records"
+        ],
+        "verify": [
+          "Separate age eligibility, retention windows, and update throttling",
+          "Describe entry-point changes only within the scope of the evidence"
+        ],
+        "if_missing": "Without a specific path, explain the differences rather than provide a universal lifetime countdown."
+      },
+      "limits": [
+        "Public static conditions cannot establish the actual moment impressions stop"
+      ],
+      "source_units": [
+        "U0379",
+        "U0380",
+        "U0381"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            2
+          ],
+          "supports": "Favorite-update boundaries"
+        },
+        {
+          "source_id": "S034",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Index and dataset windows"
+        },
+        {
+          "source_id": "S039",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Candidate age eligibility"
+        }
+      ],
+      "related_unknowns": [
+        "Q24",
+        "Q25"
+      ]
+    },
+    {
+      "id": "K04-055",
+      "title": "PushToHome shows that ordinary AgeFilter is not uniformly applied to all sources",
+      "kind": "code",
+      "conclusion": "At the top level, For You has PushToHomeSource alongside ordinary ScoredPosts; it retrieves data using post IDs specified in the request. The top level does not reapply the ordinary PostCandidate AgeFilter uniformly to every source.",
+      "conditions": [
+        "Limited to the inspected top-level source and filter lists"
+      ],
+      "practical_meaning": "The 48-hour condition for ordinary candidates cannot represent every Home entry point, but this does not provide a way for creators to send old posts into PushToHome at will.",
+      "check": {
+        "when": "When discussing other Home entry points for older posts or exceptions to 48 hours",
+        "needed": [
+          "The top-level source list",
+          "The ID specified in the PushToHome request",
+          "Its enablement and eligibility records"
+        ],
+        "verify": [
+          "Distinguish ScoredPosts from PushToHome",
+          "Check whether the top level reapplies the same AgeFilter"
+        ],
+        "if_missing": "Without entry-point eligibility information, do not guarantee that any old post can use this path."
+      },
+      "limits": [
+        "The original report did not fully trace how creators obtain eligibility for this request entry point"
+      ],
+      "source_units": [
+        "U0387"
+      ],
+      "evidence": [
+        {
+          "source_id": "S039",
+          "link_indices": [
+            10,
+            11
+          ],
+          "supports": "Top-level sources and construction of PushToHome request data"
+        }
+      ],
+      "related_unknowns": [
+        "Q25"
+      ]
+    },
+    {
+      "id": "K04-056",
+      "title": "Longer video windows do not establish an exemption from ordinary AgeFilter",
+      "kind": "code",
+      "conclusion": "Video datasets have separate windows of 4 days, 14 days, or longer, which should be explained by source; these windows do not prove that ordinary original posts receive an exemption within the same AgeFilter.",
+      "conditions": [
+        "The video source or index differs from the ordinary-candidate path"
+      ],
+      "practical_meaning": "When planning to reintroduce older material, consider current reader needs and updates to the material rather than relying on 'one repost resets the recommendation lifetime.'",
+      "check": {
+        "when": "When using video windows to explain the lifetime of older posts",
+        "needed": [
+          "The specific video dataset",
+          "The window configuration",
+          "Whether the ordinary candidate passes through AgeFilter"
+        ],
+        "verify": [
+          "Distinguish the dataset range from the candidate-age check",
+          "Do not transfer exemptions across sources"
+        ],
+        "if_missing": "If the source cannot be confirmed, do not guarantee impressions for four days, fourteen days, or longer."
+      },
+      "limits": [
+        "A longer retention window is not a general entry point that authors can invoke at will"
+      ],
+      "source_units": [
+        "U0388"
+      ],
+      "evidence": [
+        {
+          "source_id": "S050",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Video index and dataset windows"
+        },
+        {
+          "source_id": "S039",
+          "link_indices": [
+            0,
+            1,
+            10,
+            11
+          ],
+          "supports": "Ordinary age limits and source differences"
+        }
+      ],
+      "related_unknowns": [
+        "Q24",
+        "Q25"
+      ]
+    },
+    {
+      "id": "K04-057",
+      "title": "Reintroducing older content should add a current use or an update",
+      "kind": "editorial",
+      "conclusion": "The original report's example is a rental handover checklist from three months earlier: during moving season, highlight corners that people often forget to photograph, explain why records should be kept, and then link the full checklist; if the checklist is outdated, revise it first and mark the date. The reason for reintroducing it should be readers' current needs or updates to the material.",
+      "conditions": [
+        "The older content remains useful or has been revised"
+      ],
+      "practical_meaning": "Give new readers a clear entry point to older material and make its date and version easy to check.",
+      "check": {
+        "when": "When reviewing promotion of older content",
+        "needed": [
+          "The current reader situation",
+          "The condition of the older material",
+          "The revision date",
+          "The added explanation"
+        ],
+        "verify": [
+          "Confirm that there is a reason to use it now",
+          "Correct outdated information first",
+          "Provide a link to the complete material"
+        ],
+        "if_missing": "If there is no new use or update, do not package repeat promotion as a content update."
+      },
+      "limits": [
+        "This is editorial advice and does not guarantee renewed recommendation"
+      ],
+      "source_units": [
+        "U0376",
+        "U0377",
+        "U0388"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q24",
+        "Q25"
+      ]
+    },
+    {
+      "id": "K04-058",
+      "title": "Repeated claims of importance do not add usefulness or clear seen history",
+      "kind": "editorial",
+      "conclusion": "Rephrasing 'this post is important' every day adds no new use and does not clear the original post's already-seen records.",
+      "conditions": [
+        "The original post has no substantive changes and is only being promoted again"
+      ],
+      "practical_meaning": "When publishing again, add a real new scenario, revision, or evidence instead of changing only the promotional sentence.",
+      "check": {
+        "when": "When evaluating whether a repeated introduction is worth publishing",
+        "needed": [
+          "The differences between the earlier and later content",
+          "New information and audience situations"
+        ],
+        "verify": [
+          "Check whether readers actually gain useful material",
+          "Do not claim that changing the copy clears seen history"
+        ],
+        "if_missing": "Without new content, acknowledge that it is repeat promotion; do not invent an algorithm-reset rationale."
+      },
+      "limits": [
+        "An editorial value judgment is not a rule that a particular frequency necessarily incurs a penalty"
+      ],
+      "source_units": [
+        "U0377"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-059",
+      "title": "Filtering an old edit version does not mean changing one word downranks the entire post",
+      "kind": "code",
+      "conclusion": "The repository contains a check that removes older versions superseded by a new edit version; it does not establish that changing one word downranks the entire post, nor does it establish that editing resets the recommendation lifecycle.",
+      "conditions": [
+        "The post version has been superseded by a new edit version",
+        "The rule and its exceptions apply"
+      ],
+      "practical_meaning": "When checking the effect of an edit, first establish whether the old version is being handled or the whole post's score is being changed.",
+      "check": {
+        "when": "When reviewing claims that editing downranks a post or resets its lifetime",
+        "needed": [
+          "The edit-version chain",
+          "The old-version determination",
+          "The rule's conditions and exceptions"
+        ],
+        "verify": [
+          "Distinguish superseded-version filtering from score changes",
+          "Check whether evidence of a lifecycle reset actually exists"
+        ],
+        "if_missing": "Without additional evidence, report only the handling of old versions; do not invent editing rewards or penalties."
+      },
+      "limits": [
+        "A local version rule cannot establish every consequence of editing"
+      ],
+      "source_units": [
+        "U0378"
+      ],
+      "evidence": [
+        {
+          "source_id": "S064",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The definition of old versions, filtering conditions, and exceptions"
+        }
+      ],
+      "related_unknowns": [
+        "Q24"
+      ]
+    },
+    {
+      "id": "K04-060",
+      "title": "When an error is found, first explain the correction clearly",
+      "kind": "editorial",
+      "conclusion": "When an error is found in an older post, prioritize clearly telling readers what changed; unsupported speculation that 'editing always causes downranking' should not lead to a vague correction.",
+      "conditions": [
+        "An error requiring correction has been identified"
+      ],
+      "practical_meaning": "Corrections should aim at accurate reader understanding, and version-related risks should be described using checkable evidence.",
+      "check": {
+        "when": "When deciding whether to edit or add a correction",
+        "needed": [
+          "The erroneous content",
+          "The basis for the correction",
+          "Where the correction appears",
+          "The affected conclusions"
+        ],
+        "verify": [
+          "Check that the correction is clear and traceable",
+          "Separate unverified impression effects from the factual correction"
+        ],
+        "if_missing": "If new facts are not yet confirmed, state the uncertainty and the items awaiting verification."
+      },
+      "limits": [
+        "Editorial advice does not predict traffic after editing"
+      ],
+      "source_units": [
+        "U0378"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K04-061",
+      "title": "Grox reply-quality scoring and Home reply prediction are different flows",
+      "kind": "code",
+      "conclusion": "Grox's evaluation of replies must not be treated as the same table as whether a reply can become a candidate for a Home request or the model's predicted probability that others will reply to you.",
+      "conditions": [
+        "Check the components for candidate eligibility, behavior prediction, and Grox evaluation separately"
+      ],
+      "practical_meaning": "When asking whether replies help, first identify whether the discussion concerns an entry point, a prediction term, or a reply-content quality score.",
+      "check": {
+        "when": "When explaining a 'reply score' or the effect of replies",
+        "needed": [
+          "The specific field and component names",
+          "Where the score is produced and consumed"
+        ],
+        "verify": [
+          "Distinguish Grox scoring, Home-candidate eligibility, and the probability of others replying",
+          "Do not convert weights or penalties across fields"
+        ],
+        "if_missing": "If no field is specified, first explain the three types of objects rather than provide a single universal formula."
+      },
+      "limits": [
+        "This section does not fully trace every downstream consumer of Grox scores"
+      ],
+      "source_units": [
+        "U0389"
+      ],
+      "evidence": [
+        {
+          "source_id": "S065",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Grox reply classification and the score-writing path"
+        }
+      ],
+      "related_unknowns": [
+        "Q36"
+      ]
+    },
+    {
+      "id": "K04-062",
+      "title": "Grox can evaluate replies using conversations, signals, and follower data",
+      "kind": "code",
+      "conclusion": "One Grox flow passes the conversation, signals, and follower data to the model, then parses reply scores; some results can trigger conditional labeling.",
+      "conditions": [
+        "The inputs for this flow are received",
+        "The corresponding write and labeling conditions are met"
+      ],
+      "practical_meaning": "Reply content has a separate quality evaluation; when diagnosing it, inspect the inputs, model results, and conditional labels separately.",
+      "check": {
+        "when": "When reviewing whether reply quality has an independent evaluation",
+        "needed": [
+          "Conversation and signal inputs",
+          "Model scores",
+          "Write and labeling conditions"
+        ],
+        "verify": [
+          "Confirm the input and output fields",
+          "Separate score generation from conditional labeling"
+        ],
+        "if_missing": "Without actual inputs and outputs, state only that the evaluation capability exists; do not assert that a particular reply matched."
+      },
+      "limits": [
+        "The existence of the flow does not establish that all replies use the same scoring"
+      ],
+      "source_units": [
+        "U0390"
+      ],
+      "evidence": [
+        {
+          "source_id": "S065",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Model inputs, parsed scores, conditional labeling, and exceptions"
+        }
+      ],
+      "related_unknowns": [
+        "Q36",
+        "Q37"
+      ]
+    },
+    {
+      "id": "K04-063",
+      "title": "Reply prompts are not public, so do not invent phrasing that must incur a penalty",
+      "kind": "unknown",
+      "conclusion": "The specific prompts used to judge replies have not been made public; the inspected flow does not establish that a particular sentence pattern, length, or all AI-written text necessarily incurs a penalty.",
+      "conditions": [
+        "Limited to the public scope checked in the original report"
+      ],
+      "practical_meaning": "Reply quality can be reviewed by whether it adds checkable material; do not rewrite unknown model rules as bans on sentence patterns or lengths.",
+      "check": {
+        "when": "When giving penalty rules about reply wording, length, or AI use",
+        "needed": [
+          "Directly published classification criteria",
+          "Actual inputs and decision data"
+        ],
+        "verify": [
+          "Check whether a specific prompt or sufficient examples support the claim",
+          "Separate structural conditions from content judgments"
+        ],
+        "if_missing": "Without a public basis for the judgment, state that it is unknown; do not list phrasing that must be penalized or is guaranteed safe."
+      },
+      "limits": [
+        "Unknown prompts do not mean quality evaluation is absent"
+      ],
+      "source_units": [
+        "U0390"
+      ],
+      "evidence": [
+        {
+          "source_id": "S065",
+          "link_indices": [
+            3
+          ],
+          "supports": "The specific judgment prompts are not public"
+        }
+      ],
+      "related_unknowns": [
+        "Q35"
+      ]
+    },
+    {
+      "id": "K04-064",
+      "title": "Useful replies should add specific, checkable material",
+      "kind": "editorial",
+      "conclusion": "For a format-conversion error, 'Very insightful, thanks for sharing' adds little information; identifying the step corresponding to the error message and providing the version, reproduction conditions, and the environment you encountered adds checkable material.",
+      "conditions": [
+        "The original post contains a specific problem or background that can be supplemented"
+      ],
+      "practical_meaning": "A reply can directly help locate the problem; the editorial standard is relevance and added information.",
+      "check": {
+        "when": "When reviewing whether a reply is worth posting",
+        "needed": [
+          "The original post's problem",
+          "The steps, versions, conditions, or environment added by the reply"
+        ],
+        "verify": [
+          "Confirm that it specifically addresses the problem",
+          "Check that the material is reproducible or verifiable"
+        ],
+        "if_missing": "Without reliable material, do not fabricate experience or treat reworded praise as new information."
+      },
+      "limits": [
+        "This is an editorial standard, not speculation about unpublished prompts"
+      ],
+      "source_units": [
+        "U0391"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q35"
+      ]
+    },
+    {
+      "id": "K04-065",
+      "title": "AI-assisted replies should identify information gaps first, then be checked by a person",
+      "kind": "editorial",
+      "conclusion": "AI can identify the original post's problem, existing answers, and missing conditions, after which you should check the material you plan to add; rewriting the same compliment into twenty versions adds no information to twenty discussions.",
+      "conditions": [
+        "Using AI to help organize a reply"
+      ],
+      "practical_meaning": "Use the assistance to understand context and organize evidence rather than manufacture superficial differences in bulk.",
+      "check": {
+        "when": "When using AI to generate replies",
+        "needed": [
+          "The original post's context",
+          "Existing answers",
+          "Missing conditions",
+          "The checkable material to be added"
+        ],
+        "verify": [
+          "Confirm that AI understood the specific problem",
+          "Have a person verify the added material",
+          "Check whether it is merely repeated synonymous praise"
+        ],
+        "if_missing": "Without verifiable new material, do not falsely claim that information has been added."
+      },
+      "limits": [
+        "This editorial advice does not imply automatic penalties for AI text"
+      ],
+      "source_units": [
+        "U0392"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q35"
+      ]
+    },
+    {
+      "id": "K04-066",
+      "title": "Multi-step reply zeroing targets a specified ReplyRankingScore",
+      "kind": "code",
+      "conclusion": "The multi-step reply-spam flow writes ReplyRankingScore for replies classified as spam; this is neither the large account's parent-post score nor a recommendation score for the replying account as a whole. The flow first screens the conversation structure, then performs model classification, and filters the posts flagged by the model before writing.",
+      "conditions": [
+        "Structural eligibility, classification, and result filtering are passed",
+        "The write targets specified reply IDs"
+      ],
+      "practical_meaning": "When explaining 'zeroing,' name both the field and the object; do not extend it to the parent post, conversation, or account.",
+      "check": {
+        "when": "When reviewing a claim that multi-step replies are 'zeroed'",
+        "needed": [
+          "The task name",
+          "The reply IDs being written",
+          "The named score field",
+          "The processing order"
+        ],
+        "verify": [
+          "Check ReplyRankingScore rather than the final Home score",
+          "Trace structural screening, classification, result filtering, and writing"
+        ],
+        "if_missing": "Without downstream and target-object evidence, do not estimate platform-wide impression losses."
+      },
+      "limits": [
+        "The complete downstream effect on impressions has still not been fully traced"
+      ],
+      "source_units": [
+        "U0393"
+      ],
+      "evidence": [
+        {
+          "source_id": "S066",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Structural eligibility precedes model classification and writing"
+        },
+        {
+          "source_id": "S067",
+          "link_indices": [
+            0,
+            4
+          ],
+          "supports": "Result filtering and writing scores for specified replies"
+        }
+      ],
+      "related_unknowns": [
+        "Q35",
+        "Q36"
+      ]
+    },
+    {
+      "id": "K04-067",
+      "title": "Multi-step replies require complete ancestors and the necessary author data",
+      "kind": "code",
+      "conclusion": "TaskMultiStepReplySpamFilter requires conversation ancestors, and the ancestor data must contain no missing entries; the current post, direct parent, and root post must all have the required author data.",
+      "conditions": [
+        "This named filter is running"
+      ],
+      "practical_meaning": "Missing context or necessary author data affects whether this path continues; two visible replies alone cannot establish a match.",
+      "check": {
+        "when": "When checking basic eligibility for the multi-step reply task",
+        "needed": [
+          "The ancestor list and any missing entries",
+          "Author data for the current post, parent, and root"
+        ],
+        "verify": [
+          "Confirm that ancestors exist and no entries are missing",
+          "Check the required author data individually"
+        ],
+        "if_missing": "When context is incomplete, leave eligibility unknown rather than directly classify the reply as spam."
+      },
+      "limits": [
+        "Complete structural data is still not a finding that the content violates a rule"
+      ],
+      "source_units": [
+        "U0394"
+      ],
+      "evidence": [
+        {
+          "source_id": "S066",
+          "link_indices": [
+            0
+          ],
+          "supports": "Requirements for complete ancestors and necessary author data"
+        }
+      ],
+      "related_unknowns": [
+        "Q35"
+      ]
+    },
+    {
+      "id": "K04-068",
+      "title": "Grok, Gork, and threads by the root-post author are excluded from this path",
+      "kind": "code",
+      "conclusion": "This filter excludes replies by the Grok and Gork accounts; it also excludes the path when the current reply's author is the root-post author. It therefore cannot be summarized as penalizing authors for publishing their own threads.",
+      "conditions": [
+        "Limited to TaskMultiStepReplySpamFilter"
+      ],
+      "practical_meaning": "When judging self-replies, first distinguish continuations of one's own root post from successive self-replies under someone else's root post.",
+      "check": {
+        "when": "When determining whether a thread meets this task's eligibility requirements",
+        "needed": [
+          "The current author ID",
+          "The root-post author ID",
+          "Whether the author is Grok/Gork"
+        ],
+        "verify": [
+          "Compare the current author with the root-post author",
+          "Check the named-account exclusions"
+        ],
+        "if_missing": "If the author relationships cannot be confirmed, do not assign all threads to this task."
+      },
+      "limits": [
+        "This describes exclusions only from this path, not exemptions from other rules"
+      ],
+      "source_units": [
+        "U0394"
+      ],
+      "evidence": [
+        {
+          "source_id": "S066",
+          "link_indices": [
+            0
+          ],
+          "supports": "Exclusion of Grok/Gork and replies by the root-post author"
+        }
+      ],
+      "related_unknowns": [
+        "Q35"
+      ]
+    },
+    {
+      "id": "K04-069",
+      "title": "At least two ancestors are required, and the direct parent must have the same author as the current reply",
+      "kind": "code",
+      "conclusion": "The conversation must have at least two ancestors, as in a root post, a previous reply, and the current reply; the direct parent's author must be the same as the current reply's author.",
+      "conditions": [
+        "At least two ancestors",
+        "parent_author=current_author",
+        "Other eligibility requirements are satisfied separately"
+      ],
+      "practical_meaning": "'Successively replying to oneself' is only a structural condition for further classification; two replies alone do not automatically incur a penalty.",
+      "check": {
+        "when": "When checking multi-step reply structure",
+        "needed": [
+          "The number of ancestors",
+          "The direct parent's author",
+          "The current author"
+        ],
+        "verify": [
+          "Check for at least two ancestors",
+          "Check that the direct parent has the same author"
+        ],
+        "if_missing": "With only screenshots or reply counts and no complete relationships, do not assert that structural eligibility is met."
+      },
+      "limits": [
+        "Even when the structure qualifies, model judgment of the content is still required"
+      ],
+      "source_units": [
+        "U0395",
+        "U0396",
+        "U0397"
+      ],
+      "evidence": [
+        {
+          "source_id": "S066",
+          "link_indices": [
+            0
+          ],
+          "supports": "The ancestor-count and same-author parent conditions"
+        }
+      ],
+      "related_unknowns": [
+        "Q35"
+      ]
+    },
+    {
+      "id": "K04-070",
+      "title": "The root author needs at least 1000 followers, and some current authors are skipped",
+      "kind": "code",
+      "conclusion": "The root-post author's follower threshold is at least 1000; the filter skips current reply authors who have high PageRank V2 or a gray checkmark. Do not replace the root-post condition with the vague phrase 'an extremely large account.'",
+      "conditions": [
+        "root followers>=1000",
+        "The current author does not meet the high PageRank V2/gray-checkmark skip conditions here"
+      ],
+      "practical_meaning": "Check specific eligibility using the follower field and named flags rather than an impression of the account.",
+      "check": {
+        "when": "When reviewing root-post account size and author exemptions",
+        "needed": [
+          "The root-post author's follower count",
+          "The current author's PageRank V2 status",
+          "Gray-checkmark status"
+        ],
+        "verify": [
+          "Retain the explicit >=1000 boundary",
+          "Distinguish the root-post follower condition from current-author exceptions"
+        ],
+        "if_missing": "Without internal status data, do not infer an exemption from follower count or an ordinary blue checkmark."
+      },
+      "limits": [
+        "These exceptions apply only to this filter",
+        "High PageRank is not equivalent to a follower-count threshold"
+      ],
+      "source_units": [
+        "U0395"
+      ],
+      "evidence": [
+        {
+          "source_id": "S066",
+          "link_indices": [
+            0
+          ],
+          "supports": "The root author's 1000-follower requirement and the current-author high PageRank V2 and gray-checkmark exceptions"
+        }
+      ],
+      "related_unknowns": [
+        "Q35"
+      ]
+    },
+    {
+      "id": "K04-071",
+      "title": "Adding steps and then version differences can meet the structure while still awaiting classification",
+      "kind": "code",
+      "conclusion": "In the example, another author with at least 1000 followers publishes the root post; you first add reproduction steps, then reply to yourself with version differences. This can satisfy the structure, but the root post, first reply, and current reply are not thereby already classified as spam; the current reply still requires model judgment.",
+      "conditions": [
+        "The author and hierarchy relationships described in the example are met",
+        "The other task eligibility requirements are complete"
+      ],
+      "practical_meaning": "Normal ongoing additions provide a counterexample; neither 'two replies in a row' nor a particular length can establish a certain penalty or safety.",
+      "check": {
+        "when": "When predicting penalties from conversation depth",
+        "needed": [
+          "The specific content of each post",
+          "The author and parent-child relationships",
+          "The model decision"
+        ],
+        "verify": [
+          "Separate structural eligibility from classification results",
+          "Check whether the added material is substantively different"
+        ],
+        "if_missing": "Without the prompts and actual decisions, do not create an automatic-penalty formula."
+      },
+      "limits": [
+        "The example is not the result of a model test",
+        "The specific prompt is not public"
+      ],
+      "source_units": [
+        "U0396",
+        "U0397",
+        "U0398"
+      ],
+      "evidence": [
+        {
+          "source_id": "S066",
+          "link_indices": [
+            0,
+            1,
+            3
+          ],
+          "supports": "Structural conditions, subsequent classification, and the missing prompt information"
+        }
+      ],
+      "related_unknowns": [
+        "Q35"
+      ]
+    },
+    {
+      "id": "K04-072",
+      "title": "The latest reply must be in the model's flagged set",
+      "kind": "code",
+      "conclusion": "The multi-step classifier requires the latest reply being evaluated to be in the flagged set as well; if only older replies are flagged and the current one is not, the entire result set is discarded.",
+      "conditions": [
+        "Parsing the multi-step model result for this run"
+      ],
+      "practical_meaning": "The model flagging an older reply does not automatically cause zero-score writes for the entire group in this run.",
+      "check": {
+        "when": "When checking whether a multi-step classification result was accepted",
+        "needed": [
+          "The current reply ID",
+          "The model's flagged set"
+        ],
+        "verify": [
+          "Confirm that the current reply ID is in the flagged set",
+          "Otherwise, check the branch that discards the entire result set"
+        ],
+        "if_missing": "Without the complete flagged set, do not infer a successful write from an older reply being flagged."
+      },
+      "limits": [
+        "Passing this condition still requires subsequent same-author and count filtering"
+      ],
+      "source_units": [
+        "U0399"
+      ],
+      "evidence": [
+        {
+          "source_id": "S067",
+          "link_indices": [
+            0
+          ],
+          "supports": "The latest reply must be flagged or the result is discarded"
+        }
+      ],
+      "related_unknowns": [
+        "Q35",
+        "Q36"
+      ]
+    },
+    {
+      "id": "K04-073",
+      "title": "Model results retain only the same author's posts and are discarded if one remains",
+      "kind": "code",
+      "conclusion": "After the latest-reply condition passes, the classifier removes posts by other authors; if only one remains at the end, it also discards the result rather than accepting that single-item multi-step result.",
+      "conditions": [
+        "The model result already includes the current reply",
+        "Results are filtered by the current author"
+      ],
+      "practical_meaning": "The final writable targets are the processed set of multiple replies by the same author, not the raw model selections.",
+      "check": {
+        "when": "When determining the final set of replies whose scores are written",
+        "needed": [
+          "The original flagged set",
+          "The author ID of each post",
+          "The filtered set"
+        ],
+        "verify": [
+          "Remove posts by other authors",
+          "Check that a result with only one remaining item is discarded"
+        ],
+        "if_missing": "If only the raw model result is available, do not announce the final list of penalized replies."
+      },
+      "limits": [
+        "Result filtering itself does not establish the size of the impression effect"
+      ],
+      "source_units": [
+        "U0399"
+      ],
+      "evidence": [
+        {
+          "source_id": "S067",
+          "link_indices": [
+            0
+          ],
+          "supports": "Retaining only the same author's posts and excluding single-item results"
+        }
+      ],
+      "related_unknowns": [
+        "Q35",
+        "Q36"
+      ]
+    },
+    {
+      "id": "K04-074",
+      "title": "The root post is excluded at both the prompt and parsing stages",
+      "kind": "code",
+      "conclusion": "The input labels the root as root post and instructs the model not to flag it; parsing accepts only posts with index>0, programmatically excluding the root-post ID. Protection therefore does not rely solely on the model remembering the instruction.",
+      "conditions": [
+        "The index convention of this multi-step reply classifier applies"
+      ],
+      "practical_meaning": "The large account's root post being replied to cannot be included among this writer's zero-score targets.",
+      "check": {
+        "when": "When determining whether a parent or root post is zeroed by a multi-step result",
+        "needed": [
+          "The model-input indexes",
+          "The parsed set of IDs"
+        ],
+        "verify": [
+          "Check the root post instruction",
+          "Check the index>0 parsing condition"
+        ],
+        "if_missing": "Without the parsed results, explain the root-post exclusion within the public boundaries; do not expand the scope."
+      },
+      "limits": [
+        "Other independent rules affecting the root post are outside this conclusion"
+      ],
+      "source_units": [
+        "U0400"
+      ],
+      "evidence": [
+        {
+          "source_id": "S067",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "The root-post input instruction and exclusion during parsing"
+        }
+      ],
+      "related_unknowns": [
+        "Q36"
+      ]
+    },
+    {
+      "id": "K04-075",
+      "title": "Long conversations use only the first and last ancestors, with at most two media items per post",
+      "kind": "code",
+      "conclusion": "When there are more than ten ancestors, the scorer takes the first five and last five, then adds the current reply; each post input contains at most two media items. This cannot be treated as a human review guaranteed to read the full long thread, every attachment, and all background.",
+      "conditions": [
+        "First-and-last sampling is triggered when the ancestor count is >10",
+        "This scorer's media limit applies"
+      ],
+      "practical_meaning": "When assessing the scope of a decision, inspect which context the model actually received rather than only the complete public conversation.",
+      "check": {
+        "when": "When investigating the basis for classifying replies in a long thread",
+        "needed": [
+          "The complete ancestor sequence",
+          "The model input after selection",
+          "The media inputs for each post"
+        ],
+        "verify": [
+          "Verify the first five and last five plus the current reply",
+          "Confirm at most two media items per post",
+          "Compare the omitted background"
+        ],
+        "if_missing": "Without the actual model input, do not guess how the selection affected the actual classification."
+      },
+      "limits": [
+        "The context limits can be confirmed, but actual errors and effects still require model and input data"
+      ],
+      "source_units": [
+        "U0401"
+      ],
+      "evidence": [
+        {
+          "source_id": "S067",
+          "link_indices": [
+            1,
+            2
+          ],
+          "supports": "The media limit, first-and-last sampling when there are more than ten ancestors, and the input"
+        }
+      ],
+      "related_unknowns": [
+        "Q35"
+      ]
+    },
+    {
+      "id": "K04-076",
+      "title": "The production writer handles only retained replies whose authors are still available",
+      "kind": "code",
+      "conclusion": "After the preceding processing, the writer visits only retained reply IDs whose authors can still be obtained; for each, it first attempts RiskyHighVizReply, then publishes ReplyRankingScore(score=0.0, reasoning=reasoning[-500:]). This writer is disabled outside production mode.",
+      "conditions": [
+        "production mode",
+        "The reply ID is retained by result processing",
+        "The author's data is still available"
+      ],
+      "practical_meaning": "Both the write scope and execution environment are specific, and reasoning retains only the final 500 characters; not every candidate identified by the model can be treated as written.",
+      "check": {
+        "when": "When confirming whether a zero score was actually written",
+        "needed": [
+          "The execution environment",
+          "The final reply IDs",
+          "The results of retrieving author data",
+          "Writer records"
+        ],
+        "verify": [
+          "Confirm the production gate",
+          "Check author availability for each reply",
+          "Check score=0.0 and reasoning[-500:]"
+        ],
+        "if_missing": "Without writer status, distinguish classification results from actual publication results."
+      },
+      "limits": [
+        "Attempting labeling does not guarantee that the label was successfully written",
+        "Publishing a score does not mean impressions at every entry point become zero"
+      ],
+      "source_units": [
+        "U0402",
+        "U0403",
+        "U0404"
+      ],
+      "evidence": [
+        {
+          "source_id": "S067",
+          "link_indices": [
+            4
+          ],
+          "supports": "The production restriction, retained replies, author checks, labeling, and zero-score writes"
+        }
+      ],
+      "related_unknowns": [
+        "Q36",
+        "Q37"
+      ]
+    },
+    {
+      "id": "K04-077",
+      "title": "ReplyRankingScore is published to a cache, Kafka, and Strato",
+      "kind": "code",
+      "conclusion": "Accepted reply scores are published to the corresponding cache, Kafka, and Strato records.",
+      "conditions": [
+        "The writer executes score publication"
+      ],
+      "practical_meaning": "Investigating scoring status requires checking score records and publication results, not only whether a label is publicly visible.",
+      "check": {
+        "when": "When tracing whether a zero reply score was published",
+        "needed": [
+          "Cache records",
+          "Kafka publication results",
+          "Strato records",
+          "The corresponding reply ID"
+        ],
+        "verify": [
+          "Align publication paths using the same reply ID",
+          "Distinguish a send action from successful receipt by each destination"
+        ],
+        "if_missing": "Without publication records, do not assert that all stores have been updated."
+      },
+      "limits": [
+        "The production and publication chain is visible, but the full downstream consumption chain has not been obtained"
+      ],
+      "source_units": [
+        "U0402",
+        "U0404"
+      ],
+      "evidence": [
+        {
+          "source_id": "S067",
+          "link_indices": [
+            6
+          ],
+          "supports": "The path publishing scores to the cache, Kafka, and Strato"
+        }
+      ],
+      "related_unknowns": [
+        "Q36",
+        "Q37"
+      ]
+    },
+    {
+      "id": "K04-078",
+      "title": "RiskyHighVizReply labeling exceptions do not automatically block the outer scoring flow",
+      "kind": "code",
+      "conclusion": "The RiskyHighVizReply helper separately checks exceptions such as high PageRank/credibility scores, gray checkmarks, and test accounts; returning from the helper because of an exception does not automatically stop the outer flow from continuing to publish the reply score. The multi-step flow's earlier filter has its own author exclusions, and these two layers of conditions must not be conflated.",
+      "conditions": [
+        "Check the early filter and labeling helper separately",
+        "The path still executes score writing in the outer flow"
+      ],
+      "practical_meaning": "The absence of a particular label is insufficient to establish the absence of reply scoring; check labels and scores separately.",
+      "check": {
+        "when": "When inferring from an absent label that no scoring occurred",
+        "needed": [
+          "The early filter result",
+          "The reason the helper returned",
+          "Actual score-publication records"
+        ],
+        "verify": [
+          "Check labels and scores separately",
+          "Check the outer control flow after the helper returns",
+          "Avoid skipping early eligibility conditions"
+        ],
+        "if_missing": "Without complete call and write records, retain the distinction between not being labeled and not being scored."
+      },
+      "limits": [
+        "Not every author exempted by the helper will reach the multi-step writer"
+      ],
+      "source_units": [
+        "U0405"
+      ],
+      "evidence": [
+        {
+          "source_id": "S066",
+          "link_indices": [
+            0
+          ],
+          "supports": "Early author exclusions in the multi-step flow"
+        },
+        {
+          "source_id": "S067",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "Outer-flow scoring and additional helper exceptions"
+        }
+      ],
+      "related_unknowns": [
+        "Q37"
+      ]
+    },
+    {
+      "id": "K04-079",
+      "title": "The downstream path from a zero reply score to platform-wide impression loss has not been fully traced",
+      "kind": "unknown",
+      "conclusion": "The original report traced only the generation and publication of reply scores and did not obtain complete downstream consumption logic sufficient to convert them into platform-wide impression losses; score=0.0 cannot be rewritten as a guarantee that the final Home Mixer score is zero, much less extended to the parent post, entire conversation, or all new posts by the author.",
+      "conditions": [
+        "Limited to the public chain that has been traced"
+      ],
+      "practical_meaning": "When answering questions about effects, identify the known write targets and the unknown actual effects of downstream use.",
+      "check": {
+        "when": "When estimating the actual loss caused by ReplyRankingScore=0.0",
+        "needed": [
+          "All downstream consumers",
+          "How each entry point uses the score",
+          "Actual ranking and impression observations"
+        ],
+        "verify": [
+          "Confirm whether the same score field is used",
+          "Check the affected objects and entry points",
+          "Distinguish publication records from measured effects"
+        ],
+        "if_missing": "Without the complete chain, do not provide an impression-loss percentage or conclude that the entire account is zeroed."
+      },
+      "limits": [
+        "Not finding the complete downstream chain does not mean there is no downstream effect"
+      ],
+      "source_units": [
+        "U0406"
+      ],
+      "evidence": [
+        {
+          "source_id": "S067",
+          "link_indices": [
+            4,
+            6
+          ],
+          "supports": "The traceable boundaries of zero-reply-score writing and publication"
+        }
+      ],
+      "related_unknowns": [
+        "Q36"
+      ]
+    },
+    {
+      "id": "K04-080",
+      "title": "Further replies should add new versions, steps, data, or counterexamples",
+      "kind": "editorial",
+      "conclusion": "When you have a new version, steps, data, or a counterexample, provide the full background before adding it; merely splitting the same promotional passage into multiple reply levels adds no material readers can use.",
+      "conditions": [
+        "Considering whether to continue replying to the preceding post"
+      ],
+      "practical_meaning": "Decide whether to add another reply based on actual new information without guessing unpublished prohibited phrasing.",
+      "check": {
+        "when": "When reviewing the value of further multi-step replies",
+        "needed": [
+          "The content already provided",
+          "The new material in this reply",
+          "Necessary background"
+        ],
+        "verify": [
+          "Check for substantive new information",
+          "Supply the context needed to understand the new material",
+          "Identify repetition that only fragments promotion"
+        ],
+        "if_missing": "Without new information, do not claim that splitting the content into levels makes it more valuable or safer."
+      },
+      "limits": [
+        "This editorial standard is not an automatic spam-classification rule"
+      ],
+      "source_units": [
+        "U0407"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q35"
+      ]
+    },
+    {
+      "id": "K04-081",
+      "title": "Visibility of quoted posts, reposted originals, and some ancestors can affect the candidate itself",
+      "kind": "code",
+      "conclusion": "The public candidate flow queries the visibility of attached quoted originals, reposted originals, and some conversation ancestors; if the relevant results call for removal, the candidate itself may also be removed.",
+      "conditions": [
+        "The candidate carries the corresponding attached content",
+        "The query result meets this program's removal conditions"
+      ],
+      "practical_meaning": "Distribution eligibility for news commentary or debunking also depends on the status of attached objects; checking only your own text is insufficient.",
+      "check": {
+        "when": "When reviewing visibility risks for quotes, reposts, or news commentary",
+        "needed": [
+          "The quoted/reposted original ID",
+          "Relevant ancestors",
+          "Visibility results for attached content"
+        ],
+        "verify": [
+          "Confirm which objects the program actually queries",
+          "Check whether the result triggers removal of the entire candidate"
+        ],
+        "if_missing": "Without internal results, explain only the dependency; do not conclude that a match occurred."
+      },
+      "limits": [
+        "Not every attached-content label removes the candidate"
+      ],
+      "source_units": [
+        "U0408"
+      ],
+      "evidence": [
+        {
+          "source_id": "S068",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Attached-content queries, removal decisions, and filtering of the entire candidate"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K04-082",
+      "title": "Distinguish Drop, Tombstone, and NotEvaluated from content warnings",
+      "kind": "code",
+      "conclusion": "This removal function treats Drop, Tombstone, and NotEvaluated as requiring removal; other actions such as content warnings are not uniformly treated as removal here. Ancestor posts also have exceptions, so one cannot claim that a label anywhere makes the whole thread disappear.",
+      "conditions": [
+        "The specific action falls within this function's decision scope",
+        "Ancestor cases require separate checking of their exceptions"
+      ],
+      "practical_meaning": "When reviewing the wording, use specific action names and objects; avoid conflating warnings, unevaluated status, and deletion.",
+      "check": {
+        "when": "When inferring candidate removal from attached-content labels",
+        "needed": [
+          "The actual action",
+          "Whether the object is a quote, repost, or ancestor",
+          "Ancestor-exception conditions"
+        ],
+        "verify": [
+          "Compare against Drop/Tombstone/NotEvaluated individually",
+          "Check ancestor exceptions",
+          "Do not automatically treat a content warning as Drop"
+        ],
+        "if_missing": "With only a visible label name, do not infer the backend action or the result for the entire thread."
+      },
+      "limits": [
+        "This function's boundaries do not mean all safety entry points take the same action",
+        "The original report does not list all details of the ancestor exceptions here"
+      ],
+      "source_units": [
+        "U0409"
+      ],
+      "evidence": [
+        {
+          "source_id": "S068",
+          "link_indices": [
+            1,
+            2,
+            3
+          ],
+          "supports": "Attached-content removal decisions, ancestor exceptions, and the distinction from warnings"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K04-083",
+      "title": "A debunking post should make sense without its quote card",
+      "kind": "editorial",
+      "conclusion": "If a post quoting a rumor says only 'Completely wrong; please see the material,' readers cannot tell what is being rebutted when the card is unavailable. The body should first state the claim being checked, the conflicting evidence, and the original source, reducing dependence on a single card for comprehension.",
+      "conditions": [
+        "The quoted object may be unavailable or have display restrictions"
+      ],
+      "practical_meaning": "Make the rebuttal a complete standalone unit of information; this improves comprehensibility but does not waive visibility eligibility for the quote candidate.",
+      "check": {
+        "when": "When reviewing quote-based debunking or commentary",
+        "needed": [
+          "The claim to be checked",
+          "Contrary evidence",
+          "The original source",
+          "The body without the card"
+        ],
+        "verify": [
+          "Test whether it can be understood without looking at the card",
+          "Check whether the evidence directly addresses the claim",
+          "Retain necessary attribution"
+        ],
+        "if_missing": "If background is missing, add it to the body rather than assume the card will always be visible."
+      },
+      "limits": [
+        "Editorial advice does not guarantee passing visibility checks or gaining impressions"
+      ],
+      "source_units": [
+        "U0410",
+        "U0411"
+      ],
+      "evidence": [
+        {
+          "source_id": "S068",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Visibility dependency on the quoted object and candidate eligibility"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K04-084",
+      "title": "Quote-post outcomes cannot be assessed only by the quote-prediction coefficient of 5",
+      "kind": "editorial",
+      "conclusion": "When evaluating a quote post's outcome, also consider the quoted object's status; do not focus solely on the report's quote-prediction coefficient of 5. Writing out the necessary background helps independent understanding, while the quote candidate still must meet the corresponding eligibility requirements.",
+      "conditions": [
+        "Discussing the inspected public defaults and candidate path"
+      ],
+      "practical_meaning": "Check content comprehension, model-prediction fusion, and visibility eligibility separately; avoid explaining final impressions with one coefficient.",
+      "check": {
+        "when": "When reviewing impressions for a quote post",
+        "needed": [
+          "The quoted object's current status and status at observation time",
+          "The complete body text",
+          "Actual candidate eligibility",
+          "The prediction-coefficient path used"
+        ],
+        "verify": [
+          "Check whether the attached content is available",
+          "Distinguish prediction coefficients from eligibility filtering",
+          "Record the observation time"
+        ],
+        "if_missing": "Without status or request records, do not attribute low impressions solely to the quote coefficient."
+      },
+      "limits": [
+        "Editorial advice does not measure the quote format's net effect on impressions"
+      ],
+      "source_units": [
+        "U0411"
+      ],
+      "evidence": [
+        {
+          "source_id": "S068",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Quoted-object status and candidate visibility"
+        },
+        {
+          "source_id": "S027",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The two sets of default coefficients already cited in the report and the context of prediction fusion"
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ]
+    },
+    {
+      "id": "K04-085",
+      "title": "Neither a fixed external-link penalty nor an exemption for the first reply is supported",
+      "kind": "myth",
+      "conclusion": "The paths checked in the original report provide insufficient support for 'all external links mean a fixed 30–50% reduction in impressions' or 'putting the link in the first reply avoids penalties'; what can be specifically checked are link destinations and URL-quality rules.",
+      "conditions": [
+        "Limited to the public paths checked in the original report"
+      ],
+      "practical_meaning": "Choose link placement according to reading needs; claims about impressions require specific rules or evidence of effects.",
+      "check": {
+        "when": "When reviewing external-link penalty percentages or reply-section exemptions",
+        "needed": [
+          "The specific rule being cited",
+          "The experiment behind the supposed fixed reduction",
+          "Link-quality and redirect records"
+        ],
+        "verify": [
+          "Confirm whether the percentage has direct causal evidence",
+          "Check whether the inspected rule actually excludes replies",
+          "Distinguish URL form from internal quality"
+        ],
+        "if_missing": "Without sufficient evidence, remove claims of a fixed reduction and promises of a general exemption."
+      },
+      "limits": [
+        "Lack of confirmation is not proof that all external links have no effect whatsoever on recommendations"
+      ],
+      "source_units": [
+        "U0412"
+      ],
+      "evidence": [
+        {
+          "source_id": "S069",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The scope of the inspected URL features and safety rules"
+        },
+        {
+          "source_id": "S070",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Specific low-quality redirect-chain rules and post-level actions"
+        }
+      ],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K04-086",
+      "title": "Before publication, check the actual destination content and redirect chain",
+      "kind": "editorial",
+      "conclusion": "Open the link from the actual post, record the final domain, and check that the page still delivers what the body promises; a downloadable spreadsheet should still be available, and an old portfolio or event page should not have changed purpose. If redirect records are available, also check the intermediate domains.",
+      "conditions": [
+        "Preparing to publish a link or rechecking an existing one"
+      ],
+      "practical_meaning": "These checks can reveal broken links, misplaced content, site changes, or repurposing, reducing the chance that readers land on unrelated pages.",
+      "check": {
+        "when": "When publishing content with external links or investigating old links",
+        "needed": [
+          "The actual URL in the post",
+          "The final domain",
+          "Landing-page content",
+          "Available intermediate redirect records"
+        ],
+        "verify": [
+          "Access the link through the actual post",
+          "Check each promised item for availability",
+          "Inspect intermediate redirects in the available records"
+        ],
+        "if_missing": "If access fails, mark it unverified; without intermediate records, do not claim to have checked the entire chain."
+      },
+      "limits": [
+        "Checking a webpage cannot reveal X's internal quality rating"
+      ],
+      "source_units": [
+        "U0413",
+        "U0414",
+        "U0424"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K04-087",
+      "title": "A webpage's appearance cannot establish X's internal URL rating",
+      "kind": "unknown",
+      "conclusion": "Link checks can reveal page problems but cannot determine X's internal quality rating for the URL; neither how internal reputation is generated nor its current value can be determined from webpage appearance alone.",
+      "conditions": [
+        "The inspected bot uses internal reputation results"
+      ],
+      "practical_meaning": "Record the page state you verified separately from unknown LOW_QUALITY/BAD ratings.",
+      "check": {
+        "when": "When determining whether the platform rates a URL as low quality or BAD",
+        "needed": [
+          "Actual internal reputation or relevant label evidence",
+          "Landing-page and redirect records"
+        ],
+        "verify": [
+          "Distinguish a normal-looking page from a normal internal rating",
+          "Do not present an appearance check as platform certification"
+        ],
+        "if_missing": "Without internal evidence, leave the rating unknown while reporting checkable facts about the page."
+      },
+      "limits": [
+        "A normal appearance does not establish that every rule allows it",
+        "A visible page problem also does not directly establish that a named label was triggered"
+      ],
+      "source_units": [
+        "U0414",
+        "U0424"
+      ],
+      "evidence": [
+        {
+          "source_id": "S073",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The conditions under which v1/v2 use reputation, which cannot be substituted with webpage appearance"
+        }
+      ],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K04-088",
+      "title": "Explain what the link provides in the body and place reply links according to reading needs",
+      "kind": "editorial",
+      "conclusion": "Explain the linked material in the body, such as spreadsheet fields and the version and date of test materials; if the link is in a reply, make sure readers can find it. An unverified exemption rule should not dictate link placement for every piece of content.",
+      "conditions": [
+        "The body needs to connect readers to external material"
+      ],
+      "practical_meaning": "Link placement should support finding and understanding the material, and the body's promise must match what is actually available.",
+      "check": {
+        "when": "When reviewing a linked post body and its first reply",
+        "needed": [
+          "The linked material's content",
+          "Version and date",
+          "The explanation in the body",
+          "How readers can find the reply link"
+        ],
+        "verify": [
+          "Check that the body accurately describes the material",
+          "Confirm that the link can be found",
+          "Do not claim that placing it in a reply automatically avoids penalties"
+        ],
+        "if_missing": "If the material or placement is not yet settled, add an explanation rather than invent an algorithmic reason."
+      },
+      "limits": [
+        "Editorial advice does not establish that one placement produces better traffic"
+      ],
+      "source_units": [
+        "U0415"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K04-089",
+      "title": "A problematic pinned link can trigger an account-level label",
+      "kind": "code",
+      "conclusion": "After a pinned-post change, the rule resolves its links; if URL ratings contain BAD or LOW_QUALITY and the other eligibility requirements are met, it writes SPAM_HIGH_RECALL to the account. The affected object here may extend beyond a single post.",
+      "conditions": [
+        "A pinned-post change event",
+        "The problematic-URL condition",
+        "Author eligibility is satisfied"
+      ],
+      "practical_meaning": "When several new posts simultaneously show abnormal reach to audiences unfamiliar with the account, recent changes to pinned content are one clue worth checking.",
+      "check": {
+        "when": "When suspecting that a pinned link is associated with reach changes across multiple posts",
+        "needed": [
+          "Pinned-post change history",
+          "URL resolution and rating results",
+          "Author eligibility",
+          "Account-label records"
+        ],
+        "verify": [
+          "Distinguish account labels from post labels",
+          "Check every trigger condition",
+          "Separate temporal association from causal judgment"
+        ],
+        "if_missing": "A drop in impressions alone cannot establish that this rule matched."
+      },
+      "limits": [
+        "The possibility of cross-post effects does not mean complete invisibility at every entry point"
+      ],
+      "source_units": [
+        "U0416",
+        "U0417"
+      ],
+      "evidence": [
+        {
+          "source_id": "S071",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The pinned-URL rule, account labels, and actions at recommendation entry points"
+        }
+      ],
+      "related_unknowns": [
+        "Q38",
+        "Q39"
+      ]
+    },
+    {
+      "id": "K04-090",
+      "title": "Reviewing changes to a pinned link's purpose is only a diagnostic clue for abnormal reach",
+      "kind": "editorial",
+      "conclusion": "If multiple new posts simultaneously show abnormal reach to audiences unfamiliar with the account, review recently changed pinned content; an old resource page, portfolio, or event link may have been repurposed, but an impression decline alone cannot diagnose a rule match.",
+      "conditions": [
+        "An anomaly has actually been observed across multiple posts, with the same metric definition and similar time periods"
+      ],
+      "practical_meaning": "Retain change times, linked content, and label evidence to investigate specific, verifiable changes.",
+      "check": {
+        "when": "When reviewing simultaneous reach declines across multiple posts",
+        "needed": [
+          "Observation windows and audience definitions for multiple posts",
+          "The pinned-post change time",
+          "The link's purpose history",
+          "Relevant label evidence"
+        ],
+        "verify": [
+          "Check whether the anomalies occurred in the same period and use the same definitions",
+          "Verify whether the pinned content changed",
+          "Separate possible causes from confirmed matches"
+        ],
+        "if_missing": "With insufficient data or labels, record it as a clue rather than declare an account penalty."
+      },
+      "limits": [
+        "This is not a causal conclusion that can be established from an impression trend alone"
+      ],
+      "source_units": [
+        "U0417"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q38",
+        "Q39"
+      ]
+    },
+    {
+      "id": "K04-091",
+      "title": "Under the Hood can help check relevant labels during the report period",
+      "kind": "official",
+      "conclusion": "The original report recommends using an Under the Hood report to help check whether relevant labels appeared during its reporting period; inspect the report's scope and specific labels rather than treat it as complete proof of every cause of real-time distribution.",
+      "conditions": [
+        "The account can obtain the corresponding report",
+        "The report period covers the time being investigated"
+      ],
+      "practical_meaning": "Move from speculation about impression anomalies to checking named labels and the report period.",
+      "check": {
+        "when": "When checking clues about pinned content or account labels",
+        "needed": [
+          "The Under the Hood report",
+          "The time covered by the report",
+          "Relevant label names"
+        ],
+        "verify": [
+          "Check the reporting period",
+          "Distinguish account labels, post labels, and observation time"
+        ],
+        "if_missing": "If no report is available or it does not cover the period, leave the result unknown; do not infer that labels were definitely absent."
+      },
+      "limits": [
+        "This section only recommends checking labels during the report period",
+        "It does not establish that one label explains every change in impressions"
+      ],
+      "source_units": [
+        "U0418"
+      ],
+      "evidence": [
+        {
+          "source_id": "S071",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The account labels and pinned-post rule to check"
+        },
+        {
+          "source_id": "S072",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "The official report entry point, fields, and label explanations"
+        }
+      ],
+      "related_unknowns": [
+        "Q39"
+      ]
+    },
+    {
+      "id": "K04-092",
+      "title": "Low-quality URL v1 requires a non-reply, a non-repost, and a mention of a non-follower",
+      "kind": "code",
+      "conclusion": "v1 LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower requires the post not to be a reply or retweet, the redirect chain to be rated LOW_QUALITY, and at least one mentioned user not to follow the author. If the event carries the original-post ID, the older version also uses it to obtain the author or process the original post; relationships cannot be guessed solely from the reposter shown on screen.",
+      "conditions": [
+        "The inspected v1 rule",
+        "The combined conditions above hold"
+      ],
+      "practical_meaning": "Checking an older-version match requires the actual author, mention relationships, and the event's original-post ID; a filename cannot substitute for the decision expression.",
+      "check": {
+        "when": "When explaining the v1 low-quality-link rule",
+        "needed": [
+          "isReply/isRetweet",
+          "The redirect-chain rating",
+          "The mention list",
+          "Whether mentioned users follow the author",
+          "The event's original-post ID"
+        ],
+        "verify": [
+          "Confirm that it is neither a reply nor a repost",
+          "Confirm that at least one mentioned user does not follow the actual author",
+          "When an original-post ID exists, trace the author and the object being processed"
+        ],
+        "if_missing": "Without internal ratings or relationship data, do not assert a match."
+      },
+      "limits": [
+        "v1 conditions cannot be transferred into necessary conditions for v2"
+      ],
+      "source_units": [
+        "U0419",
+        "U0420",
+        "U0421"
+      ],
+      "evidence": [
+        {
+          "source_id": "S073",
+          "link_indices": [
+            0
+          ],
+          "supports": "The complete v1 logic for non-replies, non-reposts, URLs, and mention relationships"
+        }
+      ],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K04-093",
+      "title": "Low-quality URL v2 requires complete event data and two chain checks",
+      "kind": "code",
+      "conclusion": "The prerequisite data for v2 is tcoUserId, tweetId, and a nonempty redirectionChain; the final hop's rating must be neither GOOD nor WHITELIST, and at least one URL in the chain must be LOW_QUALITY.",
+      "conditions": [
+        "tcoUserId and tweetId exist",
+        "redirectionChain is nonempty",
+        "The final hop is not GOOD/WHITELIST",
+        "At least one item in the chain is LOW_QUALITY",
+        "The author conditions must also be satisfied"
+      ],
+      "practical_meaning": "An intermediate low-quality URL and the final destination's rating jointly determine this rule; it does not simply check whether a link exists or inspect only the final domain.",
+      "check": {
+        "when": "When checking whether the URL portion of v2 holds",
+        "needed": [
+          "tcoUserId",
+          "tweetId",
+          "The complete redirectionChain",
+          "The reputation of each hop"
+        ],
+        "verify": [
+          "Confirm the required event fields",
+          "Check that the final hop excludes GOOD/WHITELIST",
+          "Check for at least one LOW_QUALITY item in the chain"
+        ],
+        "if_missing": "Without internal reputation, do not use webpage appearance to fill in a match or exemption."
+      },
+      "limits": [
+        "The full listed conditions apply to this v2 rule and do not cover other malicious-URL rules"
+      ],
+      "source_units": [
+        "U0420",
+        "U0421",
+        "U0422"
+      ],
+      "evidence": [
+        {
+          "source_id": "S073",
+          "link_indices": [
+            1
+          ],
+          "supports": "v2 prerequisite data, LOW_QUALITY within the chain, and the final-hop check"
+        }
+      ],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K04-094",
+      "title": "v2 author exceptions and its different exclusion scope from v1",
+      "kind": "code",
+      "conclusion": "v2 excludes test accounts, high PageRank accounts, accounts on the temporary skip list, and gray-checkmark accounts; it does not read the mention list or follow relationships and does not have v1's isReply/isRetweet exclusions. The filename retaining the old description does not mean mentioning a non-follower is still required.",
+      "conditions": [
+        "Limited to the inspected v2 conditions",
+        "Its author-eligibility checks are passed"
+      ],
+      "practical_meaning": "Moving a link into a reply does not obtain a v2 exemption on this basis; review the actual conditions in the current version.",
+      "check": {
+        "when": "When reviewing v2 exemptions or a supposed mention requirement",
+        "needed": [
+          "The author's test-account/high-PageRank/skip-list/gray-checkmark status",
+          "The actual rule version"
+        ],
+        "verify": [
+          "Check each named author exception",
+          "Confirm the absence of mention/follow and reply/retweet exclusions",
+          "Do not restore old conditions based on the filename"
+        ],
+        "if_missing": "Without internal author status, list only the conditions; do not infer exemption from an ordinary blue checkmark or follower count."
+      },
+      "limits": [
+        "Not matching v2 does not mean other rules allow it"
+      ],
+      "source_units": [
+        "U0420",
+        "U0421",
+        "U0422",
+        "U0423"
+      ],
+      "evidence": [
+        {
+          "source_id": "S073",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The v1/v2 comparison and v2's author exceptions and actual check scope"
+        }
+      ],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K04-095",
+      "title": "v1 and v2 write the post-level SPAM_HIGH_RECALL label",
+      "kind": "code",
+      "conclusion": "Both bots have the named output SPAM_HIGH_RECALL for the post; the rules inspected in the original report do not write SPAM_KNOWN_PATTERN here. This cannot be generalized as a lowquality warning.",
+      "conditions": [
+        "The corresponding bot triggers a write"
+      ],
+      "practical_meaning": "When tracing effects, query the correct label and post-level object rather than substitute another label name.",
+      "check": {
+        "when": "When reviewing the output written by URL rules",
+        "needed": [
+          "The actual bot version",
+          "The label name written",
+          "The target tweetId"
+        ],
+        "verify": [
+          "Check the spelling of SPAM_HIGH_RECALL and the post-level target",
+          "Do not replace it with SPAM_KNOWN_PATTERN or a generalized warning"
+        ],
+        "if_missing": "A low-quality URL rating alone does not establish that the post label has been written."
+      },
+      "limits": [
+        "URL reputation values and post labels are different objects"
+      ],
+      "source_units": [
+        "U0420",
+        "U0421",
+        "U0423"
+      ],
+      "evidence": [
+        {
+          "source_id": "S073",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "v1/v2 write the post-level SPAM_HIGH_RECALL label"
+        }
+      ],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K04-096",
+      "title": "Not matching v2 does not establish clearance under all URL rules",
+      "kind": "code",
+      "conclusion": "A URL not matching v2 shows only that this rule's conditions are incomplete; it does not establish that all other malicious-URL or spam rules allow it.",
+      "conditions": [
+        "Only a missing condition of v2 has been checked"
+      ],
+      "practical_meaning": "Draw a local conclusion from the specific rule; overall safety or recommendation eligibility requires evidence from more paths.",
+      "check": {
+        "when": "When interpreting a v2 non-match as proof that a link is absolutely safe",
+        "needed": [
+          "The missing v2 condition",
+          "Other relevant rules and actual actions"
+        ],
+        "verify": [
+          "Make clear that the conclusion is limited to v2",
+          "Do not infer global permission from failure to meet a single rule's condition"
+        ],
+        "if_missing": "Without evidence from other paths, leave their results unknown."
+      },
+      "limits": [
+        "Not matching does not mean other rules will necessarily take action"
+      ],
+      "source_units": [
+        "U0423"
+      ],
+      "evidence": [
+        {
+          "source_id": "S073",
+          "link_indices": [
+            1
+          ],
+          "supports": "The local combination of conditions for v2"
+        }
+      ],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K04-097",
+      "title": "Short URLs, analytics parameters, and affiliate-link formats do not prove a penalty",
+      "kind": "editorial",
+      "conclusion": "Short URLs, analytics parameters, or affiliate links are not enough by themselves to establish a penalty; a more actionable check is whether each hop still leads to the promised content and whether it is broken, points to a changed site, or has been repurposed. Internal reputation cannot be obtained by looking at webpage appearance alone.",
+      "conditions": [
+        "The link has the corresponding format or redirects"
+      ],
+      "practical_meaning": "Focus review on actual destinations and the reliability of the material; do not diagnose a platform penalty directly from the URL's form.",
+      "check": {
+        "when": "When reviewing risks from short links, tracking parameters, or affiliate links",
+        "needed": [
+          "Actual redirect records",
+          "The content at each hop and the final destination",
+          "Available internal-label evidence"
+        ],
+        "verify": [
+          "Check that the destination matches the promise",
+          "Do not treat link format as proof of LOW_QUALITY/BAD"
+        ],
+        "if_missing": "Without internal evidence, describe visible anomalies separately from the unknown platform rating."
+      },
+      "limits": [
+        "Appearance alone does not prove a penalty or guarantee exemption from other rules"
+      ],
+      "source_units": [
+        "U0424"
+      ],
+      "evidence": [
+        {
+          "source_id": "S073",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The rules depend on reputation and redirect conditions rather than the listed URL formats"
+        }
+      ],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K04-098",
+      "title": "The pinned-URL rule is triggered by a specific user_modification change",
+      "kind": "code",
+      "conclusion": "The Pinned rule receives user_modification and requires pinnedTweetIds after to exist, be nonempty, and differ from before; it then takes the newly pinned post's expanded URLs and resolves their actual destinations and reputation. It writes account-level SPAM_HIGH_RECALL only if any result contains BAD or LOW_QUALITY and author eligibility is satisfied.",
+      "conditions": [
+        "The event is user_modification",
+        "after exists and is nonempty",
+        "after!=before",
+        "At least one resolved result for the newly pinned expanded URLs is BAD/LOW_QUALITY",
+        "Author eligibility passes"
+      ],
+      "practical_meaning": "The presence of any external link on a profile page does not trigger this by itself; check the pinned-post change, the actual newly pinned content, and the account-level target.",
+      "check": {
+        "when": "When checking whether a problematic pinned post triggered this rule",
+        "needed": [
+          "Event type",
+          "pinnedTweetIds before/after",
+          "The newly pinned expanded URLs",
+          "Resolution and reputation",
+          "Author eligibility"
+        ],
+        "verify": [
+          "Confirm that the value is nonempty and has changed",
+          "Confirm that the URLs being resolved are from the newly pinned post",
+          "Check that BAD/LOW_QUALITY and the author conditions both hold"
+        ],
+        "if_missing": "Without the event or internal ratings, do not infer a match directly from an external link on the profile page."
+      },
+      "limits": [
+        "This is a path for adding a label, not the source of every account label"
+      ],
+      "source_units": [
+        "U0425"
+      ],
+      "evidence": [
+        {
+          "source_id": "S074",
+          "link_indices": [
+            0
+          ],
+          "supports": "user_modification, before/after, expanded URLs, ratings, and write conditions"
+        }
+      ],
+      "related_unknowns": [
+        "Q38",
+        "Q39"
+      ]
+    },
+    {
+      "id": "K04-099",
+      "title": "Pinned-post author exceptions are not general exemptions for large follower counts or Premium",
+      "kind": "code",
+      "conclusion": "The pinned-post rule's author exceptions include test accounts, high PageRank, AutoExpiringTempSkipList, and gray checkmarks; these cannot be collectively described as 'many followers means no penalty,' and gray checkmarks must not be confused with ordinary paid blue checkmarks. No general exemption for all Premium accounts is stated here.",
+      "conditions": [
+        "Limited to this named pinned-post rule"
+      ],
+      "practical_meaning": "Check eligibility using exact flags and lists rather than guessing from account size or paid status.",
+      "check": {
+        "when": "When reviewing author exemptions for pinned links",
+        "needed": [
+          "Test-account status",
+          "PageRank status",
+          "AutoExpiringTempSkipList",
+          "Gray-checkmark status"
+        ],
+        "verify": [
+          "Check each named exception",
+          "Distinguish gray checkmarks from ordinary paid blue checkmarks",
+          "Do not add a universal Premium condition"
+        ],
+        "if_missing": "Without internal eligibility data, report only the rule's conditions; do not determine that a particular account is exempt."
+      },
+      "limits": [
+        "The exceptions in this rule do not mean every other path is identical"
+      ],
+      "source_units": [
+        "U0426"
+      ],
+      "evidence": [
+        {
+          "source_id": "S074",
+          "link_indices": [
+            0
+          ],
+          "supports": "The pinned-post rule's named author exceptions"
+        }
+      ],
+      "related_unknowns": [
+        "Q38",
+        "Q39"
+      ]
+    },
+    {
+      "id": "K04-100",
+      "title": "The pinned-post account label's seven days start at the write time",
+      "kind": "code",
+      "conclusion": "The seven days come from CurrentTimeMs()+one week at SetUserLabel; this is neither the pinned post's age nor the date the user views the report.",
+      "conditions": [
+        "The pinned-post conditions are met and the account label is written"
+      ],
+      "practical_meaning": "Calculate the expiration setting from the actual write time; do not substitute the posting date or the date the report is read.",
+      "check": {
+        "when": "When checking the seven-day expiration of pinned-post SPAM_HIGH_RECALL",
+        "needed": [
+          "The actual SetUserLabel write time",
+          "The expiration field"
+        ],
+        "verify": [
+          "Check CurrentTimeMs()+one week",
+          "Distinguish the write time, post creation time, and report-viewing time"
+        ],
+        "if_missing": "Without the write time, do not give an exact removal date."
+      },
+      "limits": [
+        "The expiration setting does not guarantee the actual read time or the time when all impressions recover"
+      ],
+      "source_units": [
+        "U0427"
+      ],
+      "evidence": [
+        {
+          "source_id": "S074",
+          "link_indices": [
+            0
+          ],
+          "supports": "The seven-day expiration setting in SetUserLabel"
+        }
+      ],
+      "related_unknowns": [
+        "Q31",
+        "Q39"
+      ]
+    },
+    {
+      "id": "K04-101",
+      "title": "This file does not establish that unpinning immediately removes the label",
+      "kind": "unknown",
+      "conclusion": "The file shows only the addition of a label when the conditions hold, with no corresponding action to delete it upon unpinning; it cannot guarantee immediate removal after unpinning, nor establish that other systems will not correct, remove, or reapply the label earlier.",
+      "conditions": [
+        "Limited to the write and expiration behavior visible in the inspected file"
+      ],
+      "practical_meaning": "Fixing a link and checking label status are separate tasks; inspect the actual label-lifecycle result after taking action.",
+      "check": {
+        "when": "When answering whether unpinning can bring immediate recovery",
+        "needed": [
+          "The account's current labels",
+          "Write and expiration records",
+          "Other clearing, appeal, or correction actions"
+        ],
+        "verify": [
+          "Confirm that this file has no corresponding label-deletion branch",
+          "Do not infer from an absent branch that the entire system never removes a label early"
+        ],
+        "if_missing": "Without complete lifecycle records, leave the removal time unknown; do not promise immediate removal or a definite seven-day wait."
+      },
+      "limits": [
+        "Not observing an action is not proof that it does not exist anywhere in the system"
+      ],
+      "source_units": [
+        "U0427"
+      ],
+      "evidence": [
+        {
+          "source_id": "S074",
+          "link_indices": [
+            0
+          ],
+          "supports": "The scope of the pinned-post rule, where only label addition and expiration settings are visible"
+        }
+      ],
+      "related_unknowns": [
+        "Q39"
+      ]
+    },
+    {
+      "id": "K04-102",
+      "title": "Seven-day expiration does not promise the original view count will return on day eight",
+      "kind": "unknown",
+      "conclusion": "Even if the label expires, retrieval, already-seen records, other content eligibility, and ranking still affect impressions; the seven-day expiration setting does not promise restoration of the previous view count on day eight.",
+      "conditions": [
+        "Evaluate label expiration separately from actual impressions"
+      ],
+      "practical_meaning": "When reviewing recovery, continue recording entry points, candidate eligibility, and observation windows with consistent metric definitions rather than watching only a countdown.",
+      "check": {
+        "when": "When evaluating recovery after label expiration",
+        "needed": [
+          "The actual label status",
+          "The observation window after expiration",
+          "Retrieval and other eligibility records",
+          "Historical view metrics using the same definition"
+        ],
+        "verify": [
+          "Confirm label status first",
+          "Then distinguish the remaining candidate and ranking factors",
+          "Do not treat temporal sequence as direct evidence of recovery causation"
+        ],
+        "if_missing": "With only an expiration setting, do not guarantee a recovery time or view count."
+      },
+      "limits": [
+        "Without causal impression data, the size of the recovery cannot be quantified"
+      ],
+      "source_units": [
+        "U0428"
+      ],
+      "evidence": [
+        {
+          "source_id": "S074",
+          "link_indices": [
+            0
+          ],
+          "supports": "The specific scope of the seven-day expiration setting"
+        },
+        {
+          "source_id": "S075",
+          "link_indices": [
+            0,
+            1,
+            4
+          ],
+          "supports": "The existence of other account eligibility requirements and Home filters, and differences among entry points"
+        }
+      ],
+      "related_unknowns": [
+        "Q31",
+        "Q39"
+      ]
+    }
+  ]
+}

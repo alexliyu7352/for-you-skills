@@ -1,0 +1,4 @@
+interface:
+  display_name: "Explain X"
+  short_description: "Answer X posting and recommendation questions"
+  default_prompt: "Use $x-explain to explain this X recommendation question with sources."

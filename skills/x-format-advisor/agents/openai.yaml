@@ -1,0 +1,4 @@
+interface:
+  display_name: "Choose an X Format"
+  short_description: "Choose a Post, Article or Thread for your material"
+  default_prompt: "Use $x-format-advisor to choose an X format for this material and explain why."

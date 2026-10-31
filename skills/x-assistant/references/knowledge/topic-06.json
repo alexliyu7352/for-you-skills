@@ -1,0 +1,2775 @@
+{
+  "topic": "49 questions still awaiting confirmation",
+  "claims": [
+    {
+      "id": "Q01",
+      "title": "Which update does “today” in the original Post actually refer to?",
+      "kind": "unknown",
+      "conclusion": "The public commit for 5ed7963 is dated 2026-10-28 02:49:03 UTC, which is 10/27 19:49:03 in Los Angeles; 606b254 is dated 2026-10-29 02:57:55 UTC, which is 10/28 19:57:55 in Los Angeles. Official Notable Updates separately lists feature dates such as 10/8 and 10/13.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "List UTC and Los Angeles dates separately to explain the sequence of public snapshots; do not judge the original Post to be wrong solely from the date of this text, or treat commit time as the time of full deployment.",
+      "check": {
+        "when": "The question or copy concerns: Which update does “today” in the original Post actually refer to?",
+        "needed": [
+          "The original Post’s precise publication time, the author’s time zone, and the configuration, feature, or public commit to which “today” refers."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The original Post’s precise publication time, the author’s time zone, and the configuration, feature, or public commit to which “today” refers."
+      ],
+      "source_units": [
+        "U0513",
+        "U0514",
+        "U0515"
+      ],
+      "evidence": [
+        {
+          "source_id": "S011",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q02",
+      "title": "Are the public defaults the live configuration for every reader?",
+      "kind": "unknown",
+      "conclusion": "The official explanation says cron mirrors the main production defaults; Home Mixer and VM Ranker have different values under the same names in the same commit, and the implementation also contains parameter-reading, caching, and fallback branches.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Describe them as the public main defaults and specify the applicable path; do not dismiss them as arbitrary examples or claim they are identical for every viewer.",
+      "check": {
+        "when": "The question or copy concerns: Are the public defaults the live configuration for every reader?",
+        "needed": [
+          "Per-request feature switches, all experiment assignments, and the correspondence between service deployments and checkpoints."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Per-request feature switches, all experiment assignments, and the correspondence between service deployments and checkpoints."
+      ],
+      "source_units": [
+        "U0516",
+        "U0517",
+        "U0518"
+      ],
+      "evidence": [
+        {
+          "source_id": "S012",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S027",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q03",
+      "title": "If the dwell coefficient increases by 50%, how much do the actual score and exposure increase?",
+      "kind": "unknown",
+      "conclusion": "On the same path, the value was 0.004 on 10/9 and 0.006 on 10/13, so the coefficient did indeed increase by 50%; the final result also depends on predicted values, other terms, candidate competition, and post-processing.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Retain the historical fact of the coefficient change and provide arithmetic examples with explicit assumptions; do not convert that increase into an increase in the total score, exposure, or revenue.",
+      "check": {
+        "when": "The question or copy concerns: If the dwell coefficient increases by 50%, how much do the actual score and exposure increase?",
+        "needed": [
+          "Live A/B tests with fixed model and traffic conditions, and causal exposure data at the Post or author level."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Live A/B tests with fixed model and traffic conditions, and causal exposure data at the Post or author level."
+      ],
+      "source_units": [
+        "U0519",
+        "U0520",
+        "U0521"
+      ],
+      "evidence": [
+        {
+          "source_id": "S015",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S027",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S060",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q04",
+      "title": "Is 0.66 the highest like weight in all of X’s history?",
+      "kind": "unknown",
+      "conclusion": "Checks covered 20 October snapshots of Home Mixer parameters, in which the highest FavoriteWeight was 0.66; it is also not the largest of all current positive coefficients.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Limit the statement to “the highest FavoriteWeight in the October public snapshots examined,” rather than the highest in all history.",
+      "check": {
+        "when": "The question or copy concerns: Is 0.66 the highest like weight in all of X’s history?",
+        "needed": [
+          "Coefficients from all historical versions, undisclosed configurations, and all experiments."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Coefficients from all historical versions, undisclosed configurations, and all experiments."
+      ],
+      "source_units": [
+        "U0522",
+        "U0523",
+        "U0524"
+      ],
+      "evidence": [
+        {
+          "source_id": "S015",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S027",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q05",
+      "title": "Has the complete connection between `CLICK_DWELL_TIME` and Home Mixer’s `click_dwell_time` been verified?",
+      "kind": "unknown",
+      "conclusion": "The named training target is the binary-event probability that the raw label is strictly >10; the public blending coefficient is 0.4, and the blending function reads the field with the same name. The named output has been traced through to the service response.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "State the head definition and coefficient separately; retain the adapter gap, do not claim that the entire live formula has been fully verified, and do not say that each second viewed or each qualifying occurrence adds 0.4.",
+      "check": {
+        "when": "The question or copy concerns: Has the complete connection between `CLICK_DWELL_TIME` and Home Mixer’s `click_dwell_time` been verified?",
+        "needed": [
+          "The production units and aggregation/attribution of the raw CLICK_DWELL_TIME label, the complete public adapter that converts the service output into Home Mixer prediction fields, and per-request mappings and actual deployment configurations."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The production units and aggregation/attribution of the raw CLICK_DWELL_TIME label, the complete public adapter that converts the service output into Home Mixer prediction fields, and per-request mappings and actual deployment configurations."
+      ],
+      "source_units": [
+        "U0525",
+        "U0526",
+        "U0527"
+      ],
+      "evidence": [
+        {
+          "source_id": "S014",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S098",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q06",
+      "title": "How much has CREAD improved production recommendation performance?",
+      "kind": "unknown",
+      "conclusion": "The official 10/8 note states that dwell prediction improved; the named configuration and functions establish 30 logarithmic thresholds, sigmoid classification, time reconstruction, and restoration loss.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Explain the method and configuration and accurately relay the official improvement statement; do not independently add accuracy rates, traffic percentages, or a conclusion that long-form content always wins.",
+      "check": {
+        "when": "The question or copy concerns: How much has CREAD improved production recommendation performance?",
+        "needed": [
+          "Reproducible production evaluation data, complete before-and-after errors and live experiment assignment results, and which model each reader uses."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Reproducible production evaluation data, complete before-and-after errors and live experiment assignment results, and which model each reader uses."
+      ],
+      "source_units": [
+        "U0528",
+        "U0529",
+        "U0530"
+      ],
+      "evidence": [
+        {
+          "source_id": "S011",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S013",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q07",
+      "title": "Are ld’s positive dwell examples equivalent to reading the entire text or reading for ten seconds?",
+      "kind": "unknown",
+      "conclusion": "`ld_positive_actions` includes `CLIENT_TWEET_RECAP_DWELLED`, and the named multiple branches have training and inference usage paths; the official description summarizes this retrieval update as reading content to the end.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Describe retrieval as incorporating dwell-related positive examples; do not add a definition of 100% completion of the full text, a fixed ten seconds, or the same definition as `CLICK_DWELL_TIME`.",
+      "check": {
+        "when": "The question or copy concerns: Are ld’s positive dwell examples equivalent to reading the entire text or reading for ten seconds?",
+        "needed": [
+          "The complete client-side generation rules for this event and the relationship between full-text length and reading progress."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The complete client-side generation rules for this event and the relationship between full-text length and reading progress."
+      ],
+      "source_units": [
+        "U0531",
+        "U0532",
+        "U0533"
+      ],
+      "evidence": [
+        {
+          "source_id": "S011",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S014",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q08",
+      "title": "Can the publicly displayed view count determine when cold start ends?",
+      "kind": "unknown",
+      "conclusion": "Eligibility uses `view_count_on_home` <200 and age<=7200 seconds; this field is separate from the general `view_count`, and the hydrator has a sixty-second TTL cache.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Explain the program’s eligibility rules and boundaries; do not treat the publicly displayed change from 199 to 200 as real-time evidence that cold start has begun or ended.",
+      "check": {
+        "when": "The question or copy concerns: Can the publicly displayed view count determine when cold start ends?",
+        "needed": [
+          "Event-by-event correspondence between the creator-visible total view count and the Home field for the request, cache hits, and count-update logs."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Event-by-event correspondence between the creator-visible total view count and the Home field for the request, cache hits, and count-update logs."
+      ],
+      "source_units": [
+        "U0534",
+        "U0535",
+        "U0536"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q09",
+      "title": "Which candidate actually receives cold-start exploration and display?",
+      "kind": "unknown",
+      "conclusion": "It forms a Beta sample from `fav_count` and Home impressions, takes the top two candidates by default, and then selects one using the score for the current viewer; several eligibility and grouping conditions apply.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Explain exploration and the second, personalized selection, and give a falsifiable counterexample with two candidates; do not promise that the highest observed like rate always wins or that every Post receives guaranteed exposure.",
+      "check": {
+        "when": "The question or copy concerns: Which candidate actually receives cold-start exploration and display?",
+        "needed": [
+          "The real candidate pool, each random sample, prediction scores, and subsequent display records."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The real candidate pool, each random sample, prediction scores, and subsequent display records."
+      ],
+      "source_units": [
+        "U0537",
+        "U0538",
+        "U0539"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S036",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S060",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q10",
+      "title": "How much additional reach does FairShare actually give cold sources?",
+      "kind": "unknown",
+      "conclusion": "It was added on 10/21 and enabled in the public defaults on 10/22; it allocates 2800 slots according to `served_type` proportions, while preserving the original order within each group, and cold candidates can still be removed.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Describe proportional preliminary selection and quota examples with explicit assumptions; do not treat an increase in quota as an increase in actual exposure or say that new Posts can no longer be cut.",
+      "check": {
+        "when": "The question or copy concerns: How much additional reach does FairShare actually give cold sources?",
+        "needed": [
+          "Production candidate-source proportions, flattening order, model scores before and after retention, and live exposure distributions or A/B tests."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Production candidate-source proportions, flattening order, model scores before and after retention, and live exposure distributions or A/B tests."
+      ],
+      "source_units": [
+        "U0540",
+        "U0541",
+        "U0542"
+      ],
+      "evidence": [
+        {
+          "source_id": "S016",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S061",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q11",
+      "title": "Does the mutual-follow coefficient of 20 prove that extensive following back increases exposure?",
+      "kind": "unknown",
+      "conclusion": "For candidates that meet the mutual-follow condition and are neither replies nor retweets, the reply-prediction coefficient increases from 5 by 15 to 20; this does not multiply every engagement term by four.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Explain the personalized conditions and the counterexample that reply candidates do not qualify; do not turn a conditional multiplier into a promised result from a mutual-following strategy.",
+      "check": {
+        "when": "The question or copy concerns: Does the mutual-follow coefficient of 20 prove that extensive following back increases exposure?",
+        "needed": [
+          "Controlled experiments on how following back affects actual engagement predictions, candidate composition, audience quality, and exposure."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Controlled experiments on how following back affects actual engagement predictions, candidate composition, audience quality, and exposure."
+      ],
+      "source_units": [
+        "U0543",
+        "U0544",
+        "U0545"
+      ],
+      "evidence": [
+        {
+          "source_id": "S027",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q12",
+      "title": "Has the new Carousel term on 10/29 already begun boosting videos broadly?",
+      "kind": "unknown",
+      "conclusion": "606b254 adds a `video_open_score`×`immersive_dwell_time` term, but its public coefficient is 0 and EnableVideoCarousel remains false; the new `immersive_page_rl_cread` configuration also establishes only that the configuration exists.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Report the added formula and public switch, retaining the capability that may be enabled by configuration; do not state that videos have already received a platform-wide preference.",
+      "check": {
+        "when": "The question or copy concerns: Has the new Carousel term on 10/29 already begun boosting videos broadly?",
+        "needed": [
+          "The actual enabled scope, nonzero experimental coefficients, deployed checkpoints, and effects on views or exposure."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The actual enabled scope, nonzero experimental coefficients, deployed checkpoints, and effects on views or exposure."
+      ],
+      "source_units": [
+        "U0546",
+        "U0547",
+        "U0548"
+      ],
+      "evidence": [
+        {
+          "source_id": "S017",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q13",
+      "title": "Does `CLIENT_TWEET_RECAP_DWELLED` precisely mean 100% completion of the full text?",
+      "kind": "unknown",
+      "conclusion": "The official description uses “read to the end” to describe the update; the public ld configuration uses `CLIENT_TWEET_RECAP_DWELLED` as a positive example, and the model reads existing action flags.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to say that reading-related signals enter retrieval training and to quote the official “read to the end” description; do not claim that a 100% full-text threshold has been verified, or apply the numeric threshold of a different click-dwell target.",
+      "check": {
+        "when": "The question or copy concerns: Does `CLIENT_TWEET_RECAP_DWELLED` precisely mean 100% completion of the full text?",
+        "needed": [
+          "The complete front-end event-generation rules were not found, so it is not possible to confirm whether or how visible area, text length, scrolling, expansion, and dwell time are combined."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The complete front-end event-generation rules were not found, so it is not possible to confirm whether or how visible area, text length, scrolling, expansion, and dwell time are combined."
+      ],
+      "source_units": [
+        "U0549",
+        "U0550",
+        "U0551"
+      ],
+      "evidence": [
+        {
+          "source_id": "S033",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q14",
+      "title": "Is ld used only for small accounts, and when does it cover every group of live readers?",
+      "kind": "unknown",
+      "conclusion": "The public commit on 10/13 had already added ld; the named combined and home-only configurations both contain corresponding branches, and the relevant passages contain no author-follower-count condition restricting them to small accounts. The general model still permits configurations without ld.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to reject the inference that these configurations “serve only small accounts,” and to list the public code and file dates. The named configurations or README dates do not establish that all live requests simultaneously adopted the same weights.",
+      "check": {
+        "when": "The question or copy concerns: Is ld used only for small accounts, and when does it cover every group of live readers?",
+        "needed": [
+          "The complete correspondence among each live cluster, checkpoint, experiment group, and actual activation time has not been disclosed."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The complete correspondence among each live cluster, checkpoint, experiment group, and actual activation time has not been disclosed."
+      ],
+      "source_units": [
+        "U0552",
+        "U0553",
+        "U0554"
+      ],
+      "evidence": [
+        {
+          "source_id": "S033",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S034",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q15",
+      "title": "Which For You retrieval path consumes the ordinary 32fav index?",
+      "kind": "unknown",
+      "conclusion": "The public code has an index-production condition of >=32 and a 24-hour window; ordinary HOME/`HOME_COLD`/`HOME_HOT` explicitly read 1fav_1day.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to say that the public system builds a 32fav data bucket; do not assert that the 32nd like necessarily opens a new For You path to unfamiliar readers. Failure to find a consumer also does not establish that this index is unused.",
+      "check": {
+        "when": "The question or copy concerns: Which For You retrieval path consumes the ordinary 32fav index?",
+        "needed": [
+          "In the public tree at the fixed version, a specific serving consumer for ordinary 32fav_1day, or a configuration corresponding to live traffic, has not yet been found."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "In the public tree at the fixed version, a specific serving consumer for ordinary 32fav_1day, or a configuration corresponding to live traffic, has not yet been found."
+      ],
+      "source_units": [
+        "U0555",
+        "U0556",
+        "U0557"
+      ],
+      "evidence": [
+        {
+          "source_id": "S038",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S034",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q16",
+      "title": "Does the internal index update immediately when the 1st or 32nd like appears publicly?",
+      "kind": "unknown",
+      "conclusion": "Events may be restricted by one-minute throttling, age, cache thresholds, and missing counts; the 1fav builder also explicitly records a race in which rereading the count returns 0.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to list the precise update conditions and a code counterexample in which an event is throttled; do not treat the public like count as a real-time internal progress bar or claim that a particular like count necessarily unlocks exposure immediately.",
+      "check": {
+        "when": "The question or copy concerns: Does the internal index update immediately when the 1st or 32nd like appears publicly?",
+        "needed": [
+          "For a particular Post, event arrival times, count synchronization, successful processing, and the time at which the index becomes readable are not publicly available event by event."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "For a particular Post, event arrival times, count synchronization, successful processing, and the time at which the index becomes readable are not publicly available event by event."
+      ],
+      "source_units": [
+        "U0558",
+        "U0559",
+        "U0560"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S038",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q17",
+      "title": "Does being written to an index guarantee that unfamiliar readers will see the content?",
+      "kind": "unknown",
+      "conclusion": "The public code distinguishes index production, dataset reads, personalized retrieval, filtering, scoring, and selection; candidates pass through more than one step.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to say that a Post is eligible as a candidate on a given path when the conditions hold; do not provide guaranteed exposure counts, guaranteed upgrades to traffic pools, or a fixed ratio for exchanging likes for exposure.",
+      "check": {
+        "when": "The question or copy concerns: Does being written to an index guarantee that unfamiliar readers will see the content?",
+        "needed": [
+          "Static code cannot reconstruct the source configuration, candidate set, model outputs, ranking, and final display of each real reader request for an individual piece of content."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Static code cannot reconstruct the source configuration, candidate set, model outputs, ranking, and final display of each real reader request for an individual piece of content."
+      ],
+      "source_units": [
+        "U0561",
+        "U0562",
+        "U0563"
+      ],
+      "evidence": [
+        {
+          "source_id": "S037",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S038",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S034",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q18",
+      "title": "Does a bookmark signal mean that the original content or the author’s next Post will be recommended again?",
+      "kind": "unknown",
+      "conclusion": "SimClusters combines the IDs of a reader’s bookmarked Posts with other engagement seeds; immersive retrieval training also lists bookmarks as positive examples, while the shared blending function has no separate bookmark field.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to say that bookmarks participate in some subsequent personalized retrieval and model training; do not count every bookmark as long-term traffic the author can redeem or guarantee another recommendation of the same Post or author.",
+      "check": {
+        "when": "The question or copy concerns: Does a bookmark signal mean that the original content or the author’s next Post will be recommended again?",
+        "needed": [
+          "There are no request or experimental data for this account showing which content a bookmark specifically retrieved in a later request or its net effect on an individual Post’s exposure."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "There are no request or experimental data for this account showing which content a bookmark specifically retrieved in a later request or its net effect on an individual Post’s exposure."
+      ],
+      "source_units": [
+        "U0564",
+        "U0565",
+        "U0566"
+      ],
+      "evidence": [
+        {
+          "source_id": "S041",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q19",
+      "title": "Is the switch allowing OON replies enabled for every live request?",
+      "kind": "unknown",
+      "conclusion": "The public default for EnablePhoenixOonReplies is false; the code contains exceptions conditioned on specified Phoenix served types, optional root-only behavior, and ancestor data.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to say that default restrictions coexist with conditional exceptions; do not guarantee that replies can generally reach beyond an existing audience, or turn one default into a claim that replies can never enter a path to unfamiliar readers.",
+      "check": {
+        "when": "The question or copy concerns: Is the switch allowing OON replies enabled for every live request?",
+        "needed": [
+          "The actual feature-switch values for different users, experiment groups, and sources cannot be fully reconstructed from public defaults."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The actual feature-switch values for different users, experiment groups, and sources cannot be fully reconstructed from public defaults."
+      ],
+      "source_units": [
+        "U0567",
+        "U0568",
+        "U0569"
+      ],
+      "evidence": [
+        {
+          "source_id": "S030",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q20",
+      "title": "Do all evergreen videos first pass a ten-second eligibility filter?",
+      "kind": "unknown",
+      "conclusion": "The actual `evergreen_video`/`evergreen_nsfw_video` indexes check only for the presence of a video type here; they differ from the EVERGREEN retrieval dataset that reads `video_4to14day`. The latter can be traced through the video producer to a >10-second condition.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to say that this processor does not repeat a ten-second check for every evergreen branch; this does not establish that live evergreen necessarily accepts short videos, and the two Evergreen names must not be conflated.",
+      "check": {
+        "when": "The question or copy concerns: Do all evergreen videos first pass a ten-second eligibility filter?",
+        "needed": [
+          "The complete formation conditions for the upstream list feeding actual evergreen events were not found in this public chain."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The complete formation conditions for the upstream list feeding actual evergreen events were not found in this public chain."
+      ],
+      "source_units": [
+        "U0570",
+        "U0571",
+        "U0572"
+      ],
+      "evidence": [
+        {
+          "source_id": "S049",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S050",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q21",
+      "title": "What are the complete production rules for 32fav_video_14to30day?",
+      "kind": "unknown",
+      "conclusion": "RetrievalDataset contains IMMERSIVE32FavVideo14To30Day, which explicitly references this data file.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Retain the dataset name and the observed read location; do not use it as supplementary proof of a For You consumer for ordinary 32fav, or infer solely from the name that all of its videos passed the >10-second function in this section.",
+      "check": {
+        "when": "The question or copy concerns: What are the complete production rules for 32fav_video_14to30day?",
+        "needed": [
+          "The complete producer for this dataset, whether it has other sources, and its actual eligibility chain were not fully traced in the public tree at the fixed version."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The complete producer for this dataset, whether it has other sources, and its actual eligibility chain were not fully traced in the public tree at the fixed version."
+      ],
+      "source_units": [
+        "U0573",
+        "U0574",
+        "U0575"
+      ],
+      "evidence": [
+        {
+          "source_id": "S034",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S050",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q22",
+      "title": "Which other lists are subject to isMediaEligible’s ten-second condition?",
+      "kind": "unknown",
+      "conclusion": "isMediaEligible checks VideoInfo.durationMillis >10000 and that the media is not NSFW; getTweetypieResponse incorporates it into hasEligibleMedia and also checks the author.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Retain this existing condition whose downstream chain has not been fully traced; use the traced hasValidImmersiveVideo chain when establishing the rules for video, 1fav_video, and `nsfw_video`, and do not claim that the two functions cover all videos.",
+      "check": {
+        "when": "The question or copy concerns: Which other lists are subject to isMediaEligible’s ten-second condition?",
+        "needed": [
+          "The public tree contains only the definition and export of getTweetypieResponse, with no other actual callers found, so it cannot be connected to additional lists."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The public tree contains only the definition and export of getTweetypieResponse, with no other actual callers found, so it cannot be connected to additional lists."
+      ],
+      "source_units": [
+        "U0576",
+        "U0577",
+        "U0578"
+      ],
+      "evidence": [
+        {
+          "source_id": "S049",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q23",
+      "title": "If a five-second video enters the general 1fav index, does it have the same exposure opportunity as a longer video?",
+      "kind": "unknown",
+      "conclusion": "The general 1fav builder does not check video duration; the same Post can pass the general index but be blocked from video/1fav_video by the >10-second condition. The public HOME dataset reads 1fav_1day.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to reject the claim that “short videos cannot become Home candidates at all”; do not guarantee that a short video will receive exposure, claim that it has the same opportunity as a longer video, or infer that padding it to eleven seconds will increase views.",
+      "check": {
+        "when": "The question or copy concerns: If a five-second video enters the general 1fav index, does it have the same exposure opportunity as a longer video?",
+        "needed": [
+          "These conditions do not establish the effects of different video durations on actual source combinations, prediction scores, or reader behavior."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "These conditions do not establish the effects of different video durations on actual source combinations, prediction scores, or reader behavior."
+      ],
+      "source_units": [
+        "U0579",
+        "U0580",
+        "U0581"
+      ],
+      "evidence": [
+        {
+          "source_id": "S038",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S034",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S049",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S050",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q24",
+      "title": "Can a recent repost cause any original Post older than 48 hours to be recommended again?",
+      "kind": "unknown",
+      "conclusion": "AgeFilter reads the candidate’s own `tweet_id`; a repost separately retains the original Post ID. Conditions involving an original Post already being seen or served, deduplication, and visibility can still block the candidate.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to say that a recent repost will not be removed by this age comparison solely because the original is older; do not say that reposting resets the original’s lifecycle or clears the reader’s seen records.",
+      "check": {
+        "when": "The question or copy concerns: Can a recent repost cause any original Post older than 48 hours to be recommended again?",
+        "needed": [
+          "The age filter alone cannot guarantee that a particular old Post is available from a source, can be retrieved, passes the remaining filters, and ranks into an actual page."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The age filter alone cannot guarantee that a particular old Post is available from a source, can be retrieved, passes the remaining filters, and ranks into an actual page."
+      ],
+      "source_units": [
+        "U0582",
+        "U0583",
+        "U0584"
+      ],
+      "evidence": [
+        {
+          "source_id": "S039",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q25",
+      "title": "Are PushToHome or longer video windows a 48-hour exemption that creators can use at will?",
+      "kind": "unknown",
+      "conclusion": "PushToHome sits alongside ordinary ScoredPosts and fetches data for Posts specified by a request; the video datasets have their own different time windows.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "They can be used to define the scope of ordinary candidate filters; do not offer an operation guaranteed to let old content bypass restrictions, or use longer video windows to negate AgeFilter for ordinary original Posts.",
+      "check": {
+        "when": "The question or copy concerns: Are PushToHome or longer video windows a 48-hour exemption that creators can use at will?",
+        "needed": [
+          "These passages do not disclose the complete eligibility conditions for a specified Post to enter that request path, or the configurations linking different video sources to real reader traffic."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "These passages do not disclose the complete eligibility conditions for a specified Post to enter that request path, or the configurations linking different video sources to real reader traffic."
+      ],
+      "source_units": [
+        "U0585",
+        "U0586",
+        "U0587"
+      ],
+      "evidence": [
+        {
+          "source_id": "S030",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S050",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S039",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q26",
+      "title": "Are these public defaults the current live configuration for every account?",
+      "kind": "unknown",
+      "conclusion": "The conditions, defaults, and call chains at the fixed version can be checked; the README states that tunable parameters are read through a configuration system and that live experiments are also retained. 606b254 did not change the labeling tasks covered in this chapter, and the relevant ordered lists remain identical after the visibility-rule reorganization.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Use “this public path/public default” to describe behavior that can be rechecked, and retain the results of the latest difference checks; do not promote it into a guarantee for every request across the platform.",
+      "check": {
+        "when": "The question or copy concerns: Are these public defaults the current live configuration for every account?",
+        "needed": [
+          "The feature-switch values actually encountered by each reader or author, experiment buckets, real-time deployment status, and all undisclosed rules were not obtained."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The feature-switch values actually encountered by each reader or author, experiment buckets, real-time deployment status, and all undisclosed rules were not obtained."
+      ],
+      "source_units": [
+        "U0588",
+        "U0589",
+        "U0590"
+      ],
+      "evidence": [
+        {
+          "source_id": "S076",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S051",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S054",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q27",
+      "title": "Does an insult label or account label make content invisible to all non-followers at every entry point?",
+      "kind": "unknown",
+      "conclusion": "Home, HomeRecommendations, and HomeHydration have different rules and audiences; named labels can remove candidates at specific entry points, while followers and the author may receive different treatment.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Specify the entry points and reader conditions that were verified; describe the corresponding effect as “restricting recommendations to non-followers,” without claiming that all external reach or all ways of opening the content fall to zero.",
+      "check": {
+        "when": "The question or copy concerns: Does an insult label or account label make content invisible to all non-followers at every entry point?",
+        "needed": [
+          "These rules do not provide complete proof of consistency across every entry point, such as search, profiles, conversation pages, direct messages, or direct links; nor are there observations of a real account at each entry point."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "These rules do not provide complete proof of consistency across every entry point, such as search, profiles, conversation pages, direct messages, or direct links; nor are there observations of a real account at each entry point."
+      ],
+      "source_units": [
+        "U0591",
+        "U0592",
+        "U0593"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S075",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q28",
+      "title": "Which wording, languages, or contexts are certain to be classified as insults?",
+      "kind": "unknown",
+      "conclusion": "This PTOS write branch requires HateOrAbuseInsultsWithTarget, English, and no high PageRank/gray-badge status, with an additional exception for test accounts; visibility rules for an already-existing label can be checked.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Distinguish classification from write conditions; do not infer that non-English content is exempt from action, that any criticism is an insult, or that a particular rewrite guarantees safety.",
+      "check": {
+        "when": "The question or copy concerns: Which wording, languages, or contexts are certain to be classified as insults?",
+        "needed": [
+          "The specific model prompt, classification errors, other pipelines for other languages, manual labeling, and undisclosed automated rules are outside the scope of what was fully verifiable in this investigation."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The specific model prompt, classification errors, other pipelines for other languages, manual labeling, and undisclosed automated rules are outside the scope of what was fully verifiable in this investigation."
+      ],
+      "source_units": [
+        "U0594",
+        "U0595",
+        "U0596"
+      ],
+      "evidence": [
+        {
+          "source_id": "S076",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S077",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q29",
+      "title": "Which interactions do `LOW_QUALITY` or MISINFO actually block at present?",
+      "kind": "unknown",
+      "conclusion": "The warning rules apply to Everyone and have date conditions; MISINFO reads source to select a limitation reason, and a NonCompliant fallback remains when limit is missing; the final list of actions is assembled from a feature-switch policy.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "List the verifiable branches and test examples and explain that warnings and interaction restrictions may apply; do not uniformly describe them as restricting only non-followers’ likes and all shares, or say that an empty source means there are no interaction restrictions at all.",
+      "check": {
+        "when": "The question or copy concerns: Which interactions do `LOW_QUALITY` or MISINFO actually block at present?",
+        "needed": [
+          "The source for a real Post, each reader’s actual limited-actions policy, and observations of the final presentation and enforcement in each client were not obtained. Public test expectations cannot substitute for these data."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The source for a real Post, each reader’s actual limited-actions policy, and observations of the final presentation and enforcement in each client were not obtained. Public test expectations cannot substitute for these data."
+      ],
+      "source_units": [
+        "U0597",
+        "U0598",
+        "U0599"
+      ],
+      "evidence": [
+        {
+          "source_id": "S078",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q30",
+      "title": "Does three out of five always mean the latest five Posts the author sees on screen?",
+      "kind": "unknown",
+      "conclusion": "The default is mediaOnly=false; the processor reads userTimeline in reverse order, takes at most the first five entries in the window, and counts by Post label and a sixty-day condition. It does not require five entries to be present first; when it encounters a repost, it reads the original Post’s labels.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Precisely describe the scope as “at most five Posts in this reverse-ordered userTimeline data” and explain that the unit is Posts, not images; do not directly substitute five images counted by the user.",
+      "check": {
+        "when": "The question or copy concerns: Does three out of five always mean the latest five Posts the author sees on screen?",
+        "needed": [
+          "The timeline service’s complete item retention, deletion, pagination, and real-time consistency behavior was not obtained, nor was the data returned for an actual account on that occasion. The actual JSON can also be overridden by configuration."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The timeline service’s complete item retention, deletion, pagination, and real-time consistency behavior was not obtained, nor was the data returned for an actual account on that occasion. The actual JSON can also be overridden by configuration."
+      ],
+      "source_units": [
+        "U0600",
+        "U0601",
+        "U0602"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S080",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q31",
+      "title": "Do a ten-minute delay and seven-day TTL guarantee that recommendations begin or resume at a particular time?",
+      "kind": "unknown",
+      "conclusion": "The aggregation forwarder sets a ten-minute delay and maxLag target; the account label’s expiration is calculated as seven days after the write time; the three-out-of-five rule excludes accounts that already have the same account label.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Treat delay, expiration, and exposure as separate concepts; do not promise immediate effect on the third entry, a seven-day extension on every match, or automatic restoration of the original view count on the eighth day.",
+      "check": {
+        "when": "The question or copy concerns: Do a ten-minute delay and seven-day TTL guarantee that recommendations begin or resume at a particular time?",
+        "needed": [
+          "There are no complete observations of actual per-event delays, failed-task retries, label-expiration reads, or removal or relabeling by other systems; nor are there causal data about actual exposure after expiration."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "There are no complete observations of actual per-event delays, failed-task retries, label-expiration reads, or removal or relabeling by other systems; nor are there causal data about actual exposure after expiration."
+      ],
+      "source_units": [
+        "U0603",
+        "U0604",
+        "U0605"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S080",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S074",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q32",
+      "title": "Does three out of five cover all sources of account labels for adult content?",
+      "kind": "unknown",
+      "conclusion": "The public code also contains a media-event path that aggregates Post IDs within one day and enters its own labeling or review-submission functions; three out of five is only one configuration-driven rule, and the public ten/eleven default for `possibly_nsfw_account` is itself unreachable.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Retain each path’s own events, counts, author conditions, and validity period separately; do not merge them into a single universal adult-content allowance.",
+      "check": {
+        "when": "The question or copy concerns: Does three out of five cover all sources of account labels for adult content?",
+        "needed": [
+          "There is no complete list of all manual or automated sources, or of each path’s live activation and traffic share; an unreachable default on one path also cannot establish that other sources will not write the same label."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "There is no complete list of all manual or automated sources, or of each path’s live activation and traffic share; an unreachable default on one path also cannot establish that other sources will not write the same label."
+      ],
+      "source_units": [
+        "U0606",
+        "U0607",
+        "U0608"
+      ],
+      "evidence": [
+        {
+          "source_id": "S076",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S080",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q33",
+      "title": "Is every video guaranteed to be checked when it reaches its sixty-fourth or five-hundred-and-twelfth like?",
+      "kind": "unknown",
+      "conclusion": "The three tasks have different Kafka entry points, filters, media eligibility, and deduplication; 64 is the default minimum fav count on several paths, while 512 concerns reasoning or the earlier AdultContent condition respectively.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Explain eligibility and branches after the task is received; do not present the two numbers as traffic milestones that are guaranteed to be reached, checked, or passed.",
+      "check": {
+        "when": "The question or copy concerns: Is every video guaranteed to be checked when it reaches its sixty-fourth or five-hundred-and-twelfth like?",
+        "needed": [
+          "The complete upstream schedule for producing threshold-crossing events, guaranteed delivery for all videos, the real-time accuracy of like counts, and successful completion of each task are not fully shown in this consumer chain."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The complete upstream schedule for producing threshold-crossing events, guaranteed delivery for all videos, the real-time accuracy of like counts, and successful completion of each task are not fully shown in this consumer chain."
+      ],
+      "source_units": [
+        "U0609",
+        "U0610",
+        "U0611"
+      ],
+      "evidence": [
+        {
+          "source_id": "S051",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S052",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S053",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q34",
+      "title": "Which video imagery is certain to be classified as hidden adult content or manipulated media?",
+      "kind": "unknown",
+      "conclusion": "Special videos undergo a technique screen, reference-video comparison, opening-segment cropping, and model cross-validation; a match produces a named policy, which then passes through the shared sink.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Retain the scope of the checks and processing steps; do not invent cover-image, duration, or editing rules that guarantee evasion, or treat passing one threshold as safety certification.",
+      "check": {
+        "when": "The question or copy concerns: Which video imagery is certain to be classified as hidden adult content or manipulated media?",
+        "needed": [
+          "Classification prompts, actual reference-video data, model error rates, and real inputs and outputs have not all been disclosed; even when eligibility holds, missing data or a changed downstream determination may still occur."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Classification prompts, actual reference-video data, model error rates, and real inputs and outputs have not all been disclosed; even when eligibility holds, missing data or a changed downstream determination may still occur."
+      ],
+      "source_units": [
+        "U0612",
+        "U0613",
+        "U0614"
+      ],
+      "evidence": [
+        {
+          "source_id": "S076",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S051",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S052",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S053",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q35",
+      "title": "Does replying to yourself several times in succession necessarily constitute multi-step reply spam?",
+      "kind": "unknown",
+      "conclusion": "The filter explicitly requires a parent by the same author, a different root-Post author, at least two ancestor entries, at least one thousand followers for the root-Post author, and other eligibility conditions; the classifier must flag the current reply, retain only items by the same author, and exclude single-item results.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Separate structural eligibility from a violation determination and retain examples of ordinary supplementary explanations; do not turn two consecutive replies, a particular character count, or AI use itself into an automatic penalty formula.",
+      "check": {
+        "when": "The question or copy concerns: Does replying to yourself several times in succession necessarily constitute multi-step reply spam?",
+        "needed": [
+          "The complete prompt and actual decision data showing how the model distinguishes ordinary supplementary explanations from spam threads have not been disclosed; even for a long thread, only selected ancestors and limited media are sent."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The complete prompt and actual decision data showing how the model distinguishes ordinary supplementary explanations from spam threads have not been disclosed; even for a long thread, only selected ancestors and limited media are sent."
+      ],
+      "source_units": [
+        "U0615",
+        "U0616",
+        "U0617"
+      ],
+      "evidence": [
+        {
+          "source_id": "S066",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S067",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q36",
+      "title": "What final effect does ReplyRankingScore=0.0 have on Home and other entry points?",
+      "kind": "unknown",
+      "conclusion": "The writer writes a zero score for the retained spam-reply IDs, additionally attempts to apply RiskyHighVizReply, and publishes to the cache, Kafka, and Strato; parsing and post-processing exclude the root Post and other authors.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Describe it as setting the named score of replies classified as spam to zero; this is not equivalent to zeroing the parent Post, the account, or the final Home Mixer score, and it does not establish that all exposure disappears.",
+      "check": {
+        "when": "The question or copy concerns: What final effect does ReplyRankingScore=0.0 have on Home and other entry points?",
+        "needed": [
+          "This public chain did not yield all downstream consumers, how every ranking entry point uses the score, or empirical data that could be converted into a loss of exposure."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "This public chain did not yield all downstream consumers, how every ranking entry point uses the score, or empirical data that could be converted into a loss of exposure."
+      ],
+      "source_units": [
+        "U0618",
+        "U0619",
+        "U0620"
+      ],
+      "evidence": [
+        {
+          "source_id": "S067",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q37",
+      "title": "Does the absence of a RiskyHighVizReply label mean that no reply-score action occurred?",
+      "kind": "unknown",
+      "conclusion": "The labeling helper has author and test-account exceptions, while the outer layer continues publishing the score after calling the helper; multiple filter layers also have their own earlier exclusion conditions.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Check label records and score records separately; do not treat the absence of one as proof that the other never occurred.",
+      "check": {
+        "when": "The question or copy concerns: Does the absence of a RiskyHighVizReply label mean that no reply-score action occurred?",
+        "needed": [
+          "There are no eligibility-query results, helper return reasons, write status, or subsequent score records for a particular real reply."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "There are no eligibility-query results, helper return reasons, write status, or subsequent score records for a particular real reply."
+      ],
+      "source_units": [
+        "U0621",
+        "U0622",
+        "U0623"
+      ],
+      "evidence": [
+        {
+          "source_id": "S066",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S067",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q38",
+      "title": "Can creators determine X’s `LOW_QUALITY` or BAD rating from a URL’s appearance?",
+      "kind": "unknown",
+      "conclusion": "The v1/v2 and pinned-Post bots use internal reputation results; v2 checks for any intermediate `LOW_QUALITY` and the final-hop GOOD/WHITELIST condition, but does not check mention.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Recommend checking redirects and landing-page content and explain that this can identify broken or misplaced links; do not guarantee that this obtains the platform’s internal rating or infer guilt directly from the form of an ordinary short URL or affiliate link.",
+      "check": {
+        "when": "The question or copy concerns: Can creators determine X’s `LOW_QUALITY` or BAD rating from a URL’s appearance?",
+        "needed": [
+          "The complete rules for generating URL ratings, their update times, misclassification mechanisms, and current values are not disclosed in these bots, and not all other malicious-URL rules are included here."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The complete rules for generating URL ratings, their update times, misclassification mechanisms, and current values are not disclosed in these bots, and not all other malicious-URL rules are included here."
+      ],
+      "source_units": [
+        "U0624",
+        "U0625",
+        "U0626"
+      ],
+      "evidence": [
+        {
+          "source_id": "S076",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S073",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S074",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q39",
+      "title": "Does unpinning a problematic link immediately remove the account label?",
+      "kind": "unknown",
+      "conclusion": "The rule examined adds a seven-day `SPAM_HIGH_RECALL` label when its conditions hold after a pinned-Post change; the file contains no corresponding branch that removes the label merely because the Post is unpinned.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Do not promise immediate removal on unpinning, or assert that no other service can make an earlier correction; retain only the visible label-addition and expiration settings.",
+      "check": {
+        "when": "The question or copy concerns: Does unpinning a problematic link immediately remove the account label?",
+        "needed": [
+          "Whether other clearing, appeal, manual-correction, or label-lifecycle services take additional action, and the real account’s current state, have not been fully disclosed or observed."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Whether other clearing, appeal, manual-correction, or label-lifecycle services take additional action, and the real account’s current state, have not been fully disclosed or observed."
+      ],
+      "source_units": [
+        "U0627",
+        "U0628",
+        "U0629"
+      ],
+      "evidence": [
+        {
+          "source_id": "S074",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q40",
+      "title": "How many characters or repetitions cause content to enter a `COPYPASTA_SPAM` cluster?",
+      "kind": "unknown",
+      "conclusion": "The bot receives tweetIdCluster from specified general/reply/CJK scheduled jobs, then writes `COPYPASTA_SPAM` according to eligibility.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Explain that substantial amounts of highly similar content have a corresponding enforcement action; do not provide a “two repetitions guarantee a penalty” rule, a safe character count, or a synonym-rewriting formula for avoiding penalties.",
+      "check": {
+        "when": "The question or copy concerns: How many characters or repetitions cause content to enter a `COPYPASTA_SPAM` cluster?",
+        "needed": [
+          "The complete upstream queries that produce the cluster, similarity thresholds, time window, and repetition-count criteria are not shown in this public chain."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The complete upstream queries that produce the cluster, similarity thresholds, time window, and repetition-count criteria are not shown in this public chain."
+      ],
+      "source_units": [
+        "U0630",
+        "U0631",
+        "U0632"
+      ],
+      "evidence": [
+        {
+          "source_id": "S081",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q41",
+      "title": "Does the `COPYPASTA_SPAM` label directly cause a fixed downranking or a complete end to recommendations?",
+      "kind": "unknown",
+      "conclusion": "The specified bot has an explicit label-writing action. This investigation searched and focused on the public Home Mixer, VM Ranker, and visibility-filtering code, and did not find a complete enforcement chain that directly consumes this label.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Retain both points: “a labeling action exists” and “the downstream effect cannot yet be fully established”; do not delete the unknown or convert it into an exposure percentage.",
+      "check": {
+        "when": "The question or copy concerns: Does the `COPYPASTA_SPAM` label directly cause a fixed downranking or a complete end to recommendations?",
+        "needed": [
+          "The enforcement method, entry points, coefficients, and actual exposure effects in possible other or undisclosed consumers remain unknown. Failure to find them is not proof that they do not exist."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The enforcement method, entry points, coefficients, and actual exposure effects in possible other or undisclosed consumers remain unknown. Failure to find them is not proof that they do not exist."
+      ],
+      "source_units": [
+        "U0633",
+        "U0634",
+        "U0635"
+      ],
+      "evidence": [
+        {
+          "source_id": "S076",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S081",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q42",
+      "title": "Which engagement call to action is certain to be engagement bait?",
+      "kind": "unknown",
+      "conclusion": "In the PTOS sink, baiting, farming, and card manipulation do not receive the high-PageRank/gray-badge exemption used here, but they still require model classification, a non-test account, and the applicable execution environment.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Identify the special treatment of the three write branches and provide editing examples in which questions serve the content; do not build a dictionary of phrases that guarantee a penalty or phrases that guarantee safety.",
+      "check": {
+        "when": "The question or copy concerns: Which engagement call to action is certain to be engagement bait?",
+        "needed": [
+          "The specific spam-classification prompts, contextual judgments, model performance, and causal experiments for different CTAs have not been disclosed."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The specific spam-classification prompts, contextual judgments, model performance, and causal experiments for different CTAs have not been disclosed."
+      ],
+      "source_units": [
+        "U0636",
+        "U0637",
+        "U0638"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q43",
+      "title": "Is the optimal number of hashtags zero, four, or some other fixed number?",
+      "kind": "unknown",
+      "conclusion": "There is a SpamHashTagAbuse category, a `CLICK_HASHTAG` historical feature, and a limit in one SimClusters extractor that takes only the first four hashtags.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Explain abuse risks and available features, interpreting four as a local data-selection limit; this does not prove that all hashtags have zero value or that penalties begin with the fifth.",
+      "check": {
+        "when": "The question or copy concerns: Is the optimal number of hashtags zero, four, or some other fixed number?",
+        "needed": [
+          "There is no complete account of usage and causal comparisons across all models and entry points for different hashtag counts, relevance levels, and topics; nor has a universal per-hashtag bonus or penalty formula been disclosed."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "There is no complete account of usage and causal comparisons across all models and entry points for different hashtag counts, relevance levels, and topics; nor has a universal per-hashtag bonus or penalty formula been disclosed."
+      ],
+      "source_units": [
+        "U0639",
+        "U0640",
+        "U0641"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q44",
+      "title": "How exactly do the full text of a long Post and the body of an Article enter the content representation?",
+      "kind": "unknown",
+      "conclusion": "The mapper passes post_metadata.text into full_text; Article metadata separately includes a title, cover, and media. V8.2 and V5 read these fields differently, as verified by local function checks.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Accurately describe the specified fields and processors; do not treat the name full_text as proof that the complete text of each format was obtained, or say that all models look only at the Article title.",
+      "check": {
+        "when": "The question or copy concerns: How exactly do the full text of a long Post and the body of an Article enter the content representation?",
+        "needed": [
+          "How the production content service populates the complete text of long Posts and the text of Posts carrying Articles, whether Article bodies enter models through other fields or services, and the actual consumers of the representations from different versions."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "How the production content service populates the complete text of long Posts and the text of Posts carrying Articles, whether Article bodies enter models through other fields or services, and the actual consumers of the representations from different versions."
+      ],
+      "source_units": [
+        "U0642",
+        "U0643",
+        "U0644"
+      ],
+      "evidence": [
+        {
+          "source_id": "S087",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S088",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q45",
+      "title": "Do Article reading and long-Post expansion use the same labels and timing?",
+      "kind": "unknown",
+      "conclusion": "Clicks, show-more expansions, detail impressions, and detail dwell have different action values, and Article pages also have their own enums; training reads already-aggregated columns, without showing the complete client-to-label generation chain.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Do not treat the two reading entry points as having a verified common measurement definition, or translate the code threshold of 10 directly into “reading an Article for ten seconds earns a reward.”",
+      "check": {
+        "when": "The question or copy concerns: Do Article reading and long-Post expansion use the same labels and timing?",
+        "needed": [
+          "Timing start and stop, background processing, whether actions overlap, deduplication and attribution windows; the raw production units of CLICK_DWELL_TIME, and whether Article reading is counted in this slot."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Timing start and stop, background processing, whether actions overlap, deduplication and attribution windows; the raw production units of CLICK_DWELL_TIME, and whether Article reading is counted in this slot."
+      ],
+      "source_units": [
+        "U0645",
+        "U0646",
+        "U0647"
+      ],
+      "evidence": [
+        {
+          "source_id": "S090",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S091",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S098",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q46",
+      "title": "Can changing the same content to an Article increase exposure because of the format?",
+      "kind": "unknown",
+      "conclusion": "The scoring functions examined contain no fixed Article multiplier; creator samples have observed higher Article view counts, but their main comparisons were with Posts directing readers to the Articles.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "The product structure can support publishing choices, and observational samples can suggest directions for experiments; neither is sufficient to promise an exposure multiplier from changing the format of the same draft.",
+      "check": {
+        "when": "The question or copy concerns: Can changing the same content to an Article increase exposure because of the format?",
+        "needed": [
+          "Direct comparisons controlling for content, audience, publication time, promotional effort, and observation window, or platform-published format experiment results."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Direct comparisons controlling for content, audience, publication time, promotional effort, and observation window, or platform-published format experiment results."
+      ],
+      "source_units": [
+        "U0648",
+        "U0649",
+        "U0650"
+      ],
+      "evidence": [
+        {
+          "source_id": "S094",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S096",
+          "link_indices": [
+            0
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q47",
+      "title": "Which live traffic is covered by Article media fetching and the different content processors?",
+      "kind": "unknown",
+      "conclusion": "V5 and V8.2 directly read different media fields, and MediaLoader’s Article-media branch also has conditions such as is_high_fav. The relevant processor logic is identical in the two fixed commits.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "64 is a parameter from one observed media-fetching path, not an Article recommendation eligibility threshold or a threshold for guaranteed exposure.",
+      "check": {
+        "when": "The question or copy concerns: Which live traffic is covered by Article media fetching and the different content processors?",
+        "needed": [
+          "Whether upstream services have already populated the media or copied it into other fields, which representation different models and indexes actually consume, and the actual feature switches and coverage proportions."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Whether upstream services have already populated the media or copied it into other fields, which representation different models and indexes actually consume, and the actual feature switches and coverage proportions."
+      ],
+      "source_units": [
+        "U0651",
+        "U0652",
+        "U0653"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S089",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q48",
+      "title": "At which entry points are Article publication status and audience restrictions enforced?",
+      "kind": "unknown",
+      "conclusion": "The dedicated rule for unpublished Articles is registered under TimelineHomeHydration; there are also general subscription-eligibility checks and permission handling in Article media interfaces.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Retain the specific entry points and property conditions; do not describe all Articles as receiving an additional penalty, or infer platform-wide visibility from a pass at one local step.",
+      "check": {
+        "when": "The question or copy concerns: At which entry points are Article publication status and audience restrictions enforced?",
+        "needed": [
+          "How actual client requests pass through different safety levels, when caches at the different points update during editing and republication, and the complete permission policies of external services."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "How actual client requests pass through different safety levels, when caches at the different points update during editing and republication, and the complete permission policies of external services."
+      ],
+      "source_units": [
+        "U0654",
+        "U0655",
+        "U0656"
+      ],
+      "evidence": [
+        {
+          "source_id": "S092",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S093",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "Q49",
+      "title": "Can the Article metrics visible to creators represent completed reads or the model’s reading labels?",
+      "kind": "unknown",
+      "conclusion": "Public Post views allow repeated views and the author’s own views; the help pages examined do not define Article reading metrics sufficiently to map them to internal training labels.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Record each genuinely visible field separately and leave missing values empty; do not substitute view counts, bookmarks, or internal dwell names for the number of readers who finished.",
+      "check": {
+        "when": "The question or copy concerns: Can the Article metrics visible to creators represent completed reads or the model’s reading labels?",
+        "needed": [
+          "The open, reading, duration, and completion fields actually available to the account, and their denominators, deduplication, timing, statistical windows, and backend measurement definitions."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The open, reading, duration, and completion fields actually available to the account, and their denominators, deduplication, timing, statistical windows, and backend measurement definitions."
+      ],
+      "source_units": [
+        "U0657",
+        "U0658",
+        "U0659"
+      ],
+      "evidence": [
+        {
+          "source_id": "S059",
+          "link_indices": [
+            0
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        },
+        {
+          "source_id": "S091",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group."
+        }
+      ],
+      "related_unknowns": []
+    }
+  ]
+}
