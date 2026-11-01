@@ -20,7 +20,7 @@ def validate_repository(root=ROOT):
     original = (root/'provenance/research-report.zh-CN.md').read_bytes()
     if hashlib.sha256(original).hexdigest() != registry['report_sha256']:
         errors.append('Original report hash mismatch')
-    baseline = json.loads((root/'provenance/migration-baseline.json').read_text())
+    baseline = json.loads((root/'provenance/migration-baseline.json').read_text(encoding='utf-8'))
     fields = ('id', 'kind', 'source_units', 'related_unknowns')
     current = {}
     for claim in claims:
@@ -33,7 +33,7 @@ def validate_repository(root=ROOT):
     if urls != baseline['source_urls']:
         errors.append('Original source URLs/order changed')
     for path in (root/'knowledge').glob('*.json'):
-        if re.search(r'[\u3400-\u9fff]', path.read_text()):
+        if re.search(r'[\u3400-\u9fff]', path.read_text(encoding='utf-8')):
             errors.append(f'Untranslated knowledge prose: {path.name}')
     for name in build.NAMES:
         folder = root/'skills'/name
@@ -41,7 +41,7 @@ def validate_repository(root=ROOT):
         if not entry.is_file():
             errors.append(f'Missing skill {name}')
             continue
-        text = entry.read_text()
+        text = entry.read_text(encoding='utf-8')
         if not text.startswith('---\n') or f'\nname: {name}\n' not in text:
             errors.append(f'Invalid frontmatter {name}')
         description = re.search(r'^description: (.+)$', text, re.M)
@@ -50,7 +50,7 @@ def validate_repository(root=ROOT):
         for page in folder.rglob('*.md'):
             if page.name == 'research-report.md':
                 continue
-            data = page.read_text()
+            data = page.read_text(encoding='utf-8')
             if re.search(r'[\u3400-\u9fff]', data):
                 errors.append(f'Untranslated instructions {page.relative_to(root)}')
             for target in re.findall(r'\]\(([^)]+)\)', data):

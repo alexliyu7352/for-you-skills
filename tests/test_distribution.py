@@ -7,7 +7,7 @@ class DistributionTests(unittest.TestCase):
         files = sorted((ROOT / "knowledge").glob("topic-*.json"))
         self.assertEqual(len(files), 7, "English knowledge topics are missing")
         for path in files:
-            self.assertIsNone(re.search(r"[\u3400-\u9fff]", path.read_text()), str(path))
+            self.assertIsNone(re.search(r"[\u3400-\u9fff]", path.read_text(encoding='utf-8')), str(path))
 
     def test_all_skills_present(self):
         for name in NAMES:
