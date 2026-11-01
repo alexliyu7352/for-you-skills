@@ -51,6 +51,7 @@
 ## 审查材料
 
 - [完整结论、22 项清单与修复顺序](README.md)
+- [原始问题清单](findings.json)中的 `open` 保留审查当时的状态；当前修复状态与验证依据请看 [remediation.json](remediation.json) 或[修复记录](remediation.md)。
 - [工程审查与复现步骤](engineering.md)
 - [八个技能的实际任务与输出](workflows.md)
 - 知识审查：[00/01/06](knowledge-a.md)、[02/04](knowledge-b.md)、[03](knowledge-c.md)、[05](knowledge-d.md)

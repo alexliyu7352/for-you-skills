@@ -91,6 +91,6 @@ No authenticated X browsing session, real screenshot-pixel inspection, actual im
 - [Topic 05: 109 entries](knowledge-d.md) · [per-entry ledger](coverage/knowledge-d.json)
 - [Eight workflows and 12 executions](workflows.md) · [inputs, outputs and file coverage](coverage/workflows.json)
 - [Engineering, packaging and 10 reproductions](engineering.md) · [218-file inventory and checks](coverage/engineering.json)
-- [Review manifest and reconciled counts](manifest.json) · [machine-readable findings](findings.json) · [fresh source retrieval hashes](source-manifest.json)
+- [Review manifest and reconciled counts](manifest.json) · [machine-readable findings](findings.json) (**historical `open` statuses; current repair status is in [remediation.json](remediation.json)**) · [fresh source retrieval hashes](source-manifest.json)
 
 Individual reports may reference temporary execution paths. Their checked-in ledgers retain the relevant hashes, URLs and fixture inputs; those paths are not installation requirements. The source manifest records October 31 in America/Los_Angeles; this completion record and November 1 reviewer timestamps use UTC.
