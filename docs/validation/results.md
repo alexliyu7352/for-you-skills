@@ -9,7 +9,9 @@
 - An independent reviewer ran all 43 tests, the build check and corpus validation. Additional probes confirmed shared state across the three helper copies and preservation after malformed/conflicting imports. No blocking findings.
 - These are **workflow and persistence checks, not completed image generation**. No image-provider authentication, output-quality experiment, live X operation, exposure test or durable cross-device synchronization was performed. Temporary fixtures establish save/readback and transfer, not persistence across destroyed hosts. The host can impose image-generation rules that override preference questioning; the first-use mock case does not establish identical behavior in every host.
 
-The previous release's installer and cross-platform evidence is recorded below. New-release installation and CI results should be read against their actual commit; see [GitHub Actions](https://github.com/alexliyu7352/for-you-skills/actions).
+The real Skills CLI installed all eight skills from both the local repository and GitHub into temporary project directories for Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and OpenCode. All 158 distributed files matched byte for byte. This is installation evidence, not six external model runs.
+
+The first 1.1.0 CI run passed Linux/Python 3.12 but exposed a Windows test assertion comparing `RUNNER~1` against the canonical `runneradmin` directory. The helper correctly resolved both to the same private location. The test now canonicalizes its expected path too; no runtime change was needed. That failure cancelled the parallel Python 3.9 job. The corrected run is linked from [GitHub Actions](https://github.com/alexliyu7352/for-you-skills/actions); previous-release evidence remains below.
 
 ## 1.0.0 validation record
 

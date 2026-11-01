@@ -114,7 +114,7 @@ class VisualPreferencesTests(unittest.TestCase):
         result = subprocess.run([sys.executable, str(HELPER), 'path'], env=env,
                                 capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(Path(json.loads(result.stdout)['path']), self.folder/'preferences/visual-preferences.json')
+        self.assertEqual(Path(json.loads(result.stdout)['path']), (self.folder/'preferences/visual-preferences.json').resolve())
         env['FOR_YOU_SKILLS_CONFIG_DIR'] = 'relative'
         result = subprocess.run([sys.executable, str(HELPER), 'path'], env=env, capture_output=True)
         self.assertNotEqual(result.returncode, 0)
