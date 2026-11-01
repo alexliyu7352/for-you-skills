@@ -92,6 +92,16 @@ def merge_same_snapshot(previous, current):
     for key, value in current.items():
         if key not in ('metrics', 'observation_conflicts') and not missing(value):
             result[key] = value
+    # A sparse card cannot undo fuller coverage observed at this same instant.
+    for field, levels in (
+        ('body_status', ('unknown', 'blocked', 'preview', 'partial', 'complete')),
+        ('media_status', ('unknown', 'not_viewed', 'unavailable', 'partial', 'complete')),
+    ):
+        observed = [value for value in (previous.get(field), current.get(field)) if value in levels]
+        if observed:
+            result[field] = max(observed, key=levels.index)
+    if previous.get('media_notes') or current.get('media_notes'):
+        result['media_notes'] = sorted(set((previous.get('media_notes') or []) + (current.get('media_notes') or [])))
     conflicts = dict(previous.get('observation_conflicts') or {})
     old_metrics = previous.get('metrics') if isinstance(previous.get('metrics'), dict) else {}
     new_metrics = current.get('metrics') if isinstance(current.get('metrics'), dict) else {}

@@ -27,6 +27,23 @@ class PostRecords(unittest.TestCase):
     def test_canonical_url_deduplicates_queries_and_legacy_host(self):
         self.assertEqual(self.module.canonical_url('https://twitter.com/demo/status/123?s=20'), 'https://x.com/demo/status/123')
 
+    def test_sparse_same_time_cards_preserve_complete_observed_coverage(self):
+        base = {'url':'https://x.com/demo/status/1', 'observed_at':'2026-10-30T12:00:00Z'}
+        rows = [dict(base, body_status='complete', media_status='complete',
+                     text='Full text', media_notes=['First image', 'Second image']),
+                dict(base, body_status='preview', media_status='partial',
+                     media_notes=['First image']),
+                dict(base, pinned=True)]
+        for ordered in itertools.permutations(rows):
+            with self.subTest(order=ordered):
+                post = self.module.summarize(list(ordered))['posts'][0]
+                self.assertEqual(post['body_status'], 'complete')
+                self.assertEqual(post['media_status'], 'complete')
+                self.assertEqual(post['text'], 'Full text')
+                self.assertCountEqual(post['media_notes'], ['First image', 'Second image'])
+                self.assertNotIn('observation_conflicts', post)
+                self.assertEqual(len(post['source_observations']), 3)
+
     def test_snapshot_dedup_preserves_missing_metrics(self):
         base={'url':'https://x.com/demo/status/123','observed_at':'2026-10-30T12:00:00Z','published_at':'2026-10-23T12:00:00Z','format':'article','body_status':'complete','metrics':{'views':'3.2K'}}
         duplicate=dict(base,url='https://twitter.com/demo/status/123?s=20',observed_at='2026-10-30T12:01:00Z')
