@@ -43,6 +43,7 @@ A prepublication review works through every applicable topic in the research. It
 - **An image plan for this draft.** It explains whether images would help, what the first one should convey, and what each additional image contributes. Missing attachments still receive a concrete recommendation.
 - **A format decision with reasons.** It weighs a long Post, Article or Thread against the material and your goal.
 - **The remaining publishing checks.** Links, reading payoff, video conditions, hashtags, visibility labels, duplication, interaction and corrections are reviewed where relevant, with evidence and explicit gaps.
+- **A fresh-reader pass.** A reader who did not write the draft reads it cold and reports every place they stall — an unclear reference, an unexplained term, a missing step between a mechanism and its consequence — and the draft is revised and re-read until it passes. This stage is editorial judgment, reported separately from the algorithm evidence.
 
 Already published? Supply post links, account links, screenshots or exports. The review workflow can use an authorized browser or Chrome MCP when available, record what it actually sees, and suggest specific changes. Reach diagnosis separates observations from possible explanations and tells you what evidence would distinguish them.
 

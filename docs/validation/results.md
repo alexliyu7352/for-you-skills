@@ -1,5 +1,13 @@
 # Validation results
 
+## 1.2.0 reader review — 2026-11-01 PDT
+
+- The reader-review stage ships as workflow text only: no knowledge entries added or changed. Integrity validation reports the unchanged corpus (578 claims, 49 Q entries, 668/668 source units, 100 source groups, 396 original URLs) with no errors; the eight skills rebuild with no drift; all **81 tests pass** on Python 3.12. The rebuilt `x-publish-checklist` and `x-assistant` bundles also passed their offline audits from an unrelated working directory.
+- Fresh-context behavioral probes ran the packaged checklist end to end. A seeded draft carrying one unresolved reference ("It resets every minute" behind an intervening subject), four unexplained terms (WAL-backed outbox, exactly-once semantics, token bucket, sharded), a mechanism with no reader consequence and a causal claim with its load-bearing step missing **failed round 1 with all seeded classes found**, each quoted verbatim with a stated fix.
+- The loop was then exercised honestly rather than scripted: the first repair draft **also failed** its fresh cold review, on four genuine defects the repair itself had introduced (two contradictory token-bucket models in adjacent sentences, an unexplained "working set", a sharding chain that skipped what happens to the rebuilding node's own lookups, and an unidentifiable "that node"). After those were fixed, a further fresh review **passed with no stalls**. A separate clean draft **passed round 1 with no stalls and no manufactured findings**, its four near-stall points checked and explicitly cleared.
+- A regression probe on a realistic release draft reproduced the full pre-1.2.0 evidence review (measured length, opening and format findings, image plan with `visual_brief`, link and hashtag verdicts, missing-state ledger) and additionally ran the reader-review loop to a reported outcome (PASS in four rounds; the original draft failed in part because "median" and "p95" — the numbers the post rests on — were never explained).
+- Scope limits: these are fresh-context agent runs in one environment, not native model runs in the six installer clients. Whether every host supplies a genuinely separate reviewer context, and how the stage behaves there, remains unverified; the workflow's labeled self-review fallback covers hosts that cannot. Live X collection and exposure effects remain unverified, as before.
+
 ## 1.1.1 review remediation — 2026-10-31 PDT
 
 - All 22 original findings have repairs. Independent knowledge review found no actionable issue; independent engineering review found one further sparse-card coverage defect, which was fixed after a failing six-permutation regression.
