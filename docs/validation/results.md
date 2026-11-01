@@ -11,7 +11,9 @@
 
 The real Skills CLI installed all eight skills from both the local repository and GitHub into temporary project directories for Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and OpenCode. All 158 distributed files matched byte for byte. This is installation evidence, not six external model runs.
 
-The first 1.1.0 CI run passed Linux/Python 3.12 but exposed a Windows test assertion comparing `RUNNER~1` against the canonical `runneradmin` directory. The helper correctly resolved both to the same private location. The test now canonicalizes its expected path too; no runtime change was needed. That failure cancelled the parallel Python 3.9 job. The corrected run is linked from [GitHub Actions](https://github.com/alexliyu7352/for-you-skills/actions); previous-release evidence remains below.
+The first 1.1.0 CI run passed Linux/Python 3.12 but exposed a Windows test assertion comparing `RUNNER~1` against the canonical `runneradmin` directory. The helper correctly resolved both to the same private location. The test now canonicalizes its expected path too; no runtime change was needed. That failure cancelled the parallel Python 3.9 job. The corrected [GitHub Actions run](https://github.com/alexliyu7352/for-you-skills/actions/runs/41261980741) at `af4b62f13c50619893f8b9817dcae1806d32b2bc` passed all three jobs: Ubuntu/Python 3.9, Ubuntu/Python 3.12 and Windows/Python 3.12, each running integrity checks, build comparison and all 43 tests. Previous-release evidence remains below.
+
+The new `x-create-visuals` personal skill and updated `x-assistant` and `x-publish-checklist` were saved through the skill installation workflow. All 68 expected files were verified against persisted content; host-managed optional UI metadata was compared semantically. Other installed specialists were unchanged. No real user visual preferences were initialized by this release.
 
 ## 1.0.0 validation record
 
