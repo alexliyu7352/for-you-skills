@@ -1,0 +1,4 @@
+interface:
+  display_name: "X.com Visual Creator"
+  short_description: "Create post visuals with a reusable private style"
+  default_prompt: "Use $x-create-visuals to create useful images for my X.com post and reuse my preferred style."

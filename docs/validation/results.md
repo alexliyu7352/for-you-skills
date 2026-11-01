@@ -1,5 +1,18 @@
 # Validation results
 
+## 1.1.0 visual workflow — 2026-11-01
+
+- **43 automated tests passed** locally, including 10 new preference tests and isolated visual-helper execution in the router, checklist and new specialist. The original 578 entries, 49 unresolved questions, 668 source units and 396 URLs remain unchanged. The build contains eight skills and 158 generated files.
+- The preference tests exercise fresh-process UTF-8 readback, scoped profiles, byte-preserving temporary overrides, OS default paths, absolute configuration overrides, import/export, conflicts, invalid schema/fields, corrupt existing files, forbidden repository/skill destinations and stale revisions.
+- The old-package baseline exposed no durable preferences or creation handoff. A fresh-context first-use case with **mock generation capability** then selected the creation workflow, read a nonexistent private fixture without writing, offered available production methods and asked for missing style choices. A standalone-checklist follow-up reused the existing brief instead of collecting it again.
+- A second fresh-context agent executed real helper operations in temporary private storage: read an existing series, apply a temporary green palette, save a separate green series, export the document and import into another store. Temporary overrides left bytes identical; default and original series profiles remained unchanged. Missing image-generation capability was mocked and the response labeled its deliverable as production instructions.
+- An independent reviewer ran all 43 tests, the build check and corpus validation. Additional probes confirmed shared state across the three helper copies and preservation after malformed/conflicting imports. No blocking findings.
+- These are **workflow and persistence checks, not completed image generation**. No image-provider authentication, output-quality experiment, live X operation, exposure test or durable cross-device synchronization was performed. Temporary fixtures establish save/readback and transfer, not persistence across destroyed hosts. The host can impose image-generation rules that override preference questioning; the first-use mock case does not establish identical behavior in every host.
+
+The previous release's installer and cross-platform evidence is recorded below. New-release installation and CI results should be read against their actual commit; see [GitHub Actions](https://github.com/alexliyu7352/for-you-skills/actions).
+
+## 1.0.0 validation record
+
 Initial release validation: 2026-10-31; publication and cross-platform follow-up: 2026-11-01. These checks establish packaging, evidence integrity and observed task behavior; they do not measure exposure improvement.
 
 ## Automated checks

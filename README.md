@@ -8,7 +8,7 @@ For You Skills turns a detailed analysis of the **X.com / Twitter recommendation
 
 Choose between a long Post, an Article and a Thread. Check your opening and first image. Investigate why an Article keeps gaining views. Follow a recommendation back to its code, constants and applicable conditions.
 
-**7 skills · 578 knowledge entries · 396 original source URLs · 49 unresolved questions preserved**
+**8 skills · 578 knowledge entries · 396 original source URLs · 49 unresolved questions preserved**
 
 [Read the full research](https://blog.go5.si/posts/x-algorithm-teardown/) · [Follow the author for updates](https://x.com/alexlee20122022)
 
@@ -46,7 +46,17 @@ A prepublication review works through every applicable topic in the research. It
 
 Already published? Supply post links, account links, screenshots or exports. The review workflow can use an authorized browser or Chrome MCP when available, record what it actually sees, and suggest specific changes. Reach diagnosis separates observations from possible explanations and tells you what evidence would distinguish them.
 
-## One entry point, six specialists
+## Turn the image plan into images
+
+Ask **“Create the images from this review, and keep this series visually consistent.”** The assistant carries the draft, sources and image order into `x-create-visuals`; you do not need to explain the material again.
+
+It checks the tools actually available, tells you when it can generate images directly, and offers your own assets, real screenshots, AI generation or a mixture. The first time, it asks for the missing source/provider and style choices. Later, you can reuse the saved style, change it just for this post, or save a new series style. **A one-time change leaves your default untouched.**
+
+Preferences live in a private user configuration file, outside the installed skills and public repository. Default, account and series profiles support JSON export/import between agents and devices. A new installation on the same OS account reads the same file; separate hosts need an explicit transfer. When durable storage is unavailable, the assistant says so and offers an export.
+
+Real evidence stays real: screenshots and code panels use source material, exact charts use verified data, and AI illustration is used where appropriate. The assistant checks text, numbers, cropping and image order before delivery. If no creation tool is available, it supplies clearly labeled briefs and prompts. Image generation depends on your host and chosen provider; the package supplies no provider credentials and promises no exposure bonus.
+
+## One entry point, seven specialists
 
 Ask naturally. **`x-assistant` selects the workflow**, carries context into follow-up questions and combines the findings into one answer. You can also install or invoke a specialist on its own.
 
@@ -59,6 +69,7 @@ Ask naturally. **`x-assistant` selects the workflow**, carries context into foll
 | [`x-publish-checklist`](skills/x-publish-checklist/SKILL.md) | Review an unpublished draft and provide concrete edits |
 | [`x-review-posts`](skills/x-review-posts/SKILL.md) | Inspect published content or screenshots and suggest improvements |
 | [`x-reach-diagnosis`](skills/x-reach-diagnosis/SKILL.md) | Investigate reach patterns and identify the next useful check |
+| [`x-create-visuals`](skills/x-create-visuals/SKILL.md) | Create useful images and save, reuse or transfer your visual style |
 
 Try these:
 
@@ -66,9 +77,11 @@ Try these:
 
 > Check this X.com / Twitter algorithm guide. For every claim, show the evidence, any misreading and what the code does not establish.
 
+> Create two images for this post. Reuse the weekly-code style, but change the palette for this post only.
+
 > Keep the Article format. Now rewrite only the introductory Post: give readers the established findings, the unknowns and the recommended actions.
 
-Automatic discovery depends on the host and model. If needed, point your agent to `x-assistant/SKILL.md` once. The entry skill bundles all six workflows, so it also works when installed alone.
+Automatic discovery depends on the host and model. If needed, point your agent to `x-assistant/SKILL.md` once. The entry skill bundles all seven workflows, so it also works when installed alone.
 
 ## The research ships with the skills
 
@@ -112,7 +125,7 @@ For manual installation, copy the entire `skills/<name>/` directory into your ag
 
 ## What has been verified
 
-**32 automated tests**, **10 agent task cases**, and installation from GitHub for all six named agent targets. Integrity checks and tests passed on **Windows with Python 3.12** and **Linux with Python 3.9 and 3.12**. Every skill was also tested in isolation, including offline evidence lookup.
+**43 automated tests**, the original **10 agent task cases** plus visual-workflow checks, and installation from GitHub for all six named agent targets. Integrity checks and tests passed on **Windows with Python 3.12** and **Linux with Python 3.9 and 3.12**. Every skill was also tested in isolation, including offline evidence lookup.
 
 The task cases cover multilingual questions, combined requests, follow-ups, draft review and supplied published-post records. Six separate external CLI/model executions, live X.com browser collection and exposure-uplift experiments have **not** been performed. [Full results and fixes](docs/validation/results.md)
 

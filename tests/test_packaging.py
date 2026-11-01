@@ -49,14 +49,14 @@ class PackagingTests(unittest.TestCase):
         skill = ROOT/'skills/x-assistant'
         self.assertTrue((skill/'references/routing.json').is_file(), 'Router table missing')
         routes = json.loads((skill/'references/routing.json').read_text(encoding='utf-8'))['routes']
-        self.assertEqual(len(routes), 6)
+        self.assertEqual(len(routes), 7)
         for route in routes:
             self.assertTrue((skill/route['fallback']).is_file(), route['skill'])
 
     def test_each_isolated_skill_can_query_and_audit(self):
         import shutil
         paths = sorted((ROOT/'skills').glob('*/SKILL.md'))
-        self.assertEqual(len(paths), 7)
+        self.assertEqual(len(paths), 8)
         for path in paths:
             with tempfile.TemporaryDirectory() as d:
                 dest = Path(d)/'only-skill'
@@ -70,6 +70,27 @@ class PackagingTests(unittest.TestCase):
                         self.assertEqual(data['errors'], [])
                         self.assertEqual(data['claims'], 578)
                         self.assertEqual(data['unresolved_questions'], 49)
+
+    def test_visual_workflow_works_from_isolated_installations(self):
+        import shutil
+        for name in ('x-assistant', 'x-publish-checklist', 'x-create-visuals'):
+            with self.subTest(skill=name), tempfile.TemporaryDirectory() as d:
+                installed = Path(d)/'only-skill'
+                self.assertTrue((ROOT/'skills'/name).is_dir(), name+' is missing')
+                shutil.copytree(ROOT/'skills'/name, installed)
+                helper = installed/'scripts/visual_preferences.py'
+                self.assertTrue(helper.is_file(), name+' lacks preference persistence')
+                guide = installed/'references/visual-workflow.md'
+                self.assertTrue(guide.is_file(), name+' lacks creation fallback')
+                state = Path(d)/'private/visual-preferences.json'
+                profile = Path(d)/'profile.json'
+                profile.write_text(json.dumps({'source':'ai', 'style':'Editorial ink'}), encoding='utf-8')
+                for args in (['save', '--input', str(profile)], ['show']):
+                    run = subprocess.run([sys.executable, str(helper), '--file', str(state), *args],
+                                         cwd=d, capture_output=True, text=True, encoding='utf-8')
+                    self.assertEqual(run.returncode, 0, run.stdout+run.stderr)
+                    if args[0] == 'show':
+                        self.assertEqual(json.loads(run.stdout)['profile']['style'], 'Editorial ink')
 
     def test_build_check_rejects_drift(self):
         import shutil

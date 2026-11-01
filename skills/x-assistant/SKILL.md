@@ -1,6 +1,6 @@
 ---
 name: x-assistant
-description: Use when a user mentions X, x.com or Twitter and asks for posting advice, algorithm explanations, claim checks, format choices, draft review, account review or reach diagnosis, including ambiguous, mixed requests and follow-up questions. This is the default entry for the For You Skills package.
+description: Use when a user mentions X.com or Twitter and asks for posting advice, algorithm explanations, claim checks, format choices, draft review, account review, reach diagnosis or image creation and visual preferences, including ambiguous, mixed requests and follow-up questions. This is the default entry for the For You Skills package.
 ---
 
 # X Assistant
@@ -12,9 +12,10 @@ Handle natural-language requests without asking users to remember skill names. R
 1. Recover the user's actual goal, supplied text/URLs/screenshots, selected format and relevant prior observations. A follow-up modifies the active task; do not restart completed collection or checks unless the material changed.
 2. Honor an explicitly named specialist. Otherwise choose the primary intent from the routing table. General questions go to `x-explain`; review and diagnosis use their own workflows. Do not turn every mention of reach into an account audit.
 3. Native invocation is optional. If the host supports invoking an installed specialist, use its exact name and pass `routed_by: x-assistant`, scope and available evidence. Otherwise read its bundled workflow at the table's `fallback` path, resolved from the directory containing this `SKILL.md`, and execute it here. Every fallback is included in this skill, so the router works installed alone. All `scripts/...` commands then run from this router's root. This does not require spawning a subagent.
-4. Sequence dependencies, not all six skills. For a supplied draft needing a format decision and review, choose the format first and review once. For reach diagnosis requiring page evidence, collect once and reuse observations; a full editorial audit is only needed if requested. Do not ask for an account or draft to answer a general question.
-5. Keep a small working record: `goal`, `scope`, `routed_by`, `completed_steps`, `selected_format`, `artifacts`, `observations`, `evidence_ids`, `open_questions`. Pass it forward. Ask only for a missing input that materially changes a dependent step; continue independent work.
-6. Merge the results into one answer: direct recommendation, specific edits or next actions, supporting evidence and remaining uncertainty. Reconcile apparent conflicts by scope, version and source strength. Include original citations; omit internal routing narration unless useful or requested.
+4. Sequence dependencies, not all seven specialists. For a supplied draft needing a format decision and review, choose the format first and review once. For reach diagnosis requiring page evidence, collect once and reuse observations; a full editorial audit is only needed if requested. Do not ask for an account or draft to answer a general question.
+5. Keep a small working record: `goal`, `scope`, `routed_by`, `completed_steps`, `selected_format`, `artifacts`, `observations`, `evidence_ids`, `open_questions`, `visual_brief`, `profile_scope`, `style_decision`. Pass it forward. Ask only for a missing input that materially changes a dependent step; continue independent work.
+6. For requested images, use `x-create-visuals`. When a review and images are both requested, review first and pass the draft, ordered image plan, evidence and assets into creation. A review-only request receives a concrete offer; it does not trigger generation or style setup automatically. Reuse the same context on follow-ups.
+7. Merge the results into one answer: direct recommendation, specific edits or next actions, supporting evidence and remaining uncertainty. Reconcile apparent conflicts by scope, version and source strength. Include original citations; omit internal routing narration unless useful or requested.
 
 ## References and boundaries
 

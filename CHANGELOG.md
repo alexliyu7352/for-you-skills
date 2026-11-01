@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0
+
+- Add `x-create-visuals` and route image requests from the natural-language entry and draft review.
+- Discover available image tools, carry the actual review brief, and distinguish generated illustration from real evidence and exact charts.
+- Add private default/account/series style profiles, read-only one-off overrides, and validated import/export, independent of skill updates.
+- Bundle the complete creation fallback and preference helper in the router and checklist as well as the standalone visual skill.
+- Preserve the 578-entry research corpus and original citations unchanged.
+
 ## 1.0.0
 
 - Add `x-assistant`, a natural-language router with six self-contained fallback workflows.

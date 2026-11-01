@@ -7,7 +7,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 NAMES = ('x-assistant', 'x-explain', 'x-myth-check', 'x-format-advisor',
-         'x-publish-checklist', 'x-review-posts', 'x-reach-diagnosis')
+         'x-publish-checklist', 'x-review-posts', 'x-reach-diagnosis', 'x-create-visuals')
+VISUAL_SKILLS = {'x-assistant', 'x-publish-checklist', 'x-create-visuals'}
 SCRIPTS = ('knowledge.py', 'inspect_draft.py', 'summarize_posts.py')
 
 
@@ -16,7 +17,8 @@ def expected_files(root=ROOT):
     for path in sorted((root/'knowledge').glob('*.json')):
         common['references/knowledge/'+path.name] = path.read_bytes()
     for path in sorted((root/'shared').glob('*.md')):
-        common['references/'+path.name] = path.read_bytes()
+        if path.name != 'visual-workflow.md':
+            common['references/'+path.name] = path.read_bytes()
     common['references/research-report.md'] = (root/'provenance/research-report.zh-CN.md').read_bytes()
     for name in SCRIPTS:
         common['scripts/'+name] = (root/'tools'/name).read_bytes()
@@ -26,6 +28,9 @@ def expected_files(root=ROOT):
         result[prefix+'SKILL.md'] = (root/'workflows'/f'{name}.md').read_bytes()
         result[prefix+'agents/openai.yaml'] = (root/'metadata'/f'{name}.yaml').read_bytes()
         result.update({prefix+path: content for path, content in common.items()})
+        if name in VISUAL_SKILLS:
+            result[prefix+'references/visual-workflow.md'] = (root/'shared/visual-workflow.md').read_bytes()
+            result[prefix+'scripts/visual_preferences.py'] = (root/'tools/visual_preferences.py').read_bytes()
         if name == 'x-assistant':
             result[prefix+'references/routing.json'] = (root/'routing.json').read_bytes()
             for other in NAMES[1:]:
