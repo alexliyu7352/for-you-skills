@@ -24,6 +24,10 @@ Browser capability is separate from skill installation. Follow the host's connec
 
 Copy a complete `skills/<name>/` folder to the target agent's documented skill directory. `--copy` is available in the Skills CLI where symlinks are unsuitable. Optional `agents/openai.yaml` files provide UI metadata; the core workflows do not rely on them. Tools resolve resources relative to their own file, so execution does not depend on the shell's current directory.
 
+Every standalone folder includes `LICENSE`, a local `NOTICE.md`, and the research errata. Copy these with the instructions, references and scripts.
+
+The repository's dependency-free frontmatter gate supports exactly `name` and `description` as unique, single-line plain or quoted strings in a complete `---` block. It accepts JSON double quotes and YAML single quotes, plus blank lines and whole-line comments. It rejects ambiguous plain values, inline comments, collections, block scalars and other YAML features instead of pretending to parse them. This is the repository's supported authoring subset, not a restriction of the Agent Skills specification.
+
 ## Visual creation and preferences
 
 `x-create-visuals`, `x-assistant` and `x-publish-checklist` each bundle the complete visual workflow and `visual_preferences.py`. The router has seven specialist fallbacks; the checklist can complete an accepted creation handoff without an installed sibling.

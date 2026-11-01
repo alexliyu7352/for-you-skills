@@ -1,0 +1,362 @@
+{
+  "reviewed_commit": "9193233924df388727296c4e76948db919ac32eb",
+  "implementation_base": "13834c3160e6f0e59fd19601001c6db46f213896",
+  "date": "2026-10-31",
+  "timezone": "America/Los_Angeles",
+  "status": "fixed_and_locally_verified",
+  "findings": [
+    {
+      "id": "KA-001",
+      "priority": "P2",
+      "report": "knowledge-a.md",
+      "claims": [
+        "K01-017"
+      ],
+      "category": "inherited_report",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "KB-F01",
+      "priority": "P2",
+      "report": "knowledge-b.md",
+      "claims": [
+        "K04-049"
+      ],
+      "category": "inherited_report",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "KB-F02",
+      "priority": "P3",
+      "report": "knowledge-b.md",
+      "claims": [
+        "K04-046",
+        "K04-047"
+      ],
+      "category": "inherited_report",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "KB-F03",
+      "priority": "P3",
+      "report": "knowledge-b.md",
+      "claims": [
+        "K04-077"
+      ],
+      "category": "english_distillation",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "KB-F04",
+      "priority": "P3",
+      "report": "knowledge-b.md",
+      "claims": [
+        "K02-089"
+      ],
+      "category": "english_distillation",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "C-01",
+      "priority": "P2",
+      "report": "knowledge-c.md",
+      "claims": [
+        "K03-018"
+      ],
+      "category": "english_distillation",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "C-02",
+      "priority": "P2",
+      "report": "knowledge-c.md",
+      "claims": [
+        "K03-101"
+      ],
+      "category": "english_distillation",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "C-03",
+      "priority": "P3",
+      "report": "knowledge-c.md",
+      "claims": [
+        "K03-077"
+      ],
+      "category": "inherited_report",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "KD-01",
+      "priority": "P2",
+      "report": "knowledge-d.md",
+      "claims": [
+        "K05-061"
+      ],
+      "category": "english_distillation",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "KD-02",
+      "priority": "P3",
+      "report": "knowledge-d.md",
+      "claims": [
+        "K05-047"
+      ],
+      "category": "inherited_report",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "KD-03",
+      "priority": "P3",
+      "report": "knowledge-d.md",
+      "claims": [
+        "K05-034"
+      ],
+      "category": "english_distillation",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "KD-04",
+      "priority": "P2",
+      "report": "knowledge-d.md",
+      "claims": [
+        "K05-069"
+      ],
+      "category": "inherited_report",
+      "status": "fixed",
+      "verification": [
+        "All changed claim fields and correction sources independently reviewed against pinned primary code; no actionable findings. See remediation-knowledge-review.md."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f",
+      "related_claims": [
+        "K04-091",
+        "K05-066"
+      ]
+    },
+    {
+      "id": "ENG-01",
+      "priority": "P2",
+      "file": "tools/knowledge.py",
+      "line": 99,
+      "title": "Unchecked source-unit metadata",
+      "report": "engineering.md",
+      "claims": [],
+      "category": "engineering",
+      "status": "fixed",
+      "verification": [
+        "Source-unit uniqueness, bounds, ordering, source IDs and slice hashes: test_validation.py; standalone original/audit reject corrupt inputs."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "ENG-02",
+      "priority": "P2",
+      "file": "tools/knowledge.py",
+      "line": 110,
+      "title": "Schema accepts values that crash lookup",
+      "report": "engineering.md",
+      "claims": [],
+      "category": "engineering",
+      "status": "fixed",
+      "verification": [
+        "Nested schema/CLI mutation regressions: test_validation.py; independent 410-case probe returned clean diagnostics."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "ENG-03",
+      "priority": "P2",
+      "file": "tools/validate.py",
+      "line": 44,
+      "title": "Incomplete frontmatter passes gate",
+      "report": "engineering.md",
+      "claims": [],
+      "category": "engineering",
+      "status": "fixed",
+      "verification": [
+        "Complete supported frontmatter and malformed/duplicate scalar regressions: test_validation.py."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "ENG-04",
+      "priority": "P2",
+      "file": "tools/summarize_posts.py",
+      "line": 67,
+      "title": "Metric scopes silently mixed",
+      "report": "engineering.md",
+      "claims": [],
+      "category": "engineering",
+      "status": "fixed",
+      "verification": [
+        "Scope-aware snapshots, unknown-scope retention and provenance permutations: test_post_records.py."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "ENG-05",
+      "priority": "P2",
+      "file": "tools/summarize_posts.py",
+      "line": 89,
+      "title": "Unresolved text conflict regains complete status",
+      "report": "engineering.md",
+      "claims": [],
+      "category": "engineering",
+      "status": "fixed",
+      "verification": [
+        "Persistent alternatives and partial conflict state across three or more observations: test_post_records.py."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "ENG-06",
+      "priority": "P2",
+      "file": "tools/inspect_draft.py",
+      "line": 57,
+      "title": "CRLF normalization changes raw code-point count",
+      "report": "engineering.md",
+      "claims": [],
+      "category": "engineering",
+      "status": "fixed",
+      "verification": [
+        "CRLF/LF/lone-CR CLI raw counts: test_draft_checks.py; CRLF fixture reports 6000 raw / 5998 trimmed."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "ENG-07",
+      "priority": "P2",
+      "file": "tools/build.py",
+      "line": 15,
+      "title": "Standalone copies omit license and notice",
+      "report": "engineering.md",
+      "claims": [],
+      "category": "engineering",
+      "status": "fixed",
+      "verification": [
+        "Eight standalone licenses/notices and contained local links: test_packaging.py and independent isolation checks."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "ENG-08",
+      "priority": "P2",
+      "file": "tools/summarize_posts.py",
+      "line": 151,
+      "title": "One-hop content identity grouping",
+      "report": "engineering.md",
+      "claims": [],
+      "category": "engineering",
+      "status": "fixed",
+      "verification": [
+        "Transitive Article/carrier/Thread groups, cyclic and contradictory input permutations: test_post_records.py."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "ENG-09",
+      "priority": "P3",
+      "file": "tools/summarize_posts.py",
+      "line": 83,
+      "title": "Equivalent exact counts conflict",
+      "report": "engineering.md",
+      "claims": [],
+      "category": "engineering",
+      "status": "fixed",
+      "verification": [
+        "Exact integer/comma count equivalence without rounded/scope promotion: test_post_records.py."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    },
+    {
+      "id": "ENG-10",
+      "priority": "P3",
+      "file": "tools/summarize_posts.py",
+      "line": 170,
+      "title": "Malformed JSON root raises traceback",
+      "report": "engineering.md",
+      "claims": [],
+      "category": "engineering",
+      "status": "fixed",
+      "verification": [
+        "Malformed input roots/rows and file/JSON errors produce clear failures: test_post_records.py and test_draft_checks.py."
+      ],
+      "fixed_in": "5992e2fbeb587f9ab63c9866fdf79715982bb02f"
+    }
+  ],
+  "unverified_capabilities": [
+    "Authenticated live X collection",
+    "Actual image-generation output",
+    "Six native agent/model executions",
+    "Causal exposure lift"
+  ],
+  "historical_provenance_gaps": [
+    "K00-002",
+    "K00-003"
+  ],
+  "tests_passed": 81,
+  "generated_files": 182,
+  "remaining_original_findings": 0,
+  "publication_verification": {
+    "ci": "pending",
+    "personal_skill_updates": "pending"
+  },
+  "followup_findings": [
+    {
+      "id": "REM-ENG-01",
+      "priority": "P3",
+      "status": "fixed",
+      "fixed_in": "18c0636b0be3506d3a6f784c3cb2085a636fa896",
+      "summary": "Complementary sparse observations downgraded complete coverage.",
+      "verification": [
+        "Six input permutations first failed; preserving strongest observed coverage and media notes passes the regression.",
+        "test_sparse_same_time_cards_preserve_complete_observed_coverage; all 81 tests pass; contradictory text still forces partial status."
+      ]
+    }
+  ]
+}

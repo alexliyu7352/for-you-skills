@@ -1,5 +1,7 @@
 # Full independent repository review
 
+**Remediation update:** the findings below describe the frozen reviewed version. See the [1.1.1 remediation record](remediation.md) for the 22 fixes, independent acceptance and remaining verification limits.
+
 [简体中文](README.zh-CN.md)
 
 **Result: 22 open findings — 14 P2 (medium) and 8 P3 (low). Changes are needed before this release can be described as passing a strict whole-repository review.** No critical or high-priority security defect was established; this is not a security certification. The findings do not invalidate every answer the skills produce, but several can change an answer or corrupt a diagnostic summary.

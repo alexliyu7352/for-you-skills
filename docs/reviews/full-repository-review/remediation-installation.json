@@ -1,0 +1,113 @@
+{
+  "source_commit": "18c0636b0be3506d3a6f784c3cb2085a636fa896",
+  "installer_version": "1.7.4",
+  "target_agents": [
+    "claude-code",
+    "codex",
+    "gemini-cli",
+    "cursor",
+    "github-copilot",
+    "opencode"
+  ],
+  "copied_skill_directories": 16,
+  "matched_files": 364,
+  "checks": [
+    {
+      "name": "x-review-posts",
+      "path": ".claude/skills/x-review-posts",
+      "matched_files": 21,
+      "audit": "passed"
+    },
+    {
+      "name": "x-reach-diagnosis",
+      "path": ".claude/skills/x-reach-diagnosis",
+      "matched_files": 21,
+      "audit": "passed"
+    },
+    {
+      "name": "x-explain",
+      "path": ".claude/skills/x-explain",
+      "matched_files": 21,
+      "audit": "passed"
+    },
+    {
+      "name": "x-format-advisor",
+      "path": ".claude/skills/x-format-advisor",
+      "matched_files": 21,
+      "audit": "passed"
+    },
+    {
+      "name": "x-publish-checklist",
+      "path": ".claude/skills/x-publish-checklist",
+      "matched_files": 23,
+      "audit": "passed"
+    },
+    {
+      "name": "x-assistant",
+      "path": ".claude/skills/x-assistant",
+      "matched_files": 31,
+      "audit": "passed"
+    },
+    {
+      "name": "x-create-visuals",
+      "path": ".claude/skills/x-create-visuals",
+      "matched_files": 23,
+      "audit": "passed"
+    },
+    {
+      "name": "x-myth-check",
+      "path": ".claude/skills/x-myth-check",
+      "matched_files": 21,
+      "audit": "passed"
+    },
+    {
+      "name": "x-review-posts",
+      "path": ".agents/skills/x-review-posts",
+      "matched_files": 21,
+      "audit": "passed"
+    },
+    {
+      "name": "x-reach-diagnosis",
+      "path": ".agents/skills/x-reach-diagnosis",
+      "matched_files": 21,
+      "audit": "passed"
+    },
+    {
+      "name": "x-explain",
+      "path": ".agents/skills/x-explain",
+      "matched_files": 21,
+      "audit": "passed"
+    },
+    {
+      "name": "x-format-advisor",
+      "path": ".agents/skills/x-format-advisor",
+      "matched_files": 21,
+      "audit": "passed"
+    },
+    {
+      "name": "x-publish-checklist",
+      "path": ".agents/skills/x-publish-checklist",
+      "matched_files": 23,
+      "audit": "passed"
+    },
+    {
+      "name": "x-assistant",
+      "path": ".agents/skills/x-assistant",
+      "matched_files": 31,
+      "audit": "passed"
+    },
+    {
+      "name": "x-create-visuals",
+      "path": ".agents/skills/x-create-visuals",
+      "matched_files": 23,
+      "audit": "passed"
+    },
+    {
+      "name": "x-myth-check",
+      "path": ".agents/skills/x-myth-check",
+      "matched_files": 21,
+      "audit": "passed"
+    }
+  ],
+  "native_model_runs": false
+}

@@ -1,5 +1,14 @@
 # Validation results
 
+## 1.1.1 review remediation — 2026-10-31 PDT
+
+- All 22 original findings have repairs. Independent knowledge review found no actionable issue; independent engineering review found one further sparse-card coverage defect, which was fixed after a failing six-permutation regression.
+- The final local suite passes **81 tests** on Python 3.12. Integrity validation reports 578 claims, 49 Q entries, 668/668 substantive source units, 100 source groups and 396 original URLs, with no errors. The eight skills rebuild into **182 files** with no drift. All 13 canonical Python tool/test files parse with Python 3.9 grammar; runtime compatibility is a separate CI check.
+- All 17 changed knowledge records, 15 correction objects and 27 correction-cited code files received independent source review. Original report bytes, original citations, IDs and migration mappings remain unchanged. Corrected knowledge and explicit errata are included in every skill.
+- The real cached Skills CLI 1.7.4 installed the final package to all six documented targets. Its shared target locations produced 16 physical skill copies; all **364 copied files** matched, and all 16 standalone offline audits passed from an unrelated working directory. This is installer/helper execution, not six model runs.
+- A fresh-context agent completed three actual requests using the packaged router: hashtag/publication-time claim correction, a cross-month Under the Hood explanation, and same-post observations with different metric scopes. The [task record](../reviews/full-repository-review/remediation-task-probes.md) retains the user answers, inputs and 18 actual helper calls.
+- Remote CI and persisted personal-skill updates are tracked in the [remediation record](../reviews/full-repository-review/remediation.md); they are not inferred from local checks. Live X collection, real generated-image quality, native six-client model behavior and exposure uplift remain unverified.
+
 ## Full repository review — 2026-11-01 UTC
 
 The [independent whole-repository review](../reviews/full-repository-review/README.md) ([简体中文](../reviews/full-repository-review/README.zh-CN.md)) covers all 578 knowledge entries, eight workflows, canonical tooling and standalone packaging at `9193233924df388727296c4e76948db919ac32eb`. It found **22 open issues: 12 knowledge findings affecting 13 entries and 10 engineering findings**. The existing 43 tests still pass. Their success does not resolve those findings or establish live browsing, actual image generation or six native model executions. The review publication records the issues; it does not fix them.
