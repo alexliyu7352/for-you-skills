@@ -2064,7 +2064,7 @@
       "id": "K04-046",
       "title": "The 48-hour check for ordinary candidates uses the candidate's own creation time",
       "kind": "code",
-      "conclusion": "This ordinary-candidate path has MAX_POST_AGE=48×60×60 seconds; AgeFilter uses is_within_age(candidate.tweet_id), retains age<=48 hours, and excludes candidates only when they are older.",
+      "conclusion": "This ordinary-candidate path has MAX_POST_AGE=48×60×60 seconds. AgeFilter uses is_within_age(candidate.tweet_id): a successfully decoded age at or below 48 hours passes; an older age or an unavailable age fails this filter.",
       "conditions": [
         "The candidate passes through this ordinary AgeFilter",
         "The candidate's own tweet_id is used"
@@ -2074,11 +2074,11 @@
         "when": "When reviewing a claim that posts stop being recommended after 48 hours",
         "needed": [
           "The actual candidate ID",
-          "Its creation time",
+          "The age decoded from the candidate ID, including whether it is unavailable",
           "The source and filter used"
         ],
         "verify": [
-          "Check age<=MAX_POST_AGE",
+          "Check that an age is available and age<=MAX_POST_AGE; an unavailable age fails the predicate",
           "Confirm that the reposted original's ID has not been substituted",
           "Limit the statement to this candidate flow"
         ],
@@ -2086,7 +2086,8 @@
       },
       "limits": [
         "This does not uniformly cover all Home sources",
-        "The publicly displayed time does not replace the internal candidate ID"
+        "The publicly displayed time does not replace the internal candidate ID",
+        "The age helper implementation is outside this repository; this evidence does not identify which particular IDs produce an unavailable age"
       ],
       "source_units": [
         "U0375",
@@ -2111,38 +2112,55 @@
             1,
             2
           ],
-          "supports": "The precise comparison and the flow in which it appears"
+          "supports": "The inclusive age comparison, rejection of unavailable age, and the flow in which the filter appears"
         }
       ],
       "related_unknowns": [
         "Q24",
         "Q25"
-      ]
+      ],
+      "correction": {
+        "review_finding": "KB-F02",
+        "origin": "original_report",
+        "date": "2026-10-31",
+        "summary": "Add the unavailable-age rejection omitted by the original report; the 48-hour bound remains inclusive when an age is decoded.",
+        "sources": [
+          {
+            "label": "AgeFilter rejects unavailable age and otherwise keeps age at or below its maximum",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31"
+          },
+          {
+            "label": "Ordinary-candidate maximum age of 48 hours",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43"
+          }
+        ]
+      }
     },
     {
       "id": "K04-047",
-      "title": "Exactly 48 hours still passes this age comparison",
+      "title": "A successfully decoded age of exactly 48 hours passes this filter",
       "kind": "code",
-      "conclusion": "AgeFilter uses <=, so exactly 48 hours is retained and only older candidates are removed; time keeps advancing during actual requests, and the inclusive boundary accurately describes the rule rather than offering a posting technique worth timing to the second.",
+      "conclusion": "For a successfully decoded age, AgeFilter uses <=, so exactly 48 hours passes; an older age or an unavailable age fails. Time keeps advancing during actual requests, and the inclusive boundary accurately describes the rule rather than offering a posting technique worth timing to the second.",
       "conditions": [
-        "Assessing only this age-comparison expression"
+        "Assessing this AgeFilter predicate; the exact-boundary statement assumes a successfully decoded age"
       ],
       "practical_meaning": "Retain the exact boundary when reviewing the wording; in practice, complete candidate and timing records are still needed.",
       "check": {
         "when": "When checking the 48-hour boundary or a strategy based on exact-second timing",
         "needed": [
-          "The candidate's creation time",
+          "The age decoded from the candidate's own ID, including whether decoding returns an age",
           "The actual request time",
           "The comparison operator"
         ],
         "verify": [
-          "Confirm that exactly 48 hours still passes",
+          "Confirm that a decoded age of exactly 48 hours passes and an unavailable age fails",
           "Do not turn an instantaneous boundary into an impression guarantee"
         ],
         "if_missing": "Without actual time fields, do not make second-level eligibility judgments."
       },
       "limits": [
-        "Passing the age requirement does not guarantee that other conditions or display requirements are met"
+        "Passing the age requirement does not guarantee that other conditions or display requirements are met",
+        "The external age helper is not implemented in this repository, so no particular class of IDs is asserted to return an unavailable age"
       ],
       "source_units": [
         "U0384"
@@ -2154,12 +2172,28 @@
             0,
             1
           ],
-          "supports": "The 48-hour value and less-than-or-equal comparison"
+          "supports": "The 48-hour value, less-than-or-equal comparison, and false result when age is unavailable"
         }
       ],
       "related_unknowns": [
         "Q24"
-      ]
+      ],
+      "correction": {
+        "review_finding": "KB-F02",
+        "origin": "original_report",
+        "date": "2026-10-31",
+        "summary": "Qualify the inherited inclusive-boundary statement with successful age decoding and preserve rejection when age is unavailable.",
+        "sources": [
+          {
+            "label": "AgeFilter rejects unavailable age and otherwise keeps age at or below its maximum",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31"
+          },
+          {
+            "label": "Ordinary-candidate maximum age of 48 hours",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43"
+          }
+        ]
+      }
     },
     {
       "id": "K04-048",
@@ -2219,13 +2253,14 @@
     },
     {
       "id": "K04-049",
-      "title": "The original post must still be retrievable and pass requirements such as visibility",
+      "title": "Returned visibility actions for a reposted original can remove the candidate",
       "kind": "code",
-      "conclusion": "Even when a recent repost passes the age check for its own ID, the original post's data must still be retrievable and pass screening such as visibility checks.",
+      "conclusion": "A recent repost passing the age check for its own ID can still be removed when a returned visibility action for its original triggers an ancillary drop. The cited ancillary path does not drop merely because the original's visibility lookup is missing or errored. Core-data hydration also falls back to the candidate's core text when the source post's text is unavailable; these paths do not establish a universal original-data retrieval prerequisite.",
       "conditions": [
-        "The candidate carries a reposted original"
+        "The candidate carries a reposted original",
+        "Ancillary dropping for that original requires a successfully returned visibility result with a dropping action"
       ],
-      "practical_meaning": "Before reposting older material, check the original post's status and accessibility; passing the age check is only one requirement.",
+      "practical_meaning": "Inspect the original post's retrieval and visibility outcomes when diagnosing a repost. Distinguish a returned dropping action from a missing or errored lookup; passing the age check is still insufficient to establish display.",
       "check": {
         "when": "When explaining why a repost of older content still is not displayed",
         "needed": [
@@ -2234,13 +2269,15 @@
           "The candidate's other eligibility requirements"
         ],
         "verify": [
-          "Check whether the original post's data is available",
-          "Check the visibility action applied to the attached content"
+          "Distinguish source-post data retrieval from the candidate's own core-data hydration",
+          "Check the returned visibility action for the original and the candidate's ancillary-drop flag",
+          "Do not treat a missing or errored original lookup as an automatic drop in these paths"
         ],
-        "if_missing": "Without runtime results, do not attribute failure to the original post's age or declare that all eligibility checks passed."
+        "if_missing": "Without runtime results, do not attribute failure to the original post's age or an assumed mandatory retrieval gate, and do not declare that all eligibility checks passed."
       },
       "limits": [
-        "Passing one filter does not mean passing the entire chain"
+        "Passing one filter does not mean passing the entire chain; other gates or returned dropping actions may still remove the candidate",
+        "These paths establish no blanket guarantee that a repost with missing original data will eventually display"
       ],
       "source_units": [
         "U0386"
@@ -2251,12 +2288,36 @@
           "link_indices": [
             9
           ],
-          "supports": "Visibility handling for attached content such as reposted originals"
+          "supports": "Ancillary dropping requires a successfully returned dropping visibility action, including for a reposted original"
         }
       ],
       "related_unknowns": [
         "Q24"
-      ]
+      ],
+      "correction": {
+        "review_finding": "KB-F01",
+        "origin": "original_report",
+        "date": "2026-10-31",
+        "summary": "Remove the inherited universal original-post retrieval prerequisite; the cited paths distinguish explicit visibility drops from missing/error lookups and provide a source-text fallback.",
+        "sources": [
+          {
+            "label": "Ancillary visibility drops only on returned dropping actions",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L140-L169"
+          },
+          {
+            "label": "Source text fallback to the candidate core text",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/core_data_candidate_hydrator.rs#L103-L124"
+          },
+          {
+            "label": "Core-data filter checks candidate author ID",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/core_data_hydration_filter.rs#L6-L15"
+          },
+          {
+            "label": "Ancillary filter removes candidates with an ancillary-drop flag",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancillary_vf_filter.rs#L7-L17"
+          }
+        ]
+      }
     },
     {
       "id": "K04-050",
@@ -3432,29 +3493,33 @@
     },
     {
       "id": "K04-077",
-      "title": "ReplyRankingScore is published to a cache, Kafka, and Strato",
+      "title": "The multi-step writer publishes zero reply scores through cache, Kafka, and Strato paths",
       "kind": "code",
-      "conclusion": "Accepted reply scores are published to the corresponding cache, Kafka, and Strato records.",
+      "conclusion": "The multi-step reply-spam writer sends ReplyRankingScore with score=0.0 to the publisher, whose path writes the corresponding caches, Kafka, and Strato records. The general publisher writes caches only for a present score <=1.0; the zero scores from this writer meet that condition.",
       "conditions": [
-        "The writer executes score publication"
+        "The multi-step writer executes its zero-score publication path; this writer is disabled outside production",
+        "The claim concerns score=0.0, not every possible ReplyRankingScore"
       ],
       "practical_meaning": "Investigating scoring status requires checking score records and publication results, not only whether a label is publicly visible.",
       "check": {
         "when": "When tracing whether a zero reply score was published",
         "needed": [
+          "The published score value and originating writer",
           "Cache records",
           "Kafka publication results",
           "Strato records",
           "The corresponding reply ID"
         ],
         "verify": [
+          "Confirm this is the multi-step writer's zero score; a score above 1.0 is outside the cache-fanout condition",
           "Align publication paths using the same reply ID",
           "Distinguish a send action from successful receipt by each destination"
         ],
         "if_missing": "Without publication records, do not assert that all stores have been updated."
       },
       "limits": [
-        "The production and publication chain is visible, but the full downstream consumption chain has not been obtained"
+        "The production and publication chain is visible, but the full downstream consumption chain has not been obtained",
+        "A publication path does not prove successful writes to all destinations; a failed earlier operation can prevent subsequent operations"
       ],
       "source_units": [
         "U0402",
@@ -3466,13 +3531,29 @@
           "link_indices": [
             6
           ],
-          "supports": "The path publishing scores to the cache, Kafka, and Strato"
+          "supports": "The publisher conditionally writes caches for present scores <=1.0, then publishes to Kafka and Strato; zero satisfies the cache condition"
         }
       ],
       "related_unknowns": [
         "Q36",
         "Q37"
-      ]
+      ],
+      "correction": {
+        "review_finding": "KB-F03",
+        "origin": "english_distillation",
+        "date": "2026-10-31",
+        "summary": "Restore the original zero-score scope and state the general publisher cache condition instead of asserting that every accepted score is cached.",
+        "sources": [
+          {
+            "label": "Multi-step writer is production-only and publishes score=0.0",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L151-L198"
+          },
+          {
+            "label": "Cache score gate and subsequent Kafka/Strato writes",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/strato_loader.py#L20-L53"
+          }
+        ]
+      }
     },
     {
       "id": "K04-078",
@@ -4040,30 +4121,31 @@
     },
     {
       "id": "K04-091",
-      "title": "Under the Hood can help check relevant labels during the report period",
+      "title": "Under the Hood can help check labels within its report coverage and cohort definitions",
       "kind": "official",
-      "conclusion": "The original report recommends using an Under the Hood report to help check whether relevant labels appeared during its reporting period; inspect the report's scope and specific labels rather than treat it as complete proof of every cause of real-time distribution.",
+      "conclusion": "The original report recommends Under the Hood as a source of clues about relevant labels. Post-label counts concern the reported authored-post cohort and its generating-path observation rules (K05-069), while account-label statistics count labeled days (K05-070). Inspect those definitions and the specific labels before relating the report to a change in distribution.",
       "conditions": [
         "The account can obtain the corresponding report",
-        "The report period covers the time being investigated"
+        "The reported post cohort or account-day coverage is relevant to the issue being investigated"
       ],
-      "practical_meaning": "Move from speculation about impression anomalies to checking named labels and the report period.",
+      "practical_meaning": "Move from speculation about impression anomalies to checking named labels, authored-post cohorts, account-label days, and report coverage.",
       "check": {
         "when": "When checking clues about pinned content or account labels",
         "needed": [
           "The Under the Hood report",
-          "The time covered by the report",
+          "The report period, authored-post cohort, observation rules, and account-day coverage",
           "Relevant label names"
         ],
         "verify": [
-          "Check the reporting period",
+          "Match post creation dates and applicable observation rules to the reported cohort; assess account-label days separately",
           "Distinguish account labels, post labels, and observation time"
         ],
-        "if_missing": "If no report is available or it does not cover the period, leave the result unknown; do not infer that labels were definitely absent."
+        "if_missing": "If no report is available or relevant cohort/day coverage cannot be established, leave the result unknown; do not infer that labels were definitely absent."
       },
       "limits": [
-        "This section only recommends checking labels during the report period",
-        "It does not establish that one label explains every change in impressions"
+        "This is a report-scoped diagnostic recommendation, not a complete log of label activity in a calendar period",
+        "It does not establish that one label explains every change in impressions",
+        "Live or account-specific availability has not been verified by this source review; the unauthenticated endpoint returned 403 in the full repository review"
       ],
       "source_units": [
         "U0418"
@@ -4090,7 +4172,39 @@
       ],
       "related_unknowns": [
         "Q39"
-      ]
+      ],
+      "correction": {
+        "review_finding": "KD-04",
+        "origin": "original_report",
+        "date": "2026-10-31",
+        "summary": "Clarify nearby troubleshooting advice so report-period shorthand does not override the post-cohort and account-day definitions corrected in K05-069.",
+        "sources": [
+          {
+            "label": "Eligible logical-post cohort, exclusions, and deduplicated denominator",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L215-L250"
+          },
+          {
+            "label": "Ordinary safety-label event observation horizon",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L311-L322"
+          },
+          {
+            "label": "Count ever-applied labels and record removal separately",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L360-L393"
+          },
+          {
+            "label": "Configurable default observation period of seven days",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L421-L422"
+          },
+          {
+            "label": "Assign post-label rows to months using authoredYyyymmdd",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthUserMonthMhPublisherJob.scala#L237-L245"
+          },
+          {
+            "label": "Report sums carried counts and divides by the eligible-post count; account labels use days",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L320-L355"
+          }
+        ]
+      }
     },
     {
       "id": "K04-092",

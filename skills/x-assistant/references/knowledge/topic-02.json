@@ -3981,7 +3981,7 @@
       "id": "K02-089",
       "title": "V8.2 content representation reads the author's name, account, and truncated bio",
       "kind": "code",
-      "conclusion": "The public V8.2 renderer reads the author's name, account, and bio; a character limit is applied to the bio before it enters text input. This proves the model can see the bio in this flow, not that keyword stuffing adds points.",
+      "conclusion": "The public V8.2 renderer reads the author's name, account, and bio. It sets MAX_BIO=500 and strips outer whitespace before slicing the bio to at most 500 Python string characters, then removes trailing whitespace before adding it to text input. This proves the model can see the bio in this flow, not that keyword stuffing adds points.",
       "conditions": [
         "Limited to the V8.2 content-representation processor and corresponding inputs."
       ],
@@ -3995,12 +3995,13 @@
         ],
         "verify": [
           "Retain author name, account, and bio as three inputs",
+          "Check MAX_BIO=500 and the renderer truncation operation; do not substitute the profile editor limit",
           "Distinguish input existence from bonus effects"
         ],
         "if_missing": "Confirm this processor reads the bio without quantifying keyword effects or coverage across all models."
       },
       "limits": [
-        "This scope provides no numeric character limit; do not invent one. Not all production content representations necessarily use V8.2."
+        "MAX_BIO=500 is this renderer's input cap; it does not establish the profile editor's limit or a ranking benefit. Not all production content representations necessarily use V8.2."
       ],
       "source_units": [
         "U0221"
@@ -4012,14 +4013,30 @@
             0,
             1
           ],
-          "supports": "Author-field inputs and bio character-limit handling"
+          "supports": "Author-field inputs, MAX_BIO=500, and the bio truncation call in V8.2"
         }
       ],
       "related_unknowns": [
         "Q02",
         "Q44",
         "Q47"
-      ]
+      ],
+      "correction": {
+        "review_finding": "KB-F04",
+        "origin": "english_distillation",
+        "date": "2026-10-31",
+        "summary": "Remove the added assertion that the numeric bio limit is unavailable; the cited renderer explicitly defines MAX_BIO=500.",
+        "sources": [
+          {
+            "label": "V8.2 bio cap and slice-based truncation",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50"
+          },
+          {
+            "label": "V8.2 bio input uses MAX_BIO",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L213-L215"
+          }
+        ]
+      }
     },
     {
       "id": "K02-090",

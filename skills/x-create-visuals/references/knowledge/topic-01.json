@@ -912,14 +912,14 @@
     },
     {
       "id": "K01-017",
-      "title": "Checking 'today' requires distinguishing snapshot time, announcement date, and deployment",
+      "title": "Checking 'today' requires distinguishing commit time, public availability, announcements, and deployment",
       "kind": "code",
-      "conclusion": "5ed796374ea48ee26058aab66ab10c266bea2bef was made public on 2026-10-28 at 02:49:03 UTC (October 27, 19:49:03 PDT); 606b254b45be798bfaecfa8c23f5a9c51bc8000c was made public on October 29 at 02:57:55 UTC (October 28, 19:57:55 PDT). Commit time is not the time an experiment was deployed to all traffic.",
+      "conclusion": "5ed796374ea48ee26058aab66ab10c266bea2bef has author and committer timestamps of 2026-10-28 at 02:49:03 UTC (October 27, 19:49:03 PDT); 606b254b45be798bfaecfa8c23f5a9c51bc8000c has author and committer timestamps of 2026-10-29 at 02:57:55 UTC (October 28, 19:57:55 PDT). These recorded commit times establish neither first public availability nor when an experiment was deployed to all traffic.",
       "conditions": [
         "Los Angeles used PDT, UTC−7, on those dates",
         "Interpreting 'today' in an original post also requires the author's posting time, time zone, and the event referenced"
       ],
-      "practical_meaning": "When publishing an interpretation of updates, state the time bases alongside each other and describe announcements, code snapshots, and production experiments separately.",
+      "practical_meaning": "When publishing an interpretation of updates, state the time bases alongside each other and distinguish recorded commit times, first public availability, announcements, and production experiments.",
       "check": {
         "when": "When reviewing date assertions such as 'updated today' or 'October 28/29 update'",
         "needed": [
@@ -930,13 +930,13 @@
         ],
         "verify": [
           "Complete the time-zone conversion",
-          "Confirm whether the statement concerns a public commit or a feature date",
+          "Confirm whether the statement concerns commit metadata, first public availability, an announcement, or a production feature date",
           "Do not judge the original post incorrect solely from the current report date"
         ],
         "if_missing": "If the original post's time or referent is unclear, preserve the ambiguity; do not declare its 'today' incorrect."
       },
       "limits": [
-        "A commit establishes only when a snapshot was made public",
+        "Commit metadata establishes the recorded commit timestamps; it does not establish first public availability or production rollout time",
         "The time a README note was added may differ from the feature date"
       ],
       "source_units": [
@@ -953,7 +953,7 @@
             1,
             2
           ],
-          "supports": "The two public commits and separately stated feature dates in the README."
+          "supports": "Recorded timestamps of the two commits and separately stated feature dates in the README; not first public availability or production rollout time."
         },
         {
           "source_id": "S012",
@@ -967,7 +967,27 @@
       "related_unknowns": [
         "Q01",
         "Q02"
-      ]
+      ],
+      "correction": {
+        "review_finding": "KA-001",
+        "origin": "original_report",
+        "date": "2026-10-31",
+        "summary": "Remove the inherited claim that recorded commit timestamps establish first public availability; the recorded times and UTC/PDT conversions are unchanged.",
+        "sources": [
+          {
+            "label": "Baseline commit metadata",
+            "url": "https://github.com/xai-org/x-algorithm/commit/5ed796374ea48ee26058aab66ab10c266bea2bef"
+          },
+          {
+            "label": "Comparison commit metadata",
+            "url": "https://github.com/xai-org/x-algorithm/commit/606b254b45be798bfaecfa8c23f5a9c51bc8000c"
+          },
+          {
+            "label": "GitHub documents pushing already-created local commits to a remote repository",
+            "url": "https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository"
+          }
+        ]
+      }
     },
     {
       "id": "K01-018",

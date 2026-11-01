@@ -718,9 +718,11 @@
       "id": "K03-018",
       "title": "Length and line breaks are transmissible features, not a length-reward formula",
       "kind": "code",
-      "conclusion": "The program constructs content features such as weighted_text_len and newline_count and passes them into the relevant requests; their existence does not prove that more length earns more points or that there is a fixed optimal character count.",
+      "conclusion": "The program can construct content features such as weighted_text_len and newline_count and include them in the VM Ranker candidate experiment payload when the debias input branch is enabled: the query has no cached posts and VMRankerSendDebiasInputs is true. A pacing-only candidate payload does not include these content features. Their existence does not prove that more length earns more points or that there is a fixed optimal character count.",
       "conditions": [
-        "The content features, encoding, and VM Ranker request checked in the report"
+        "The content-feature construction, encoding, and VM Ranker request path checked in the report",
+        "query.has_cached_posts is false",
+        "VMRankerSendDebiasInputs is true, so the debias branch is enabled"
       ],
       "practical_meaning": "Choose length according to the argument's needs and retain necessary conditions; do not pad text simply because these features exist.",
       "check": {
@@ -728,16 +730,18 @@
         "needed": [
           "Feature definitions",
           "Transmission code",
+          "The request cache flag and VMRankerSendDebiasInputs setting",
           "Comparable outcome data"
         ],
         "verify": [
+          "Whether the debias branch is enabled; a pacing-only experiment payload is not proof that content features were sent",
           "Whether an input feature is treated as a fixed positive coefficient",
           "Whether an optimal character count is stated without experiments"
         ],
-        "if_missing": "State instead that length and line breaks can be inputs, while the direction of their effects is unknown."
+        "if_missing": "State that length and line breaks can be inputs under the debias prerequisites; without request state, do not assert that this request transmitted them or infer a direction of effect."
       },
       "limits": [
-        "These fields do not establish a universal exposure response."
+        "These fields do not establish a universal exposure response or transmission on every VM Ranker request."
       ],
       "source_units": [
         "U0244"
@@ -750,12 +754,32 @@
             1,
             2
           ],
-          "supports": "Construction, encoding, and transmission of content features into requests"
+          "supports": "Content-feature construction and encoding, with candidate content features included only inside the debias branch"
         }
       ],
       "related_unknowns": [
         "Q46"
-      ]
+      ],
+      "correction": {
+        "review_finding": "C-01",
+        "origin": "english_distillation",
+        "date": "2026-10-31",
+        "summary": "Restore the enabling condition lost in the English transmission claim: no cached posts and VMRankerSendDebiasInputs; pacing alone does not send content features.",
+        "sources": [
+          {
+            "label": "Candidate content features are populated only when debias is enabled",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_debias_payload.rs#L33-L48"
+          },
+          {
+            "label": "Request debias cache and feature-switch prerequisites",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L17-L23"
+          },
+          {
+            "label": "Candidate experiment payload can also be created for pacing alone",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L70-L72"
+          }
+        ]
+      }
     },
     {
       "id": "K03-019",
@@ -3089,28 +3113,33 @@
     },
     {
       "id": "K03-077",
-      "title": "VQV length eligibility is explicitly measured in milliseconds",
+      "title": "VQV eligibility combines a viewer follower-count guard with video duration in milliseconds",
       "kind": "code",
-      "conclusion": "One video-viewing signal is named VQV; its related eligibility first checks whether video length exceeds a configured threshold, whose public value is 10000 milliseconds. This is a video-duration condition, not the numeric threshold for dwell after a click.",
+      "conclusion": "The public vqv_eligible function requires a present candidate.min_video_duration_ms above the configured threshold, whose public default is 10000 milliseconds, and excludes a querying viewer whose known follower count is at least 10000. A missing viewer follower count does not trigger that exclusion. This guard concerns the viewer, not the video author. The duration condition concerns video length, not the numeric threshold for dwell after a click.",
       "conditions": [
-        "The VQV eligibility path and default parameters checked in the report"
+        "The vqv_eligible path and default parameters checked in the report",
+        "The querying viewer has a follower count below 10000 or no available follower count",
+        "candidate.min_video_duration_ms is present and strictly exceeds MinVideoDurationMs, whose public default is 10000"
       ],
-      "practical_meaning": "When explaining 'ten seconds,' state that the check concerns video length and identify the specific path; do not borrow the unit from CLICK_DWELL_TIME.",
+      "practical_meaning": "When explaining 'ten seconds,' state that it is one video-length prerequisite in this path, retain the querying viewer's follower-count guard, and do not borrow the unit from CLICK_DWELL_TIME.",
       "check": {
         "when": "The draft discusses the VQV ten-second threshold",
         "needed": [
-          "Video duration",
+          "candidate.min_video_duration_ms",
+          "The querying viewer's follower count, including whether it is missing",
           "The VQV eligibility function",
-          "The public threshold"
+          "The configured duration threshold and score weight"
         ],
         "verify": [
+          "Whether present video duration strictly exceeds the threshold",
+          "Whether the querying viewer, not the video author, has a known follower count at or above 10000",
           "Whether video length is distinguished from the time a reader has watched",
-          "Whether eligibility is treated as a score"
+          "Whether eligibility is treated as a score despite the separate weight setting"
         ],
-        "if_missing": "Describe the named field and millisecond unit, and investigate scoring separately."
+        "if_missing": "Describe the millisecond duration condition and the viewer guard separately. A missing viewer count alone does not exclude the candidate, while missing video duration fails this predicate; investigate scoring separately."
       },
       "limits": [
-        "Meeting the length condition alone does not establish how many points or how much exposure results."
+        "Meeting the duration and viewer conditions does not establish how many points or how much exposure results. The cited Home Mixer VqvWeight default is separately 0.0; eligibility does not override that weight."
       ],
       "source_units": [
         "U0291"
@@ -3122,13 +3151,33 @@
             0,
             1
           ],
-          "supports": "VQV eligibility and the 10000-millisecond video-length setting"
+          "supports": "The querying-viewer follower guard, present video-duration requirement, and strict comparison with the 10000-millisecond default"
         }
       ],
       "related_unknowns": [
         "Q02",
         "Q45"
-      ]
+      ],
+      "correction": {
+        "review_finding": "C-03",
+        "origin": "original_report",
+        "date": "2026-10-31",
+        "summary": "Complete the inherited duration-only account of vqv_eligible with the querying viewer follower-count guard and missing-count behavior.",
+        "sources": [
+          {
+            "label": "VQV viewer guard, duration predicate, and separate weight application",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L4-L57"
+          },
+          {
+            "label": "MinVideoDurationMs public default",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L688-L693"
+          },
+          {
+            "label": "Separate Home Mixer VqvWeight default of zero",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L431"
+          }
+        ]
+      }
     },
     {
       "id": "K03-078",
@@ -4199,12 +4248,12 @@
       "id": "K03-101",
       "title": "MediaInjected's default eligibility at 64 also excludes already-NSFW results",
       "kind": "code",
-      "conclusion": "MediaInjectedAdultInfraredVideoSpamDetection first requires an author, a video in the Post or quoted Post, at least the same public default of 64 likes, and existing results that have not classified the content as NSFW.",
+      "conclusion": "MediaInjectedAdultInfraredVideoSpamDetection requires an author, a video in the Post or quoted Post, and at least the configured fav threshold, whose public default is 64. Its prior-NSFW check excludes the post only when it reports that the post is already flagged NSFW; the public helper treats absent results and lookup errors as not already flagged. It does not require a prior result to exist.",
       "conditions": [
         "The corresponding task has been received",
         "The author and video are available",
-        "fav>=the threshold",
-        "The content is not among existing NSFW results"
+        "fav>=the configured threshold, whose public default is 64",
+        "The prior-NSFW helper does not return true; absent results and lookup errors return false in this public path"
       ],
       "practical_meaning": "Check existing state and quoted content; do not infer execution solely from the like count.",
       "check": {
@@ -4213,13 +4262,14 @@
           "The author",
           "Post and quoted videos",
           "fav configuration",
-          "Prior NSFW results"
+          "The prior-NSFW helper outcome, distinguishing an NSFW result, absent result, and lookup error"
         ],
         "verify": [
-          "Whether all prerequisites are retained",
+          "Whether all prerequisites are retained without adding a requirement that prior results exist",
+          "Whether absent results and lookup errors are distinguished from a positive NSFW result",
           "Whether 64 is described as safety certification or a traffic unlock"
         ],
-        "if_missing": "Explain the conditions after task receipt; without state, passing cannot be determined."
+        "if_missing": "An absent prior result or lookup error alone does not fail this NSFW check. Without the other task and input state, explain the conditions without asserting overall eligibility or completed inference."
       },
       "limits": [
         "Filter eligibility is not successful inference, and the actual public default need not cover all production requests."
@@ -4237,7 +4287,7 @@
             0,
             5
           ],
-          "supports": "Inclusion of quoted video, the default condition of 64, and reading existing NSFW results"
+          "supports": "Inclusion of quoted video, the configured fav threshold, and exclusion when the prior-NSFW helper reports an already-flagged post"
         },
         {
           "source_id": "S051",
@@ -4251,7 +4301,31 @@
         "Q26",
         "Q33",
         "Q34"
-      ]
+      ],
+      "correction": {
+        "review_finding": "C-02",
+        "origin": "english_distillation",
+        "date": "2026-10-31",
+        "summary": "Remove the added prior-result prerequisite: MediaInjected skips an already-NSFW result, while the helper returns false for missing results and lookup errors.",
+        "sources": [
+          {
+            "label": "MediaInjected eligibility filter",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection_filter.py#L32-L47"
+          },
+          {
+            "label": "Prior-NSFW helper absent-result and error handling",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prior_nsfw.py#L16-L34"
+          },
+          {
+            "label": "The distinct LeadingFrames task does require prior results",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_leading_frames_filter.py#L53-L57"
+          },
+          {
+            "label": "Shared fav threshold default",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py#L118"
+          }
+        ]
+      }
     },
     {
       "id": "K03-102",

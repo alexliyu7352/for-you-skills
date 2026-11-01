@@ -1,5 +1,4 @@
 """Validate English evidence, original coverage, local references and distributable skills."""
-import hashlib
 import json
 from pathlib import Path
 import re
@@ -11,16 +10,77 @@ import knowledge
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def frontmatter_errors(text, name):
+    """Validate the repository's dependency-free YAML scalar subset.
+
+    A complete --- block contains only name and description, once each, at
+    column zero. Values are single-line plain strings, JSON double-quoted
+    strings, or YAML single-quoted strings (escape a quote by doubling it).
+    Blank lines and whole-line comments are allowed. Plain strings cannot
+    start with YAML indicators or number-like text, contain ': ' or inline
+    comments, or be YAML booleans/nulls. Collections, tags, aliases, block
+    scalars and other keys require a fuller YAML parser and are rejected.
+    """
+    prefix = f'Invalid frontmatter {name}: '
+    lines = text.splitlines()
+    if not lines or lines[0] != '---':
+        return [prefix + 'expected an opening --- delimiter on the first line']
+    try:
+        end = lines.index('---', 1)
+    except ValueError:
+        return [prefix + 'missing closing --- delimiter']
+    fields, errors = {}, []
+    for line in lines[1:end]:
+        if not line.strip() or line.startswith('#'):
+            continue
+        match = re.fullmatch(r'(name|description):[ \t]*(.*)', line)
+        if not match:
+            errors.append(prefix + 'supported keys are name and description at column zero; use single-line string values')
+            continue
+        key, raw = match.groups()
+        if key in fields:
+            errors.append(prefix + f'duplicate {key} field')
+            continue
+        fields[key] = None
+        raw = raw.strip()
+        value = raw
+        if raw.startswith('"'):
+            try:
+                value = json.loads(raw)
+            except ValueError:
+                value = None
+        elif raw.startswith("'"):
+            value = raw[1:-1].replace("''", "'") if re.fullmatch(r"'(?:[^']|'')*'", raw) else None
+        elif (not raw or raw[0] in '-?:,[]{}#&*!|>\"\'%@`' or
+              re.match(r'(?:\d|[.+-]\d)', raw) or re.search(r':(?:\s|$)|\s#', raw) or
+              raw.lower() in {'null', '~', 'true', 'false', 'yes', 'no', 'on', 'off', '.nan', '.inf', '+.inf'}):
+            value = None
+        if not isinstance(value, str) or not value.strip() or any(ord(c) < 32 for c in value):
+            errors.append(prefix + f'{key} requires a single-line string; quote ambiguous plain values (collections and block scalars are unsupported)')
+            continue
+        fields[key] = value
+    if fields.get('name') != name or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', name) or len(name) > 64:
+        errors.append(prefix + f'name must be {name!r} (lowercase letters, digits and single hyphens; maximum 64 characters)')
+    if not isinstance(fields.get('description'), str) or not 0 < len(fields['description']) <= 1024:
+        errors.append(prefix + 'description must contain 1 to 1024 characters')
+    return errors
+
+
 def validate_repository(root=ROOT):
+    root = Path(root)
     errors = []
-    registry, units, topics, claims = knowledge.load(root/'knowledge')
-    errors.extend(knowledge.validate(claims, registry['sources'], units))
+    try:
+        original = (root/'provenance/research-report.zh-CN.md').read_bytes()
+        registry, units, topics, claims = knowledge.load(root/'knowledge', report=original)
+        baseline = knowledge.read_json(root/'provenance/migration-baseline.json')
+    except knowledge.KnowledgeError as exc:
+        return exc.errors, {}
+    except OSError as exc:
+        return [f'Cannot read repository evidence: {exc}'], {}
+    if not isinstance(baseline, dict) or not all(isinstance(baseline.get(k), dict) for k in ('claims', 'source_urls')):
+        return ['migration-baseline.json must contain claims and source_urls objects'], {}
     if len(claims) != 578 or sum(c['id'].startswith('Q') for c in claims) != 49:
         errors.append('Unexpected original claim/unknown count')
-    original = (root/'provenance/research-report.zh-CN.md').read_bytes()
-    if hashlib.sha256(original).hexdigest() != registry['report_sha256']:
-        errors.append('Original report hash mismatch')
-    baseline = json.loads((root/'provenance/migration-baseline.json').read_text(encoding='utf-8'))
     fields = ('id', 'kind', 'source_units', 'related_unknowns')
     current = {}
     for claim in claims:
@@ -42,11 +102,7 @@ def validate_repository(root=ROOT):
             errors.append(f'Missing skill {name}')
             continue
         text = entry.read_text(encoding='utf-8')
-        if not text.startswith('---\n') or f'\nname: {name}\n' not in text:
-            errors.append(f'Invalid frontmatter {name}')
-        description = re.search(r'^description: (.+)$', text, re.M)
-        if not description or not 0 < len(description.group(1)) <= 1024:
-            errors.append(f'Invalid description {name}')
+        errors.extend(frontmatter_errors(text, name))
         for page in folder.rglob('*.md'):
             if page.name == 'research-report.md':
                 continue

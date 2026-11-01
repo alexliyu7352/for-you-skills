@@ -13,7 +13,12 @@ SCRIPTS = ('knowledge.py', 'inspect_draft.py', 'summarize_posts.py')
 
 
 def expected_files(root=ROOT):
-    common = {}
+    # Each skill is independently installable, so attribution must travel with it.
+    notice = (root/'NOTICE.md').read_text(encoding='utf-8')
+    notice = notice.replace('provenance/research-report.zh-CN.md', 'references/research-report.md')
+    notice = notice.replace('knowledge/sources.json', 'references/knowledge/sources.json')
+    common = {'LICENSE': (root/'LICENSE').read_bytes(),
+              'NOTICE.md': notice.encode('utf-8')}
     for path in sorted((root/'knowledge').glob('*.json')):
         common['references/knowledge/'+path.name] = path.read_bytes()
     for path in sorted((root/'shared').glob('*.md')):

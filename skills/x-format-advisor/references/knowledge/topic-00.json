@@ -34,7 +34,7 @@
       "id": "K00-002",
       "title": "Research snapshots and the report revision date",
       "kind": "editorial",
-      "conclusion": "The revision date is 2026-10-29 (Los Angeles time). This text was compiled from a shared conversation, a 23-page research report, and the latest version 7 manuscript. The original analysis is pinned to `5ed796374ea48ee26058aab66ab10c266bea2bef`; the October update was checked through `606b254b45be798bfaecfa8c23f5a9c51bc8000c`. Code snapshot dates in the text use the commits’ UTC dates; for major versions that fall on different calendar days across time zones, Los Angeles time is also listed. Dates in the official update notes are retained as written in the originals.",
+      "conclusion": "The original report records a revision date of 2026-10-29 (Los Angeles time) and states that it was compiled from a shared conversation, a 23-page research report, and the latest version 7 manuscript. The exact shared-conversation and version-7 assembly lineage has not been independently reconstructed from the inspected records. The original analysis is pinned to `5ed796374ea48ee26058aab66ab10c266bea2bef`; the October update was checked through `606b254b45be798bfaecfa8c23f5a9c51bc8000c`. Code snapshot dates in the text use the commits' UTC dates; for major versions that fall on different calendar days across time zones, Los Angeles time is also listed. Dates in the official update notes are retained as written in the originals.",
       "conditions": [
         "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
       ],
@@ -43,15 +43,18 @@
         "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
         "needed": [
           "The original text and citations for this entry",
-          "Records of what was actually executed in the current task"
+          "Records of what was actually executed in the current task",
+          "The specific shared-conversation and version-7 assembly records, if making an independently verified lineage claim"
         ],
         "verify": [
-          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts.",
+          "Attribute the unreconstructed assembly lineage to the original report; the pinned revisions and date conversions do not establish that lineage."
         ],
         "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
       },
       "limits": [
-        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment.",
+        "The shared-conversation and version-7 provenance remains a historical statement of the original report, not an independently reconstructed record; this gap does not establish that the statement is false."
       ],
       "source_units": [
         "U0660"
@@ -63,7 +66,7 @@
       "id": "K00-003",
       "title": "How historical parameters and the visibility refactor were checked",
       "kind": "editorial",
-      "conclusion": "Historical parameters were compared using values from the same file across different commits; differences between Home Mixer and VM Ranker within the same commit were listed separately. Static checks covered conditions, call paths, index writes and reads, version differences, and formulas. The earlier examination of the latest visibility refactor also expanded and compared 14 groups of rule lists and fields. These were structural checks; the production safety service was not run.",
+      "conclusion": "Historical parameters were compared using values from the same file across different commits; differences between Home Mixer and VM Ranker within the same commit were listed separately. Static checks covered conditions, call paths, index writes and reads, version differences, and formulas. The original report also states that an earlier examination of the latest visibility refactor expanded and compared 14 groups of rule lists and fields. The exact named groups and retained comparison result for that historical count have not been independently reconstructed. These were structural checks; the production safety service was not run.",
       "conditions": [
         "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
       ],
@@ -72,15 +75,18 @@
         "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
         "needed": [
           "The original text and citations for this entry",
-          "Records of what was actually executed in the current task"
+          "Records of what was actually executed in the current task",
+          "The original named 14 visibility rule/field groups and comparison result, if asserting that historical count as independently verified"
         ],
         "verify": [
-          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts.",
+          "Keep the historical 14-group visibility statement separate from the independently checked 14-file renderer comparison."
         ],
         "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
       },
       "limits": [
-        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment.",
+        "The exact 14-group visibility comparison remains unverified historical provenance, not a finding that the original statement is false. The separate 14-file renderer comparison cannot substantiate this count."
       ],
       "source_units": [
         "U0661"
