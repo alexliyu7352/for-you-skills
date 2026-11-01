@@ -10,6 +10,8 @@ For You Skills 把对 **X.com / Twitter 开源推荐算法的完整分析**，�
 
 **7 个技能 · 578 个知识条目 · 396 个原始来源链接 · 保留 49 个待解问题**
 
+[阅读完整研究文档](https://blog.go5.si/posts/zh/x-algorithm-teardown/) · [关注作者，了解最新进展](https://x.com/alexlee20122022)
+
 ```bash
 npx skills add alexliyu7352/for-you-skills --skill '*'
 ```
@@ -77,6 +79,17 @@ npx skills add alexliyu7352/for-you-skills --skill '*'
 **连哪些问题还没有答案，也一起做进了技能。** 源码公开，不代表某个账号曝光变化的原因就已经确定。技能保留这个区别，同时给出下一步值得做的检查。
 
 每个技能都带有自己需要的知识资料，可以离线检索。核实最新变化或查看账号时，再使用 Agent 已有的工具。无需强制购买数据服务、申请 X.com / Twitter API Key，或安装指定的 MCP 服务。参见[知识库说明](knowledge/README.md)与[完整中文研究原文](provenance/research-report.zh-CN.md)。
+
+## 深入阅读与后续更新
+
+想进一步了解这些建议是怎么得出的，可以阅读我们的原始研究文档，其中展开了代码分析、公式、具体案例和结论的适用范围：
+
+- [完整中文研究文档](https://blog.go5.si/posts/zh/x-algorithm-teardown/)
+- [Full research in English](https://blog.go5.si/posts/x-algorithm-teardown/)
+
+本项目会根据 [X.com / Twitter 算法仓库主线](https://github.com/xai-org/x-algorithm)的变化，持续更新研究内容和技能，并标明分析对应的代码版本与研究日期，方便追溯依据。想了解新的发现、研究进展和技能更新，可以关注作者 [@alexlee20122022](https://x.com/alexlee20122022)。
+
+下方的研究截止日期对应当前内置知识库；安装技能并不意味着会自动拉取算法仓库之后的变更。
 
 ## 安装
 
