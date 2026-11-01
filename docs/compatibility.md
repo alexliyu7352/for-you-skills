@@ -23,3 +23,13 @@ Browser capability is separate from skill installation. Follow the host's connec
 ## Manual installation
 
 Copy a complete `skills/<name>/` folder to the target agent's documented skill directory. `--copy` is available in the Skills CLI where symlinks are unsuitable. Optional `agents/openai.yaml` files provide UI metadata; the core workflows do not rely on them. Tools resolve resources relative to their own file, so execution does not depend on the shell's current directory.
+
+## Visual creation and preferences
+
+`x-create-visuals`, `x-assistant` and `x-publish-checklist` each bundle the complete visual workflow and `visual_preferences.py`. The router has seven specialist fallbacks; the checklist can complete an accepted creation handoff without an installed sibling.
+
+Image generation is an optional host/provider capability, discovered at execution time. No image service, credential or vendor-specific CLI is installed by this package. Exact charts and evidence panels use verified source material and suitable rendering tools. Missing generation capability yields a labeled brief/prompts, not a generated-image claim.
+
+Private preference location: Linux uses `$XDG_CONFIG_HOME/for-you-skills` or `~/.config/for-you-skills`; macOS uses `~/Library/Application Support/for-you-skills`; Windows uses `%APPDATA%/for-you-skills` or the user's `AppData/Roaming/for-you-skills`. The filename is `visual-preferences.json`. An absolute `FOR_YOU_SKILLS_CONFIG_DIR` or helper `--file` can select another private location. Git repositories and skill installation directories are rejected by the helper.
+
+All copies in the same OS account share this file. Separate hosts/containers need explicit JSON transfer or a persistent private volume; there is no automatic cross-device synchronization. Export/import preserves explicit default/account/series scopes. Temporary overrides are read-only. Profiles contain style preferences, not secrets or copied reference assets. Without Python, a host with reliable file tools can maintain the same schema; without durable storage, memory is session-only and the assistant offers an export.

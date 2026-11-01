@@ -45,6 +45,13 @@
       "minimum_input": "Observed phenomenon; identify measurement gaps without requiring all private analytics.",
       "fallback": "references/workflows/x-reach-diagnosis.md",
       "result": "Known observations, evidence-conditioned hypotheses, missing discriminators and next action."
+    },
+    {
+      "skill": "x-create-visuals",
+      "intent": "Create or edit images, covers, cards or diagrams for X.com/Twitter content; establish, reuse, change, import or export visual preferences.",
+      "minimum_input": "Available topic/draft, assets and requested outcome; reuse a prior review brief and ask only for missing production or style choices.",
+      "fallback": "references/workflows/x-create-visuals.md",
+      "result": "Actual inspected visuals when tools permit, or clearly labeled production briefs/prompts; ordered images, alt text and verified preference handling."
     }
   ],
   "combinations": [
@@ -75,6 +82,14 @@
       "condition": "A follow-up supplies a selected format, screenshot or missing fact.",
       "steps": [],
       "handoff": "Resume the affected step with retained context; invalidate only evidence changed by the new material."
+    },
+    {
+      "condition": "A draft review also requests image creation, or the user accepts the prior image plan.",
+      "steps": [
+        "x-publish-checklist",
+        "x-create-visuals"
+      ],
+      "handoff": "Skip completed review work. Pass visual_brief, original material, image purpose/order, sources, assets and style decisions. Review alone offers creation without starting it."
     }
   ],
   "no_match": "For an X product question beyond the report, use x-explain and current primary sources. For an unrelated task, do not apply this package.",

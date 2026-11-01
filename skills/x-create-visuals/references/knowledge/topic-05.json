@@ -1,0 +1,4453 @@
+{
+  "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+  "claims": [
+    {
+      "id": "K05-001",
+      "title": "Writing labels and applying visibility actions are separate steps",
+      "kind": "code",
+      "conclusion": "The safety system evaluates content and writes labels; the visibility system determines the action using the reader's identity, relationship to the author, client, and check entry point.",
+      "conditions": [],
+      "practical_meaning": "When explaining a label, state the affected object, entry point, and action together, rather than listing only the label name.",
+      "check": {
+        "when": "When discussing visibility changes caused by labels",
+        "needed": [
+          "Exact label name and labeled object",
+          "Reader relationship, client, and check entry point"
+        ],
+        "verify": [
+          "Verify writing conditions separately from consumption rules",
+          "Confirm the rule's audience and action"
+        ],
+        "if_missing": "You can only state that a label is recorded; you cannot yet infer which entry point affects a specific reader."
+      },
+      "limits": [
+        "The same label does not imply uniform treatment across the site."
+      ],
+      "source_units": [
+        "U0429"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            0,
+            1,
+            3,
+            4
+          ],
+          "supports": "Writing conditions, reader conditions, and entry-point routing"
+        },
+        {
+          "source_id": "S075",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Author-label rules and audience definitions"
+        },
+        {
+          "source_id": "S076",
+          "link_indices": [
+            0
+          ],
+          "supports": "Public rules and configuration boundaries"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-002",
+      "title": "Scope of verification for the October 29 visibility update",
+      "kind": "observation",
+      "conclusion": "The report compares 5ed7963 with 606b254 from October 29, 2026: the labeling, aggregation, video, and reply tasks relevant to this section are unchanged; the visibility changes reorganize repeated rules into reusable lists and rewrite client switches. Once expanded, the rules and their order at the relevant entry points are identical.",
+      "conditions": [
+        "Limited to the two public snapshots and this section's paths checked in the report"
+      ],
+      "practical_meaning": "Describe this change as a verified code refactor; do not use it to announce a round of sweeping distribution restrictions.",
+      "check": {
+        "when": "When a draft interprets the 606b254 update as expanded safety enforcement",
+        "needed": [
+          "Both pinned commits",
+          "Expanded rule order and client defaults for this section"
+        ],
+        "verify": [
+          "Distinguish code-structure changes from condition changes",
+          "Identify this as static verification rather than observation of production experiments"
+        ],
+        "if_missing": "Retain the versions and scope; you cannot claim that actual production behavior changed across the board or remained entirely unchanged."
+      },
+      "limits": [
+        "This is not an observation of all production experiments.",
+        "The source links directly provide the before-and-after visibility versions; unchanged tasks are a static-verification finding of the original report."
+      ],
+      "source_units": [
+        "U0430"
+      ],
+      "evidence": [
+        {
+          "source_id": "S076",
+          "link_indices": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "Version comparison of old and new entry-point rules, ClientSwitch defaults, and insults expressions"
+        }
+      ],
+      "related_unknowns": [
+        "Q26"
+      ]
+    },
+    {
+      "id": "K05-003",
+      "title": "insults removes candidates for non-authors at HomeRecommendations",
+      "kind": "code",
+      "conclusion": "FOSNR_ABUSE_INSULTS removes post candidates for NonAuthors at the HomeRecommendations safety-check entry point; NonAuthors means readers other than the author, which is not equivalent to this rule directly specifying NonFollowers.",
+      "conditions": [
+        "The post already has FOSNR_ABUSE_INSULTS",
+        "It passes through HomeRecommendations",
+        "The reader is not the author"
+      ],
+      "practical_meaning": "Retain the name NonAuthors when reviewing a draft, and trace routing to explain why the effect may appear as restricted recommendations to unfamiliar audiences.",
+      "check": {
+        "when": "When claims say 'insults only penalizes non-followers' or 'it is removed for every reader'",
+        "needed": [
+          "Label",
+          "Actual safety level",
+          "Whether the reader is the author"
+        ],
+        "verify": [
+          "Check the exact audience definition",
+          "Confirm the candidate actually takes this entry point"
+        ],
+        "if_missing": "Only report the conditional action at this entry point."
+      },
+      "limits": [
+        "This rule alone cannot establish behavior at other entry points."
+      ],
+      "source_units": [
+        "U0431",
+        "U0433",
+        "U0434"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "insults rules and tests at different safety levels"
+        },
+        {
+          "source_id": "S075",
+          "link_indices": [
+            2
+          ],
+          "supports": "Definitions of NonAuthors and NonFollowers"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-004",
+      "title": "Home Mixer routes safety checks by in_network",
+      "kind": "code",
+      "conclusion": "Home Mixer sends candidates marked in_network to TimelineHome and other candidates to TimelineHomeRecommendations. Explain the reader-author relationship and safety-check entry point along the same flow.",
+      "conditions": [
+        "This candidate-checking path in Home Mixer"
+      ],
+      "practical_meaning": "When assessing recommendation restrictions for unfamiliar audiences, first confirm the candidate's in_network status, then cite the corresponding entry-point rules.",
+      "check": {
+        "when": "When explaining Home display using a single safety rule",
+        "needed": [
+          "Candidate's in_network marker",
+          "Safety level used for the check"
+        ],
+        "verify": [
+          "Verify candidate routing together with the subsequent label rules"
+        ],
+        "if_missing": "Without routing records, do not claim that a particular reader necessarily uses a particular entry point."
+      },
+      "limits": [
+        "Entry-point names cannot directly stand for all product pages or all follow relationships."
+      ],
+      "source_units": [
+        "U0432"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            1
+          ],
+          "supports": "Visibility-query routing for in-network and out-of-network candidates"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-005",
+      "title": "Attached content has its own visibility-check routing",
+      "kind": "code",
+      "conclusion": "Conversation ancestors, quoted content, and repost originals have their own check routing; checking only the outer candidate cannot establish visibility for an entire conversation or repost.",
+      "conditions": [
+        "The candidate includes conversation ancestors, quoted content, or a repost original"
+      ],
+      "practical_meaning": "When reviewing or investigating, identify the content objects being checked and verify each corresponding entry point.",
+      "check": {
+        "when": "When explaining why threads, quotes, or reposts display different content",
+        "needed": [
+          "IDs of the candidate and attached content",
+          "Check routing for each object"
+        ],
+        "verify": [
+          "Distinguish the current candidate from ancestors, quotes, and repost originals",
+          "Check the applicable rules separately"
+        ],
+        "if_missing": "Leave the objects and entry points marked unknown; do not apply the outer result to all attached content."
+      },
+      "limits": [
+        "This does not guarantee that all attached content is ultimately displayed."
+      ],
+      "source_units": [
+        "U0432"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            1
+          ],
+          "supports": "Paths that query visibility separately for attached content"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-006",
+      "title": "TimelineHome lacks the same insults removal rule",
+      "kind": "code",
+      "conclusion": "When isolating FOSNR_ABUSE_INSULTS itself, TimelineHome does not have the same insults removal rule as HomeRecommendations; public tests include an example where the same label yields allow for a non-follower at TimelineHome and drop at HomeRecommendations.",
+      "conditions": [
+        "Analyze only the independent effect of the insults label",
+        "The corresponding public tests and entry points"
+      ],
+      "practical_meaning": "Explain results through entry-point differences, while retaining checks for other labels and rules.",
+      "check": {
+        "when": "When someone expands drop at one entry point into drop at every entry point, or treats allow as guaranteed visibility",
+        "needed": [
+          "Rules at both entry points",
+          "Relevant test cases",
+          "Other labels and relationship restrictions"
+        ],
+        "verify": [
+          "Check the individual condition covered by allow",
+          "Confirm what other rules remain in the final flow"
+        ],
+        "if_missing": "Only state the local test result; do not guarantee the reader ultimately sees the post."
+      },
+      "limits": [
+        "allow is not a promise of final display."
+      ],
+      "source_units": [
+        "U0433",
+        "U0434",
+        "U0435"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "insults conditions and allow/drop tests across entry points"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-007",
+      "title": "HomeHydration treatment of insults for non-followers",
+      "kind": "code",
+      "conclusion": "On the normal HomeHydration path supporting FOSNR rules, posts labeled insults are removed for non-followers.",
+      "conditions": [
+        "HomeHydration",
+        "Non-follower",
+        "Client supports FOSNR rules",
+        "Post carries the insults label"
+      ],
+      "practical_meaning": "State the entry point, follow relationship, and client conditions together when describing this action.",
+      "check": {
+        "when": "When discussing non-follower visibility at HomeHydration",
+        "needed": [
+          "Label",
+          "Follow relationship",
+          "Client FOSNR switch"
+        ],
+        "verify": [
+          "Confirm all three conditions hold simultaneously"
+        ],
+        "if_missing": "If the client condition is unknown, provide only a conditional explanation."
+      },
+      "limits": [
+        "This does not mean every entry point uses this combination."
+      ],
+      "source_units": [
+        "U0433",
+        "U0434"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            0
+          ],
+          "supports": "insults non-follower rule and client conditions"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-008",
+      "title": "HomeHydration applies soft intervention for followers",
+      "kind": "code",
+      "conclusion": "On the normal HomeHydration path supporting FOSNR rules, the insults label produces a soft intervention for followers, rather than directly applying the removal result for non-followers.",
+      "conditions": [
+        "HomeHydration",
+        "Follower",
+        "FOSNR rules supported",
+        "Post carries the insults label"
+      ],
+      "practical_meaning": "Record the actual intervention when verifying followers' display treatment; do not summarize all effects as 'it opens.'",
+      "check": {
+        "when": "When comparing what followers and unfamiliar readers see",
+        "needed": [
+          "Follow relationship",
+          "Client switches",
+          "Displayed result"
+        ],
+        "verify": [
+          "Check the conditions for soft intervention",
+          "Distinguish display intervention from candidate removal"
+        ],
+        "if_missing": "Describe only this type of action in the code; do not infer its presentation in a particular client."
+      },
+      "limits": [
+        "Actual client results still require observation."
+      ],
+      "source_units": [
+        "U0433",
+        "U0434"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            0
+          ],
+          "supports": "Soft intervention for followers under insults"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-009",
+      "title": "HomeHydration shows authors appealable enforcement information",
+      "kind": "code",
+      "conclusion": "On the normal HomeHydration path supporting FOSNR rules, the author receives appealable enforcement information; the author's result differs from that of followers or non-followers.",
+      "conditions": [
+        "Author views their own post labeled insults",
+        "HomeHydration",
+        "FOSNR rules supported"
+      ],
+      "practical_meaning": "When checking enforcement, record the explanation and appeal entry point in the author's interface; do not substitute the author's self-check for visibility checks by other readers.",
+      "check": {
+        "when": "When using what the author sees to judge visibility for all readers",
+        "needed": [
+          "Author's interface",
+          "Client switches",
+          "Entry point checked"
+        ],
+        "verify": [
+          "Confirm the author branch",
+          "Save the actual enforcement information"
+        ],
+        "if_missing": "Without the author's interface, retain only the conditional explanation in the code."
+      },
+      "limits": [
+        "The author being able to see the post does not guarantee recommendations to other readers."
+      ],
+      "source_units": [
+        "U0433",
+        "U0434"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            0
+          ],
+          "supports": "Author-specific insults enforcement information"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-010",
+      "title": "allow for one label does not rule out other removal rules",
+      "kind": "code",
+      "conclusion": "If the same post has other labels, blocking relationships, or age restrictions, other rules may still remove it; passing a test that isolates insults does not guarantee final display.",
+      "conditions": [
+        "The same candidate may also undergo other conditional checks"
+      ],
+      "practical_meaning": "Check other visibility conditions individually, and record a local pass separately from final display.",
+      "check": {
+        "when": "When using a single allow test to guarantee complete visibility",
+        "needed": [
+          "Other labels",
+          "Blocking and reader relationships",
+          "Age restrictions and the full check path"
+        ],
+        "verify": [
+          "Confirm the condition isolated by the test",
+          "Check subsequent or parallel rules"
+        ],
+        "if_missing": "Without the complete flow, conclude only that this rule did not remove the post."
+      },
+      "limits": [
+        "A single test result cannot reconstruct every part of a real request's state."
+      ],
+      "source_units": [
+        "U0435"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            2
+          ],
+          "supports": "Public cases verify only the specified label's result at the specified safety level"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-011",
+      "title": "Legacy-client fallback can remove for Everyone",
+      "kind": "code",
+      "conclusion": "The legacy-client fallback at HomeHydration can remove for Everyone when the corresponding switches hold; the normal FOSNR path distinguishes followers, non-followers, and authors.",
+      "conditions": [
+        "HomeHydration",
+        "The corresponding fallback switches hold"
+      ],
+      "practical_meaning": "First check the normal path and fallback branch when investigating different client behavior for the same label.",
+      "check": {
+        "when": "When insults enforcement differs between clients",
+        "needed": [
+          "Client capabilities and switches",
+          "Reader role",
+          "Branch actually reached"
+        ],
+        "verify": [
+          "Distinguish normal FOSNR from fallback",
+          "Do not assume fallback is always enabled"
+        ],
+        "if_missing": "If switch values are unavailable, retain both possible paths."
+      },
+      "limits": [
+        "Everyone describes only this conditional fallback."
+      ],
+      "source_units": [
+        "U0436"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            0
+          ],
+          "supports": "Legacy-client fallback and normal path"
+        },
+        {
+          "source_id": "S076",
+          "link_indices": [
+            4
+          ],
+          "supports": "ClientHas expression in the new version"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-012",
+      "title": "The ClientSwitch rewrite did not change the stated FOSNR defaults",
+      "kind": "code",
+      "conclusion": "606b254 replaces separate Boolean fields for the relevant switches with a ClientSwitch collection; this did not change the defaults of FosnrRules enabled and FosnrFallbackDrops disabled.",
+      "conditions": [
+        "Comparison of the two public versions specified by the report"
+      ],
+      "practical_meaning": "When reviewing, distinguish changes in field representation from changes in defaults, and identify the public defaults.",
+      "check": {
+        "when": "When the ClientSwitch rewrite is interpreted as universal removal by default",
+        "needed": [
+          "Old and new fields and defaults",
+          "Actual client switches, if available"
+        ],
+        "verify": [
+          "Verify FosnrRules=true and FosnrFallbackDrops=false",
+          "Check equivalence between the expressions of rule conditions"
+        ],
+        "if_missing": "Report only public defaults; do not infer values for all production clients."
+      },
+      "limits": [
+        "Public defaults do not fully determine actual experiments or client values."
+      ],
+      "source_units": [
+        "U0436"
+      ],
+      "evidence": [
+        {
+          "source_id": "S076",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "ClientSwitch defaults and the new insults expression"
+        },
+        {
+          "source_id": "S077",
+          "link_indices": [
+            0
+          ],
+          "supports": "Old conditions for comparison"
+        }
+      ],
+      "related_unknowns": [
+        "Q26"
+      ]
+    },
+    {
+      "id": "K05-013",
+      "title": "PTOS insults labeling has classification, language, and author conditions",
+      "kind": "code",
+      "conclusion": "This Grox PTOS path requires the model classification HateOrAbuseInsultsWithTarget, an English-language post, and an author who is neither a high-PageRank nor a gray-badge account before entering the described insults label-writing branch.",
+      "conditions": [
+        "The named PTOS label-writing path",
+        "HateOrAbuseInsultsWithTarget",
+        "English",
+        "Neither high PageRank nor gray-badge"
+      ],
+      "practical_meaning": "List model classification, language, and author eligibility individually when assessing what the code establishes.",
+      "check": {
+        "when": "When analyzing whether this branch will write insults for a text",
+        "needed": [
+          "Task path",
+          "Model policy",
+          "Language",
+          "Author eligibility"
+        ],
+        "verify": [
+          "Check whether all conditions hold simultaneously",
+          "Discuss classification separately from label writing"
+        ],
+        "if_missing": "Without model results or eligibility information, do not predict guaranteed labeling."
+      },
+      "limits": [
+        "These conditions constrain only this automatic label-writing path."
+      ],
+      "source_units": [
+        "U0437"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "PTOS author eligibility and the specific insults branch"
+        }
+      ],
+      "related_unknowns": [
+        "Q28"
+      ]
+    },
+    {
+      "id": "K05-014",
+      "title": "PTOS test accounts return PtosReviewed earlier",
+      "kind": "code",
+      "conclusion": "This PTOS path excludes test accounts at an earlier stage, retaining only PtosReviewed; do not skip this prerequisite and directly apply the later insults-writing branch.",
+      "conditions": [
+        "This PTOS label-writing path",
+        "Account identified as a test account"
+      ],
+      "practical_meaning": "When reading the call chain, check early returns before specific policy branches.",
+      "check": {
+        "when": "When explaining why a test account lacks the same label despite the same classification",
+        "needed": [
+          "Test-account determination",
+          "Earlier return",
+          "Written result"
+        ],
+        "verify": [
+          "Confirm the early return precedes the insults branch",
+          "Distinguish PtosReviewed from enforcement labels"
+        ],
+        "if_missing": "When test-account status is unknown, do not assume this prerequisite exception applies."
+      },
+      "limits": [
+        "Other paths may not have the same exception."
+      ],
+      "source_units": [
+        "U0437"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            3
+          ],
+          "supports": "Test-account early return and PtosReviewed"
+        }
+      ],
+      "related_unknowns": [
+        "Q28"
+      ]
+    },
+    {
+      "id": "K05-015",
+      "title": "The English-language condition does not establish exemptions for other languages or manual paths",
+      "kind": "unknown",
+      "conclusion": "The original report checked only this PTOS automatic label-writing path; its English-language or author conditions cannot establish that other languages are exempt from insults rules, or that manual handling and other automated systems cannot write the same label.",
+      "conditions": [
+        "Explanation of the verified path's boundaries"
+      ],
+      "practical_meaning": "When answering whether a language is 'safe,' state known conditions and unexamined paths; avoid promising exemption from enforcement.",
+      "check": {
+        "when": "When a local language or author exception is treated as a sitewide exemption",
+        "needed": [
+          "Named path",
+          "Evidence for other languages, manual sources, or automated sources"
+        ],
+        "verify": [
+          "Check whether the conclusion goes beyond the examined label-writing path"
+        ],
+        "if_missing": "Explicitly state that other sources have not been fully verified; give no exemption guarantee."
+      },
+      "limits": [
+        "There is no complete list of classification prompts, errors, or label-writing sources."
+      ],
+      "source_units": [
+        "U0437",
+        "U0438"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            3,
+            4
+          ],
+          "supports": "Eligibility limited to the named PTOS label-writing branch"
+        }
+      ],
+      "related_unknowns": [
+        "Q28"
+      ]
+    },
+    {
+      "id": "K05-016",
+      "title": "Criticism should focus on verifiable conditions and numbers",
+      "kind": "editorial",
+      "conclusion": "When criticizing a test, identify omitted conditions or unsupported numbers so readers can discuss the evidence; devoting space to insults introduces a different kind of risk.",
+      "conditions": [],
+      "practical_meaning": "Replace personal disparagement with 'which condition is missing, which number does not hold, and how to verify it.'",
+      "check": {
+        "when": "When reviewing a critical draft",
+        "needed": [
+          "Conclusion being criticized",
+          "Corresponding conditions, data, and sources"
+        ],
+        "verify": [
+          "Does each paragraph present a verifiable issue?",
+          "Are path exceptions being treated as permission to insult?"
+        ],
+        "if_missing": "If evidence is insufficient, narrow the assertion and retain verifiable questions."
+      },
+      "limits": [
+        "This is editorial advice, not a classifier's list of safe phrases."
+      ],
+      "source_units": [
+        "U0438"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q28"
+      ]
+    },
+    {
+      "id": "K05-017",
+      "title": "The public-interest warning rule applies to Everyone and has a date condition",
+      "kind": "code",
+      "conclusion": "PUBLIC_INTEREST_LABEL_INTERSTITIAL has an audience of Everyone and handles posts created after April 1, 2019 that carry LOW_QUALITY, one of four MISINFO labels, or a development public-interest label.",
+      "conditions": [
+        "Created after April 1, 2019",
+        "Matches the listed post safety labels",
+        "This public-interest rule"
+      ],
+      "practical_meaning": "List the audience, creation date, and labeled object when explaining the warning; do not say it applies only to non-followers.",
+      "check": {
+        "when": "When encountering claims that 'lowquality/misinfo warnings apply only to non-followers'",
+        "needed": [
+          "Post creation time",
+          "Exact post label",
+          "Rule audience"
+        ],
+        "verify": [
+          "Check Everyone and the date condition",
+          "Confirm this is not a similarly named URL reputation value"
+        ],
+        "if_missing": "If the label or date cannot be confirmed, state only the rule's conditions."
+      },
+      "limits": [
+        "The date threshold does not mean other rules have no effect."
+      ],
+      "source_units": [
+        "U0439"
+      ],
+      "evidence": [
+        {
+          "source_id": "S078",
+          "link_indices": [
+            0,
+            7
+          ],
+          "supports": "Everyone, date condition, and tests for earlier posts"
+        }
+      ],
+      "related_unknowns": [
+        "Q29"
+      ]
+    },
+    {
+      "id": "K05-018",
+      "title": "MISINFO here specifically denotes four post labels",
+      "kind": "code",
+      "conclusion": "The four MISINFO labels in this branch are MISINFO_CIVIC, MISINFO_GENERIC, MISINFO_MEDICAL, and MISINFO_CRISIS; a generic 'misinfo' description cannot replace the actual label name.",
+      "conditions": [
+        "Public-interest warning and restriction-reason selection path"
+      ],
+      "practical_meaning": "Record the specific label, then check its source and the final restriction policy.",
+      "check": {
+        "when": "When checking misinformation labels and interaction restrictions",
+        "needed": [
+          "Exact label, one of the four",
+          "Label source"
+        ],
+        "verify": [
+          "Verify the label belongs to the listed enumeration",
+          "Avoid treating other similarly named descriptions as this label"
+        ],
+        "if_missing": "Leave the label unconfirmed; do not apply this branch."
+      },
+      "limits": [
+        "The enumeration name alone cannot determine the actual list of blocked actions."
+      ],
+      "source_units": [
+        "U0440"
+      ],
+      "evidence": [
+        {
+          "source_id": "S078",
+          "link_indices": [
+            1
+          ],
+          "supports": "Routing for LOW_QUALITY and the four MISINFO labels"
+        }
+      ],
+      "related_unknowns": [
+        "Q29"
+      ]
+    },
+    {
+      "id": "K05-019",
+      "title": "LOW_QUALITY selects NonCompliant as the restriction reason",
+      "kind": "code",
+      "conclusion": "In this rule, the post safety label LOW_QUALITY selects NonCompliant as the reason for interaction restrictions.",
+      "conditions": [
+        "This post safety label and public-interest handling path"
+      ],
+      "practical_meaning": "Check 'restriction reason' and the subsequent 'restricted actions' resolved from configuration in separate columns.",
+      "check": {
+        "when": "When deriving interaction restrictions from LOW_QUALITY",
+        "needed": [
+          "Post safety label",
+          "Final limited-actions policy"
+        ],
+        "verify": [
+          "Confirm the NonCompliant reason",
+          "Continue checking the actual policy's action list"
+        ],
+        "if_missing": "Confirm only the reason; do not present blocked actions as measured for every user."
+      },
+      "limits": [
+        "The NonCompliant reason is not synonymous with a fixed production action list."
+      ],
+      "source_units": [
+        "U0440",
+        "U0441"
+      ],
+      "evidence": [
+        {
+          "source_id": "S078",
+          "link_indices": [
+            1,
+            5
+          ],
+          "supports": "LOW_QUALITY reason selection and configuration-based action resolution"
+        }
+      ],
+      "related_unknowns": [
+        "Q29"
+      ]
+    },
+    {
+      "id": "K05-020",
+      "title": "MISINFO source affects the restriction reason and action scope",
+      "kind": "code",
+      "conclusion": "MISINFO reads the label's source to select a restriction reason; source limited_replies routes to ConversationControl, whose restriction in the public test is Reply.",
+      "conditions": [
+        "MISINFO label",
+        "source=limited_replies",
+        "The cited public-test policy"
+      ],
+      "practical_meaning": "Describe this as a named test example that 'restricts replies'; do not expand it into all MISINFO prohibiting likes and shares.",
+      "check": {
+        "when": "When summarizing MISINFO treatment or comparing different sources",
+        "needed": [
+          "Actual source",
+          "Restriction reason",
+          "Actual policy or test configuration"
+        ],
+        "verify": [
+          "Check the source mapping",
+          "Distinguish Reply in the test from the production action list"
+        ],
+        "if_missing": "Without source or policy, do not assert either that only replies are restricted or that every action is restricted."
+      },
+      "limits": [
+        "Test expectations do not establish the policy for all production users."
+      ],
+      "source_units": [
+        "U0440"
+      ],
+      "evidence": [
+        {
+          "source_id": "S078",
+          "link_indices": [
+            1,
+            3,
+            6
+          ],
+          "supports": "Source mapping, ConversationControl, and the limited_replies test"
+        }
+      ],
+      "related_unknowns": [
+        "Q29"
+      ]
+    },
+    {
+      "id": "K05-021",
+      "title": "Final restricted actions are assembled from the feature-switch policy",
+      "kind": "code",
+      "conclusion": "After determining the reason, the program reads the action list from the limited_actions_policy_limited_actions feature-switch configuration, with handling for a missing list.",
+      "conditions": [
+        "A restriction reason has been obtained",
+        "Resolution uses the actual feature-switch policy"
+      ],
+      "practical_meaning": "Trace restrictions through to the action list and final display assembly; do not stop at the label or reason name.",
+      "check": {
+        "when": "When answering which buttons are restricted for a particular reader",
+        "needed": [
+          "Actual policy configuration",
+          "Resolution result",
+          "Final client presentation"
+        ],
+        "verify": [
+          "Check the action list's source",
+          "Inspect handling when the list is unavailable",
+          "Distinguish code capabilities from observed production results"
+        ],
+        "if_missing": "If the action list is unavailable, explicitly mark the scope unknown; do not invent either a complete or an empty list."
+      },
+      "limits": [
+        "The original report did not obtain every user's production policy.",
+        "The original text did not further detail all missing-list handling."
+      ],
+      "source_units": [
+        "U0441"
+      ],
+      "evidence": [
+        {
+          "source_id": "S078",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "Final limited engagements assembly and policy resolution"
+        }
+      ],
+      "related_unknowns": [
+        "Q29"
+      ]
+    },
+    {
+      "id": "K05-022",
+      "title": "The NonCompliant test action list has a specific scope",
+      "kind": "code",
+      "conclusion": "The public NonCompliant test policy includes replying, ordinary reposting, liking, React, sending via direct message, bookmarking, adding to Moments, pinning, viewing post activity, sharing, and copying the link.",
+      "conditions": [
+        "Only the cited public test configuration"
+      ],
+      "practical_meaning": "Label citations as test expectations, preserve each action in scope, and separately check the actual policy.",
+      "check": {
+        "when": "When a draft lists actions restricted by NonCompliant",
+        "needed": [
+          "Test policy",
+          "Reader's actual policy, if available"
+        ],
+        "verify": [
+          "Check every test-list item",
+          "Do not automatically add unlisted actions such as quote reposting"
+        ],
+        "if_missing": "If the actual policy is unavailable, do not describe the test list as production observations."
+      },
+      "limits": [
+        "This is not a production action policy obtained for every user in this investigation."
+      ],
+      "source_units": [
+        "U0441"
+      ],
+      "evidence": [
+        {
+          "source_id": "S078",
+          "link_indices": [
+            6
+          ],
+          "supports": "Public NonCompliant test action list"
+        }
+      ],
+      "related_unknowns": [
+        "Q29"
+      ]
+    },
+    {
+      "id": "K05-023",
+      "title": "Sharing-related behaviors are distinct actions",
+      "kind": "code",
+      "conclusion": "Ordinary reposting, quoting, sending via direct message, system sharing, and copying a link are distinct actions; restricting one does not establish that every sharing method is blocked.",
+      "conditions": [
+        "When comparing specific interaction policies"
+      ],
+      "practical_meaning": "Report results using specific action names; for example, check ordinary reposting separately from quoting.",
+      "check": {
+        "when": "When a draft uses 'sharing is prohibited' to cover multiple behaviors",
+        "needed": [
+          "Actual action list",
+          "Client observations of each operation"
+        ],
+        "verify": [
+          "Separate ordinary reposting, quoting, direct messages, system sharing, and copying links",
+          "Describe only verified actions"
+        ],
+        "if_missing": "Retain only known restricted actions; mark the rest unconfirmed."
+      },
+      "limits": [
+        "Client presentation still requires specific observation."
+      ],
+      "source_units": [
+        "U0442"
+      ],
+      "evidence": [
+        {
+          "source_id": "S078",
+          "link_indices": [
+            5,
+            6
+          ],
+          "supports": "Policy resolution by independent action and enumerated test actions"
+        }
+      ],
+      "related_unknowns": [
+        "Q29"
+      ]
+    },
+    {
+      "id": "K05-024",
+      "title": "MISINFO without a source may still restrict interactions through fallback",
+      "kind": "code",
+      "conclusion": "When MISINFO has no usable source, the warning-construction function may initially leave an empty limit; later, LabelInterstitial falls back to NonCompliant when obtaining a restriction reason, so the final display may still include limited engagements.",
+      "conditions": [
+        "MISINFO lacks a usable source or limit",
+        "Processing continues through LabelInterstitial and final assembly"
+      ],
+      "practical_meaning": "Verify warning creation, reason fallback, and final assembly together; do not infer no restrictions from an empty source.",
+      "check": {
+        "when": "When a conclusion says 'no source means no interaction restrictions'",
+        "needed": [
+          "Initial warning limit",
+          "LabelInterstitial reason",
+          "Final policy and assembly result"
+        ],
+        "verify": [
+          "Check the NonCompliant fallback",
+          "Trace through final limited engagements"
+        ],
+        "if_missing": "Without observing the final result, state only that restrictions remain possible."
+      },
+      "limits": [
+        "Specific actions remain controlled by the actual policy."
+      ],
+      "source_units": [
+        "U0443"
+      ],
+      "evidence": [
+        {
+          "source_id": "S078",
+          "link_indices": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "supports": "Initial limit, NonCompliant fallback, final assembly, and missing-source tests"
+        }
+      ],
+      "related_unknowns": [
+        "Q29"
+      ]
+    },
+    {
+      "id": "K05-025",
+      "title": "Post LOW_QUALITY and URL LOW_QUALITY refer to different objects",
+      "kind": "code",
+      "conclusion": "LOW_QUALITY here is a post safety label; LOW_QUALITY in external-link rules is a URL reputation rating, and those bots write SPAM_HIGH_RECALL to the post when they match. Identical wording does not imply the same label or enforcement chain.",
+      "conditions": [
+        "Distinguish post safety labels from URL ratings"
+      ],
+      "practical_meaning": "Whenever mentioning low quality, specify the object, written result, and consuming rule.",
+      "check": {
+        "when": "When ordinary content, incomplete information, or including an external link is equated with the same warning",
+        "needed": [
+          "Object the field belongs to",
+          "Label written by the URL bot",
+          "Post safety label"
+        ],
+        "verify": [
+          "Distinguish URL verdict from post label",
+          "Check the actual SPAM_HIGH_RECALL write"
+        ],
+        "if_missing": "If the object is unclear, do not cite warning or interaction-blocking conclusions."
+      },
+      "limits": [
+        "Unremarkable writing quality or an external link does not directly establish post LOW_QUALITY."
+      ],
+      "source_units": [
+        "U0444"
+      ],
+      "evidence": [
+        {
+          "source_id": "S078",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Public-interest path for post LOW_QUALITY"
+        },
+        {
+          "source_id": "S073",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "URL LOW_QUALITY rules writing SPAM_HIGH_RECALL and its consumption in recommendations"
+        }
+      ],
+      "related_unknowns": [
+        "Q29",
+        "Q38"
+      ]
+    },
+    {
+      "id": "K05-026",
+      "title": "NSFW account states can affect multiple candidates from an author",
+      "kind": "code",
+      "conclusion": "Account-level states can affect multiple candidates from an author without each post separately acquiring the same content label. HomeRecommendations lists NSFW self-declared and administrator states, plus high-recall, high-precision, avatar, banner, near-certain, and other NSFW account labels; author candidates are removed when the corresponding conditions hold.",
+      "conditions": [
+        "HomeRecommendations",
+        "Named NSFW account state or label",
+        "Corresponding reader conditions hold"
+      ],
+      "practical_meaning": "When investigating shared reach changes across multiple posts, check both account states and individual post labels.",
+      "check": {
+        "when": "When recommendation eligibility changes for multiple new posts at once",
+        "needed": [
+          "Account states and exact label names",
+          "Corresponding audience",
+          "Candidate entry point"
+        ],
+        "verify": [
+          "Check the named author rules",
+          "Distinguish account-level from post-level records"
+        ],
+        "if_missing": "Without account-state information, do not infer an account label merely from low views across several posts."
+      },
+      "limits": [
+        "Not all account labels have the same treatment."
+      ],
+      "source_units": [
+        "U0445"
+      ],
+      "evidence": [
+        {
+          "source_id": "S075",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Named NSFW author rules at HomeRecommendations"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-027",
+      "title": "Other named account labels also conditionally remove recommendations",
+      "kind": "code",
+      "conclusion": "HomeRecommendations also lists SpamHighRecall, Compromised, ReadOnly, ImpersonationHighPrecision, AbusiveHighRecall, and DoNotAmplify; author candidates are removed when their respective conditions hold.",
+      "conditions": [
+        "HomeRecommendations",
+        "A listed named account rule and its conditions match"
+      ],
+      "practical_meaning": "Preserve each label's name and applicable object; do not replace all details with 'the account is throttled.'",
+      "check": {
+        "when": "When a report contains spam, compromised, read-only, impersonation, abuse, or do-not-amplify account labels",
+        "needed": [
+          "Exact account label",
+          "Its conditions and audience",
+          "Report explanation"
+        ],
+        "verify": [
+          "Check the named rule",
+          "Confirm it is an account label rather than a post label"
+        ],
+        "if_missing": "If the name cannot be confirmed, do not apply every account rule."
+      },
+      "limits": [
+        "This does not mean any arbitrary account label performs the same removal."
+      ],
+      "source_units": [
+        "U0445"
+      ],
+      "evidence": [
+        {
+          "source_id": "S075",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Named account rules and entry-point registration"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-028",
+      "title": "Account-rule audiences and Home entry points are not uniform",
+      "kind": "code",
+      "conclusion": "Some listed author rules have audience NonAuthors; others have NonFollowers. Ordinary TimelineHome also does not copy the entire set of HomeRecommendations account-label rules.",
+      "conditions": [
+        "Each individual named account rule",
+        "Corresponding safety-check entry point"
+      ],
+      "practical_meaning": "When reviewing, attach the specific entry point and audience to each account label; avoid saying 'any account label ends all non-follower reach.'",
+      "check": {
+        "when": "When every account label is summarized as having one effect",
+        "needed": [
+          "Specific label rule",
+          "audience",
+          "TimelineHome and HomeRecommendations registrations"
+        ],
+        "verify": [
+          "Check NonAuthors versus NonFollowers",
+          "Compare entry-point registration scope"
+        ],
+        "if_missing": "If rule details are missing, leave the conditional scope unknown."
+      },
+      "limits": [
+        "A label name alone does not establish sitewide invisibility."
+      ],
+      "source_units": [
+        "U0446"
+      ],
+      "evidence": [
+        {
+          "source_id": "S075",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Entry-point differences, named rules, and audience definitions"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-029",
+      "title": "Official account-label explanations do not imply invisibility at every entry point",
+      "kind": "official",
+      "conclusion": "For multiple account labels, official reports describe the effect as 'not recommending the account's posts to non-followers'; this does not individually guarantee invisibility across search, profiles, conversations, direct links, and every other entry point.",
+      "conditions": [
+        "The specific labels listed in the corresponding official report"
+      ],
+      "practical_meaning": "Retain the scope of 'recommendations' and 'non-followers' when citing official effects; check other entry points separately.",
+      "check": {
+        "when": "When an official label explanation is rewritten as all external reach falling to zero",
+        "needed": [
+          "Official label explanation",
+          "Reporting period",
+          "Actual entry point under discussion"
+        ],
+        "verify": [
+          "Preserve the audience and verb in the official effect",
+          "Do not replace a recommendation restriction with sitewide hiding"
+        ],
+        "if_missing": "Mark other entry points unverified where evidence is absent."
+      },
+      "limits": [
+        "One label name cannot establish permanent loss of all external traffic."
+      ],
+      "source_units": [
+        "U0446",
+        "U0447"
+      ],
+      "evidence": [
+        {
+          "source_id": "S075",
+          "link_indices": [
+            3
+          ],
+          "supports": "Official visibility explanations for account labels"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-030",
+      "title": "Keep account-label records when multiple posts lose unfamiliar-audience reach",
+      "kind": "editorial",
+      "conclusion": "When unfamiliar-audience reach worsens across several new articles together, check the account label's exact name, reporting period, validity period, and official effect, then compare concurrent content or account changes.",
+      "conditions": [],
+      "practical_meaning": "Keep a record of 'period—label—validity period—explanation—concurrent changes' as a basis for corrections or appeals.",
+      "check": {
+        "when": "When reach declines across multiple pieces of content",
+        "needed": [
+          "Account-label report",
+          "Reporting and validity periods",
+          "Account or content change records"
+        ],
+        "verify": [
+          "Align dates",
+          "Check the entry point and audience in the official effect",
+          "Distinguish correlational clues from causal conclusions"
+        ],
+        "if_missing": "Without label information, do not announce a permanent account penalty; continue checking other clues."
+      },
+      "limits": [
+        "This is investigation advice, not a diagnostic formula for inferring labels from falling reach."
+      ],
+      "source_units": [
+        "U0447"
+      ],
+      "evidence": [
+        {
+          "source_id": "S075",
+          "link_indices": [
+            3
+          ],
+          "supports": "Label-effect explanations provide official scope for the record"
+        }
+      ],
+      "related_unknowns": [
+        "Q27",
+        "Q31"
+      ]
+    },
+    {
+      "id": "K05-031",
+      "title": "Complete public defaults for three-of-five aggregation",
+      "kind": "code",
+      "conclusion": "The public defaults for this post-to-user rule are windowSize=5, minimumMatchingPosts=3, maxPostAgeDays=60, mediaOnly=false, and postLabels anyOf=[NSFW_HIGH_PRECISION], allOf=[]. Matching uses existing post safety labels and counts post records, not images or videos.",
+      "conditions": [
+        "Only this defaultRulesJson configuration",
+        "Other event and account eligibility conditions must still hold"
+      ],
+      "practical_meaning": "When introducing three-of-five, state the five-record window, at least three matches, sixty days, existing labels, and the condition that it is not limited to media.",
+      "check": {
+        "when": "When a draft says 'three adult images among the last five images' or a similar threshold",
+        "needed": [
+          "Named default JSON",
+          "Actual configuration, if available",
+          "Post-label records"
+        ],
+        "verify": [
+          "Check all five parameters individually",
+          "Confirm mediaOnly=false",
+          "Do not substitute image counts or media-model scores"
+        ],
+        "if_missing": "Without actual configuration, call this the public default for this rule, not a fixed sitewide rule."
+      },
+      "limits": [
+        "Configuration can override defaults.",
+        "These default parameters are not the only rule for all adult content."
+      ],
+      "source_units": [
+        "U0448",
+        "U0449",
+        "U0450"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            5
+          ],
+          "supports": "Three-of-five, 60 days, mediaOnly, and the configuration-override entry point"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q30",
+        "Q32"
+      ]
+    },
+    {
+      "id": "K05-032",
+      "title": "Take the first five reverse-ordered userTimeline records before filtering age and labels",
+      "kind": "code",
+      "conclusion": "The processor reads userTimeline data in reverse order and obtains each record's safety labels; the rule takes the first five records in the window before counting those meeting age and label conditions. It does not select eligible media first to fill five slots, and does not average media-model scores here.",
+      "conditions": [
+        "This userTimeline aggregation path",
+        "Public windowSize=5"
+      ],
+      "practical_meaning": "Preserve the returned order when checking a sample: first identify the first five records, then check each one's age and labels.",
+      "check": {
+        "when": "When manually calculating three-of-five or explaining 'recent'",
+        "needed": [
+          "Records returned in reverse order by userTimeline for that request",
+          "Each record's labels and age"
+        ],
+        "verify": [
+          "Apply take to the window before filtering",
+          "Preserve the service's returned order",
+          "Count posts, not images, videos, or average scores"
+        ],
+        "if_missing": "Without that request's returned records, do not equate five posts manually counted in the UI with the program's actual window."
+      },
+      "limits": [
+        "'Recent' is determined by this timeline service's returned sort order."
+      ],
+      "source_units": [
+        "U0451"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            1
+          ],
+          "supports": "Taking the window before counting by age and labels"
+        },
+        {
+          "source_id": "S080",
+          "link_indices": [
+            1
+          ],
+          "supports": "Reverse-ordered userTimeline and label retrieval"
+        }
+      ],
+      "related_unknowns": [
+        "Q30"
+      ]
+    },
+    {
+      "id": "K05-033",
+      "title": "The five-record counting example preserves post units and assumptions",
+      "kind": "editorial",
+      "conclusion": "Assume the event, account eligibility, and timing all qualify: reverse-ordered record 1 is a video with NSFW_HIGH_PRECISION and counts 1; record 2 is unlabeled text and counts 0; record 3 is one labeled post with four images and counts 1; record 4 is an unlabeled ordinary update and counts 0; record 5 is a labeled image post and counts 1, for three matching records.",
+      "conditions": [
+        "Hypothetical teaching example, not actual account data",
+        "Whether each record counts depends on its existing label"
+      ],
+      "practical_meaning": "Use this record-by-record list to show that four images still count as one post, while unlabeled text still occupies a window slot.",
+      "check": {
+        "when": "When explaining the counting unit in three-of-five",
+        "needed": [
+          "Five-record reverse-ordered example",
+          "Each post's existing labels",
+          "Statement of eligibility and timing assumptions"
+        ],
+        "verify": [
+          "The five rows count 1, 0, 1, 0, 1",
+          "Verify four images do not count as four records",
+          "Explicitly state that a text post occupies one record"
+        ],
+        "if_missing": "If eligibility or labels are unknown, use this only to illustrate units; do not declare that a real account has triggered the rule."
+      },
+      "limits": [
+        "This is an example; labels cannot be guessed from looking at images.",
+        "No real account data is used."
+      ],
+      "source_units": [
+        "U0452",
+        "U0453",
+        "U0454",
+        "U0455"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "mediaOnly=false and post-window counting logic underlying the hypothetical example"
+        },
+        {
+          "source_id": "S080",
+          "link_indices": [
+            1
+          ],
+          "supports": "Timeline and label retrieval logic"
+        }
+      ],
+      "related_unknowns": [
+        "Q30"
+      ]
+    },
+    {
+      "id": "K05-034",
+      "title": "take(5) does not require five records to be present first",
+      "kind": "code",
+      "conclusion": "The program uses take(5), then checks whether there are at least three matches; it does not first require exactly five returned records. Thus checking does not start only with the fifth post, and this is not a fixed-percentage model.",
+      "conditions": [
+        "This rule's public window-counting implementation",
+        "Other eligibility conditions, including event and account conditions, hold"
+      ],
+      "practical_meaning": "Write the rule as 'at least three matches among at most five records'; do not rewrite it as 60% or a trigger that waits for the fifth post.",
+      "check": {
+        "when": "When explaining samples with fewer than five records or converting three-of-five into a ratio",
+        "needed": [
+          "Number of returned records",
+          "Number of matching records",
+          "Order of take and comparison"
+        ],
+        "verify": [
+          "Verify at most five records are taken",
+          "Verify minimumMatchingPosts>=3, not a ratio threshold"
+        ],
+        "if_missing": "Without records, describe only the conditions; do not infer the actual trigger time."
+      },
+      "limits": [
+        "With fewer than three returned records, this count cannot qualify; other labeling paths may still exist."
+      ],
+      "source_units": [
+        "U0456"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            1
+          ],
+          "supports": "Taking the window and comparing for at least three matches"
+        }
+      ],
+      "related_unknowns": [
+        "Q30"
+      ]
+    },
+    {
+      "id": "K05-035",
+      "title": "Aggregation is triggered by an Applied label event whose post must be within sixty days",
+      "kind": "code",
+      "conclusion": "This default is triggered by an Applied safety-label event, requiring the new label NSFW_HIGH_PRECISION and the event's post to fall within the past sixty days; window counting separately checks the ages and labels of the first five records.",
+      "conditions": [
+        "Applied event",
+        "New label NSFW_HIGH_PRECISION",
+        "Event's post within the past 60 days",
+        "Subsequent account and window eligibility hold"
+      ],
+      "practical_meaning": "Distinguish event eligibility from each window record's matching eligibility and check them separately.",
+      "check": {
+        "when": "When assuming aggregation necessarily runs on every ordinary post or changes immediately on the third post",
+        "needed": [
+          "Event type and new label",
+          "Age of the event's post",
+          "Window records and their ages"
+        ],
+        "verify": [
+          "Check the triggering event first",
+          "Then check the window",
+          "Do not keep searching backward until five labeled posts are found"
+        ],
+        "if_missing": "Without the event or returned data, you cannot reconstruct whether this execution occurred."
+      },
+      "limits": [
+        "This rule does not necessarily execute whenever an ordinary post is published."
+      ],
+      "source_units": [
+        "U0457"
+      ],
+      "evidence": [
+        {
+          "source_id": "S080",
+          "link_indices": [
+            0
+          ],
+          "supports": "Applied and label-dependent triggering"
+        },
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "60-day default, trigger evaluation, and matching after taking the window"
+        }
+      ],
+      "related_unknowns": [
+        "Q30",
+        "Q31"
+      ]
+    },
+    {
+      "id": "K05-036",
+      "title": "Reposts use the original post's labels but the timeline record's ID for age",
+      "kind": "code",
+      "conclusion": "When the timeline contains a repost, the processor uses originalTweetForRetweet to find the original post and read its safety labels; the ID used for age evaluation in the counting data remains that timeline record's postId.",
+      "conditions": [
+        "This processor encounters a repost record"
+      ],
+      "practical_meaning": "Record the repost timeline postId separately from the original post ID when calculating; distinguish the label source from the age basis.",
+      "check": {
+        "when": "When someone assumes aggregation ignores reposts or directly uses the original post's date",
+        "needed": [
+          "Timeline postId",
+          "originalTweetForRetweet result",
+          "Original post's safety labels"
+        ],
+        "verify": [
+          "Check that labels come from the original post",
+          "Check that age uses the retained timeline postId"
+        ],
+        "if_missing": "If either ID is missing, do not treat original creation time and repost-record time as identical."
+      },
+      "limits": [
+        "This cannot guarantee that the timeline service retains every type of repost record."
+      ],
+      "source_units": [
+        "U0458"
+      ],
+      "evidence": [
+        {
+          "source_id": "S080",
+          "link_indices": [
+            1
+          ],
+          "supports": "Original-post labels for reposts and the retained timeline-record ID"
+        }
+      ],
+      "related_unknowns": [
+        "Q30"
+      ]
+    },
+    {
+      "id": "K05-037",
+      "title": "The processor cannot establish complete timeline retention, deletion, or pagination behavior",
+      "kind": "unknown",
+      "conclusion": "This processor does not provide complete guarantees for userTimeline item retention, deletion, pagination, or real-time consistency; local reading logic cannot establish that the latest five posts in the author's UI necessarily equal the aggregation input.",
+      "conditions": [
+        "Scope of the public processing-chain checks in the original report"
+      ],
+      "practical_meaning": "Request actual returned records when answering a specific account's three-of-five question; if unavailable, retain the gap in knowledge about service behavior.",
+      "check": {
+        "when": "When the user's manual post count differs from the expected aggregation result",
+        "needed": [
+          "Actual timeline response",
+          "Deletion and pagination behavior information",
+          "Configuration for that execution"
+        ],
+        "verify": [
+          "Distinguish known processor handling from unverified upstream-service behavior"
+        ],
+        "if_missing": "Explicitly state that the UI list cannot reconstruct that execution's window."
+      },
+      "limits": [
+        "Unknown behavior does not prove that the service necessarily omits or retains any record type."
+      ],
+      "source_units": [
+        "U0458"
+      ],
+      "evidence": [
+        {
+          "source_id": "S080",
+          "link_indices": [
+            1
+          ],
+          "supports": "The cited processor shows reading and repost handling, not proof of all upstream-service behavior"
+        }
+      ],
+      "related_unknowns": [
+        "Q30"
+      ]
+    },
+    {
+      "id": "K05-038",
+      "title": "Three-of-five excludes nsfwAdmin and accounts already carrying the same label",
+      "kind": "code",
+      "conclusion": "This default excludes accounts with nsfwAdmin=true and accounts already carrying the NSFW_HIGH_PRECISION account label.",
+      "conditions": [
+        "This three-of-five rule's default",
+        "Account-condition checking"
+      ],
+      "practical_meaning": "Check account exclusion conditions before explaining whether window matches will write a new label.",
+      "check": {
+        "when": "When inferring repeated account labeling solely from three labeled posts",
+        "needed": [
+          "nsfwAdmin status",
+          "Existing account labels",
+          "Event and window eligibility"
+        ],
+        "verify": [
+          "Distinguish post labels from account labels",
+          "Confirm exclusion for the same-named account label"
+        ],
+        "if_missing": "If account state is unknown, do not guarantee a write in this execution."
+      },
+      "limits": [
+        "Do not apply other bots' exceptions to this rule."
+      ],
+      "source_units": [
+        "U0459"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Public author-exclusion configuration and evaluation"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q31"
+      ]
+    },
+    {
+      "id": "K05-039",
+      "title": "Three-of-five does not enable nsfwUser or high-PageRank/gray-badge exclusions",
+      "kind": "code",
+      "conclusion": "In this public default, the nsfwUser exclusion is false and the highPageRankOrGreyBadge exclusion is also false; self-marking sensitive content, high PageRank, or a gray badge therefore does not necessarily bypass this aggregation.",
+      "conditions": [
+        "Only this rule's public default"
+      ],
+      "practical_meaning": "Check each rule's own exclusion configuration; do not spread a general 'large-account exemption' or 'self-labeling exemption.'",
+      "check": {
+        "when": "When citing other bots' eligibility to explain three-of-five",
+        "needed": [
+          "nsfwUser exclusion value",
+          "highPageRankOrGreyBadge exclusion value",
+          "Actual configuration, if available"
+        ],
+        "verify": [
+          "Confirm false means this exclusion is disabled",
+          "Also check the other exclusions"
+        ],
+        "if_missing": "Describe only the public default; do not assume actual configuration is identical."
+      },
+      "limits": [
+        "This does not mean these accounts are labeled unconditionally; other event, window, and label eligibility conditions remain."
+      ],
+      "source_units": [
+        "U0459"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "This rule's exclusion switches and account-eligibility check"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q32"
+      ]
+    },
+    {
+      "id": "K05-040",
+      "title": "Three-of-five writes account NSFW_HIGH_PRECISION with a seven-day TTL",
+      "kind": "code",
+      "conclusion": "When conditions are met, the written label is account NSFW_HIGH_PRECISION; the public TTL is seven days, with expiration calculated as the write time plus seven days, not from an image's upload time, and the label is not permanent.",
+      "conditions": [
+        "All event, account, and window conditions hold",
+        "The stated seven-day TTL configuration is used"
+      ],
+      "practical_meaning": "Record the write target and write time to explain expiration settings, and distinguish expiration from actual exposure changes.",
+      "check": {
+        "when": "When reviewing 'how long the three-of-five label lasts'",
+        "needed": [
+          "Account-label write time",
+          "TTL configuration",
+          "Actual expiration or read records"
+        ],
+        "verify": [
+          "Confirm the object is the account",
+          "Confirm expiration = current write time + 7 days",
+          "Do not substitute a media-upload date"
+        ],
+        "if_missing": "Without the write time, you cannot give an account's exact expiration moment."
+      },
+      "limits": [
+        "Label expiration does not guarantee immediate restoration of previous recommendations or views."
+      ],
+      "source_units": [
+        "U0460"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0
+          ],
+          "supports": "NSFW_HIGH_PRECISION account label and seven-day TTL"
+        },
+        {
+          "source_id": "S080",
+          "link_indices": [
+            2
+          ],
+          "supports": "Current write time plus TTL"
+        }
+      ],
+      "related_unknowns": [
+        "Q31"
+      ]
+    },
+    {
+      "id": "K05-041",
+      "title": "Excluding an existing same-named label prevents a simple per-match renewal inference",
+      "kind": "code",
+      "conclusion": "Because this rule excludes accounts already carrying account NSFW_HIGH_PRECISION, this code alone cannot establish that every new match extends the label another seven days.",
+      "conditions": [
+        "This default's existing-label exclusion",
+        "The account already has the same-named label when a new event occurs"
+      ],
+      "practical_meaning": "Check specific write or update records when discussing renewal; do not treat a new post-label event as restarting the seven-day clock.",
+      "check": {
+        "when": "When calculating expiration after repeated matches",
+        "needed": [
+          "Existing account label",
+          "New event",
+          "Actual write/update records"
+        ],
+        "verify": [
+          "Check whether account eligibility blocked this execution",
+          "Verify whether an actual renewal write occurred"
+        ],
+        "if_missing": "Without a renewal record, do not claim automatic extension."
+      },
+      "limits": [
+        "Other systems may independently label or update; this has not been fully verified here."
+      ],
+      "source_units": [
+        "U0460"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Exclusion for an existing same-named account label"
+        },
+        {
+          "source_id": "S080",
+          "link_indices": [
+            2
+          ],
+          "supports": "TTL write after conditions pass"
+        }
+      ],
+      "related_unknowns": [
+        "Q31"
+      ]
+    },
+    {
+      "id": "K05-042",
+      "title": "Aggregation has a ten-minute delay and a twenty-minute maxLag target",
+      "kind": "code",
+      "conclusion": "Event forwarding specifies a ten-minute delay and a twenty-minute maxLag service target; post labeling and account aggregation are not the same synchronous action, so an account change cannot be guaranteed in the exact second the third label appears.",
+      "conditions": [
+        "The cited public forwarder configuration"
+      ],
+      "practical_meaning": "Record the configured delay, actual event-processing time, and account-state change separately.",
+      "check": {
+        "when": "When explaining when labels take effect or promising real-time penalties",
+        "needed": [
+          "Forwarder configuration",
+          "Event arrival and write times, if available"
+        ],
+        "verify": [
+          "Check delay=10 minutes and maxLag=20 minutes",
+          "Identify maxLag as a target, not measured processing time for each event"
+        ],
+        "if_missing": "Without actual logs, report only configuration targets; do not give an exact effective time."
+      },
+      "limits": [
+        "This is not a measurement of actual processing time for each event.",
+        "It does not guarantee when exposure recovers after expiration."
+      ],
+      "source_units": [
+        "U0461"
+      ],
+      "evidence": [
+        {
+          "source_id": "S080",
+          "link_indices": [
+            3
+          ],
+          "supports": "Ten-minute delay and twenty-minute maxLag service target"
+        }
+      ],
+      "related_unknowns": [
+        "Q31"
+      ]
+    },
+    {
+      "id": "K05-043",
+      "title": "Feature-switch configuration can override the three-of-five default",
+      "kind": "code",
+      "conclusion": "Three-of-five comes from defaultRulesJson; configuredRulesJson is read from a feature switch and can override the default. The program supports other configurations with mediaOnly=true, but a supported option does not mean the cited default enables it.",
+      "conditions": [
+        "Configuration-driven aggregation implementation"
+      ],
+      "practical_meaning": "Use the wording 'this public default,' and recalculate using actual configuration when available.",
+      "check": {
+        "when": "When the five-post rule is presented as uniform for all accounts at all times",
+        "needed": [
+          "defaultRulesJson",
+          "Actual configuredRulesJson value, if available",
+          "mediaOnly value"
+        ],
+        "verify": [
+          "Check whether the default is overridden",
+          "Do not equate support for mediaOnly=true with a current default of true"
+        ],
+        "if_missing": "If actual configuration is unknown, retain the scope of the public default."
+      },
+      "limits": [
+        "A default cannot establish rule values for every production account."
+      ],
+      "source_units": [
+        "U0462"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            3,
+            5
+          ],
+          "supports": "mediaOnly option and feature-switch override entry point"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q30"
+      ]
+    },
+    {
+      "id": "K05-044",
+      "title": "The ten/eleven possibly_nsfw_account default is unreachable",
+      "kind": "code",
+      "conclusion": "The possibly_nsfw_account rule in the same file has enabled=true, but its public default requires eleven matches in a ten-record window, making it impossible to trigger under these settings; enabled or the rule name alone cannot determine reachability.",
+      "conditions": [
+        "windowSize=10",
+        "minimumMatchingPosts=11",
+        "This public default is used"
+      ],
+      "practical_meaning": "Substitute all conditions into the calculation before explaining whether the rule can trigger, and retain the possibility of configuration overrides.",
+      "check": {
+        "when": "When enabled=true is used to assert that this default penalizes, or unreachability is used to assert the label never appears",
+        "needed": [
+          "The rule's complete JSON",
+          "Actual override configuration, if available"
+        ],
+        "verify": [
+          "Compare maximum window 10 with required matches 11",
+          "Check actual configuration overrides"
+        ],
+        "if_missing": "State only that this default is unreachable; do not infer other sources or configurations."
+      },
+      "limits": [
+        "Actual configuration can override the default.",
+        "You cannot assert that the label will never appear in any system."
+      ],
+      "source_units": [
+        "U0463"
+      ],
+      "evidence": [
+        {
+          "source_id": "S079",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "Ten/eleven default and configuration override"
+        }
+      ],
+      "related_unknowns": [
+        "Q26",
+        "Q32"
+      ]
+    },
+    {
+      "id": "K05-045",
+      "title": "The earlier NSFW media HLL path differs from the three-of-five timeline path",
+      "kind": "code",
+      "conclusion": "The public repository also contains an earlier NSFW media-event path: it adds events to an HLL count by post ID, checks for more than two records within one day, then enters a labeling or review-submission function; it has its own media-event markers, model-score conditions, author exceptions, and validity periods.",
+      "conditions": [
+        "Named NSFW media-event path",
+        "This path's own eligibility and labeling/review-submission conditions"
+      ],
+      "practical_meaning": "When comparing sources of adult-content account labels, list events, counting units, time windows, author exceptions, and validity periods separately; avoid splicing rules together.",
+      "check": {
+        "when": "When a one-day threshold, media scores, or exemptions are mixed into three-of-five",
+        "needed": [
+          "Media-event path",
+          "HLL counting by post ID",
+          "Conditions of the labeling or review-submission function"
+        ],
+        "verify": [
+          "Confirm more than two within one day belongs to this path",
+          "Keep it separate from the five-record timeline window"
+        ],
+        "if_missing": "If details of this path are missing, do not fill them in from the three-of-five rule."
+      },
+      "limits": [
+        "Do not use either path's day counts, scores, or exceptions to add conditions to the other.",
+        "Three-of-five is not the only source of all adult-content labels."
+      ],
+      "source_units": [
+        "U0464"
+      ],
+      "evidence": [
+        {
+          "source_id": "S080",
+          "link_indices": [
+            4,
+            5,
+            6
+          ],
+          "supports": "Media events, one-day HLL aggregation by post ID, labeling or review submission, and validity periods"
+        }
+      ],
+      "related_unknowns": [
+        "Q32"
+      ]
+    },
+    {
+      "id": "K05-046",
+      "title": "Aggregation-label investigations should retain post, account, and date records",
+      "kind": "editorial",
+      "conclusion": "Individual-post enforcement can accumulate at account level. When relevant labels appear in a report, check posts, account records, and dates; retain those materials for corrections or appeals. Window counting is not a recipe guaranteeing freedom from restrictions by interspersing ordinary posts.",
+      "conditions": [],
+      "practical_meaning": "Organize triggering posts, account labels, write or report dates, and official explanations, then correct or appeal the actual issue.",
+      "check": {
+        "when": "When aggregation-related account labels appear in a report",
+        "needed": [
+          "Relevant posts",
+          "Account-label records",
+          "Times and reporting period",
+          "Correction or appeal entry point"
+        ],
+        "verify": [
+          "Align individual-post and account records",
+          "Distinguish known aggregation chains from other sources"
+        ],
+        "if_missing": "If records are missing, retain uncertainty; do not provide a posting order guaranteed to evade restrictions."
+      },
+      "limits": [
+        "This is advice on organizing evidence.",
+        "Rules are configurable and labels also have other sources."
+      ],
+      "source_units": [
+        "U0465"
+      ],
+      "evidence": [
+        {
+          "source_id": "S075",
+          "link_indices": [
+            3
+          ],
+          "supports": "Official scope of account-label effects"
+        },
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Aggregation of post labels into account labels"
+        },
+        {
+          "source_id": "S080",
+          "link_indices": [
+            0,
+            2
+          ],
+          "supports": "Events and account writes"
+        }
+      ],
+      "related_unknowns": [
+        "Q30",
+        "Q31",
+        "Q32"
+      ]
+    },
+    {
+      "id": "K05-047",
+      "title": "The duplicate-text bot processes general and CJK scheduled clusters",
+      "kind": "code",
+      "conclusion": "The duplicate-text bot receives tweetIdCluster values produced by scheduled queries, including jobs named duplicate_text_unigrams and duplicate_text_characters_cjk; eligible posts receive COPYPASTA_SPAM.",
+      "conditions": [
+        "A cluster from a specified scheduled job is received",
+        "Post and author meet subsequent eligibility conditions"
+      ],
+      "practical_meaning": "Retain the CJK processing entry point when discussing duplicate content; do not infer Chinese is outside scope because it lacks spaces.",
+      "check": {
+        "when": "When reviewing whether Chinese duplicate content enters processing scope",
+        "needed": [
+          "Scheduled job name",
+          "Cluster",
+          "Eligibility checks and write result"
+        ],
+        "verify": [
+          "Confirm the CJK job is accepted",
+          "Distinguish receiving clusters from generating them"
+        ],
+        "if_missing": "Without the cluster or classification basis, do not conclude that any Chinese repetition necessarily gets labeled."
+      },
+      "limits": [
+        "This does not disclose repetition-count or text-length thresholds for Chinese duplication."
+      ],
+      "source_units": [
+        "U0466"
+      ],
+      "evidence": [
+        {
+          "source_id": "S081",
+          "link_indices": [
+            0
+          ],
+          "supports": "General duplicate-text and CJK jobs and label writing"
+        }
+      ],
+      "related_unknowns": [
+        "Q40"
+      ]
+    },
+    {
+      "id": "K05-048",
+      "title": "Duplicate-text processing also has replies jobs",
+      "kind": "code",
+      "conclusion": "The public duplicate-text bot also has corresponding replies versions; repeating the same passage in replies does not automatically place it outside this processing scope.",
+      "conditions": [
+        "A replies job produces a cluster",
+        "Subsequent eligibility conditions hold"
+      ],
+      "practical_meaning": "Check replies processing entry points as well as ordinary-post bots when investigating duplicate replies.",
+      "check": {
+        "when": "When someone asserts that copying only in replies avoids duplicate-content processing",
+        "needed": [
+          "Replies job and cluster",
+          "Reply eligibility and write records"
+        ],
+        "verify": [
+          "Check the replies version",
+          "Retain conditional wording about writing labels"
+        ],
+        "if_missing": "Without cluster and eligibility records, do not guarantee that a particular reply will or will not be labeled."
+      },
+      "limits": [
+        "A replies entry point does not mean every reuse of a sentence is a violation."
+      ],
+      "source_units": [
+        "U0466"
+      ],
+      "evidence": [
+        {
+          "source_id": "S081",
+          "link_indices": [
+            1
+          ],
+          "supports": "Replies jobs, eligibility, and COPYPASTA_SPAM writing"
+        }
+      ],
+      "related_unknowns": [
+        "Q40"
+      ]
+    },
+    {
+      "id": "K05-049",
+      "title": "Duplicate-cluster similarity, count, and text-length thresholds have not been fully traced",
+      "kind": "unknown",
+      "conclusion": "The cited bot starts at cluster receipt; how upstream forms clusters, what similarity it uses, and how many repetitions or characters accumulate before submission are not fully shown in this public chain. Job names cannot establish that any repeated sentence, reused definition, or shared technical term necessarily gets labeled.",
+      "conditions": [
+        "Scope of the processing chain verified in the original report"
+      ],
+      "practical_meaning": "When answering 'how many repetitions are allowed,' state the public-evidence boundary and review the content's purpose; do not invent a safe quota.",
+      "check": {
+        "when": "When a draft proposes repetition-count, text-length, or similarity penalty formulas",
+        "needed": [
+          "Complete upstream query and time window",
+          "Actual cluster data"
+        ],
+        "verify": [
+          "Check whether the cited evidence covers only the consumer",
+          "Distinguish word reuse from an already-generated cluster"
+        ],
+        "if_missing": "Explicitly state that thresholds are unknown; do not specify a guaranteed-penalty or penalty-free number."
+      },
+      "limits": [
+        "Not finding the complete upstream logic does not prove clustering criteria are absent."
+      ],
+      "source_units": [
+        "U0467"
+      ],
+      "evidence": [
+        {
+          "source_id": "S081",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Visible bot scope from receiving specified clusters through eligibility and writing"
+        }
+      ],
+      "related_unknowns": [
+        "Q40"
+      ]
+    },
+    {
+      "id": "K05-050",
+      "title": "COPYPASTA writing has post-eligibility and data-retrieval return conditions",
+      "kind": "code",
+      "conclusion": "Receiving a duplicate cluster does not label every post unconditionally: the program excludes posts already processed by that job or already carrying COPYPASTA_SPAM, checks particular promo card types, and has return conditions for data-retrieval failures.",
+      "conditions": [
+        "Cluster received",
+        "Post-level eligibility checks pass"
+      ],
+      "practical_meaning": "Check cluster inclusion separately from actual label writing; retain processing-state, card, and data-failure information.",
+      "check": {
+        "when": "When inferring every post in a cluster has been labeled",
+        "needed": [
+          "Existing processing marker",
+          "Post labels",
+          "Promo card check",
+          "Data-retrieval result"
+        ],
+        "verify": [
+          "Check early-return conditions",
+          "Confirm whether a subsequent write actually occurred"
+        ],
+        "if_missing": "Without processing results, say only that the post may enter the bot; do not assert the label was written."
+      },
+      "limits": [
+        "The original text gives no safe repetition allowance."
+      ],
+      "source_units": [
+        "U0468"
+      ],
+      "evidence": [
+        {
+          "source_id": "S081",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Post eligibility and data-retrieval return conditions in both duplicate bots"
+        }
+      ],
+      "related_unknowns": [
+        "Q40"
+      ]
+    },
+    {
+      "id": "K05-051",
+      "title": "COPYPASTA writing also depends on author exceptions and rate limits",
+      "kind": "code",
+      "conclusion": "Duplicate-content bots also exclude test accounts, high-PageRank authors, temporarily skipped authors, and gray-badge authors; writes are ultimately rate-limited.",
+      "conditions": [
+        "The corresponding bot's author and rate conditions"
+      ],
+      "practical_meaning": "Check author conditions and write limits when reading the labeling path; do not recast these conditions as a safe copying allowance for creators.",
+      "check": {
+        "when": "When explaining a cluster without an observed label",
+        "needed": [
+          "Author eligibility",
+          "Temporary skip status",
+          "Write rate and result"
+        ],
+        "verify": [
+          "Check author exclusions",
+          "Verify whether the write completed"
+        ],
+        "if_missing": "Without state information, retain the unknown; do not infer content safety or guaranteed penalties."
+      },
+      "limits": [
+        "These are boundaries of this path, not universal exemptions from other systems."
+      ],
+      "source_units": [
+        "U0468"
+      ],
+      "evidence": [
+        {
+          "source_id": "S081",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Author exceptions and write rate limits"
+        }
+      ],
+      "related_unknowns": [
+        "Q40"
+      ]
+    },
+    {
+      "id": "K05-052",
+      "title": "The downstream exposure effects of COPYPASTA_SPAM remain incompletely verified",
+      "kind": "unknown",
+      "conclusion": "The report conducted bounded searches of public Home Mixer, VM Ranker, and visibility-filtering code but did not find a complete enforcement chain directly consuming COPYPASTA_SPAM. The bot is known to write the label, but this cannot establish a percentage decline in exposure or guarantee disappearance from every recommendation entry point.",
+      "conditions": [
+        "The public repositories and specified consumers checked in the report"
+      ],
+      "practical_meaning": "State both 'label writing exists' and 'downstream effects remain incomplete,' retaining the need for consumers and measurements.",
+      "check": {
+        "when": "When a COPYPASTA label is immediately used to calculate demotion or zero exposure",
+        "needed": [
+          "Downstream consumer",
+          "Entry point and coefficients",
+          "Actual exposure or experiment data"
+        ],
+        "verify": [
+          "Confirm label-writing evidence",
+          "Check for a complete consumption chain"
+        ],
+        "if_missing": "Explicitly mark downstream effects unknown; failure to find them does not mean they do not exist."
+      },
+      "limits": [
+        "The public repository does not contain all bot rules.",
+        "Static searches cannot supply actual exposure percentages."
+      ],
+      "source_units": [
+        "U0469"
+      ],
+      "evidence": [
+        {
+          "source_id": "S081",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Known starting point of label writing"
+        },
+        {
+          "source_id": "S081",
+          "link_indices": [
+            2
+          ],
+          "supports": "Public spam rules are incomplete"
+        },
+        {
+          "source_id": "S076",
+          "link_indices": [
+            0
+          ],
+          "supports": "Scope of unpublished rules and configuration"
+        }
+      ],
+      "related_unknowns": [
+        "Q41"
+      ]
+    },
+    {
+      "id": "K05-053",
+      "title": "Reusing old material should add information needed for the current question",
+      "kind": "editorial",
+      "conclusion": "When reusing old material, explain which current question it answers, retain its source, and add new context or developments; copying the same promotion into ten unrelated discussions adds no information for readers, even with synonyms or punctuation changes.",
+      "conditions": [],
+      "practical_meaning": "Check each reuse for relevance, traceability, and new contextual value before deciding to keep, rewrite, or remove it.",
+      "check": {
+        "when": "When reviewing copied promotions, citations of old posts, or repeated replies",
+        "needed": [
+          "Question in the current discussion",
+          "Source of the old material",
+          "New developments or applicable context"
+        ],
+        "verify": [
+          "Confirm relevance for each instance",
+          "Remove repetitive promotion that only changes wording"
+        ],
+        "if_missing": "Without a new purpose, consolidate or remove the promotional content."
+      },
+      "limits": [
+        "'Ten discussions' is an editorial example, not a detection threshold.",
+        "Content quality can be assessed without knowing the similarity threshold."
+      ],
+      "source_units": [
+        "U0470"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q40"
+      ]
+    },
+    {
+      "id": "K05-054",
+      "title": "Three engagement-spam classes directly set should_label_for_spam to true",
+      "kind": "code",
+      "conclusion": "The PTOS Spam writing branch specifically lists SpamEngagementBaiting, SpamEngagementFarming, and SpamCardManipulation; when the model returns one of these, should_label_for_spam is directly set to true.",
+      "conditions": [
+        "The model first identifies one of the three named policies",
+        "Prerequisite eligibility and the applicable task environment hold"
+      ],
+      "practical_meaning": "Accurately state that these three classes have no high-PageRank or gray-badge exemption in this branch, while retaining prerequisites.",
+      "check": {
+        "when": "When reviewing code interpretations of engagement baiting, engagement farming, or card manipulation",
+        "needed": [
+          "Model policy",
+          "PTOS task entry point",
+          "Prerequisite eligibility"
+        ],
+        "verify": [
+          "Check the three enumeration values",
+          "Inspect the assignment branch",
+          "Continue checking earlier returns and the environment"
+        ],
+        "if_missing": "Without a classification result, do not predict guaranteed labeling of particular text."
+      },
+      "limits": [
+        "This does not mean every account in every situation is necessarily caught."
+      ],
+      "source_units": [
+        "U0471",
+        "U0472"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            0,
+            1,
+            3
+          ],
+          "supports": "Prerequisite eligibility, three special Spam branches, and production restriction"
+        }
+      ],
+      "related_unknowns": [
+        "Q42"
+      ]
+    },
+    {
+      "id": "K05-055",
+      "title": "Other non-NoViolation Spam classes separately check author eligibility",
+      "kind": "code",
+      "conclusion": "Other non-NoViolation Spam classes check that the author is neither high PageRank nor gray-badge; after the relevant Spam-writing conditions pass, the written label is post SpamHighRecall.",
+      "conditions": [
+        "Non-NoViolation Spam class",
+        "Corresponding author conditions pass",
+        "PTOS write eligibility holds"
+      ],
+      "practical_meaning": "Distinguish the three special classes from other Spam classes, and specify that the write target is a post.",
+      "check": {
+        "when": "When a draft presents author exceptions as identical across all Spam classes",
+        "needed": [
+          "Policy classification",
+          "Author PageRank/gray-badge determination",
+          "Label-write target"
+        ],
+        "verify": [
+          "First separate the three special classes from other classes",
+          "Confirm post SpamHighRecall is written"
+        ],
+        "if_missing": "If class or eligibility is unknown, do not assume the same exception applies."
+      },
+      "limits": [
+        "A post label is not the same as an account label of the same name."
+      ],
+      "source_units": [
+        "U0471"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            1
+          ],
+          "supports": "Special and other Spam branches and post-label writing"
+        }
+      ],
+      "related_unknowns": [
+        "Q42"
+      ]
+    },
+    {
+      "id": "K05-056",
+      "title": "The high-PageRank condition cannot be rewritten as a follower-count threshold",
+      "kind": "code",
+      "conclusion": "High PageRank is a named author determination, not an alias for a particular follower-count ceiling; the cited write function does not use follower counts to define whether the three engagement-spam classes are violations.",
+      "conditions": [
+        "The cited PTOS write function"
+      ],
+      "practical_meaning": "Retain the original PageRank determination name; do not infer violation classifications from 'large account' status or follower counts.",
+      "check": {
+        "when": "When account size is used to explain exemptions or guaranteed penalties for the three classes",
+        "needed": [
+          "Author-eligibility fields",
+          "Model policy",
+          "Whether follower count actually appears in the branch"
+        ],
+        "verify": [
+          "Check that PageRank/gray-badge status is used rather than a follower threshold",
+          "Distinguish classification from write eligibility"
+        ],
+        "if_missing": "Without model results or eligibility evidence, do not promise 'accounts of any size are always caught.'"
+      },
+      "limits": [
+        "Prior model classification, task entry point, and other conditions still affect the path."
+      ],
+      "source_units": [
+        "U0472"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Named PageRank/gray-badge eligibility and Spam-classification branches"
+        }
+      ],
+      "related_unknowns": [
+        "Q42"
+      ]
+    },
+    {
+      "id": "K05-057",
+      "title": "PTOS Spam writing requires production, while test accounts return earlier",
+      "kind": "code",
+      "conclusion": "Test accounts return at an earlier stage and write only PtosReviewed; the entire safety-writing sink is limited to PTOS production mode, with disabling conditions in other modes.",
+      "conditions": [
+        "PTOS production",
+        "Non-test account",
+        "Model first identifies the relevant policy"
+      ],
+      "practical_meaning": "Check the execution environment, early return, and classification as three layers of conditions when explaining Spam labels.",
+      "check": {
+        "when": "When the three special Spam assignments are described as unconditional penalties",
+        "needed": [
+          "Production mode",
+          "Test-account status",
+          "Policy classification"
+        ],
+        "verify": [
+          "Confirm the sink is enabled",
+          "Check early returns",
+          "Then check the specific Spam branch"
+        ],
+        "if_missing": "Without environment or classification information, state only the conditional write behavior."
+      },
+      "limits": [
+        "This does not establish behavior of other unverified systems."
+      ],
+      "source_units": [
+        "U0473"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            0,
+            3,
+            4
+          ],
+          "supports": "Test accounts, production restriction, and disabling conditions"
+        }
+      ],
+      "related_unknowns": [
+        "Q42"
+      ]
+    },
+    {
+      "id": "K05-058",
+      "title": "Unpublished Spam prompts cannot yield a list of guaranteed-penalty phrases",
+      "kind": "unknown",
+      "conclusion": "The spam-classification prompt is not public; you cannot declare that every 'What do you think?', 'Tell me in the comments,' or other fixed phrase necessarily becomes SpamEngagementBaiting whenever it appears.",
+      "conditions": [
+        "The public code does not provide the complete spam-classification prompt"
+      ],
+      "practical_meaning": "Review how the specific question relates to the content, keep classifier judgment unknown, and avoid dictionaries of safe or guaranteed-penalty phrases.",
+      "check": {
+        "when": "When determining whether a call for engagement necessarily incurs a penalty",
+        "needed": [
+          "Complete context",
+          "Classification prompt or actual model result, if available"
+        ],
+        "verify": [
+          "Distinguish editorial quality from policy classification",
+          "Do not infer a label directly from a sentence's surface form"
+        ],
+        "if_missing": "Without a classification basis, explain that the result cannot be guaranteed and suggest ways to improve the question's quality."
+      },
+      "limits": [
+        "Likewise, no particular rewrite can be guaranteed absolutely safe."
+      ],
+      "source_units": [
+        "U0473"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            5
+          ],
+          "supports": "Scope of the unpublished spam-classification prompt"
+        }
+      ],
+      "related_unknowns": [
+        "Q42"
+      ]
+    },
+    {
+      "id": "K05-059",
+      "title": "Use engagement questions to help continue checking the content",
+      "kind": "editorial",
+      "conclusion": "After a tool comparison, ask 'Which test condition differs from your usage? Could you include the version and an example?' Specific answers help further verification. Repeatedly urging engagement without a clear question in the body leaves readers unsure what to answer.",
+      "conditions": [],
+      "practical_meaning": "Replace generic urging with specific questions about conditions, versions, and examples.",
+      "check": {
+        "when": "When reviewing a closing CTA or invitation to comment",
+        "needed": [
+          "Body's claim",
+          "Conditions still requiring verification",
+          "Materials readers are being asked to provide"
+        ],
+        "verify": [
+          "Does the question correspond to the body?",
+          "Can answers add evidence or a useful application?"
+        ],
+        "if_missing": "If there is no specific question, reduce the urging or clarify the type of feedback needed."
+      },
+      "limits": [
+        "This is question-writing advice, not a list of classifier-safe phrases."
+      ],
+      "source_units": [
+        "U0474"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q42"
+      ]
+    },
+    {
+      "id": "K05-060",
+      "title": "SpamHashTagAbuse is a spam class with conditional label writing",
+      "kind": "code",
+      "conclusion": "The public Spam policy includes SpamHashTagAbuse; after the model classifies it as such, it follows the author-eligibility branch for other Spam classes and may write post SpamHighRecall if conditions pass.",
+      "conditions": [
+        "Model classifies as SpamHashTagAbuse",
+        "Author eligibility for other Spam classes and prerequisites hold"
+      ],
+      "practical_meaning": "Explain that a hashtag-abuse class exists while retaining model and author conditions.",
+      "check": {
+        "when": "When discussing the risk of hashtag stuffing",
+        "needed": [
+          "Model policy",
+          "Author eligibility",
+          "PTOS execution prerequisites"
+        ],
+        "verify": [
+          "Check the classification enumeration",
+          "Check the other-Spam branch"
+        ],
+        "if_missing": "Without a policy result, do not declare a violation directly from hashtag count."
+      },
+      "limits": [
+        "No universal hashtag-count deduction formula is public."
+      ],
+      "source_units": [
+        "U0475"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            1,
+            2
+          ],
+          "supports": "SpamHashTagAbuse enumeration and author branch for other Spam classes"
+        }
+      ],
+      "related_unknowns": [
+        "Q43"
+      ]
+    },
+    {
+      "id": "K05-061",
+      "title": "Advice to limit hashtags is not proof of zero value or a uniform deduction formula",
+      "kind": "myth",
+      "conclusion": "'Piling on hashtags does not help' can be an editorial reminder, but public evidence cannot establish that all hashtags have zero value, and there is no sitewide formula deducting a fixed score above a fixed count.",
+      "conditions": [
+        "Distinguish editorial reminders from code facts"
+      ],
+      "practical_meaning": "Explain relevance, usefulness for reader recognition, and abuse risk separately; do not claim a universally optimal count.",
+      "check": {
+        "when": "When reviewing claims that all hashtags have zero value or incur count-based penalties",
+        "needed": [
+          "Named classification evidence",
+          "Actual experiments on count effects, if any"
+        ],
+        "verify": [
+          "Check whether an abuse class is being equated with all hashtags",
+          "Check whether a uniform numeric rule is actually provided"
+        ],
+        "if_missing": "Without a corresponding experiment or formula, remove definitive numeric conclusions."
+      },
+      "limits": [
+        "The absence of a formula does not mean abuse carries no risk."
+      ],
+      "source_units": [
+        "U0475"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            1,
+            2
+          ],
+          "supports": "Establishes an abuse class, but cannot establish effects for all hashtags"
+        }
+      ],
+      "related_unknowns": [
+        "Q43"
+      ]
+    },
+    {
+      "id": "K05-062",
+      "title": "CLICK_HASHTAG behavior can be an input to Phoenix",
+      "kind": "code",
+      "conclusion": "Phoenix history data and feature lists include CLICK_HASHTAG; this supports hashtag-related behavior being an input, not each added hashtag yielding a fixed final-score bonus.",
+      "conditions": [
+        "The cited Phoenix history and feature paths"
+      ],
+      "practical_meaning": "Accurately say 'a related behavioral input exists'; do not turn an input field into a score authors can redeem.",
+      "check": {
+        "when": "When someone asserts the system completely ignores hashtags or calculates bonuses by count",
+        "needed": [
+          "Historical behavior set",
+          "Feature list",
+          "Final-scoring evidence, if any"
+        ],
+        "verify": [
+          "Confirm CLICK_HASHTAG is listed",
+          "Distinguish user behavior from the number of hashtags added by an author"
+        ],
+        "if_missing": "Without complete usage and effect evidence, do not estimate recommendation gains."
+      },
+      "limits": [
+        "A feature's existence does not mean every model or request uses it in the same way."
+      ],
+      "source_units": [
+        "U0476"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            7,
+            8
+          ],
+          "supports": "CLICK_HASHTAG history and feature lists"
+        }
+      ],
+      "related_unknowns": [
+        "Q43"
+      ]
+    },
+    {
+      "id": "K05-063",
+      "title": "Four hashtags is the selection limit of one extractor",
+      "kind": "code",
+      "conclusion": "The SimClusters entity extractor sets MaxHashtagsPerTweet=4 and retains only the first four hashtags when extracting text entities. Four is this extractor's data-selection cap, not a sitewide optimum of four or a penalty starting with the fifth.",
+      "conditions": [
+        "This SimClusters entity extractor path"
+      ],
+      "practical_meaning": "Specify the component and input cap when introducing this number; prioritize relevance without promising that the first four all increase recommendations.",
+      "check": {
+        "when": "When MaxHashtagsPerTweet is used to prove a universally optimal count",
+        "needed": [
+          "Extractor code",
+          "Whether the claimed effect exceeds this component's scope"
+        ],
+        "verify": [
+          "Verify only the first four are taken",
+          "Distinguish input truncation from penalties or rewards",
+          "Retain the possibility that other models read text or different features"
+        ],
+        "if_missing": "Without cross-model effect experiments, do not recommend four as an algorithmic guarantee."
+      },
+      "limits": [
+        "Other models may read text or different features.",
+        "A local processing cap is not an effect experiment for the whole system."
+      ],
+      "source_units": [
+        "U0477"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            6
+          ],
+          "supports": "MaxHashtagsPerTweet=4 and entity selection"
+        }
+      ],
+      "related_unknowns": [
+        "Q43"
+      ]
+    },
+    {
+      "id": "K05-064",
+      "title": "Choose hashtags directly related to the topic or event",
+      "kind": "editorial",
+      "conclusion": "Hashtags can help readers recognize and find related topics or events; the body must still clearly state tool names, versions, and results. Piling on trending tags cannot replace that information.",
+      "conditions": [],
+      "practical_meaning": "Keep only tags matching the body's purpose, and check that the test content is understandable without relying on them.",
+      "check": {
+        "when": "When reviewing hashtags alongside the body",
+        "needed": [
+          "Topic or event",
+          "Tool names, versions, and results",
+          "Proposed hashtags"
+        ],
+        "verify": [
+          "Check each for direct relevance",
+          "Verify key facts remain in the body"
+        ],
+        "if_missing": "Without a directly relevant purpose, reduce tags rather than applying an unknown optimal count."
+      },
+      "limits": [
+        "This is editorial advice.",
+        "Public code has not selected an optimal count for all accounts."
+      ],
+      "source_units": [
+        "U0478"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            6,
+            7,
+            8
+          ],
+          "supports": "Four is a local extractor cap, while hashtag behavioral inputs also exist; this evidence gives no optimal count for all accounts, and choosing for relevance is editorial advice."
+        }
+      ],
+      "related_unknowns": [
+        "Q43"
+      ]
+    },
+    {
+      "id": "K05-065",
+      "title": "A few dozen views alone cannot diagnose low reach",
+      "kind": "unknown",
+      "conclusion": "A post with only a few dozen views may not have been retrieved, may rank low, may be filtered as already seen, or may face visibility restrictions; view counts alone cannot distinguish these causes.",
+      "conditions": [
+        "Only public view counts are available, without complete request evidence"
+      ],
+      "practical_meaning": "First check visibility clues, then content and available analytics; do not immediately label low views as one specific kind of distribution restriction.",
+      "check": {
+        "when": "When explaining low views for a post",
+        "needed": [
+          "View-field definition",
+          "Label report",
+          "Candidate, filtering, or ranking data, if available"
+        ],
+        "verify": [
+          "Distinguish retrieval, ranking, already-seen filtering, and visibility as four issue types",
+          "Tie each judgment to specific evidence"
+        ],
+        "if_missing": "Without corresponding records, list the unresolved possible causes rather than making a definitive diagnosis."
+      },
+      "limits": [
+        "A few dozen views describes a low-view situation, not a code threshold.",
+        "A visibility report cannot reconstruct every ranking cause."
+      ],
+      "source_units": [
+        "U0479"
+      ],
+      "evidence": [
+        {
+          "source_id": "S005",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "Candidate and recommendation pipeline"
+        },
+        {
+          "source_id": "S020",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "Already-seen and already-served filtering"
+        },
+        {
+          "source_id": "S059",
+          "link_indices": [
+            0
+          ],
+          "supports": "Definition of public view counts"
+        },
+        {
+          "source_id": "S072",
+          "link_indices": [
+            0,
+            2,
+            3
+          ],
+          "supports": "Reports and label-based visibility clues"
+        }
+      ],
+      "related_unknowns": [
+        "Q17",
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-066",
+      "title": "Under the Hood is an officially listed pilot transparency entry point",
+      "kind": "official",
+      "conclusion": "The official recommendation repository lists Under the Hood at https://x.com/i/jf/under_the_hood; this pilot tool shows account and post labels that may affect visibility during the reporting period. Availability is determined by the account's signed-in interface.",
+      "conditions": [
+        "Pilot tool",
+        "When available for the account",
+        "Limited to the period shown in the report"
+      ],
+      "practical_meaning": "For reach questions, inspect this entry point and save the actual reporting period, labels, and explanations.",
+      "check": {
+        "when": "When seeking account-visibility clues",
+        "needed": [
+          "Entry-point status after sign-in",
+          "Available report"
+        ],
+        "verify": [
+          "Confirm whether the account has access",
+          "Check the reporting period before using label records"
+        ],
+        "if_missing": "If the entry point is unavailable, do not infer that the account is restricted."
+      },
+      "limits": [
+        "It is not a complete causal log of each recommendation."
+      ],
+      "source_units": [
+        "U0480"
+      ],
+      "evidence": [
+        {
+          "source_id": "S072",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "Official entry point, pilot explanation, report fields, and label explanations"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-067",
+      "title": "Check Period and generation time first in Under the Hood",
+      "kind": "code",
+      "conclusion": "The page mentions previous-month statistics, but the service depends on month conditions and data readiness and falls back to an earlier period when necessary; check Period and generation time first when opening a report.",
+      "conditions": [
+        "Month eligibility and data readiness affect the reporting period"
+      ],
+      "practical_meaning": "Align the date of the issue being analyzed with report coverage; avoid explaining today's new post through an older month's aggregate.",
+      "check": {
+        "when": "When using an Under the Hood report to diagnose recent changes",
+        "needed": [
+          "Period",
+          "Report generation time",
+          "Date the issue occurred"
+        ],
+        "verify": [
+          "Check whether it fell back to an earlier period",
+          "Confirm the post or account change discussed falls within that period"
+        ],
+        "if_missing": "If periods do not match, use it only as historical evidence, not a conclusion about today."
+      },
+      "limits": [
+        "The page's 'previous month' wording does not guarantee each actual response covers the previous month."
+      ],
+      "source_units": [
+        "U0481"
+      ],
+      "evidence": [
+        {
+          "source_id": "S072",
+          "link_indices": [
+            2
+          ],
+          "supports": "Reporting period and fields"
+        },
+        {
+          "source_id": "S082",
+          "link_indices": [
+            2,
+            4
+          ],
+          "supports": "Fallback when data is not ready and previous-month wording"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-068",
+      "title": "Report eligibility and recommendation eligibility are separate conditions",
+      "kind": "code",
+      "conclusion": "Public Under the Hood code includes a pilot switch and report-eligibility requirements such as an account age of about one year and at least ten qualifying posts in the specified month. Missing a report cannot establish restrictions; these conditions govern report provision, not authors' recommendation eligibility.",
+      "conditions": [
+        "The cited public report service",
+        "Pilot and month conditions"
+      ],
+      "practical_meaning": "When investigating a missing report, first check service availability and report eligibility; do not diagnose a recommendation penalty.",
+      "check": {
+        "when": "When a user lacks a report or the entry point is unavailable",
+        "needed": [
+          "Pilot switch/account availability",
+          "Account age",
+          "Count of qualifying posts in the specified month"
+        ],
+        "verify": [
+          "Retain the scope of 'about one year' and 'at least ten qualifying posts in the specified month'",
+          "Distinguish report eligibility from recommendation eligibility"
+        ],
+        "if_missing": "Without eligibility information, say only that no report was provided; do not infer throttling."
+      },
+      "limits": [
+        "Actual availability is determined by the account interface.",
+        "Do not present ten posts as recommendation eligibility or a creator's minimum posting quota."
+      ],
+      "source_units": [
+        "U0482"
+      ],
+      "evidence": [
+        {
+          "source_id": "S082",
+          "link_indices": [
+            0,
+            3
+          ],
+          "supports": "Account age, monthly posting eligibility, and service switches"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-069",
+      "title": "Post labels counts labeled posts and their proportion",
+      "kind": "code",
+      "conclusion": "Post labels in the report indicates how many posts carried that label during the period and the corresponding proportion of posts.",
+      "conditions": [
+        "Specified reporting period",
+        "Post labels item"
+      ],
+      "practical_meaning": "Retain posts as the unit of numerator and denominator when interpreting values; check Effect on visibility separately.",
+      "check": {
+        "when": "When explaining a Post labels percentage",
+        "needed": [
+          "Reporting period",
+          "Labeled-post count",
+          "Corresponding total post count and proportion"
+        ],
+        "verify": [
+          "Verify the count concerns posts rather than impressions",
+          "Do not describe label proportion as reach-loss rate"
+        ],
+        "if_missing": "If the denominator or definition is unclear, do not convert it into exposure loss."
+      },
+      "limits": [
+        "A post carrying a label does not directly reveal how much exposure each post actually lost."
+      ],
+      "source_units": [
+        "U0483"
+      ],
+      "evidence": [
+        {
+          "source_id": "S072",
+          "link_indices": [
+            2
+          ],
+          "supports": "Post labels report fields and units"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-070",
+      "title": "Account labels counts labeled days and their proportion",
+      "kind": "code",
+      "conclusion": "Account labels in the report indicates how many days the account carried that label during the period and the corresponding proportion of days.",
+      "conditions": [
+        "Specified reporting period",
+        "Account labels item"
+      ],
+      "practical_meaning": "Record labeled days separately from label effects; do not treat them as affected-post counts or days of complete invisibility.",
+      "check": {
+        "when": "When explaining an Account labels percentage",
+        "needed": [
+          "Days in the reporting period",
+          "Labeled days",
+          "Official effect explanation"
+        ],
+        "verify": [
+          "Confirm the unit is days",
+          "Check the label's actual scope"
+        ],
+        "if_missing": "Without an effect explanation, report only the day-count record."
+      },
+      "limits": [
+        "The proportion of days is not the proportion of lost exposure."
+      ],
+      "source_units": [
+        "U0483"
+      ],
+      "evidence": [
+        {
+          "source_id": "S072",
+          "link_indices": [
+            2
+          ],
+          "supports": "Account labels report fields and units"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-071",
+      "title": "Three of forty posts, or 7.5%, is not an exposure-loss rate",
+      "kind": "editorial",
+      "conclusion": "Suppose 3 of 40 posts carry a label: 3/40=7.5% is the proportion of labeled posts, not a loss of 7.5% of exposure.",
+      "conditions": [
+        "Hypothetical report example",
+        "Numerator 3 posts, denominator 40 posts"
+      ],
+      "practical_meaning": "Write '3 posts / 40 posts, a post proportion of 7.5%'; do not attach a causal exposure interpretation.",
+      "check": {
+        "when": "When annotating Post labels figures",
+        "needed": [
+          "Labeled-post count and total post count",
+          "Official field definition"
+        ],
+        "verify": [
+          "Check the arithmetic of 3/40",
+          "Check that the ratio is still named a post proportion"
+        ],
+        "if_missing": "Without an actual report, explicitly identify this as a teaching hypothetical, not an account measurement."
+      },
+      "limits": [
+        "Not actual account data."
+      ],
+      "source_units": [
+        "U0484"
+      ],
+      "evidence": [
+        {
+          "source_id": "S072",
+          "link_indices": [
+            2
+          ],
+          "supports": "The report's post-based units support this hypothetical calculation"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-072",
+      "title": "Five of thirty-one days does not mean five days of complete invisibility",
+      "kind": "editorial",
+      "conclusion": "Suppose an account label is present on 5 of 31 days: the unit is days; this does not mean posts were entirely invisible at every entry point on those 5 days.",
+      "conditions": [
+        "Hypothetical report example",
+        "Specified 31-day period with an account label on 5 days"
+      ],
+      "practical_meaning": "Record the 5 days and specific label effect; explain duration separately from visibility scope.",
+      "check": {
+        "when": "When annotating Account labels duration",
+        "needed": [
+          "Labeled days",
+          "Days in the period",
+          "Label's Effect on visibility"
+        ],
+        "verify": [
+          "Retain days as the unit",
+          "Check which entry points and readers are restricted"
+        ],
+        "if_missing": "Without the label effect, do not infer all-day, sitewide, or zero-exposure consequences."
+      },
+      "limits": [
+        "Not actual account data."
+      ],
+      "source_units": [
+        "U0484"
+      ],
+      "evidence": [
+        {
+          "source_id": "S072",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "Account-label day counts and effect explanations"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-073",
+      "title": "Read What it means together with Effect on visibility",
+      "kind": "official",
+      "conclusion": "What it means and Effect on visibility in the report provide label meanings and effects; some restrict recommendations to non-followers, while others concern content warnings, regional restrictions, or other limits. Do not compress them all into the same 'throttling.'",
+      "conditions": [
+        "Specific report labels and explanations"
+      ],
+      "practical_meaning": "Record each label name, meaning, and effect, then explain it using precise audience and entry-point wording.",
+      "check": {
+        "when": "When organizing or explaining a visibility report",
+        "needed": [
+          "Label name",
+          "What it means",
+          "Effect on visibility"
+        ],
+        "verify": [
+          "Check whether the effect is a recommendation restriction, warning, regional restriction, or something else",
+          "Retain the applicable scope"
+        ],
+        "if_missing": "Without an explanation, do not invent a uniform penalty."
+      },
+      "limits": [
+        "A label name cannot replace the full effect explanation."
+      ],
+      "source_units": [
+        "U0485"
+      ],
+      "evidence": [
+        {
+          "source_id": "S072",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "Report display fields and explanations of label effects"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-074",
+      "title": "A follower friend opening the post does not rule out non-follower recommendation restrictions",
+      "kind": "editorial",
+      "conclusion": "Asking a friend who follows you to confirm the post opens cannot rule out restrictions on recommendations to non-followers; conversely, having a label does not mean disappearance from every page. Checks should target the scope stated in the report.",
+      "conditions": [
+        "The observer is known to be a follower",
+        "The test concerns opening a post, not recommendations to unfamiliar audiences"
+      ],
+      "practical_meaning": "Record the reader relationship, entry point, and action for visibility observations; avoid extrapolating from a single opening test.",
+      "check": {
+        "when": "When a friend's ability to open a post or a label's existence is used to judge sitewide status",
+        "needed": [
+          "Observer's follow relationship",
+          "Opening entry point",
+          "Report's effect explanation"
+        ],
+        "verify": [
+          "Distinguish opening from recommendation",
+          "Distinguish followers from non-followers",
+          "Limit conclusions to the observed scope"
+        ],
+        "if_missing": "Without observations matching the audience and entry point, keep the matter unverified."
+      },
+      "limits": [
+        "This is a checking method based on official scope, not a sitewide empirical finding."
+      ],
+      "source_units": [
+        "U0486"
+      ],
+      "evidence": [
+        {
+          "source_id": "S072",
+          "link_indices": [
+            3
+          ],
+          "supports": "Official label explanations distinguish specific audiences and effects"
+        }
+      ],
+      "related_unknowns": [
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-075",
+      "title": "Save reports and align concurrent changes before correcting or appealing",
+      "kind": "editorial",
+      "conclusion": "When relevant labels appear, save the reporting period, names, and explanations and compare account or content changes in the same period; use an applicable correction or appeal entry point to address the issue. Today's title change cannot explain last month's aggregate.",
+      "conditions": [],
+      "practical_meaning": "Create chronologically ordered report and change records, retaining original materials needed for corrections or appeals.",
+      "check": {
+        "when": "When a report lists relevant labels",
+        "needed": [
+          "Reporting period, names, and explanations",
+          "Concurrent account or content changes",
+          "Correction or appeal entry point"
+        ],
+        "verify": [
+          "Match temporal order",
+          "Confirm the submitted issue falls within that label's scope"
+        ],
+        "if_missing": "Without contemporaneous information, do not identify the latest edit as the cause."
+      },
+      "limits": [
+        "Report aggregates provide clues; they do not automatically prove a single change caused a label."
+      ],
+      "source_units": [
+        "U0487"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q27",
+        "Q31"
+      ]
+    },
+    {
+      "id": "K05-076",
+      "title": "An empty report means only that this report lists no relevant records",
+      "kind": "unknown",
+      "conclusion": "When no label is listed, you can only say that this report has no relevant records. It is marked best effort, is not a complete causal log of individual impressions, and does not explain why one post lost to another; an empty report cannot establish that every ranking was normal.",
+      "conditions": [
+        "The reporting period read and its best effort scope"
+      ],
+      "practical_meaning": "Clearly state 'no records listed,' then turn to content, available analytics fields, and comparison methods.",
+      "check": {
+        "when": "When an empty report is used to prove there are no recommendation issues whatsoever",
+        "needed": [
+          "Actual report",
+          "Coverage period",
+          "Best effort explanation"
+        ],
+        "verify": [
+          "Do not equate no records with verification of every process",
+          "Do not reconstruct request-by-request competitive ranking from the report"
+        ],
+        "if_missing": "Without complete request logs, leave ranking causes unknown."
+      },
+      "limits": [
+        "Empty records are not reverse proof of a hidden penalty either."
+      ],
+      "source_units": [
+        "U0488"
+      ],
+      "evidence": [
+        {
+          "source_id": "S082",
+          "link_indices": [
+            1
+          ],
+          "supports": "The report's best effort explanation"
+        }
+      ],
+      "related_unknowns": [
+        "Q17"
+      ]
+    },
+    {
+      "id": "K05-077",
+      "title": "Content can still be improved item by item when visibility clues are absent",
+      "kind": "editorial",
+      "conclusion": "After finding no visibility clues, check whether the title is clear, the first image shows results, promised materials appear in the body, and important updates are left only in old replies.",
+      "conditions": [],
+      "practical_meaning": "Find specific improvements across four checks: title, first image, fulfillment of promises, and update discoverability.",
+      "check": {
+        "when": "When views are low but the report offers no clear clues",
+        "needed": [
+          "Current title, first image, opening, and body",
+          "Important updates in replies"
+        ],
+        "verify": [
+          "Check whether readers can quickly identify the result",
+          "Compare opening promises with actual materials",
+          "Move conclusion-changing updates to a discoverable position"
+        ],
+        "if_missing": "These four editorial checks can be completed even without internal model scores."
+      },
+      "limits": [
+        "Improving content does not diagnose the recommendation cause or guarantee growth."
+      ],
+      "source_units": [
+        "U0489"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-078",
+      "title": "Choose only one main change per comparison",
+      "kind": "editorial",
+      "conclusion": "When comparing similar tool tests, keep material scale and observation duration as close as possible and change one main variable, such as replacing a decorative cover image with a result comparison; changing topic, format, audience, and timing together makes effects hard to attribute.",
+      "conditions": [
+        "Content tasks and observation conditions are as similar as possible"
+      ],
+      "practical_meaning": "First specify the comparison variable and background conditions kept similar, then record results.",
+      "check": {
+        "when": "When designing the next posting comparison",
+        "needed": [
+          "Similar topics and material scale",
+          "Consistent observation duration",
+          "One main change"
+        ],
+        "verify": [
+          "Confirm other changes are recorded",
+          "Do not attribute gains after multiple changes to one edit"
+        ],
+        "if_missing": "If conditions cannot be made similar, describe results as directional clues only."
+      },
+      "limits": [
+        "This does not control every change in the recommendation system or audience."
+      ],
+      "source_units": [
+        "U0490"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K05-079",
+      "title": "Use actual analytics fields and preserve missing values",
+      "kind": "editorial",
+      "conclusion": "Use analytics already available to the account; if the platform actually provides profile clicks, follows, bookmarks, or other fields, record them according to their definitions, and leave unavailable fields blank.",
+      "conditions": [],
+      "practical_meaning": "Keep visible field names and definitions; do not invent official algorithm scores or fill gaps with substitute metrics.",
+      "check": {
+        "when": "When building a posting-analytics record",
+        "needed": [
+          "Fields actually available to the account",
+          "Each field's definition and measurement window"
+        ],
+        "verify": [
+          "Preserve each field's meaning",
+          "Distinguish nonexistent fields, unavailable data, and actual zero values"
+        ],
+        "if_missing": "Leave unavailable fields blank and mark them missing."
+      },
+      "limits": [
+        "Do not assume different accounts have identical available fields."
+      ],
+      "source_units": [
+        "U0491",
+        "U0492"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q49"
+      ]
+    },
+    {
+      "id": "K05-080",
+      "title": "Views are not deduplicated audience, and thread views cannot be summed as people",
+      "kind": "official",
+      "conclusion": "Public view counts are not deduplicated people; the views of individual posts in a thread cannot be summed and called a unique audience.",
+      "conditions": [
+        "When using the platform's public view numbers"
+      ],
+      "practical_meaning": "Report each post's views and their definition separately; without a deduplicated metric, do not manufacture a deduplicated total of people.",
+      "check": {
+        "when": "When summarizing thread performance or estimating unique readers",
+        "needed": [
+          "Views for each post",
+          "Official view definition",
+          "Deduplicated metric, if actually provided"
+        ],
+        "verify": [
+          "Distinguish views from people",
+          "Do not infer audience by simply adding across posts"
+        ],
+        "if_missing": "Without deduplicated data, list only views; do not label them unique readers."
+      },
+      "limits": [
+        "Total views cannot reconstruct a reader's repeat views or views across posts."
+      ],
+      "source_units": [
+        "U0491"
+      ],
+      "evidence": [
+        {
+          "source_id": "S059",
+          "link_indices": [
+            0
+          ],
+          "supports": "Official view-count definition is not a deduplicated person count"
+        }
+      ],
+      "related_unknowns": [
+        "Q49"
+      ]
+    },
+    {
+      "id": "K05-081",
+      "title": "Comparison records should first retain content identity and publishing conditions",
+      "kind": "editorial",
+      "conclusion": "A basic comparison table should record post link, topic, format, publication time, reply or quote status, and external-link location, making it easier to find similar content rather than forcing different tasks together.",
+      "conditions": [],
+      "practical_meaning": "Use one record per post and these conditions to select comparable groups.",
+      "check": {
+        "when": "When building a minimal posting-comparison table",
+        "needed": [
+          "Link",
+          "Topic and format",
+          "Publication time",
+          "Reply or quote status",
+          "External-link location"
+        ],
+        "verify": [
+          "Records are sufficient to return to the original post",
+          "Compare content with similar tasks and formats"
+        ],
+        "if_missing": "Mark missing conditions; do not force records into the same sample category."
+      },
+      "limits": [
+        "These are recording recommendations, not official algorithm-scoring fields."
+      ],
+      "source_units": [
+        "U0492",
+        "U0493"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-082",
+      "title": "24 and 48 hours are consistent observation points, not independent samples",
+      "kind": "editorial",
+      "conclusion": "You can record visible data 24 and 48 hours after publication to standardize observation windows; two time points for the same post are tracking records, not two independent posts.",
+      "conditions": [
+        "Record by elapsed time since publication",
+        "24 and 48 hours are suggested observation points"
+      ],
+      "practical_meaning": "Keep the same ID and two time points for each post; align post age in comparisons.",
+      "check": {
+        "when": "When comparing performance after publication",
+        "needed": [
+          "Publication time",
+          "24-hour and 48-hour observation times",
+          "Post ID"
+        ],
+        "verify": [
+          "Align by elapsed time",
+          "Do not count two time records for one post as two independent posts"
+        ],
+        "if_missing": "If a time point is missed, record the actual elapsed duration; do not disguise it as the fixed window."
+      },
+      "limits": [
+        "24/48 hours is a comparison arrangement, not a platform-promised distribution lifecycle."
+      ],
+      "source_units": [
+        "U0493"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-083",
+      "title": "Record shares, replies, profile clicks, follows, and similar metrics by definition; do not fill missing values with zero",
+      "kind": "editorial",
+      "conclusion": "Record shares, replies, profile clicks, follows, and other metrics actually provided by the platform, interpreting each by its definition; leave unavailable values blank rather than entering zero.",
+      "conditions": [],
+      "practical_meaning": "Record data availability separately from values, preserving field units and windows.",
+      "check": {
+        "when": "When cleaning an analytics table or comparing metrics across posts",
+        "needed": [
+          "Visible metrics",
+          "Definitions, denominators, and observation windows",
+          "Missing-data status"
+        ],
+        "verify": [
+          "Confirm zero means an observed zero rather than an unavailable value",
+          "Retain names of distinct actions"
+        ],
+        "if_missing": "Keep unavailable fields null."
+      },
+      "limits": [
+        "Even identically named fields should not be compared outside platform definitions."
+      ],
+      "source_units": [
+        "U0493"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q49"
+      ]
+    },
+    {
+      "id": "K05-084",
+      "title": "Account-goal outcomes can supplement exposure metrics",
+      "kind": "editorial",
+      "conclusion": "Qualified inquiries, useful visits, and other outcomes related to the account's goals are worth recording; content with ordinary exposure may still merit continuing if it attracts target readers.",
+      "conditions": [],
+      "practical_meaning": "Define useful account outcomes beforehand and examine them alongside visible distribution metrics.",
+      "check": {
+        "when": "When deciding which topics or content formats to retain",
+        "needed": [
+          "Account goals",
+          "Definitions of qualified inquiries or useful visits",
+          "Corresponding records"
+        ],
+        "verify": [
+          "Check the quality and relevance of goal outcomes",
+          "Avoid dropping topics solely by view rankings"
+        ],
+        "if_missing": "Without usable outcome records, do not speculate about commercial or audience value."
+      },
+      "limits": [
+        "This is goal-oriented editorial judgment, not a recommendation-bonus formula."
+      ],
+      "source_units": [
+        "U0493"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-085",
+      "title": "Record trending events, revisions, and known labels as comparison context",
+      "kind": "editorial",
+      "conclusion": "Also record concurrent trending events, content revisions, and known visibility labels to avoid attributing every change to one edit.",
+      "conditions": [],
+      "practical_meaning": "Attach contextual notes to each post's results and explicitly list potentially confounding changes when explaining comparisons.",
+      "check": {
+        "when": "When numbers rise or fall after an edit",
+        "needed": [
+          "Concurrent trending events",
+          "Revision records",
+          "Known labels and periods"
+        ],
+        "verify": [
+          "Check when changes occurred",
+          "Check for other explanations"
+        ],
+        "if_missing": "If context is incomplete, weaken attribution."
+      },
+      "limits": [
+        "Recording context cannot eliminate all confounding."
+      ],
+      "source_units": [
+        "U0493"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q26",
+        "Q27"
+      ]
+    },
+    {
+      "id": "K05-086",
+      "title": "Use distributions and medians across posts so a viral post does not dominate",
+      "kind": "editorial",
+      "conclusion": "When comparing multiple posts, inspect distributions and medians to avoid letting one accidentally viral post dominate the mean.",
+      "conditions": [
+        "Multiple comparable posts are available"
+      ],
+      "practical_meaning": "Retain per-post data and examine both typical performance and dispersion.",
+      "check": {
+        "when": "When comparing overall performance across topics, formats, or changes",
+        "needed": [
+          "Per-post metrics",
+          "Similar observation windows",
+          "Sample composition"
+        ],
+        "verify": [
+          "Inspect outliers' effects on the mean",
+          "Examine the median and distribution"
+        ],
+        "if_missing": "If samples are few or groups dissimilar, describe individual results honestly rather than forcing a stable pattern."
+      },
+      "limits": [
+        "The original text provides no minimum sample size guaranteed to be reliable."
+      ],
+      "source_units": [
+        "U0494"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-087",
+      "title": "Each impression cannot be treated as an independent random experimental sample",
+      "kind": "editorial",
+      "conclusion": "The same reader may see content repeatedly, and the platform selects different audiences; a comparison cannot simply treat each impression as an independent, random experimental sample.",
+      "conditions": [
+        "Observational data from organic posting and platform distribution"
+      ],
+      "practical_meaning": "Account for dependence involving posts and audience selection; do not use huge impression counts to pretend there are equally many random samples.",
+      "check": {
+        "when": "When assessing whether differences are stable or causal",
+        "needed": [
+          "Post-level data",
+          "Known limitations from repeated views and audience selection"
+        ],
+        "verify": [
+          "Distinguish impression records from independent experimental units",
+          "State that organic distribution is not a randomized experiment"
+        ],
+        "if_missing": "Without audience or allocation data, do not claim to have completed a randomized causal experiment."
+      },
+      "limits": [
+        "Controlling content variables still does not control all platform and audience changes."
+      ],
+      "source_units": [
+        "U0494"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-088",
+      "title": "With enough samples, bootstrap intervals at the post level",
+      "kind": "editorial",
+      "conclusion": "With enough samples, bootstrap intervals can use posts as the unit; with few samples, honestly record direction and uncertainty.",
+      "conditions": [
+        "Multiple posts and a sample sufficient to support the intended comparison",
+        "Posts are the resampling unit"
+      ],
+      "practical_meaning": "When intervals are needed, resample posts rather than impressions or different time points for the same post, and report sample limitations alongside them.",
+      "check": {
+        "when": "When adding uncertainty estimates to a multiple-post comparison",
+        "needed": [
+          "Comparable post-level data",
+          "Groups and sample sizes",
+          "Consistent observation window"
+        ],
+        "verify": [
+          "Confirm posts are the resampling unit",
+          "Check that a post's 24/48-hour records are not treated as independent samples",
+          "Retain small-sample limitations"
+        ],
+        "if_missing": "If samples are insufficient, record only direction and uncertainty; do not force a precise interval."
+      },
+      "limits": [
+        "The original text gives no universal sample-size threshold.",
+        "An interval does not automatically establish causality."
+      ],
+      "source_units": [
+        "U0494"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-089",
+      "title": "A one-month observation schedule has four stages",
+      "kind": "editorial",
+      "conclusion": "The original report offers this monthly starting schedule: week one, organize the baseline, profile bio, and pinned post; week two, publish complete original work within sustainable capacity; week three, compare only one main variable; week four, review topics that brought relevant readers and actual outcomes.",
+      "conditions": [
+        "Adapt to your own capacity and existing rhythm"
+      ],
+      "practical_meaning": "Use the four weeks for preparation, publishing, a single-variable comparison, and outcome review, retaining records for each stage.",
+      "check": {
+        "when": "When starting a content-observation cycle",
+        "needed": [
+          "Existing baseline",
+          "Sustainable capacity",
+          "One variable to compare",
+          "Account-goal outcomes"
+        ],
+        "verify": [
+          "Each week has a clear task",
+          "Avoid changing multiple things in week three",
+          "In week four, examine both relevant readers and actual outcomes"
+        ],
+        "if_missing": "If a mature process already exists, use your own baseline; do not disrupt capacity merely to fit this schedule."
+      },
+      "limits": [
+        "This is an experimental arrangement, not an algorithmic requirement."
+      ],
+      "source_units": [
+        "U0495"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-090",
+      "title": "One post daily or three to five weekly is only an experimental starting point",
+      "kind": "editorial",
+      "conclusion": "The report's example of one post per day, or three to five per week if quality falls, is only an experimental starting point; an established rhythm should retain its own baseline, without presenting these numbers as algorithmic requirements.",
+      "conditions": [
+        "Posting quality and capacity are sustainable",
+        "Numbers are examples of observation arrangements"
+      ],
+      "practical_meaning": "Adjust frequency according to quality and new information, and record the actual rhythm.",
+      "check": {
+        "when": "When a user asks how many posts to publish daily or a draft claims rewards for a fixed frequency",
+        "needed": [
+          "Current rhythm",
+          "Quality changes",
+          "Content capacity and goals"
+        ],
+        "verify": [
+          "Identify the numbers as examples rather than thresholds",
+          "Check whether frequency harms quality"
+        ],
+        "if_missing": "Without frequency experiments, start with the existing sustainable baseline; do not provide an algorithmically optimal post count."
+      },
+      "limits": [
+        "Not finding a daily-post-count formula does not mean all production limits are known."
+      ],
+      "source_units": [
+        "U0495"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-091",
+      "title": "The OCR publishing example is only an organizational hypothetical using one batch of Chinese invoices",
+      "kind": "editorial",
+      "conclusion": "The complete publishing example assumes the same batch of Chinese invoices is used to compare two OCR tools; A and B are placeholders demonstrating article organization only, without assuming any test results.",
+      "conditions": [
+        "The same batch of Chinese invoices",
+        "Tools A and B are placeholders",
+        "No actual results"
+      ],
+      "practical_meaning": "Replace the example with real tools, materials, and results when using it, and identify untested areas.",
+      "check": {
+        "when": "When turning the OCR example into a publishable article",
+        "needed": [
+          "Actual tool names",
+          "Identical input materials",
+          "Actual test outputs"
+        ],
+        "verify": [
+          "Confirm placeholder comparison has not been presented as measurement",
+          "Results must be supported by actual materials"
+        ],
+        "if_missing": "Without measured data, keep it as a structural template; do not publish fabricated rankings."
+      },
+      "limits": [
+        "No tool's superiority or inferiority can be inferred from the example."
+      ],
+      "source_units": [
+        "U0496"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-092",
+      "title": "The OCR opening should serve tool selection and manual-verification tasks",
+      "kind": "editorial",
+      "conclusion": "Readers may be choosing a tool, or already using one and wanting to know which fields still need manual checking. The opening should explain what this test covers, avoiding a broad question such as 'How powerful is AI recognition really?' that the materials cannot answer.",
+      "conditions": [
+        "The described Chinese-invoice OCR comparison example"
+      ],
+      "practical_meaning": "Narrow the opening to actual fields and reader decisions; do not generalize to all AI recognition capabilities.",
+      "check": {
+        "when": "When drafting an OCR test's title and opening",
+        "needed": [
+          "Reader task",
+          "Fields actually tested",
+          "Scope of conclusions supported by the materials"
+        ],
+        "verify": [
+          "Check that the text states what was tested",
+          "Ensure the title does not exceed the evidence's scope"
+        ],
+        "if_missing": "If the readers or test items remain unclear, first limit the scope to completed tests."
+      },
+      "limits": [
+        "This is editorial positioning, not a format mandated by the recommendation system."
+      ],
+      "source_units": [
+        "U0497"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-093",
+      "title": "The complete OCR opening draft retains scope, input, and usage guidance",
+      "kind": "editorial",
+      "conclusion": "Opening draft: 'This comparison covers only dates, tax amounts, and buyer information on Chinese invoices. Both tools use the same batch of original images; error examples and test settings appear below. If you plan to import recognition results directly into your accounting records, first check which fields still require manual verification.'",
+      "conditions": [
+        "Example copy",
+        "The body must actually supply the promised materials"
+      ],
+      "practical_meaning": "Reuse the structure of scope, identical input batch, evidence location, and reader use case, replacing the test items with real ones.",
+      "check": {
+        "when": "When a concrete, usable test-opening example is needed",
+        "needed": [
+          "Actual fields",
+          "Same batch of original images",
+          "Error examples",
+          "Test settings",
+          "Manual-verification findings"
+        ],
+        "verify": [
+          "Verify dates, tax amounts, and buyer information were actually tested",
+          "Confirm promised examples and settings can be found in the body"
+        ],
+        "if_missing": "If any promised material is missing, remove or revise that promise; do not invent results."
+      },
+      "limits": [
+        "This is not a statement that testing has been completed.",
+        "It does not constitute a conclusion about specific accounting operations."
+      ],
+      "source_units": [
+        "U0498"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-094",
+      "title": "Test methods should list sample count, version, date, quality, and evaluation method",
+      "kind": "editorial",
+      "conclusion": "The body should list sample count, tool versions, test date, image quality, and evaluation method; untested types must not enter the conclusions. This makes the test understandable and verifiable; recommendation code does not require every article to follow one format.",
+      "conditions": [
+        "When readers need to understand and verify a test"
+      ],
+      "practical_meaning": "Supply all five methodological details near the results and mark the sample boundaries of conclusions.",
+      "check": {
+        "when": "When reviewing a comparison test's verifiability",
+        "needed": [
+          "Sample count",
+          "Tool versions",
+          "Test date",
+          "Image quality",
+          "Evaluation method"
+        ],
+        "verify": [
+          "Methods suffice to understand the results",
+          "Conclusions do not include untested types"
+        ],
+        "if_missing": "If methods are missing, state the gaps and narrow conclusions; do not treat untested items as results."
+      },
+      "limits": [
+        "This is editorial and verification advice, not a platform-wide writing template."
+      ],
+      "source_units": [
+        "U0499"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-095",
+      "title": "Use a representative error-versus-correct comparison in the first image and label conditions",
+      "kind": "editorial",
+      "conclusion": "The first image can show a representative error-versus-correct comparison with test conditions; if the results concern only blurry images, say so on the image rather than presenting a ranking for all invoices. Provide full results and limitations afterward, and retain the main finding in the body.",
+      "conditions": [
+        "Actual, representative test case",
+        "Conclusions are limited by input conditions"
+      ],
+      "practical_meaning": "Clearly identify the tool/field, incorrect and correct values, and applicable conditions in the first image so the image and body can be cross-checked.",
+      "check": {
+        "when": "When selecting the first image for an OCR test",
+        "needed": [
+          "Representative original image and recognition result",
+          "Correct value",
+          "Applicable conditions",
+          "Full results and limitations"
+        ],
+        "verify": [
+          "The case is not a cherry-picked exception presented as representative",
+          "The blurry-image condition is directly visible",
+          "The body also states the main finding"
+        ],
+        "if_missing": "Without a representative real comparison, do not create a conclusion image implying a universal ranking."
+      },
+      "limits": [
+        "The first-image format does not guarantee recommendation gains."
+      ],
+      "source_units": [
+        "U0500"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-096",
+      "title": "Choose a single post, long article, or three-post summary thread by evidence volume",
+      "kind": "editorial",
+      "conclusion": "One finding with one example can be a single post; when samples, settings, results, and limitations need explanation, retain a long article and create a separate summary thread. If using three posts, the first gives the question and main judgment, the second the comparison, and the third the scope and access to complete materials; include more evidence in full when needed.",
+      "conditions": [
+        "Choose format according to information needs",
+        "Three posts is an organizational example"
+      ],
+      "practical_meaning": "First ensure the question, judgment, evidence, and boundaries are complete, then decide post count and format.",
+      "check": {
+        "when": "When choosing a comparison test's publishing format",
+        "needed": [
+          "Number of findings",
+          "Samples and settings",
+          "Results and limitations",
+          "Access to complete materials"
+        ],
+        "verify": [
+          "Can the information be clearly explained in one post?",
+          "Does each of the three summary posts serve a specific purpose?",
+          "Do not cut key materials merely to fit three posts when more evidence is needed"
+        ],
+        "if_missing": "If materials are insufficient, narrow claims; do not create an impression of completeness by increasing post count."
+      },
+      "limits": [
+        "There is no algorithmic guarantee that exactly three posts is optimal."
+      ],
+      "source_units": [
+        "U0501"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-097",
+      "title": "Each summary-thread post should stand alone, with core data not confined to the middle",
+      "kind": "editorial",
+      "conclusion": "Read each post on its own; expand 'the second problem is more serious' into a specific field and error type. Do not place core data only in the middle of a long thread and assume every Home reader will read from start to finish.",
+      "conditions": [
+        "Thread posts or multiple summary posts may be encountered individually"
+      ],
+      "practical_meaning": "Supply the object, finding, and necessary conditions in each post, retaining the main judgment in the first.",
+      "check": {
+        "when": "When reviewing individual-post comprehensibility in a long thread",
+        "needed": [
+          "Each post's text",
+          "Location of core data",
+          "Fields and error types"
+        ],
+        "verify": [
+          "Is it understandable without surrounding context?",
+          "Are key numbers hidden only in the middle?",
+          "Can references be resolved?"
+        ],
+        "if_missing": "If context is missing, rewrite the information to be self-contained rather than relying on readers to open the complete thread."
+      },
+      "limits": [
+        "This is editorial advice based on conversation-assembly scope.",
+        "Public assembly logic does not guarantee readers see the entire thread."
+      ],
+      "source_units": [
+        "U0502"
+      ],
+      "evidence": [
+        {
+          "source_id": "S018",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "Root, ancestor, and current-post assembly and timeline handling do not guarantee full-thread display"
+        }
+      ],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-098",
+      "title": "Examples and conditions promised in the opening must appear in the body",
+      "kind": "editorial",
+      "conclusion": "If the opening promises error examples, provide original images, recognition results, and correct values; if it promises test conditions, explain versions, inputs, and evaluation methods. Delete paragraphs that repeatedly announce 'the real problem comes later' without adding materials.",
+      "conditions": [],
+      "practical_meaning": "Match each opening promise to its location in the body, replacing previews with verifiable evidence.",
+      "check": {
+        "when": "When reviewing promise fulfillment and delaying paragraphs in a test article",
+        "needed": [
+          "Opening promises",
+          "Original images, results, and correct values",
+          "Versions, inputs, and evaluation methods"
+        ],
+        "verify": [
+          "Each promise can be matched to materials",
+          "Reduce repetitive suspense previews"
+        ],
+        "if_missing": "If materials remain missing, supply them or retract the promise; do not conceal gaps through previews."
+      },
+      "limits": [
+        "This is information-organization advice, not a dwell-time reward technique."
+      ],
+      "source_units": [
+        "U0503"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-099",
+      "title": "Every middle paragraph should add information, with conditions beside conclusions",
+      "kind": "editorial",
+      "conclusion": "In the middle, check what each paragraph adds; paragraphs repeating the title can be replaced with counterexamples, and conclusions valid only for low-clarity images should place that condition beside them.",
+      "conditions": [],
+      "practical_meaning": "Mark each paragraph's added facts, evidence, counterexamples, or boundaries, and combine purely repetitive paragraphs.",
+      "check": {
+        "when": "When shortening or improving the middle of a long test article",
+        "needed": [
+          "Paragraph-by-paragraph text",
+          "Counterexample materials",
+          "Applicable conditions for each conclusion"
+        ],
+        "verify": [
+          "Does it add information?",
+          "Are conditions adjacent to the conclusions they limit?"
+        ],
+        "if_missing": "If no information is added, delete or combine paragraphs; do not invent missing counterexamples."
+      },
+      "limits": [
+        "The goal is not simply shorter text or a fixed paragraph count."
+      ],
+      "source_units": [
+        "U0504"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-100",
+      "title": "CREAD cannot choose an article's optimal word count or paragraphing",
+      "kind": "editorial",
+      "conclusion": "CREAD explains one dwell-time prediction method; it cannot choose the best word count or paragraphing for a particular article. Adjust length to the information each paragraph provides and the reader's task.",
+      "conditions": [
+        "Distinguish prediction methods from editorial choices"
+      ],
+      "practical_meaning": "Do not derive guaranteed long-form superiority, a fixed word count, or a fixed paragraphing recipe directly from CREAD terminology.",
+      "check": {
+        "when": "When CREAD is used to justify length rules",
+        "needed": [
+          "What the method establishes",
+          "Article information needs",
+          "Actual effect experiments, if any"
+        ],
+        "verify": [
+          "Check whether the inference jumps from prediction method to optimal length",
+          "Review for informational completeness"
+        ],
+        "if_missing": "Without evidence on length effects, give only editorial reasons; do not call them algorithmic requirements."
+      },
+      "limits": [
+        "The original text provides no universally optimal word count."
+      ],
+      "source_units": [
+        "U0504"
+      ],
+      "evidence": [
+        {
+          "source_id": "S013",
+          "link_indices": [
+            3,
+            4,
+            5
+          ],
+          "supports": "CREAD's multiple thresholds and time reconstruction are prediction methods only; they provide no conclusion on optimal article word count"
+        }
+      ],
+      "related_unknowns": [
+        "Q06"
+      ]
+    },
+    {
+      "id": "K05-101",
+      "title": "Access to complete comparison materials should deliver promised content and disclose barriers in advance",
+      "kind": "editorial",
+      "conclusion": "The complete comparison table should have a name, date, and usage instructions; opening the external link should reveal the promised materials, with any registration or payment requirement stated in advance.",
+      "conditions": [],
+      "practical_meaning": "Actually open the materials entry point and verify the content; explain its name, version date, purpose, and access conditions to readers.",
+      "check": {
+        "when": "When publishing a test article linking externally to complete materials",
+        "needed": [
+          "Comparison table",
+          "Destination link",
+          "Material date and instructions",
+          "Registration or payment requirements"
+        ],
+        "verify": [
+          "The entry point opens normally",
+          "The landing page contains the promised content",
+          "Access conditions are known before clicking"
+        ],
+        "if_missing": "If materials are unavailable, repair access or adjust the promise before publishing."
+      },
+      "limits": [
+        "A working link does not mean the platform's internal URL rating is known."
+      ],
+      "source_units": [
+        "U0505"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K05-102",
+      "title": "Recheck the destination page and link purpose after pinning",
+      "kind": "editorial",
+      "conclusion": "If this article later becomes a pinned post, periodically confirm that the destination page and link purpose have not changed.",
+      "conditions": [
+        "The article is used as a pinned post or lasting entry point"
+      ],
+      "practical_meaning": "When maintaining a pinned post, recheck the final destination, material content, dates, and access requirements.",
+      "check": {
+        "when": "When updating a bio or pinned post, or checking long-term access to materials",
+        "needed": [
+          "Current pinned link",
+          "Actual destination page",
+          "Originally promised purpose"
+        ],
+        "verify": [
+          "The link still points to the promised materials",
+          "Changes in registration, payment, or purpose are disclosed"
+        ],
+        "if_missing": "If the destination fails or its purpose changes, repair the link and explanation."
+      },
+      "limits": [
+        "This is maintenance advice, not a guarantee of obtaining or changing the platform's internal reputation."
+      ],
+      "source_units": [
+        "U0505"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q38"
+      ]
+    },
+    {
+      "id": "K05-103",
+      "title": "Schedule publication around primary readers' time zones and habits",
+      "kind": "editorial",
+      "conclusion": "If you know when primary readers look at this type of test, choose a period when they are more likely to be present; 3 a.m. for the author is not necessarily 3 a.m. for the reader.",
+      "conditions": [
+        "Timing information for primary readers is available"
+      ],
+      "practical_meaning": "Record readers' time zones and actual reading habits before scheduling or comparing publication times.",
+      "check": {
+        "when": "When choosing publication times or explaining late-night posting",
+        "needed": [
+          "Primary readers' time zones",
+          "Existing clues about reading times",
+          "Actual publication time"
+        ],
+        "verify": [
+          "Convert to readers' local time",
+          "Avoid judging solely by the author's local clock"
+        ],
+        "if_missing": "Without reader timing information, keep and record the baseline; do not give a universally best time slot."
+      },
+      "limits": [
+        "Timing advice does not guarantee recommendations."
+      ],
+      "source_units": [
+        "U0506"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-104",
+      "title": "Public views cannot calculate the remainder of a 200-view Home quota",
+      "kind": "myth",
+      "conclusion": "Public view counts cannot calculate how much of a '200-view Home quota' remains; cold start provides conditional exploration opportunities, not a redeemable guaranteed minimum for every post.",
+      "conditions": [
+        "Public view fields differ from Home count fields",
+        "Cold start has additional eligibility and selection conditions"
+      ],
+      "practical_meaning": "When explaining low views, do not subtract public views from 200 to calculate a balance; use the named Home field when checking conditions.",
+      "check": {
+        "when": "When public numbers are treated as a cold-start progress bar",
+        "needed": [
+          "view_count_on_home",
+          "General view count",
+          "Cold-start eligibility and actual selection records, if available"
+        ],
+        "verify": [
+          "Distinguish the two count fields",
+          "Confirm conditional exploration is not guaranteed display"
+        ],
+        "if_missing": "Without the Home field, no remaining allowance can be calculated."
+      },
+      "limits": [
+        "Static conditions cannot guarantee display for a particular candidate."
+      ],
+      "source_units": [
+        "U0506"
+      ],
+      "evidence": [
+        {
+          "source_id": "S035",
+          "link_indices": [
+            0,
+            3,
+            6
+          ],
+          "supports": "Home threshold, jointly required eligibility, and separate Home and general-view fields"
+        }
+      ],
+      "related_unknowns": [
+        "Q08",
+        "Q09"
+      ]
+    },
+    {
+      "id": "K05-105",
+      "title": "Reusability, relayability, and accessibility each have independent content value",
+      "kind": "editorial",
+      "conclusion": "Complete fields, dates, and versions make it easy for readers to return and use the material; a post that clearly explains the test object and purpose is easier for peers to pass along; access to full materials should work normally. These uses need not be converted into 'how many likes they equal' to be valid.",
+      "conditions": [],
+      "practical_meaning": "Check the article and materials entry point against three reader tasks: returning, relaying, and accessing.",
+      "check": {
+        "when": "When assessing whether content merits bookmarking, sharing, or long-term maintenance",
+        "needed": [
+          "Key fields, dates, and versions",
+          "Clear test object and purpose",
+          "Materials entry point"
+        ],
+        "verify": [
+          "Returning readers can still identify the applicable version",
+          "The content remains understandable independently after someone shares it",
+          "The link is accessible"
+        ],
+        "if_missing": "If information is missing, add what the intended use requires; do not invent engagement-value conversions."
+      },
+      "limits": [
+        "This is an editorial value judgment, not a like-equivalence or recommendation-score formula."
+      ],
+      "source_units": [
+        "U0507"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-106",
+      "title": "Verify questions after publication and publish conclusion-changing findings as separate updates",
+      "kind": "editorial",
+      "conclusion": "If readers ask whether samples were compressed, verify before answering; if they point out an evaluation flaw, explain what needs correcting. Minor issues can remain in discussion, but conclusion-changing findings should become separate updates with corrections in the original so later readers can find the valid version.",
+      "conditions": [],
+      "practical_meaning": "Distinguish supplementary explanations from corrected conclusions, and clearly connect new updates with corrections in the original.",
+      "check": {
+        "when": "When receiving reader questions, counterexamples, or corrections",
+        "needed": [
+          "The samples in question and processing records",
+          "Original evaluation criteria",
+          "Scope of the effect on conclusions",
+          "Original text and update entry points"
+        ],
+        "verify": [
+          "Verify before answering",
+          "Explain specific corrections",
+          "Both new and returning readers can find the current conclusion"
+        ],
+        "if_missing": "If verification is pending, state what needs confirmation; do not maintain a definite conclusion whose basis is lost."
+      },
+      "limits": [
+        "Separate updates serve discoverability and accuracy, not guaranteed additional distribution."
+      ],
+      "source_units": [
+        "U0508"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-107",
+      "title": "Keep distribution duration similar in the next comparison and acknowledge remaining changes",
+      "kind": "editorial",
+      "conclusion": "For the next similar test, you can again change only the results-first image or summary format and allow similar distribution time before comparing; do not compare total counts for a ten-minute-old post with a two-day-old post. This accumulates clues but cannot control every change in the recommendation system and audience.",
+      "conditions": [
+        "Similar content tasks",
+        "One main variable",
+        "Similar observation duration after publication"
+      ],
+      "practical_meaning": "Compare results for posts of similar age, recording uncontrolled background variables.",
+      "check": {
+        "when": "When reviewing the next round of first-image or summary changes",
+        "needed": [
+          "Publication time",
+          "Observation time",
+          "Main change",
+          "Content and audience context"
+        ],
+        "verify": [
+          "Align by elapsed time since publication",
+          "Avoid directly comparing 10-minute and 2-day totals",
+          "Describe results as clues rather than guaranteed causality"
+        ],
+        "if_missing": "If durations differ, continue observing or explicitly state that direct comparison is invalid."
+      },
+      "limits": [
+        "Ten minutes and two days illustrate an incomparable situation, not platform thresholds."
+      ],
+      "source_units": [
+        "U0509"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ]
+    },
+    {
+      "id": "K05-108",
+      "title": "Whether to publish a third post depends on new information and correction needs",
+      "kind": "editorial",
+      "conclusion": "After two posts that day, judge a third by what it adds: if it merely rephrases promotion of the first two, consolidate it; if a new test changes the original conclusion, correct it promptly. An unfound daily-post-count formula should not replace this judgment.",
+      "conditions": [
+        "The third post is an editorial-decision example"
+      ],
+      "practical_meaning": "Identify the third post's new findings, reader use, or need for correction, then choose consolidation, publication, or revision.",
+      "check": {
+        "when": "When deciding whether to keep publishing on the same day",
+        "needed": [
+          "Content of the first two posts",
+          "New information in the third",
+          "Whether existing conclusions change"
+        ],
+        "verify": [
+          "Check whether it is only reworded promotion",
+          "Promptly correct substantive errors when found"
+        ],
+        "if_missing": "Without new information, prioritize consolidation; verify unconfirmed changes first."
+      },
+      "limits": [
+        "Two posts and a third post are not penalty or reward thresholds.",
+        "Not finding a formula does not mean all unpublished rules are known."
+      ],
+      "source_units": [
+        "U0510"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    },
+    {
+      "id": "K05-109",
+      "title": "Finally check the first image and opening from an unfamiliar reader's perspective",
+      "kind": "editorial",
+      "conclusion": "Take the next post's first image and opening on their own: a reader who does not know the author and will not open the full thread should be able to understand what was found and why it matters to them.",
+      "conditions": [],
+      "practical_meaning": "Before publishing, use only the first-screen materials to restate the 'finding' and 'use'; add specifics if they are unclear.",
+      "check": {
+        "when": "When completing the final prepublication check",
+        "needed": [
+          "First image",
+          "Opening",
+          "Primary target readers and purpose"
+        ],
+        "verify": [
+          "The finding is understandable without the author's background",
+          "Its relevance is understandable without opening the complete thread"
+        ],
+        "if_missing": "If the first screen cannot answer this, revise the first image and opening rather than relying on later sections to reveal the core information."
+      },
+      "limits": [
+        "This is a final editorial check, not an exposure promise."
+      ],
+      "source_units": [
+        "U0511"
+      ],
+      "evidence": [],
+      "related_unknowns": []
+    }
+  ]
+}
