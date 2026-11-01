@@ -1,0 +1,152 @@
+{
+  "reviewed_commit": "9193233924df388727296c4e76948db919ac32eb",
+  "scope": "Complete canonical repository, all 578 claims, original report mappings, cited source evidence, eight workflows, scripts, packaging and documentation. Generated copies verified against canonical files.",
+  "status": "completed_with_open_findings",
+  "assignments": {
+    "knowledge_a": [
+      "topic-00.json",
+      "topic-01.json",
+      "topic-06.json"
+    ],
+    "knowledge_b": [
+      "topic-02.json",
+      "topic-04.json"
+    ],
+    "knowledge_c": [
+      "topic-03.json"
+    ],
+    "knowledge_d": [
+      "topic-05.json"
+    ],
+    "workflows": [
+      "workflows",
+      "routing.json",
+      "shared",
+      "metadata",
+      "README.md",
+      "README.zh-CN.md"
+    ],
+    "engineering": [
+      "tools",
+      "tests",
+      "docs",
+      "LICENSE",
+      "NOTICE.md",
+      ".github",
+      ".gitignore",
+      ".gitattributes"
+    ]
+  },
+  "completed_date": "2026-11-01",
+  "completed_date_timezone": "UTC",
+  "independence": "Six fresh-context agents; four knowledge partitions, one workflow reviewer and one engineering reviewer. This is independent agent review within one harness, not third-party human certification.",
+  "production_files_unchanged": true,
+  "publication_changes": "Review artifacts and a link from the historical validation log only. Findings are not fixed by this documentation commit.",
+  "summary": {
+    "claims_reviewed": 578,
+    "translation_status": {
+      "verified": 572,
+      "finding": 6
+    },
+    "evidence_status": {
+      "not_applicable": 101,
+      "unverified": 4,
+      "verified": 460,
+      "finding": 13
+    },
+    "findings": 22,
+    "priorities": {
+      "P2": 14,
+      "P3": 8
+    },
+    "knowledge_findings": 12,
+    "affected_knowledge_claims": 13,
+    "engineering_findings": 10,
+    "canonical_files": 60,
+    "generated_files": 158,
+    "workflow_tasks": 12,
+    "existing_tests_passed": 43,
+    "claim_citation_urls": 392,
+    "claim_citation_urls_missing_from_review_ledgers": 0
+  },
+  "knowledge_partitions": {
+    "knowledge-a": {
+      "claims": 157,
+      "translation": {
+        "verified": 157
+      },
+      "evidence": {
+        "not_applicable": 15,
+        "unverified": 2,
+        "verified": 139,
+        "finding": 1
+      }
+    },
+    "knowledge-b": {
+      "claims": 199,
+      "translation": {
+        "verified": 197,
+        "finding": 2
+      },
+      "evidence": {
+        "verified": 165,
+        "not_applicable": 28,
+        "finding": 5,
+        "unverified": 1
+      }
+    },
+    "knowledge-c": {
+      "claims": 113,
+      "translation": {
+        "verified": 111,
+        "finding": 2
+      },
+      "evidence": {
+        "verified": 85,
+        "not_applicable": 25,
+        "finding": 3
+      }
+    },
+    "knowledge-d": {
+      "claims": 109,
+      "translation": {
+        "verified": 107,
+        "finding": 2
+      },
+      "evidence": {
+        "verified": 71,
+        "not_applicable": 33,
+        "finding": 4,
+        "unverified": 1
+      }
+    }
+  },
+  "reports": [
+    "knowledge-a.md",
+    "knowledge-b.md",
+    "knowledge-c.md",
+    "knowledge-d.md",
+    "workflows.md",
+    "engineering.md"
+  ],
+  "unverified_claims": [
+    "K00-002",
+    "K00-003",
+    "K04-091",
+    "K05-066"
+  ],
+  "not_executed": [
+    "Authenticated live X collection",
+    "Actual image generation and output-quality review",
+    "Six external native agent/model executions",
+    "Production ranking or causal exposure experiment"
+  ],
+  "integration_checks": {
+    "unique_complete_claim_coverage": true,
+    "all_reported_finding_ids_resolve": true,
+    "all_claim_citation_urls_recorded": true,
+    "frozen_git_inventory_complete": true,
+    "all_218_inventory_hashes_match_frozen_commit": true,
+    "production_diff_empty": true
+  }
+}

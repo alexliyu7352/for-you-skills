@@ -1,0 +1,1554 @@
+{
+  "reviewed_commit": "9193233924df388727296c4e76948db919ac32eb",
+  "reviewer": "full_review_engineering",
+  "review_date": "2026-11-01",
+  "scope": "Complete canonical engineering surface; structural evidence review; byte-verified generated copies",
+  "status": "complete_with_findings",
+  "report": "docs/reviews/full-repository-review/engineering.md",
+  "canonical_file_count": 60,
+  "canonical_files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "9e1d12b819c049c519c12b70dbbeddb851b52ae42d342c1591929dbcfe4f73a0",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "sha256": "e7b95dc49da538bfd3417c121335e4889aa6d10ee4c41ecc077de4adefcd5c81",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "af1f38cad2bb447ac3eb304284b8c9d2d59c73c4a510886a562daebb94d0e8a1",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "9f2b74839a23d8a175eab8187486ee7869e92dfcc66e2c310fd2ec2e069fc9d2",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "4c7ee806797102411fcad78c28026fbf67326b96c5ed34bb4d6a0e56ae32b3bd",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "2bae6208ca1a1edc11523961c2af193ccbae7de291f6136ef25d86241df9ecdb",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "README.md",
+      "sha256": "1d0d1bf2481b0a10f7cb555d1ff652adf0774e693601cb19b5087307042ec78b",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "README.zh-CN.md",
+      "sha256": "79501643702d8df72fafc899e4707e3d24e653ffba9872ab318357835a1bce70",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "docs/compatibility.md",
+      "sha256": "d88b6ac4f1324ba0d559425988086ea69e4950e7d180db909f92a1fc3ba99913",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-10-31-for-you-skills.md",
+      "sha256": "06b97fa02f1285f8b9b6b56acc2c0f8702fc645ef92453c502d012a1382d40d3",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "docs/superpowers/plans/2026-11-01-visuals.md",
+      "sha256": "05777d450fd177a2c9485e51be67a260eb02007a803bd65c82e085d5c6855e98",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "docs/superpowers/specs/2026-10-31-for-you-skills.md",
+      "sha256": "e416a8b6397d3faf77868f645b49791a29067de2dd0690febd64acb3464afdc3",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "docs/superpowers/specs/2026-11-01-visuals.md",
+      "sha256": "3c54124fc3572331b500d048ab01d3ac1364a0ecd09dced52423654fd350e287",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "docs/validation/progress.md",
+      "sha256": "9a94f68cb7aba19f47a8363f9dd4a9f6003698572f3eb040a5a4e2d47c3907ff",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "docs/validation/results.md",
+      "sha256": "595db9b3b7d1545bb48b5d2de8e6e0cc5f496e280abd244fa906d96b3aa85bd3",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "knowledge/README.md",
+      "sha256": "7c1e2727b6c47f1cff736f0baa2d77654db1c112a2bb2b47cc8a3d298c332c6c",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "knowledge/source-units.json",
+      "sha256": "b986983eace8124cc29eb4cdc16464c5d589b2457901d4cc01a5a8e9058c8006",
+      "review_mode": "structural_and_hash_review",
+      "status": "reviewed",
+      "notes": "All records parsed and structurally checked; semantic claim/source review belongs to assigned evidence reviewers."
+    },
+    {
+      "path": "knowledge/sources.json",
+      "sha256": "c80cf0eb6d2396d2dcbf79a05e9574bfff6d5f94e9e7e63a505f50b41e55ca99",
+      "review_mode": "structural_and_hash_review",
+      "status": "reviewed",
+      "notes": "All records parsed and structurally checked; semantic claim/source review belongs to assigned evidence reviewers."
+    },
+    {
+      "path": "knowledge/topic-00.json",
+      "sha256": "9217d791a2c59ed8a51edba7f390b55c543ddb67de1e3ade5f5a8b6165ff826f",
+      "review_mode": "structural_and_hash_review",
+      "status": "reviewed",
+      "notes": "All records parsed and structurally checked; semantic claim/source review belongs to assigned evidence reviewers."
+    },
+    {
+      "path": "knowledge/topic-01.json",
+      "sha256": "4e46a7bf5f3900159d9eb4e1def9f0b177b20a7d4a6829475283ed656004236d",
+      "review_mode": "structural_and_hash_review",
+      "status": "reviewed",
+      "notes": "All records parsed and structurally checked; semantic claim/source review belongs to assigned evidence reviewers."
+    },
+    {
+      "path": "knowledge/topic-02.json",
+      "sha256": "ecc2b4e1390b4510f4d987ea344fe9197bcbf31853f9bf71f0261113aea6e33f",
+      "review_mode": "structural_and_hash_review",
+      "status": "reviewed",
+      "notes": "All records parsed and structurally checked; semantic claim/source review belongs to assigned evidence reviewers."
+    },
+    {
+      "path": "knowledge/topic-03.json",
+      "sha256": "36640680bcab5b051095c7bb874d7d27e99f6d267f60b905702c849e62459a7b",
+      "review_mode": "structural_and_hash_review",
+      "status": "reviewed",
+      "notes": "All records parsed and structurally checked; semantic claim/source review belongs to assigned evidence reviewers."
+    },
+    {
+      "path": "knowledge/topic-04.json",
+      "sha256": "960d2244c3eaabd7afccd4a98755da9c93bd9299c9d2c6082e1c6cba5af692c3",
+      "review_mode": "structural_and_hash_review",
+      "status": "reviewed",
+      "notes": "All records parsed and structurally checked; semantic claim/source review belongs to assigned evidence reviewers."
+    },
+    {
+      "path": "knowledge/topic-05.json",
+      "sha256": "28c678b0effe8ff19994cb5d4209a2fe00d536f4f57b542774c0b4e7d4746ac0",
+      "review_mode": "structural_and_hash_review",
+      "status": "reviewed",
+      "notes": "All records parsed and structurally checked; semantic claim/source review belongs to assigned evidence reviewers."
+    },
+    {
+      "path": "knowledge/topic-06.json",
+      "sha256": "0c2ed0b4da36b0f3da9856e7060180d60da5043a76ca5ab3aa18b5abf1311196",
+      "review_mode": "structural_and_hash_review",
+      "status": "reviewed",
+      "notes": "All records parsed and structurally checked; semantic claim/source review belongs to assigned evidence reviewers."
+    },
+    {
+      "path": "metadata/x-assistant.yaml",
+      "sha256": "52dbbae5bf49fa9f0995f0e53766163971d636a8f5c7a289472dabeb28467a2b",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "metadata/x-create-visuals.yaml",
+      "sha256": "25f93b0c9c90665e53c197c279e48d90079065939d9e781e5fa9117ae812191b",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "metadata/x-explain.yaml",
+      "sha256": "dc723eb196a8ef32ca77529b64e659d163fadfb57f8a23008c97955cf050d76d",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "metadata/x-format-advisor.yaml",
+      "sha256": "c16ac1fb9927749318257e605841c0b2ade6e96b1512e1bea8aaf155c4500e75",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "metadata/x-myth-check.yaml",
+      "sha256": "54c99b036de477d69f9a3cd25c9f040e6149081caf816c2b7150f05277c756b0",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "metadata/x-publish-checklist.yaml",
+      "sha256": "fde6073ac03d73e4da802fd89de13e422f081b5b0de53d086ef7085c7b3309c5",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "metadata/x-reach-diagnosis.yaml",
+      "sha256": "c88bc7fe1a557b626f1e92530eb8e917b724ef4d8d2ac38a7d139a8bd10b2112",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "metadata/x-review-posts.yaml",
+      "sha256": "b24d96afde3212981125a91f1ab037d3940105c5598005e53d8d1d6aff361044",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "provenance/migration-baseline.json",
+      "sha256": "698aeacfd5647360d3e26e32032a1e45e97deb82a79f3afcf1e6779e128d942a",
+      "review_mode": "structural_and_hash_review",
+      "status": "reviewed",
+      "notes": "All records parsed and structurally checked; semantic claim/source review belongs to assigned evidence reviewers."
+    },
+    {
+      "path": "provenance/research-report.zh-CN.md",
+      "sha256": "039d8e0a1b3152dfae7730f4d514914a18c79328c0a6ac796892dab86f4f0908",
+      "review_mode": "structural_and_hash_review",
+      "status": "reviewed",
+      "notes": "All records parsed and structurally checked; semantic claim/source review belongs to assigned evidence reviewers."
+    },
+    {
+      "path": "routing.json",
+      "sha256": "5919bcff90748be0341b66da9b70ecc11bea685334d18d45ef0353b2449fc3fa",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "shared/browsing.md",
+      "sha256": "5ff1d73a54a0a0770e99fb954a84bbf5cf0a87fc947d5215e68d68c72e7bc38d",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "shared/knowledge-guide.md",
+      "sha256": "6c0720466371b46aa6e54e1de07f107de96eb4e9b3a47619edade34dd9c5637c",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "shared/observations.md",
+      "sha256": "cb0b566ba469d8fb2fdfac8ae5816401bcbe2c2637afa8fa7ded46331eb2588e",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "shared/visual-workflow.md",
+      "sha256": "7ac7126446f4033aa3d7f7bb86668c8c06a4600547dae536c5dfe743df21636e",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tests/test_distribution.py",
+      "sha256": "c9dc72763b7fed2dda6cb3038dc541651b6315b78523aaa32a4426f7cb57b182",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tests/test_draft_checks.py",
+      "sha256": "1c4af10f3e66a763e83a136a3a0a5ecfa65eb9daac185535942069f211ea5901",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tests/test_lookup.py",
+      "sha256": "54f258582428a41ea5f24d6348c06b6f740c24a44cca65a24ae62f82edcd254f",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tests/test_packaging.py",
+      "sha256": "f9e9fb28cd417cce29e0f1071d9f2b02700f30e7939a9bb7293665e9d8111efd",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tests/test_post_records.py",
+      "sha256": "fb5ca7586c4af7e5373b7b01b701335b192c39129c089cb4cb02b15257839c52",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tests/test_visual_preferences.py",
+      "sha256": "2e4829dd2338774e6e494bf519d78cd116fac66ed01ed70af01b82d8d8ce5cd1",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tools/build.py",
+      "sha256": "4583ae6644ceaf60c0089e1047835e882212aa698f97258825aa09392ea114f8",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tools/inspect_draft.py",
+      "sha256": "40b1f69c873f774a5e0d9b474b9ac2acd1fa127b18f51078bdc5bb056e4c498b",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tools/knowledge.py",
+      "sha256": "c2304b5d1d5202bb6f66b2de7f3aac8b2a7f4f89b1a3ce6abfbd424f042d9bc7",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tools/summarize_posts.py",
+      "sha256": "4d03973ae26f8f299cf761741724191b57321cf7912010e1b26d0ac107e8ca7a",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tools/validate.py",
+      "sha256": "9a48842afc787a2fab5b39ea78fb81dffce4daf3e8d1b558add3ff3d1b4e25b7",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "tools/visual_preferences.py",
+      "sha256": "a613e9f97b382402e1fcbda1934955c23f887aef8801b13f0567c26ff75097a0",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "workflows/x-assistant.md",
+      "sha256": "094be8b2884fa508655f995cb19bcc54a46754b2cc406554fef517b5905bfc37",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "workflows/x-create-visuals.md",
+      "sha256": "5ee960218b055ffdc2c426d8a91a83679aa03989bd16a5645dd76a909e041cc2",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "workflows/x-explain.md",
+      "sha256": "a1389db9d1170e4b94ea09fefc0999c260331cec762a08fcee500b1e331a8203",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "workflows/x-format-advisor.md",
+      "sha256": "57632b07b1f4ed40ce603c5d42e96c78184d2537b26f5314ec3855c9d9f444a8",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "workflows/x-myth-check.md",
+      "sha256": "a2175b785f36f1ce9aed99f8707b3b9ea2f04f7b093732e372e5eeb2891679f1",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "workflows/x-publish-checklist.md",
+      "sha256": "cbac8d47dc8220b24d2d5f11f5eeced63330872d0e87b26ddec66f66da860e05",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "workflows/x-reach-diagnosis.md",
+      "sha256": "973a9e5979073579ef8e9d21f917eb0e09bc01f2236d338b373dc737cd34a96c",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    },
+    {
+      "path": "workflows/x-review-posts.md",
+      "sha256": "86b2a3fd382fbbd8c52532cae7e3b21e72b01db8b0b11f624723b7e5bb02db5b",
+      "review_mode": "direct_complete_code_or_prose_review",
+      "status": "reviewed",
+      "notes": "Read complete canonical file and assessed against relevant code, contracts, tests, or primary documentation."
+    }
+  ],
+  "generated_file_count": 158,
+  "generated_files": [
+    {
+      "path": "skills/x-assistant/SKILL.md",
+      "sha256": "094be8b2884fa508655f995cb19bcc54a46754b2cc406554fef517b5905bfc37",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/agents/openai.yaml",
+      "sha256": "52dbbae5bf49fa9f0995f0e53766163971d636a8f5c7a289472dabeb28467a2b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/browsing.md",
+      "sha256": "5ff1d73a54a0a0770e99fb954a84bbf5cf0a87fc947d5215e68d68c72e7bc38d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/knowledge-guide.md",
+      "sha256": "6c0720466371b46aa6e54e1de07f107de96eb4e9b3a47619edade34dd9c5637c",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/knowledge/source-units.json",
+      "sha256": "b986983eace8124cc29eb4cdc16464c5d589b2457901d4cc01a5a8e9058c8006",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/knowledge/sources.json",
+      "sha256": "c80cf0eb6d2396d2dcbf79a05e9574bfff6d5f94e9e7e63a505f50b41e55ca99",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/knowledge/topic-00.json",
+      "sha256": "9217d791a2c59ed8a51edba7f390b55c543ddb67de1e3ade5f5a8b6165ff826f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/knowledge/topic-01.json",
+      "sha256": "4e46a7bf5f3900159d9eb4e1def9f0b177b20a7d4a6829475283ed656004236d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/knowledge/topic-02.json",
+      "sha256": "ecc2b4e1390b4510f4d987ea344fe9197bcbf31853f9bf71f0261113aea6e33f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/knowledge/topic-03.json",
+      "sha256": "36640680bcab5b051095c7bb874d7d27e99f6d267f60b905702c849e62459a7b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/knowledge/topic-04.json",
+      "sha256": "960d2244c3eaabd7afccd4a98755da9c93bd9299c9d2c6082e1c6cba5af692c3",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/knowledge/topic-05.json",
+      "sha256": "28c678b0effe8ff19994cb5d4209a2fe00d536f4f57b542774c0b4e7d4746ac0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/knowledge/topic-06.json",
+      "sha256": "0c2ed0b4da36b0f3da9856e7060180d60da5043a76ca5ab3aa18b5abf1311196",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/observations.md",
+      "sha256": "cb0b566ba469d8fb2fdfac8ae5816401bcbe2c2637afa8fa7ded46331eb2588e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/research-report.md",
+      "sha256": "039d8e0a1b3152dfae7730f4d514914a18c79328c0a6ac796892dab86f4f0908",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/routing.json",
+      "sha256": "5919bcff90748be0341b66da9b70ecc11bea685334d18d45ef0353b2449fc3fa",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/visual-workflow.md",
+      "sha256": "7ac7126446f4033aa3d7f7bb86668c8c06a4600547dae536c5dfe743df21636e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-create-visuals.md",
+      "sha256": "a9fd81f114e124c07ac0c8beb668f7f46e283593176aa291783d73d4d9e00258",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-explain.md",
+      "sha256": "cd075079cf7965256e30b961a8681ca9309558ad8f0c823bbd8142f65e763f3a",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-format-advisor.md",
+      "sha256": "1f91bbbb2051518e42d392a4cbe4d5cfa834a371c15cad6355cf3265a6d63c23",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-myth-check.md",
+      "sha256": "f611335c3ca6becd19baf952f9bffa2cdb18bb90467de214440af66e34855d1e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-publish-checklist.md",
+      "sha256": "057b30554f6c998621e27fad095d7f6e0d85eb2f0e59fc4c98c0af78349ea73f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-reach-diagnosis.md",
+      "sha256": "212784b5a164df12a295cda33849aca16162c6196061936aa465df5c1eb77b06",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-review-posts.md",
+      "sha256": "4362da0dbe90ce707b727f937e8904ff347f4ed4bb887cdd912b4b98255562f4",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/scripts/inspect_draft.py",
+      "sha256": "40b1f69c873f774a5e0d9b474b9ac2acd1fa127b18f51078bdc5bb056e4c498b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/scripts/knowledge.py",
+      "sha256": "c2304b5d1d5202bb6f66b2de7f3aac8b2a7f4f89b1a3ce6abfbd424f042d9bc7",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/scripts/summarize_posts.py",
+      "sha256": "4d03973ae26f8f299cf761741724191b57321cf7912010e1b26d0ac107e8ca7a",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-assistant/scripts/visual_preferences.py",
+      "sha256": "a613e9f97b382402e1fcbda1934955c23f887aef8801b13f0567c26ff75097a0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/SKILL.md",
+      "sha256": "5ee960218b055ffdc2c426d8a91a83679aa03989bd16a5645dd76a909e041cc2",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/agents/openai.yaml",
+      "sha256": "25f93b0c9c90665e53c197c279e48d90079065939d9e781e5fa9117ae812191b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/browsing.md",
+      "sha256": "5ff1d73a54a0a0770e99fb954a84bbf5cf0a87fc947d5215e68d68c72e7bc38d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/knowledge-guide.md",
+      "sha256": "6c0720466371b46aa6e54e1de07f107de96eb4e9b3a47619edade34dd9c5637c",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/knowledge/source-units.json",
+      "sha256": "b986983eace8124cc29eb4cdc16464c5d589b2457901d4cc01a5a8e9058c8006",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/knowledge/sources.json",
+      "sha256": "c80cf0eb6d2396d2dcbf79a05e9574bfff6d5f94e9e7e63a505f50b41e55ca99",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/knowledge/topic-00.json",
+      "sha256": "9217d791a2c59ed8a51edba7f390b55c543ddb67de1e3ade5f5a8b6165ff826f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/knowledge/topic-01.json",
+      "sha256": "4e46a7bf5f3900159d9eb4e1def9f0b177b20a7d4a6829475283ed656004236d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/knowledge/topic-02.json",
+      "sha256": "ecc2b4e1390b4510f4d987ea344fe9197bcbf31853f9bf71f0261113aea6e33f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/knowledge/topic-03.json",
+      "sha256": "36640680bcab5b051095c7bb874d7d27e99f6d267f60b905702c849e62459a7b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/knowledge/topic-04.json",
+      "sha256": "960d2244c3eaabd7afccd4a98755da9c93bd9299c9d2c6082e1c6cba5af692c3",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/knowledge/topic-05.json",
+      "sha256": "28c678b0effe8ff19994cb5d4209a2fe00d536f4f57b542774c0b4e7d4746ac0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/knowledge/topic-06.json",
+      "sha256": "0c2ed0b4da36b0f3da9856e7060180d60da5043a76ca5ab3aa18b5abf1311196",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/observations.md",
+      "sha256": "cb0b566ba469d8fb2fdfac8ae5816401bcbe2c2637afa8fa7ded46331eb2588e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/research-report.md",
+      "sha256": "039d8e0a1b3152dfae7730f4d514914a18c79328c0a6ac796892dab86f4f0908",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/references/visual-workflow.md",
+      "sha256": "7ac7126446f4033aa3d7f7bb86668c8c06a4600547dae536c5dfe743df21636e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/scripts/inspect_draft.py",
+      "sha256": "40b1f69c873f774a5e0d9b474b9ac2acd1fa127b18f51078bdc5bb056e4c498b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/scripts/knowledge.py",
+      "sha256": "c2304b5d1d5202bb6f66b2de7f3aac8b2a7f4f89b1a3ce6abfbd424f042d9bc7",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/scripts/summarize_posts.py",
+      "sha256": "4d03973ae26f8f299cf761741724191b57321cf7912010e1b26d0ac107e8ca7a",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-create-visuals/scripts/visual_preferences.py",
+      "sha256": "a613e9f97b382402e1fcbda1934955c23f887aef8801b13f0567c26ff75097a0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/SKILL.md",
+      "sha256": "a1389db9d1170e4b94ea09fefc0999c260331cec762a08fcee500b1e331a8203",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/agents/openai.yaml",
+      "sha256": "dc723eb196a8ef32ca77529b64e659d163fadfb57f8a23008c97955cf050d76d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/browsing.md",
+      "sha256": "5ff1d73a54a0a0770e99fb954a84bbf5cf0a87fc947d5215e68d68c72e7bc38d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/knowledge-guide.md",
+      "sha256": "6c0720466371b46aa6e54e1de07f107de96eb4e9b3a47619edade34dd9c5637c",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/knowledge/source-units.json",
+      "sha256": "b986983eace8124cc29eb4cdc16464c5d589b2457901d4cc01a5a8e9058c8006",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/knowledge/sources.json",
+      "sha256": "c80cf0eb6d2396d2dcbf79a05e9574bfff6d5f94e9e7e63a505f50b41e55ca99",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/knowledge/topic-00.json",
+      "sha256": "9217d791a2c59ed8a51edba7f390b55c543ddb67de1e3ade5f5a8b6165ff826f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/knowledge/topic-01.json",
+      "sha256": "4e46a7bf5f3900159d9eb4e1def9f0b177b20a7d4a6829475283ed656004236d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/knowledge/topic-02.json",
+      "sha256": "ecc2b4e1390b4510f4d987ea344fe9197bcbf31853f9bf71f0261113aea6e33f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/knowledge/topic-03.json",
+      "sha256": "36640680bcab5b051095c7bb874d7d27e99f6d267f60b905702c849e62459a7b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/knowledge/topic-04.json",
+      "sha256": "960d2244c3eaabd7afccd4a98755da9c93bd9299c9d2c6082e1c6cba5af692c3",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/knowledge/topic-05.json",
+      "sha256": "28c678b0effe8ff19994cb5d4209a2fe00d536f4f57b542774c0b4e7d4746ac0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/knowledge/topic-06.json",
+      "sha256": "0c2ed0b4da36b0f3da9856e7060180d60da5043a76ca5ab3aa18b5abf1311196",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/observations.md",
+      "sha256": "cb0b566ba469d8fb2fdfac8ae5816401bcbe2c2637afa8fa7ded46331eb2588e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/references/research-report.md",
+      "sha256": "039d8e0a1b3152dfae7730f4d514914a18c79328c0a6ac796892dab86f4f0908",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/scripts/inspect_draft.py",
+      "sha256": "40b1f69c873f774a5e0d9b474b9ac2acd1fa127b18f51078bdc5bb056e4c498b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/scripts/knowledge.py",
+      "sha256": "c2304b5d1d5202bb6f66b2de7f3aac8b2a7f4f89b1a3ce6abfbd424f042d9bc7",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-explain/scripts/summarize_posts.py",
+      "sha256": "4d03973ae26f8f299cf761741724191b57321cf7912010e1b26d0ac107e8ca7a",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/SKILL.md",
+      "sha256": "57632b07b1f4ed40ce603c5d42e96c78184d2537b26f5314ec3855c9d9f444a8",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/agents/openai.yaml",
+      "sha256": "c16ac1fb9927749318257e605841c0b2ade6e96b1512e1bea8aaf155c4500e75",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/browsing.md",
+      "sha256": "5ff1d73a54a0a0770e99fb954a84bbf5cf0a87fc947d5215e68d68c72e7bc38d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/knowledge-guide.md",
+      "sha256": "6c0720466371b46aa6e54e1de07f107de96eb4e9b3a47619edade34dd9c5637c",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/knowledge/source-units.json",
+      "sha256": "b986983eace8124cc29eb4cdc16464c5d589b2457901d4cc01a5a8e9058c8006",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/knowledge/sources.json",
+      "sha256": "c80cf0eb6d2396d2dcbf79a05e9574bfff6d5f94e9e7e63a505f50b41e55ca99",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/knowledge/topic-00.json",
+      "sha256": "9217d791a2c59ed8a51edba7f390b55c543ddb67de1e3ade5f5a8b6165ff826f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/knowledge/topic-01.json",
+      "sha256": "4e46a7bf5f3900159d9eb4e1def9f0b177b20a7d4a6829475283ed656004236d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/knowledge/topic-02.json",
+      "sha256": "ecc2b4e1390b4510f4d987ea344fe9197bcbf31853f9bf71f0261113aea6e33f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/knowledge/topic-03.json",
+      "sha256": "36640680bcab5b051095c7bb874d7d27e99f6d267f60b905702c849e62459a7b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/knowledge/topic-04.json",
+      "sha256": "960d2244c3eaabd7afccd4a98755da9c93bd9299c9d2c6082e1c6cba5af692c3",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/knowledge/topic-05.json",
+      "sha256": "28c678b0effe8ff19994cb5d4209a2fe00d536f4f57b542774c0b4e7d4746ac0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/knowledge/topic-06.json",
+      "sha256": "0c2ed0b4da36b0f3da9856e7060180d60da5043a76ca5ab3aa18b5abf1311196",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/observations.md",
+      "sha256": "cb0b566ba469d8fb2fdfac8ae5816401bcbe2c2637afa8fa7ded46331eb2588e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/references/research-report.md",
+      "sha256": "039d8e0a1b3152dfae7730f4d514914a18c79328c0a6ac796892dab86f4f0908",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/scripts/inspect_draft.py",
+      "sha256": "40b1f69c873f774a5e0d9b474b9ac2acd1fa127b18f51078bdc5bb056e4c498b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/scripts/knowledge.py",
+      "sha256": "c2304b5d1d5202bb6f66b2de7f3aac8b2a7f4f89b1a3ce6abfbd424f042d9bc7",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-format-advisor/scripts/summarize_posts.py",
+      "sha256": "4d03973ae26f8f299cf761741724191b57321cf7912010e1b26d0ac107e8ca7a",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/SKILL.md",
+      "sha256": "a2175b785f36f1ce9aed99f8707b3b9ea2f04f7b093732e372e5eeb2891679f1",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/agents/openai.yaml",
+      "sha256": "54c99b036de477d69f9a3cd25c9f040e6149081caf816c2b7150f05277c756b0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/browsing.md",
+      "sha256": "5ff1d73a54a0a0770e99fb954a84bbf5cf0a87fc947d5215e68d68c72e7bc38d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/knowledge-guide.md",
+      "sha256": "6c0720466371b46aa6e54e1de07f107de96eb4e9b3a47619edade34dd9c5637c",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/knowledge/source-units.json",
+      "sha256": "b986983eace8124cc29eb4cdc16464c5d589b2457901d4cc01a5a8e9058c8006",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/knowledge/sources.json",
+      "sha256": "c80cf0eb6d2396d2dcbf79a05e9574bfff6d5f94e9e7e63a505f50b41e55ca99",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/knowledge/topic-00.json",
+      "sha256": "9217d791a2c59ed8a51edba7f390b55c543ddb67de1e3ade5f5a8b6165ff826f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/knowledge/topic-01.json",
+      "sha256": "4e46a7bf5f3900159d9eb4e1def9f0b177b20a7d4a6829475283ed656004236d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/knowledge/topic-02.json",
+      "sha256": "ecc2b4e1390b4510f4d987ea344fe9197bcbf31853f9bf71f0261113aea6e33f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/knowledge/topic-03.json",
+      "sha256": "36640680bcab5b051095c7bb874d7d27e99f6d267f60b905702c849e62459a7b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/knowledge/topic-04.json",
+      "sha256": "960d2244c3eaabd7afccd4a98755da9c93bd9299c9d2c6082e1c6cba5af692c3",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/knowledge/topic-05.json",
+      "sha256": "28c678b0effe8ff19994cb5d4209a2fe00d536f4f57b542774c0b4e7d4746ac0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/knowledge/topic-06.json",
+      "sha256": "0c2ed0b4da36b0f3da9856e7060180d60da5043a76ca5ab3aa18b5abf1311196",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/observations.md",
+      "sha256": "cb0b566ba469d8fb2fdfac8ae5816401bcbe2c2637afa8fa7ded46331eb2588e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/references/research-report.md",
+      "sha256": "039d8e0a1b3152dfae7730f4d514914a18c79328c0a6ac796892dab86f4f0908",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/scripts/inspect_draft.py",
+      "sha256": "40b1f69c873f774a5e0d9b474b9ac2acd1fa127b18f51078bdc5bb056e4c498b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/scripts/knowledge.py",
+      "sha256": "c2304b5d1d5202bb6f66b2de7f3aac8b2a7f4f89b1a3ce6abfbd424f042d9bc7",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-myth-check/scripts/summarize_posts.py",
+      "sha256": "4d03973ae26f8f299cf761741724191b57321cf7912010e1b26d0ac107e8ca7a",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/SKILL.md",
+      "sha256": "cbac8d47dc8220b24d2d5f11f5eeced63330872d0e87b26ddec66f66da860e05",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/agents/openai.yaml",
+      "sha256": "fde6073ac03d73e4da802fd89de13e422f081b5b0de53d086ef7085c7b3309c5",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/browsing.md",
+      "sha256": "5ff1d73a54a0a0770e99fb954a84bbf5cf0a87fc947d5215e68d68c72e7bc38d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/knowledge-guide.md",
+      "sha256": "6c0720466371b46aa6e54e1de07f107de96eb4e9b3a47619edade34dd9c5637c",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/knowledge/source-units.json",
+      "sha256": "b986983eace8124cc29eb4cdc16464c5d589b2457901d4cc01a5a8e9058c8006",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/knowledge/sources.json",
+      "sha256": "c80cf0eb6d2396d2dcbf79a05e9574bfff6d5f94e9e7e63a505f50b41e55ca99",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/knowledge/topic-00.json",
+      "sha256": "9217d791a2c59ed8a51edba7f390b55c543ddb67de1e3ade5f5a8b6165ff826f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/knowledge/topic-01.json",
+      "sha256": "4e46a7bf5f3900159d9eb4e1def9f0b177b20a7d4a6829475283ed656004236d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/knowledge/topic-02.json",
+      "sha256": "ecc2b4e1390b4510f4d987ea344fe9197bcbf31853f9bf71f0261113aea6e33f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/knowledge/topic-03.json",
+      "sha256": "36640680bcab5b051095c7bb874d7d27e99f6d267f60b905702c849e62459a7b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/knowledge/topic-04.json",
+      "sha256": "960d2244c3eaabd7afccd4a98755da9c93bd9299c9d2c6082e1c6cba5af692c3",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/knowledge/topic-05.json",
+      "sha256": "28c678b0effe8ff19994cb5d4209a2fe00d536f4f57b542774c0b4e7d4746ac0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/knowledge/topic-06.json",
+      "sha256": "0c2ed0b4da36b0f3da9856e7060180d60da5043a76ca5ab3aa18b5abf1311196",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/observations.md",
+      "sha256": "cb0b566ba469d8fb2fdfac8ae5816401bcbe2c2637afa8fa7ded46331eb2588e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/research-report.md",
+      "sha256": "039d8e0a1b3152dfae7730f4d514914a18c79328c0a6ac796892dab86f4f0908",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/references/visual-workflow.md",
+      "sha256": "7ac7126446f4033aa3d7f7bb86668c8c06a4600547dae536c5dfe743df21636e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/scripts/inspect_draft.py",
+      "sha256": "40b1f69c873f774a5e0d9b474b9ac2acd1fa127b18f51078bdc5bb056e4c498b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/scripts/knowledge.py",
+      "sha256": "c2304b5d1d5202bb6f66b2de7f3aac8b2a7f4f89b1a3ce6abfbd424f042d9bc7",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/scripts/summarize_posts.py",
+      "sha256": "4d03973ae26f8f299cf761741724191b57321cf7912010e1b26d0ac107e8ca7a",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-publish-checklist/scripts/visual_preferences.py",
+      "sha256": "a613e9f97b382402e1fcbda1934955c23f887aef8801b13f0567c26ff75097a0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/SKILL.md",
+      "sha256": "973a9e5979073579ef8e9d21f917eb0e09bc01f2236d338b373dc737cd34a96c",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/agents/openai.yaml",
+      "sha256": "c88bc7fe1a557b626f1e92530eb8e917b724ef4d8d2ac38a7d139a8bd10b2112",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/browsing.md",
+      "sha256": "5ff1d73a54a0a0770e99fb954a84bbf5cf0a87fc947d5215e68d68c72e7bc38d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/knowledge-guide.md",
+      "sha256": "6c0720466371b46aa6e54e1de07f107de96eb4e9b3a47619edade34dd9c5637c",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/knowledge/source-units.json",
+      "sha256": "b986983eace8124cc29eb4cdc16464c5d589b2457901d4cc01a5a8e9058c8006",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/knowledge/sources.json",
+      "sha256": "c80cf0eb6d2396d2dcbf79a05e9574bfff6d5f94e9e7e63a505f50b41e55ca99",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/knowledge/topic-00.json",
+      "sha256": "9217d791a2c59ed8a51edba7f390b55c543ddb67de1e3ade5f5a8b6165ff826f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/knowledge/topic-01.json",
+      "sha256": "4e46a7bf5f3900159d9eb4e1def9f0b177b20a7d4a6829475283ed656004236d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/knowledge/topic-02.json",
+      "sha256": "ecc2b4e1390b4510f4d987ea344fe9197bcbf31853f9bf71f0261113aea6e33f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/knowledge/topic-03.json",
+      "sha256": "36640680bcab5b051095c7bb874d7d27e99f6d267f60b905702c849e62459a7b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/knowledge/topic-04.json",
+      "sha256": "960d2244c3eaabd7afccd4a98755da9c93bd9299c9d2c6082e1c6cba5af692c3",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/knowledge/topic-05.json",
+      "sha256": "28c678b0effe8ff19994cb5d4209a2fe00d536f4f57b542774c0b4e7d4746ac0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/knowledge/topic-06.json",
+      "sha256": "0c2ed0b4da36b0f3da9856e7060180d60da5043a76ca5ab3aa18b5abf1311196",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/observations.md",
+      "sha256": "cb0b566ba469d8fb2fdfac8ae5816401bcbe2c2637afa8fa7ded46331eb2588e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/references/research-report.md",
+      "sha256": "039d8e0a1b3152dfae7730f4d514914a18c79328c0a6ac796892dab86f4f0908",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/scripts/inspect_draft.py",
+      "sha256": "40b1f69c873f774a5e0d9b474b9ac2acd1fa127b18f51078bdc5bb056e4c498b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/scripts/knowledge.py",
+      "sha256": "c2304b5d1d5202bb6f66b2de7f3aac8b2a7f4f89b1a3ce6abfbd424f042d9bc7",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-reach-diagnosis/scripts/summarize_posts.py",
+      "sha256": "4d03973ae26f8f299cf761741724191b57321cf7912010e1b26d0ac107e8ca7a",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/SKILL.md",
+      "sha256": "86b2a3fd382fbbd8c52532cae7e3b21e72b01db8b0b11f624723b7e5bb02db5b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/agents/openai.yaml",
+      "sha256": "b24d96afde3212981125a91f1ab037d3940105c5598005e53d8d1d6aff361044",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/browsing.md",
+      "sha256": "5ff1d73a54a0a0770e99fb954a84bbf5cf0a87fc947d5215e68d68c72e7bc38d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/knowledge-guide.md",
+      "sha256": "6c0720466371b46aa6e54e1de07f107de96eb4e9b3a47619edade34dd9c5637c",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/knowledge/source-units.json",
+      "sha256": "b986983eace8124cc29eb4cdc16464c5d589b2457901d4cc01a5a8e9058c8006",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/knowledge/sources.json",
+      "sha256": "c80cf0eb6d2396d2dcbf79a05e9574bfff6d5f94e9e7e63a505f50b41e55ca99",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/knowledge/topic-00.json",
+      "sha256": "9217d791a2c59ed8a51edba7f390b55c543ddb67de1e3ade5f5a8b6165ff826f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/knowledge/topic-01.json",
+      "sha256": "4e46a7bf5f3900159d9eb4e1def9f0b177b20a7d4a6829475283ed656004236d",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/knowledge/topic-02.json",
+      "sha256": "ecc2b4e1390b4510f4d987ea344fe9197bcbf31853f9bf71f0261113aea6e33f",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/knowledge/topic-03.json",
+      "sha256": "36640680bcab5b051095c7bb874d7d27e99f6d267f60b905702c849e62459a7b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/knowledge/topic-04.json",
+      "sha256": "960d2244c3eaabd7afccd4a98755da9c93bd9299c9d2c6082e1c6cba5af692c3",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/knowledge/topic-05.json",
+      "sha256": "28c678b0effe8ff19994cb5d4209a2fe00d536f4f57b542774c0b4e7d4746ac0",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/knowledge/topic-06.json",
+      "sha256": "0c2ed0b4da36b0f3da9856e7060180d60da5043a76ca5ab3aa18b5abf1311196",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/observations.md",
+      "sha256": "cb0b566ba469d8fb2fdfac8ae5816401bcbe2c2637afa8fa7ded46331eb2588e",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/references/research-report.md",
+      "sha256": "039d8e0a1b3152dfae7730f4d514914a18c79328c0a6ac796892dab86f4f0908",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/scripts/inspect_draft.py",
+      "sha256": "40b1f69c873f774a5e0d9b474b9ac2acd1fa127b18f51078bdc5bb056e4c498b",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/scripts/knowledge.py",
+      "sha256": "c2304b5d1d5202bb6f66b2de7f3aac8b2a7f4f89b1a3ce6abfbd424f042d9bc7",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    },
+    {
+      "path": "skills/x-review-posts/scripts/summarize_posts.py",
+      "sha256": "4d03973ae26f8f299cf761741724191b57321cf7912010e1b26d0ac107e8ca7a",
+      "review_mode": "builder_byte_comparison",
+      "status": "verified"
+    }
+  ],
+  "finding_count": 10,
+  "findings": [
+    {
+      "id": "ENG-01",
+      "priority": "P2",
+      "file": "tools/knowledge.py",
+      "line": 99,
+      "title": "Unchecked source-unit metadata"
+    },
+    {
+      "id": "ENG-02",
+      "priority": "P2",
+      "file": "tools/knowledge.py",
+      "line": 110,
+      "title": "Schema accepts values that crash lookup"
+    },
+    {
+      "id": "ENG-03",
+      "priority": "P2",
+      "file": "tools/validate.py",
+      "line": 44,
+      "title": "Incomplete frontmatter passes gate"
+    },
+    {
+      "id": "ENG-04",
+      "priority": "P2",
+      "file": "tools/summarize_posts.py",
+      "line": 67,
+      "title": "Metric scopes silently mixed"
+    },
+    {
+      "id": "ENG-05",
+      "priority": "P2",
+      "file": "tools/summarize_posts.py",
+      "line": 89,
+      "title": "Unresolved text conflict regains complete status"
+    },
+    {
+      "id": "ENG-06",
+      "priority": "P2",
+      "file": "tools/inspect_draft.py",
+      "line": 57,
+      "title": "CRLF normalization changes raw code-point count"
+    },
+    {
+      "id": "ENG-07",
+      "priority": "P2",
+      "file": "tools/build.py",
+      "line": 15,
+      "title": "Standalone copies omit license and notice"
+    },
+    {
+      "id": "ENG-08",
+      "priority": "P2",
+      "file": "tools/summarize_posts.py",
+      "line": 151,
+      "title": "One-hop content identity grouping"
+    },
+    {
+      "id": "ENG-09",
+      "priority": "P3",
+      "file": "tools/summarize_posts.py",
+      "line": 83,
+      "title": "Equivalent exact counts conflict"
+    },
+    {
+      "id": "ENG-10",
+      "priority": "P3",
+      "file": "tools/summarize_posts.py",
+      "line": 170,
+      "title": "Malformed JSON root raises traceback"
+    }
+  ],
+  "verification": {
+    "python_version": "3.12.14",
+    "existing_tests": {
+      "passed": 43,
+      "failed": 0,
+      "duration_seconds": 2.616
+    },
+    "validator": {
+      "claims": 578,
+      "q_entries": 49,
+      "required_units": 668,
+      "covered_units": 668,
+      "source_groups": 100,
+      "unique_urls": 396,
+      "errors": []
+    },
+    "generated_drift": [],
+    "isolated_rebuild": {
+      "skills": 8,
+      "files_written": 158,
+      "remaining_drift": []
+    },
+    "independent_structure": {
+      "claims_checked": 578,
+      "evidence_records_resolved": 657,
+      "units_hashed": 669,
+      "unit_hash_mismatches": 0,
+      "schema_errors": 0,
+      "exact_id_searches_correct": 578
+    },
+    "local_installer": {
+      "cli_version": "1.7.4",
+      "node_version": "24.22.1",
+      "source": "frozen local checkout",
+      "targets": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor",
+        "github-copilot",
+        "opencode"
+      ],
+      "physical_skill_directories": 16,
+      "files_compared": 316,
+      "mismatches": 0
+    },
+    "ci_run": {
+      "run_id": 41261980741,
+      "method": "independent GitHub connector read",
+      "successful_jobs": [
+        "ubuntu-latest / 3.9",
+        "ubuntu-latest / 3.12",
+        "windows-latest / 3.12"
+      ]
+    },
+    "concurrent_preferences": {
+      "writers": 24,
+      "successful": 9,
+      "explicit_busy_failures": 15,
+      "successes_preserved": true,
+      "revision": 9,
+      "file_mode": "0600",
+      "immediate_parent_mode": "0700",
+      "locks_remaining": 0
+    }
+  },
+  "limitations": [
+    "Corpus semantic/source truth reviewed by other assigned reviewers, not certified here.",
+    "No new Windows or Python 3.9 runtime execution; CI status independently read and 3.9 syntax parsed.",
+    "No real X browsing or live posting.",
+    "No actual image generation or exposure experiment.",
+    "No real user preferences used.",
+    "No destroyed-host persistence, power-loss, or Windows ACL test.",
+    "GitHub-source installation not repeated; local frozen-source installation independently rerun.",
+    "The live CLI-reference page fetch failed with DisabledError."
+  ],
+  "external_sources": [
+    {
+      "url": "https://github.com/vercel-labs/skills",
+      "status": "read"
+    },
+    {
+      "url": "https://github.com/vercel-labs/skills/blob/main/package.json",
+      "status": "read"
+    },
+    {
+      "url": "https://agentskills.io/specification",
+      "status": "read"
+    },
+    {
+      "url": "https://github.com/vercel-labs/skills/blob/main/docs/cli-reference.md",
+      "status": "inaccessible",
+      "error": "DisabledError"
+    },
+    {
+      "url": "https://github.com/alexliyu7352/for-you-skills/actions/runs/41261980741",
+      "status": "job statuses independently read via connector"
+    }
+  ]
+}

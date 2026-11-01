@@ -1,0 +1,255 @@
+[
+  {
+    "id": "KA-001",
+    "priority": "P2",
+    "report": "knowledge-a.md",
+    "claims": [
+      "K01-017"
+    ],
+    "category": "inherited_report",
+    "summary": "Commit timestamps are described as first-publication timestamps.",
+    "status": "open"
+  },
+  {
+    "id": "KB-F01",
+    "priority": "P2",
+    "report": "knowledge-b.md",
+    "claims": [
+      "K04-049"
+    ],
+    "category": "inherited_report",
+    "summary": "Original-post retrieval is made a universal prerequisite not established by the cited path.",
+    "status": "open"
+  },
+  {
+    "id": "KB-F02",
+    "priority": "P3",
+    "report": "knowledge-b.md",
+    "claims": [
+      "K04-046",
+      "K04-047"
+    ],
+    "category": "inherited_report",
+    "summary": "The age-filter description omits rejection when age cannot be decoded.",
+    "status": "open"
+  },
+  {
+    "id": "KB-F03",
+    "priority": "P3",
+    "report": "knowledge-b.md",
+    "claims": [
+      "K04-077"
+    ],
+    "category": "english_distillation",
+    "summary": "A zero-score cache-publication statement is generalized beyond its score gate.",
+    "status": "open"
+  },
+  {
+    "id": "KB-F04",
+    "priority": "P3",
+    "report": "knowledge-b.md",
+    "claims": [
+      "K02-089"
+    ],
+    "category": "english_distillation",
+    "summary": "The bio input cap is called unavailable even though the cited renderer defines MAX_BIO=500.",
+    "status": "open"
+  },
+  {
+    "id": "C-01",
+    "priority": "P2",
+    "report": "knowledge-c.md",
+    "claims": [
+      "K03-018"
+    ],
+    "category": "english_distillation",
+    "summary": "Content-feature transmission omits the debias switch and uncached-request conditions.",
+    "status": "open"
+  },
+  {
+    "id": "C-02",
+    "priority": "P2",
+    "report": "knowledge-c.md",
+    "claims": [
+      "K03-101"
+    ],
+    "category": "english_distillation",
+    "summary": "MediaInjected is incorrectly said to require prior NSFW results to exist.",
+    "status": "open"
+  },
+  {
+    "id": "C-03",
+    "priority": "P3",
+    "report": "knowledge-c.md",
+    "claims": [
+      "K03-077"
+    ],
+    "category": "inherited_report",
+    "summary": "VQV eligibility omits the querying viewer follower-count guard.",
+    "status": "open"
+  },
+  {
+    "id": "KD-01",
+    "priority": "P2",
+    "report": "knowledge-d.md",
+    "claims": [
+      "K05-061"
+    ],
+    "category": "english_distillation",
+    "summary": "No publicly established hashtag formula becomes an assertion that no formula exists.",
+    "status": "open"
+  },
+  {
+    "id": "KD-02",
+    "priority": "P3",
+    "report": "knowledge-d.md",
+    "claims": [
+      "K05-047"
+    ],
+    "category": "inherited_report",
+    "summary": "Exact duplicate-text job names omit their bbq_ prefix.",
+    "status": "open"
+  },
+  {
+    "id": "KD-03",
+    "priority": "P3",
+    "report": "knowledge-d.md",
+    "claims": [
+      "K05-034"
+    ],
+    "category": "english_distillation",
+    "summary": "A verification step compares the configured threshold instead of the matching-record count.",
+    "status": "open"
+  },
+  {
+    "id": "KD-04",
+    "priority": "P2",
+    "report": "knowledge-d.md",
+    "claims": [
+      "K05-069"
+    ],
+    "category": "inherited_report",
+    "summary": "Under the Hood post-label statistics omit authored-post cohorts and observation horizons.",
+    "status": "open"
+  },
+  {
+    "id": "ENG-01",
+    "priority": "P2",
+    "file": "tools/knowledge.py",
+    "line": 99,
+    "title": "Unchecked source-unit metadata",
+    "report": "engineering.md",
+    "claims": [],
+    "category": "engineering",
+    "summary": "Unchecked source-unit metadata",
+    "status": "open"
+  },
+  {
+    "id": "ENG-02",
+    "priority": "P2",
+    "file": "tools/knowledge.py",
+    "line": 110,
+    "title": "Schema accepts values that crash lookup",
+    "report": "engineering.md",
+    "claims": [],
+    "category": "engineering",
+    "summary": "Schema accepts values that crash lookup",
+    "status": "open"
+  },
+  {
+    "id": "ENG-03",
+    "priority": "P2",
+    "file": "tools/validate.py",
+    "line": 44,
+    "title": "Incomplete frontmatter passes gate",
+    "report": "engineering.md",
+    "claims": [],
+    "category": "engineering",
+    "summary": "Incomplete frontmatter passes gate",
+    "status": "open"
+  },
+  {
+    "id": "ENG-04",
+    "priority": "P2",
+    "file": "tools/summarize_posts.py",
+    "line": 67,
+    "title": "Metric scopes silently mixed",
+    "report": "engineering.md",
+    "claims": [],
+    "category": "engineering",
+    "summary": "Metric scopes silently mixed",
+    "status": "open"
+  },
+  {
+    "id": "ENG-05",
+    "priority": "P2",
+    "file": "tools/summarize_posts.py",
+    "line": 89,
+    "title": "Unresolved text conflict regains complete status",
+    "report": "engineering.md",
+    "claims": [],
+    "category": "engineering",
+    "summary": "Unresolved text conflict regains complete status",
+    "status": "open"
+  },
+  {
+    "id": "ENG-06",
+    "priority": "P2",
+    "file": "tools/inspect_draft.py",
+    "line": 57,
+    "title": "CRLF normalization changes raw code-point count",
+    "report": "engineering.md",
+    "claims": [],
+    "category": "engineering",
+    "summary": "CRLF normalization changes raw code-point count",
+    "status": "open"
+  },
+  {
+    "id": "ENG-07",
+    "priority": "P2",
+    "file": "tools/build.py",
+    "line": 15,
+    "title": "Standalone copies omit license and notice",
+    "report": "engineering.md",
+    "claims": [],
+    "category": "engineering",
+    "summary": "Standalone copies omit license and notice",
+    "status": "open"
+  },
+  {
+    "id": "ENG-08",
+    "priority": "P2",
+    "file": "tools/summarize_posts.py",
+    "line": 151,
+    "title": "One-hop content identity grouping",
+    "report": "engineering.md",
+    "claims": [],
+    "category": "engineering",
+    "summary": "One-hop content identity grouping",
+    "status": "open"
+  },
+  {
+    "id": "ENG-09",
+    "priority": "P3",
+    "file": "tools/summarize_posts.py",
+    "line": 83,
+    "title": "Equivalent exact counts conflict",
+    "report": "engineering.md",
+    "claims": [],
+    "category": "engineering",
+    "summary": "Equivalent exact counts conflict",
+    "status": "open"
+  },
+  {
+    "id": "ENG-10",
+    "priority": "P3",
+    "file": "tools/summarize_posts.py",
+    "line": 170,
+    "title": "Malformed JSON root raises traceback",
+    "report": "engineering.md",
+    "claims": [],
+    "category": "engineering",
+    "summary": "Malformed JSON root raises traceback",
+    "status": "open"
+  }
+]

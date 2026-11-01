@@ -1,0 +1,2523 @@
+{
+  "reviewed_commit": "9193233924df388727296c4e76948db919ac32eb",
+  "review_date": "2026-10-31",
+  "timezone": "America/Los_Angeles",
+  "method": "Each cited GitHub blob URL fetched freshly through the GitHub connector; retrieved bytes hashed. Floating refs explicitly remain floating. Retrieval is availability evidence, not a semantic verdict. See per-claim coverage for reviewer judgments.",
+  "summary": {
+    "source_files_retrieved": 165,
+    "source_urls_covered": 374,
+    "line_ranges_checked": 357,
+    "out_of_bounds_ranges": [],
+    "report_sha256": "039d8e0a1b3152dfae7730f4d514914a18c79328c0a6ac796892dab86f4f0908"
+  },
+  "files": [
+    {
+      "repo": "blader/humanizer",
+      "ref": "main",
+      "path": "SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/blader/humanizer/blob/main/SKILL.md"
+      ],
+      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad",
+      "bytes": 32348,
+      "git_blob_sha": "19fc634208e8cc6ae55d4ff287152583216fd244"
+    },
+    {
+      "repo": "twitter/the-algorithm-ml",
+      "ref": "main",
+      "path": "projects/home/recap/README.md",
+      "raw_url": "https://raw.githubusercontent.com/twitter/the-algorithm-ml/main/projects/home/recap/README.md",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/twitter/the-algorithm-ml/blob/main/projects/home/recap/README.md"
+      ],
+      "sha256": "0dfba2f71870b93bf9f9be711aea4a924c41c1143c32253d543a1c566bb7894c",
+      "bytes": 4227,
+      "git_blob_sha": "adb7106eee34a6303d7d0dfb2a084e24d1d6dd0c"
+    },
+    {
+      "repo": "weijt606/anti-vibe-writing",
+      "ref": "main",
+      "path": "skills/anti-vibe-writing/references/chinese-patterns-to-remove.md",
+      "raw_url": "https://raw.githubusercontent.com/weijt606/anti-vibe-writing/main/skills/anti-vibe-writing/references/chinese-patterns-to-remove.md",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/weijt606/anti-vibe-writing/blob/main/skills/anti-vibe-writing/references/chinese-patterns-to-remove.md"
+      ],
+      "sha256": "00060206f2d912c53465d7dd8f4341ce6d6200c47f535bee96224094210fa4e1",
+      "bytes": 17853,
+      "git_blob_sha": "a0fbafa32d24c0d7bd5a48fac1dcd6b8fd6d764e"
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "17c96bf346df3d62b90f1bb01830d432dba74485",
+      "path": "home-mixer/params/param.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/17c96bf346df3d62b90f1bb01830d432dba74485/home-mixer/params/param.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/17c96bf346df3d62b90f1bb01830d432dba74485/home-mixer/params/param.rs#L320",
+        "https://github.com/xai-org/x-algorithm/blob/17c96bf346df3d62b90f1bb01830d432dba74485/home-mixer/params/param.rs#L414-L419"
+      ],
+      "sha256": "641141bb0e89e60efcc217b0d73f9f57c81dbd5671a4d621bcbe5ce3942c09df",
+      "bytes": 22077,
+      "git_blob_sha": "4d2f0b2de713831af9dffcf58fc1ef664074f611"
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "35650fb89f3b14dc6234312535f642779d891d88",
+      "path": "phoenix/xrex/configs/xrecsys_two_tower.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/35650fb89f3b14dc6234312535f642779d891d88/phoenix/xrex/configs/xrecsys_two_tower.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/35650fb89f3b14dc6234312535f642779d891d88/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L296"
+      ],
+      "sha256": "57e3fabcb2929fdc89cb09b3fd65d00180d668f47bd21e26b675cc00e0d57a4e",
+      "bytes": 37170,
+      "git_blob_sha": "8ef748ad3d627bf050f2473ab0ef21a8c3b97a78"
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "README.md",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L32-L44",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L38-L40",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L42-L44",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L434",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L447",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L440-L447",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L466-L470"
+      ],
+      "sha256": "f42bdc76d2f9905cccfb88aca6de08a19e3e141df5116c7dfc2d57037a172f70",
+      "bytes": 48631,
+      "git_blob_sha": "d03c0ded14ed4d26f9f294ba1dd2350f5fd2b6d3",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "botmaker-rules/scarecrow/bot/BBQDuplicateTextProd.bot",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextProd.bot",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextProd.bot#L2-L74"
+      ],
+      "sha256": "d223ed481c3c693ed6d3e4e703f99483df6d351bbf44ba496f18dcc39ac44d4b",
+      "bytes": 2583,
+      "git_blob_sha": "9cb021c6d80b815cdff8d933ec561767762019f0",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "botmaker-rules/scarecrow/bot/BBQDuplicateTextRepliesProd.bot",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextRepliesProd.bot",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextRepliesProd.bot#L2-L58"
+      ],
+      "sha256": "525c9e2bb21319c50c61df256b0671c72ced851fc73753bb50d166c3c98dcb11",
+      "bytes": 2091,
+      "git_blob_sha": "23795a560faa5788a8b63d8f3dc80e7be331b281",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot#L2-L47"
+      ],
+      "sha256": "7f0acbf9cad23c346fc08760ac6dc71c99d6949e923746edf9066259a307c024",
+      "bytes": 1557,
+      "git_blob_sha": "75fddd10d8cfe2e5effea82285a61a89e707b47c",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L2-L21",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L4-L21"
+      ],
+      "sha256": "79ca088b46849be2be14f3f6180b5ad8206a23cafc6a04ae23063b700443a88d",
+      "bytes": 683,
+      "git_blob_sha": "505dacd01e4d042b3653c94fe7b34f3abb237ae5",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "botmaker-rules/scarecrow/bot/NsfwTweetMediaProcessor.bot",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/NsfwTweetMediaProcessor.bot",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/NsfwTweetMediaProcessor.bot#L3-L30"
+      ],
+      "sha256": "959e928d0444eb1f43d16292ea2e729ea395941d7687a0aab8293c7782e5e806",
+      "bytes": 1217,
+      "git_blob_sha": "9510be250ff5991f16a6d613e32c12b3cbe7efcb",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L2-L44",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L6-L44"
+      ],
+      "sha256": "252337126ff5720ba6a31b6e9ccff68b89c0dfe44706f9b7e961d846b5ea76d0",
+      "bytes": 1341,
+      "git_blob_sha": "b6501a4986fa0194264d673a5075f61c8e32537f",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "botmaker-rules/scarecrow/derived-feature/ApplyNsfwUserLabel.df",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/derived-feature/ApplyNsfwUserLabel.df",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/derived-feature/ApplyNsfwUserLabel.df#L19-L45"
+      ],
+      "sha256": "c2770ae4b2b01a7a2abe64b51fabfc6de3f8c7b2c6c596fbf244af976c6b551e",
+      "bytes": 1527,
+      "git_blob_sha": "128372c7a90fd16b45fee7ad7e5ed65b8700571a",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "botmaker-rules/scarecrow/derived-feature/ApplyNsfwUserLabelOrCreateReport.df",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/derived-feature/ApplyNsfwUserLabelOrCreateReport.df",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/derived-feature/ApplyNsfwUserLabelOrCreateReport.df#L2-L81"
+      ],
+      "sha256": "a95699514ba4eabb01aa2c853660af7d92daf3e7e05015f56b7ffca207d80ca0",
+      "bytes": 4162,
+      "git_blob_sha": "8b825b42cf6ae9c74b2c567a84ecf6b4abe23c47",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java#L255-L263",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java#L301-L311"
+      ],
+      "sha256": "11dd5ec392fa45fbe307f10ee82a1c340aa741f28fe7188f37a5955716f1bb4c",
+      "bytes": 12476,
+      "git_blob_sha": "2de4f9ca682f6bfe91e975bbba3521283c028c50",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "candidate-pipeline/candidate_pipeline.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/candidate-pipeline/candidate_pipeline.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/candidate-pipeline/candidate_pipeline.rs#L129-L148"
+      ],
+      "sha256": "cb13cfa73d8d942c03fd913c4cd1085857fa47e8be4113e5fbc4e8554ab90b4a",
+      "bytes": 16336,
+      "git_blob_sha": "0c485bbf7fe301ab1628c4ddce76706496ccc09d",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/config/config.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py#L104-L120"
+      ],
+      "sha256": "7816f913a531ff917946ae326cb374b39a40fa509fb91adfb9783cbf646d89d1",
+      "bytes": 9472,
+      "git_blob_sha": "cbd5a04d18b17ff5bdce1fe644ebff0228dc679e",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/core/data_loaders/data_types.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/data_types.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/data_types.py#L637-L732"
+      ],
+      "sha256": "aa954e1d56ca25bc5494eed08ec3beea4f59f6fb012e62af6ca69da439aad6b1",
+      "bytes": 33961,
+      "git_blob_sha": "8f7abdd19d2a48a12fdaf52c65257050d921c362",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/core/data_loaders/media_loader.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/media_loader.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/media_loader.py#L130-L170",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/media_loader.py#L293-L303"
+      ],
+      "sha256": "1862b4d4c6461ecb735bba9262c7d3c15a75c439539cc4810f5d1911a776eca3",
+      "bytes": 31003,
+      "git_blob_sha": "59b04e0a6ff578a3e5c9bd8671992751af93365a",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/core/data_loaders/post_mapper.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/post_mapper.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/post_mapper.py#L130-L174",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/post_mapper.py#L273-L289"
+      ],
+      "sha256": "696b606f3195c1a5162056b07d2e7c9771e29b0e023552a578a5069816f3d643",
+      "bytes": 16384,
+      "git_blob_sha": "c985cba0ad604752792ad4c4db544fe9e5fa49a7",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/core/data_loaders/strato_loader.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/strato_loader.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/strato_loader.py#L26-L56"
+      ],
+      "sha256": "5df6a1dc4506de2fa519c5361fdc8d8deb7e9e5ce8787c22d43aff9136fe277b",
+      "bytes": 4926,
+      "git_blob_sha": "7ac1fc2e72f154882a173727955900bc15d5177a",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/mm_emb/embedder.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder.py#L55-L90"
+      ],
+      "sha256": "54603863d99ca234a4131fe10c104c647f416e13ead5a5c546726f5258d2ffbf",
+      "bytes": 4372,
+      "git_blob_sha": "efdc5b9ca04f96d1006a1b96a7d617674bf3fd1c",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/mm_emb/embedder_v82.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder_v82.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder_v82.py#L68-L92",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder_v82.py#L69-L92"
+      ],
+      "sha256": "bdfea9c0d5a1368af7a9f813de6ce0a76d957f5dff19f35d3e73e1a3f9e8d00b",
+      "bytes": 4268,
+      "git_blob_sha": "e52bbd5f2e3de970b8a03da39eac7087dae3da29",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/mm_emb/plan_post_embedding_v82.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/plan_post_embedding_v82.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/plan_post_embedding_v82.py",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/plan_post_embedding_v82.py#L14-L31"
+      ],
+      "sha256": "262b711dc34c8e573bd96e6ce2afd743ceeb647eb932017e14e964d89e131033",
+      "bytes": 1304,
+      "git_blob_sha": "865244cf76d393488fb31020caa115ebb8829fd8",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/mm_emb/renderer.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L107-L120",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L76-L92"
+      ],
+      "sha256": "b120cf08a7776c8117a02f97c1948fac0a387628c7301c9d18df6425d0d54eb5",
+      "bytes": 6465,
+      "git_blob_sha": "018048ac51f4b874082f2977e7da9fa7f20c0990",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/mm_emb/renderer_v82.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L174",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L178",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L184",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L165-L167",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L186-L215",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L314",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L320",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L317-L321",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L36-L52"
+      ],
+      "sha256": "358908044ca4d80ec7559300cb11f3979fd0cefc01477966ebbc0e04ea0777ae",
+      "bytes": 11770,
+      "git_blob_sha": "ce13ad33ecf0aa5b7c1035b3f0639e1a573e70c7",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/constants.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/constants.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/constants.py#L29-L33",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/constants.py#L34-L40"
+      ],
+      "sha256": "2689ee9496bf62067aed4d4ff692352bed9b6d7b1db877182aaab2bbaff9d377",
+      "bytes": 2297,
+      "git_blob_sha": "c5d29619182848c22f8b0b2c02784abcde3b6399",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/disable_rules.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/disable_rules.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/disable_rules.py#L6-L11"
+      ],
+      "sha256": "139923a7e0fe19f9be37c200c46b946e7b1bca0bb65166660ad9aa9d00a2839d",
+      "bytes": 369,
+      "git_blob_sha": "2843ba81a755e8a387c51beabe212bf91d929486",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/generators.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/generators.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/generators.py#L109-L144"
+      ],
+      "sha256": "0709a6490539063afc99277294805828e2d6002d777693a829d8e7d9cfe4500a",
+      "bytes": 4897,
+      "git_blob_sha": "4d3c8195c2d6567247298f11b1d408a5d1168666",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/plan_safety_ptos_adult_content_leading_frames.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_adult_content_leading_frames.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_adult_content_leading_frames.py#L24-L55"
+      ],
+      "sha256": "fa3425d4184c715789e9646e772d5db1360acfb8205db4ba8e5258616bc24fe1",
+      "bytes": 2628,
+      "git_blob_sha": "52d539731a5b50bcbe1c44786fb2d67f8fc21227",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/plan_safety_ptos_media_injected_adult_infrared_video_spam_detection.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_media_injected_adult_infrared_video_spam_detection.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L19-L43"
+      ],
+      "sha256": "1dcd28e445326a4ef89f8f43ec993b606e735b95bfd052903024c691b649b05f",
+      "bytes": 2118,
+      "git_blob_sha": "380ef4075b77c7478d06d8a59361b15e2bf3f563",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/plan_safety_ptos_special_video.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_special_video.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_special_video.py#L23-L54"
+      ],
+      "sha256": "bfac0b9d03707a8d79f4a79e50628502d8e354dc8a89f526137680cad1f24dee",
+      "bytes": 2675,
+      "git_blob_sha": "dcd2f653cf6dd96a342f7260f83bd76e7b0b3136",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/prior_nsfw.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prior_nsfw.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prior_nsfw.py#L16-L34"
+      ],
+      "sha256": "bb43f5963e0913668f83e10da59596daa48b3e7c9b6d8c4961680ed83642c7ed",
+      "bytes": 1102,
+      "git_blob_sha": "b86242eaae8817c1b46d5910c866487077fa86d6",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/prompts.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prompts.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prompts.py#L11-L31"
+      ],
+      "sha256": "ded59c7d5455bf61e45f896471b5437fe220aced5deab8de6cb5fb26e56d421c",
+      "bytes": 1798,
+      "git_blob_sha": "21d3bb22ea64631428719b32e83663b0b7c154ec",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/state.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/state.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/state.py#L37-L46"
+      ],
+      "sha256": "135cd54af31137774df6be4247f9989cc125b02ab1c1b59e760f02d78d8b4923",
+      "bytes": 5354,
+      "git_blob_sha": "39ac2263e6bf165ad56f2fcf676af52ce7a1ae90",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/task_rate_limit.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_rate_limit.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_rate_limit.py#L11-L42"
+      ],
+      "sha256": "74bac57e7055a80de61ef03de9bb02b9dba8543fd36f1fdbc9ec3514fedf9e93",
+      "bytes": 1904,
+      "git_blob_sha": "3b371dc1fa3e26139dfbaeb186e347fec08e7a36",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/task_safety_ptos_adult_content_cross_validation.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_cross_validation.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_cross_validation.py#L133-L152",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_cross_validation.py#L67-L131"
+      ],
+      "sha256": "64cee499822e6812f2ba9584bdbcf095e1c0b12a4baeca8aaa5d8a34d9e787f6",
+      "bytes": 6041,
+      "git_blob_sha": "c66bfd372a9b6b17f026d3f935358c2fd0ba1da5",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/task_safety_ptos_adult_content_leading_frames_filter.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_leading_frames_filter.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_leading_frames_filter.py#L29-L83"
+      ],
+      "sha256": "9b91ea1d1b2808f3ea527882b39a2ad70a814a55591283ae481266ce3a8956be",
+      "bytes": 3296,
+      "git_blob_sha": "649ce6a493cfd17390e968944b179273f7fcc4da",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L101-L159",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L174-L189"
+      ],
+      "sha256": "928d464e9b4819375708f56e6143d5acfc201911540a3b5f26246e19b1ed7757",
+      "bytes": 7647,
+      "git_blob_sha": "d4b9dea718233c750edda90c9d34cedee4a6fab3",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection_filter.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection_filter.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection_filter.py#L19-L47"
+      ],
+      "sha256": "f6e5b6b488e97d951864f364239c1b0d6d2db14b41968be3f77ed015263ff5a1",
+      "bytes": 1749,
+      "git_blob_sha": "3e655893b860ac0bc765dec2b66f88f1d05cecb9",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/task_safety_ptos_special_video_filter.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_special_video_filter.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_special_video_filter.py#L16-L49"
+      ],
+      "sha256": "66afcc120dbe0fa0a8d2722f06689e04592a84809fa6caa529664c5c0732b14a",
+      "bytes": 1565,
+      "git_blob_sha": "e0799039843a5aacb01ca4eb0e6482067a97530e",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/task_special_video_screen.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_special_video_screen.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_special_video_screen.py#L13-L49"
+      ],
+      "sha256": "67f6c06d422867d78f9cda8735b92b81a8b8e5e52f7b9d92a02120e22dcba31e",
+      "bytes": 1683,
+      "git_blob_sha": "2e44f9f0080002fec704dc6bcb2a863bd28c27ac",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/ptos/task_write_safety_post_annotations_result_sink.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L214-L248",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L258-L268",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L48-L49"
+      ],
+      "sha256": "5fb16c7b2a3f62082fc750ec97e3cc9a54d212339ba6053ec73c804b1b81db27",
+      "bytes": 20960,
+      "git_blob_sha": "85b93b2b121238f175c37b2d128ff9b8d572999f",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/reply_spam/classifier_multi_step_reply_spam.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L157-L175",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L21-L22",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L32-L88",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L90-L134"
+      ],
+      "sha256": "68bf8628ea5d83a7dbdccf9880856463f2907687d40845db5c2e8b38b680c05d",
+      "bytes": 8840,
+      "git_blob_sha": "32f717d52fa8ce01c25d2ef598f849c337f97cc1",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/reply_spam/classifier_reply_ranking.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_reply_ranking.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_reply_ranking.py#L44-L78"
+      ],
+      "sha256": "a86480bf5dcf0a009c9b78d2f2d435c072183387ba51330a47fde0ae93ecef8b",
+      "bytes": 6446,
+      "git_blob_sha": "a4d084864b8222d612aea26a36a9fc8238691167",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/reply_spam/generators.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/generators.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/generators.py#L16-L40"
+      ],
+      "sha256": "94363519279493c6b67d23574ac666eb826b1222fde605222b45b80234440145",
+      "bytes": 1313,
+      "git_blob_sha": "a8fa683a9c7123683ba7adc5c3db8862c9d36494",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/reply_spam/plan_multi_step_reply_spam.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/plan_multi_step_reply_spam.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/plan_multi_step_reply_spam.py#L12-L28"
+      ],
+      "sha256": "3bd97f6af808d1b94e291ae1bd12ca9834e26c9fae5b9ec6604c6bdb0b10f3c5",
+      "bytes": 1079,
+      "git_blob_sha": "beae75e4bfa31baf5ba744f3f1519e908ba00ba9",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/reply_spam/prompts.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/prompts.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/prompts.py#L6-L24",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/prompts.py#L6-L35"
+      ],
+      "sha256": "c50a373632c61fc1fc5785d0364412eb68c20e127f2c70fa4dffa6ed26ad43f6",
+      "bytes": 1079,
+      "git_blob_sha": "169c30e26c098d430059cc847e3a89794851e376",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/reply_spam/strato_loader.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/strato_loader.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/strato_loader.py#L20-L53"
+      ],
+      "sha256": "8b8598e62b2f09c1ffbec5e9c6aa2507aeb55620151ac224f87f63fc463241d5",
+      "bytes": 1768,
+      "git_blob_sha": "3b76de1a5f234c390cfb233708de1c56851e0032",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/reply_spam/task_multi_step_reply_spam.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L151-L198",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L25-L124"
+      ],
+      "sha256": "7cf646b4eb64170e27112aca705ba824eb75f92cfeb375130ee74817cdbdf0bc",
+      "bytes": 8036,
+      "git_blob_sha": "a9be1d116422b5d555003c0726c96c650113d52f",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "grox/flows/reply_spam/task_write.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_write.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_write.py#L124-L148",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_write.py#L39-L74",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_write.py#L39-L79"
+      ],
+      "sha256": "4d551a44db6e6e6fecf5ce31912f02af6a248d3690e9a8758842ee9b1be02471",
+      "bytes": 7500,
+      "git_blob_sha": "fe87f192547c3d1707e70ddc4c989325e7f6ccce",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/candidate_hydrators/bidirectional_follow_hydrator.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/bidirectional_follow_hydrator.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/bidirectional_follow_hydrator.rs#L15-L61"
+      ],
+      "sha256": "6854044f34dbc4a7f504e92b23d4c84f2adc7866618a2b854cdff506ab584cfa",
+      "bytes": 7077,
+      "git_blob_sha": "139effea279e4b389d9497bada57a2921e2843c8",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/candidate_hydrators/core_data_candidate_hydrator.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/core_data_candidate_hydrator.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/core_data_candidate_hydrator.rs#L141-L149"
+      ],
+      "sha256": "d439a932587b128b342b1a8194d81c17c985387da0828656a378335dd7cd195c",
+      "bytes": 7429,
+      "git_blob_sha": "a7739bdc38266a0f85cd5cbd75a632d9e92f337f",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/candidate_hydrators/engagement_counts_hydrator.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/engagement_counts_hydrator.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/engagement_counts_hydrator.rs#L16-L48",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/engagement_counts_hydrator.rs#L59-L65"
+      ],
+      "sha256": "ce0caf7a248306ce1b1fd113b306671feddd0f6926959dfcc90b9d1a5d82cf98",
+      "bytes": 10180,
+      "git_blob_sha": "bc8f9b1c78a5e1219edcf3fafb6dea9227be0934",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/candidate_hydrators/in_network_candidate_hydrator.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/in_network_candidate_hydrator.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/in_network_candidate_hydrator.rs#L20-L35"
+      ],
+      "sha256": "3c66f05cfa3c830dc6b924eb8b5229890bc6e03b590f030c53390834d92bec62",
+      "bytes": 1381,
+      "git_blob_sha": "fba4caadd36abb251c3a8d62d85dbfa7e1d560fa",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/candidate_hydrators/phoenix_reply_ancestors_hydrator.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/phoenix_reply_ancestors_hydrator.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/phoenix_reply_ancestors_hydrator.rs#L11-L29",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/phoenix_reply_ancestors_hydrator.rs#L79-L97"
+      ],
+      "sha256": "28d2e668a075fe76e3a71c4ff14438a274fae4100207928d0b0ce9b65dd40319",
+      "bytes": 3938,
+      "git_blob_sha": "f79e987105d19e087a3be8564d438642615a2e0b",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/candidate_hydrators/subscription_hydrator.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/subscription_hydrator.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/subscription_hydrator.rs#L48-L80"
+      ],
+      "sha256": "88371bc649e86bce46840c36fa6c64726ea98806fe04c60d4c34b464d5243012",
+      "bytes": 2714,
+      "git_blob_sha": "b5309eb3892b9f4bce457fcbbf0cef82d7c9eba5",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/candidate_hydrators/vf_candidate_hydrator.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L140-L169",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L60-L106",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L67-L110",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L70-L105",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L70-L169"
+      ],
+      "sha256": "5a37ed35e1eed07551041778f5b36aceee5749f9699f5c6287e3341d0d7ab309",
+      "bytes": 11677,
+      "git_blob_sha": "68009a83e94329f02f842fb7294e632824b7448e",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs#L219-L237"
+      ],
+      "sha256": "cd49104520fbbd4cdb41f4ff3172b84180524434a0c5de1d8da5a551ba6f99c7",
+      "bytes": 15805,
+      "git_blob_sha": "f611f7530566eec270e8c20615df6ee94b1b38d1",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L345-L381",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L383-L444",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L429",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L444",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L469",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L507",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L446-L508",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L466-L507"
+      ],
+      "sha256": "b41a645e477b9a547d05e9d760ed8827fd6ccfbf834d9ac5ac26458fa834bc22",
+      "bytes": 57570,
+      "git_blob_sha": "9ddaa17ae464365013e31e915c47f88f0306e23e",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/age_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31"
+      ],
+      "sha256": "8b071a27cfcadbcc2cdeee6b9b2c58a4eafc55d5eedae37f02abd028f106739e",
+      "bytes": 983,
+      "git_blob_sha": "614c0cd77cc49cdf9454060eb15bd6c39ed10886",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/ancillary_vf_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancillary_vf_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancillary_vf_filter.rs#L7-L17"
+      ],
+      "sha256": "cdb8b10b49ae78708fb35a00662e3fea45db9c801db06c5a9595b4d7f0a4968c",
+      "bytes": 595,
+      "git_blob_sha": "2114c404da10d70dd0c5c65792674f676361452c",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/author_socialgraph_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/author_socialgraph_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/author_socialgraph_filter.rs#L15-L54"
+      ],
+      "sha256": "c0cac910b974522bb20b16c21e8ad2cb64306b4868ce367d2162ab1d25f0084a",
+      "bytes": 10652,
+      "git_blob_sha": "9b04ad34dc40cc5a64dd6145a664f3a1447a76ff",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/dedup_conversation_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/dedup_conversation_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/dedup_conversation_filter.rs#L14-L48"
+      ],
+      "sha256": "cadf2a57f9e88b842179184641221672344582089f62afcc7c9f1f28e6fb3d30",
+      "bytes": 5193,
+      "git_blob_sha": "9e73fc2f546ab76b91f9ae0841469cc5e1c95c37",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/fair_share_ranking_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L10-L109",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L44-L65"
+      ],
+      "sha256": "7c61de45f17cff34f9c51cba548641c87ff888743e7414a67e8298e4cf048e83",
+      "bytes": 5661,
+      "git_blob_sha": "208fd3b67415a76128135f972ff0f104e4d497e7",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/ineligible_subscription_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ineligible_subscription_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ineligible_subscription_filter.rs#L8-L29"
+      ],
+      "sha256": "1419306bc078ea4ebf590185947e975b1e6cbc81e30e5e8fe734e042b467a3b6",
+      "bytes": 2069,
+      "git_blob_sha": "39fe76b41b268976c82f47a165e0bfd1265247de",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/new_user_min_engagement_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/new_user_min_engagement_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/new_user_min_engagement_filter.rs#L31-L90"
+      ],
+      "sha256": "796abf084789a5d25a1b2f6b94aa4bcec0107bd50799cd491d67ab308d38030e",
+      "bytes": 3703,
+      "git_blob_sha": "4231141150daf50bef37201a5dc43141ebcc250e",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/oon_retweet_reply_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/oon_retweet_reply_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/oon_retweet_reply_filter.rs#L15-L27"
+      ],
+      "sha256": "f492d71f0e08f7c811ea0bc64ca6c5fb4518e7666e1cb911b97325c70b3788c5",
+      "bytes": 4986,
+      "git_blob_sha": "8fe4c0d24c8af927d83ec4f9c9e9ad79ef3f89bb",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/previously_seen_posts_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs#L16-L31"
+      ],
+      "sha256": "f1f44a6ee8bf2cc412db8965b4f05abb1dff58efa2776f04921417d82a33db57",
+      "bytes": 1260,
+      "git_blob_sha": "ec5597a7c4294cf9068a9bdb256b2aedad36da3b",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/previously_served_posts_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_served_posts_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_served_posts_filter.rs#L14-L30"
+      ],
+      "sha256": "6e10fc9a648deff2b451212374a3b0834131727614f11cc069452ece5f2cecd5",
+      "bytes": 1272,
+      "git_blob_sha": "e3d421ec680a7f3168921fc1568dd8b465aa8ebf",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/retweet_deduplication_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/retweet_deduplication_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/retweet_deduplication_filter.rs#L19-L29"
+      ],
+      "sha256": "e414b6b80cf8d4e099b3ed81034d6ac857ba02dcfb5f5247d7b240ee4fe1a772",
+      "bytes": 4844,
+      "git_blob_sha": "35d29b32873ac25bdefec2302223a940be6a0d3c",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/filters/vf_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/vf_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/vf_filter.rs#L22-L26",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/vf_filter.rs#L8-L26"
+      ],
+      "sha256": "33f42784645515722f4a38555d61f18757a9d8f38e2a1db0f3b89257c20e63f4",
+      "bytes": 1848,
+      "git_blob_sha": "2e2c0cefaceb9c38ebf30af44eb9e61312fdc25e",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/for_you_server.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/for_you_server.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/for_you_server.rs#L71-L88"
+      ],
+      "sha256": "412e264d28ba67d614517ea5317504bc56bb54ace6df234501de692c9d025875",
+      "bytes": 2919,
+      "git_blob_sha": "f3d13d763da24139d30f4cdfc86e9bbaabe6305c",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/models/content_features.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/content_features.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/content_features.rs#L8-L19"
+      ],
+      "sha256": "290acc5528afaa257cd4f7e26b1d73efc60bae00782efeb9732c7775d5767e0e",
+      "bytes": 9112,
+      "git_blob_sha": "25fc955a93ff8da6d1d2eb8eee2a22a76a2ac0ea",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/params/config.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43"
+      ],
+      "sha256": "e084c2c866073374ccb07c1002401b65b3c01097b427caf02445b985218cc0ac",
+      "bytes": 1702,
+      "git_blob_sha": "1b4f50e4f80e6b9725c616fe07a5f35c2fd1a934",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/params/param.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L1",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L1277-L1288",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L16-L21",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L309-L365",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L367-L513",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L396-L408",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L396-L513",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L417-L431",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L425-L430",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L459-L464",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L48-L53",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L483-L488",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L490-L513",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L624",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L661",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L633-L661",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L67-L78",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L688-L693",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L716-L732",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L716-L738",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L832-L860"
+      ],
+      "sha256": "ce56cd79aaf95621edb0f0ea045c18a0dac4b64b8c9a9ba63ab1abf1e4a382b2",
+      "bytes": 25983,
+      "git_blob_sha": "240123ecdaac4d0a33336835f99fe84b855a9a04",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs#L31-L105",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs#L31-L111"
+      ],
+      "sha256": "c2edd73ec8dfc0b9ff3e198f3f21610b1dbf642f7b26c25f725405f1e2e7108a",
+      "bytes": 3990,
+      "git_blob_sha": "fe2d78bde9201844370e1aa928bed7c35e900283",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/query_hydrators/retrieval_sequence_query_hydrator.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/retrieval_sequence_query_hydrator.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/retrieval_sequence_query_hydrator.rs#L30-L64"
+      ],
+      "sha256": "9f2f29426e16117521d15907aba7b30c6215b7998bd133806e8ca23ff369ad04",
+      "bytes": 2806,
+      "git_blob_sha": "1f7d57e930aaa60fcc51ceecbb31795f464f9cc1",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/query_hydrators/scoring_sequence_query_hydrator.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/scoring_sequence_query_hydrator.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/scoring_sequence_query_hydrator.rs#L92-L117"
+      ],
+      "sha256": "e6aff790dcf133a4dd2854f969479f1c16b7a218054606b5333b16634b1e81fd",
+      "bytes": 4593,
+      "git_blob_sha": "1420ea7e4954817f82d7599383c3163f31317b42",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/scored_posts_server.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scored_posts_server.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scored_posts_server.rs#L143-L148"
+      ],
+      "sha256": "8ad68b2ecdaf42fcf64b33b8f1e6623ddcbd84cdcd1016dd993c5f918747b479",
+      "bytes": 10894,
+      "git_blob_sha": "d429acf8eab2253641b2de0a9718edfc235b5a71",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/scorers/author_cold_start.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L188-L193",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L188-L233",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L216-L225",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L236-L255",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L257-L282",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L285-L309",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L296-L333",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L311-L333",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L378-L420",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L81-L88",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L91-L104"
+      ],
+      "sha256": "d20de57747b87ce25cac4daff1614266a9a620155ba68242c4c62518e2be3a69",
+      "bytes": 33358,
+      "git_blob_sha": "cda3c30f6348c4ae820575ff3118f8d10d809a9a",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/scorers/phoenix_scorer.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/phoenix_scorer.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/phoenix_scorer.rs#L131-L141"
+      ],
+      "sha256": "6c7ebe54c6ceef156a768434a789df8db18726efb16390d8acc74c3dadd65111",
+      "bytes": 7235,
+      "git_blob_sha": "13aa58f7b1ae890c71d93590e9225ec2ad103e23",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/scorers/value_model.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs#L35-L42",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs#L45-L49",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs#L8-L87"
+      ],
+      "sha256": "0ac409b3f1a7a4a58210d2321eb1ce617de2e8cb16c059a5f1c87a32a54b1c78",
+      "bytes": 5231,
+      "git_blob_sha": "dde358192e73ef11ed3ede7f300299d086133815",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/scorers/vm_ranker.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker.rs#L59-L135"
+      ],
+      "sha256": "eebd41c03fa9ca32292fd327114c5f7b9cbeb3104f79bef67ffcf96ae4e946c5",
+      "bytes": 6151,
+      "git_blob_sha": "55270f55f537634e707eea84eff91fd9b76777ed",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/scorers/vm_ranker_debias_payload.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_debias_payload.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_debias_payload.rs",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_debias_payload.rs#L33-L68"
+      ],
+      "sha256": "9d3652d741ec86d0988f5d10d5050bb3e1e4960a2701223c4acdd46032e53fb2",
+      "bytes": 2439,
+      "git_blob_sha": "68bbd44d12e70251e23000b4c8a1ee9252d2d7ec",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/scorers/vm_ranker_request.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L26-L68",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L53-L67",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L53-L73"
+      ],
+      "sha256": "75173f37e84b114508e2f69011480975db6b0879f49b7c4c1f450f703db7e9a7",
+      "bytes": 4936,
+      "git_blob_sha": "6339753b81ea1dd4cb918871d71f1e1e80f73b68",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/selectors/blender_selector.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/blender_selector.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/blender_selector.rs#L56-L87"
+      ],
+      "sha256": "01dbec5123f13d334d8f0c2e433c07fd1f2ae97723e1750e1f44d27997227159",
+      "bytes": 12842,
+      "git_blob_sha": "ebd0a0948573107bd9f9a1c0a0a6b6e4bc69d83d",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/selectors/top_k_score_selector.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/top_k_score_selector.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/top_k_score_selector.rs"
+      ],
+      "sha256": "29967326c4c054531ef8e06037f921a2684d3d66848d859e30f06b776fa61bae",
+      "bytes": 5431,
+      "git_blob_sha": "f1364e59b608af424e37c2cdcdc19c645c294261",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/sources/phoenix_source.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L141",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L149",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L124-L141",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L199-L204"
+      ],
+      "sha256": "b37a5721121cfd4329b1eaf6b0cb16e316fa1676fd19c89c003689fbaefbd5ce",
+      "bytes": 9903,
+      "git_blob_sha": "75471ca064741177c4de87e5752833b90efb74a7",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/sources/popular_posts_source.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/popular_posts_source.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/popular_posts_source.rs#L20-L35"
+      ],
+      "sha256": "c194047540fe8c649258cc799594d026a1edf4f4209c6ec0f38872b317b6a991",
+      "bytes": 2411,
+      "git_blob_sha": "a3a5730b31abcd4774dba63d36b1616bbf9dbb52",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/sources/push_to_home_source.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/push_to_home_source.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/push_to_home_source.rs#L18-L65"
+      ],
+      "sha256": "bf02d665cf2c297dcd34e179f32a592b3fd4eaeecacd18ce9d6536787fe903b4",
+      "bytes": 6307,
+      "git_blob_sha": "9f993662ed3d3017a7c73d65fe1243a1c4107f87",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/sources/simclusters_source.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L213-L329",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L25-L36"
+      ],
+      "sha256": "794128cae2c0a970affb3599b1f48e7b30c35887f8246c46323fa2c32e4ef605",
+      "bytes": 12862,
+      "git_blob_sha": "3ab3bee396f229af01b3b48ddc2d402248f61591",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/sources/thunder_source.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L103-L113",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L27-L40",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L84-L113",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L84-L95",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L97-L114"
+      ],
+      "sha256": "0b72776ca67e385ec809fcb5618ebc7cc6c9c68fdc712547913d4b40c7dbe767",
+      "bytes": 4620,
+      "git_blob_sha": "86a3d51388a3937592e1edad0d3332c8f48b25b2",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/util/candidates_util.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L13-L17",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L19-L33",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L19-L44"
+      ],
+      "sha256": "0ae414cf1769998001deff962be99001095c4941ad6671d4757a80eb0af14792",
+      "bytes": 3420,
+      "git_blob_sha": "89455ed66fff753f1605fe1bcde0721759c94645",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/util/phoenix_request.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/phoenix_request.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/phoenix_request.rs#L18-L20",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/phoenix_request.rs#L185-L195"
+      ],
+      "sha256": "8a6c00207b90958005324c89128015c79f85deb728ecb919c7c946ce1382f5f2",
+      "bytes": 11695,
+      "git_blob_sha": "033732e95a84d7df0bff3c18245172d052447e85",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/util/popular_posts.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/popular_posts.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/popular_posts.rs#L27-L85"
+      ],
+      "sha256": "af6844ec295740548316409e48a1b00c7e055134fefbe1722c15f9a0d4214a49",
+      "bytes": 8824,
+      "git_blob_sha": "eb170d21130ce8a7bfcefe5c4a7833fca22f9bb3",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/util/urt/convo_marshaller.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/convo_marshaller.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/convo_marshaller.rs#L12-L63",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/convo_marshaller.rs#L20-L68"
+      ],
+      "sha256": "2745b470e1bd8df73986ec3f92e31a1dca43069fdd891c315c06b56fe2306b3c",
+      "bytes": 4265,
+      "git_blob_sha": "89fb2d9eab3a3a481c0310e1db018770d8a55ee8",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "home-mixer/util/video_carousel.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/video_carousel.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/video_carousel.rs#L151-L160"
+      ],
+      "sha256": "3ddaa95ca2443526a4eaea21c9ca10d265c7737ce2cf8922069edcd0b59f38e4",
+      "bytes": 12963,
+      "git_blob_sha": "adb70278c6b10ac5c4fa418b7ce54f244cbb0467",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix-rankall-strato/columns/favoriteEventProcessor.strato",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L14-L57",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L96-L156"
+      ],
+      "sha256": "4cf67da4d2b94e0ad6e93c655cd61212226edd37e4860db14db5594e5f18c0cd",
+      "bytes": 5734,
+      "git_blob_sha": "5d77e244d24269785cdee5f01662090206cba678",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L26-L43",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L263-L275",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L277-L298",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L301-L309",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L311-L340",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L342-L352",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L437-L455",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L457-L468",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L46-L98",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L470-L529",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L477-L524",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L506-L524",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L78-L88"
+      ],
+      "sha256": "ecb7cfac4fc7f404fc829fc6006376e620c01718fed2d7ccb48b176d15f9cf20",
+      "bytes": 22830,
+      "git_blob_sha": "345e287cd18605e7f51878ee1516380c92744948",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix-rankall-strato/lib/eventProcessing.strato",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L125-L137",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L182-L204",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L23-L24",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L28-L70",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L385-L400",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L403-L417"
+      ],
+      "sha256": "53a5a9d1402c5565746b71952e984c9989a8d792edb5c42382bfb2da7bd08e4a",
+      "bytes": 23724,
+      "git_blob_sha": "2393de2c9bcbffdbaf68f09f0e473e36bf49ff17",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix-rankall-strato/stream_forwarders/favoritePhoenixIndexingEventForwarder.strato",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/stream_forwarders/favoritePhoenixIndexingEventForwarder.strato",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/stream_forwarders/favoritePhoenixIndexingEventForwarder.strato#L3-L17"
+      ],
+      "sha256": "da81a797cd8e5054e3fae506197c4447332b3de7181c5f741955e1f2c5555acf",
+      "bytes": 568,
+      "git_blob_sha": "d09cd8b38fca57a5e549c45019fb454f954f53c1",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix-rankall/src/config/mod.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/config/mod.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/config/mod.rs#L168-L224"
+      ],
+      "sha256": "07879690bb291ba622ebff6c9eb76d784dd213cdd0df1b3c1510912329d37e0c",
+      "bytes": 18018,
+      "git_blob_sha": "58c08322cf35ca2e1e98f78d9e5b721e47abdff6",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix-rankall/src/store/base.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/store/base.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/store/base.rs#L1195-L1220"
+      ],
+      "sha256": "8b3c522784e29ae38bdac448949c18fa8218f277115b694c3278140d6592200a",
+      "bytes": 71343,
+      "git_blob_sha": "893a721b7db9b2ac40d299dbfc92940983508d28",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/README.md",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md#L101-L121",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md#L9-L21"
+      ],
+      "sha256": "01fe6fece2893023b4d64c60ff7e5030d5fabaf892898e6ce95b7818974a7910",
+      "bytes": 26928,
+      "git_blob_sha": "0622764d4935d5e138c80c37873adbac48014b99",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/crates/serving/xai-recsys-engine/src/util.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/crates/serving/xai-recsys-engine/src/util.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/crates/serving/xai-recsys-engine/src/util.rs#L131-L149",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/crates/serving/xai-recsys-engine/src/util.rs#L394-L404"
+      ],
+      "sha256": "1062cf47d8ec689473e0ad82eb3f7612ff2fbf89cc3b99c172ac4d1b412fa412",
+      "bytes": 24445,
+      "git_blob_sha": "fa1e9457105253c4ed4f00d3a559ff658a47bcaf",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/python/common/xai-proto/proto/recsys.proto",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L1274-L1298",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L443-L490",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L513-L548",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L684-L693"
+      ],
+      "sha256": "877434eb350790195a431be0906de6036184df39f9c79b53358b7ce8ec3b2212",
+      "bytes": 51811,
+      "git_blob_sha": "e43d23382b9faf5d9ef120af7a3d5e73a6ff9b0b",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/configs/xrecsys.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L260-L282",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L260-L322",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L263-L285",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L747-L810",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L755-L810",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L784-L810"
+      ],
+      "sha256": "c170d653ddfe117aa90d81652dc514211a696128204c9b09abc7b05d3798c15b",
+      "bytes": 43069,
+      "git_blob_sha": "9af2e8d523648c5a3eac0c1928ecb61867250db7",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/configs/xrecsys_two_tower.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L296",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L304",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L312",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L283-L292",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L283-L293",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L514-L539"
+      ],
+      "sha256": "f98bc7bed7451190a88a4c07b23ef3f02f0c6a452a730b6a80d8b07e8ef5b9cf",
+      "bytes": 40130,
+      "git_blob_sha": "c6a2d910582768fd094026eb2f2c64fa4212f42d",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/data/cold_pool_filter.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/cold_pool_filter.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/cold_pool_filter.py#L26-L63"
+      ],
+      "sha256": "289b703cb0065c33ceae2b042469143ebc68acd4e15e09d98206c5d0c66b16b9",
+      "bytes": 2568,
+      "git_blob_sha": "73cbb3a17e7596ff3c04a9fc52c2408c6a0fd888",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/data/recsys/constants.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/constants.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/constants.py#L125-L163",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/constants.py#L68-L76"
+      ],
+      "sha256": "c7712510caed9eaef70bc94ef5a7abb34d7e31957dfa2e48a4c5e21aae939e8e",
+      "bytes": 17052,
+      "git_blob_sha": "72a55c1bd634648d58ffe8dfc5d96f2ada0772f5",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/data/recsys/history_id_lists.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L25-L36",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L75-L98"
+      ],
+      "sha256": "f21bfccb4a3e7cc56cc8023080e4d423e86aa4e0c5963d8243b6e0f3ae1d6789",
+      "bytes": 20764,
+      "git_blob_sha": "5c3812a765bc38602b9d51c2f1b025a29d6f37c0",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/data/recsys/id_list_features.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/id_list_features.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/id_list_features.py#L108-L120"
+      ],
+      "sha256": "3d2092f88855bb3e797162b5978f9f7bf429262daf129cc1ea6f411a132f9be2",
+      "bytes": 16917,
+      "git_blob_sha": "4d486a0edf61ceb20ed11d5b8a5c17eea50e73ab",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/data/recsys/recsys_batch.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py#L810-L831"
+      ],
+      "sha256": "f2cbe3bfce5677443fffa478ad034727e438ee4fe2113aaaac04f2e48adda8a0",
+      "bytes": 98685,
+      "git_blob_sha": "45a1465690c4e7358ee7f9563bef00d2e5a31f30",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/data/retrieval_dataset.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L437-L479"
+      ],
+      "sha256": "1c7e44c066892c88bb80873060f1f42cb2576fc17f96976581ff4897a5ca72d1",
+      "bytes": 20102,
+      "git_blob_sha": "7a11358f0617b8f1713f28b1f40ff016b0b734aa",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/inference/model_runner.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/inference/model_runner.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/inference/model_runner.py#L4205-L4214",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/inference/model_runner.py#L5552-L5568"
+      ],
+      "sha256": "d2b7ad87f552843617252441e3a6de10505d9a7240020e92bafacae2630984bf",
+      "bytes": 240251,
+      "git_blob_sha": "d17cef83f7f1f1cf971467d872e65d62287da530",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/models/loss_recsys.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L110-L125",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L128-L187",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L190-L212"
+      ],
+      "sha256": "d13c78873b56bee023d3dd3e752887430fe0cd4da951773ea6d0447ec1ce92d3",
+      "bytes": 8518,
+      "git_blob_sha": "2226d2531daa946c6f046baf6f6a97e37544aa50",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/models/recsys_feature_prep.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_feature_prep.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_feature_prep.py#L945-L975"
+      ],
+      "sha256": "a8b0aa60b38b737e18386d10a19ab0763dca351828743b52e5dd518f7a092fe2",
+      "bytes": 52391,
+      "git_blob_sha": "b1480b07584c4ebfc69351da79fc1ca83e86f538",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/models/recsys_model.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L3363-L3389",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L4815-L4859",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L532-L553"
+      ],
+      "sha256": "8d0d113635613d21e6f51ed88342a461b34640ed8112e1931fa70bef8e998caa",
+      "bytes": 226844,
+      "git_blob_sha": "9e51463616020368972f0d5345014731346565d3",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "phoenix/xrex/models/recsys_two_tower_model.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L1799-L1838",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2293-L2323",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2711-L2739",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2868-L2878",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2897-L2924",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L621-L647"
+      ],
+      "sha256": "99a28fb7b34ef2bc6b1b449cdcfd4fc4ff6224d577582fbdac7a062bdd9240d0",
+      "bytes": 121445,
+      "git_blob_sha": "ec0599cf1316ed8df7f402b2cb145a60ae30b27e",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "safety-label-user-agg/postToUserLabelRules.strato",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L119-L142",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L152-L177",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L251-L283",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L360-L394",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L430-L432"
+      ],
+      "sha256": "95c48b943620984a28fe49c54bb68aef341d6f11f9451e9fbc78872a0e355489",
+      "bytes": 13558,
+      "git_blob_sha": "59ed4bcc1dff17a85bde75364d8cf03cbdae9fd8",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "safety-label-user-agg/safetyLabelToUserLevelAggregationV2Forwarder.strato",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Forwarder.strato",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Forwarder.strato#L3-L20"
+      ],
+      "sha256": "dddc37684dbc157fd3cbc5020d8fa541f062e04c8355964373bab0f9678adcb3",
+      "bytes": 691,
+      "git_blob_sha": "3a23a23a9010e4506705d80a3331091b7914518a",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L12-L28",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L56-L83",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L89-L106"
+      ],
+      "sha256": "048b79554aee1a9f372d13c6762f684f090f5fcd791f6621de8ef30f167494b5",
+      "bytes": 5362,
+      "git_blob_sha": "b61762483d8f16e7fb4459fed79c44b38be99f71",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "simclusters/simclusters_v2/summingbird/common/TweetEntityExtractor.scala",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/simclusters/simclusters_v2/summingbird/common/TweetEntityExtractor.scala",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/simclusters/simclusters_v2/summingbird/common/TweetEntityExtractor.scala#L14-L40"
+      ],
+      "sha256": "dbbd9452f216bd16fd835aa6248fe7e207b386dba47236fd85f32f8ce0072687",
+      "bytes": 2208,
+      "git_blob_sha": "c978fa6652c5cf55ffae2e0e497d6af10a4f90a7",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "thunder/posts/post_store.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/thunder/posts/post_store.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/thunder/posts/post_store.rs#L156-L195",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/thunder/posts/post_store.rs#L250-L282",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/thunder/posts/post_store.rs#L341-L364"
+      ],
+      "sha256": "9e2c7562aa1dcf66af2e8df62d419118cdf553fe351afec7e30cc6021428c99e",
+      "bytes": 31399,
+      "git_blob_sha": "58bec0cded9911ad1a8c1e709b08bb20760778af",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "under-the-hood/jetfuel/routes/index.tsx",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/index.tsx",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/index.tsx#L14-L32"
+      ],
+      "sha256": "730c538a87a89f5c323d7dc33d24809eeca92417dd6f163cc9c8c354d500997b",
+      "bytes": 4808,
+      "git_blob_sha": "c79cb6dcbfe7dd03a79f7c6034dc3757957159cf",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "under-the-hood/jetfuel/routes/report.tsx",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx#L25-L51"
+      ],
+      "sha256": "0393d93f3e3eb8e17838949985e355cd898189bdf12c473bb603791801bd690a",
+      "bytes": 8824,
+      "git_blob_sha": "2cd5330d8e98ac4adcdd144ffe6909eff974091a",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "under-the-hood/strato/columns/underTheHoodReport.User.strato",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L17-L22",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L423-L458",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L47-L65"
+      ],
+      "sha256": "22e1658d980ceaf190fc5bdeea08486b5396afe3ae8980156f8fb281537fd6c8",
+      "bytes": 17200,
+      "git_blob_sha": "b89c49d3e35c8c46f2ee891b6b02602406d09bf7",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "under-the-hood/strato/lib/params.strato",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/params.strato",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/params.strato#L15-L22"
+      ],
+      "sha256": "ca3507edb84068aca9dc732dacea28d6e2a5c001518c0493322e3d692ff665aa",
+      "bytes": 1001,
+      "git_blob_sha": "28ef9f83598ed64297e2dfd948ce42c26fca9c7b",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "under-the-hood/strato/lib/underTheHoodLabels.strato",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato#L117-L180",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato#L99-L104"
+      ],
+      "sha256": "10e8eb0889a2c45da656c0b1b17d0e079228a7c87dac055cea7c15c9132ea935",
+      "bytes": 18522,
+      "git_blob_sha": "2015a099d0e8a5962bc09cfec0eb7b977d844de6",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/clients/article_client.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/article_client.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/article_client.rs#L210-L220",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/article_client.rs#L81-L101"
+      ],
+      "sha256": "b528ad9046af6de8e2a726f91a317120a261469d5249c01d0a27cfd5dc303b78",
+      "bytes": 8057,
+      "git_blob_sha": "abe99e6a9f3723fd78eb8984714ab49aab61b61c",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/models/tweet.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/tweet.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/tweet.rs#L69-L71"
+      ],
+      "sha256": "f81fdf43f62fc03a894a3297c3047cbee9bb6bfd0ffa71ad9a1225e7351ed55a",
+      "bytes": 4431,
+      "git_blob_sha": "598595454c48d48f4492e5bfcc7ea6a0b6f6a65a",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/models/verdict.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/verdict.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/verdict.rs#L225-L258",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/verdict.rs#L77-L83"
+      ],
+      "sha256": "ab727b787c5c07590e368bed391242f5bf3d1a646487cf0a3cdf690aaaf1294f",
+      "bytes": 9796,
+      "git_blob_sha": "54640b70e395b46f036d04c615afe5ae2896ceff",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/params/limited_actions_policy.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs#L189-L207",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs#L49-L80"
+      ],
+      "sha256": "989574f8d8af7554e29c0c6fcac348cd17f37a9e6ec76a2d9893d4984cf446de",
+      "bytes": 13781,
+      "git_blob_sha": "061a6613939888a8729d921057e898625e2b84ba",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/rules/author_rules.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L155-L243",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L204-L208"
+      ],
+      "sha256": "25d520c97e489a52227cf206669f05d6b659bfd6b9531d0f2de30fab50896b4d",
+      "bytes": 9973,
+      "git_blob_sha": "24cc815ad496e180bd596576c395ea55afa70d5b",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/rules/golden_corpus/article.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/article.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/article.rs#L19-L70"
+      ],
+      "sha256": "93c6b5be67d3d0d8bd441b09a87884675991df5dc5a4999b32a7e39365a30de8",
+      "bytes": 10453,
+      "git_blob_sha": "e98176397d4abe082fdedf9bf8126e6d1b8056ad",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/rules/golden_corpus/label_interstitial.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/label_interstitial.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/label_interstitial.rs#L119-L165"
+      ],
+      "sha256": "94ef4a148f7025b22289bf729723452d4bdee94c12be6d5abecf0c60c659c320",
+      "bytes": 8069,
+      "git_blob_sha": "96340c97637909b5c0d6733d2b635613e9b7440b",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/rules/golden_corpus/oon_tweet_label.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/oon_tweet_label.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/oon_tweet_label.rs#L192-L268"
+      ],
+      "sha256": "ae34437228a932eb0440a6c8b155bed2f9ce14b1ca7739af60676618bf59fa26",
+      "bytes": 13114,
+      "git_blob_sha": "db6a6995ec1f78de98f1f15683fe45883b8b1c6a",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/rules/levels.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L142-L164",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L198-L212",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L215-L256",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L164",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L212"
+      ],
+      "sha256": "8e6ff359778aac53a523acebc7284a20e40eefde98bf8b940b119dd608d368c0",
+      "bytes": 15667,
+      "git_blob_sha": "40136855983ba4276f393b576858b167745549bc",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/rules/rule_spec.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec.rs#L759-L789"
+      ],
+      "sha256": "0502b5b5f3ffe074ab3dc7f2a3bf42dff4db006a0eba7c638e43dc6f198a7d73",
+      "bytes": 32772,
+      "git_blob_sha": "ab2331416a7cc4ed14bffa3ddc0de4d3bb0fc4c7",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/rules/rule_spec/engine.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/engine.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/engine.rs#L74-L76"
+      ],
+      "sha256": "8716f924527f758f042aa46ab94d104e47ca6f4a0290bdd2863106ebf5cb8ac8",
+      "bytes": 6061,
+      "git_blob_sha": "fecfca913999a426c3a467ce53a43656bec295c6",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/rules/rule_spec/features/compound.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/compound.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/compound.rs#L44-L66"
+      ],
+      "sha256": "c23ccd26d132a190d0b9762d5bcabc7ea121a44cafe337796a7303b0b2190d63",
+      "bytes": 3544,
+      "git_blob_sha": "6b9912b30c68686f63ecb2eb1f9896d58e22914b",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/rules/tweet_rules.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L161-L204",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L214-L224",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L247-L252",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L62-L79",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L919-L937",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L933-L937"
+      ],
+      "sha256": "2344220e6dfeecf938cb394d27510279595708eeafce96c6aa8dd33b1d15934b",
+      "bytes": 39801,
+      "git_blob_sha": "fdb31ab087e37fa0abc82a98a8bf7a2ab51e79ce",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "visibility-filtering/treatment.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/treatment.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/treatment.rs#L81-L115"
+      ],
+      "sha256": "fa9cd8942e9402f0be82388a677f246539a23f4f423fcf4a7fac972bb41b4741",
+      "bytes": 70580,
+      "git_blob_sha": "1ae2af4feb45c3a786eccbe19653838931f2e205",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "vm-ranker/dpp.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/dpp.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/dpp.rs"
+      ],
+      "sha256": "a91d5d977d195391543b67e3a7cda2b4925a4cf05d2d3a555878fa903bf933a9",
+      "bytes": 16253,
+      "git_blob_sha": "0b5952e48adbd146c83163293e7f37bf2a2b3aeb",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "vm-ranker/params.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L108-L131",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L12-L27",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L145-L155",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L169-L197",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L155",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L4",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L66-L89",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L78-L89"
+      ],
+      "sha256": "3315b375459c75a71d101cb35c55ca53db7adf7fa86af3258d20faf966a67aa9",
+      "bytes": 5728,
+      "git_blob_sha": "626997804154fa340e6163e01034d694d0b173b8",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "vm-ranker/scoring/dpp_model.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/dpp_model.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/dpp_model.rs"
+      ],
+      "sha256": "d7899f6bf0f09b8eab3524b7ab46b3cbe0f30f42ad7c781f147c5ef557e46766",
+      "bytes": 6122,
+      "git_blob_sha": "25fb65f1d9a47e3ea84b03db958c560aeb6a21ee",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "vm-ranker/scoring/mod.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/mod.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/mod.rs"
+      ],
+      "sha256": "b839079b928fff0508fcb2410e9103e0984c93d4d8d9ebbba131af3fc9139fdb",
+      "bytes": 20023,
+      "git_blob_sha": "0b8b11a3ce520a270c0da690f78f3bad56c3b9e4",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "vm-ranker/scoring/value_model.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/value_model.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/value_model.rs#L71-L118"
+      ],
+      "sha256": "8288768e2e7e78762376002fa85c59f40a592e222077b2ff7b91f976e4f75b7a",
+      "bytes": 11373,
+      "git_blob_sha": "066a4b8eacf553d4d5bf2f677440881e21b452fa",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "xai-value-model/inputs.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L1-L22",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L19-L22"
+      ],
+      "sha256": "58cd9b864933dff0f071b744304bcbcbffab3585f6fe000bb4d7e197255b1570",
+      "bytes": 963,
+      "git_blob_sha": "c75087f6c84ed7413497079359382750ebf4d00b",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "xai-value-model/phoenix_scores.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs#L1-L31"
+      ],
+      "sha256": "edc4632554b390105f42c362f61a761996e164c86c19253d709a9a46fe3bebd2",
+      "bytes": 1176,
+      "git_blob_sha": "9b3f937d848483bd781c47168f34f73a1d25d7f0",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "xai-value-model/scoring.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L108-L113",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L161-L179",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L203",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L263-L279",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L28-L139",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L282-L327",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L315-L327",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L57-L139",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L92-L139"
+      ],
+      "sha256": "db4757ee53bbbaa7ef83226d5426e2cdf5c6b6c129374e71693aaef8981364e2",
+      "bytes": 16905,
+      "git_blob_sha": "c9ceaa79ca29b3bf5677a1f990155f897810c54d",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "path": "xai-value-model/weights.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L7-L47",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L84-L99"
+      ],
+      "sha256": "017f81879d46ab65c29ae65a0f767bda9efc639b791024835a7be84a6186e40a",
+      "bytes": 7201,
+      "git_blob_sha": "d97e99647ec0bf21c95af64bc601b55a65ae48f8",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "606b254b45be798bfaecfa8c23f5a9c51bc8000c",
+      "path": "home-mixer/params/param.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/params/param.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/params/param.rs#L1191-L1196",
+        "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/params/param.rs#L1245-L1269",
+        "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/params/param.rs#L309-L365",
+        "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/params/param.rs#L396-L513"
+      ],
+      "sha256": "1ff12652381d39e999b48b07f848277abe18fbcda757d608a0854706a050b040",
+      "bytes": 26131,
+      "git_blob_sha": "a24f517f0bdf0750e11ffcfb3c373a634852c9cb",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "606b254b45be798bfaecfa8c23f5a9c51bc8000c",
+      "path": "home-mixer/util/video_carousel.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/util/video_carousel.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/util/video_carousel.rs#L178-L209"
+      ],
+      "sha256": "d49517818536cf858ba55a6da9a8ae34719413381f25238521a3f8b224c87ffd",
+      "bytes": 14680,
+      "git_blob_sha": "de5ae9d6fc3592e66f36347271d97c5455922d95",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "606b254b45be798bfaecfa8c23f5a9c51bc8000c",
+      "path": "phoenix/xrex/configs/xrecsys.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/606b254b45be798bfaecfa8c23f5a9c51bc8000c/phoenix/xrex/configs/xrecsys.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/phoenix/xrex/configs/xrecsys.py#L421-L432"
+      ],
+      "sha256": "ab3aeca8c09eb9c5ae5987e27188c0a03c1763177e1c325cc219315f703a4eee",
+      "bytes": 43892,
+      "git_blob_sha": "40b517f07fa5d5ec3ce1f9cc7de0e0a2e2bd4642",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "606b254b45be798bfaecfa8c23f5a9c51bc8000c",
+      "path": "visibility-filtering/models/viewer.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/models/viewer.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/models/viewer.rs#L120-L143"
+      ],
+      "sha256": "b3e8fc91882550598c2eaff0298b142b76d7c21f18415f15a444a20641afcec2",
+      "bytes": 9660,
+      "git_blob_sha": "28790a7e151fa3e36f3f2ef036fdccf60441ee56",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "606b254b45be798bfaecfa8c23f5a9c51bc8000c",
+      "path": "visibility-filtering/rules/levels.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/levels.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/levels.rs#L195-L258",
+        "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/levels.rs#L258-L297"
+      ],
+      "sha256": "dd0bd39e161ad720a2cd9bc28477aaa83ddbc524416477a7260711be71485de5",
+      "bytes": 13272,
+      "git_blob_sha": "03ef8f815f5a8c0b1a3141a49dbac9a36ddfaaed",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "606b254b45be798bfaecfa8c23f5a9c51bc8000c",
+      "path": "visibility-filtering/rules/tweet_rules.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/tweet_rules.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/tweet_rules.rs#L162-L205",
+        "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/tweet_rules.rs#L251-L256"
+      ],
+      "sha256": "a03abfaa7c9bab71f9667479a380df16c76711eb3ec72d8ad702dac238d5b338",
+      "bytes": 40162,
+      "git_blob_sha": "ad04ee150c52e1341a70fc77a7a2e19138966e7c",
+      "matches_existing_tree_blob": true
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "7f2ca2b914cadac591ea7fceec0c477e473d3dee",
+      "path": "home-mixer/filters/fair_share_ranking_filter.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/7f2ca2b914cadac591ea7fceec0c477e473d3dee/home-mixer/filters/fair_share_ranking_filter.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/7f2ca2b914cadac591ea7fceec0c477e473d3dee/home-mixer/filters/fair_share_ranking_filter.rs#L1-L109"
+      ],
+      "sha256": "7c61de45f17cff34f9c51cba548641c87ff888743e7414a67e8298e4cf048e83",
+      "bytes": 5661,
+      "git_blob_sha": "208fd3b67415a76128135f972ff0f104e4d497e7"
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "7f2ca2b914cadac591ea7fceec0c477e473d3dee",
+      "path": "home-mixer/params/param.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/7f2ca2b914cadac591ea7fceec0c477e473d3dee/home-mixer/params/param.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/7f2ca2b914cadac591ea7fceec0c477e473d3dee/home-mixer/params/param.rs#L1188-L1199"
+      ],
+      "sha256": "6196b9ded5fb57b578ecb8315374ff1620513b778bc9de6123acb4caddab8a1b",
+      "bytes": 24297,
+      "git_blob_sha": "426a6edba82c9f8960d5f642293e7f0b0cbb459d"
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "989fb91254d461bf4b9df53fb12d5c9a61c2b354",
+      "path": "home-mixer/params/param.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/989fb91254d461bf4b9df53fb12d5c9a61c2b354/home-mixer/params/param.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/989fb91254d461bf4b9df53fb12d5c9a61c2b354/home-mixer/params/param.rs#L1200-L1211"
+      ],
+      "sha256": "64944a9b8f5d56eefe85b31aa4a15a0a8de9367edac8f205099b70ddf89cfef0",
+      "bytes": 24592,
+      "git_blob_sha": "b9688622ee150ad7ac756bef44b782071c17322c"
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "cb45b5501423126adfc508052116c2d67c0e3fec",
+      "path": "home-mixer/params/param.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/cb45b5501423126adfc508052116c2d67c0e3fec/home-mixer/params/param.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/cb45b5501423126adfc508052116c2d67c0e3fec/home-mixer/params/param.rs#L314-L419",
+        "https://github.com/xai-org/x-algorithm/blob/cb45b5501423126adfc508052116c2d67c0e3fec/home-mixer/params/param.rs#L477-L544"
+      ],
+      "sha256": "eff66ec5d872f2ef7afd44752875ba0f7fcbac6e51a6e2202d251285954e0958",
+      "bytes": 21601,
+      "git_blob_sha": "ec03188806db6ee25cf89005d5b7d9086c2c5e79"
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "e1a0375a903899984545c663bb0bccb3cdcdf046",
+      "path": "home-mixer/params/param.rs",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/e1a0375a903899984545c663bb0bccb3cdcdf046/home-mixer/params/param.rs",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/e1a0375a903899984545c663bb0bccb3cdcdf046/home-mixer/params/param.rs#L320",
+        "https://github.com/xai-org/x-algorithm/blob/e1a0375a903899984545c663bb0bccb3cdcdf046/home-mixer/params/param.rs#L341-L346",
+        "https://github.com/xai-org/x-algorithm/blob/e1a0375a903899984545c663bb0bccb3cdcdf046/home-mixer/params/param.rs#L401-L406"
+      ],
+      "sha256": "82cf24396bdd20ac25d18444140e50a641ca3a2336b7c008918f183a7922fcf2",
+      "bytes": 22075,
+      "git_blob_sha": "73da50c7eea985a10b820305cd589231757077a2"
+    },
+    {
+      "repo": "xai-org/x-algorithm",
+      "ref": "e1a0375a903899984545c663bb0bccb3cdcdf046",
+      "path": "phoenix/xrex/configs/xrecsys_two_tower.py",
+      "raw_url": "https://raw.githubusercontent.com/xai-org/x-algorithm/e1a0375a903899984545c663bb0bccb3cdcdf046/phoenix/xrex/configs/xrecsys_two_tower.py",
+      "status": "retrieved",
+      "citations": [
+        "https://github.com/xai-org/x-algorithm/blob/e1a0375a903899984545c663bb0bccb3cdcdf046/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L296"
+      ],
+      "sha256": "8d2a7dde8ff760ad65c38c4a5f2ea1261ae93efe1202924355314d12cbb3753c",
+      "bytes": 38154,
+      "git_blob_sha": "3b518f8e69fc813722d90c5f7fd42592511513cd"
+    }
+  ]
+}

@@ -1,0 +1,2226 @@
+[
+  {
+    "id": "K02-001",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/retrieval_sequence_query_hydrator.rs#L30-L64",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L141"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0124 L441, U0125 L443. The query hydrator fetches history by query.user_id and Phoenix forwards that reader's sequence; the advice correctly does not substitute the author's browsing."
+  },
+  {
+    "id": "K02-002",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L1799-L1838",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md#L101-L121"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0125 L443. The candidate tower includes author and post semantic IDs; the README explains multimodal post representation. The claim preserves the separation from the reader tower."
+  },
+  {
+    "id": "K02-003",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/retrieval_sequence_query_hydrator.rs#L30-L64",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L141",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L1799-L1838"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0126 L445. The examined retrieval interface consumes the current reader's sequence, not an author-selected future audience. The myth rebuttal remains scoped to this path and avoids a global impossibility claim."
+  },
+  {
+    "id": "K02-004",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0127 L447. Editorial title advice preserves the report's reader-problem framing and makes no ranking-weight or reach promise."
+  },
+  {
+    "id": "K02-005",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/retrieval_sequence_query_hydrator.rs#L30-L64",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L141",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L1799-L1838",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md#L101-L121"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0128 L449. Topic consistency is presented as editorial practice. The inspected reader/candidate representations do not establish the proposed fixed purity formula."
+  },
+  {
+    "id": "K02-006",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L38-L40"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0129 L453. The pinned official README dates the reading-oriented retrieval update October 13; the claim distinguishes that event from the later README insertion."
+  },
+  {
+    "id": "K02-007",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L296",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L514-L539",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L621-L647"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0130 L455, U0131 L457-459, U0132 L461, U0143 L493, U0155 L539-544. Both named configurations register CLIENT_TWEET_RECAP_DWELLED for ld; model action-mask handling uses the configured positive actions. Event name is not promoted to a complete collection definition."
+  },
+  {
+    "id": "K02-008",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L312",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L514-L539",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2711-L2739"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0130 L455, U0132 L461, U0138 L479. Named ld heads and per-head positive/negative loss calls substantiate trainability. Conditions retain configuration and sample requirements; production checkpoint coverage stays unknown."
+  },
+  {
+    "id": "K02-009",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2293-L2323",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/inference/model_runner.py#L5552-L5568",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L260-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L3363-L3389",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L4815-L4859"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0130 L455, U0132 L461, U0138 L479. Retrieval head-weight application and model_runner invocation are visible; the separately cited CREAD code supports the distinction from ranking dwell targets."
+  },
+  {
+    "id": "K02-010",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L621-L647",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L304"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0132 L461, U0143 L493, U0155 L539-544. Action configuration and mask construction expose the event identifier but not complete client collection semantics. The asserted gap, including completion and attribution, remains appropriately bounded."
+  },
+  {
+    "id": "K02-011",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0133 L463. Reference-post usability is an editorial diagnostic, not a conclusion that few replies cause or prove poor retrieval."
+  },
+  {
+    "id": "K02-012",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/35650fb89f3b14dc6234312535f642779d891d88/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L296"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0134 L467, U0135 L469-473, U0136 L475. The exact October 8 configuration contains home and immersive heads, with no ld entry. The historical claim is limited to that named file."
+  },
+  {
+    "id": "K02-013",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/commit/e1a0375a903899984545c663bb0bccb3cdcdf046",
+      "https://github.com/xai-org/x-algorithm/blob/e1a0375a903899984545c663bb0bccb3cdcdf046/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L296"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0135 L469-473, U0136 L475, U0137 L477. The October 13 commit and exact-ref configuration add ld actions, a third head, and w_ld; the corresponding model patch supplies handling. Public commit date is not treated as rollout proof."
+  },
+  {
+    "id": "K02-014",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L38-L40",
+      "https://github.com/xai-org/x-algorithm/commit/5ed796374ea48ee26058aab66ab10c266bea2bef"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0135 L469-473, U0136 L475, U0137 L477. The October 28 commit patch adds the October 13 README update entry. The English correctly distinguishes documentation insertion from the announced update date."
+  },
+  {
+    "id": "K02-015",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L38-L40",
+      "https://github.com/xai-org/x-algorithm/commit/5ed796374ea48ee26058aab66ab10c266bea2bef",
+      "https://github.com/xai-org/x-algorithm/commit/e1a0375a903899984545c663bb0bccb3cdcdf046",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L312",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L514-L539",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2897-L2924"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0137 L477, U0138 L479, U0142 L491. The inspected historical patches/configurations do not supply rollout percentages, checkpoint mappings, or causal reach results; the record accurately preserves those unknowns."
+  },
+  {
+    "id": "K02-016",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L312",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L514-L539",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2293-L2323",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2897-L2924"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0138 L479, U0140 L483-487, U0141 L489, U0142 L491. Combined and home-only configurations include ld with w_ld=0.75; query head weights are consumed in retrieval. The coefficient is not a per-reading author reward."
+  },
+  {
+    "id": "K02-017",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L280-L312",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L514-L539"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0138 L479, U0139 L481. The named ld configuration and loss routing have no follower-count eligibility gate. Scope remains the inspected configuration, not a claim about every production routing decision."
+  },
+  {
+    "id": "K02-018",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/cold_pool_filter.py#L26-L63",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L437-L479"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0139 L481, U0186 L646-652. HOME_COLD derives from HOME post metadata and freshness masks; cold_pool_filter uses favorites/views rather than author follower count. Missing-metadata handling is not a small-author guarantee."
+  },
+  {
+    "id": "K02-019",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L263-L285",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L190-L212",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L532-L553"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0144 L497, U0155 L539-544, U0157 L548, U0158 L550, U0159 L552-554. The named click-dwell head selects binary loss with threshold 10, and binary_threshold_loss_compute compares raw input strictly greater than the threshold. Inference excludes binary outputs from duration rescaling."
+  },
+  {
+    "id": "K02-020",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L32-L44",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L260-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L784-L810",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L110-L125",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L128-L187",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L3363-L3389"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0144 L497, U0165 L568. The README's October 8 dwell statement and named CREAD configuration agree; training settings and time reconstruction are visible without establishing formal production accuracy."
+  },
+  {
+    "id": "K02-021",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L784-L810",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L110-L125"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0145 L501, U0146 L503-512, U0147 L514, U0155 L539-544, U0156 L546. The non-Gallery head sets 30 thresholds, minimum 2, norm_scale 120. These modeling values are not posting length or guaranteed useful-reading limits."
+  },
+  {
+    "id": "K02-022",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L784-L810",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L110-L125"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0145 L501, U0146 L503-512, U0147 L514, U0155 L539-544, U0156 L546. The Gallery Page immersive head sets 30 thresholds, minimum 2, norm_scale 240. The record retains this head-specific scope."
+  },
+  {
+    "id": "K02-023",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L784-L810",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L110-L125"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0145 L501, U0146 L503-512, U0147 L514. cread_log_thresholds spaces thresholds geometrically in log space and explicitly ends at norm_scale; the English preserves nonuniform intervals."
+  },
+  {
+    "id": "K02-024",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L128-L187"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0146 L503-512, U0147 L514, U0148 L516. CREAD classification targets compare raw ground truth to thresholds using strict >; restoration target clamping is separate, so equality and above-cap inputs must not be conflated."
+  },
+  {
+    "id": "K02-025",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L3363-L3389"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0149 L520, U0150 L522-527, U0151 L529. The decoder applies sigmoid and sums probabilities times adjacent-threshold widths beginning at zero. This is reconstructed predicted time, not a count of readings."
+  },
+  {
+    "id": "K02-026",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L3363-L3389"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0152 L531. The hypothetical interval calculation is 0.8*2+0.5*3+0.2*5=4.1. It is clearly a three-threshold teaching example alongside the actual 30-threshold configuration."
+  },
+  {
+    "id": "K02-027",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L128-L187",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L4815-L4859"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0153 L533. cread_loss_compute combines classification loss with weighted restoration loss; the claim correctly separates class targets from reconstructed-time error."
+  },
+  {
+    "id": "K02-028",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L784-L810",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L128-L187",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L4815-L4859"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0153 L533. The named configuration specifies Huber, restoration weight 0.5, and a 5-second Huber parameter; the training call converts that parameter to normalized units."
+  },
+  {
+    "id": "K02-029",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L128-L187",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L4815-L4859"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0153 L533. Valid masks, negative-sample masks, sentinel handling and weights occur in the active training call/loss. The claim does not reduce this to unweighted error on every sample."
+  },
+  {
+    "id": "K02-030",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L260-L282"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0154 L535. Both CREAD head loss weights are 0.1; the named older Tweedie and MAE weights are zero. This is a configuration statement, not a universal model architecture claim."
+  },
+  {
+    "id": "K02-031",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L260-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L4815-L4859",
+      "https://github.com/xai-org/x-algorithm/blob/e1a0375a903899984545c663bb0bccb3cdcdf046/home-mixer/params/param.rs#L401-L406",
+      "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/home-mixer/params/param.rs#L396-L513"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0154 L535. The 0.1 training loss weights and 0.006 Home Mixer fusion coefficient occur in separate files/stages; October 13 and comparison-snapshot 0.006 values were checked independently."
+  },
+  {
+    "id": "K02-032",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L661",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L285-L309",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/engagement_counts_hydrator.rs#L16-L48",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L633-L661",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L236-L255",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L257-L282"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0155 L539-544, U0156 L546. Engagement hydration exposes Home view counts; cold-start eligibility/sampling uses them as counts. No conversion to elapsed reading time is present in these paths."
+  },
+  {
+    "id": "K02-033",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L483-L488",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L108-L113"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0155 L539-544, U0157 L548. Home Mixer declares ContClickDwellTimeWeight=0.4 and fusion multiplies the click_dwell_time field by it. The record preserves the untraced service adapter limitation."
+  },
+  {
+    "id": "K02-034",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L190-L212",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L108-L113",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/phoenix_scorer.rs#L131-L141",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L532-L553"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0157 L548. The binary model output and Home Mixer prediction consumer are separately visible. The pinned repository tree does not contain the imported phoenix_prediction_client component-library adapter, so end-to-end identity remains unproved here."
+  },
+  {
+    "id": "K02-035",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L190-L212"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0158 L550, U0159 L552-554, U0160 L556. Original-function CPU artifact phoenix_loss_results.json records 0/0/1/1 for 9/10/10.0001/20; its three source hashes match fresh pinned files. Code independently confirms >10. Legacy log wording says seconds, which this claim correctly does not use as unit proof."
+  },
+  {
+    "id": "K02-036",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/crates/serving/xai-recsys-engine/src/util.rs#L131-L149",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/crates/serving/xai-recsys-engine/src/util.rs#L394-L404",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py#L810-L831",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scored_posts_server.rs#L143-L148"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0144 L497, U0155 L539-544, U0160 L556. The serving code converts metadata dwell milliseconds for DwellTime; Arrow/batch copying does not independently establish CLICK_DWELL_TIME collection units or Article attribution. Output display in seconds is not upstream click-event proof."
+  },
+  {
+    "id": "K02-037",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0161 L558, U0162 L560. Editorial advice asks the writing to fulfill its promise and does not prescribe artificial delay or a duration-based reach guarantee."
+  },
+  {
+    "id": "K02-038",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0163 L562. Image readability and usefulness are editorial recommendations; the record does not invent a minimum viewing duration or image ranking bonus."
+  },
+  {
+    "id": "K02-039",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0164 L566. Task-based reading organization is faithfully preserved, including the rejection of stretching text merely to cross a numeric threshold."
+  },
+  {
+    "id": "K02-040",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L32-L44",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L260-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L784-L810",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L110-L125",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L128-L187",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L3363-L3389",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L4815-L4859"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0165 L568. The official announcement plus public training implementation do not include a reproducible formal accuracy/reach evaluation. The conclusion reports that evidence gap without denying possible effects."
+  },
+  {
+    "id": "K02-041",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L96-L156",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/stream_forwarders/favoritePhoenixIndexingEventForwarder.strato#L3-L17",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L46-L98",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L470-L529",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/config/mod.rs#L168-L224",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/store/base.rs#L1195-L1220",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L149",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L507"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0166 L572. Named 1fav/32fav storage indexes and Favorite forwarding are real; candidate processing, Phoenix retrieval, filters and scoring establish that index entry is not display."
+  },
+  {
+    "id": "K02-042",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L96-L156"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0167 L574, U0168 L576-581, U0169 L583. favoriteEventProcessor handles Favorite events only when the engagement payload contains favoriteCount. The claim retains the need for a readable count."
+  },
+  {
+    "id": "K02-043",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L96-L156",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L28-L70"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0168 L576-581, U0169 L583. Uncached handling gates on post age and count ceiling, not equality to one. It is not a claim that every first like guarantees indexing or delivery."
+  },
+  {
+    "id": "K02-044",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L96-L156",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L28-L70"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0168 L576-581, U0169 L583, U0170 L585-592, U0171 L594, U0172 L596. Cached handling jointly tests post age, first-update age, last-update interval, next threshold and ceiling. All five requirements are retained rather than flattening them into a like threshold alone."
+  },
+  {
+    "id": "K02-045",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L28-L70"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0168 L576-581, U0169 L583. Missing creation time is replaced with zero in the Favorite update age expression; this is a fallback within that update path, not proof of a real zero creation date."
+  },
+  {
+    "id": "K02-046",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L28-L70",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L444"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0172 L596. The post-age, first-update-age, update-spacing and ordinary-candidate AgeFilter timers govern different stages. Their distinct comparisons and units are preserved."
+  },
+  {
+    "id": "K02-047",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L14-L57"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0173 L600, U0174 L602-608, U0175 L610. nextPowerOfTwo uses floor(log2(count))+1 for positive counts, producing the strictly higher power; threshold update follows indexing publication in the inspected path."
+  },
+  {
+    "id": "K02-048",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L14-L57"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0174 L602-608, U0175 L610. The next-trigger function explicitly maps zero to 2. The claim correctly keeps this special case separate from a logarithm of zero."
+  },
+  {
+    "id": "K02-049",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L14-L57",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L28-L70"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0176 L612. With a cached update at 16, the next count threshold is 32, but only thirty seconds elapsed still fails the one-minute condition. This is conditional arithmetic, not a live indexing observation."
+  },
+  {
+    "id": "K02-050",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L96-L156",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L14-L57",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L28-L70",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L149",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L507"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0177 L614. The full conjunction and downstream retrieval/filtering make a raw count of 31, 32 or 33 insufficient for an exposure diagnosis. No unsupported unlock guarantee is introduced."
+  },
+  {
+    "id": "K02-051",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L437-L455",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L470-L529",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L46-L98"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0178 L618. The candidate processor refetches core/author/engagement data and then applies source-specific and eligibility routing. The English retains that a prior event count is not the later refetched count."
+  },
+  {
+    "id": "K02-052",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L46-L98"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0179 L620-626, U0180 L628, U0181 L630-634, U0182 L636, U0183 L638. The 1fav builder logs a zero-count race yet still builds candidates; it does not repeat a minimum-one gate there. Earlier event prerequisites remain separate."
+  },
+  {
+    "id": "K02-053",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L46-L98",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L437-L455",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L470-L529"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0179 L620-626, U0180 L628. The 32fav branch checks the refetched favorite count against >=32. This exact builder condition is not generalized into a platform exposure trigger."
+  },
+  {
+    "id": "K02-054",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L46-L98",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L470-L529"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0179 L620-626, U0180 L628. search_unfiltered construction precedes reply and ordinary visibility routing and has its own Favorite/non-community/non-repost/minimum-count requirements."
+  },
+  {
+    "id": "K02-055",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L277-L298",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L470-L529"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0179 L620-626, U0180 L628. Reply routing uses distinct 1fav_reply and 32fav_reply builders, including its own author/visibility conditions. The claim does not identify them with ordinary HOME data consumption."
+  },
+  {
+    "id": "K02-056",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L301-L309",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L470-L529"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0179 L620-626, U0180 L628. PostCreation routes to a separate post_creation index. The conclusion preserves event type rather than making all creation events ordinary like-index updates."
+  },
+  {
+    "id": "K02-057",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L470-L529"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0184 L640. Ordinary branches skip Community posts and reposts; reply/adult-video handling uses separate branches. The record avoids a platform-wide exclusion claim."
+  },
+  {
+    "id": "K02-058",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/config/mod.rs#L168-L224",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/store/base.rs#L1195-L1220"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0185 L644, U0186 L646-652, U0187 L654. rankall config/storage enumerates Main1Fav24H, Main1Fav48H and Main32Fav24H with corresponding files. Index storage windows are not universal recommendation lifetimes."
+  },
+  {
+    "id": "K02-059",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L437-L479"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0186 L646-652, U0187 L654. HOME, HOME_COLD and HOME_HOT resolve to 1fav_1day, with cold/hot derived from the HOME corpus. This is dataset configuration, not proof of all online consumers."
+  },
+  {
+    "id": "K02-060",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L46-L98",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L470-L529",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/config/mod.rs#L168-L224",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/store/base.rs#L1195-L1220",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L437-L479"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0186 L646-652, U0187 L654, U0188 L656. The ordinary 32fav index and builders are visible, while the cited HOME dataset consumes 1fav_1day. The record correctly leaves a specific ordinary 32fav For You consumer untraced instead of denying all consumers."
+  },
+  {
+    "id": "K02-061",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0188 L656. IMMERSIVE32FavVideo14To30Day is explicitly a separate video dataset. Its name cannot be used as proof of an ordinary HOME 32fav consumer."
+  },
+  {
+    "id": "K02-062",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L149",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L507"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0189 L658. The Phoenix source and candidate pipeline show retrieval, filtering, scoring and selection after corpus availability. The claim appropriately denies automatic display from dataset entry."
+  },
+  {
+    "id": "K02-063",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L28-L139",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L7-L47",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L92-L139"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0190 L662, U0197 L681-685, U0198 L687. Neither the inspected shared weights structure nor weighted fusion sum contains a separate bookmark term; bookmark effects in other stages remain possible."
+  },
+  {
+    "id": "K02-064",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs#L31-L105",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L716-L732",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L48-L53",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs#L31-L111"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0191 L664. BookmarkMetadata is extracted from explicit engagement signals for query.user_id. Source/default switches and per-type limits are distinguished from author-facing bonuses."
+  },
+  {
+    "id": "K02-065",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs#L31-L105",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L213-L329",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs#L31-L111"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0191 L664, U0192 L666, U0197 L681-685, U0198 L687. Bookmark signals join the sorted/deduplicated seed set for similar-content retrieval for that reader. The mechanism supports personalization, not a claim of direct distribution credits for the bookmarked author."
+  },
+  {
+    "id": "K02-066",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L283-L293",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2868-L2878",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2711-L2739"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0193 L670, U0194 L672-675, U0195 L677, U0196 L679, U0197 L681-685, U0198 L687. CLIENT_TWEET_BOOKMARK is configured among immersive positive actions and passed through per-head loss logic. The claim stays within immersive retrieval training."
+  },
+  {
+    "id": "K02-067",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L716-L738",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L716-L732"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0191 L664, U0199 L689. The explicit-signal hydrator applies the configured per-type cap of 15 after sorting/deduplication. It is not fifteen guaranteed posts per author or per display page."
+  },
+  {
+    "id": "K02-068",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L48-L53",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L213-L329"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0191 L664, U0199 L689. SimClusters source enablement checks its switch, non-network-only request, no cached posts and usable signals. The claim retains all these activation requirements."
+  },
+  {
+    "id": "K02-069",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L25-L36",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L213-L329"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0199 L689, U0200 L691. The seed-age check uses creation time decoded from the post ID and a ninety-day maximum, not the time a user bookmarked it."
+  },
+  {
+    "id": "K02-070",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L716-L738",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L25-L36",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L213-L329"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0199 L689. SimClusters candidate age defaults to forty-eight hours and separate similarity/count limits apply. Seed age and candidate age remain distinct."
+  },
+  {
+    "id": "K02-071",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L7-L47",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L92-L139",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs#L31-L111",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L213-L329",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L283-L293",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2711-L2739"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0192 L666, U0196 L679, U0197 L681-685, U0200 L691, U0201 L693. Bookmark seeds and training actions are supported, but the inspected shared fusion has no bookmark coefficient or exposure redemption contract. The uncertainty is faithfully preserved."
+  },
+  {
+    "id": "K02-072",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0202 L697, U0203 L699. The procurement-checklist example is an editorial reusable-resource recommendation, with no claim that bookmarks guarantee reach."
+  },
+  {
+    "id": "K02-073",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0203 L699, U0204 L701-705. The meeting-summary example preserves the veto condition and the decision not to use a proposal; it tests content fidelity, not ranking mechanics."
+  },
+  {
+    "id": "K02-074",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0203 L699, U0204 L701-705. The meeting-summary example keeps a proposal distinct from a decision. No source evidence is needed for this editorial fidelity rule."
+  },
+  {
+    "id": "K02-075",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0203 L699, U0204 L701-705. The meeting-summary example preserves pending budget approval rather than inventing authorization. It is editorial, not an algorithm statement."
+  },
+  {
+    "id": "K02-076",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0205 L707-708, U0206 L710. The ending recommendation explains when/how material can be reused, without inventing a fixed bookmark call-to-action bonus."
+  },
+  {
+    "id": "K02-077",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L28-L139",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L396-L513",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs#L31-L105",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L213-L329"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0207 L712. Shared fusion distinguishes generic share, DM share and copied-link predictions; explicit engagement seed handling is a separate reader signal path. Public repost counts are not interchangeable with those predictions."
+  },
+  {
+    "id": "K02-078",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L19-L22",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/bidirectional_follow_hydrator.rs#L15-L61",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs#L8-L87"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0208 L716, U0209 L718-720, U0210 L722. Hydration checks both follow directions; shared eligibility additionally excludes replies and reposts. The claim includes all conditions for the mutual-follow term."
+  },
+  {
+    "id": "K02-079",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L396-L408",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L4",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L145-L155",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L84-L99"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0210 L722. Both relevant defaults have reply=5 and mutual-follow boost=15, and reply_weight adds them only when eligible. The value20 is a coefficient on a prediction, not points for one reply."
+  },
+  {
+    "id": "K02-080",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L396-L408",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L145-L155",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L84-L99"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0210 L722. The extra mutual-follow dwell weight is zero in both inspected defaults. The general dwell term remains separate, as the claim states."
+  },
+  {
+    "id": "K02-081",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L396-L408",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L4",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L145-L155",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L19-L22",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L84-L99"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0211 L724-727, U0212 L729. At fixed probability0.02, the reply term changes from0.10 to0.40 for eligible candidates. The hypothetical example does not multiply total score or impressions by four."
+  },
+  {
+    "id": "K02-082",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0213 L733. VM Ranker ordinary OON default is0.75 and shared scoring applies the effective request-specific multiplier. The record does not universalize it to every service path."
+  },
+  {
+    "id": "K02-083",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L19-L22",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L84-L99"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0214 L735. OON behavior depends on query context, network status and optional in-network reply/repost rescoring; the code supplies no follower-count points table."
+  },
+  {
+    "id": "K02-084",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L19-L22",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/oon_retweet_reply_filter.rs#L15-L27",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L67-L78",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L429"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0215 L737. A reply fails the shared non-reply eligibility for the mutual-follow bonus. Separate OON-reply filtering further depends on Phoenix routing/flags; no large-account reply bonus is inferred."
+  },
+  {
+    "id": "K02-085",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0216 L741. Inviting specific, answerable contributions is editorial guidance and does not promise that any reply count creates a ranking reward."
+  },
+  {
+    "id": "K02-086",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0217 L743. The advice preserves verification of reader counterexamples and treats ongoing discussion/mutual following as possible social outcomes, not guaranteed algorithmic uplift."
+  },
+  {
+    "id": "K02-087",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L425-L430",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L92-L139"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0218 L747, U0219 L749-752, U0220 L754. The named profile_click coefficient is zero in Home Mixer. The record carefully separates this direct fusion term from possible indirect effects and other paths."
+  },
+  {
+    "id": "K02-088",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L459-L464",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L92-L139",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L78-L89"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0218 L747, U0219 L749-752, U0220 L754. The inspected follow_author coefficient is4 and fusion applies it to the predicted event. The claim does not equate an observed follow to four final points."
+  },
+  {
+    "id": "K02-089",
+    "translation_status": "finding",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L186-L215",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50"
+    ],
+    "findings": [
+      "KB-F04"
+    ],
+    "notes": "All fields compared with original report U0221 L756. The renderer does include author name/handle/bio, but the added limit incorrectly implies no numeric limit is available in this scope: the cited file defines MAX_BIO=500 and slices to it. See KB-F04."
+  },
+  {
+    "id": "K02-090",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0222 L760, U0223 L762-763, U0225 L767. The bio recommendation is about explaining a credible next benefit to readers, without a keyword-density ranking promise."
+  },
+  {
+    "id": "K02-091",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0224 L765, U0225 L767. Pinned examples are editorial evidence for the bio's promise. The claim makes no fixed ranking bonus or guaranteed audience-growth assertion."
+  },
+  {
+    "id": "K02-092",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0225 L767. The English preserves the report's distinction between clarifying the bio and proving a recommendation-audience reset; neither the cited rendering capability nor the report establishes such a reset."
+  },
+  {
+    "id": "K02-093",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L28-L139",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L490-L513",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L108-L131"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0226 L771, U0229 L777. Fusion includes separate not-interested, block, mute and report predictions with their weights. Existing relationship state and realized counts are not substituted for predictions."
+  },
+  {
+    "id": "K02-094",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/author_socialgraph_filter.rs#L15-L54",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L469"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0227 L773. AuthorSocialgraphFilter removes candidates for existing viewer mute/block relationships, including relevant attached authors. This is a filter, distinct from predicted negative-action penalties."
+  },
+  {
+    "id": "K02-095",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0228 L775. Product criticism retaining methods and counterexamples is editorial advice, not a claim that critical sentiment itself is penalized."
+  },
+  {
+    "id": "K02-096",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0229 L777. The comment-quality diagnostic distinguishes substantive conditions/questions from insults without claiming a complete toxicity classifier or numerical score."
+  },
+  {
+    "id": "K02-097",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L490-L513",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L108-L131"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0229 L777. Home Mixer and VM Ranker negative-weight values differ in the pinned files. The claim preserves path-specific defaults and avoids constructing one universal formula."
+  },
+  {
+    "id": "K04-001",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L296-L333",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L624"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0328 L1083, U0329 L1085-1088, U0330 L1090. Cold-start eligibility uses view_count_on_home below200, not a promise to distribute every post to200 people. The exact field and strict comparison are retained."
+  },
+  {
+    "id": "K04-002",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L661",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L285-L309"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0330 L1090, U0333 L1098, U0334 L1100-1107, U0335 L1109, U0336 L1111, U0338 L1115-1122, U0339 L1124. A decoded age<=7200 seconds and existing Home impressions<200 are simultaneous requirements. Neither requirement alone establishes selection."
+  },
+  {
+    "id": "K04-003",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L188-L233"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0330 L1090, U0334 L1100-1107, U0335 L1109, U0336 L1111, U0337 L1113, U0338 L1115-1122, U0339 L1124. Basic eligibility excludes candidates with reply or repost-original IDs. This is a structured-field test, not a text classifier for whether a post sounds original."
+  },
+  {
+    "id": "K04-004",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L661",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L188-L233"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0330 L1090, U0334 L1100-1107, U0335 L1109, U0336 L1111, U0337 L1113, U0338 L1115-1122, U0339 L1124. Follower count must be Some and <=50000; the exact boundary is inclusive. Missing count is not interpreted as zero followers."
+  },
+  {
+    "id": "K04-005",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L81-L88",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L188-L233",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L285-L309"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0330 L1090, U0334 L1100-1107, U0335 L1109, U0336 L1111. Viewer Holdout/Control/Treatment and author cohort eligibility are handled by explicit branches; Holdout does not incorrectly acquire a same-cohort restriction."
+  },
+  {
+    "id": "K04-006",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L378-L420"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0336 L1111. The cold-start switch and absence of a topic request gate this scorer. Public defaults are not asserted to prove actual request resolution."
+  },
+  {
+    "id": "K04-007",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L285-L309",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L378-L420",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L469"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0336 L1111. Cold-start works on the retained candidate slice after retrieval/filters; it cannot rescue a post absent from that slice. Pipeline order supports the practical limitation."
+  },
+  {
+    "id": "K04-008",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L285-L309",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L91-L104"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0334 L1100-1107, U0335 L1109, U0348 L1156. Nonzero scores are sorted descending with original-index tie handling and cutoff floor(0.97*N). The eligibility test is position below the cutoff; zero scores are excluded from N."
+  },
+  {
+    "id": "K04-009",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L285-L309",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L624"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0331 L1092. The earlier reimplementation artifact contains fixed-condition199-pass/200-fail cases, declares it is not upstream Rust or production execution, and its source manifest matches fresh cold-start/parameter files. The claim faithfully keeps that validation scope."
+  },
+  {
+    "id": "K04-010",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L296-L333",
+      "https://help.x.com/en/using-x/view-counts",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/engagement_counts_hydrator.rs#L16-L48"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0332 L1094, U0338 L1115-1122, U0339 L1124. The official public view-count page includes Home/Search/Profile and repeat/own views; hydrated Home impressions are a distinct field. Public count is not an equivalent eligibility measurement."
+  },
+  {
+    "id": "K04-011",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/engagement_counts_hydrator.rs#L16-L48",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/engagement_counts_hydrator.rs#L59-L65"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0340 L1126. Engagement-count cache TTL is60 seconds. The claim does not turn that cache TTL into an exact production update delay or polling guarantee."
+  },
+  {
+    "id": "K04-012",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/cb45b5501423126adfc508052116c2d67c0e3fec/home-mixer/params/param.rs#L477-L544"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0333 L1098. The exact October9 parameter file already has200 impressions, slots15/16,50000 followers,7200 seconds,.97 ratio and Thompson defaults. Historical existence is not a current rollout percentage."
+  },
+  {
+    "id": "K04-013",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L633-L661",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L236-L255",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L311-L333"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0341 L1130, U0342 L1132-1142, U0343 L1144. Sampling uses Home-count-derived n and favorite count clamped to[0,n], with posterior alpha0+x and beta0+max(n-x,0). These are inputs to exploration rather than direct final-score rewards."
+  },
+  {
+    "id": "K04-014",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L633-L661",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L236-L255"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0344 L1146. The prior mean .75/(.75+49.25)=.015. The claim correctly distinguishes this1.5% prior from a measured like rate or admission threshold."
+  },
+  {
+    "id": "K04-015",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L633-L661",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L257-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L311-L333"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0341 L1130, U0342 L1132-1142, U0343 L1144, U0344 L1146, U0346 L1150. The code selects a top-k set by Beta samples and then the highest local viewer score in that set. Two distinct stages and personalization are retained."
+  },
+  {
+    "id": "K04-016",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L257-L282"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0345 L1148. With two eligible candidates and top_k2, both survive sampling and score comparison determines the winner. This is a conditional counterexample, not a production outcome measurement."
+  },
+  {
+    "id": "K04-017",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L236-L255",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L257-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L311-L333"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0345 L1148. The disabled flag and explicit guard top_k==0 or alpha0<=0 or beta0<=0 select by score. Read invalid-prior wording as those guards; per-candidate Beta construction failures separately use a neutral0.5 sample."
+  },
+  {
+    "id": "K04-018",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L81-L88",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L188-L233",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L285-L309",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L236-L255",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L257-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L311-L333"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0346 L1150. Profile-origin likes do not independently control candidate retrieval, cohort/age/impression eligibility, sampling and final score comparison. The rebuttal does not deny that likes can enter sampling inputs."
+  },
+  {
+    "id": "K04-019",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L661",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L216-L225"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0347 L1154. Default slot bounds15 and16 produce zero-based target15 when a sufficiently large scored pool exists. A pool smaller than16 has no default target."
+  },
+  {
+    "id": "K04-020",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L311-L333"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0348 L1156. One selected candidate at most is assigned max(existing_score,target_score). The mechanism raises rather than lowers that score and does not pick an unlimited set."
+  },
+  {
+    "id": "K04-021",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L263-L279",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L315-L327",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/blender_selector.rs#L56-L87"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0349 L1158. Shared VM processing can apply later author/OON multipliers and final blending adds other modules. The intermediate target is not a guaranteed sixteenth screen position."
+  },
+  {
+    "id": "K04-022",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker.rs#L59-L135",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/value_model.rs#L71-L118",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L169-L197",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs#L45-L49"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0349 L1158. Local Home Mixer weights disable author diversity; VM defaults enable it. RPC response/fallback and cached-weight handling mean these paths cannot be collapsed into one constant rule."
+  },
+  {
+    "id": "K04-023",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L285-L309",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L378-L420",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L257-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L311-L333"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0350 L1160. The age window and sampling code do not require continuous replies. The editorial recommendation preserves uncertainty about actual eligibility and audience response."
+  },
+  {
+    "id": "K04-024",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0350 L1160. Recording topic, changes and elapsed time is an observational practice, explicitly short of causal identification from a few posts."
+  },
+  {
+    "id": "K04-025",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/new_user_min_engagement_filter.rs#L31-L90",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L832-L860"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0351 L1164. NewUserMinEngagementFilter tests query.user_id viewer age (with a revived-viewer branch), not author account age; the inspected default switch is false."
+  },
+  {
+    "id": "K04-026",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L188-L193",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L296-L333",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L624"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0352 L1166. Presenting a new author's identity and one concrete answer is editorial advice. Cited cold-start conditions support rejecting a universal200-person guarantee, not the efficacy of the advice itself."
+  },
+  {
+    "id": "K04-027",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/7f2ca2b914cadac591ea7fceec0c477e473d3dee/home-mixer/filters/fair_share_ranking_filter.rs#L1-L109",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L10-L109",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L469"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0353 L1170. FairShareRankingFilter runs before model scorers and limits source groups at candidate level. It does not allocate viewers or final display positions."
+  },
+  {
+    "id": "K04-028",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/7f2ca2b914cadac591ea7fceec0c477e473d3dee/home-mixer/filters/fair_share_ranking_filter.rs#L1-L109",
+      "https://github.com/xai-org/x-algorithm/blob/7f2ca2b914cadac591ea7fceec0c477e473d3dee/home-mixer/params/param.rs#L1188-L1199",
+      "https://github.com/xai-org/x-algorithm/blob/989fb91254d461bf4b9df53fb12d5c9a61c2b354/home-mixer/params/param.rs#L1200-L1211",
+      "https://github.com/xai-org/x-algorithm/commit/7f2ca2b914cadac591ea7fceec0c477e473d3dee",
+      "https://github.com/xai-org/x-algorithm/commit/989fb91254d461bf4b9df53fb12d5c9a61c2b354"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0354 L1172, U0355 L1174-1177, U0356 L1179. The October21 commit adds FairShare with defaultfalse; October22 changes defaulttrue. Exact historical files and commit metadata were checked; deployment-wide effect remains unproved."
+  },
+  {
+    "id": "K04-029",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L10-L109",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L199-L204"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0357 L1183. Grouping uses candidate.served_type or the first retrieval source fallback, preserving first-seen group order. It does not group directly by age or follower count."
+  },
+  {
+    "id": "K04-030",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L10-L109"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0358 L1185-1194, U0359 L1196, U0360 L1198. Integer proportional floors plus descending remainder and group-index tie breaks implement largest-remainder allocation. All tie behavior claimed is present."
+  },
+  {
+    "id": "K04-031",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L10-L109"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0358 L1185-1194, U0359 L1196, U0360 L1198. selection_mask takes the first allocated number of indices in each group; it does not randomly resample or sort within groups by a new score."
+  },
+  {
+    "id": "K04-032",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L10-L109"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0358 L1185-1194, U0359 L1196, U0360 L1198. When total<=budget, fair_share_counts returns original counts and all candidates survive this filter. Later filtering/scoring is still separate."
+  },
+  {
+    "id": "K04-033",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L10-L109"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0361 L1200-1205, U0362 L1207. For1200/1200/600 with2800 budget, the allocation1120/1120/560 totals2800 and removals80/80/40 total200. Inputs are explicitly hypothetical."
+  },
+  {
+    "id": "K04-034",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L10-L109"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0363 L1209. Under flattened A/B/C ordering, direct take2800 retains400 Cold versus560 by FairShare, a40% candidate-slot increase. No production impression increase is inferred."
+  },
+  {
+    "id": "K04-035",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L469",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/phoenix_request.rs#L18-L20",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/phoenix_request.rs#L185-L195",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L1277-L1288"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0364 L1213. Phoenix request construction takes at most PHOENIX_CLIENT_MAX_CANDIDATES=2800; FairShare's named budget defaults to2800. This is a request candidate cap, not viewers per post."
+  },
+  {
+    "id": "K04-036",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L661",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/phoenix_request.rs#L18-L20",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L1277-L1288",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L16-L21",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L124-L141"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0364 L1213. PhoenixColdStartMaxResults200 limits returned cold-source candidates, whereas ColdStartImpressionThreshold200 concerns each post's Home count. Distinct units and stages are retained."
+  },
+  {
+    "id": "K04-037",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L10-L109",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L469"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0365 L1215. FairShare enablement requires its switch, no cached posts, scoring sequence and no active kill switch. Defaulttrue alone is not actual-execution proof."
+  },
+  {
+    "id": "K04-038",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/7f2ca2b914cadac591ea7fceec0c477e473d3dee/home-mixer/filters/fair_share_ranking_filter.rs#L1-L109",
+      "https://github.com/xai-org/x-algorithm/blob/7f2ca2b914cadac591ea7fceec0c477e473d3dee/home-mixer/params/param.rs#L1188-L1199",
+      "https://github.com/xai-org/x-algorithm/blob/989fb91254d461bf4b9df53fb12d5c9a61c2b354/home-mixer/params/param.rs#L1200-L1211",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L10-L109",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L469"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0366 L1217. Source quota logic and default-change commits do not provide production reach/retention or controlled outcome data. The unknown is explicit and no numerical benefit is invented."
+  },
+  {
+    "id": "K04-039",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L13-L17",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs#L16-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L444"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0367 L1221, U0368 L1223-1227, U0369 L1229. related_tweet_ids includes own tweet, repost original and direct parent. PreviouslySeen checks this set, not an unbounded chain of all ancestors."
+  },
+  {
+    "id": "K04-040",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs#L16-L31"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0369 L1229. The code uses Bloom may_contain as well as explicit seen IDs; possible Bloom positives are not proof of an observed read. The record keeps the probabilistic limitation."
+  },
+  {
+    "id": "K04-041",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L13-L17",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs#L16-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_served_posts_filter.rs#L14-L30",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L444"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0369 L1229. PreviouslySeen and PreviouslyServed are distinct filters with different data and execution conditions. A served record is not automatically a measured view."
+  },
+  {
+    "id": "K04-042",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L13-L17",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs#L16-L31"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0370 L1231, U0374 L1242. A new reply includes its direct parent in related IDs, so a seen parent can remove the reply in this path. The conditional can wording avoids a universal correction-reply ban."
+  },
+  {
+    "id": "K04-043",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0371 L1235. Publishing a standalone major correction alongside conversation replies is editorial advice, consistent with related-ID filtering but not a guaranteed bypass or reach improvement."
+  },
+  {
+    "id": "K04-044",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0372 L1237-1238, U0373 L1240. The correction template preserves omission, correction and surviving facts. It is a content-fidelity recommendation, not an algorithmic eligibility rule."
+  },
+  {
+    "id": "K04-045",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L13-L17",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs#L16-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L444"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0374 L1242. The cited filters govern this Home path; profile/conversation access is not equivalent to Home re-encounter. The claim does not promise visibility at other entry points."
+  },
+  {
+    "id": "K04-046",
+    "translation_status": "verified",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L444"
+    ],
+    "findings": [
+      "KB-F02"
+    ],
+    "notes": "All fields compared with original report U0375 L1246, U0380 L1260-1265, U0381 L1267, U0382 L1269-1274, U0383 L1276. Own tweet_id and <=48h are correct, but only older removed omits unwrap_or(false) when age cannot be decoded. This omission is inherited from U0380. See KB-F02."
+  },
+  {
+    "id": "K04-047",
+    "translation_status": "verified",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31"
+    ],
+    "findings": [
+      "KB-F02"
+    ],
+    "notes": "All fields compared with original report U0384 L1278. Exactly48h passes when an age is returned; only older removed is too broad because unavailable age fails too. The original report has the same omission. See KB-F02."
+  },
+  {
+    "id": "K04-048",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L103-L113",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/core_data_candidate_hydrator.rs#L141-L149"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0375 L1246, U0380 L1260-1265, U0385 L1280. Thunder keeps repost ID and original ID in separate fields; core-data update does not replace candidate.tweet_id. The AgeFilter therefore measures the repost candidate's own ID here."
+  },
+  {
+    "id": "K04-049",
+    "translation_status": "verified",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L70-L169",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/core_data_candidate_hydrator.rs#L103-L124",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/core_data_hydration_filter.rs#L6-L15",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancillary_vf_filter.rs#L7-L17"
+    ],
+    "findings": [
+      "KB-F01"
+    ],
+    "notes": "All fields compared with original report U0386 L1282. The report's must-retrieve-original requirement is not established by ancillary VF. Missing/error ancillary results do not trigger its drop condition and source-text hydration has a fallback. See KB-F01."
+  },
+  {
+    "id": "K04-050",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L13-L17",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs#L16-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_served_posts_filter.rs#L14-L30",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/retweet_deduplication_filter.rs#L19-L29"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0386 L1282. Seen/served related IDs and original-ID deduplication preserve original history across reposts. Multiple reposts therefore do not guarantee multiple new positions for one viewer."
+  },
+  {
+    "id": "K04-051",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L437-L479",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L149"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0379 L1258, U0380 L1260-1265, U0381 L1267. The named HOME corpus references1fav_1day, while serving includes subsequent retrieval and other sources. A file name does not establish a platform-wide one-day post lifetime."
+  },
+  {
+    "id": "K04-052",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/config/mod.rs#L168-L224",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/store/base.rs#L1195-L1220"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0379 L1258, U0380 L1260-1265, U0381 L1267. Named rankall indexes retain their own24h/48h/video windows. Storage-window facts are not generalized into universal display expiry."
+  },
+  {
+    "id": "K04-053",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato#L96-L156",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L28-L70"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0379 L1258, U0380 L1260-1265, U0381 L1267. Favorite updates use post age<49h, cached first-update age<=48h and interval>=1min. Each clock measures a different event; ordinary AgeFilter is separate."
+  },
+  {
+    "id": "K04-054",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L28-L70",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/config/mod.rs#L168-L224",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0379 L1258, U0380 L1260-1265, U0381 L1267. The report's time-window comparison correctly separates storage, update eligibility and candidate age. Its advice requests the relevant path rather than substituting one timer for another."
+  },
+  {
+    "id": "K04-055",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs#L219-L237",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/push_to_home_source.rs#L18-L65"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0387 L1286. ForYou's top-level PushToHome source constructs its candidate separately from ordinary ScoredPosts; that top-level filter list does not apply the same AgeFilter uniformly."
+  },
+  {
+    "id": "K04-056",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/config/mod.rs#L168-L224",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs#L219-L237",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/push_to_home_source.rs#L18-L65"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0388 L1288. Longer video dataset/index windows exist, but any candidate passing the ordinary AgeFilter is still subject to it. The claim does not infer a universal video exemption or deny separate sources."
+  },
+  {
+    "id": "K04-057",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0376 L1250, U0377 L1252, U0388 L1288. Adding a current use/update to older material is editorial guidance without promising that it clears seen-history or age eligibility."
+  },
+  {
+    "id": "K04-058",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0377 L1252. Repeated importance claims do not change the related IDs checked by seen filtering. The practical recommendation addresses usefulness, not a guaranteed reactivation mechanism."
+  },
+  {
+    "id": "K04-059",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/tweet.rs#L69-L71",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L214-L224"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0378 L1254. is_latest_edit and stale-edit rules distinguish old versions, with quote/repost/source exceptions. No blanket downranking for editing a word is supported by those rules."
+  },
+  {
+    "id": "K04-060",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0378 L1254. Explaining an error and correction is editorial guidance; it does not promise that editing resets distribution or prevents every filter."
+  },
+  {
+    "id": "K04-061",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_reply_ranking.py#L44-L78",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_write.py#L124-L148"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0389 L1292. Grox's reply-quality writer/classifier produces ReplyRankingScore; Home's reply prediction is an engagement model field. Similar terminology does not identify the two outputs."
+  },
+  {
+    "id": "K04-062",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_reply_ranking.py#L44-L78",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_write.py#L124-L148",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_write.py#L39-L74"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0390 L1294. Reply rendering/classification consumes conversation context and selected signals including follower counts. The English avoids interpreting a feature as a universal direct bonus."
+  },
+  {
+    "id": "K04-063",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/prompts.py#L6-L24"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0390 L1294. prompts.py explicitly withholds the prompts to reduce gaming. The record correctly declines to invent exact forbidden phrasing or complete semantic decision rules."
+  },
+  {
+    "id": "K04-064",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0391 L1296. Replies adding concrete, checkable material are editorial advice, not a claimed classifier exemption for a prescribed phrase or format."
+  },
+  {
+    "id": "K04-065",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0392 L1298. Identifying information gaps and human-checking AI-assisted replies is editorial quality advice. It does not imply reliable avoidance of the nonpublic spam classifier."
+  },
+  {
+    "id": "K04-066",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L25-L124",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/plan_multi_step_reply_spam.py#L12-L28",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L32-L88",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L151-L198"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0393 L1302. The specific multi-step pipeline filters/classifies selected replies and its production writer emits ReplyRankingScore0.0. The claim names the field instead of declaring platform-wide rank zero."
+  },
+  {
+    "id": "K04-067",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L25-L124"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0394 L1306. The input task rejects incomplete ancestors and missing required current/last/root users. This condition is narrower than requiring every possible user object anywhere in the thread."
+  },
+  {
+    "id": "K04-068",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L25-L124"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0394 L1306. The inspected task excludes Grok/Gork and current replies by the root author. The claim keeps these as this-flow exceptions, not general moderation immunity."
+  },
+  {
+    "id": "K04-069",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L25-L124"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0395 L1308, U0396 L1310-1314, U0397 L1316. The task requires at least two ancestors and matches the direct parent's author to the current reply's author. Structural eligibility does not itself prove model classification."
+  },
+  {
+    "id": "K04-070",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L25-L124"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0395 L1308. Root author followers must be at least1000; current author highPageRankV2/graylisted exceptions apply. Follower count and these distinct account flags are not conflated."
+  },
+  {
+    "id": "K04-071",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L25-L124",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/plan_multi_step_reply_spam.py#L12-L28",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/prompts.py#L6-L35"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0396 L1310-1314, U0397 L1316, U0398 L1318. A step/version self-reply sequence can meet structural gates but still requires media/context/model judgment. The record does not equate the example's wording with automatic zeroing."
+  },
+  {
+    "id": "K04-072",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L32-L88"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0399 L1322. The classifier returns nothing unless the latest reply is flagged. Older flags alone do not trigger this output set."
+  },
+  {
+    "id": "K04-073",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L32-L88"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0399 L1322. The flagged set is restricted to the same author and is discarded if only one remains. These postprocessing requirements survive the English distillation."
+  },
+  {
+    "id": "K04-074",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L90-L134",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L157-L175"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0400 L1324. Prompt construction identifies the root as never flagged and parsing excludes index0/root IDs. Both mechanisms support the stated root exclusion in this path."
+  },
+  {
+    "id": "K04-075",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L21-L22",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/classifier_multi_step_reply_spam.py#L90-L134"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0401 L1326. Long inputs use first5 and last5 ancestors plus current reply, with MAX_MEDIA2 per post. The claim does not imply every ancestor/media item is examined."
+  },
+  {
+    "id": "K04-076",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L151-L198"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0402 L1330, U0403 L1332-1337, U0404 L1339. The writer is production-only and iterates retained IDs with available author data. Selection, author availability and publication are correctly distinct stages."
+  },
+  {
+    "id": "K04-077",
+    "translation_status": "finding",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/strato_loader.py#L20-L53"
+    ],
+    "findings": [
+      "KB-F03"
+    ],
+    "notes": "All fields compared with original report U0402 L1330, U0404 L1339. The original passage discusses score0.0, which does reach caches. The broader conclusion all accepted reply scores publish to cache omits the score<=1 guard; check.when partially restores zero scope. See KB-F03."
+  },
+  {
+    "id": "K04-078",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L25-L124",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L151-L198",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_write.py#L39-L79"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0405 L1341. RiskyHighVizReply helper can return early for its own exceptions while the outer multi-step writer continues to publish zero. The claim correctly distinguishes helper and caller control flow."
+  },
+  {
+    "id": "K04-079",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/task_multi_step_reply_spam.py#L151-L198",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/reply_spam/strato_loader.py#L20-L53"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0406 L1343. The producer and cache/Kafka/Strato writes are visible, but this citation chain does not establish every downstream consumer or platform-wide reach change. Unknown scope is preserved."
+  },
+  {
+    "id": "K04-080",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0407 L1345. New steps/versions/data/counterexamples are editorial reasons for another reply; no exemption from structural/classifier/writer checks is promised."
+  },
+  {
+    "id": "K04-081",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L70-L105",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L140-L169",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancillary_vf_filter.rs#L7-L17"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0408 L1349. Ancillary VF queries quotes, repost originals and relevant ancestors; returned drop actions can set the candidate drop flag. Can affect is correctly conditional, unlike the must in K04-049."
+  },
+  {
+    "id": "K04-082",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L140-L169",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancillary_vf_filter.rs#L7-L17",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/vf_filter.rs#L22-L26"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0409 L1351. should_drop_action treats Drop/Tombstone/NotEvaluated as dropping and distinguishes Allow/Interstitial/Avoid/Downrank. The claim preserves the different action meanings."
+  },
+  {
+    "id": "K04-083",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L70-L105",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L140-L169",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancillary_vf_filter.rs#L7-L17"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0410 L1353, U0411 L1355. Making a debunking post self-contained is editorial advice grounded in possible ancillary filtering, not a guarantee that text alone bypasses visibility rules."
+  },
+  {
+    "id": "K04-084",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L70-L105",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L140-L169",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancillary_vf_filter.rs#L7-L17",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L367-L513",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L155",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L57-L139"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0411 L1355. Quote prediction coefficient5 is only one fusion term; attached-content VF can remove candidates. The recommendation correctly requires both scoring and eligibility context."
+  },
+  {
+    "id": "K04-085",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/content_features.rs#L8-L19",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_debias_payload.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L919-L937",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L4-L21"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0412 L1359. URL presence is a content/debias feature and separate reputation/visibility rules exist; neither supports one fixed link penalty or a universal first-reply exemption. The record does not claim links have no possible effect."
+  },
+  {
+    "id": "K04-086",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0413 L1363, U0414 L1365, U0424 L1394. Checking the destination and redirect chain is a practical inspection recommendation, not a way to observe or guarantee X's internal reputation value."
+  },
+  {
+    "id": "K04-087",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot#L2-L47",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L2-L21"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0414 L1365, U0424 L1394. The bot rules consume internal resolved URL reputation values. A webpage's visible design/content alone does not expose those exact labels."
+  },
+  {
+    "id": "K04-088",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0415 L1367. Explaining link usefulness and placing reply links for readers is editorial advice, with no unsupported first-reply immunity promise."
+  },
+  {
+    "id": "K04-089",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L6-L44",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L204-L208",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L142-L164"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0416 L1371, U0417 L1373. PinnedLowQualityOrBadUrl writes account-level SPAM_HIGH_RECALL under its gates; author visibility rules include that account label in recommendations. The claim does not convert it into total platform disappearance."
+  },
+  {
+    "id": "K04-090",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields compared with original report U0417 L1373. A changed pinned destination can suggest a diagnostic path, but without events/ratings/labels the record does not infer causality for a reach anomaly."
+  },
+  {
+    "id": "K04-091",
+    "translation_status": "verified",
+    "evidence_status": "unverified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L6-L44",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L204-L208",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L466-L470",
+      "https://x.com/i/jf/under_the_hood",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx#L25-L51",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0418 L1375. Pinned rule, report UI fields, README pilot entry and label explanations were inspected. The live Under the Hood URL returned403; current/account-specific report availability is unverified, while the conditional source-code capability is supported."
+  },
+  {
+    "id": "K04-092",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot#L2-L47"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0419 L1379, U0420 L1381-1386, U0421 L1388. v1 requires fields, non-reply/non-repost, a LOW_QUALITY chain element and mention of a non-follower, with author exceptions. Its final label target may resolve to an original post."
+  },
+  {
+    "id": "K04-093",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L2-L21"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0420 L1381-1386, U0421 L1388, U0422 L1390. v2 requires complete event fields and a nonempty chain; final verdict must not be GOOD/WHITELIST and at least one chain element must be LOW_QUALITY. Both tests are required."
+  },
+  {
+    "id": "K04-094",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot#L2-L47",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L2-L21"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0420 L1381-1386, U0421 L1388, U0422 L1390, U0423 L1392. v2 retains author exceptions but lacks v1's reply/repost/mention predicates. The claim does not import v1 exclusions into v2."
+  },
+  {
+    "id": "K04-095",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot#L2-L47",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L2-L21"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0420 L1381-1386, U0421 L1388, U0423 L1392. Both URL bots call SetTweetLabel SPAM_HIGH_RECALL, with their own targeting rules. These are post labels rather than the pinned rule's account label."
+  },
+  {
+    "id": "K04-096",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L2-L21"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0423 L1392. Failure to match v2 only rules out that predicate combination; it is not evidence of clearing all URL or visibility rules. The claim accurately preserves this limitation."
+  },
+  {
+    "id": "K04-097",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot#L2-L47",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L2-L21"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0424 L1394. The examined rules test reputation/events and do not define a universal penalty by shortener, tracking parameter or affiliate-link syntax. Editorial caution does not imply those links are always safe."
+  },
+  {
+    "id": "K04-098",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L2-L44"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0425 L1398. The pinned rule requires a nonempty changed after value (including missing before), resolves newly pinned expanded URLs and needs BAD/LOW_QUALITY plus author eligibility. The full record preserves event and target scope."
+  },
+  {
+    "id": "K04-099",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L2-L44"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0426 L1400. Pinned-rule exceptions are explicit test/highPageRank/temporary/graylist checks, not arbitrary follower-size or Premium exemptions. The claim retains the actual flag distinctions."
+  },
+  {
+    "id": "K04-100",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L2-L44"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0427 L1402. expiresAtMillis is now plus one week at label write time. The seven-day period is not anchored to publication time or the user's later diagnosis."
+  },
+  {
+    "id": "K04-101",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L2-L44"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0427 L1402. This inspected file only adds the label and contains no unpin-driven deletion branch. The claim correctly leaves immediate removal unknown rather than declaring it impossible everywhere."
+  },
+  {
+    "id": "K04-102",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L2-L44",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L164",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L155-L243",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/vf_filter.rs#L8-L26"
+    ],
+    "findings": [],
+    "notes": "All fields compared with original report U0428 L1404. Expiry of one account label does not establish unchanged other eligibility or identical ranking/audience conditions. The claim appropriately rejects an automatic day-eight view-count restoration promise."
+  }
+]

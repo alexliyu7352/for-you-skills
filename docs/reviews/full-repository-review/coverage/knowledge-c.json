@@ -1,0 +1,1369 @@
+[
+  {
+    "id": "K03-001",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L1-L22",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs#L1-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143"
+    ],
+    "findings": [],
+    "notes": "Chinese U0231/U0235/U0260/U0282 and the final input/score/fusion definitions agree. No fixed Article coefficient is present in these functions; the claim correctly leaves learned and external-service effects unresolved."
+  },
+  {
+    "id": "K03-002",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All fields preserve the editorial reading-task criterion in U0232/U0270/U0271/U0282. Reply/quote use is consistent with the official Longer Posts page; no exposure reward is asserted."
+  },
+  {
+    "id": "K03-003",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves multi-section/reference use, independently complete splits, and a useful introduction. The added quota limitation is consistent with the surrounding bounded format conclusion, and the advice is explicitly editorial."
+  },
+  {
+    "id": "K03-004",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://help.x.com/en/using-x/types-of-posts",
+      "https://help.x.com/en/using-x/x-premium-how-to"
+    ],
+    "findings": [],
+    "notes": "Fresh official types-of-posts and x-premium-how-to pages confirm 25,000 characters and Longer Posts in Quotes or replies. Keeps the 2026-10-29 report scope and separates characters from renderer input limits."
+  },
+  {
+    "id": "K03-005",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://help.x.com/en/using-x/articles"
+    ],
+    "findings": [],
+    "notes": "Fresh official Articles page confirms headings/subheadings, embedded media/posts, composer, and the profile Articles tab. The Markdown-paste caveat is a reasonable explicitly practical qualification."
+  },
+  {
+    "id": "K03-006",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves the native-format comparison requirement and excludes external links/threads as substitutes. Audience, timing, and promotion are appropriately retained as methodological conditions."
+  },
+  {
+    "id": "K03-007",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java#L255-L263",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java#L301-L311"
+    ],
+    "findings": [],
+    "notes": "FeaturesOfTweet.java independently sets noteTweetId and articleId and dispatches on separate object fields. Anti-abuse identity is not represented as a ranking bonus."
+  },
+  {
+    "id": "K03-008",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/data_types.py#L637-L732"
+    ],
+    "findings": [],
+    "notes": "ArticleMetadata has title/media/cover_media; Post separately has full_text and optional article_metadata. Field coexistence is supported, while population and ranking uses remain qualified."
+  },
+  {
+    "id": "K03-009",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L165-L167",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L36-L52",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L174"
+    ],
+    "findings": [],
+    "notes": "Renderer source confirms nonempty full_text guard, dangling-media-URL cleanup, strip, negative-limit handling, and Python slicing with MAX_POST_TEXT=4000. The local scope and upstream-population caveat are preserved."
+  },
+  {
+    "id": "K03-010",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L36-L52",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L174",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L317-L321"
+    ],
+    "findings": [],
+    "notes": "The full_text and Article branches are independent; _article_block trims and truncates the title to 200 characters. The record correctly declines to infer universal Article body delivery."
+  },
+  {
+    "id": "K03-011",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder_v82.py#L69-L92"
+    ],
+    "findings": [],
+    "notes": "embedder_v82 passes rendered text and selected image bytes to embed_openai_async. No exposure calculation occurs in that call; the stated downstream-consumer limitation is appropriate."
+  },
+  {
+    "id": "K03-012",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L107-L120",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L184",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L320"
+    ],
+    "findings": [],
+    "notes": "The report describes populated in-memory objects and local function outputs only. Independent AST-isolated invocations of the pinned renderer functions reproduced the reported text/image cases without an embedding model or posting."
+  },
+  {
+    "id": "K03-013",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L165-L167"
+    ],
+    "findings": [],
+    "notes": "Independent invocation reproduced 4000 U+5B57 characters, omission of trailing U+5C3E, and a 4000-character body portion. Conditions and character-versus-token distinction match U0241/U0242."
+  },
+  {
+    "id": "K03-014",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L165-L167"
+    ],
+    "findings": [],
+    "notes": "Independent invocation with a fixed 4000-character prefix and altered trailing character produced identical V8.2 text. The claim stays limited to that controlled output rather than all downstream systems."
+  },
+  {
+    "id": "K03-015",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L36-L52",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L174",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L317-L321"
+    ],
+    "findings": [],
+    "notes": "Independent invocation retained full_text together with a 200-character Article-title prefix and omitted the 201st title character. The production population caveat is retained."
+  },
+  {
+    "id": "K03-016",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/post_mapper.py#L130-L174",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/post_mapper.py#L273-L289",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/strato_loader.py#L26-L56"
+    ],
+    "findings": [],
+    "notes": "post_mapper assigns post_metadata.text to full_text and maps title/media/coverMedia to ArticleMetadata. No separate Article body field appears in that mapping; the claim does not generalize absence to every path."
+  },
+  {
+    "id": "K03-017",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/post_mapper.py#L130-L174",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/post_mapper.py#L273-L289",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/strato_loader.py#L26-L56"
+    ],
+    "findings": [],
+    "notes": "The public strato_loader fetches external metadata and the mapper exposes only the identified fields. The statement is a bounded unresolved-production-chain claim, not proof that Article body text is always absent."
+  },
+  {
+    "id": "K03-018",
+    "translation_status": "finding",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/content_features.rs#L8-L19",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_debias_payload.rs#L33-L68",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L53-L73",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L17-L23"
+    ],
+    "findings": [
+      {
+        "id": "C-01",
+        "severity": "P2",
+        "file": "knowledge/topic-03.json",
+        "line": 721,
+        "related_lines": [
+          723,
+          753
+        ],
+        "category": "translation_and_evidence_scope",
+        "source_basis": "U0244 (research-report.zh-CN.md:842) says length/newline information can be transmitted. vm_ranker_debias_payload.rs:35-40 populates content_features only when debias is true; vm_ranker_request.rs:17-23 defines debias as !has_cached_posts && VMRankerSendDebiasInputs. The pacing-only payload path does not populate these features.",
+        "reader_effect": "The conclusion can be reused as unconditional evidence that these content features reach every relevant VM request, including cached or pacing-only requests.",
+        "correction": "Say that the features can be included when the debias input branch is enabled, and add the cache/feature-switch gate to conditions; retain the absence of a fixed length reward."
+      }
+    ],
+    "notes": "Finding C-01: English transmission wording and conditions omit the explicit debias gate. Chinese U0244 says features can be transmitted; a pacing-only or cached request can omit these content features."
+  },
+  {
+    "id": "K03-019",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Editorial advice preserves U0245 and clearly bases early topic identification on local input windows, without inventing an exposure gain."
+  },
+  {
+    "id": "K03-020",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L107-L120"
+    ],
+    "findings": [],
+    "notes": "V5 source confirms Article title/cover before Post text and ordinary media, followed later by Article embedded media. Link-card media may intervene, which does not invalidate the stated ordering; availability and budget caveats are retained."
+  },
+  {
+    "id": "K03-021",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L184",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L320"
+    ],
+    "findings": [],
+    "notes": "V8.2 directly selects post.media and its Article block only adds a title. The full renderer was inspected; upstream media copying and other consumers are correctly left unresolved."
+  },
+  {
+    "id": "K03-022",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L107-L120"
+    ],
+    "findings": [],
+    "notes": "Independent local invocation with usable cover, attachment, and embedded image returned those three images in that order with sufficient budget. The record retains all preconditions and no model/exposure inference."
+  },
+  {
+    "id": "K03-023",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L107-L120"
+    ],
+    "findings": [],
+    "notes": "The same no-quoted-Post object with max_images=1 returned only the cover. The claim is correctly tied to the preceding controlled object and does not assert a universal production budget."
+  },
+  {
+    "id": "K03-024",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L184",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L320"
+    ],
+    "findings": [],
+    "notes": "On the same three-image object, V8.2 returned the ordinary attachment, not the Article cover. Field identities and local-test scope match the report."
+  },
+  {
+    "id": "K03-025",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L184",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L320"
+    ],
+    "findings": [],
+    "notes": "With ordinary post.media empty and images only in Article metadata, independent V8.2 invocation returned an empty image list. The record avoids inferring production-wide absence."
+  },
+  {
+    "id": "K03-026",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder.py#L55-L90",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/plan_post_embedding_v82.py"
+    ],
+    "findings": [],
+    "notes": "The V5 embedder and registered V8.2 plan show available paths but do not specify production traffic allocation. The unknown is accurately bounded and the advice does not depend on a claimed universal renderer."
+  },
+  {
+    "id": "K03-027",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder.py#L55-L90"
+    ],
+    "findings": [],
+    "notes": "Independent V5 invocation retained the complete 4001-character body. The claim appropriately excludes limits imposed later by the embedding service."
+  },
+  {
+    "id": "K03-028",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/media_loader.py#L130-L170",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/media_loader.py#L293-L303",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py#L104-L120"
+    ],
+    "findings": [],
+    "notes": "MediaLoader computes is_high_fav with >= the configured threshold, default 64, and gates Article media hydration on it. The flag comes from the root hydration Post and is passed to selected associated Posts; the claim correctly uses is_high_fav rather than asserting each Article's own count controls all paths."
+  },
+  {
+    "id": "K03-029",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/media_loader.py#L130-L170",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/media_loader.py#L293-L303",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py#L104-L120"
+    ],
+    "findings": [],
+    "notes": "The cited 64 default controls media fetching, not candidate or display eligibility. The inverse claim that all low-fav paths already have equivalent media is also correctly rejected."
+  },
+  {
+    "id": "K03-030",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves U0250's separate title, cover, introduction, and embedded-image review. Advice is explicitly editorial and does not equate ordinary post.media order with Article cover semantics."
+  },
+  {
+    "id": "K03-031",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L443-L490",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L513-L548"
+    ],
+    "findings": [],
+    "notes": "All five protocol names and numeric IDs were checked: click 29, show-more 45, details impression 72, detail dwell 103, recap dwell 11. Separate enums do not establish disjoint client triggers or completed reading."
+  },
+  {
+    "id": "K03-032",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/constants.py#L125-L163",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L75-L98"
+    ],
+    "findings": [],
+    "notes": "SHOW_MORE_EXPAND is in ENGAGE_EVENTS and ClientTweetShowMoreExpand maps to IsShowMoreExpanded. The record correctly distinguishes data use from an independent fixed reward."
+  },
+  {
+    "id": "K03-033",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs#L1-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/constants.py#L125-L163",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L75-L98"
+    ],
+    "findings": [],
+    "notes": "PhoenixScores and final fusion contain no show_more_score or article_completion_score; history mappings nevertheless include expansion. The bounded absence claim and potential indirect effects are accurate."
+  },
+  {
+    "id": "K03-034",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L1274-L1298"
+    ],
+    "findings": [],
+    "notes": "Protocol page values include PAGE_ARTICLE_PREVIEW=77 and PAGE_ARTICLE=84. The claim correctly distinguishes page IDs from event timing, labels, and attribution."
+  },
+  {
+    "id": "K03-035",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py#L810-L831",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/scoring_sequence_query_hydrator.rs#L92-L117",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md#L9-L21"
+    ],
+    "findings": [],
+    "notes": "Training reads existing action/continuous arrays and Home Mixer calls an external aggregation service. The README excludes production feeds/internal telemetry; this supports the stated unresolved client-to-label boundary, not format-event equivalence."
+  },
+  {
+    "id": "K03-036",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L684-L693",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L190-L212",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L532-L553",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L260-L278",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L345-L375"
+    ],
+    "findings": [],
+    "notes": "home_direct_packed enables the click-dwell loss, loss_type is binary, threshold is 10.0, and the loss uses raw > threshold. Binary heads use sigmoid and are excluded from unit rescaling; raw production units and Article attribution are appropriately not claimed."
+  },
+  {
+    "id": "K03-037",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/crates/serving/xai-recsys-engine/src/util.rs#L131-L149",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/crates/serving/xai-recsys-engine/src/util.rs#L394-L404",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py#L810-L831",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783"
+    ],
+    "findings": [],
+    "notes": "The Proto adapter divides the DWELL_TIME aggregate by 1000; the Arrow adapter copies existing continuous slots. No corresponding CLICK_DWELL_TIME unit conversion is demonstrated by these paths, so the caution against calling 10 seconds is supported."
+  },
+  {
+    "id": "K03-038",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "All English fields faithfully separate age/existence duration, actual reading, predicted dwell, and completion as in U0257. The rejection of a length-to-exposure multiplier is conceptual, without a new empirical claim."
+  },
+  {
+    "id": "K03-039",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L345-L381",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L446-L508",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/following_candidate_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_scores_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/ranked_following_candidate_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/reverse_chron_posts_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ad_adjacent_served_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancestor_video_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancillary_vf_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/author_socialgraph_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/core_data_hydration_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/dedup_conversation_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/drop_duplicates_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fav_holdout_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/following_retweet_deduplication_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/following_viewer_muted_keyword_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ineligible_subscription_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/invalid_conversation_module_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/inventory_holdout_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/new_user_min_engagement_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/new_user_soft_nsfw_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/oon_nsfw_simclusters_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/oon_retweet_reply_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/popular_topics_author_dedup_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_backup_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_served_posts_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/push_to_home_dedup_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/result_size_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/retweet_deduplication_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/self_reply_chain_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/self_tweet_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/topic_ids_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/vf_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/video_carousel_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/video_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/viewer_muted_keyword_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/zero_fav_codivert_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/immersive_video_scorer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/page_decode_rerank_scorer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/page_rl_exploration_scorer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/phoenix_scorer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/phoenix_scores_ranking_scorer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_debias_payload.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/ads_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/cached_posts_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/feed_survey_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/following_night_owl_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/jetfuel_frame_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_moe_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_topics_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/popular_posts_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/popular_topics_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/prompts_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/push_to_home_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/reverse_chron_posts_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/scored_posts_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/seed_candidates_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/sid_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/tweet_mixer_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/who_to_follow_source.rs"
+    ],
+    "findings": [],
+    "notes": "In addition to the cited candidate flow, all 77 pinned Home Mixer source/filter/scorer/parameter/pipeline Rust files were freshly retrieved and searched. The only Article-name match was an article_id: None initializer in Jetfuel; no Article-specific allocation branch was found in this stated scope."
+  },
+  {
+    "id": "K03-040",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L44-L65"
+    ],
+    "findings": [],
+    "notes": "FairShare keys groups by served_type, falling back to the first retrieval source's served type. It does not group by native Article versus long Post, and candidate retention is correctly separated from display."
+  },
+  {
+    "id": "K03-041",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L1-L22",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs#L1-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L28-L139"
+    ],
+    "findings": [],
+    "notes": "CandidateScoringInputs lacks is_article/is_long_post; final fusion combines prediction fields and eligibility-dependent weights. The claim correctly stops short of asserting upstream model equivalence."
+  },
+  {
+    "id": "K03-042",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+    ],
+    "findings": [],
+    "notes": "author_pool_counts sorts supplied scores, counts per author ID within the candidate batch, and is called when author diversity is enabled. A format change alone cannot reset the keyed count; no daily quota is inferred."
+  },
+  {
+    "id": "K03-043",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L345-L381",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L1-L22",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143"
+    ],
+    "findings": [],
+    "notes": "The bounded function-level absence supports only absence of an explicit fixed coefficient. The statement preserves possible upstream/model/inventory/experiment differences and does not assign a direction."
+  },
+  {
+    "id": "K03-044",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://blog.x.com/en/business/creator-updates-and-article-contest-replacement",
+      "https://help.x.com/en/using-x/original-content-rewards"
+    ],
+    "findings": [],
+    "notes": "Fresh X creator announcement discusses revenue-allocation weighting, and the current official rewards page dates the former program's earnings end to September 7, 2026. The historical-income versus ranking distinction is accurate."
+  },
+  {
+    "id": "K03-045",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L247-L252",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L215-L256",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/article.rs#L19-L70"
+    ],
+    "findings": [],
+    "notes": "ArticleTweetContent drops TweetHasArticle && !TweetArticleIsPublished; registration is TimelineHomeHydration. Golden cases cover Draft, SoftDeleted, absent lifecycle, and Published exactly as stated."
+  },
+  {
+    "id": "K03-046",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L215-L256",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L60-L106"
+    ],
+    "findings": [],
+    "notes": "Home Mixer requests TimelineHome for in-network IDs and TimelineHomeRecommendations for other IDs; the inspected Article rule is registered in TimelineHomeHydration. The claim correctly does not invent a universal pre-Phoenix link."
+  },
+  {
+    "id": "K03-047",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/compound.rs#L44-L66"
+    ],
+    "findings": [],
+    "notes": "TweetHasMedia is tweet.has_media() || ArticleMediaEntities || ArticleCoverMedia. This visibility feature is not itself a ranking prediction or automatic cover penalty."
+  },
+  {
+    "id": "K03-048",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/subscription_hydrator.rs#L48-L80",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ineligible_subscription_filter.rs#L8-L29",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L383-L444"
+    ],
+    "findings": [],
+    "notes": "SubscriptionHydrator populates subscription_author_id; the filter retains Some(author_id) only when the viewer subscribes and retains None. Its pipeline registration is present and no Article identity test is involved."
+  },
+  {
+    "id": "K03-049",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/article_client.rs#L81-L101",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/article_client.rs#L210-L220"
+    ],
+    "findings": [],
+    "notes": "Article-client authorization error 202 is decoded to None, including subscriber-only and author-only error examples. Missing media fields therefore need not mean the Article originally lacked media, and the converse is not promised."
+  },
+  {
+    "id": "K03-050",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://help.x.com/en/using-x/articles"
+    ],
+    "findings": [],
+    "notes": "Fresh official Articles instructions say Confirm after Edit unpublishes and the author can then republish. The operational state/access check is supported without a claim about cache timing or ranking penalty."
+  },
+  {
+    "id": "K03-051",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://notpeople.ai/blog/how-to-make-money-on-x-2026"
+    ],
+    "findings": [],
+    "notes": "Fresh NotPeople page reports September 15 publication, August data, table counts 42/843/64, author-average normalization, and median 5.7x. This verifies the attributed descriptive statistic, not the unreleased row-level data or a causal effect."
+  },
+  {
+    "id": "K03-052",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://notpeople.ai/blog/how-to-make-money-on-x-2026"
+    ],
+    "findings": [],
+    "notes": "The same primary observational account reports 6-28 satellite Posts and comparison groups dominated by Article links. The cited page offers no row-level download; nonrandomized topic/promotion/window differences make the stated causal limitation sound."
+  },
+  {
+    "id": "K03-053",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://blog.hootsuite.com/experiment-x-threads-vs-longform-posts/"
+    ],
+    "findings": [],
+    "notes": "Fresh Hootsuite methodology has three threads, then three long Posts after a Premium subscription change. It has no native Article group; the record correctly limits what that experiment can answer."
+  },
+  {
+    "id": "K03-054",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves an explicitly report-scoped absence of a controlled same-draft comparison, not a claim that no such study can ever exist. The self-test advice retains limitations and does not label sequential observation rigorous randomization."
+  },
+  {
+    "id": "K03-055",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves audience-led editorial selection and the condition that the account actually has the relevant subscriber feature. Does not infer public recommendation advantages from paid audience controls."
+  },
+  {
+    "id": "K03-056",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "The OCR material is explicitly an organizational example, not a new test result. One finding versus many sample groups/fields/tools/failed cases is faithfully preserved."
+  },
+  {
+    "id": "K03-057",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "The introduction example preserves field-specific OCR checking, manual-review conditions, and target readers. It explicitly requires real supporting material and does not claim a measured tool accuracy."
+  },
+  {
+    "id": "K03-058",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://help.x.com/en/using-x/articles"
+    ],
+    "findings": [],
+    "notes": "Fresh official Articles guidance recommends excerpts linking to the full piece. The claim correctly treats that as distribution advice rather than per-teaser traffic entitlement."
+  },
+  {
+    "id": "K03-059",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "The Markdown/rich-text preview advice preserves U0276 and is not presented as a scoring condition. Checks for symbols, tables, code, and readable presentation are reasonable elaborations."
+  },
+  {
+    "id": "K03-060",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves complete-question splitting, a full-version download entry point, and refusal to delete conditions that change the conclusion. No quota is inferred from splitting."
+  },
+  {
+    "id": "K03-061",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Outcome-first testing advice matches U0277, limits records to available account fields, and retains matching definitions rather than treating views as all value."
+  },
+  {
+    "id": "K03-062",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves the prohibition on manufacturing creator reading duration/completion from internal labels. Missing, unavailable, and undefined fields are handled honestly."
+  },
+  {
+    "id": "K03-063",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://help.x.com/en/using-x/view-counts"
+    ],
+    "findings": [],
+    "notes": "Fresh official view-count definition includes logged-in views across Home/Search/Profiles, self views, and repeat views. It is not a unique-reader/completion count; the Article-metric caveat is retained."
+  },
+  {
+    "id": "K03-064",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves multiple comparable original pieces, alternating formats, and similar publication-time distributions. Explicitly does not claim randomization or full confounder control."
+  },
+  {
+    "id": "K03-065",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves separate format-only and Article-plus-introduction questions, equal promotion for the former, and effort accounting for the latter."
+  },
+  {
+    "id": "K03-066",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "The 24-hour and 7-day windows are methodological choices in U0280, not platform thresholds. Confounder recording and same-age comparison are accurately preserved."
+  },
+  {
+    "id": "K03-067",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves separate Article/teaser/group records and rejection of summed views as deduplicated readers. No unobserved identity data is supplied."
+  },
+  {
+    "id": "K03-068",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves medians and variation across multiple comparable pieces; the record does not invent a sample-size or significance threshold."
+  },
+  {
+    "id": "K03-069",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves the sequential-republication causal limitation. The inspected pipeline includes seen/served filters and author handling; possible same-batch effects are conditional rather than guaranteed diagnoses."
+  },
+  {
+    "id": "K03-070",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L314"
+    ],
+    "findings": [],
+    "notes": "Full V8.2 selector inspection confirms ordered first usable image/video return, filtering empty frames and applying max_frames to video frames. The claim retains media availability, list order, and local scope."
+  },
+  {
+    "id": "K03-071",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L314",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L178",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder_v82.py#L68-L92"
+    ],
+    "findings": [],
+    "notes": "The full renderer merges selected main and quoted media then caps at MAX_MEDIA=4; the embedder transmits the resulting list. The claim correctly distinguishes local selection from final assembled input."
+  },
+  {
+    "id": "K03-072",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L76-L92"
+    ],
+    "findings": [],
+    "notes": "V5 processes ordinary and Article media item by item subject to budget, so the V8.2 early return cannot establish a universal first-image-only rule."
+  },
+  {
+    "id": "K03-073",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "The four-image OCR sequence is explicitly hypothetical and does not purport to measure exposure or reader continuation. The inference about absent information in the first image is sound."
+  },
+  {
+    "id": "K03-074",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "The result-page image ordering is expressly an editorial example, requires real results, and does not turn four images into a platform template."
+  },
+  {
+    "id": "K03-075",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves one finding plus essential conditions, with twenty footnotes identified as rhetorical complexity rather than an algorithmic threshold."
+  },
+  {
+    "id": "K03-076",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "Preserves consistent text/image presentation and availability for readers when images fail. No recommendation multiplier is asserted."
+  },
+  {
+    "id": "K03-077",
+    "translation_status": "verified",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L19-L33",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L688-L693",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L1-L33"
+    ],
+    "findings": [
+      {
+        "id": "C-03",
+        "severity": "P3",
+        "file": "knowledge/topic-03.json",
+        "line": 3094,
+        "related_lines": [
+          3096,
+          3125
+        ],
+        "category": "original_report_condition_omission",
+        "source_basis": "candidates_util.rs:4 and :24-33 first compute whether the querying viewer has >=10000 followers, then return !exceeds_followers && candidate.min_video_duration_ms.is_some_and(|ms| ms > threshold). A missing follower count is treated as not exceeding the cap. The report U0291 (line 972) also reduces this function to the duration check.",
+        "reader_effect": "The record names VQV eligibility but gives only its duration branch, so a reader can mistake >10000 ms for the operative eligibility test for every viewer. It also misstates the order with \"first checks\".",
+        "correction": "Call >10000 ms one duration prerequisite and include the viewer follower-count guard, distinguishing the viewer from the video author. Keep the zero-weight and no-exposure-guarantee caveats."
+      }
+    ],
+    "notes": "Finding C-03: the duration comparison is correct, but the record omits the preceding viewer-follower guard in the named eligibility function. This is an original-report completeness issue, not an English mistranslation."
+  },
+  {
+    "id": "K03-078",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L417-L431",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L12-L27",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L66-L89",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs#L35-L42"
+    ],
+    "findings": [],
+    "notes": "Both pinned VqvWeight defaults are 0; VM video/user continuation weights and local Home Mixer continuation assignments are also 0. Actual per-request values remain explicitly unresolved."
+  },
+  {
+    "id": "K03-079",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L417-L431",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L12-L27",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L283-L292"
+    ],
+    "findings": [],
+    "notes": "Home Mixer and VM Ranker have nonzero VideoOpenWeight defaults, and immersive_positive_actions includes CLIENT_TWEET_VIDEO_QUALITY_VIEW. These are separate roles and do not establish a fixed per-view exposure return."
+  },
+  {
+    "id": "K03-080",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "The eight-second illustration and content-first editing advice match U0293. The separate strictly-greater-than-ten-seconds index tradeoff is consistent with the connected builders."
+  },
+  {
+    "id": "K03-081",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L314",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L178",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50"
+    ],
+    "findings": [],
+    "notes": "V8.2 assembles usable video frames plus optional ASR transcript, with local caps. Neither the frame budget nor bitrate-derived quality label establishes a caption/Full-HD reward or platform-wide four-moment limit."
+  },
+  {
+    "id": "K03-082",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L23-L24",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L403-L417",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L263-L275",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L311-L340"
+    ],
+    "findings": [],
+    "notes": "eventProcessing sets 10*1000 and checks durationMillis > that value. All three named builders call hasValidImmersiveVideo; exactly 10000 fails and 10001 passes only this duration condition."
+  },
+  {
+    "id": "K03-083",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L403-L417"
+    ],
+    "findings": [],
+    "notes": "hasValidImmersiveVideo requires an accepted video to exist and forall media entities to have an accepted type and VideoInfo duration >10000. The multi-video/mixed-media caveat is supported."
+  },
+  {
+    "id": "K03-084",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L263-L275",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L477-L524"
+    ],
+    "findings": [],
+    "notes": "Ordinary Fav flow calls build1FavVideoIndex, which uses hasValidImmersiveVideo. Source/content prerequisites and later retrieval/ranking remain correctly separate."
+  },
+  {
+    "id": "K03-085",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L311-L340",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L477-L524"
+    ],
+    "findings": [],
+    "notes": "Ordinary Fav and PostCreation branches both call buildVideoIndex when the broad video check succeeds, and the builder applies the strict eligibility function. A prior like is not universally required for this builder."
+  },
+  {
+    "id": "K03-086",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L311-L340",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L477-L524"
+    ],
+    "findings": [],
+    "notes": "The adult Fav branch calls buildNsfwVideoIndex and the builder checks adult annotations plus hasValidImmersiveVideo. The claim correctly confines the branch to special content and avoids treating index inclusion as safety certification."
+  },
+  {
+    "id": "K03-087",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L403-L417",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L263-L275",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L311-L340",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L477-L524",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L149",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L507"
+    ],
+    "findings": [],
+    "notes": "All three builders connect to the strict media gate; index insertion remains distinct from enabled retrieval, filters, ranking, and exposure. The record makes these stages explicit."
+  },
+  {
+    "id": "K03-088",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall/src/config/mod.rs#L168-L224"
+    ],
+    "findings": [],
+    "notes": "Main and Sid configurations independently contain the stated 1fav_video age windows; video and nsfw_video have their own age windows. Units and retention/selection scope are correctly separated from video length."
+  },
+  {
+    "id": "K03-089",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L311-L340"
+    ],
+    "findings": [],
+    "notes": "All four enum-to-parquet mappings were checked exactly, and video/nsfw_video producers connect to the duration gate. The enabled-traffic caveat is preserved."
+  },
+  {
+    "id": "K03-090",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282"
+    ],
+    "findings": [],
+    "notes": "The enum reads 32fav_video_14to30day.parquet. A fresh search of all 29 pinned Strato files found no 32fav_video producer, supporting the explicitly unresolved chain rather than an inferred duration or general-32fav guarantee."
+  },
+  {
+    "id": "K03-091",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L26-L43"
+    ],
+    "findings": [],
+    "notes": "EVERGREEN reads video_4to14day.parquet, while evergreen_video and evergreen_nsfw_video have distinct builders. Similar naming does not collapse these objects."
+  },
+  {
+    "id": "K03-092",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L26-L43",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L457-L468",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L385-L400"
+    ],
+    "findings": [],
+    "notes": "Independent Evergreen event branches call hasImmersiveVideo, whose source checks accepted type only. Their builders add no duration check; the claim properly leaves upstream-list eligibility unresolved."
+  },
+  {
+    "id": "K03-093",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L385-L400",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L342-L352",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L506-L524"
+    ],
+    "findings": [],
+    "notes": "The ordinary Fav video branch calls buildImagineIndex; its test is media additionalMetadata.grokPostId, not hasValidImmersiveVideo. Other upstream requirements remain qualified."
+  },
+  {
+    "id": "K03-094",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L506-L524",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L78-L88",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L46-L98"
+    ],
+    "findings": [],
+    "notes": "General 1fav construction has no duration gate; Fav flow calls general/topic/32fav before specialized video builders, with >=32 separately enforced in build32FavIndex. The five-second case is explicitly conditional and not an exposure experiment."
+  },
+  {
+    "id": "K03-095",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/retrieval_dataset.py#L247-L282",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs#L104-L149",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L507",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L78-L88"
+    ],
+    "findings": [],
+    "notes": "HOME maps to 1fav_1day.parquet and the ordinary builder lacks the specialized duration restriction. The claim allows a general candidate entry point without promising display or equal opportunity."
+  },
+  {
+    "id": "K03-096",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L403-L417",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L263-L275",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L311-L340"
+    ],
+    "findings": [],
+    "notes": "The editorial extension advice correctly carries >10 seconds for the three builders, retains other prerequisites, and calls for useful added material rather than promising traffic."
+  },
+  {
+    "id": "K03-097",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L403-L417",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L263-L275",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L311-L340",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L506-L524",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato#L78-L88"
+    ],
+    "findings": [],
+    "notes": "Five/eight seconds are content examples; the general-index possibility and loss of the three specialized duration qualifications are supported. Equal reach is explicitly not claimed."
+  },
+  {
+    "id": "K03-098",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L125-L137",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L182-L204",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/favoriteEventProcessor.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/kafka/favIndexingEventKafkaTopic.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/kafka/indexingEventKafkaBackupTopic.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/kafka/indexingEventKafkaTopic.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/kafka/metadataEventKafkaTopic.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/mh/filteredTopicsByExperiment.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/mh/phoenixRankAllPostAuthorMetadata.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/getPostPhoenixRankAllMetadata.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/phoenixRankAllCandidateProcessor.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/phoenix_rank_all/postCreationEventProcessor.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/scribeEvents.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/columns/tweetUpdateThresholdsCache.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/sharedConfig.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/stream_forwarders/favoriteEventForwarder.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/stream_forwarders/favoritePhoenixIndexingEventForwarder.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/stream_forwarders/postCreationEventForwarder.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Forwarder.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/featureSwitches.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/graphql/userUnderTheHoodReport.GraphQlQuery.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/mh/referenceMonthAggregates.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/mh/userMonthAggregates.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/params.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/sharedConfig.strato",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato"
+    ],
+    "findings": [],
+    "notes": "All 29 pinned .strato files were freshly retrieved and searched: getTweetypieResponse appears only at definition and export in eventProcessing; isMediaEligible is used inside it. Its NSFW/duration and author conditions are verified, with downstream use still explicitly unresolved."
+  },
+  {
+    "id": "K03-099",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py#L104-L120",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_special_video_filter.py#L16-L49"
+    ],
+    "findings": [],
+    "notes": "SpecialVideo source checks user, a Post/quoted Video, and fav >= configurable default 64; it sets motion_reveal and the plan then hydrates. No 512 switch occurs in this filter, and full classification is not guaranteed."
+  },
+  {
+    "id": "K03-100",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_special_video_screen.py#L13-L49",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_special_video.py#L23-L54"
+    ],
+    "findings": [],
+    "notes": "Technique screen requires hydrated Video objects and positive motion_reveal_frames signals; the plan gates category/policy/cross-validation on the screen. Eligibility and final verdict remain distinct."
+  },
+  {
+    "id": "K03-101",
+    "translation_status": "finding",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection_filter.py#L19-L47",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prior_nsfw.py#L16-L34",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py#L104-L120",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prior_nsfw.py#L23-L34"
+    ],
+    "findings": [
+      {
+        "id": "C-02",
+        "severity": "P2",
+        "file": "knowledge/topic-03.json",
+        "line": 4202,
+        "related_lines": [
+          4216,
+          4222
+        ],
+        "category": "translation_and_evidence_logic",
+        "source_basis": "U0319 (research-report.zh-CN.md:1059) excludes previously NSFW results without requiring a prior result to exist. task_safety_ptos_media_injected_adult_infrared_video_spam_detection_filter.py:43-44 skips only when post_is_already_flagged_nsfw is true. prior_nsfw.py:23-34 returns false for a missing result and also on a lookup exception. LeadingFrames separately requires prior PTOS at its own filter:53-55.",
+        "reader_effect": "The English \"requires ... existing results\" invents a prior-result prerequisite and makes MediaInjected look like LeadingFrames, causing incorrect explanations of whether a qualifying video may be checked.",
+        "correction": "State that the task is skipped only when the lookup positively reports existing NSFW status. Explain that absent results or lookup errors are treated as not flagged in this helper; do not say prior results must exist."
+      }
+    ],
+    "notes": "Finding C-02: English says existing non-NSFW results are required. The actual helper returns false when prior results are absent or lookup raises, so absence does not block this task; this differs from LeadingFrames."
+  },
+  {
+    "id": "K03-102",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L101-L159",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L19-L43"
+    ],
+    "findings": [],
+    "notes": "The task skips when no hydrated video frames exist and builds a prompt with confirmed-violation reference storyboards. Reference-loading availability and plan dependencies are prerequisites rather than count-based completion guarantees."
+  },
+  {
+    "id": "K03-103",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/constants.py#L34-L40",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L101-L159"
+    ],
+    "findings": [],
+    "notes": "MEDIA_INJECTED_REASONING_FAV=512 and use_reasoning uses >=. It alters prompt restrictions and assistant output control after earlier eligibility/hydration, not first-ever video reading or a traffic stage."
+  },
+  {
+    "id": "K03-104",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L174-L189",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L19-L43",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248"
+    ],
+    "findings": [],
+    "notes": "A positive MediaInjected verdict produces category Spam with policy SpamManipulatedMedia, then the shared sink applies the general Spam author condition. This does not directly write the separate three-of-five account labels."
+  },
+  {
+    "id": "K03-105",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/constants.py#L29-L33",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_leading_frames_filter.py#L29-L83"
+    ],
+    "findings": [],
+    "notes": "LeadingFrames requires user and either a Video with VideoInfo duration >=30000 or a broadcast_id; both Post and quote are inspected. Prior PTOS must exist and must not already be NSFW; 64 is absent here."
+  },
+  {
+    "id": "K03-106",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_leading_frames_filter.py#L29-L83"
+    ],
+    "findings": [],
+    "notes": "After the prior/non-NSFW check, prior AdultContent category OR fav >=512 permits continuation. The category is not identical to existing NSFW labeling and other prerequisites remain mandatory."
+  },
+  {
+    "id": "K03-107",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/constants.py#L29-L33",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_leading_frames_filter.py#L29-L83",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_adult_content_leading_frames.py#L24-L55"
+    ],
+    "findings": [],
+    "notes": "30 seconds is Video eligibility, first 10 seconds is crop_seconds for qualifying videos/broadcasts, and 512 waives only the prior AdultContent-category need. The plan retains later classification and cross-validation."
+  },
+  {
+    "id": "K03-108",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_adult_content_leading_frames.py#L24-L55",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_cross_validation.py#L67-L131"
+    ],
+    "findings": [],
+    "notes": "The source compares PTOS hard-adult and safemodel sex/nudity signals; disagreement invokes the additional judge. Preconditions and incomplete knowledge of actual model inputs/outputs remain explicit."
+  },
+  {
+    "id": "K03-109",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_cross_validation.py#L133-L152",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L214-L248",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_cross_validation.py#L105-L131"
+    ],
+    "findings": [],
+    "notes": "The same source applies a soft verdict when the adjudicator does not return hard, and on judge errors for SPECIAL_VIDEO_TASK_TYPES. Sink labels follow the final hard/soft policy. The linked source ranges alone omit some branch context, which was independently read in the same file."
+  },
+  {
+    "id": "K03-110",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/generators.py#L109-L144",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_rate_limit.py#L11-L42"
+    ],
+    "findings": [],
+    "notes": "Generators use distinct topic constants for SpecialVideo, LeadingFrames, and MediaInjected, and relevant rate-limit classes use ttl=60 caches. SpecialVideo shares the deluxe annotation cache; 'separate cache' is understood as an additional dedupe stage, not three universally isolated caches."
+  },
+  {
+    "id": "K03-111",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/generators.py#L109-L144",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_rate_limit.py#L11-L42",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L19-L43",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_adult_content_leading_frames.py#L24-L55"
+    ],
+    "findings": [],
+    "notes": "Consumer/filter/dedupe code supplies no guarantee of an event at exactly the 64th/512th public like or real-time count equality. The record appropriately leaves producer timing and per-item completion unknown."
+  },
+  {
+    "id": "K03-112",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py#L104-L120",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_special_video_filter.py#L16-L49",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_special_video_screen.py#L13-L49",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection_filter.py#L19-L47",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/constants.py#L34-L40",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L101-L159",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/constants.py#L29-L33",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_leading_frames_filter.py#L29-L83"
+    ],
+    "findings": [],
+    "notes": "All three task thresholds use fav counts with distinct eligibility/method roles. The rejection of safety certification, traffic rounds, and a threshold-stall diagnosis is supported by the actual plans."
+  },
+  {
+    "id": "K03-113",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_special_video_filter.py#L16-L49",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_special_video_screen.py#L13-L49",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_special_video.py#L23-L54",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection_filter.py#L19-L47",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_media_injected_adult_infrared_video_spam_detection.py#L101-L159",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_adult_content_leading_frames_filter.py#L29-L83",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_adult_content_leading_frames.py#L24-L55"
+    ],
+    "findings": [],
+    "notes": "Post and quoted media are inspected in the named safety filters/plans, differently from the recommendation renderer. The comprehensive review advice is labeled inference and does not declare unseen segments safe."
+  }
+]

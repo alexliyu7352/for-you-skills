@@ -1,0 +1,1577 @@
+[
+  {
+    "id": "K05-001",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L447",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L258-L268",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L67-L110",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L155-L243",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L164",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/engine.rs#L74-L76",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L161-L204"
+    ],
+    "findings": [],
+    "notes": "U0429 lines 1408-1408. Faithful separation of safety labeling and reader/client/entry-point consumption. PTOS writes and visibility audience predicates support the conditional practical check; no uniform-sitewide effect is inferred."
+  },
+  {
+    "id": "K05-002",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://api.github.com/repos/xai-org/x-algorithm/commits/606b254b45be798bfaecfa8c23f5a9c51bc8000c",
+      "https://api.github.com/repos/xai-org/x-algorithm/compare/5ed796374ea48ee26058aab66ab10c266bea2bef...606b254b45be798bfaecfa8c23f5a9c51bc8000c",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/viewer.rs#L124-L149",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L212",
+      "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/models/viewer.rs#L120-L143",
+      "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/levels.rs#L195-L258",
+      "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/tweet_rules.rs#L162-L205"
+    ],
+    "findings": [],
+    "notes": "U0430 lines 1410-1410. Faithful scoped snapshot comparison. Fresh commit metadata dates 606b254 to 2026-10-29. Expanded Home 7/32, HomeRecommendations 20/46, HomeHydration six author and 76 own post rules preserve order. Relevant writer/aggregation task files are absent from the 84-file comparison diff. This remains a static, scoped result."
+  },
+  {
+    "id": "K05-003",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/oon_tweet_label.rs#L192-L268",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/engine.rs#L74-L76",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L161-L204"
+    ],
+    "findings": [],
+    "notes": "U0431 lines 1414-1414; U0433 lines 1418-1424; U0434 lines 1426-1426. The baseline rule uses NonAuthors and is registered in HomeRecommendations. Engine NON_AUTHORS excludes the author; it is not the NonFollowers predicate. Conditions and routing caveat preserve the report's distinction."
+  },
+  {
+    "id": "K05-004",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L67-L110"
+    ],
+    "findings": [],
+    "notes": "U0432 lines 1416-1416. Hydrator sends candidate.in_network.unwrap_or(false) IDs to TimelineHome and other candidate IDs to TimelineHomeRecommendations. Advice correctly asks for actual routing rather than substituting a product-page or follow-relationship guess."
+  },
+  {
+    "id": "K05-005",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L67-L110"
+    ],
+    "findings": [],
+    "notes": "U0432 lines 1416-1416. Ancestors and quotes enter the out-of-network ID set; repost originals enter the in-network set. Attached-object checks support separate verification. No guarantee of complete thread or repost visibility is added."
+  },
+  {
+    "id": "K05-006",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/oon_tweet_label.rs#L192-L268",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L161-L204"
+    ],
+    "findings": [],
+    "notes": "U0433 lines 1418-1424; U0434 lines 1426-1426; U0435 lines 1428-1428. Golden corpus independently expects TimelineHome allow for a non-follower with insults, and HomeRecommendations drop. Baseline Home lacks the insults-only rule. Limits correctly distinguish local allow from final display."
+  },
+  {
+    "id": "K05-007",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L161-L204"
+    ],
+    "findings": [],
+    "notes": "U0433 lines 1418-1424; U0434 lines 1426-1426. NonFollowers expands to not-author AND not-following. Insults plus ClientHasFosnrRules is required by the normal HomeHydration rule. Client and entry-point predicates are preserved."
+  },
+  {
+    "id": "K05-008",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L161-L204"
+    ],
+    "findings": [],
+    "notes": "U0433 lines 1418-1424; U0434 lines 1426-1426. Follower soft intervention requires NonAuthors, ViewerFollowsAuthor, insults, and FOSNR capability. The English faithfully describes the follower branch and correctly reserves actual client presentation for observation."
+  },
+  {
+    "id": "K05-009",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L161-L204"
+    ],
+    "findings": [],
+    "notes": "U0433 lines 1418-1424; U0434 lines 1426-1426. OnlyAuthor plus FOSNR support and the relevant label selects appealable handling. The insults entry is level 1 and restricts edit; the claim does not overstate the interface's exact presentation or infer other readers' visibility."
+  },
+  {
+    "id": "K05-010",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/oon_tweet_label.rs#L192-L268",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L212"
+    ],
+    "findings": [],
+    "notes": "U0435 lines 1428-1428. The cited isolated tests cannot establish a complete request result. Reading the registered rule list confirms separate blocks, age gates, and other labels; the checklist's conditional warning is justified."
+  },
+  {
+    "id": "K05-011",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L161-L204",
+      "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/tweet_rules.rs#L162-L205"
+    ],
+    "findings": [],
+    "notes": "U0436 lines 1430-1430. Fallback audience is Everyone, gated by ClientNeedsFosnrFallbackDrops/HAS_FOSNR_LABEL in the baseline and the equivalent ClientHas switch later. The claim does not assume fallback is always enabled."
+  },
+  {
+    "id": "K05-012",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/viewer.rs#L124-L149",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L161-L204",
+      "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/models/viewer.rs#L120-L143",
+      "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/tweet_rules.rs#L162-L205"
+    ],
+    "findings": [],
+    "notes": "U0436 lines 1430-1430. Baseline ClientCapability defaults are fosnr_rules=true and fosnr_fallback_drops=false; comparison ClientSwitch.default_on preserves them. The new condition representation does not establish production client values."
+  },
+  {
+    "id": "K05-013",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L258-L268"
+    ],
+    "findings": [],
+    "notes": "U0437 lines 1432-1432. The HateOrAbuse branch requires HateOrAbuseInsultsWithTarget, language=en, and neither high PageRank nor gray badge. Necessary local conditions are accurately stated, with classification separated from writing; earlier exclusions are covered separately."
+  },
+  {
+    "id": "K05-014",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194"
+    ],
+    "findings": [],
+    "notes": "U0437 lines 1432-1432. Test users receive PtosReviewed and return before PageRank lookup and all policy-specific label branches. The translated early-return advice is faithful and does not extend the exception to other paths."
+  },
+  {
+    "id": "K05-015",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L258-L268"
+    ],
+    "findings": [],
+    "notes": "U0437 lines 1432-1432; U0438 lines 1434-1434. Only the named PTOS branch was demonstrated; its local English-language/author gate cannot establish a sitewide exemption. The unknown classification and other-source limits are appropriate."
+  },
+  {
+    "id": "K05-016",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0438 lines 1434-1434. Faithful editorial advice to replace personal insults with verifiable criticism of conditions and numbers. It is explicitly not a classifier-safe vocabulary and requires no empirical reach evidence."
+  },
+  {
+    "id": "K05-017",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/label_interstitial.rs#L119-L165",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L62-L79"
+    ],
+    "findings": [],
+    "notes": "U0439 lines 1438-1438. PUBLIC_INTEREST_LABEL_INTERSTITIAL has Everyone audience, TweetCreatedAfter(1554076800000), LOW_QUALITY, four MISINFO values, and IPI_DEVELOPMENT_ONLY. The local-rule and creation-time boundaries remain intact."
+  },
+  {
+    "id": "K05-018",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec.rs#L759-L789"
+    ],
+    "findings": [],
+    "notes": "U0440 lines 1440-1440. The four MISINFO values exactly match the public_interest dispatch. The claim correctly requires the actual label/source and does not turn an enum name into a fixed production action list."
+  },
+  {
+    "id": "K05-019",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs#L49-L80",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec.rs#L759-L789"
+    ],
+    "findings": [],
+    "notes": "U0440 lines 1440-1440; U0441 lines 1442-1442. LOW_QUALITY sets limit=Some(NonCompliant). Policy resolution is a later step, so the reason/action separation and actual-policy caveat are supported."
+  },
+  {
+    "id": "K05-020",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/verdict.rs#L225-L258",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs#L189-L207",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec.rs#L759-L789"
+    ],
+    "findings": [],
+    "notes": "U0440 lines 1440-1440. from_misinfo_source maps limited_replies to ConversationControl; the cited policy test expects Reply. Translation correctly restricts that action assertion to the test configuration."
+  },
+  {
+    "id": "K05-021",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs#L49-L80",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/treatment.rs#L81-L115"
+    ],
+    "findings": [],
+    "notes": "U0441 lines 1442-1442. LimitedActionsPolicies.resolve reads limited_actions_policy_limited_actions, skips a reason when parsed actions are empty, and treatment assembles final limited engagements. Missing user-supplied configuration is correctly treated as unknown production scope; no action list is invented."
+  },
+  {
+    "id": "K05-022",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs#L189-L207"
+    ],
+    "findings": [],
+    "notes": "U0441 lines 1442-1442. All eleven listed NonCompliant test actions match the public test vector. QuoteTweet is not silently added; the English preserves test scope and does not claim all users have this policy."
+  },
+  {
+    "id": "K05-023",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/verdict.rs#L34-L68",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs#L189-L207",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs#L49-L80"
+    ],
+    "findings": [],
+    "notes": "U0442 lines 1444-1444. Independent action types distinguish Retweet, QuoteTweet, SendViaDm, ShareTweetVia, and CopyLink. The editorial instruction to avoid one undifferentiated sharing ban is supported."
+  },
+  {
+    "id": "K05-024",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/verdict.rs#L77-L83",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/label_interstitial.rs#L119-L165",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec.rs#L759-L789",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/treatment.rs#L81-L115"
+    ],
+    "findings": [],
+    "notes": "U0443 lines 1446-1446. public_interest may construct MISINFO with limit=None; LabelInterstitial.limited_engagement_reason falls back to NonCompliant; treatment then attaches policy-based limited engagements. The full chain supports possible restrictions without a usable source."
+  },
+  {
+    "id": "K05-025",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot#L2-L47",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L2-L21",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L198-L212",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec.rs#L759-L789",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L62-L79",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L933-L937"
+    ],
+    "findings": [],
+    "notes": "U0444 lines 1448-1448. The URL bots test a URL LOW_QUALITY verdict and write post SPAM_HIGH_RECALL, while the public-interest rule consumes post LOW_QUALITY. The translated object distinction and caution about ordinary writing/link inclusion are correct."
+  },
+  {
+    "id": "K05-026",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L155-L243",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L164"
+    ],
+    "findings": [],
+    "notes": "U0445 lines 1452-1452. HomeRecommendations registers the named NSFW account flags/labels with the matching author predicates. The claim correctly says corresponding reader conditions must hold and forbids diagnosing an account label from views alone."
+  },
+  {
+    "id": "K05-027",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L155-L243",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L164"
+    ],
+    "findings": [],
+    "notes": "U0445 lines 1452-1452. HomeRecommendations lists all six named non-NSFW author rules. They consume account labels, not similarly named post labels; the English retains conditional execution and exact target."
+  },
+  {
+    "id": "K05-028",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L155-L243",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L164",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/engine.rs#L74-L76"
+    ],
+    "findings": [],
+    "notes": "U0446 lines 1454-1454. Most listed author labels use NonAuthors; AbusiveHighRecall and DoNotAmplify use NonFollowers. Home's author-rule list is narrower. The English faithfully resists a universal account-label effect."
+  },
+  {
+    "id": "K05-029",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato#L117-L180"
+    ],
+    "findings": [],
+    "notes": "U0446 lines 1454-1454; U0447 lines 1456-1456. Pinned official label descriptions repeatedly specify non-follower recommendations. The claim does not convert that scope into all search/profile/direct-link invisibility or permanent zero traffic."
+  },
+  {
+    "id": "K05-030",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato#L117-L180"
+    ],
+    "findings": [],
+    "notes": "U0447 lines 1456-1456. Faithful investigation advice derived from official account-label effects. The record of dates, names, validity when known, and changes is a proposed evidence practice, not a causal or inferential formula."
+  },
+  {
+    "id": "K05-031",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L430-L432"
+    ],
+    "findings": [],
+    "notes": "U0448 lines 1460-1460; U0449 lines 1462-1468; U0450 lines 1470-1470. Default JSON exactly sets windowSize=5, minimumMatchingPosts=3, maxPostAgeDays=60, mediaOnly=false, and the specified existing post-label selector. Unit is post records; trigger/account and override caveats remain."
+  },
+  {
+    "id": "K05-032",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L251-L283",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L56-L83"
+    ],
+    "findings": [],
+    "notes": "U0451 lines 1472-1472. Processor requests Descending timeline records; matchesPostLabelCount takes the window before filtering age/labels when mediaOnly=false. It does not count images or average model scores. UI reconstruction is properly limited."
+  },
+  {
+    "id": "K05-033",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L251-L283",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L56-L83"
+    ],
+    "findings": [],
+    "notes": "U0452 lines 1474-1474; U0453 lines 1476-1482; U0454 lines 1484-1484; U0455 lines 1486-1486. Hypothetical counts 1,0,1,0,1 follow post-record counting and mediaOnly=false. Four images contribute one post and unlabeled text occupies a slot. Prerequisite assumptions and fictional status are explicit."
+  },
+  {
+    "id": "K05-034",
+    "translation_status": "finding",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L251-L283",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425"
+    ],
+    "findings": [
+      "KD-03"
+    ],
+    "notes": "U0456 lines 1488-1488. Main conclusion and practical wording correctly describe at most five records and at least three matches. KD-03: check.verify compares minimumMatchingPosts>=3 instead of comparing matching-record count against that configured threshold."
+  },
+  {
+    "id": "K05-035",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L119-L142",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L251-L283",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L12-L28"
+    ],
+    "findings": [],
+    "notes": "U0457 lines 1492-1492. Processor admits Applied events, and triggeredRules requires the selected new label and recent event post; window records are checked separately. The English preserves event, account, age, and window dependencies."
+  },
+  {
+    "id": "K05-036",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L56-L83"
+    ],
+    "findings": [],
+    "notes": "U0458 lines 1494-1494. Processor resolves originalTweetForRetweet(postId) for labels, but stores tweetId=postId in PostLabelData for age checks. Translation correctly distinguishes original-label source from timeline-record time."
+  },
+  {
+    "id": "K05-037",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L56-L83"
+    ],
+    "findings": [],
+    "notes": "U0458 lines 1494-1494. The local processor exposes timeline retrieval and repost treatment, not complete upstream retention, deletion, pagination, or consistency behavior. The unknown status and refusal to equate UI records with the response are appropriate."
+  },
+  {
+    "id": "K05-038",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L119-L142",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425"
+    ],
+    "findings": [],
+    "notes": "U0459 lines 1496-1496. Default exclusions enable nsfwAdmin and same-named account NSFW_HIGH_PRECISION. isExcluded applies these before timeline evaluation. The English correctly requires observed account eligibility before predicting a write."
+  },
+  {
+    "id": "K05-039",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L119-L142",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425"
+    ],
+    "findings": [],
+    "notes": "U0459 lines 1496-1496. The same default sets nsfwUser and highPageRankOrGreyBadge exclusions false. These disabled exclusions do not create an unconditional write; remaining conditions and configuration scope are preserved."
+  },
+  {
+    "id": "K05-040",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L89-L106"
+    ],
+    "findings": [],
+    "notes": "U0460 lines 1498-1498. Default output is account NSFW_HIGH_PRECISION with ttlDays=7; processor writes expiresAtMsec=currentTime+TTL. The claim properly separates write-time expiration from image upload time and exposure recovery."
+  },
+  {
+    "id": "K05-041",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L119-L142",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L89-L106"
+    ],
+    "findings": [],
+    "notes": "U0460 lines 1498-1498. Same-label account exclusion precedes writes, so new post-label matches do not by themselves prove TTL renewal. Other updating systems remain explicitly unverified rather than denied."
+  },
+  {
+    "id": "K05-042",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Forwarder.strato#L3-L20"
+    ],
+    "findings": [],
+    "notes": "U0461 lines 1500-1500. Forwarder sets delay=10.minutes and slo.maxLag=20.minutes. The English correctly calls the latter a target and does not promise synchronous enforcement or measured per-event timing."
+  },
+  {
+    "id": "K05-043",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L152-L177",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L430-L432"
+    ],
+    "findings": [],
+    "notes": "U0462 lines 1504-1504. configuredRulesJson is a feature-switch string parameter with defaultRulesJson fallback. mediaOnly is supported but disabled in this default. Scope and override advice are faithful."
+  },
+  {
+    "id": "K05-044",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L360-L394",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L430-L432"
+    ],
+    "findings": [],
+    "notes": "U0463 lines 1506-1506. possibly_nsfw_account default has a window of ten and minimum eleven; take(windowSize) makes that count unreachable despite enabled=true. Possible overrides and other label sources are retained."
+  },
+  {
+    "id": "K05-045",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/NsfwTweetMediaProcessor.bot#L3-L30",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/derived-feature/ApplyNsfwUserLabel.df#L19-L45",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/derived-feature/ApplyNsfwUserLabelOrCreateReport.df#L2-L81"
+    ],
+    "findings": [],
+    "notes": "U0464 lines 1508-1508. Separate media-event bot calls an HLL helper keyed by post ID; helper requires a one-day HLL count greater than two and has fatigue gating before labeling/review. Author exceptions and three/seven-day handling belong to that separate path. The claim does not splice them into three-of-five."
+  },
+  {
+    "id": "K05-046",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L251-L283",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L12-L28",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/safetyLabelToUserLevelAggregationV2Processor.strato#L89-L106",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato#L117-L180"
+    ],
+    "findings": [],
+    "notes": "U0465 lines 1510-1510. Faithful evidence-organization advice supported by post-to-account aggregation and account effect descriptions. It explicitly denies guaranteed restriction avoidance through ordinary-post interspersing."
+  },
+  {
+    "id": "K05-047",
+    "translation_status": "verified",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextProd.bot#L2-L74"
+    ],
+    "findings": [
+      "KD-02"
+    ],
+    "notes": "U0466 lines 1516-1516. Translation faithfully copies the Chinese naming mistake. KD-02: accepted job names are bbq_duplicate_text_unigrams and bbq_duplicate_text_characters_cjk. The CJK scope and conditional COPYPASTA write are otherwise supported."
+  },
+  {
+    "id": "K05-048",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextRepliesProd.bot#L2-L58"
+    ],
+    "findings": [],
+    "notes": "U0466 lines 1516-1516. Replies bot explicitly accepts bbq_duplicate_text_unigrams_replies and bbq_duplicate_text_characters_replies_cjk, then applies eligibility and write logic. Claim does not imply every reused reply sentence is a violation."
+  },
+  {
+    "id": "K05-049",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextProd.bot#L2-L74",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextRepliesProd.bot#L2-L58"
+    ],
+    "findings": [],
+    "notes": "U0467 lines 1518-1518. Both cited bots begin with scheduled-cluster receipt and omit upstream clustering formulas. The unknown similarity, repetition-count, and text-length boundaries are correctly stated; no safe quota is invented."
+  },
+  {
+    "id": "K05-050",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextProd.bot#L2-L74",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextRepliesProd.bot#L2-L58"
+    ],
+    "findings": [],
+    "notes": "U0468 lines 1520-1520. Both bots check existing per-job marker, COPYPASTA label, and two promo-card predicates with TryOrElse(false) before actionable authors. Cluster receipt is correctly separated from an actual completed write."
+  },
+  {
+    "id": "K05-051",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextProd.bot#L2-L74",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextRepliesProd.bot#L2-L58"
+    ],
+    "findings": [],
+    "notes": "U0468 lines 1520-1520. Both duplicate consumers exclude test, high-PageRank, temporary-skip, and gray-badge authors and wrap writes in RateLimited. These local exceptions are not presented as universal copying immunity."
+  },
+  {
+    "id": "K05-052",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://api.github.com/repos/xai-org/x-algorithm/git/trees/5ed796374ea48ee26058aab66ab10c266bea2bef?recursive=1",
+      "https://api.github.com/search/code?q=COPYPASTA_SPAM%20repo%3Axai-org%2Fx-algorithm",
+      "https://api.github.com/search/code?q=CopypastaSpam%20repo%3Axai-org%2Fx-algorithm",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L447",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L440-L447",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextProd.bot#L2-L74",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextRepliesProd.bot#L2-L58",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/drops.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/following_ad_blender.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/multi_risk_blender.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/partition_organic_blender.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/safe_gap_blender.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/tests/blender_comparison_test.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/tests/following_ad_blender_tests.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/tests/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/tests/multi_risk_blender_tests.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/tests/partition_organic_blender_tests.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/tests/safe_gap_blender_tests.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/tests/time_gap_blender_tests.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/time_gap_blender.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ads/util.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/ads_brand_safety_vf_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/ai_trend_feedback_context_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/ancestor_video_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/bidirectional_follow_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/blocked_by_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/broadcast_liveness_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/conversation_gap_ancestor_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/core_data_candidate_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/engagement_counts_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/filtered_topics_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/following_blocked_by_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/following_replied_users_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/gizmoduck_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/in_network_candidate_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/language_code_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/media_info_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/mutual_follow_jaccard_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/new_user_soft_nsfw_label_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/phoenix_reply_ancestors_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/post_engagers_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/quote_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/quoted_post_text_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/semantic_id_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/subscription_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/topic_feedback_context_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/tweet_type_metrics_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_following_candidate_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/video_embedding_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/video_media_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/following_candidate_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_scores_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/ranked_following_candidate_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/reverse_chron_posts_pipeline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/ad_index_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/author_brand_safety_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/engagement_counts_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/engagement_signals_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/gizmoduck_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/impressed_posts_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/night_owl_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/past_request_timestamps_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/popular_authors_store_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/post_engagers_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/post_v8_search_embedding_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/prompts_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/recent_search_queries_store_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/resurrection_date_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/rotating_channel.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/s2s.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/served_history_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/sid_retrieval_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/simclusters_ann_cache_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/simclusters_ann_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/tweet_entity_service_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/uas_fetcher.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/user_action_aggregation_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/vm_ranker_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/clients/who_to_follow_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/config.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/dark_traffic_setup.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ad_adjacent_served_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancestor_video_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ancillary_vf_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/author_socialgraph_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/core_data_hydration_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/dedup_conversation_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/drop_duplicates_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fav_holdout_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/following_retweet_deduplication_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/following_viewer_muted_keyword_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ineligible_subscription_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/invalid_conversation_module_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/inventory_holdout_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/new_user_min_engagement_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/new_user_soft_nsfw_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/oon_nsfw_simclusters_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/oon_retweet_reply_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/popular_topics_author_dedup_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_backup_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_served_posts_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/push_to_home_dedup_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/result_size_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/retweet_deduplication_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/self_reply_chain_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/self_tweet_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/topic_ids_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/vf_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/video_carousel_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/video_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/viewer_muted_keyword_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/zero_fav_codivert_filter.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/following_feed_server.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/for_you_server.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/frames/catalog.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/frames/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/frames/placement.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/frames/plan.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/frames/served.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/lib.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/main.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/brand_safety.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/candidate.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/candidate_features.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/content_features.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/engagement_signals.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/fs_recipient.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/in_network_reply.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/query.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/user_features.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/phoenix_scores_server.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/popular_authors_job.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/popular_posts_job.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/blocked_user_ids_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/cached_posts_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/followed_grok_topics_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/followed_starter_packs_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/followed_user_ids_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/immersive_scoring_sequence_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/implicit_engagement_signals_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/impressed_posts_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/impression_bloom_filter_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/ip_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/muted_user_ids_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/mutual_follow_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/past_request_timestamps_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/recent_search_queries_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/retrieval_sequence_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/scoring_sequence_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/served_history_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/subscribed_user_ids_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/user_demographics_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/user_inferred_gender_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/user_installed_apps_query_hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/ranked_following_feed_server.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scored_posts_server.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/immersive_video_scorer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/page_decode_rerank_scorer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/page_rl_exploration_scorer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/phoenix_scorer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/phoenix_scores_ranking_scorer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_debias_payload.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/blender_selector.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/following_blender_selector.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/passthrough_selector.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/selectors/top_k_score_selector.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/server.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/ads_injection_logging_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/author_served_metrics_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/client_events_kafka_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/debug_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/funnel_trace_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/mutual_follow_stats_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/phoenix_experiments_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/phoenix_request_cache_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/publish_seen_ids_to_kafka_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/redis_post_candidate_cache_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/reranking_kafka_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/response_diversity_stats_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/response_stats_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/retrieval_candidates_kafka_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/scored_stats_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/serendipity_stats_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/served_ad_history_cache_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/served_candidates_kafka_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/served_event_kafka_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/truncate_served_history_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/update_past_request_timestamps_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/update_served_history_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/side_effects/video_carousel_candidates_kafka_side_effect.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/ads_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/cached_posts_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/feed_survey_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/following_night_owl_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/jetfuel_frame_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_moe_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/phoenix_topics_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/popular_posts_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/popular_topics_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/prompts_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/push_to_home_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/reverse_chron_posts_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/scored_posts_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/seed_candidates_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/sid_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/tweet_mixer_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/who_to_follow_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/conversation_grouping.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/country_codes.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/egress.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/feed_log.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/phoenix_request.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/popular_authors.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/popular_posts.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/post_engagers.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/rescore.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/shadow.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/shadow_scores.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/strato_context.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/string_case.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/tweet_type_metrics.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/under_the_hood.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/url.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/ad_marshaller.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/client_event.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/controller_data.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/convo_marshaller.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/cursors.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/feed_survey_marshaller.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/feedback.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/frame_marshaller.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/navigation.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/new_tweets_pill.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/post_marshaller.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/prompt_marshaller.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/push_to_home_marshaller.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/reverse_chron_following/cursors.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/reverse_chron_following/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/video_carousel_marshaller.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/wtf_marshaller.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/video_carousel.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/viewer_history.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/xds.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/bin/vf-gate.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/caller_identity.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/about_this_account_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/article_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/gizmoduck_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/socialgraph_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/strato.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/trusted_friends_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/user_devices_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/user_location_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/clients/wingman_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/config.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/dark_traffic_setup.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/evaluate_tweets.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/explain.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/filter_notifications.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/filter_tweets.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/get_safety_labels.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/batch.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/community_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/decode/article.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/decode/author.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/decode/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/decode/tweet.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/decode/viewer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/execute.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/fallback_cache.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/fetcher.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/hydrator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/inventory.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/metrics.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/plan.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/relation.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/sources.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/sources/fake_backends.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/sources/in_memory.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/store.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/store/conversation_root.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/store/key_origin.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/store/quotes.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/store/resolve.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/hydration/tweet_source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/ingress.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/lib.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/main.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/metrics/families.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/metrics/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/author.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/conversation_control.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/region.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/safety_labels.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/tweet.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/verdict.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/models/viewer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/client_switches.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_copy.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/params/limited_actions_policy.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/pinned.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/post_card.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/post_evaluator.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/post_evaluator/author.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/post_evaluator/retweet.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/quote.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/result_label.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/catalog.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/context.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/defaults.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/engine.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/expansion.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/fixtures.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/age_gating.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/age_verification.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/article.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/author_state.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/baseline.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/community.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/conversation_control.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/exclusive_content.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/interstitial.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/label_interstitial.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/legacy_interstitial.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/local_regulations.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/local_tweet.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/notifications.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/oon_media.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/oon_tweet_label.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/oon_user_label.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/quoted_tweet_rules.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/reaction_video.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/relationship.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/takedown.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/trusted_friends.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/tweet_label.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/tweet_state.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/conditions.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/engine.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/article.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/author.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/community.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/compound.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/edges.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/post.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/reaction.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/request.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/tweet.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/viewer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/inputs.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/laws.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/observed.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/predicates.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/rule.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/safety_level.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/safety_label_source/decode.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/safety_label_source/metrics.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/safety_label_source/mh_client.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/safety_label_source/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/safety_label_source/remote.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/safety_label_source/source.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/safety_label_source/warmer.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/scenario.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/server.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/server_deps.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/staging/main.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/staging/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/staging/reference/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/staging/reference/tweetypie.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/staging/reference/tweetypie/quotes.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/staging/serve.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/thrift_read.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/treatment.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/verdict_gate.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/args.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/config_sync.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/dpp.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/embedding_store.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/helpers.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/lib.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/main.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/metrics.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/ranker_service.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/ranking_config.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/debias.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/dpp_model.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/mod.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/value_model.rs",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/user_debias_store.rs"
+    ],
+    "findings": [],
+    "notes": "U0469 lines 1522-1522. Fresh pinned full-file search of all 425 Home Mixer, VM Ranker, and visibility-filtering blobs found no direct case-insensitive copypasta identifier after removing underscores. All returned SHAs matched the pinned tree. This corroborates a bounded direct-consumer search only; indirect/unpublished consumers and exposure magnitude remain unknown."
+  },
+  {
+    "id": "K05-053",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0470 lines 1524-1524. Faithful editorial distinction between relevant reuse with sources/new context and unrelated repeated promotion. Ten discussions is explicitly an illustrative example, not a classifier threshold."
+  },
+  {
+    "id": "K05-054",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L48-L49"
+    ],
+    "findings": [],
+    "notes": "U0471 lines 1528-1528; U0472 lines 1530-1530. The Spam category branch sets should_label_for_spam=true for exactly EngagementBaiting, EngagementFarming, and CardManipulation. Earlier test/environment/model requirements are preserved; no guarantee of universal detection is added."
+  },
+  {
+    "id": "K05-055",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248"
+    ],
+    "findings": [],
+    "notes": "U0471 lines 1528-1528. Other non-NoViolation Spam policies use not is_high_page_rank_user, where that value combines PageRank and gray badge. Passing the branch writes a post SpamHighRecall label, not an account label."
+  },
+  {
+    "id": "K05-056",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248"
+    ],
+    "findings": [],
+    "notes": "U0472 lines 1530-1530. The writer calls named PageRank/gray-badge services and contains no follower-count test in the three-class assignment. The translation correctly separates author status, policy classification, and write eligibility."
+  },
+  {
+    "id": "K05-057",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/disable_rules.py#L6-L11",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L48-L49"
+    ],
+    "findings": [],
+    "notes": "U0473 lines 1532-1532. Sink DISABLE_RULES names DisableTaskForNonPtosProd; that rule disables outside is_ptos_prod. Test-user early return precedes all policy branches. Execution mode, early return, and model classification are not collapsed."
+  },
+  {
+    "id": "K05-058",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prompts.py#L11-L31"
+    ],
+    "findings": [],
+    "notes": "U0473 lines 1532-1532. prompts.py states prompts are excluded and loads spam_policy.j2. A phrase-level guaranteed-penalty or safe-phrase list cannot be derived from this public loader. Editorial quality remains separate from actual classifier output."
+  },
+  {
+    "id": "K05-059",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0474 lines 1534-1534. Faithful editorial example asking about conditions, versions, and examples to make feedback useful. The example is explicitly not promised to be classifier-safe."
+  },
+  {
+    "id": "K05-060",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/state.py#L37-L46",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248"
+    ],
+    "findings": [],
+    "notes": "U0475 lines 1538-1538. SpamHashTagAbuse appears in the policy enum and falls in the other-Spam author-eligibility branch. The claim correctly retains model classification, prerequisites, and conditional writing rather than predicting violations from count."
+  },
+  {
+    "id": "K05-061",
+    "translation_status": "finding",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L447",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prompts.py#L11-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/state.py#L37-L46",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248"
+    ],
+    "findings": [
+      "KD-01"
+    ],
+    "notes": "U0475 lines 1538-1538. KD-01: the English conclusion and limit turn an unpublished/unestablished formula into a nonexistent formula. Original U0475 says no such common numerical formula is public. Cited classification code and unpublished prompts cannot prove nonexistence."
+  },
+  {
+    "id": "K05-062",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L25-L36",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/id_list_features.py#L108-L120"
+    ],
+    "findings": [],
+    "notes": "U0476 lines 1540-1540. CLICK_HASHTAG is explicitly in EVENT_ACTIONS and HISTORY_EVENTS. This establishes an available behavioral input, not a fixed score bonus per hashtag or universal use by every request."
+  },
+  {
+    "id": "K05-063",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/simclusters/simclusters_v2/summingbird/common/TweetEntityExtractor.scala#L14-L40"
+    ],
+    "findings": [],
+    "notes": "U0477 lines 1542-1542. TweetEntityExtractor sets MaxHashtagsPerTweet=4 and uses take on the hashtag entities. The claim preserves component-local selection scope and rejects a sitewide optimum, penalty threshold, or guaranteed reward."
+  },
+  {
+    "id": "K05-064",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L25-L36",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/id_list_features.py#L108-L120",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/simclusters/simclusters_v2/summingbird/common/TweetEntityExtractor.scala#L14-L40"
+    ],
+    "findings": [],
+    "notes": "U0478 lines 1544-1544. Faithful editorial relevance/usefulness advice. The underlying extractor and input evidence establish local capabilities but no optimum; the practical recommendation is appropriately identified as editorial."
+  },
+  {
+    "id": "K05-065",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L466-L470",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L444",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs#L16-L31",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_served_posts_filter.rs#L14-L30",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L13-L17",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx#L25-L51",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato",
+      "https://help.x.com/en/using-x/view-counts"
+    ],
+    "findings": [],
+    "notes": "U0479 lines 1548-1548. README/implementation distinguish retrieval, ranking, already-seen filtering, and visibility. Official views are not a causal log. The low-view example remains an unresolved diagnostic situation, not a numeric code threshold."
+  },
+  {
+    "id": "K05-066",
+    "translation_status": "verified",
+    "evidence_status": "unverified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L466-L470",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx#L25-L51",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.strato#L8-L19",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato",
+      "https://x.com/i/jf/under_the_hood"
+    ],
+    "findings": [],
+    "notes": "U0480 lines 1550-1550. Pinned README, implementation, report fields, and labels verify the pilot tool description and authenticated/feature-switch gate. The live x.com/i/jf/under_the_hood endpoint returned 403 on web retrieval, so current account availability remains unverified. No session was probed. For precise post-period semantics use KD-04's cohort qualification."
+  },
+  {
+    "id": "K05-067",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/index.tsx#L14-L32",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx#L25-L51",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L147-L165",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L423-L458"
+    ],
+    "findings": [],
+    "notes": "U0481 lines 1554-1554. UI says previous month, while reportMonthBucket applies calendar readiness/cap and monthDataReady may fall back one further month. Period and generatedAt are real fields; aligning the actual period before diagnosis is supported."
+  },
+  {
+    "id": "K05-068",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L17-L22",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L500-L530",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.strato#L8-L19",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/params.strato#L15-L22"
+    ],
+    "findings": [],
+    "notes": "U0482 lines 1556-1556. Service uses an account age greater than 365 days, postCount>=10 for the selected month's eligible-post aggregate, and an authenticated feature-switch gate. Report eligibility is correctly separated from recommendation eligibility; about one year avoids an exact-boundary overclaim."
+  },
+  {
+    "id": "K05-069",
+    "translation_status": "verified",
+    "evidence_status": "finding",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx#L25-L51",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L215-L250",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L311-L393",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L421-L422",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthUserMonthMhPublisherJob.scala#L237-L245",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L320-L355"
+    ],
+    "findings": [
+      "KD-04"
+    ],
+    "notes": "U0483 lines 1560-1563. KD-04: the English faithfully inherits the Chinese period simplification, but upstream code uses authored-month eligible logical posts and path-specific observation rules. Ordinary safety-label events use a configurable seven-day default horizon and everApply, so this is not all posts carrying a label during the calendar month."
+  },
+  {
+    "id": "K05-070",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx#L25-L51",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L350-L367"
+    ],
+    "findings": [],
+    "notes": "U0483 lines 1560-1563. Report builder counts distinct activeDays and divides by daysInPeriod, then UI uses dayStat. This is a labeled-day metric, not an affected-post or exposure-loss count; the stated warning against full-day invisibility is correct."
+  },
+  {
+    "id": "K05-071",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx#L25-L51"
+    ],
+    "findings": [],
+    "notes": "U0484 lines 1565-1565. The hypothetical 3/40=7.5% arithmetic and post-based interpretation are correct, explicitly non-empirical, and do not claim exposure loss. Actual report cohort/eligibility must follow the qualified metric definition in KD-04."
+  },
+  {
+    "id": "K05-072",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx#L25-L51",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato"
+    ],
+    "findings": [],
+    "notes": "U0484 lines 1565-1565. Five labeled days out of 31 remains a duration-count example. Official effects vary by audience/surface, so the warning against five days of sitewide invisibility is sound and the example is fictional."
+  },
+  {
+    "id": "K05-073",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/jetfuel/routes/report.tsx#L25-L51",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato"
+    ],
+    "findings": [],
+    "notes": "U0485 lines 1567-1567. UI exposes What it means and Effect on visibility; the official map includes recommendation limits, warnings, and country-specific takedown effects. Translation properly keeps these meanings distinct."
+  },
+  {
+    "id": "K05-074",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato"
+    ],
+    "findings": [],
+    "notes": "U0486 lines 1569-1569. A follower opening a post is a different observation from non-follower recommendation eligibility. The method follows the stated official scope and is explicitly not a sitewide empirical result."
+  },
+  {
+    "id": "K05-075",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0487 lines 1573-1573. Faithful chronological recordkeeping and conditional correction/appeal advice. It does not claim a contemporaneous content change caused a label or an aggregate is a per-request causal record."
+  },
+  {
+    "id": "K05-076",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L47-L65"
+    ],
+    "findings": [],
+    "notes": "U0488 lines 1575-1575. Service explicitly labels reports best effort and returns aggregate fields, not comparative per-impression ranking logs. An empty record does not prove normal rankings or a hidden penalty; both cautions are preserved."
+  },
+  {
+    "id": "K05-077",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0489 lines 1579-1579. Faithful editorial checks of title clarity, first-image information, delivered promises, and discoverable updates. The claim explicitly avoids diagnosing the algorithm or guaranteeing growth."
+  },
+  {
+    "id": "K05-078",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0490 lines 1581-1581. Faithful comparison advice to change one principal factor and keep task/material/observation conditions similar. Remaining audience/platform confounding is retained."
+  },
+  {
+    "id": "K05-079",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0491 lines 1583-1583; U0492 lines 1585-1585. Faithful instruction to use actually available account analytics and preserve missing values. It does not assume account parity or invent official scoring fields."
+  },
+  {
+    "id": "K05-080",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://help.x.com/en/using-x/view-counts"
+    ],
+    "findings": [],
+    "notes": "U0491 lines 1583-1583. Official view-count help explicitly allows repeated views and counts across Home, Search, Profiles, and other surfaces. Non-deduplicated per-post totals cannot be summed into unique people; translation and inference are sound."
+  },
+  {
+    "id": "K05-081",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0492 lines 1585-1585; U0493 lines 1587-1593. Faithful editorial comparison-table fields: content identity, task/format, publishing time, reply/quote status, and external-link placement. They are described as recording variables, not scoring inputs."
+  },
+  {
+    "id": "K05-082",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0493 lines 1587-1593. 24/48-hour windows are explicitly suggested observation times; repeated observations on the same post are not independent posts. Missing points retain actual elapsed time."
+  },
+  {
+    "id": "K05-083",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0493 lines 1587-1593. Faithful missing-versus-zero distinction for platform-provided actions. Definitions, denominators, units, and observation windows are retained; nonexistent metrics are not imputed."
+  },
+  {
+    "id": "K05-084",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0493 lines 1587-1593. Faithful account-goal evaluation advice: qualified inquiries and useful visits can matter alongside views. It does not manufacture goal outcomes or a recommendation bonus."
+  },
+  {
+    "id": "K05-085",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0493 lines 1587-1593. Faithful request to record trends, revisions, and known label periods as possible confounders. It weakens attribution when background evidence is absent."
+  },
+  {
+    "id": "K05-086",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0494 lines 1595-1595. Median and distribution advice is a reasonable editorial/statistical comparison method and follows the original. It does not claim a universal sufficient sample size or turn a small sample into a stable result."
+  },
+  {
+    "id": "K05-087",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0494 lines 1595-1595. Faithful caution that repeated readers and selected audiences prevent treating organic impressions as independent randomized experimental units. No randomized causal finding is claimed."
+  },
+  {
+    "id": "K05-088",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0494 lines 1595-1595. Faithful post-unit bootstrap suggestion with adequate comparable samples, consistent windows, and small-sample/causal limits. It does not resample 24/48-hour observations as separate posts or set an invented sample-size cutoff."
+  },
+  {
+    "id": "K05-089",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0495 lines 1597-1597. All four stages and their purposes match U0495. The schedule is explicitly adjustable to capacity and existing practice and not an algorithm requirement."
+  },
+  {
+    "id": "K05-090",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0495 lines 1597-1597. Daily one-post and weekly three-to-five examples remain experimental starting points, not rewards, caps, or universal optima. The practical fallback to a sustainable baseline preserves the original's intent."
+  },
+  {
+    "id": "K05-091",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0496 lines 1601-1601. OCR comparison remains a fictional organizational example using the same Chinese-invoice batch; A/B are placeholders with no invented ranking or measured results."
+  },
+  {
+    "id": "K05-092",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0497 lines 1605-1605. Faithful reader-task and evidence-scope framing for OCR tool choice and manual field checks. It avoids claiming the test evaluates all AI recognition."
+  },
+  {
+    "id": "K05-093",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0498 lines 1607-1608. The full sample opening accurately preserves fields (dates, tax amounts, buyer information), identical original images, error examples, settings, and manual-verification use. Added checks correctly require promised material before publication."
+  },
+  {
+    "id": "K05-094",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0499 lines 1610-1610. All five method details match the original: sample count, tool version, date, image quality, and evaluation method. The writing format is explicitly editorial rather than mandated by recommendation code."
+  },
+  {
+    "id": "K05-095",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0500 lines 1612-1612. Faithful first-image advice retains real representative evidence and input limitations. It does not generalize blurry-image results to all invoices or guarantee reach."
+  },
+  {
+    "id": "K05-096",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0501 lines 1614-1614. Single post versus long article plus summary thread follows evidence volume. The three-post example preserves question/judgment, comparison, and scope/material access without presenting three as an optimum."
+  },
+  {
+    "id": "K05-097",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/phoenix_reply_ancestors_hydrator.rs#L79-L97",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/for_you_server.rs#L71-L88",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L84-L95",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/urt/convo_marshaller.rs#L12-L63"
+    ],
+    "findings": [],
+    "notes": "U0502 lines 1616-1616. Conversation marshalling selects root, one intermediate ancestor, and focal post; Thunder/Phoenix ancestor inputs and later URT assembly do not promise the full thread. The self-contained-post recommendation is correctly editorial."
+  },
+  {
+    "id": "K05-098",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0503 lines 1618-1618. Faithful promise-to-evidence matching for OCR examples and methods. Repetitive suspense is removed for information quality, not framed as a dwell-time technique."
+  },
+  {
+    "id": "K05-099",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0504 lines 1620-1620. Faithful paragraph-level advice about additional information, counterexamples, and conditions adjacent to conclusions. It does not require fabricated counterexamples or a fixed paragraph count."
+  },
+  {
+    "id": "K05-100",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L110-L125",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L128-L187",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L3363-L3389"
+    ],
+    "findings": [],
+    "notes": "U0504 lines 1620-1620. CREAD threshold/loss and probability-interval reconstruction code predict continuous time; they provide no optimum article word count or paragraphing. The English keeps editorial choices distinct from model machinery."
+  },
+  {
+    "id": "K05-101",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0505 lines 1624-1624. Faithful material-access and advance-disclosure advice, with name/date/instructions and real destination checks. It does not claim knowledge of internal URL reputation from link accessibility."
+  },
+  {
+    "id": "K05-102",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0505 lines 1624-1624. Faithful ongoing pinned-link maintenance advice. It checks actual purpose and access requirements without promising a platform-reputation change."
+  },
+  {
+    "id": "K05-103",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0506 lines 1626-1626. Faithful reader-time-zone advice conditional on knowledge of the primary audience. The 3 a.m. example is not a universal best-time claim; unknown habits fall back to observed baseline."
+  },
+  {
+    "id": "K05-104",
+    "translation_status": "verified",
+    "evidence_status": "verified",
+    "source_urls_checked": [
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/engagement_counts_hydrator.rs#L16-L48",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L589-L661",
+      "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/author_cold_start.rs#L285-L309"
+    ],
+    "findings": [],
+    "notes": "U0506 lines 1626-1626. Cold-start configuration uses a Home-view threshold of 200; eligibility also checks corpus/age/position and subsequent choice, while engagement hydration has separate general and Home counts. The claim correctly rejects a guaranteed quota or public-view subtraction."
+  },
+  {
+    "id": "K05-105",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0507 lines 1628-1628. Faithful distinct reader-use cases for return, relay, and access. Their editorial value is not converted into like equivalents or a recommendation formula."
+  },
+  {
+    "id": "K05-106",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0508 lines 1632-1632. Faithful verify-before-answering and correction workflow. Conclusion-changing results become discoverable updates linked to corrections in the original; additional distribution is not guaranteed."
+  },
+  {
+    "id": "K05-107",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0509 lines 1634-1634. Faithful same-age comparison advice and warning against ten-minute versus two-day totals. Remaining recommendation/audience changes prevent a causal guarantee."
+  },
+  {
+    "id": "K05-108",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0510 lines 1636-1636. Faithful third-post decision based on new evidence, relevance, or correcting conclusions. Two/three are examples rather than reward or penalty thresholds, and unpublished rules remain unknown."
+  },
+  {
+    "id": "K05-109",
+    "translation_status": "verified",
+    "evidence_status": "not_applicable",
+    "source_urls_checked": [],
+    "findings": [],
+    "notes": "U0511 lines 1638-1638. Faithful final check from an unfamiliar reader's perspective: the first image/opening should convey finding and usefulness independently. No exposure promise is introduced."
+  }
+]

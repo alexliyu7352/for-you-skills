@@ -1,5 +1,11 @@
 # Validation results
 
+## Full repository review — 2026-11-01 UTC
+
+The [independent whole-repository review](../reviews/full-repository-review/README.md) ([简体中文](../reviews/full-repository-review/README.zh-CN.md)) covers all 578 knowledge entries, eight workflows, canonical tooling and standalone packaging at `9193233924df388727296c4e76948db919ac32eb`. It found **22 open issues: 12 knowledge findings affecting 13 entries and 10 engineering findings**. The existing 43 tests still pass. Their success does not resolve those findings or establish live browsing, actual image generation or six native model executions. The review publication records the issues; it does not fix them.
+
+The release checks below remain historical records of their stated scopes. The full review, its per-entry ledgers and executable reproductions provide the more complete current assessment of that frozen version.
+
 ## 1.1.0 visual workflow — 2026-11-01
 
 - **43 automated tests passed** locally, including 10 new preference tests and isolated visual-helper execution in the router, checklist and new specialist. The original 578 entries, 49 unresolved questions, 668 source units and 396 URLs remain unchanged. The build contains eight skills and 158 generated files.

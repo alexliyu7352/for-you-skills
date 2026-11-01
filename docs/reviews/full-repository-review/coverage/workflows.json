@@ -1,0 +1,1467 @@
+{
+  "schema_version": 1,
+  "reviewed_commit": "9193233924df388727296c4e76948db919ac32eb",
+  "reviewer": "full_review_workflows",
+  "review_date": "2026-11-01",
+  "review_mode": "Full assigned product/workflow review; not a diff review.",
+  "findings": [],
+  "result": "No confirmed actionable defect in the assigned workflow/routing/documentation scope. Remaining unexecuted host capabilities are limits, not successful acceptance tests.",
+  "file_coverage": [
+    {
+      "path": "workflows/x-assistant.md",
+      "line_count": 24,
+      "sha256": "094be8b2884fa508655f995cb19bcc54a46754b2cc406554fef517b5905bfc37",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W01",
+        "W04",
+        "W08",
+        "W09"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "workflows/x-create-visuals.md",
+      "line_count": 18,
+      "sha256": "5ee960218b055ffdc2c426d8a91a83679aa03989bd16a5645dd76a909e041cc2",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W07"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "workflows/x-explain.md",
+      "line_count": 26,
+      "sha256": "a1389db9d1170e4b94ea09fefc0999c260331cec762a08fcee500b1e331a8203",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W01"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "workflows/x-format-advisor.md",
+      "line_count": 18,
+      "sha256": "57632b07b1f4ed40ce603c5d42e96c78184d2537b26f5314ec3855c9d9f444a8",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W03"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "workflows/x-myth-check.md",
+      "line_count": 18,
+      "sha256": "a2175b785f36f1ce9aed99f8707b3b9ea2f04f7b093732e372e5eeb2891679f1",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W02"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "workflows/x-publish-checklist.md",
+      "line_count": 26,
+      "sha256": "cbac8d47dc8220b24d2d5f11f5eeced63330872d0e87b26ddec66f66da860e05",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W04",
+        "W10"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "workflows/x-reach-diagnosis.md",
+      "line_count": 20,
+      "sha256": "973a9e5979073579ef8e9d21f917eb0e09bc01f2236d338b373dc737cd34a96c",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W06"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "workflows/x-review-posts.md",
+      "line_count": 28,
+      "sha256": "86b2a3fd382fbbd8c52532cae7e3b21e72b01db8b0b11f624723b7e5bb02db5b",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W05",
+        "W11",
+        "W12"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "routing.json",
+      "line_count": 97,
+      "sha256": "5919bcff90748be0341b66da9b70ecc11bea685334d18d45ef0353b2449fc3fa",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W01",
+        "W04",
+        "W08",
+        "W09"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "shared/browsing.md",
+      "line_count": 12,
+      "sha256": "5ff1d73a54a0a0770e99fb954a84bbf5cf0a87fc947d5215e68d68c72e7bc38d",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W05",
+        "W11",
+        "W12"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "shared/knowledge-guide.md",
+      "line_count": 58,
+      "sha256": "6c0720466371b46aa6e54e1de07f107de96eb4e9b3a47619edade34dd9c5637c",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06",
+        "W10"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "shared/observations.md",
+      "line_count": 30,
+      "sha256": "cb0b566ba469d8fb2fdfac8ae5816401bcbe2c2637afa8fa7ded46331eb2588e",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W05",
+        "W06",
+        "W12"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "shared/visual-workflow.md",
+      "line_count": 108,
+      "sha256": "7ac7126446f4033aa3d7f7bb86668c8c06a4600547dae536c5dfe743df21636e",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W04",
+        "W07"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "README.md",
+      "line_count": 156,
+      "sha256": "1d0d1bf2481b0a10f7cb555d1ff652adf0774e693601cb19b5087307042ec78b",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06",
+        "W07",
+        "W08"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "README.zh-CN.md",
+      "line_count": 156,
+      "sha256": "79501643702d8df72fafc899e4707e3d24e653ffba9872ab318357835a1bce70",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06",
+        "W07",
+        "W08"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "docs/compatibility.md",
+      "line_count": 35,
+      "sha256": "d88b6ac4f1324ba0d559425988086ea69e4950e7d180db909f92a1fc3ba99913",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [
+        "W07",
+        "W10",
+        "W11"
+      ],
+      "assessment": "Semantic workflow/product review plus tests shown; source truth and global native discovery not inferred."
+    },
+    {
+      "path": "metadata/x-assistant.yaml",
+      "line_count": 4,
+      "sha256": "52dbbae5bf49fa9f0995f0e53766163971d636a8f5c7a289472dabeb28467a2b",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [],
+      "assessment": "UI labels/default prompt align with specialist; generated metadata equality checked."
+    },
+    {
+      "path": "metadata/x-create-visuals.yaml",
+      "line_count": 4,
+      "sha256": "25f93b0c9c90665e53c197c279e48d90079065939d9e781e5fa9117ae812191b",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [],
+      "assessment": "UI labels/default prompt align with specialist; generated metadata equality checked."
+    },
+    {
+      "path": "metadata/x-explain.yaml",
+      "line_count": 4,
+      "sha256": "dc723eb196a8ef32ca77529b64e659d163fadfb57f8a23008c97955cf050d76d",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [],
+      "assessment": "UI labels/default prompt align with specialist; generated metadata equality checked."
+    },
+    {
+      "path": "metadata/x-format-advisor.yaml",
+      "line_count": 4,
+      "sha256": "c16ac1fb9927749318257e605841c0b2ade6e96b1512e1bea8aaf155c4500e75",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [],
+      "assessment": "UI labels/default prompt align with specialist; generated metadata equality checked."
+    },
+    {
+      "path": "metadata/x-myth-check.yaml",
+      "line_count": 4,
+      "sha256": "54c99b036de477d69f9a3cd25c9f040e6149081caf816c2b7150f05277c756b0",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [],
+      "assessment": "UI labels/default prompt align with specialist; generated metadata equality checked."
+    },
+    {
+      "path": "metadata/x-publish-checklist.yaml",
+      "line_count": 4,
+      "sha256": "fde6073ac03d73e4da802fd89de13e422f081b5b0de53d086ef7085c7b3309c5",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [],
+      "assessment": "UI labels/default prompt align with specialist; generated metadata equality checked."
+    },
+    {
+      "path": "metadata/x-reach-diagnosis.yaml",
+      "line_count": 4,
+      "sha256": "c88bc7fe1a557b626f1e92530eb8e917b724ef4d8d2ac38a7d139a8bd10b2112",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [],
+      "assessment": "UI labels/default prompt align with specialist; generated metadata equality checked."
+    },
+    {
+      "path": "metadata/x-review-posts.yaml",
+      "line_count": 4,
+      "sha256": "b24d96afde3212981125a91f1ab037d3940105c5598005e53d8d1d6aff361044",
+      "read_scope": "complete",
+      "reviewed": true,
+      "tests": [],
+      "assessment": "UI labels/default prompt align with specialist; generated metadata equality checked."
+    }
+  ],
+  "evidence_retrieval": {
+    "catalog_topics": [
+      "00",
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06"
+    ],
+    "catalog_rules_screened": 578,
+    "full_claim_ids": [
+      "K01-006",
+      "K01-032",
+      "K01-033",
+      "K01-057",
+      "K01-060",
+      "K01-078",
+      "K03-002",
+      "K03-003",
+      "K03-007",
+      "K03-009",
+      "K03-010",
+      "K03-020",
+      "K03-031",
+      "K03-039",
+      "K03-041",
+      "K03-045",
+      "K03-056",
+      "K03-057",
+      "K03-070",
+      "K03-074",
+      "K03-076",
+      "K02-004",
+      "K02-037",
+      "K05-094",
+      "K05-098",
+      "K05-099",
+      "K05-105",
+      "K05-108",
+      "K04-058",
+      "K03-082",
+      "K03-083",
+      "K03-113",
+      "K04-001",
+      "K04-010",
+      "K04-046",
+      "K04-048",
+      "K04-055",
+      "K05-065",
+      "K03-063",
+      "K03-066",
+      "K05-079",
+      "K05-081",
+      "K05-085"
+    ],
+    "unknown_entries_read": [
+      "Q02",
+      "Q07",
+      "Q08",
+      "Q09",
+      "Q13",
+      "Q17",
+      "Q23",
+      "Q24",
+      "Q25",
+      "Q26",
+      "Q27",
+      "Q34",
+      "Q44",
+      "Q45",
+      "Q46",
+      "Q47",
+      "Q48",
+      "Q49"
+    ],
+    "method": "Actual bundled catalog/search/get commands. Catalog output was parsed before compact display; relevant entry conclusions, conditions, check instructions, limits and cited URLs were read. Unknown entries were read for substantive limits; not a full semantic review of all 578 claims.",
+    "queries": [
+      {
+        "skill": "x-explain",
+        "query": "daily second post 0.625 four hour reset",
+        "limit": 5,
+        "first_id": "K01-006"
+      },
+      {
+        "skill": "x-myth-check",
+        "query": "likes 0.66 photo expand 0.03 image upload",
+        "limit": 5,
+        "ids": [
+          "Q04",
+          "K01-028",
+          "K01-031",
+          "K01-002",
+          "K01-078"
+        ],
+        "note": "Catalog/get selected K01-057/K01-060/K01-078 instead of trusting the top lexical match."
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "W01",
+      "workflow": "x-explain",
+      "input": "Using the bundled October 29 snapshot, how many times per day should I post on X? Does the third post need a four-hour wait?",
+      "actual_execution": "Read standalone workflow and evidence guide; executed the standalone search/get helper for K01-006/K01-032/K01-033 and Q02; answered without requesting a draft/account.",
+      "output": "There is no daily optimum or four-hour reset established by this author-diversity function. Its 0.625 multiplier applies to the second-ranked candidate from the same author in one scoring call; counts are rebuilt on each call, and a later post can rank first. It changes a score term, not a guaranteed percentage of reach. [Code](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237)\n\nPublish the third piece when it adds a useful finding or correction. If it repeats the first two, combine the material instead. Choose timing around your readers and your capacity; compare similar pieces at the same age before adopting a schedule. The bundled snapshot does not establish every live request's settings.",
+      "judgment": "Useful direct answer; no forced audit, daily quota or invented interval."
+    },
+    {
+      "id": "W02",
+      "workflow": "x-myth-check",
+      "input": "Check these against the bundled snapshot: each like earns 0.66 points; each attached picture adds 0.05; my second daily post gets only 62.5% and a four-hour break restores it.",
+      "actual_execution": "Split four propositions, grouping the common daily-counter/reset error explicitly; ran search and get for K01-057/K01-060/K01-078 and reused K01-032/K01-033/Q02.",
+      "output": "| Claim | Verdict and usable correction |\n| --- | --- |\n| Each like earns 0.66 points | Misread. 0.66 is the Home Mixer public default multiplying predicted like probability; VM Ranker's same-named default is 0.5. It is not a balance credited per actual like. |\n| Each picture adds 0.05 | Misread. The term multiplies predicted photo-expansion probability, not attachment count. Use a picture when it supplies readable evidence. |\n| Second daily post gets 62.5% | Misread. With the specified VM defaults, the second same-author candidate by score within one call receives 0.625. Publication order and percentage of views do not follow. |\n| Four hours restores the weight | Not established by this function. It has no daily counter or four-hour timer. |\n\n[Prediction coefficients](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L367-L513) · [VM defaults](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L155) · [Prediction blending](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L57-L139) · [Author counting](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237)\n\nCorrected copy: “The public scoring paths combine personalized predictions. Same-author candidates can compete within one scoring call, but these constants do not supply fixed points per like, points per image, or a daily posting schedule.”",
+      "judgment": "All supplied propositions addressed; original URLs resolved from corpus; no performance promise."
+    },
+    {
+      "id": "W03",
+      "workflow": "x-format-advisor",
+      "input": "I have access to all three formats. For the following complete text, choose a long Post, Article or Thread and give me the packaging. Use the bundled snapshot, not claims about today's deployment.\n\nTwenty clear Chinese invoice scans from one department: A 1.2 was correct on 17/20 and B 2.0 on 19/20. Both received the same files, checked manually. Phone photos were not tested. Check fields before accounting import; this small test does not establish a universal winner.",
+      "actual_execution": "Measured exact supplied text with standalone inspect_draft.py; read six-layer comparison entries plus Q44–Q49; selected one self-contained Post.",
+      "output": "Use one Post. The supplied text is 274 Unicode code points, so there is no editorial need to expand it into a long Post, Article or Thread. This is not a check of X's weighted editor count.\n\nOpening: “On the same 20 clear invoice scans, A 1.2 was correct on 17 and B 2.0 on 19. This small, one-department test excludes phone photos.” Follow with the shared-input/manual-check method and field-verification advice. A single results image can repeat 17/20 and 19/20, tool versions and the sample limits.\n\nAn Article becomes useful if you add multiple image-quality groups, field-level errors and reproducible examples. A Thread becomes useful if the material grows into separate questions that each remain understandable alone. Neither change has a demonstrated fixed exposure bonus; the examined final inputs and scoring functions do not establish one. [Inputs](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L1-L22) · [Scoring](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143)",
+      "judgment": "Chooses by actual evidence volume; avoids making the 4000-character path a publishing limit; respects confirmed access."
+    },
+    {
+      "id": "W04",
+      "workflow": "x-publish-checklist",
+      "input_fixture": "/workspace/scratch/8875c799c753/work/x_skills_eval/draft_case.txt",
+      "input_fixture_sha256": "fde800ae1c73f42894c1a9ba27306ad28cf18a9a9e73b9dc3052873923a696d0",
+      "actual_execution": "Read complete original fixture, screened all seven topic catalogs, retrieved applicable conditions and related unknowns, measured exact draft following 草稿：. No news/current-product claims required; no image files supplied. Native image-generation tool discovered but not called.",
+      "output": "先把结果移到开头，合并重复的操作记录，并把结果图排在第一张。原开头“这次我们对两款 OCR 工具作了一次测试，整理了测试过程和结果。”只交代做过测试，没有告诉读者得到什么。\n\n原稿去除首尾空白后实测 4,788 个 Unicode 码点，原始字符串为 4,789；含标点、空格和内部换行，不是 X 编辑器的加权计数。“测试结果”从原始字符串第 4,709 个码点开始，前面重复了 85 段相同操作记录。这里应删重复，而不是为了凑进 4,000 字符机械裁稿；4,000 是所查 V8.2 文本路径的处理边界，不是统一发布上限。[文本路径](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50)\n\n完整改稿：\n\n同一批 20 份已脱敏中文发票清晰扫描件，A 1.2 正确识别 17 份，B 2.0 正确识别 19 份。B 在这批样本中多正确 2 份，但不能据此认定它在所有票据场景都更准。\n\n测试时间为 2026-10-28。样本来自同一部门；两款工具输入相同文件，再逐份比对识别文本与原始字段，只记录可复核的错误。\n\n这次没有测试手机照片、模糊或倾斜票据。如果要用于自己的业务，应先拿实际会遇到的票据复测；导入账务前，仍需按字段核对原件。\n\n保留单条 Post 的安排就足以承载这些已知材料；不需要把重复文字搬进 Article。配图顺序建议：①结果对照，17/20 与 19/20、工具版本、同部门清晰扫描件及未测手机照片的限制同屏；②方法与样本范围。真实操作界面和错误对照可作为③④，但目前没有素材，不能伪造界面、错误样例或正确值。若拿不到它们，就用前两张，不硬凑四张。首图前置有独立阅读价值；V8.2 只在一个指定路径选择首个可用媒体，上传图片也不是固定加分。[媒体路径](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L314) · [预测融合](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L57-L139)\n\n当前环境可原生生成概念配图；这份精确结果图应依据上述数据排版，真实证据面板需要原件。我可以据此继续制作。此处只审稿与给方案，未生成图片、未建立风格档案。\n\n第三篇不必因这段作者多样性代码固定等四小时。它按一次评分中的候选次序计数。若前两篇已讲过同一结果，应合并；若本篇提供新结果或纠正旧结论，可以按读者习惯安排。当前没有前两篇内容，不能替你判定是否重复。[作者计数](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237)\n\n保留版本、日期和样本边界。补充“正确识别一份”的判定标准；不要宣称未给出的误识别样例。现稿无外链、视频、Thread、话题标签或已知标签，相关具体检查无材料可审；内部推荐状态不可由稿件判断。",
+      "judgment": "Complete copy and material-specific media plan produced; no invented test; original count and delayed finding are concrete. Did not start creation or ask style questions for review-only request.",
+      "input": "帮我检查下面准备发到 X 的帖子，交付完整改稿、配图顺序和具体理由。今天上午我已经发过两篇，第三篇是否应该等四小时？保持研究信息，不要编造测试。\n\n素材事实：共测 20 份已脱敏中文发票，A 正确 17 份，B 正确 19 份。样本来自同一部门，均为清晰扫描件，未测手机照片。测试使用工具 A 1.2 和 B 2.0，时间是 2026-10-28。\n\n计划：先发下面的长 Post，配四张图；第一张写“本次 OCR 测试的三个发现”，第二张是样本说明，第三张是操作界面，第四张是 17/20 和 19/20 结果及误识别示例。没有提供实际图片文件。\n\n草稿：\n这次我们对两款 OCR 工具作了一次测试，整理了测试过程和结果。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n测试结果：A 正确识别 17/20，B 正确识别 19/20。只适用于这 20 份清晰扫描件，未测手机拍摄、模糊或倾斜的票据。不能据此保证 B 在所有场景更准。\n"
+    },
+    {
+      "id": "W05",
+      "workflow": "x-review-posts",
+      "input_fixture": "/workspace/scratch/8875c799c753/work/x_skills_eval/posts_case.md",
+      "actual_execution": "Read supplied fictional record, normalized it anew, ran standalone summary and per-object text measurements; supplied media descriptions were not represented as inspected pixels. Reused observations for requested reach questions.",
+      "output": "优先改 B 的“又测了一次”，然后让 C 的导出说明能独立读懂；A 保留真实结果与限定，D 暂不评价正文。\n\n这次只分析你给的虚构浏览记录，没有访问 X。5 条记录对应 4 个帖子 URL，A 的置顶卡是重复项。A/B/C/D 在记录时分别发布了 168/6/24/48 小时；公开浏览分别为约 3.2K/280/900/500。A、D 是承载帖计数，不是 Article 页面阅读数。A 正文已提供，但承载帖文案未知；D 只有标题，正文被登录提示挡住。图片只有文字描述，我没有看到原始像素。\n\nA：正文 127 个 Unicode 码点，标题 15 个。首句已经限定同部门、20 份、清晰扫描件，应保留。标题“20 份发票里的 OCR 错误”承诺错误示例，但正文只给总数；可改成“20 份清晰发票扫描件：两款 OCR 的结果与限制”。补真实测试日期与“正确”的标准，不编错误案例。开头可用：“同一部门的 20 份中文发票清晰扫描件，A 1.2 正确 17 份，B 2.0 正确 19 份。两款工具收到相同文件，并逐份人工比对原图；未测手机照片，不能据此选定所有票据的赢家。”描述中的首图已有分母和限定，建议保留；不需要为了数量增加图片。\n\nB：可见转录 73 个码点，包含“链接指向记录 A”的占位描述，不是实际线上链接的长度。首句“今天又测了一次 OCR”承诺新测试，后文却只链接上周材料。先确认是否真有复测；没有就改为：“上周同一批 20 份清晰中文发票扫描件，A 1.2 正确 17 份，B 2.0 正确 19 份。样本来自同一部门，未测手机照片；导入账务前仍应逐字段核对。文章说明了方法与限制。”建议澄清现有 B；编辑不可用时可附更正，不默认再发一条相同导读。将装饰封面改成结果与限定图，这是建议，不是已完成修改。\n\nC：标题文本/说明为 40 个码点。可改：“OCR 识别结果如何导出为表格：这段演示展示导出步骤。背景是上周对同部门 20 份清晰中文发票扫描件的测试，未测手机照片。导入账务前请逐字段核对原件。”视频完整性、实际步骤和截图是否为独立附件都未确认。播放器“0:10”不能证明毫秒级时长；指定视频索引的条件是每个媒体均为合格视频且严格大于 10,000 ms，当前结论只能是未知，不能建议为了曝光硬补时长。[索引条件](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix-rankall-strato/lib/eventProcessing.strato#L403-L417)\n\nD：只测到 8 个码点的标题“更复杂的票据测试”。要判断承诺是否兑现，最小补充是正文与实际图片；不需要重抓整段账号历史。登录提示不证明限流或付费墙。\n\n这些记录不能证明 Article 天生有更多流量，也不能证明账号被限流。A 的七天累计、置顶和两条已报道导读，与 B 的六小时及不同内容不可直接归因到格式；两条导读也未全部给出，B 可能已经包含在两条中。公开浏览不等于独立读者或完读，低浏览不能区分候选召回、排序、已读过滤与标签限制。[浏览定义](https://help.x.com/en/using-x/view-counts) · [候选流程](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L507)\n\n下一篇先把导出教程讲完整，或取得新的实际测试结果。为后续相似主题记录发布后 24 小时和 7 天的同口径指标、置顶/推广/修订情况；分开记录 Article、承载帖和导读。没有历史快照就不回填增长曲线。",
+      "judgment": "Coverage, actual changes and three usable revisions present; blocked content/rounded counts/cold-start/format causality not overstated.",
+      "input_fixture_sha256": "6b317eb580354b1b70f6395b5f836709ef0e7421d956c148b97d5c575446a18b",
+      "input": "# 用户请求\n\n请根据下面这份已保存的 X 页面浏览记录，分析我这些帖子的问题，给出逐帖建议和可以直接使用的改写。也回答：Article 是否天生有更多流量？我的账号是不是被限流了？接下来应该怎么发？本次只分析这些记录，不需要联网重抓。\n\n以下是用于任务演练的虚构账号和帖子记录，不是真实账户数据。所有 URL 仅作为记录标识。\n\n观察时间：2026-10-30T12:00:00Z。账号：example_creator。主页公开粉丝数显示“1.2K”。\n\n## 记录 A\n\n链接：https://x.com/example_creator/status/1900000000000000001\n类型：Article 的承载帖。发布时间：2026-10-23T12:00:00Z。\n公开浏览数显示“3.2K”，点赞“21”，回复“3”，转发“4”；收藏数未显示。\n已从承载帖打开 Article 并读到末尾，全文读取完整。文章正文如下：\n\n《20 份发票里的 OCR 错误》\n这次只测了来自同一部门的 20 份中文发票清晰扫描件。A 1.2 正确 17 份，B 2.0 正确 19 份。未测手机照片。\n方法：给两款工具输入同一批文件，再人工逐份比对原图。样本量小，不能据此宣布所有票据都应选 B。需要导入账务的结果仍应按字段复核。\n配图已查看：首图为两款工具的正确份数对照，图上有分母和“清晰扫描件”限定。正文没有更多测试数据。\n在这次账号浏览范围内，找到两条已发布的介绍帖都链接到这篇 Article。\n\n## 记录 B\n\n链接：https://x.com/example_creator/status/1900000000000000002\n类型：普通 Post。发布时间：2026-10-30T06:00:00Z。\n公开浏览“280”，点赞“2”，回复“0”，转发“0”；收藏未显示。\n全文已展开：今天又测了一次 OCR。真是太震撼了，这项技术正在改变一切！有个问题特别值得注意，我觉得大家都应该看看。详细结果见上周那篇文章：链接指向记录 A。\n配图已查看：一张装饰性封面，文字只有“AI 的未来已经到来”。\n\n## 记录 C\n\n链接：https://x.com/example_creator/status/1900000000000000003\n类型：视频 Post。发布时间：2026-10-29T12:00:00Z。\n公开浏览“900”，点赞“9”，回复“1”，转发“1”。\n全文完整：这段演示展示了把识别结果导出为表格的步骤，测试条件沿用上周那篇 Article。\n浏览器播放器显示总时长“0:10”，未获得毫秒级文件信息；画面可见播放按钮及一张结果截图，但记录不能确认它是视频封面还是另一份静态附件。没有播放完整视频。\n\n## 记录 A 的置顶重复项\n\n同一链接：https://x.com/example_creator/status/1900000000000000001\n主页置顶卡再次显示浏览“3.2K”，发布时间仍为 2026-10-23T12:00:00Z。它不是另一篇文章。\n\n## 记录 D\n\n链接：https://x.com/example_creator/status/1900000000000000004\n类型：Article 承载帖。发布时间：2026-10-28T12:00:00Z。\n公开浏览“500”。承载帖可见标题《更复杂的票据测试》。点击 Article 后出现登录提示，全文未读取，图片也未查看。\n\n本次没有获得：逐帖流量来源、后台首页曝光、独立读者数、完读率、每天的历史浏览快照、账号标签报告。\n"
+    },
+    {
+      "id": "W06",
+      "workflow": "x-reach-diagnosis",
+      "input": "Using the A–D observations already supplied, why does my Article keep getting views after a week while my other Posts have hundreds? Should I switch everything to Articles? Do not browse.",
+      "actual_execution": "Reused W05 normalization and helper results; read reach hypotheses and age/metric conditions; did not recollect the account or demand analytics.",
+      "output": "Keep the next piece in the format its evidence needs; these records do not justify moving everything to Articles. First make C's export tutorial complete or publish genuinely new test material.\n\nA has a rounded 3.2K carrier-post view count at 168 hours, a pin and two reported introductions. B has 280 at 6 hours; C has 900 at 24 hours. This establishes different observed totals, not an Article advantage. The record contains no daily history, so “keeps getting views” remains your report rather than a measured growth series.\n\n| Hypothesis | What the record supports | Missing check and next action |\n| --- | --- | --- |\n| More time and redistribution | A is older, pinned and promoted | Start recording the same carrier counter at known times and annotate new introductions/reposts. Growth then measures that counter's change, not unique readers. |\n| More useful content | A immediately supplies a result and limits; B mostly teases | Make the next comparable Post self-contained, keep one main change and compare the same-age windows. |\n| Format effect | Different formats are present | Comparable topics, reader goals, time windows and promotion are absent. Track Article and carrier separately before testing a format effect. |\n| Visibility/cold-start differences | No label or internal Home record was supplied | Public counts cannot identify either. Use a dated label/transparency record only if it is actually available; do not assume a hidden label. |\n\nAn ordinary candidate age check uses 48 hours, but it is not a sitewide expiry rule. Recent repost candidates and other source paths have distinct conditions; their existence does not identify how A was seen. [Age filter](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31) · [Repost IDs](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L103-L113) · [Other source paths](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs#L219-L237)\n\nFor the next comparable pieces, capture the actual visible fields at 24 hours and seven days, including pins and promotion. Those intervals are observation choices, not a posting optimum.",
+      "judgment": "Provides current decision plus discriminators; no label diagnosis, invented lifetime reconstruction, or forced account audit."
+    },
+    {
+      "id": "W07",
+      "workflow": "x-create-visuals",
+      "input": "For this test, use the supplied in-memory preference fixture: series:weekly-code is mixed/native, Blue line art, #102030, one finding per image; the default is separate. Reuse it for the OCR plan, changing only this request's palette to #553388 and #FFFFFF. Do not generate or save anything; show the plan and available production options.",
+      "actual_execution": "Inspected actual current tool catalog (native image_gen__imagegen present; Runway tools present but auth/provider availability untested). Executed the actual bundled selection() with validated in-memory store and temporary override; no preference filesystem write. Ran first-read CLI against an absent private test path and checked that it stayed absent.",
+      "output": "The weekly-code series resolves to blue line art with one finding per image. For this request only, use purple #553388 and white #FFFFFF; the series and default remain unchanged.\n\nI can generate conceptual images natively here. The precise 17/20 versus 19/20 comparison should be rendered from those exact values; real UI or error panels require supplied source material. Runway tools are exposed, but I have not checked an authenticated workspace or model availability, so I am not promising that provider.\n\nProduction brief, not generated images:\n\n1. Results card: “20 clear Chinese invoice scans · one department”; A 1.2: 17/20; B 2.0: 19/20; “Phone photos not tested · not a universal winner.” Keep equal axes and denominators. Alt text: “In a 20-invoice clear-scan sample from one department, A 1.2 was correct on 17 invoices and B 2.0 on 19; phone photos were not tested.”\n2. Method card: same files → each tool → manual comparison against originals → field check before accounting import. Alt text: “Both OCR tools received the same files; their output was checked manually against the originals, and accounting import still requires field verification.”\n\nNo image was generated and no preference was saved. The helper returned temporary_override=true; the entire fixture store was unchanged. A first read of an absent private test path returned profile=null and did not create a file.",
+      "judgment": "Actual discovery and helper behavior, no fake provider availability or generation; one-time override did not change default or series."
+    },
+    {
+      "id": "W08",
+      "workflow": "x-assistant mixed/follow-up",
+      "input": "Continue the A–D review. Keep A as an Article. Now rewrite only its introductory Post in Chinese: give the established findings, unknowns and recommended action. Do not repeat the audit.",
+      "actual_execution": "Applied follow-up combination; retained A's material and explicit Article decision. No format reselection, recollection, native invocation or repeated questions.",
+      "output": "同一部门的 20 份清晰中文发票扫描件，A 1.2 正确 17 份，B 2.0 正确 19 份。两款工具输入相同文件，再人工逐份比对原图。\n\n这只能说明本次样本的结果：没有测试手机照片，也不能据此判定所有票据都应选 B。若用于你的业务，先用真实会遇到的票据复测；导入账务前仍要逐字段核对。\n\nArticle 里保留了这次测试的方法与范围，供你判断结果是否适用于自己的场景。",
+      "judgment": "Requested complete introductory copy only; preserves selected Article and unknown date/error examples; no repeated collection or questions."
+    },
+    {
+      "id": "W09",
+      "workflow": "x-assistant no-match",
+      "input": "Solve 2x + 3 = 9.",
+      "actual_execution": "Applied router's unrelated-x boundary; no specialist selected and no corpus lookup for this prompt.",
+      "output": "x = 3.",
+      "judgment": "The unrelated variable did not trigger an X audit."
+    },
+    {
+      "id": "W10",
+      "workflow": "x-publish-checklist constrained no-tool branch",
+      "input": "Review only this excerpt. For this trial do not use a browser, Python, any counter or storage: “AI OCR is unbeatable. In 20 clear Chinese invoice scans from one department, A 1.2 got 17 right and B 2.0 got 19 right. Phone photos were not tested.”",
+      "actual_execution": "Manually executed no-counter/no-browser/no-storage fallback using supplied text and already-read workflow; deliberately did not report an exact length. This is a constrained execution, not a claim that the current host actually lacks tools.",
+      "output": "Replace “AI OCR is unbeatable”: it promises more than the small test establishes. A usable opening is: “In one department's 20 clear Chinese invoice scans, A 1.2 was correct on 17 and B 2.0 on 19. Phone photos were not tested, so this is a result for that sample, not a universal winner.”\n\nA single Post suits this one finding. One result card would help comparison: show both fractions, the versions, the common denominator and the clear-scan/one-department limits together. This is a proposed image; none was inspected or created.\n\nThe excerpt's length is unmeasured because this trial excludes reliable counters. Add the real test date and correctness criterion when available. No account data, full draft or media was supplied, so I cannot assess the rest of the text, actual image fidelity or reach causes.",
+      "judgment": "Completes useful review without invented count or demanding tool installation."
+    },
+    {
+      "id": "W11",
+      "workflow": "x-review-posts constrained missing-reader branch",
+      "input": "Review https://x.com/example_creator/status/1900000000000000004. For this trial do not open the URL, use search or log in; no text or screenshots are supplied.",
+      "actual_execution": "Executed missing-reading-evidence branch without accessing fictional URL or session; did not substitute a snippet.",
+      "output": "I cannot assess that post's opening, evidence or images from the URL alone under this trial's reading restriction. Supply the visible text and first image, or a saved view showing them; for an Article, include its body or the section you want reviewed. A single post is enough—I do not need the account's whole history. No content review or reach diagnosis has been completed yet.",
+      "judgment": "Honest coverage; smallest useful substitute rather than a false review."
+    },
+    {
+      "id": "W12",
+      "workflow": "x-review-posts URL-less screenshot transcription fixture",
+      "input": [
+        {
+          "url": null,
+          "source_method": "user_screenshot",
+          "text": "Visible opening",
+          "body_status": "partial",
+          "metrics": {
+            "views": "3K"
+          }
+        },
+        {
+          "source_method": "user_screenshot",
+          "text": "Another crop",
+          "metrics": {
+            "views": null
+          }
+        }
+      ],
+      "actual_execution": "Replayed the two supplied test transcriptions through actual standalone summarize_posts.py. No screenshot pixels were supplied or inspected.",
+      "output": "Both transcribed observations were retained, under separate provisional row IDs. Neither establishes a confirmed post identity: unique_posts=0, unique_content_items=0, unresolved_identity_records=2. “3K” remained rounded rather than exact; the other view count, ages and unseen media remained unknown. The crops cannot be counted as two distinct posts or merged as one without further identity evidence.",
+      "judgment": "Evidence not discarded or deduplicated by guessed identity; pixel-inspection coverage remains untested."
+    }
+  ],
+  "helper_executions": [
+    {
+      "case": "draft_measure",
+      "fixture": "/workspace/scratch/8875c799c753/work/x_skills_eval/draft_case.txt",
+      "fixture_sha256": "fde800ae1c73f42894c1a9ba27306ad28cf18a9a9e73b9dc3052873923a696d0",
+      "input_split": "case.split('草稿：\\n',1)[1]",
+      "output": {
+        "exit_code": 0,
+        "stdout": {
+          "source_snapshot": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+          "text": {
+            "raw_characters": 4789,
+            "raw_preview_4000": "这次我们对两款 OCR 工具作了一次测试，整理了测试过程和结果。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入",
+            "characters": 4788,
+            "preview_4000": "这次我们对两款 OCR 工具作了一次测试，整理了测试过程和结果。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入",
+            "after_4000_characters": 788,
+            "article_title_preview_200": "",
+            "normalization": "characters and preview_4000 trim leading/trailing whitespace; raw_characters and raw_preview_4000 preserve the supplied string. Counts are Unicode code points, not grapheme clusters or X weighted-length units.",
+            "scope": "Editorial preview of supplied strings, not reconstructed production renderer input; not a publishing limit."
+          },
+          "video_index_partial_check": {
+            "status": "unknown",
+            "reason": "No media metadata supplied."
+          }
+        },
+        "stderr": ""
+      },
+      "result_start_1_based": 4709,
+      "repeated_method_paragraphs": 85
+    },
+    {
+      "case": "published_observations",
+      "input": {
+        "posts": [
+          {
+            "author": "example_creator",
+            "observed_at": "2026-10-30T12:00:00Z",
+            "time_precision": "exact",
+            "source_method": "supplied_fictional_browsing_record",
+            "pinned": true,
+            "url": "https://x.com/example_creator/status/1900000000000000001",
+            "format": "article_carrier",
+            "published_at": "2026-10-23T12:00:00Z",
+            "metric_scope": "carrier_post",
+            "metrics": {
+              "views": "3.2K",
+              "likes": "21",
+              "replies": "3",
+              "reposts": "4"
+            },
+            "body_status": "unknown",
+            "text": null,
+            "article_body_status": "complete",
+            "article_text": "这次只测了来自同一部门的 20 份中文发票清晰扫描件。A 1.2 正确 17 份，B 2.0 正确 19 份。未测手机照片。\n方法：给两款工具输入同一批文件，再人工逐份比对原图。样本量小，不能据此宣布所有票据都应选 B。需要导入账务的结果仍应按字段复核。",
+            "article_title": "20 份发票里的 OCR 错误",
+            "article_url": null,
+            "media_status": "complete",
+            "media_notes": [
+              "Supplied record describes first-image results with denominators and clear-scan condition; no pixels supplied."
+            ]
+          },
+          {
+            "author": "example_creator",
+            "observed_at": "2026-10-30T12:00:00Z",
+            "time_precision": "exact",
+            "source_method": "supplied_fictional_browsing_record",
+            "pinned": null,
+            "url": "https://x.com/example_creator/status/1900000000000000002",
+            "format": "post",
+            "published_at": "2026-10-30T06:00:00Z",
+            "metric_scope": "post",
+            "metrics": {
+              "views": "280",
+              "likes": "2",
+              "replies": "0",
+              "reposts": "0"
+            },
+            "body_status": "complete",
+            "text": "今天又测了一次 OCR。真是太震撼了，这项技术正在改变一切！有个问题特别值得注意，我觉得大家都应该看看。详细结果见上周那篇文章：链接指向记录 A。",
+            "media_status": "complete",
+            "media_notes": [
+              "Supplied record describes AI 的未来已经到来 decorative cover; no pixels supplied."
+            ]
+          },
+          {
+            "author": "example_creator",
+            "observed_at": "2026-10-30T12:00:00Z",
+            "time_precision": "exact",
+            "source_method": "supplied_fictional_browsing_record",
+            "pinned": null,
+            "url": "https://x.com/example_creator/status/1900000000000000003",
+            "format": "post",
+            "published_at": "2026-10-29T12:00:00Z",
+            "metric_scope": "post",
+            "metrics": {
+              "views": "900",
+              "likes": "9",
+              "replies": "1",
+              "reposts": "1"
+            },
+            "body_status": "complete",
+            "text": "这段演示展示了把识别结果导出为表格的步骤，测试条件沿用上周那篇 Article。",
+            "media_status": "partial",
+            "media_notes": [
+              "Player 0:10; milliseconds unknown; no full playback; possible still attachment is not confirmed."
+            ]
+          },
+          {
+            "author": "example_creator",
+            "observed_at": "2026-10-30T12:00:00Z",
+            "time_precision": "exact",
+            "source_method": "supplied_fictional_browsing_record",
+            "pinned": true,
+            "url": "https://x.com/example_creator/status/1900000000000000001",
+            "format": "article_carrier",
+            "published_at": "2026-10-23T12:00:00Z",
+            "metric_scope": "carrier_post",
+            "metrics": {
+              "views": "3.2K"
+            },
+            "body_status": "unknown",
+            "text": null,
+            "media_status": "not_viewed"
+          },
+          {
+            "author": "example_creator",
+            "observed_at": "2026-10-30T12:00:00Z",
+            "time_precision": "exact",
+            "source_method": "supplied_fictional_browsing_record",
+            "pinned": null,
+            "url": "https://x.com/example_creator/status/1900000000000000004",
+            "format": "article_carrier",
+            "published_at": "2026-10-28T12:00:00Z",
+            "metric_scope": "carrier_post",
+            "metrics": {
+              "views": "500"
+            },
+            "body_status": "preview",
+            "text": "更复杂的票据测试",
+            "article_body_status": "blocked",
+            "article_url": null,
+            "media_status": "not_viewed"
+          }
+        ]
+      },
+      "output": {
+        "exit_code": 0,
+        "stdout": {
+          "input_rows": 5,
+          "unique_posts": 4,
+          "duplicate_rows": 1,
+          "unique_content_items": 4,
+          "unresolved_identity_records": 0,
+          "duplicates": [
+            {
+              "identity": "status:1900000000000000001",
+              "row": 3,
+              "url": "https://x.com/example_creator/status/1900000000000000001"
+            }
+          ],
+          "invalid_rows": [],
+          "format_counts": {
+            "article_carrier": 2,
+            "post": 2
+          },
+          "posts": [
+            {
+              "author": "example_creator",
+              "observed_at": "2026-10-30T12:00:00Z",
+              "time_precision": "exact",
+              "source_method": "supplied_fictional_browsing_record",
+              "pinned": true,
+              "url": "https://x.com/example_creator/status/1900000000000000001",
+              "format": "article_carrier",
+              "published_at": "2026-10-23T12:00:00Z",
+              "metric_scope": "carrier_post",
+              "metrics": {
+                "views": {
+                  "raw": "3.2K",
+                  "value": 3200,
+                  "precision": "rounded"
+                },
+                "likes": {
+                  "raw": "21",
+                  "value": 21,
+                  "precision": "exact"
+                },
+                "replies": {
+                  "raw": "3",
+                  "value": 3,
+                  "precision": "exact"
+                },
+                "reposts": {
+                  "raw": "4",
+                  "value": 4,
+                  "precision": "exact"
+                },
+                "quotes": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "bookmarks": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                }
+              },
+              "body_status": "unknown",
+              "text": null,
+              "article_body_status": "complete",
+              "article_text": "这次只测了来自同一部门的 20 份中文发票清晰扫描件。A 1.2 正确 17 份，B 2.0 正确 19 份。未测手机照片。\n方法：给两款工具输入同一批文件，再人工逐份比对原图。样本量小，不能据此宣布所有票据都应选 B。需要导入账务的结果仍应按字段复核。",
+              "article_title": "20 份发票里的 OCR 错误",
+              "article_url": null,
+              "media_status": "complete",
+              "media_notes": [
+                "Supplied record describes first-image results with denominators and clear-scan condition; no pixels supplied."
+              ],
+              "identity_status": "permalink",
+              "content_identity": "status:1900000000000000001",
+              "age_hours": 168
+            },
+            {
+              "author": "example_creator",
+              "observed_at": "2026-10-30T12:00:00Z",
+              "time_precision": "exact",
+              "source_method": "supplied_fictional_browsing_record",
+              "pinned": null,
+              "url": "https://x.com/example_creator/status/1900000000000000002",
+              "format": "post",
+              "published_at": "2026-10-30T06:00:00Z",
+              "metric_scope": "post",
+              "metrics": {
+                "views": {
+                  "raw": "280",
+                  "value": 280,
+                  "precision": "exact"
+                },
+                "likes": {
+                  "raw": "2",
+                  "value": 2,
+                  "precision": "exact"
+                },
+                "replies": {
+                  "raw": "0",
+                  "value": 0,
+                  "precision": "exact"
+                },
+                "reposts": {
+                  "raw": "0",
+                  "value": 0,
+                  "precision": "exact"
+                },
+                "quotes": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "bookmarks": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                }
+              },
+              "body_status": "complete",
+              "text": "今天又测了一次 OCR。真是太震撼了，这项技术正在改变一切！有个问题特别值得注意，我觉得大家都应该看看。详细结果见上周那篇文章：链接指向记录 A。",
+              "media_status": "complete",
+              "media_notes": [
+                "Supplied record describes AI 的未来已经到来 decorative cover; no pixels supplied."
+              ],
+              "identity_status": "permalink",
+              "content_identity": "status:1900000000000000002",
+              "age_hours": 6
+            },
+            {
+              "author": "example_creator",
+              "observed_at": "2026-10-30T12:00:00Z",
+              "time_precision": "exact",
+              "source_method": "supplied_fictional_browsing_record",
+              "pinned": null,
+              "url": "https://x.com/example_creator/status/1900000000000000003",
+              "format": "post",
+              "published_at": "2026-10-29T12:00:00Z",
+              "metric_scope": "post",
+              "metrics": {
+                "views": {
+                  "raw": "900",
+                  "value": 900,
+                  "precision": "exact"
+                },
+                "likes": {
+                  "raw": "9",
+                  "value": 9,
+                  "precision": "exact"
+                },
+                "replies": {
+                  "raw": "1",
+                  "value": 1,
+                  "precision": "exact"
+                },
+                "reposts": {
+                  "raw": "1",
+                  "value": 1,
+                  "precision": "exact"
+                },
+                "quotes": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "bookmarks": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                }
+              },
+              "body_status": "complete",
+              "text": "这段演示展示了把识别结果导出为表格的步骤，测试条件沿用上周那篇 Article。",
+              "media_status": "partial",
+              "media_notes": [
+                "Player 0:10; milliseconds unknown; no full playback; possible still attachment is not confirmed."
+              ],
+              "identity_status": "permalink",
+              "content_identity": "status:1900000000000000003",
+              "age_hours": 24
+            },
+            {
+              "author": "example_creator",
+              "observed_at": "2026-10-30T12:00:00Z",
+              "time_precision": "exact",
+              "source_method": "supplied_fictional_browsing_record",
+              "pinned": null,
+              "url": "https://x.com/example_creator/status/1900000000000000004",
+              "format": "article_carrier",
+              "published_at": "2026-10-28T12:00:00Z",
+              "metric_scope": "carrier_post",
+              "metrics": {
+                "views": {
+                  "raw": "500",
+                  "value": 500,
+                  "precision": "exact"
+                },
+                "likes": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "replies": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "reposts": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "quotes": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "bookmarks": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                }
+              },
+              "body_status": "preview",
+              "text": "更复杂的票据测试",
+              "article_body_status": "blocked",
+              "article_url": null,
+              "media_status": "not_viewed",
+              "identity_status": "permalink",
+              "content_identity": "status:1900000000000000004",
+              "age_hours": 48
+            }
+          ],
+          "scope": "Latest observed row per permalink identity, plus all URL-less observations under provisional row IDs. unique_posts and unique_content_items exclude unconfirmed identities; unresolved_identity_records counts retained observations, not distinct posts. Explicit Article/carrier and Thread links retain separate metrics. Unknown relationships are not inferred. Displayed counts are not unique people or Home impressions. Differing ages, content, promotion and source prevent a causal format comparison."
+        },
+        "stderr": ""
+      }
+    },
+    {
+      "case": "published_counts",
+      "outputs": {
+        "A_body": {
+          "exit_code": 0,
+          "stdout": {
+            "source_snapshot": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+            "text": {
+              "raw_characters": 127,
+              "raw_preview_4000": "这次只测了来自同一部门的 20 份中文发票清晰扫描件。A 1.2 正确 17 份，B 2.0 正确 19 份。未测手机照片。\n方法：给两款工具输入同一批文件，再人工逐份比对原图。样本量小，不能据此宣布所有票据都应选 B。需要导入账务的结果仍应按字段复核。",
+              "characters": 127,
+              "preview_4000": "这次只测了来自同一部门的 20 份中文发票清晰扫描件。A 1.2 正确 17 份，B 2.0 正确 19 份。未测手机照片。\n方法：给两款工具输入同一批文件，再人工逐份比对原图。样本量小，不能据此宣布所有票据都应选 B。需要导入账务的结果仍应按字段复核。",
+              "after_4000_characters": 0,
+              "article_title_preview_200": "",
+              "normalization": "characters and preview_4000 trim leading/trailing whitespace; raw_characters and raw_preview_4000 preserve the supplied string. Counts are Unicode code points, not grapheme clusters or X weighted-length units.",
+              "scope": "Editorial preview of supplied strings, not reconstructed production renderer input; not a publishing limit."
+            },
+            "video_index_partial_check": {
+              "status": "unknown",
+              "reason": "No media metadata supplied."
+            }
+          },
+          "stderr": ""
+        },
+        "A_title": {
+          "exit_code": 0,
+          "stdout": {
+            "source_snapshot": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+            "text": {
+              "raw_characters": 15,
+              "raw_preview_4000": "20 份发票里的 OCR 错误",
+              "characters": 15,
+              "preview_4000": "20 份发票里的 OCR 错误",
+              "after_4000_characters": 0,
+              "article_title_preview_200": "",
+              "normalization": "characters and preview_4000 trim leading/trailing whitespace; raw_characters and raw_preview_4000 preserve the supplied string. Counts are Unicode code points, not grapheme clusters or X weighted-length units.",
+              "scope": "Editorial preview of supplied strings, not reconstructed production renderer input; not a publishing limit."
+            },
+            "video_index_partial_check": {
+              "status": "unknown",
+              "reason": "No media metadata supplied."
+            }
+          },
+          "stderr": ""
+        },
+        "B_transcription": {
+          "exit_code": 0,
+          "stdout": {
+            "source_snapshot": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+            "text": {
+              "raw_characters": 73,
+              "raw_preview_4000": "今天又测了一次 OCR。真是太震撼了，这项技术正在改变一切！有个问题特别值得注意，我觉得大家都应该看看。详细结果见上周那篇文章：链接指向记录 A。",
+              "characters": 73,
+              "preview_4000": "今天又测了一次 OCR。真是太震撼了，这项技术正在改变一切！有个问题特别值得注意，我觉得大家都应该看看。详细结果见上周那篇文章：链接指向记录 A。",
+              "after_4000_characters": 0,
+              "article_title_preview_200": "",
+              "normalization": "characters and preview_4000 trim leading/trailing whitespace; raw_characters and raw_preview_4000 preserve the supplied string. Counts are Unicode code points, not grapheme clusters or X weighted-length units.",
+              "scope": "Editorial preview of supplied strings, not reconstructed production renderer input; not a publishing limit."
+            },
+            "video_index_partial_check": {
+              "status": "unknown",
+              "reason": "No media metadata supplied."
+            }
+          },
+          "stderr": ""
+        },
+        "C_caption": {
+          "exit_code": 0,
+          "stdout": {
+            "source_snapshot": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+            "text": {
+              "raw_characters": 40,
+              "raw_preview_4000": "这段演示展示了把识别结果导出为表格的步骤，测试条件沿用上周那篇 Article。",
+              "characters": 40,
+              "preview_4000": "这段演示展示了把识别结果导出为表格的步骤，测试条件沿用上周那篇 Article。",
+              "after_4000_characters": 0,
+              "article_title_preview_200": "",
+              "normalization": "characters and preview_4000 trim leading/trailing whitespace; raw_characters and raw_preview_4000 preserve the supplied string. Counts are Unicode code points, not grapheme clusters or X weighted-length units.",
+              "scope": "Editorial preview of supplied strings, not reconstructed production renderer input; not a publishing limit."
+            },
+            "video_index_partial_check": {
+              "status": "unknown",
+              "reason": "No media metadata supplied."
+            }
+          },
+          "stderr": ""
+        },
+        "D_title": {
+          "exit_code": 0,
+          "stdout": {
+            "source_snapshot": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+            "text": {
+              "raw_characters": 8,
+              "raw_preview_4000": "更复杂的票据测试",
+              "characters": 8,
+              "preview_4000": "更复杂的票据测试",
+              "after_4000_characters": 0,
+              "article_title_preview_200": "",
+              "normalization": "characters and preview_4000 trim leading/trailing whitespace; raw_characters and raw_preview_4000 preserve the supplied string. Counts are Unicode code points, not grapheme clusters or X weighted-length units.",
+              "scope": "Editorial preview of supplied strings, not reconstructed production renderer input; not a publishing limit."
+            },
+            "video_index_partial_check": {
+              "status": "unknown",
+              "reason": "No media metadata supplied."
+            }
+          },
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "case": "video_unknown",
+      "input": {
+        "media": [
+          {
+            "type": "video",
+            "duration_ms": null
+          }
+        ],
+        "complete": false
+      },
+      "output": {
+        "status": "unknown",
+        "reasons": [],
+        "scope": "Limited supplied type/duration predicate only. Generic video means the caller has verified an accepted ordinary X video type; no other indexing, metadata, safety, retrieval or ranking conditions are evaluated."
+      }
+    },
+    {
+      "case": "temporary_style",
+      "input_store": {
+        "schema_version": 1,
+        "revision": 7,
+        "profiles": {
+          "default": {
+            "source": "ai",
+            "provider": "native",
+            "style": "Clean editorial cards",
+            "palette": [
+              "#F7F3EA",
+              "#222222"
+            ]
+          },
+          "series:weekly-code": {
+            "source": "mixed",
+            "provider": "native",
+            "style": "Blue line art",
+            "palette": [
+              "#102030"
+            ],
+            "layout": "One finding per image"
+          }
+        }
+      },
+      "scope": "series:weekly-code",
+      "override": {
+        "palette": [
+          "#553388",
+          "#FFFFFF"
+        ]
+      },
+      "output": {
+        "path": "/tmp/for-you-workflow-review-no-write/visual-preferences.json",
+        "revision": 7,
+        "requested_scope": "series:weekly-code",
+        "resolved_scope": "series:weekly-code",
+        "profile": {
+          "source": "mixed",
+          "provider": "native",
+          "style": "Blue line art",
+          "palette": [
+            "#553388",
+            "#FFFFFF"
+          ],
+          "layout": "One finding per image"
+        },
+        "temporary_override": true
+      },
+      "store_unchanged": true
+    },
+    {
+      "case": "preferences_first_read",
+      "output": {
+        "exit_code": 0,
+        "stdout": {
+          "path": "/tmp/for-you-workflow-review-no-write/visual-preferences.json",
+          "revision": 0,
+          "requested_scope": "default",
+          "resolved_scope": null,
+          "profile": null,
+          "temporary_override": false
+        },
+        "stderr": ""
+      },
+      "file_created": false
+    },
+    {
+      "case": "format_measure",
+      "input_text": "Twenty clear Chinese invoice scans from one department: A 1.2 was correct on 17/20 and B 2.0 on 19/20. Both received the same files, checked manually. Phone photos were not tested. Check fields before accounting import; this small test does not establish a universal winner.",
+      "output": {
+        "exit_code": 0,
+        "stdout": {
+          "source_snapshot": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+          "text": {
+            "raw_characters": 274,
+            "raw_preview_4000": "Twenty clear Chinese invoice scans from one department: A 1.2 was correct on 17/20 and B 2.0 on 19/20. Both received the same files, checked manually. Phone photos were not tested. Check fields before accounting import; this small test does not establish a universal winner.",
+            "characters": 274,
+            "preview_4000": "Twenty clear Chinese invoice scans from one department: A 1.2 was correct on 17/20 and B 2.0 on 19/20. Both received the same files, checked manually. Phone photos were not tested. Check fields before accounting import; this small test does not establish a universal winner.",
+            "after_4000_characters": 0,
+            "article_title_preview_200": "",
+            "normalization": "characters and preview_4000 trim leading/trailing whitespace; raw_characters and raw_preview_4000 preserve the supplied string. Counts are Unicode code points, not grapheme clusters or X weighted-length units.",
+            "scope": "Editorial preview of supplied strings, not reconstructed production renderer input; not a publishing limit."
+          },
+          "video_index_partial_check": {
+            "status": "unknown",
+            "reason": "No media metadata supplied."
+          }
+        },
+        "stderr": ""
+      }
+    },
+    {
+      "case": "unidentified_screenshot_transcriptions",
+      "input": [
+        {
+          "url": null,
+          "source_method": "user_screenshot",
+          "text": "Visible opening",
+          "body_status": "partial",
+          "metrics": {
+            "views": "3K"
+          }
+        },
+        {
+          "source_method": "user_screenshot",
+          "text": "Another crop",
+          "metrics": {
+            "views": null
+          }
+        }
+      ],
+      "output": {
+        "exit_code": 0,
+        "stdout": {
+          "input_rows": 2,
+          "unique_posts": 0,
+          "duplicate_rows": 0,
+          "unique_content_items": 0,
+          "unresolved_identity_records": 2,
+          "duplicates": [],
+          "invalid_rows": [],
+          "format_counts": {
+            "unknown": 2
+          },
+          "posts": [
+            {
+              "url": null,
+              "source_method": "user_screenshot",
+              "text": "Visible opening",
+              "body_status": "partial",
+              "metrics": {
+                "views": {
+                  "raw": "3K",
+                  "value": 3000,
+                  "precision": "rounded"
+                },
+                "likes": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "replies": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "reposts": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "quotes": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "bookmarks": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                }
+              },
+              "provisional_id": "row:0",
+              "identity_status": "unconfirmed",
+              "content_identity": null,
+              "format": "unknown",
+              "media_status": "not_viewed",
+              "age_hours": null
+            },
+            {
+              "source_method": "user_screenshot",
+              "text": "Another crop",
+              "metrics": {
+                "views": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "likes": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "replies": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "reposts": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "quotes": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                },
+                "bookmarks": {
+                  "raw": null,
+                  "value": null,
+                  "precision": "unknown"
+                }
+              },
+              "url": null,
+              "provisional_id": "row:1",
+              "identity_status": "unconfirmed",
+              "content_identity": null,
+              "format": "unknown",
+              "body_status": "unknown",
+              "media_status": "not_viewed",
+              "age_hours": null
+            }
+          ],
+          "scope": "Latest observed row per permalink identity, plus all URL-less observations under provisional row IDs. unique_posts and unique_content_items exclude unconfirmed identities; unresolved_identity_records counts retained observations, not distinct posts. Explicit Article/carrier and Thread links retain separate metrics. Unknown relationships are not inferred. Displayed counts are not unique people or Home impressions. Differing ages, content, promotion and source prevent a causal format comparison."
+        },
+        "stderr": ""
+      }
+    },
+    {
+      "case": "absolute_helper_cwd",
+      "outputs": [
+        {
+          "skill": "x-assistant",
+          "cwd": "/",
+          "exit_code": 0,
+          "id": "K01-033",
+          "evidence_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+        },
+        {
+          "skill": "x-create-visuals",
+          "cwd": "/",
+          "exit_code": 0,
+          "id": "K01-033",
+          "evidence_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+        },
+        {
+          "skill": "x-explain",
+          "cwd": "/",
+          "exit_code": 0,
+          "id": "K01-033",
+          "evidence_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+        },
+        {
+          "skill": "x-format-advisor",
+          "cwd": "/",
+          "exit_code": 0,
+          "id": "K01-033",
+          "evidence_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+        },
+        {
+          "skill": "x-myth-check",
+          "cwd": "/",
+          "exit_code": 0,
+          "id": "K01-033",
+          "evidence_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+        },
+        {
+          "skill": "x-publish-checklist",
+          "cwd": "/",
+          "exit_code": 0,
+          "id": "K01-033",
+          "evidence_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+        },
+        {
+          "skill": "x-reach-diagnosis",
+          "cwd": "/",
+          "exit_code": 0,
+          "id": "K01-033",
+          "evidence_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+        },
+        {
+          "skill": "x-review-posts",
+          "cwd": "/",
+          "exit_code": 0,
+          "id": "K01-033",
+          "evidence_url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+        }
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "/workspace/scratch/8875c799c753/work/x_skills_eval/draft_case.txt",
+      "sha256": "fde800ae1c73f42894c1a9ba27306ad28cf18a9a9e73b9dc3052873923a696d0",
+      "text": "帮我检查下面准备发到 X 的帖子，交付完整改稿、配图顺序和具体理由。今天上午我已经发过两篇，第三篇是否应该等四小时？保持研究信息，不要编造测试。\n\n素材事实：共测 20 份已脱敏中文发票，A 正确 17 份，B 正确 19 份。样本来自同一部门，均为清晰扫描件，未测手机照片。测试使用工具 A 1.2 和 B 2.0，时间是 2026-10-28。\n\n计划：先发下面的长 Post，配四张图；第一张写“本次 OCR 测试的三个发现”，第二张是样本说明，第三张是操作界面，第四张是 17/20 和 19/20 结果及误识别示例。没有提供实际图片文件。\n\n草稿：\n这次我们对两款 OCR 工具作了一次测试，整理了测试过程和结果。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n操作记录：导入同一批清晰扫描件，逐份比对识别文本和原始字段。只记录可复核的错误，不使用不同来源图片混合比较。\n测试结果：A 正确识别 17/20，B 正确识别 19/20。只适用于这 20 份清晰扫描件，未测手机拍摄、模糊或倾斜的票据。不能据此保证 B 在所有场景更准。\n"
+    },
+    {
+      "path": "/workspace/scratch/8875c799c753/work/x_skills_eval/posts_case.md",
+      "sha256": "6b317eb580354b1b70f6395b5f836709ef0e7421d956c148b97d5c575446a18b",
+      "text": "# 用户请求\n\n请根据下面这份已保存的 X 页面浏览记录，分析我这些帖子的问题，给出逐帖建议和可以直接使用的改写。也回答：Article 是否天生有更多流量？我的账号是不是被限流了？接下来应该怎么发？本次只分析这些记录，不需要联网重抓。\n\n以下是用于任务演练的虚构账号和帖子记录，不是真实账户数据。所有 URL 仅作为记录标识。\n\n观察时间：2026-10-30T12:00:00Z。账号：example_creator。主页公开粉丝数显示“1.2K”。\n\n## 记录 A\n\n链接：https://x.com/example_creator/status/1900000000000000001\n类型：Article 的承载帖。发布时间：2026-10-23T12:00:00Z。\n公开浏览数显示“3.2K”，点赞“21”，回复“3”，转发“4”；收藏数未显示。\n已从承载帖打开 Article 并读到末尾，全文读取完整。文章正文如下：\n\n《20 份发票里的 OCR 错误》\n这次只测了来自同一部门的 20 份中文发票清晰扫描件。A 1.2 正确 17 份，B 2.0 正确 19 份。未测手机照片。\n方法：给两款工具输入同一批文件，再人工逐份比对原图。样本量小，不能据此宣布所有票据都应选 B。需要导入账务的结果仍应按字段复核。\n配图已查看：首图为两款工具的正确份数对照，图上有分母和“清晰扫描件”限定。正文没有更多测试数据。\n在这次账号浏览范围内，找到两条已发布的介绍帖都链接到这篇 Article。\n\n## 记录 B\n\n链接：https://x.com/example_creator/status/1900000000000000002\n类型：普通 Post。发布时间：2026-10-30T06:00:00Z。\n公开浏览“280”，点赞“2”，回复“0”，转发“0”；收藏未显示。\n全文已展开：今天又测了一次 OCR。真是太震撼了，这项技术正在改变一切！有个问题特别值得注意，我觉得大家都应该看看。详细结果见上周那篇文章：链接指向记录 A。\n配图已查看：一张装饰性封面，文字只有“AI 的未来已经到来”。\n\n## 记录 C\n\n链接：https://x.com/example_creator/status/1900000000000000003\n类型：视频 Post。发布时间：2026-10-29T12:00:00Z。\n公开浏览“900”，点赞“9”，回复“1”，转发“1”。\n全文完整：这段演示展示了把识别结果导出为表格的步骤，测试条件沿用上周那篇 Article。\n浏览器播放器显示总时长“0:10”，未获得毫秒级文件信息；画面可见播放按钮及一张结果截图，但记录不能确认它是视频封面还是另一份静态附件。没有播放完整视频。\n\n## 记录 A 的置顶重复项\n\n同一链接：https://x.com/example_creator/status/1900000000000000001\n主页置顶卡再次显示浏览“3.2K”，发布时间仍为 2026-10-23T12:00:00Z。它不是另一篇文章。\n\n## 记录 D\n\n链接：https://x.com/example_creator/status/1900000000000000004\n类型：Article 承载帖。发布时间：2026-10-28T12:00:00Z。\n公开浏览“500”。承载帖可见标题《更复杂的票据测试》。点击 Article 后出现登录提示，全文未读取，图片也未查看。\n\n本次没有获得：逐帖流量来源、后台首页曝光、独立读者数、完读率、每天的历史浏览快照、账号标签报告。\n"
+    }
+  ],
+  "fallback_reference_checks": [
+    {
+      "path": "skills/x-assistant/references/workflows/x-create-visuals.md",
+      "target": "../visual-workflow.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-create-visuals.md",
+      "target": "../knowledge-guide.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-explain.md",
+      "target": "../knowledge-guide.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-format-advisor.md",
+      "target": "../knowledge-guide.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-myth-check.md",
+      "target": "../knowledge-guide.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-publish-checklist.md",
+      "target": "../knowledge-guide.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-publish-checklist.md",
+      "target": "../visual-workflow.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-reach-diagnosis.md",
+      "target": "../knowledge-guide.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-reach-diagnosis.md",
+      "target": "../browsing.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-reach-diagnosis.md",
+      "target": "../observations.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-review-posts.md",
+      "target": "../knowledge-guide.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-review-posts.md",
+      "target": "../browsing.md",
+      "exists": true
+    },
+    {
+      "path": "skills/x-assistant/references/workflows/x-review-posts.md",
+      "target": "../observations.md",
+      "exists": true
+    }
+  ],
+  "metadata_equality": [
+    {
+      "canonical": "metadata/x-assistant.yaml",
+      "generated": "skills/x-assistant/agents/openai.yaml",
+      "equal": true
+    },
+    {
+      "canonical": "metadata/x-create-visuals.yaml",
+      "generated": "skills/x-create-visuals/agents/openai.yaml",
+      "equal": true
+    },
+    {
+      "canonical": "metadata/x-explain.yaml",
+      "generated": "skills/x-explain/agents/openai.yaml",
+      "equal": true
+    },
+    {
+      "canonical": "metadata/x-format-advisor.yaml",
+      "generated": "skills/x-format-advisor/agents/openai.yaml",
+      "equal": true
+    },
+    {
+      "canonical": "metadata/x-myth-check.yaml",
+      "generated": "skills/x-myth-check/agents/openai.yaml",
+      "equal": true
+    },
+    {
+      "canonical": "metadata/x-publish-checklist.yaml",
+      "generated": "skills/x-publish-checklist/agents/openai.yaml",
+      "equal": true
+    },
+    {
+      "canonical": "metadata/x-reach-diagnosis.yaml",
+      "generated": "skills/x-reach-diagnosis/agents/openai.yaml",
+      "equal": true
+    },
+    {
+      "canonical": "metadata/x-review-posts.yaml",
+      "generated": "skills/x-review-posts/agents/openai.yaml",
+      "equal": true
+    }
+  ],
+  "actual_capabilities": {
+    "native_image_generation": {
+      "tool": "image_gen__imagegen",
+      "catalog_present": true,
+      "documentation_read": true,
+      "invoked": false
+    },
+    "local_python_helpers": {
+      "executed": true
+    },
+    "view_image": {
+      "available": true,
+      "used": false,
+      "reason": "No PNG/JPEG/WebP/GIF fixture was present in the reviewed workspace."
+    },
+    "browser": {
+      "available": "mcp__cua_repl documented by host",
+      "initialized": false,
+      "reason": "Supplied account fixtures are fictional; requested scopes exclude fresh collection."
+    },
+    "runway": {
+      "tools_exposed": true,
+      "authentication_checked": false,
+      "provider_models_checked": false,
+      "invoked": false
+    },
+    "paid_calls": 0,
+    "preference_writes": 0,
+    "x_mutations": 0
+  },
+  "limitations": [
+    "No independent external native-model/automatic skill discovery run for Claude Code, Codex CLI, Gemini CLI, Cursor, Copilot or OpenCode. These are current-reviewer executions, not six model clients.",
+    "No live X reading, login wall handoff or direct screenshot-pixel inspection. Provided records/transcriptions remain fictional supplied evidence.",
+    "No image generation, rendering artifact, inspection/correction round trip or upload was executed; production authorization was intentionally withheld in the visual test.",
+    "No real or temporary on-disk preference save/import/export was executed. In-memory selection and first-read/no-file-creation were tested; durable retention remains outside this task.",
+    "Absolute-path lookup from cwd=/ was executed for all eight copies; this is not a fresh Skills CLI installation or complete isolation from sibling folders.",
+    "Historical original-source URLs were resolved from the bundled corpus. No current X product/deployment claim was freshly verified here.",
+    "Full report semantic accuracy is assigned to the knowledge reviewers; this review screened all catalog titles and read task-relevant entries, not every claim in full.",
+    "Prior validation conclusions and prior response prose were not accepted as proof; original supplied fixtures and current helpers were re-executed."
+  ]
+}
