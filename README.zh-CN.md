@@ -125,7 +125,9 @@ npx skills add alexliyu7352/for-you-skills --skill x-publish-checklist -a openco
 
 ## 已经验证到哪一步
 
-完成了 **43 项自动测试、原有 10 个 Agent 任务案例及新增配图流程检查**，以及从 GitHub 向前述六种 Agent 的安装验证。完整性检查与测试已在 **Windows / Python 3.12、Linux / Python 3.9 和 3.12** 上通过。每个技能也单独验证过，包括离线检索引用。
+全库独立审查逐条检查了 **578 条知识**、八个技能和完整安装包，发现了原先 43 项测试未覆盖的 **22 项问题**。修复记录逐项列出更正、回归测试或源码核查，以及独立验收结果。
+
+[验证记录](docs/validation/results.md)分别记录自动测试、实际 Agent 任务、单技能离线执行、六种目标的安装和 Linux／Windows CI。具体数量与版本结果以该记录为准，避免把历史检查当成新版已经验证。
 
 任务案例覆盖多语言问答、复合请求、连续追问、稿件审查和提供的已发帖子记录。六种外部 CLI 各自的模型运行、实时访问 X.com 采集，以及曝光提升实验，**尚未实测**。[完整验证记录与修复项](docs/validation/results.md)
 

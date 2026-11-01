@@ -125,7 +125,9 @@ For manual installation, copy the entire `skills/<name>/` directory into your ag
 
 ## What has been verified
 
-**43 automated tests**, the original **10 agent task cases** plus visual-workflow checks, and installation from GitHub for all six named agent targets. Integrity checks and tests passed on **Windows with Python 3.12** and **Linux with Python 3.9 and 3.12**. Every skill was also tested in isolation, including offline evidence lookup.
+The full independent review examined **all 578 knowledge entries**, eight workflows and the complete package. It found **22 issues** that the original 43-test suite had not caught. The remediation record tracks each correction, its regression or source check, and independent acceptance.
+
+The [validation record](docs/validation/results.md) distinguishes automated tests, actual agent task cases, isolated helper execution, six-target installation and Linux/Windows CI. Test counts and exact release results live there so historical checks are not mistaken for verification of a later release.
 
 The task cases cover multilingual questions, combined requests, follow-ups, draft review and supplied published-post records. Six separate external CLI/model executions, live X.com browser collection and exposure-uplift experiments have **not** been performed. [Full results and fixes](docs/validation/results.md)
 

@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.1
+
+- Correct the 12 knowledge findings from the full review, with explicit per-claim correction evidence and bundled errata. Preserve the original report, IDs, source-unit mappings and original citations.
+- Keep different observation scopes separate, retain original snapshots and unresolved text alternatives, and resolve explicit Article/Thread relationships without merging their metrics.
+- Preserve Windows newline code points in raw draft counts and return clear errors for malformed input.
+- Validate nested evidence schemas, every source-unit range and hash, and complete supported frontmatter before consumption.
+- Include license and attribution in every independent skill installation.
+- Record regression and independent-review evidence in the remediation record; unexecuted live capabilities remain explicitly unverified.
+
 ## 1.1.0
 
 - Add `x-create-visuals` and route image requests from the natural-language entry and draft review.
