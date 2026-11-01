@@ -10,6 +10,8 @@ Choose between a long Post, an Article and a Thread. Check your opening and firs
 
 **7 skills · 578 knowledge entries · 396 original source URLs · 49 unresolved questions preserved**
 
+[Read the full research](https://blog.go5.si/posts/x-algorithm-teardown/) · [Follow the author for updates](https://x.com/alexlee20122022)
+
 ```bash
 npx skills add alexliyu7352/for-you-skills --skill '*'
 ```
@@ -77,6 +79,17 @@ Each entry records the conclusion, its conditions, practical implications, what 
 **The unknowns are part of the knowledge base.** An account-specific reach question can remain unresolved even when the underlying code is public. The skills preserve that distinction and still propose a useful next step.
 
 Every installed skill includes the evidence it needs. Lookup works offline; live verification and account inspection use the tools available in your agent. There is no mandatory paid data service, X.com / Twitter API key or particular MCP server. See the [knowledge guide](knowledge/README.md) and [original research](provenance/research-report.zh-CN.md).
+
+## Read the research and follow updates
+
+Want to understand the reasoning behind the skills? Read the original research for the code analysis, formulas, worked examples and limits behind the publishing advice:
+
+- [Full research in English](https://blog.go5.si/posts/x-algorithm-teardown/)
+- [完整中文研究文档](https://blog.go5.si/posts/zh/x-algorithm-teardown/)
+
+The research and skills will be updated as the [X.com / Twitter algorithm repository's main branch](https://github.com/xai-org/x-algorithm) evolves. Updates will identify the analyzed revision and research date so findings remain traceable. Follow [@alexlee20122022 on X.com](https://x.com/alexlee20122022) for new findings, research progress and skill updates.
+
+The research cutoff listed below describes the current bundled knowledge; installing the skills does not automatically pull future upstream changes.
 
 ## Installation
 
