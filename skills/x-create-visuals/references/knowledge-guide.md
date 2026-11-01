@@ -6,6 +6,8 @@ This corpus distills the complete research report, including its 49 unresolved q
 
 The English entries are the working reference. `research-report.md` retains the original Chinese source for provenance; an English-speaking user does not need to read it. Source IDs resolve to original URLs, not citations to this skill itself.
 
+Read [research errata](research-errata.md) when an entry has `correction` metadata or when comparing working knowledge with the archived report. Use the corrected entry's conditions and its `correction.sources` alongside the original citations. `origin=original_report` identifies an error inherited from the report; `origin=english_distillation` identifies a later wording error. The archived report and `original U...` command preserve the historical text and may therefore contain the documented error. Do not silently treat an archived sentence as overruling a verified correction, or present an unresolved historical check as independently reproduced.
+
 ## Topic map
 
 | Topic | Evidence and questions | Typical relevance |
@@ -29,7 +31,7 @@ python3 scripts/knowledge.py search "Article versus long Post"
 python3 scripts/knowledge.py get K03-001
 ```
 
-Select actual IDs from the catalog. `get` resolves original links and lists related unknowns: read those Q entries before answering. `sources ID` resolves a reference group; `original U...` reads source units; `audit` checks offline structure and coverage.
+Select actual IDs from the catalog. `get` resolves original links, preserves any correction evidence and lists related unknowns: read those Q entries before answering. `sources ID` resolves a reference group; `original U...` reads source units; `audit` checks offline structure and coverage.
 
 Search is lexical candidate retrieval, not semantic completeness or an X score. Translate a non-English question into English search concepts and retain exact symbols, numbers and IDs. If retrieval misses, inspect the topic catalog. When Python is unavailable, read the corresponding JSON files directly and resolve `source_id` plus zero-based `link_indices` through `sources.json`; never invent a URL.
 

@@ -1493,7 +1493,7 @@
         ],
         "verify": [
           "Verify at most five records are taken",
-          "Verify minimumMatchingPosts>=3, not a ratio threshold"
+          "Verify matching-record count >= minimumMatchingPosts, whose public default is 3; this is not a ratio threshold"
         ],
         "if_missing": "Without records, describe only the conditions; do not infer the actual trigger time."
       },
@@ -1514,7 +1514,23 @@
       ],
       "related_unknowns": [
         "Q30"
-      ]
+      ],
+      "correction": {
+        "review_finding": "KD-03",
+        "origin": "english_distillation",
+        "date": "2026-10-31",
+        "summary": "Compare the matching-record count with the configured threshold, not the threshold value with three.",
+        "sources": [
+          {
+            "label": "Take the window, filter matching records, then compare their count with minimumMatchingPosts",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L266-L283"
+          },
+          {
+            "label": "The public rule sets windowSize=5 and minimumMatchingPosts=3",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425"
+          }
+        ]
+      }
     },
     {
       "id": "K05-035",
@@ -2076,7 +2092,7 @@
       "id": "K05-047",
       "title": "The duplicate-text bot processes general and CJK scheduled clusters",
       "kind": "code",
-      "conclusion": "The duplicate-text bot receives tweetIdCluster values produced by scheduled queries, including jobs named duplicate_text_unigrams and duplicate_text_characters_cjk; eligible posts receive COPYPASTA_SPAM.",
+      "conclusion": "The duplicate-text bot receives tweetIdCluster values produced by scheduled queries, including jobs named bbq_duplicate_text_unigrams and bbq_duplicate_text_characters_cjk; eligible posts receive COPYPASTA_SPAM.",
       "conditions": [
         "A cluster from a specified scheduled job is received",
         "Post and author meet subsequent eligibility conditions"
@@ -2090,7 +2106,7 @@
           "Eligibility checks and write result"
         ],
         "verify": [
-          "Confirm the CJK job is accepted",
+          "Match the exact accepted job names, including the bbq_ prefix and the CJK job",
           "Distinguish receiving clusters from generating them"
         ],
         "if_missing": "Without the cluster or classification basis, do not conclude that any Chinese repetition necessarily gets labeled."
@@ -2107,12 +2123,28 @@
           "link_indices": [
             0
           ],
-          "supports": "General duplicate-text and CJK jobs and label writing"
+          "supports": "Exact general duplicate-text and CJK scheduled-job names, including their bbq_ prefixes, and label writing"
         }
       ],
       "related_unknowns": [
         "Q40"
-      ]
+      ],
+      "correction": {
+        "review_finding": "KD-02",
+        "origin": "original_report",
+        "date": "2026-10-31",
+        "summary": "Restore the bbq_ prefix omitted from both exact scheduled-job names in the original report.",
+        "sources": [
+          {
+            "label": "Exact accepted general duplicate-text and CJK job names",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextProd.bot#L8-L11"
+          },
+          {
+            "label": "Exact corresponding reply-job names",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextRepliesProd.bot#L8-L11"
+          }
+        ]
+      }
     },
     {
       "id": "K05-048",
@@ -2666,7 +2698,7 @@
       "id": "K05-061",
       "title": "Advice to limit hashtags is not proof of zero value or a uniform deduction formula",
       "kind": "myth",
-      "conclusion": "'Piling on hashtags does not help' can be an editorial reminder, but public evidence cannot establish that all hashtags have zero value, and there is no sitewide formula deducting a fixed score above a fixed count.",
+      "conclusion": "'Piling on hashtags does not help' can be an editorial reminder, but the cited public evidence cannot establish that all hashtags have zero value and provides no sitewide formula deducting a fixed score above a fixed count.",
       "conditions": [
         "Distinguish editorial reminders from code facts"
       ],
@@ -2684,7 +2716,7 @@
         "if_missing": "Without a corresponding experiment or formula, remove definitive numeric conclusions."
       },
       "limits": [
-        "The absence of a formula does not mean abuse carries no risk."
+        "The absence of a publicly established formula does not mean abuse carries no risk or prove that no undisclosed formula exists."
       ],
       "source_units": [
         "U0475"
@@ -2701,7 +2733,31 @@
       ],
       "related_unknowns": [
         "Q43"
-      ]
+      ],
+      "correction": {
+        "review_finding": "KD-01",
+        "origin": "english_distillation",
+        "date": "2026-10-31",
+        "summary": "Restore the original evidence boundary: no sitewide numeric hashtag formula is established by the cited public evidence, which is not proof that none exists.",
+        "sources": [
+          {
+            "label": "Named hashtag-abuse classification",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/state.py#L37-L46"
+          },
+          {
+            "label": "Conditional Spam label writing",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248"
+          },
+          {
+            "label": "Prompt loader states prompts are excluded",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prompts.py#L11-L31"
+          },
+          {
+            "label": "Repository disclosure of unpublished prompts and rules",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L447"
+          }
+        ]
+      }
     },
     {
       "id": "K05-062",
@@ -2903,13 +2959,13 @@
       "id": "K05-066",
       "title": "Under the Hood is an officially listed pilot transparency entry point",
       "kind": "official",
-      "conclusion": "The official recommendation repository lists Under the Hood at https://x.com/i/jf/under_the_hood; this pilot tool shows account and post labels that may affect visibility during the reporting period. Availability is determined by the account's signed-in interface.",
+      "conclusion": "The official recommendation repository lists Under the Hood at https://x.com/i/jf/under_the_hood. This pilot tool reports account and post labels with explanations of possible visibility effects. Post-label counts follow the reported authored-post cohort and generating-path observation rules (K05-069); account-label statistics count days (K05-070). Availability is determined by the account's signed-in interface.",
       "conditions": [
         "Pilot tool",
         "When available for the account",
-        "Limited to the period shown in the report"
+        "Limited to the report's post-cohort and account-day coverage and the applicable observation rules"
       ],
-      "practical_meaning": "For reach questions, inspect this entry point and save the actual reporting period, labels, and explanations.",
+      "practical_meaning": "For reach questions, inspect this entry point and save the reporting period, post cohort, observation rules, labels, and explanations.",
       "check": {
         "when": "When seeking account-visibility clues",
         "needed": [
@@ -2918,12 +2974,13 @@
         ],
         "verify": [
           "Confirm whether the account has access",
-          "Check the reporting period before using label records"
+          "Check the reported post cohort and observation rules separately from account-label day coverage before using label records"
         ],
         "if_missing": "If the entry point is unavailable, do not infer that the account is restricted."
       },
       "limits": [
-        "It is not a complete causal log of each recommendation."
+        "It is not a complete causal log of each recommendation.",
+        "Live or account-specific availability has not been verified by this source review; the unauthenticated endpoint returned 403 in the full repository review"
       ],
       "source_units": [
         "U0480"
@@ -2942,7 +2999,39 @@
       ],
       "related_unknowns": [
         "Q27"
-      ]
+      ],
+      "correction": {
+        "review_finding": "KD-04",
+        "origin": "original_report",
+        "date": "2026-10-31",
+        "summary": "Clarify the tool description so possible visibility effects and report-period shorthand do not imply a calendar-month log of every post-label event.",
+        "sources": [
+          {
+            "label": "Eligible logical-post cohort, exclusions, and deduplicated denominator",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L215-L250"
+          },
+          {
+            "label": "Ordinary safety-label event observation horizon",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L311-L322"
+          },
+          {
+            "label": "Count ever-applied labels and record removal separately",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L360-L393"
+          },
+          {
+            "label": "Configurable default observation period of seven days",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L421-L422"
+          },
+          {
+            "label": "Assign post-label rows to months using authoredYyyymmdd",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthUserMonthMhPublisherJob.scala#L237-L245"
+          },
+          {
+            "label": "Report sums carried counts and divides by the eligible-post count; account labels use days",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L320-L355"
+          }
+        ]
+      }
     },
     {
       "id": "K05-067",
@@ -3035,29 +3124,36 @@
     },
     {
       "id": "K05-069",
-      "title": "Post labels counts labeled posts and their proportion",
+      "title": "Post labels counts labeled eligible posts in the reported authored-post cohort",
       "kind": "code",
-      "conclusion": "Post labels in the report indicates how many posts carried that label during the period and the corresponding proportion of posts.",
+      "conclusion": "Post labels reports a labeled-post count for the eligible logical posts authored in the reported cohort and its proportion of that eligible-post count. The denominator excludes reposts and nullcast posts and deduplicates logical post IDs. For ordinary safety-label events, the generating job observes a configurable period after creation, seven days by default, and counts whether the label was ever applied within that horizon; a later removal does not erase that count. Rows are assigned to the post's authored month, not the label-event month.",
       "conditions": [
-        "Specified reporting period",
-        "Post labels item"
+        "The specific reported authored-post cohort and its data coverage",
+        "The Post labels item and its label-generating path",
+        "The ordinary safety-label event horizon is bounded by creation plus postObservationDays and the batch cutoff; its public default is seven days"
       ],
-      "practical_meaning": "Retain posts as the unit of numerator and denominator when interpreting values; check Effect on visibility separately.",
+      "practical_meaning": "Align the post's creation date, label-event date, observation horizon, and report coverage before diagnosing a date mismatch. For example, under the ordinary default event path, an October 31 post labeled on November 2 can contribute to October's post cohort. Keep numerator and denominator in eligible posts and check Effect on visibility separately.",
       "check": {
         "when": "When explaining a Post labels percentage",
         "needed": [
-          "Reporting period",
-          "Labeled-post count",
-          "Corresponding total post count and proportion"
+          "Reported authored-post cohort, coverage, and report generation time",
+          "Eligible logical-post count used as the denominator",
+          "The label's carried-post count, label-event dates, and source path",
+          "Configured postObservationDays and any snapshot, flag, or takedown handling"
         ],
         "verify": [
-          "Verify the count concerns posts rather than impressions",
+          "Verify that the numerator and denominator concern eligible logical posts, not impressions or all label activity in the calendar month",
+          "Assign ordinary event-based label counts to the post's authored month and apply that post's observation horizon",
+          "Distinguish ever-applied labels from labels still active at report time; removal is counted separately",
+          "Check special flag, snapshot, or takedown rules before applying the ordinary event-horizon description",
           "Do not describe label proportion as reach-loss rate"
         ],
-        "if_missing": "If the denominator or definition is unclear, do not convert it into exposure loss."
+        "if_missing": "If cohort, denominator, or generating-path definitions are unclear, report those limits; do not equate the figure with all label activity during the calendar month, current active labels, or exposure loss."
       },
       "limits": [
-        "A post carrying a label does not directly reveal how much exposure each post actually lost."
+        "A post carrying a label does not directly reveal how much exposure it actually lost",
+        "The seven-day default describes ordinary safety-label events; snapshot gap filling, post flags, and takedown paths have their own logic and must not be assigned that horizon without checking",
+        "Account-label statistics use a separate day-based calculation; see K05-070"
       ],
       "source_units": [
         "U0483"
@@ -3068,10 +3164,42 @@
           "link_indices": [
             2
           ],
-          "supports": "Post labels report fields and units"
+          "supports": "Post labels presentation fields and post-based units; the additional correction sources establish cohort, denominator, and observation rules"
         }
       ],
-      "related_unknowns": []
+      "related_unknowns": [],
+      "correction": {
+        "review_finding": "KD-04",
+        "origin": "original_report",
+        "date": "2026-10-31",
+        "summary": "Replace the inherited calendar-period label-incidence shorthand with the authored-post cohort, eligible denominator, and generating-path observation rules; labels later removed can still be counted.",
+        "sources": [
+          {
+            "label": "Eligible logical-post cohort, exclusions, and deduplicated denominator",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L215-L250"
+          },
+          {
+            "label": "Ordinary safety-label event observation horizon",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L311-L322"
+          },
+          {
+            "label": "Count ever-applied labels and record removal separately",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L360-L393"
+          },
+          {
+            "label": "Configurable default observation period of seven days",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthDailyPostsJob.scala#L421-L422"
+          },
+          {
+            "label": "Assign post-label rows to months using authoredYyyymmdd",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/scalding/UthUserMonthMhPublisherJob.scala#L237-L245"
+          },
+          {
+            "label": "Report sums carried counts and divides by the eligible-post count; account labels use days",
+            "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/columns/underTheHoodReport.User.strato#L320-L355"
+          }
+        ]
+      }
     },
     {
       "id": "K05-070",

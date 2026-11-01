@@ -54,11 +54,24 @@ def main():
     parser.add_argument("--article-title", default="")
     parser.add_argument("--media-json", help='JSON list or {"media":[{"type":"video","duration_ms":10001}],"complete":true}; unknown duration must be null or omitted')
     args = parser.parse_args()
-    result = {"source_snapshot": SNAPSHOT, "text": inspect_text(Path(args.text).read_text(encoding="utf-8"), args.article_title)}
+    try:
+        # Preserve the decoded input, including CRLF/lone CR, before strip().
+        with Path(args.text).open(encoding="utf-8", newline="") as draft:
+            text = draft.read()
+    except (OSError, UnicodeError) as exc:
+        parser.error(f"cannot read UTF-8 draft: {exc}")
+    result = {"source_snapshot": SNAPSHOT, "text": inspect_text(text, args.article_title)}
     if args.media_json:
-        raw = json.loads(Path(args.media_json).read_text(encoding="utf-8"))
-        media = raw if isinstance(raw, list) else raw["media"]
-        complete = True if isinstance(raw, list) else raw.get("complete", True)
+        try:
+            raw = json.loads(Path(args.media_json).read_text(encoding="utf-8"))
+        except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+            parser.error(f"cannot read media JSON: {exc}")
+        if isinstance(raw, list):
+            media, complete = raw, True
+        elif isinstance(raw, dict):
+            media, complete = raw.get("media"), raw.get("complete", True)
+        else:
+            parser.error("media JSON must be a list or an object containing media")
         if not isinstance(media, list) or not all(isinstance(x, dict) for x in media) or not isinstance(complete, bool):
             parser.error("media must be a list of objects and complete must be boolean")
         result["video_index_partial_check"] = inspect_video_gate(media, complete)

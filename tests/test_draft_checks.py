@@ -1,5 +1,8 @@
 import importlib.util
+import json
+import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -51,6 +54,51 @@ class DraftChecks(unittest.TestCase):
         self.assertEqual(self.module.inspect_video_gate([])['status'], 'not_applicable')
         self.assertEqual(self.module.inspect_video_gate([{'type':'unknown'}])['status'], 'unknown')
         self.assertEqual(self.module.inspect_video_gate([{'type':'video','duration_ms':15000}], complete=False)['status'], 'unknown')
+
+    def test_cli_preserves_crlf_lf_and_lone_cr_before_counting(self):
+        # Universal-newline conversion must not erase supplied code points.
+        for raw, raw_count, trimmed_count, tail in [
+            (b'A\r\n' * 2000, 6000, 5998, 1998),
+            (b'A\n' * 2000, 4000, 3999, 0),
+            (b'A\r' * 2000, 4000, 3999, 0),
+        ]:
+            with self.subTest(newline=raw[:3]), tempfile.TemporaryDirectory() as d:
+                path = Path(d) / 'draft.txt'
+                path.write_bytes(raw)
+                run = subprocess.run([sys.executable, str(HELPER), '--text', str(path)],
+                                     capture_output=True, text=True, encoding='utf-8')
+                self.assertEqual(run.returncode, 0, run.stderr)
+                got = json.loads(run.stdout)['text']
+                self.assertEqual(got['raw_characters'], raw_count)
+                self.assertEqual(got['characters'], trimmed_count)
+                self.assertEqual(got['after_4000_characters'], tail)
+                self.assertEqual(got['raw_preview_4000'], raw.decode('utf-8')[:4000])
+
+    def test_cli_reports_malformed_media_without_traceback(self):
+        for raw in ['null', '42', '"media"', '{}', '{"complete":true}',
+                    '{"media":null}', '{"media":[null]}', '{"media":[],"complete":"yes"}', '{']:
+            with self.subTest(raw=raw), tempfile.TemporaryDirectory() as d:
+                draft, media = Path(d)/'draft.txt', Path(d)/'media.json'
+                draft.write_text('draft', encoding='utf-8')
+                media.write_text(raw, encoding='utf-8')
+                run = subprocess.run([sys.executable, str(HELPER), '--text', str(draft),
+                                      '--media-json', str(media)], capture_output=True, text=True, encoding='utf-8')
+                self.assertEqual(run.returncode, 2, run.stderr)
+                self.assertIn('media', run.stderr.lower())
+                self.assertNotIn('Traceback', run.stderr)
+                self.assertEqual(run.stdout, '')
+
+    def test_cli_reports_unreadable_or_invalid_utf8_draft_cleanly(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d)/'draft.txt'
+            for raw in (None, b'\xff'):
+                if raw is not None:
+                    path.write_bytes(raw)
+                run = subprocess.run([sys.executable, str(HELPER), '--text', str(path)],
+                                     capture_output=True, text=True, encoding='utf-8')
+                self.assertEqual(run.returncode, 2, run.stderr)
+                self.assertNotIn('Traceback', run.stderr)
+                self.assertIn('draft', run.stderr.lower())
 
 
 if __name__ == '__main__':

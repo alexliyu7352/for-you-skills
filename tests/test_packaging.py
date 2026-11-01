@@ -1,6 +1,7 @@
 import importlib.util
 import json
 import os
+import re
 from pathlib import Path
 import subprocess
 import sys
@@ -44,6 +45,25 @@ class PackagingTests(unittest.TestCase):
 
     def test_packager_available(self):
         self.assertTrue((ROOT/'tools/build.py').is_file(), 'No self-contained packager exists')
+
+    def test_each_standalone_distribution_carries_license_and_notice(self):
+        import shutil
+        for skill in sorted((ROOT/'skills').iterdir()):
+            if not skill.is_dir():
+                continue
+            with self.subTest(skill=skill.name), tempfile.TemporaryDirectory() as d:
+                dest = Path(d)/'only-skill'
+                shutil.copytree(skill, dest)
+                self.assertTrue((dest/'LICENSE').is_file(), 'Standalone copyright/permission text is missing')
+                self.assertEqual((dest/'LICENSE').read_bytes(), (ROOT/'LICENSE').read_bytes())
+                self.assertTrue((dest/'NOTICE.md').is_file(), 'Standalone provenance is missing')
+                notice = (dest/'NOTICE.md').read_text(encoding='utf-8')
+                targets = re.findall(r'\]\(([^)]+)\)', notice)
+                local = [x for x in targets if '://' not in x and not x.startswith('#')]
+                self.assertIn('references/research-report.md', local)
+                self.assertIn('references/knowledge/sources.json', local)
+                for target in local:
+                    self.assertTrue((dest/target.split('#')[0]).is_file(), target)
 
     def test_router_routes_have_real_independent_fallbacks(self):
         skill = ROOT/'skills/x-assistant'
