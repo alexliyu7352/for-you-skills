@@ -1,6 +1,6 @@
 # Reader Review Remediation Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task after implementation is authorized. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task after implementation is authorized. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Make the existing reader-review stage executable from a genuinely fresh context, applicable to supported inputs, and honest about incomplete reviews.
 
@@ -8,7 +8,7 @@
 
 **Tech Stack:** English Agent Skills Markdown; existing Python 3.9+ build/validation helpers and unittest suite; available host agents for behavioral probes.
 
-**Spec:** Review of `alexliyu7352/for-you-skills` at `1b6a8224ded9c25def1a86c97e58b0d2d07b4729`, compared with `6d923bd83c6cd8eb14f8355e795cd1d0a5ab9807`. Confirmed findings: the fresh-reviewer handoff excludes the rubric it requires; mandatory cold reading has no applicable outcome for supported plan-only requests. Also address the missing termination contract and missing retained behavioral records. The implementation choices below are proposed, not implemented.
+**Spec:** Review of `alexliyu7352/for-you-skills` at `1b6a8224ded9c25def1a86c97e58b0d2d07b4729`, compared with `6d923bd83c6cd8eb14f8355e795cd1d0a5ab9807`. Confirmed findings: the fresh-reviewer handoff excludes the rubric it requires; mandatory cold reading has no applicable outcome for supported plan-only requests. Also address the missing termination contract and missing retained behavioral records. The user approved implementation on 2026-11-01; execution evidence is in `docs/reviews/reader-review-remediation/`.
 
 ## Global Constraints
 
@@ -17,7 +17,7 @@
 - Do not change the 578 knowledge claims, 49 question entries, original report or citation mappings.
 - Preserve the current three stall classes and no-compression requirements, including the numerical worked-example requirement. Editorial judgments remain separate from algorithm evidence.
 - Honor explicit user scope, protected wording and editing restrictions. Never invent facts to obtain a PASS, publish a post, or mislabel self-review as cold review.
-- Only this plan is being delivered now. Implementation, version changes and publication are not performed by writing it.
+- This plan was first delivered before implementation; execution is separately recorded in the review ledger. Do not infer release creation or installed-skill updates from source changes.
 
 ## Review Focus
 
@@ -33,14 +33,14 @@
 
 **Interfaces:** The authoring agent hands off `draft`, `scope`, `audience`, `constraints`, optional `model_paragraphs`, the complete `review_protocol` and the complete `rubric`. These are documented handoff fields, not a new CLI or JSON API. The reviewer returns quoted stalls and PASS/FAIL for the supplied text; the coordinator records `mode`, `status`, `rounds`, `reviewed_scope`, and unresolved stalls with reasons and next actions.
 
-- [ ] Before implementation, fetch and verify the current remote head, then create an isolated repair branch from the reviewed commit or its verified successor. If another agent has changed the affected workflow, review that delta first and preserve its work; do not overwrite it with this plan's snapshot.
-- [ ] Retain exact baseline inputs and delegated prompts for R1 and R2, run them against the frozen 1.2.0 package and record actual outputs. If a model compensates for the defective instructions, say so; do not manufacture a failing run. The prior review observed R1's limited handoff passing a median example that failed when given the complete rubric, but its historical transcript must not be reconstructed as a new run.
-- [ ] Replace the restrictive handoff at line 31 with an explicit allow-list containing all fields above. Include the complete pure-read procedure, all three stall definitions, all three no-compression requirements and output rules. Exclude prior verdicts, notes, stall logs and explanations of intended meaning. Preserve actual media/formatting within the reviewed scope; unreadable or absent evidence remains unavailable.
-- [ ] Gate reader review on actual draft text. For plan-only inputs, report `not_applicable` because no copy exists and finish the available publishing checks. If the user requested review of an unavailable draft, report `missing` for that text and still finish independent work. For excerpts or selected parts, review only those parts and label that scope. A quick-check skip is `skipped`, with a reason.
-- [ ] Separate execution method from result. Use `mode: cold | self | none` and `status: pass | unresolved | not_applicable | missing | skipped`. Report rounds as actual completed reviewer passes, with zero when no reader pass ran. A stage skipped or unavailable is never a PASS; self-review can report its result but cannot claim independence.
-- [ ] Replace unconditional looping with a proposed default of **three completed reviewer passes total**, including the initial pass. This is an operational budget, not a readability threshold; an explicit user instruction may change it. Stop earlier for missing facts, conflicting protected wording, the same unresolved substantive stall after an attempted repair, or inability to complete either a cold review or an honest self-review. Lack of fresh context alone uses the self-review fallback. Each cold review of changed text uses a fresh context when available. At the limit, report `unresolved`, the remaining quoted problems and the needed input/action. Do not keep rewriting, weaken the standard, or describe an unreviewed revision as passed.
-- [ ] Recheck only evidence affected by edits before final delivery: final text length and scope, changed claims/qualifications and citations, and any changed media/format recommendations. Label illustrative arithmetic as illustrative rather than measured results. Preserve the original evidence-review findings that still apply.
-- [ ] Run `python tools/build.py`, then execute the cases below using the standalone checklist and the router's bundled fallback. R1, R2 and R9 must exercise both entry paths; the remaining cases may use either path with the chosen path recorded. Keep hosts without fresh-context capability as explicitly constrained tests, not proof of six native-client runs.
+- [x] Before implementation, fetch and verify the current remote head, then create an isolated repair branch from the reviewed commit or its verified successor. If another agent has changed the affected workflow, review that delta first and preserve its work; do not overwrite it with this plan's snapshot.
+- [x] Retain exact baseline inputs and delegated prompts for R1 and R2, run them against the frozen 1.2.0 package and record actual outputs. If a model compensates for the defective instructions, say so; do not manufacture a failing run. The prior review observed R1's limited handoff passing a median example that failed when given the complete rubric, but its historical transcript must not be reconstructed as a new run.
+- [x] Replace the restrictive handoff at line 31 with an explicit allow-list containing all fields above. Include the complete pure-read procedure, all three stall definitions, all three no-compression requirements and output rules. Exclude prior verdicts, notes, stall logs and explanations of intended meaning. Preserve actual media/formatting within the reviewed scope; unreadable or absent evidence remains unavailable.
+- [x] Gate reader review on actual draft text. For plan-only inputs, report `not_applicable` because no copy exists and finish the available publishing checks. If the user requested review of an unavailable draft, report `missing` for that text and still finish independent work. For excerpts or selected parts, review only those parts and label that scope. A quick-check skip is `skipped`, with a reason.
+- [x] Separate execution method from result. Use `mode: cold | self | none` and `status: pass | unresolved | not_applicable | missing | skipped`. Report rounds as actual completed reviewer passes, with zero when no reader pass ran. A stage skipped or unavailable is never a PASS; self-review can report its result but cannot claim independence.
+- [x] Replace unconditional looping with a proposed default of **three completed reviewer passes total**, including the initial pass. This is an operational budget, not a readability threshold; an explicit user instruction may change it. Stop earlier for missing facts, conflicting protected wording, the same unresolved substantive stall after an attempted repair, or inability to complete either a cold review or an honest self-review. Lack of fresh context alone uses the self-review fallback. Each cold review of changed text uses a fresh context when available. At the limit, report `unresolved`, the remaining quoted problems and the needed input/action. Do not keep rewriting, weaken the standard, or describe an unreviewed revision as passed.
+- [x] Recheck only evidence affected by edits before final delivery: final text length and scope, changed claims/qualifications and citations, and any changed media/format recommendations. Label illustrative arithmetic as illustrative rather than measured results. Preserve the original evidence-review findings that still apply.
+- [x] Run `python tools/build.py`, then execute the cases below using the standalone checklist and the router's bundled fallback. R1, R2 and R9 must exercise both entry paths; the remaining cases may use either path with the chosen path recorded. Keep hosts without fresh-context capability as explicitly constrained tests, not proof of six native-client runs.
 
 | Case | Exact behavior to establish |
 | --- | --- |
@@ -55,9 +55,9 @@
 | R9: clean control | A clear complete draft with defined terms, supported consequences and required examples passes without invented stalls; retain the actual output, including an empty stall log. |
 | R10: revised draft | After adding an explanatory example, the delivered count matches the delivered text and the example is labeled illustrative; supported facts and citations retain their scope. |
 
-- [ ] Retain exact user inputs, drafts at every round, full reviewer prompts, verbatim outputs, entry path, actual model/host where exposed, context isolation method, mock declarations, commit identity and disposition. Distinguish an intermediate reviewer FAIL from failure of an acceptance case; an honest unresolved result is the expected success for R5–R7. If a case does not meet its expected behavior, repair and rerun it before declaring it passed.
-- [ ] Run `python tools/validate.py`, `python tools/build.py --check`, `python -m unittest discover -s tests -v`, and `git diff --check`. Require no corpus errors, no generated drift, passing existing tests and a clean diff. Do not add keyword-presence tests that merely mirror the new Markdown.
-- [ ] Commit the workflow repair, generated copies and retained case records together after the behavioral evidence supports the documented outcomes.
+- [x] Retain exact user inputs, drafts at every round, full reviewer prompts, verbatim outputs, entry path, actual model/host where exposed, context isolation method, mock declarations, commit identity and disposition. Distinguish an intermediate reviewer FAIL from failure of an acceptance case; an honest unresolved result is the expected success for R5–R7. If a case does not meet its expected behavior, repair and rerun it before declaring it passed.
+- [x] Run `python tools/validate.py`, `python tools/build.py --check`, `python -m unittest discover -s tests -v`, and `git diff --check`. Require no corpus errors, no generated drift, passing existing tests and a clean diff. Do not add keyword-presence tests that merely mirror the new Markdown.
+- [x] Commit the workflow repair, generated copies and retained case records together after the behavioral evidence supports the documented outcomes.
 
 ## Task 2: Align public claims and obtain independent acceptance
 
@@ -73,4 +73,4 @@
 
 ## Execution recommendation
 
-Use one implementer for this small, tightly coupled workflow repair, followed by one independent reviewer. Keep the observed 1.2.0 tests and the new repair evidence distinct. No implementation has started as part of producing this plan.
+Use one implementer for this small, tightly coupled workflow repair, followed by one independent reviewer. Keep the observed 1.2.0 tests and the new repair evidence distinct. Implementation proceeds only after user authorization; see the execution ledger for its current status.

@@ -15,3 +15,6 @@ Base: `1b6a8224ded9c25def1a86c97e58b0d2d07b4729`. User authorized implementation
 
 - Task 1: complete. Both packaged entry paths observed R1 FAIL then PASS in two cold rounds, R2 no-copy outcome in zero rounds, and R9 clean PASS in one round. Constrained-host R3–R8/R11 and R10 final-version checks match their acceptance criteria. R7 is explicitly simulated. Raw evidence and hashes retained; no keyword-presence tests added.
 - Task 1 verification: 81/81 tests; no integrity errors; no build drift; both affected frontmatter validators pass; delivered draft counts and packet identity independently checked.
+
+- Task 1 commit: `6355779`.
+- Task 2: documentation aligned with actual outcomes; raw manifest hashes and local documentation links verified. Independent review pending.

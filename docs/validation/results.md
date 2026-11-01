@@ -1,5 +1,13 @@
 # Validation results
 
+## Unreleased reader-review repair — 2026-11-01
+
+- Repair source commit: `6355779`. The [retained task record](../reviews/reader-review-remediation/task-record.md) covers both the standalone checklist and router fallback, with exact requests, draft versions, fresh-reader packets, verbatim outputs, dispatch/context metadata and file hashes. Its [case table](../reviews/reader-review-remediation/cases.md) separates expected unresolved results from defects in the workflow.
+- Both entry paths found the missing numerical example in the original draft, then passed their revised copies in a second fresh cold review. Each retained a clean control unchanged and passed it in one cold round. Both completed a full publishing-plan review with `not_applicable` and zero reader rounds when no copy existed. Independently recomputed final counts matched the delivered/reviewed text (793 and 888 Unicode code points).
+- A constrained-host run exercised excerpt-only self-review, unresolved missing facts, protected wording, disclosed quick-check skipping and an absent attachment with useful independent work. A separate, explicitly simulated three-FAIL sequence stopped at the three-round budget; it is not a claim of three actual reviewer executions. Repeated-stall termination has no separate actual replay.
+- A newly executed limited-packet baseline passed a draft without the rubric's required worked example. The baseline plan-only agent sensibly compensated for the missing branch and completed its review; that case did not reproduce a bad runtime result. The earlier 1.2.0 behavioral summary below remains historical, without retroactively invented transcripts.
+- All **81 existing automated tests** pass on Python 3.12.14; integrity validation reports the unchanged 578 claims, 49 Q entries, 668/668 source units, 100 source groups and 396 URLs without errors. Build comparison reports no drift; the two affected skills pass frontmatter validation. Behavioral records establish the observed cases in this environment, not six native-client model runs, live X behavior or exposure uplift.
+
 ## 1.2.0 reader review — 2026-11-01 PDT
 
 - The reader-review stage ships as workflow text only: no knowledge entries added or changed. Integrity validation reports the unchanged corpus (578 claims, 49 Q entries, 668/668 source units, 100 source groups, 396 original URLs) with no errors; the eight skills rebuild with no drift; all **81 tests pass** on Python 3.12. The rebuilt `x-publish-checklist` and `x-assistant` bundles also passed their offline audits from an unrelated working directory.

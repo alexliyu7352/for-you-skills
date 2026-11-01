@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Repair the fresh-reader handoff: include the full reading procedure, rubric and output rules, plus the actual draft scope and user constraints; keep previous verdicts and drafting notes out of the reviewer context.
+- Preserve plan-only and partial-draft review. Distinguish no-copy, missing-text and quick-check outcomes from a completed reader pass, and distinguish cold review from self-review.
+- Replace the unconditional revision loop with a default budget of three reviewer passes and explicit unresolved outcomes for unavailable facts, protected wording, repeated stalls or exhausted budget. Verify that a PASS and the final measurements refer to the delivered version.
+
 ## 1.2.0
 
 - Add a reader-review stage to `x-publish-checklist` (and to the router's bundled fallback): after the evidence review, the draft is read cold as a first-time reader. A pure read produces a stall log against three cause-defined classes — unresolved reference, unexplained term, broken chain — and, where the host supports it, a fresh-context reviewer returns PASS or FAIL quoting the offending sentences, looping until the draft passes. Hosts without a fresh reviewer use a labeled self-review instead.
