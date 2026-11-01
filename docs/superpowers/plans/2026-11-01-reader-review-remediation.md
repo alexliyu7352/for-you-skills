@@ -65,11 +65,11 @@
 
 **Interfaces:** Consume Task 1's actual case record and final workflow. Produce accurate documentation and a fresh independent review tied to the tested commit.
 
-- [ ] Update both README reader-review bullets with the fresh-context capability condition, self-review fallback and possibility of unresolved results. Document plan-only behavior without promising a reader pass on absent text.
-- [ ] Add an Unreleased repair entry to the changelog. Link the retained case records from validation results and distinguish observed behavior, simulated control-flow checks, unchanged automated checks and untested hosts. Preserve the earlier 1.2.0 report as a historical claim; do not backfill invented transcripts.
-- [ ] Verify every public statement against the records and check the local links and generated artifacts. Commit the documentation only when its claims match what was actually observed.
-- [ ] Request one fresh independent review of the entire repair against this plan and the two confirmed findings. The reviewer must inspect the handoff, applicability, stopping paths, retained evidence and standalone/router consistency, rather than accept the test count as behavioral proof.
-- [ ] Resolve verified findings and rerun only the affected checks. Deliver the final diff, commit IDs, case outcomes and explicit remaining limits. Any release creation or installed-skill refresh should be reported separately, not assumed completed by a source commit.
+- [x] Update both README reader-review bullets with the fresh-context capability condition, self-review fallback and possibility of unresolved results. Document plan-only behavior without promising a reader pass on absent text.
+- [x] Add an Unreleased repair entry to the changelog. Link the retained case records from validation results and distinguish observed behavior, simulated control-flow checks, unchanged automated checks and untested hosts. Preserve the earlier 1.2.0 report as a historical claim; do not backfill invented transcripts.
+- [x] Verify every public statement against the records and check the local links and generated artifacts. Commit the documentation only when its claims match what was actually observed.
+- [x] Request one fresh independent review of the entire repair against this plan and the two confirmed findings. The reviewer must inspect the handoff, applicability, stopping paths, retained evidence and standalone/router consistency, rather than accept the test count as behavioral proof.
+- [x] Resolve verified findings and rerun only the affected checks. Deliver the final diff, commit IDs, case outcomes and explicit remaining limits. Any release creation or installed-skill refresh should be reported separately, not assumed completed by a source commit.
 
 ## Execution recommendation
 

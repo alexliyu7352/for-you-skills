@@ -2,6 +2,8 @@
 
 ## Unreleased reader-review repair — 2026-11-01
 
+- [Fresh independent final review](../reviews/reader-review-remediation/review.md): ready to merge, no actionable findings. The review inspected the actual packets, outputs, version identity and all 55 artifact hashes.
+
 - Repair source commit: `6355779`. The [retained task record](../reviews/reader-review-remediation/task-record.md) covers both the standalone checklist and router fallback, with exact requests, draft versions, fresh-reader packets, verbatim outputs, dispatch/context metadata and file hashes. Its [case table](../reviews/reader-review-remediation/cases.md) separates expected unresolved results from defects in the workflow.
 - Both entry paths found the missing numerical example in the original draft, then passed their revised copies in a second fresh cold review. Each retained a clean control unchanged and passed it in one cold round. Both completed a full publishing-plan review with `not_applicable` and zero reader rounds when no copy existed. Independently recomputed final counts matched the delivered/reviewed text (793 and 888 Unicode code points).
 - A constrained-host run exercised excerpt-only self-review, unresolved missing facts, protected wording, disclosed quick-check skipping and an absent attachment with useful independent work. A separate, explicitly simulated three-FAIL sequence stopped at the three-round budget; it is not a claim of three actual reviewer executions. Repeated-stall termination has no separate actual replay.
