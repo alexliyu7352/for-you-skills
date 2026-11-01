@@ -65,7 +65,8 @@ class ValidationTests(unittest.TestCase):
         self.write_json('sources.json', self.registry)
         self.write_json('source-units.json', {'units': self.units})
         self.write_json('topic-00.json', {'topic': 'Posting scope', 'claims': [self.claim]})
-        (self.root / 'references' / 'research-report.md').write_text(REPORT, encoding='utf-8')
+        # The registry hashes exact UTF-8 bytes; text-mode writes translate LF on Windows.
+        (self.root / 'references' / 'research-report.md').write_bytes(REPORT.encode('utf-8'))
 
     def write_json(self, name, data):
         (self.kroot / name).write_text(json.dumps(data), encoding='utf-8')
