@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0
+
+- Add a reader-review stage to `x-publish-checklist` (and to the router's bundled fallback): after the evidence review, the draft is read cold as a first-time reader. A pure read produces a stall log against three cause-defined classes — unresolved reference, unexplained term, broken chain — and, where the host supports it, a fresh-context reviewer returns PASS or FAIL quoting the offending sentences, looping until the draft passes. Hosts without a fresh reviewer use a labeled self-review instead.
+- Add the no-compression standard the stage enforces: every central mechanism states its consequence for the reader, every specialized term is explained at first use (or earlier, or replaced by an everyday example), and no causal step the conclusion needs is left off the page.
+- The stage is editorial judgment, kept separate from the algorithm evidence: it cites no knowledge entries, adds no knowledge entries, and its outcome (verdict, rounds, stall classes found) is reported with the review. It may be skipped for a quick check only when the delivery states that it was skipped.
+
 ## 1.1.1
 
 - Correct the 12 knowledge findings from the full review, with explicit per-claim correction evidence and bundled errata. Preserve the original report, IDs, source-unit mappings and original citations.
