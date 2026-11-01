@@ -1,0 +1,81 @@
+{
+  "draft_or_topic": "No draft text or topic supplied. Publishing plan: an Article on Tuesday, an introductory Post on Wednesday, and three charts.",
+  "selected_format": {
+    "article": "Tuesday, provisional fit pending evidence structure",
+    "introductory_post": "Wednesday, standalone useful conclusion and Article entry point"
+  },
+  "audience": null,
+  "intended_result": null,
+  "images": [
+    {
+      "order": 1,
+      "purpose": "Most useful supported finding with subject and essential conditions",
+      "exact_supported_message": null,
+      "content": "One real main comparison; units, scope, source, date and key condition",
+      "required_sources": [
+        "Actual main result",
+        "Comparison values",
+        "Population or sample",
+        "Units",
+        "Dates",
+        "Source"
+      ]
+    },
+    {
+      "order": 2,
+      "purpose": "Evidence behind the headline result",
+      "exact_supported_message": null,
+      "content": "Relevant breakdown, distribution or time series; chart type selected after data inspection",
+      "required_sources": [
+        "Underlying data",
+        "Category definitions",
+        "Calculation method",
+        "Available uncertainty information"
+      ]
+    },
+    {
+      "order": 3,
+      "purpose": "Supported limitation, subgroup or boundary affecting the reader decision",
+      "exact_supported_message": null,
+      "content": "Real exception or boundary comparison; omit or merge if no distinct quantitative evidence",
+      "required_sources": [
+        "Evidence for limitation, subgroup or boundary"
+      ]
+    }
+  ],
+  "existing_assets": [],
+  "evidence_ids": [
+    "K01-078",
+    "K02-038",
+    "K03-020",
+    "K03-021",
+    "K03-026",
+    "K03-030",
+    "K03-070",
+    "K03-074",
+    "K03-075",
+    "K03-076",
+    "K05-105",
+    "K05-109",
+    "Q02",
+    "Q44",
+    "Q47"
+  ],
+  "profile_scope": "not requested; no profile accessed",
+  "style_decision": "deferred; review only, no creation or style setup",
+  "capabilities": {
+    "native_image_generation": "available; image_gen__imagegen discovered",
+    "exact_charts": "render from actual source data using code/runtime; no data supplied, so none rendered"
+  },
+  "unresolved_inputs": [
+    "Topic",
+    "Target audience",
+    "Desired reader outcome",
+    "Main finding and conditions",
+    "Source data and definitions",
+    "Existing assets",
+    "Article title, cover, introduction and body",
+    "Introductory Post text"
+  ],
+  "creation_requested": false
+}

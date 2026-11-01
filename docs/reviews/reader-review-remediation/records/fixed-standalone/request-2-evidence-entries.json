@@ -1,0 +1,3691 @@
+{
+  "research_through": "2026-10-29",
+  "snapshot": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+  "claims": [
+    {
+      "id": "K00-002",
+      "title": "Research snapshots and the report revision date",
+      "kind": "editorial",
+      "conclusion": "The original report records a revision date of 2026-10-29 (Los Angeles time) and states that it was compiled from a shared conversation, a 23-page research report, and the latest version 7 manuscript. The exact shared-conversation and version-7 assembly lineage has not been independently reconstructed from the inspected records. The original analysis is pinned to `5ed796374ea48ee26058aab66ab10c266bea2bef`; the October update was checked through `606b254b45be798bfaecfa8c23f5a9c51bc8000c`. Code snapshot dates in the text use the commits' UTC dates; for major versions that fall on different calendar days across time zones, Los Angeles time is also listed. Dates in the official update notes are retained as written in the originals.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task",
+          "The specific shared-conversation and version-7 assembly records, if making an independently verified lineage claim"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts.",
+          "Attribute the unreconstructed assembly lineage to the original report; the pinned revisions and date conversions do not establish that lineage."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment.",
+        "The shared-conversation and version-7 provenance remains a historical statement of the original report, not an independently reconstructed record; this gap does not establish that the statement is false."
+      ],
+      "source_units": [
+        "U0660"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Report scope and use of evidence",
+      "topic_file": "topic-00.json"
+    },
+    {
+      "id": "K00-007",
+      "title": "Code facts, examples, and editorial advice have different roles",
+      "kind": "editorial",
+      "conclusion": "The character scenarios, price-quote copy, OCR drafts, and fixed-probability worked examples in the text are all illustrative. Parameters and eligibility are code facts; how to arrange the lead image, schedule updates, and choose topics are editorial suggestions based on those facts, and their effects still require actual reader data.",
+      "conditions": [
+        "This is the research scope recorded in the original report; do not pretend that the original verification was rerun in the current task."
+      ],
+      "practical_meaning": "In answers and reviews, identify the fixed snapshot, evidence type, and verification scope; explain historical assertions, local function tests, and real exposure experiments separately.",
+      "check": {
+        "when": "The answer concerns report completeness, verification records, source dates, or strength of evidence.",
+        "needed": [
+          "The original text and citations for this entry",
+          "Records of what was actually executed in the current task"
+        ],
+        "verify": [
+          "Distinguish public-code checks, formula examples, local function verification, and observations of real accounts."
+        ],
+        "if_missing": "State only the verification already recorded in the report; do not add claims of tests or live effects."
+      },
+      "limits": [
+        "The report’s historical verification records do not mean that everything was rerun in the current task, and they do not constitute a causal exposure experiment."
+      ],
+      "source_units": [
+        "U0665"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Report scope and use of evidence",
+      "topic_file": "topic-00.json"
+    },
+    {
+      "id": "K01-036",
+      "title": "Base scheduling on new information and readers' rhythms",
+      "kind": "editorial",
+      "conclusion": "Spacing posts by a few hours can accommodate readers' rhythms; drafts repeating the same point can be combined, with another post when there is a new question, evidence, or progress. Changing only the title still leaves the same author ID and does not create a new author quota.",
+      "conditions": [
+        "This is editorial judgment informed by known mechanisms",
+        "It is not a fixed four-hour algorithmic timing rule"
+      ],
+      "practical_meaning": "Check what each post adds: a new question, evidence, counterexample, or progress; combine or rewrite when there is no new information.",
+      "check": {
+        "when": "When reviewing a sequence of planned posts",
+        "needed": [
+          "Drafts awaiting publication",
+          "Question each post addresses",
+          "Readers' usual reading rhythm"
+        ],
+        "verify": [
+          "Mark the new information in each post",
+          "Check whether repeated promotional lines can be combined",
+          "Do not treat a changed title as resetting author counts"
+        ],
+        "if_missing": "Without audience data, schedule by content necessity and leave room for experimentation."
+      },
+      "limits": [
+        "Effects require validation with real reader data",
+        "This sets no universal daily post count"
+      ],
+      "source_units": [
+        "U0039"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Posting frequency, October updates, recommendation stages, author diversity, threads, prediction weights, and reposts and replies (original report lines 1–438)",
+      "topic_file": "topic-01.json"
+    },
+    {
+      "id": "K01-037",
+      "title": "Official guidance supports combining long and short formats, but imposes no alternation rule",
+      "kind": "official",
+      "conclusion": "The X Articles guide recommends warming up readers with a short teaser or question before publication, then turning key excerpts into a thread linking back to the full article afterward; it does not require alternating long and short formats, two or three long-form pieces daily, or exactly three posts in a thread.",
+      "conditions": [
+        "This is article-distribution advice, not an author-count reset mechanism"
+      ],
+      "practical_meaning": "Use long-form content for the complete process, and a short post to answer one specific question and provide an entry point to the full text.",
+      "check": {
+        "when": "When a draft rewrites official distribution advice into mandatory alternation or post-count rules",
+        "needed": [
+          "Original official advice",
+          "Proposed short teaser or excerpt",
+          "Entry point to the full text"
+        ],
+        "verify": [
+          "Confirm what value the short post itself provides",
+          "Distinguish official advice from hard rules absent from it"
+        ],
+        "if_missing": "If the short post lacks standalone substance, do not publish just to alternate formats."
+      },
+      "limits": [
+        "There is no guarantee that official advice yields a fixed exposure increase",
+        "Author diversity still operates by author ID"
+      ],
+      "source_units": [
+        "U0009",
+        "U0040",
+        "U0041"
+      ],
+      "evidence": [
+        {
+          "source_id": "S006",
+          "link_indices": [
+            1
+          ],
+          "supports": "Official Articles advice on short teasers, excerpts, and thread distribution.",
+          "title": "[6] X's official definitions of longer posts and Articles, and distribution advice.",
+          "links": [
+            {
+              "label": "Article distribution through short teasers, excerpts, and threads",
+              "url": "https://help.x.com/en/using-x/articles"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "Posting frequency, October updates, recommendation stages, author diversity, threads, prediction weights, and reposts and replies (original report lines 1–438)",
+      "topic_file": "topic-01.json"
+    },
+    {
+      "id": "K05-103",
+      "title": "Schedule publication around primary readers' time zones and habits",
+      "kind": "editorial",
+      "conclusion": "If you know when primary readers look at this type of test, choose a period when they are more likely to be present; 3 a.m. for the author is not necessarily 3 a.m. for the reader.",
+      "conditions": [
+        "Timing information for primary readers is available"
+      ],
+      "practical_meaning": "Record readers' time zones and actual reading habits before scheduling or comparing publication times.",
+      "check": {
+        "when": "When choosing publication times or explaining late-night posting",
+        "needed": [
+          "Primary readers' time zones",
+          "Existing clues about reading times",
+          "Actual publication time"
+        ],
+        "verify": [
+          "Convert to readers' local time",
+          "Avoid judging solely by the author's local clock"
+        ],
+        "if_missing": "Without reader timing information, keep and record the baseline; do not give a universally best time slot."
+      },
+      "limits": [
+        "Timing advice does not guarantee recommendations."
+      ],
+      "source_units": [
+        "U0506"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K03-001",
+      "title": "No universal exposure winner has been established between long Posts and Articles",
+      "kind": "unknown",
+      "conclusion": "The original report did not find sufficient evidence that one format consistently wins for the same draft; the final scoring examined has no fixed Article bonus, but there are differences in format, content reading, and some visibility handling.",
+      "conditions": [
+        "Limited to the public code and observational research checked in the report"
+      ],
+      "practical_meaning": "When reviewing a draft, separate format differences from causation in exposure; do not say that the algorithms are completely identical or that Articles always double exposure.",
+      "check": {
+        "when": "The draft compares recommendation performance between the two formats",
+        "needed": [
+          "The native formats being compared",
+          "The corresponding functions or a comparable experiment"
+        ],
+        "verify": [
+          "Whether local processing differences have been converted into exposure multipliers",
+          "Whether the scope of the research is stated"
+        ],
+        "if_missing": "State instead that evidence establishing format as the cause of exposure differences has not yet been found, and explain the known product differences."
+      },
+      "limits": [
+        "The absence of an explicit format coefficient does not rule out differences learned by the model or external experiments."
+      ],
+      "source_units": [
+        "U0231",
+        "U0235",
+        "U0236",
+        "U0260",
+        "U0282"
+      ],
+      "evidence": [
+        {
+          "source_id": "S094",
+          "link_indices": [
+            3,
+            4,
+            5
+          ],
+          "supports": "Boundaries of the final inputs and prediction fusion examined",
+          "title": "[94] Scope of checks for candidate sources, format fields, and final prediction combination.",
+          "links": [
+            {
+              "label": "Candidate input fields for the final value model",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L1-L22"
+            },
+            {
+              "label": "Prediction scores have no separate Article-completion or Show more term",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs#L1-L31"
+            },
+            {
+              "label": "Engagement-prediction combination function",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q46"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-003",
+      "title": "Use Articles for research with multiple sections, or split it by complete questions",
+      "kind": "editorial",
+      "conclusion": "Editorial inference: an Article can serve investigations, tutorials, and reference guides that need hierarchical sections, embedded material, and later consultation; especially long research can be split into Articles around complete questions that each answer independently, with an introductory Post that can also be understood on its own.",
+      "conditions": [
+        "The material genuinely contains multiple questions, examples, or reference tasks"
+      ],
+      "practical_meaning": "Use the body for the full argument and the introduction for the core conclusions and evidence, then let readers decide whether to continue.",
+      "check": {
+        "when": "Long research is difficult to fit into one Post",
+        "needed": [
+          "A list of sections and materials",
+          "Each piece's independent question",
+          "A draft introduction"
+        ],
+        "verify": [
+          "Whether the sections help readers find content",
+          "Whether each separate piece is complete",
+          "Whether the introduction is useful on its own"
+        ],
+        "if_missing": "Organize the material first; do not determine length by an assumed traffic bonus."
+      },
+      "limits": [
+        "Recommendation performance still requires observing reader responses; splitting a piece does not create an additional exposure quota."
+      ],
+      "source_units": [
+        "U0232",
+        "U0270",
+        "U0271"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K02-004",
+      "title": "Ground titles in readers' problems and tasks",
+      "kind": "editorial",
+      "conclusion": "Broad topics can become actionable questions: turn \"Essential lessons for freelancers\" into \"How to reduce the scope of delivery when a quote is considered too expensive,\" and \"AI has improved again\" into \"How to verify a meeting summary that omits veto conditions.\" This is writing guidance inspired by content matching.",
+      "conditions": [
+        "Applies to drafts whose body contains the corresponding methods, cases, or evidence."
+      ],
+      "practical_meaning": "Constrain the body with a clear audience and task, and deliver the material promised by the title.",
+      "check": {
+        "when": "When reviewing a broad title or a body whose audience is hard to define.",
+        "needed": [
+          "The title",
+          "What target readers are trying to do",
+          "Material the body can provide"
+        ],
+        "verify": [
+          "Identify the specific problem, audience, and task",
+          "Check that the body actually answers the title"
+        ],
+        "if_missing": "Identify missing tasks or material first; do not impose a title template without a basis."
+      },
+      "limits": [
+        "This is not a validated algorithmic title formula, and no fixed wording guarantees exposure."
+      ],
+      "source_units": [
+        "U0127"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Reader matching, reading-related retrieval and dwell modeling, like indexes, bookmarks, follow relationships, profiles, and negative feedback",
+      "topic_file": "topic-02.json"
+    },
+    {
+      "id": "K02-037",
+      "title": "Dwell-oriented writing should fulfill its promise rather than delay the answer",
+      "kind": "editorial",
+      "conclusion": "If a pricing tutorial promises a comparison, provide the two quotes first; if it promises a failure case, explain what happened. Instead of stretching \"three key points\" into ten and repeatedly teasing a later payoff, supply concrete material: requirements removed, fee adjustments, and questions the client raised.",
+      "conditions": [
+        "Applies to tutorial and case-study drafts with real, usable material."
+      ],
+      "practical_meaning": "Let examples and explanations determine length; remove transitions that only delay the answer.",
+      "check": {
+        "when": "When review finds an unfulfilled title promise or repeated suspense.",
+        "needed": [
+          "Opening post/title promise",
+          "Body structure",
+          "Available examples"
+        ],
+        "verify": [
+          "Locate the first essential material",
+          "Replace repeated previews with concrete process details"
+        ],
+        "if_missing": "Identify missing evidence or cases without inventing client or fee facts."
+      },
+      "limits": [
+        "This is an editorial choice; no arrangement is guaranteed to improve dwell or exposure."
+      ],
+      "source_units": [
+        "U0161",
+        "U0162"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Reader matching, reading-related retrieval and dwell modeling, like indexes, bookmarks, follow relationships, profiles, and negative feedback",
+      "topic_file": "topic-02.json"
+    },
+    {
+      "id": "K03-019",
+      "title": "Openings, titles, and introductions should establish the topic first",
+      "kind": "editorial",
+      "conclusion": "Editorial inference: a long Post's opening should state the question, subject, and main findings; an Article's title and outward-facing introduction should explain its topic, without hiding all identifying information in the later text.",
+      "conditions": [
+        "Based on known local input windows, not on known exposure gains"
+      ],
+      "practical_meaning": "Check whether readers who see only the opening, title, or introduction can still tell what was studied.",
+      "check": {
+        "when": "Reviewing an opening or an Article's external introduction",
+        "needed": [
+          "The title",
+          "The beginning of the body",
+          "The carrier Post or introductory Post"
+        ],
+        "verify": [
+          "Whether the question, subject, and main findings appear",
+          "Whether identifying the topic depends on reaching the end"
+        ],
+        "if_missing": "Move essential identifying information earlier while retaining the complete evidence and conditions."
+      },
+      "limits": [
+        "There is an input-based rationale, but no established answer for how much exposure would increase."
+      ],
+      "source_units": [
+        "U0245"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q44",
+        "Q46"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-057",
+      "title": "An introductory Post should first deliver a judgment that is useful on its own",
+      "kind": "editorial",
+      "conclusion": "The copy example first explains that 'overall text-recognition accuracy' is insufficient to decide whether an invoice can be posted directly to the accounts: date, tax amount, and buyer information should be checked separately; even a single incorrect character in the entire text may be in the tax amount. It then explains that the article contains original images, field-by-field results, and conditions requiring manual review, and directs target readers to the tax-amount comparison.",
+      "conditions": [
+        "The example must be supported by real test material",
+        "A demonstration of introductory-copy writing"
+      ],
+      "practical_meaning": "Give the conclusion, rationale, and intended readers before the full-text entry point, so readers gain information even without opening the article.",
+      "check": {
+        "when": "Reviewing an Article's introductory Post",
+        "needed": [
+          "The core judgment",
+          "One piece of evidence",
+          "The intended audience",
+          "The material contained in the full text"
+        ],
+        "verify": [
+          "Whether it is understandable on its own",
+          "Whether it merely creates suspense with 'the answer is in the full text'",
+          "Whether attachments are described accurately"
+        ],
+        "if_missing": "Add an evidence-backed conclusion and its conditions; do not fabricate test results."
+      },
+      "limits": [
+        "The example wording itself does not establish the actual accuracy of OCR tools."
+      ],
+      "source_units": [
+        "U0273",
+        "U0274",
+        "U0275"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-059",
+      "title": "Verify code, formulas, and tables before publishing rich-text Articles",
+      "kind": "editorial",
+      "conclusion": "Editorial advice: Article rich-text support does not guarantee that code, formulas, and tables all remain correct after pasting Markdown; complex research should be previewed in the actual editor before publication.",
+      "conditions": [
+        "The draft contains structured material such as code, formulas, or tables"
+      ],
+      "practical_meaning": "Check rendering, symbols, column alignment, and readability individually; do not publish solely because the editor supports rich text.",
+      "check": {
+        "when": "Moving a technical report into the Article editor",
+        "needed": [
+          "An actual preview",
+          "Original code, formulas, and tables"
+        ],
+        "verify": [
+          "Whether critical symbols and structure are retained",
+          "Whether it is legible on mobile or in the available preview"
+        ],
+        "if_missing": "Adjust the representation before publishing; do not assume rendering is lossless."
+      },
+      "limits": [
+        "This is pre-publication QA advice, not an algorithmic scoring condition."
+      ],
+      "source_units": [
+        "U0276"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K02-038",
+      "title": "Images should be readable and help complete the reader's task",
+      "kind": "editorial",
+      "conclusion": "A quote-comparison image should clearly show which items were removed on each side; if text is too small and still unreadable when enlarged, an image expansion has not completed the task.",
+      "conditions": [
+        "Applies to images and tables carrying essential information."
+      ],
+      "practical_meaning": "Review text, comparisons, and emphasis at actual display size; split images or simplify information where needed.",
+      "check": {
+        "when": "When a draft substitutes image-expansion actions for image usability.",
+        "needed": [
+          "Original image",
+          "Mobile display appearance",
+          "Key comparison points"
+        ],
+        "verify": [
+          "Check readability both in thumbnail and expanded views",
+          "Confirm the information answers the reader's question"
+        ],
+        "if_missing": "Without the image, flag the needed check; do not claim it was readable or expanded."
+      },
+      "limits": [
+        "This does not establish that image expansion has no model effects."
+      ],
+      "source_units": [
+        "U0163"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Reader matching, reading-related retrieval and dwell modeling, like indexes, bookmarks, follow relationships, profiles, and negative feedback",
+      "topic_file": "topic-02.json"
+    },
+    {
+      "id": "K03-030",
+      "title": "Check an Article's title, cover, introduction, and embedded images separately",
+      "kind": "editorial",
+      "conclusion": "Editorial inference: an ordinary image Post should not hide all results in its fourth image; for an Article, check the title, cover, body introduction, and embedded images individually, and do not equate the first item in an ordinary media list with the cover used by every Article renderer.",
+      "conditions": [
+        "Different renderers read different fields"
+      ],
+      "practical_meaning": "Give every entry point that may appear independently enough information about the topic and conclusions.",
+      "check": {
+        "when": "Reviewing Article media organization",
+        "needed": [
+          "The title",
+          "The cover",
+          "The outward-facing introduction",
+          "Embedded images"
+        ],
+        "verify": [
+          "Whether each part accurately conveys the topic",
+          "Whether the cover is confused with ordinary attachments",
+          "Whether the core results exist only in later material"
+        ],
+        "if_missing": "First add enough information to make each entry point understandable, then check the editor's presentation."
+      },
+      "limits": [
+        "This is an editorial inference from input differences, with no guaranteed exposure multiplier."
+      ],
+      "source_units": [
+        "U0250"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q44",
+        "Q47"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-074",
+      "title": "The lead image can become a compact results page",
+      "kind": "editorial",
+      "conclusion": "Editorial advice: state the test subject and task in the lead image, include one result that best demonstrates the difference, and indicate when manual review is needed; use the second image for samples and settings, the third for remaining results, and the fourth for limitations and failure examples.",
+      "conditions": [
+        "The principle is illustrated through the OCR layout example",
+        "Results must be supported by real material"
+      ],
+      "practical_meaning": "Make the lead image stand on its own, with later images completing reproduction details and limitations.",
+      "check": {
+        "when": "Reordering tutorial or comparison images",
+        "needed": [
+          "The main finding",
+          "Conditions",
+          "Sample settings",
+          "Remaining results and failure examples"
+        ],
+        "verify": [
+          "Whether the lead image states the subject, task, result, and applicability conditions",
+          "Whether later images complete the evidence"
+        ],
+        "if_missing": "First choose a finding supported by the existing material, then design the lead image."
+      },
+      "limits": [
+        "This is an editorial organization approach, not a fixed algorithmic template of four images."
+      ],
+      "source_units": [
+        "U0288"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-075",
+      "title": "One lead-image finding is enough; do not compress the entire text into it",
+      "kind": "editorial",
+      "conclusion": "Editorial advice: the lead image may retain only one main finding, but tool names, comparison conditions, and the subject of the conclusion must be clear; if twenty tiny footnotes are needed to make it valid, narrow the question the image answers.",
+      "conditions": [
+        "Lead-image space is limited and the image must be independently understandable"
+      ],
+      "practical_meaning": "Remove secondary visual burdens and narrow the proposition without removing the conditions that make it valid.",
+      "check": {
+        "when": "The lead image is crowded or uses excessively small text",
+        "needed": [
+          "The main conclusion",
+          "Necessary conditions",
+          "Names of tools and subjects"
+        ],
+        "verify": [
+          "Whether the entire text is being forced into one image",
+          "Whether essential limitations were removed for brevity"
+        ],
+        "if_missing": "Narrow the question and move supplementary material into later images or the body."
+      },
+      "limits": [
+        "'Twenty footnotes' is the original text's example of complexity, not a system threshold."
+      ],
+      "source_units": [
+        "U0289"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-076",
+      "title": "The body text and lead image should jointly convey the main finding",
+      "kind": "editorial",
+      "conclusion": "Editorial advice: state the main finding in the body text too, so the test subject remains understandable when images fail to open; when images do open, the text and lead image can be checked against each other, and core material does not depend entirely on later images.",
+      "conditions": [
+        "An illustrated tutorial or test report"
+      ],
+      "practical_meaning": "Use brief text to explain the subject, result, and essential conditions, and check consistency between text and image.",
+      "check": {
+        "when": "Only images carry the draft's conclusion",
+        "needed": [
+          "The body text",
+          "The lead image",
+          "Subsequent images"
+        ],
+        "verify": [
+          "Whether the body text works when images are unavailable",
+          "Whether the text and lead image address the same result"
+        ],
+        "if_missing": "Add the main finding to the body without creating lengthy duplication."
+      },
+      "limits": [
+        "This is advice for accessibility and input clarity, with no guaranteed recommendation increase."
+      ],
+      "source_units": [
+        "U0290"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K05-109",
+      "title": "Finally check the first image and opening from an unfamiliar reader's perspective",
+      "kind": "editorial",
+      "conclusion": "Take the next post's first image and opening on their own: a reader who does not know the author and will not open the full thread should be able to understand what was found and why it matters to them.",
+      "conditions": [],
+      "practical_meaning": "Before publishing, use only the first-screen materials to restate the 'finding' and 'use'; add specifics if they are unclear.",
+      "check": {
+        "when": "When completing the final prepublication check",
+        "needed": [
+          "First image",
+          "Opening",
+          "Primary target readers and purpose"
+        ],
+        "verify": [
+          "The finding is understandable without the author's background",
+          "Its relevance is understandable without opening the complete thread"
+        ],
+        "if_missing": "If the first screen cannot answer this, revise the first image and opening rather than relying on later sections to reveal the core information."
+      },
+      "limits": [
+        "This is a final editorial check, not an exposure promise."
+      ],
+      "source_units": [
+        "U0511"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K01-078",
+      "title": "Public defaults and meaning of Expanding a photo (Photo expand)",
+      "kind": "code",
+      "conclusion": "In the public defaults of 5ed7963, Expanding a photo (Photo expand): Home Mixer=0.05, VM Ranker=0.05. Multiplies the predicted probability of expanding a photo; it does not add a fixed 0.05 per attached image.",
+      "conditions": [
+        "Interpret according to the service path used and actual parameters",
+        "The public main defaults are not the complete configuration for every request"
+      ],
+      "practical_meaning": "Provide clear comparisons and conditions worth enlarging to inspect; avoid calculating scores by image count.",
+      "check": {
+        "when": "When a draft cites values for Expanding a photo (Photo expand), compares the value of actions, or converts them to exposure",
+        "needed": [
+          "Specific prediction field",
+          "Home Mixer or VM path",
+          "Coefficients and candidate eligibility for this request",
+          "Prediction outputs if actual scores are required"
+        ],
+        "verify": [
+          "Check that the two services have defaults of 0.05 and 0.05, respectively",
+          "Confirm that the coefficient multiplies the corresponding prediction output rather than actual action counts",
+          "Check whether this has been simplified into fixed exposure or an exchange rate for actions"
+        ],
+        "if_missing": "Without request parameters or prediction outputs, report only the public defaults; do not assign credited points to an actual post."
+      },
+      "limits": [
+        "A single term is not the complete total score or final ranking",
+        "Caching, RPC, and feature switches can change the path used"
+      ],
+      "source_units": [
+        "U0092",
+        "U0093"
+      ],
+      "evidence": [
+        {
+          "source_id": "S027",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "Home Mixer/VM Ranker defaults and prediction blending for Expanding a photo (Photo expand) in 5ed7963.",
+          "title": "[27] Current coefficients in two locations, probability multiplication, and mutual-follow conditions.",
+          "links": [
+            {
+              "label": "Home Mixer prediction coefficients and official interpretive annotations",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L367-L513"
+            },
+            {
+              "label": "Same-named VM Ranker defaults",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L155"
+            },
+            {
+              "label": "Prediction-term multiplication and summation",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L57-L139"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ],
+      "topic": "Posting frequency, October updates, recommendation stages, author diversity, threads, prediction weights, and reposts and replies (original report lines 1–438)",
+      "topic_file": "topic-01.json"
+    },
+    {
+      "id": "K03-020",
+      "title": "V5 reads Article titles, covers, and embedded media",
+      "kind": "code",
+      "conclusion": "The V5 sequence includes the Article title, Article cover, Post text, and ordinary Post media, followed by Article embedded media; the image budget affects how many images are ultimately retained.",
+      "conditions": [
+        "The V5 renderer checked in the report",
+        "Usable image data is already available for the media",
+        "Subject to the image budget"
+      ],
+      "practical_meaning": "Both Article covers and embedded material should accurately express the content; specify the renderer when discussing the lead image.",
+      "check": {
+        "when": "Explaining the order of Article media inputs",
+        "needed": [
+          "The V5 renderer",
+          "Availability of image data",
+          "The image budget"
+        ],
+        "verify": [
+          "Whether the cover's precedence over ordinary attachments is retained",
+          "Whether the budget is included when determining the final count"
+        ],
+        "if_missing": "Describe reading only when usable data is available and within budget."
+      },
+      "limits": [
+        "V8.2's media-selection rules cannot be applied directly to V5."
+      ],
+      "source_units": [
+        "U0235",
+        "U0246"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "V5 ordering of Article, text, and media, and the image budget",
+          "title": "[88] Differences between V5 and V8.2 content and media processing.",
+          "links": [
+            {
+              "label": "V5 reading order for Article covers, text, and media",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92"
+            },
+            {
+              "label": "V5 image budget and existing image data",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L107-L120"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q44",
+        "Q47"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-021",
+      "title": "V8.2 selects media directly from post.media; its Article branch adds only the title",
+      "kind": "code",
+      "conclusion": "V8.2 selects usable media from post.media; within this function, the Article branch only appends the title and does not separately iterate over article_metadata.cover_media or article_metadata.media.",
+      "conditions": [
+        "The renderer_v82 checked in the report; no assumptions about upstream field population"
+      ],
+      "practical_meaning": "Check ordinary attachments and Article metadata separately; do not say that the first ordinary media item must be the Article cover read by every renderer.",
+      "check": {
+        "when": "The draft claims this path necessarily reads an Article's lead image or cover",
+        "needed": [
+          "post.media",
+          "The Article cover and embedded-media fields",
+          "The V8.2 branch"
+        ],
+        "verify": [
+          "Whether field sources are distinguished",
+          "Whether lack of iteration within the function is extrapolated into no image representation anywhere on the platform"
+        ],
+        "if_missing": "Explain the local field reading and list production coverage as unresolved."
+      },
+      "limits": [
+        "Upstream may prepopulate or copy media; the actual consumers and traffic have not been fully confirmed."
+      ],
+      "source_units": [
+        "U0235",
+        "U0246"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            2,
+            3
+          ],
+          "supports": "V8.2 media selection, assembly, and Article-title branch",
+          "title": "[88] Differences between V5 and V8.2 content and media processing.",
+          "links": [
+            {
+              "label": "V8.2 assembly of text, Article, and media",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L184"
+            },
+            {
+              "label": "V8.2 ordinary-media selection and Article title",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L320"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q44",
+        "Q47"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-026",
+      "title": "Renderer tests do not prove production traffic coverage",
+      "kind": "unknown",
+      "conclusion": "Field-reading tests cannot establish whether all production Articles have image representations; upstream field population, consumers of different vector versions, which path traffic uses, and configuration remain unresolved.",
+      "conditions": [
+        "The local function tests and public plans in the report"
+      ],
+      "practical_meaning": "Format advice should cover titles, introductions, covers, and embedded images without depending on a single unknown production path.",
+      "check": {
+        "when": "Extrapolating renderer results to platform-wide processing",
+        "needed": [
+          "Production field samples",
+          "Consumer configuration",
+          "Versions and traffic allocation"
+        ],
+        "verify": [
+          "Whether a complete production call chain is available",
+          "Whether a default or local test is being treated as full coverage"
+        ],
+        "if_missing": "State explicitly that only the specified fields and renderer were verified."
+      },
+      "limits": [
+        "The existence of a public plan does not mean every reader uses the same version."
+      ],
+      "source_units": [
+        "U0248"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            4,
+            5
+          ],
+          "supports": "Visible scope of the V5 service connection and V8.2 registered plans",
+          "title": "[88] Differences between V5 and V8.2 content and media processing.",
+          "links": [
+            {
+              "label": "Passing V5 processing results to the embedding service",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder.py#L55-L90"
+            },
+            {
+              "label": "Media processing and vector generation in the V8.2 plan",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/plan_post_embedding_v82.py"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q02",
+        "Q44",
+        "Q47"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-070",
+      "title": "V8.2 returns after selecting the first media item with usable content in order",
+      "kind": "code",
+      "conclusion": "_collect_post_media checks media in order: upon the first image with usable content it executes return \"Post image:\", [medium.convo_image.content]; if it encounters a usable video first, it obtains a set of frames and returns.",
+      "conditions": [
+        "The local V8.2 function checked in the report",
+        "Media data is available",
+        "Media-list order is followed"
+      ],
+      "practical_meaning": "The first usable image in an image-only Post should convey the topic; for mixed media, check the actual order and availability.",
+      "check": {
+        "when": "The draft claims this path reads every image or a fixed cover",
+        "needed": [
+          "The media list",
+          "Availability of image content and video frames",
+          "Function branches"
+        ],
+        "verify": [
+          "Whether it accurately says 'first usable' rather than an unqualified first image",
+          "Whether the branch for a video encountered first is retained"
+        ],
+        "if_missing": "Describe only this function's selection of usable media; do not generalize to every model."
+      },
+      "limits": [
+        "An arrangement of attractive cover, question in the second image, and results in the third and fourth may leave this input without the main content."
+      ],
+      "source_units": [
+        "U0283",
+        "U0284",
+        "U0285"
+      ],
+      "evidence": [
+        {
+          "source_id": "S001",
+          "link_indices": [
+            0
+          ],
+          "supports": "Selection logic that immediately returns the first usable image or video",
+          "title": "[1] V8.2 first available media and video frames.",
+          "links": [
+            {
+              "label": "Immediate return during media selection",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L314"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q47"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K02-076",
+      "title": "An ending explaining when and how to reuse material is more concrete than a fixed bookmark slogan",
+      "kind": "editorial",
+      "conclusion": "An ending can say: \"Next time you choose a meeting-summary tool, test these three types of sentence and compare with the original to see whether undecided matters become decisions.\" Once when and how to use a table are clear, a fixed \"Remember to bookmark\" is unnecessary; news flashes and temporary notices need not all become tool tables.",
+      "conditions": [
+        "Choose an ending for the content's purpose; reference tables are not a universal format."
+      ],
+      "practical_meaning": "Ground the call to action in actual reuse and retain exceptions for unsuitable content.",
+      "check": {
+        "when": "When a draft ends only with a bookmark slogan or forces every piece into a tool table.",
+        "needed": [
+          "Content purpose",
+          "Reusable material",
+          "Ending"
+        ],
+        "verify": [
+          "Explain the use case and steps",
+          "Check whether news/notices have lasting reuse value"
+        ],
+        "if_missing": "Without a reuse scenario, end concisely rather than inventing a reason to bookmark."
+      },
+      "limits": [
+        "This is editing advice, with no fixed CTA bonus, penalty, or effect guarantee."
+      ],
+      "source_units": [
+        "U0205",
+        "U0206"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q18",
+        "Q42"
+      ],
+      "topic": "Reader matching, reading-related retrieval and dwell modeling, like indexes, bookmarks, follow relationships, profiles, and negative feedback",
+      "topic_file": "topic-02.json"
+    },
+    {
+      "id": "K05-105",
+      "title": "Reusability, relayability, and accessibility each have independent content value",
+      "kind": "editorial",
+      "conclusion": "Complete fields, dates, and versions make it easy for readers to return and use the material; a post that clearly explains the test object and purpose is easier for peers to pass along; access to full materials should work normally. These uses need not be converted into 'how many likes they equal' to be valid.",
+      "conditions": [],
+      "practical_meaning": "Check the article and materials entry point against three reader tasks: returning, relaying, and accessing.",
+      "check": {
+        "when": "When assessing whether content merits bookmarking, sharing, or long-term maintenance",
+        "needed": [
+          "Key fields, dates, and versions",
+          "Clear test object and purpose",
+          "Materials entry point"
+        ],
+        "verify": [
+          "Returning readers can still identify the applicable version",
+          "The content remains understandable independently after someone shares it",
+          "The link is accessible"
+        ],
+        "if_missing": "If information is missing, add what the intended use requires; do not invent engagement-value conversions."
+      },
+      "limits": [
+        "This is an editorial value judgment, not a like-equivalence or recommendation-score formula."
+      ],
+      "source_units": [
+        "U0507"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K04-086",
+      "title": "Before publication, check the actual destination content and redirect chain",
+      "kind": "editorial",
+      "conclusion": "Open the link from the actual post, record the final domain, and check that the page still delivers what the body promises; a downloadable spreadsheet should still be available, and an old portfolio or event page should not have changed purpose. If redirect records are available, also check the intermediate domains.",
+      "conditions": [
+        "Preparing to publish a link or rechecking an existing one"
+      ],
+      "practical_meaning": "These checks can reveal broken links, misplaced content, site changes, or repurposing, reducing the chance that readers land on unrelated pages.",
+      "check": {
+        "when": "When publishing content with external links or investigating old links",
+        "needed": [
+          "The actual URL in the post",
+          "The final domain",
+          "Landing-page content",
+          "Available intermediate redirect records"
+        ],
+        "verify": [
+          "Access the link through the actual post",
+          "Check each promised item for availability",
+          "Inspect intermediate redirects in the available records"
+        ],
+        "if_missing": "If access fails, mark it unverified; without intermediate records, do not claim to have checked the entire chain."
+      },
+      "limits": [
+        "Checking a webpage cannot reveal X's internal quality rating"
+      ],
+      "source_units": [
+        "U0413",
+        "U0414",
+        "U0424"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q38"
+      ],
+      "topic": "Cold start, FairShare, corrections and older posts, age and editing, reply scoring, multiple layers of reply spam, quote visibility, external links, and pinned posts",
+      "topic_file": "topic-04.json"
+    },
+    {
+      "id": "K04-087",
+      "title": "A webpage's appearance cannot establish X's internal URL rating",
+      "kind": "unknown",
+      "conclusion": "Link checks can reveal page problems but cannot determine X's internal quality rating for the URL; neither how internal reputation is generated nor its current value can be determined from webpage appearance alone.",
+      "conditions": [
+        "The inspected bot uses internal reputation results"
+      ],
+      "practical_meaning": "Record the page state you verified separately from unknown LOW_QUALITY/BAD ratings.",
+      "check": {
+        "when": "When determining whether the platform rates a URL as low quality or BAD",
+        "needed": [
+          "Actual internal reputation or relevant label evidence",
+          "Landing-page and redirect records"
+        ],
+        "verify": [
+          "Distinguish a normal-looking page from a normal internal rating",
+          "Do not present an appearance check as platform certification"
+        ],
+        "if_missing": "Without internal evidence, leave the rating unknown while reporting checkable facts about the page."
+      },
+      "limits": [
+        "A normal appearance does not establish that every rule allows it",
+        "A visible page problem also does not directly establish that a named label was triggered"
+      ],
+      "source_units": [
+        "U0414",
+        "U0424"
+      ],
+      "evidence": [
+        {
+          "source_id": "S073",
+          "link_indices": [
+            0,
+            1
+          ],
+          "supports": "The conditions under which v1/v2 use reputation, which cannot be substituted with webpage appearance",
+          "title": "[73] Actual conditions of low-quality URL v1 and v2.",
+          "links": [
+            {
+              "label": "v1: not a reply or repost, and mentioned users do not follow the author",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot#L2-L47"
+            },
+            {
+              "label": "v2 does not check mentions, only redirect chains and author conditions",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L2-L21"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q38"
+      ],
+      "topic": "Cold start, FairShare, corrections and older posts, age and editing, reply scoring, multiple layers of reply spam, quote visibility, external links, and pinned posts",
+      "topic_file": "topic-04.json"
+    },
+    {
+      "id": "K04-088",
+      "title": "Explain what the link provides in the body and place reply links according to reading needs",
+      "kind": "editorial",
+      "conclusion": "Explain the linked material in the body, such as spreadsheet fields and the version and date of test materials; if the link is in a reply, make sure readers can find it. An unverified exemption rule should not dictate link placement for every piece of content.",
+      "conditions": [
+        "The body needs to connect readers to external material"
+      ],
+      "practical_meaning": "Link placement should support finding and understanding the material, and the body's promise must match what is actually available.",
+      "check": {
+        "when": "When reviewing a linked post body and its first reply",
+        "needed": [
+          "The linked material's content",
+          "Version and date",
+          "The explanation in the body",
+          "How readers can find the reply link"
+        ],
+        "verify": [
+          "Check that the body accurately describes the material",
+          "Confirm that the link can be found",
+          "Do not claim that placing it in a reply automatically avoids penalties"
+        ],
+        "if_missing": "If the material or placement is not yet settled, add an explanation rather than invent an algorithmic reason."
+      },
+      "limits": [
+        "Editorial advice does not establish that one placement produces better traffic"
+      ],
+      "source_units": [
+        "U0415"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q38"
+      ],
+      "topic": "Cold start, FairShare, corrections and older posts, age and editing, reply scoring, multiple layers of reply spam, quote visibility, external links, and pinned posts",
+      "topic_file": "topic-04.json"
+    },
+    {
+      "id": "K05-101",
+      "title": "Access to complete comparison materials should deliver promised content and disclose barriers in advance",
+      "kind": "editorial",
+      "conclusion": "The complete comparison table should have a name, date, and usage instructions; opening the external link should reveal the promised materials, with any registration or payment requirement stated in advance.",
+      "conditions": [],
+      "practical_meaning": "Actually open the materials entry point and verify the content; explain its name, version date, purpose, and access conditions to readers.",
+      "check": {
+        "when": "When publishing a test article linking externally to complete materials",
+        "needed": [
+          "Comparison table",
+          "Destination link",
+          "Material date and instructions",
+          "Registration or payment requirements"
+        ],
+        "verify": [
+          "The entry point opens normally",
+          "The landing page contains the promised content",
+          "Access conditions are known before clicking"
+        ],
+        "if_missing": "If materials are unavailable, repair access or adjust the promise before publishing."
+      },
+      "limits": [
+        "A working link does not mean the platform's internal URL rating is known."
+      ],
+      "source_units": [
+        "U0505"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q38"
+      ],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K05-102",
+      "title": "Recheck the destination page and link purpose after pinning",
+      "kind": "editorial",
+      "conclusion": "If this article later becomes a pinned post, periodically confirm that the destination page and link purpose have not changed.",
+      "conditions": [
+        "The article is used as a pinned post or lasting entry point"
+      ],
+      "practical_meaning": "When maintaining a pinned post, recheck the final destination, material content, dates, and access requirements.",
+      "check": {
+        "when": "When updating a bio or pinned post, or checking long-term access to materials",
+        "needed": [
+          "Current pinned link",
+          "Actual destination page",
+          "Originally promised purpose"
+        ],
+        "verify": [
+          "The link still points to the promised materials",
+          "Changes in registration, payment, or purpose are disclosed"
+        ],
+        "if_missing": "If the destination fails or its purpose changes, repair the link and explanation."
+      },
+      "limits": [
+        "This is maintenance advice, not a guarantee of obtaining or changing the platform's internal reputation."
+      ],
+      "source_units": [
+        "U0505"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q38"
+      ],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K01-039",
+      "title": "Long and short posts in a combined plan should each answer a question",
+      "kind": "editorial",
+      "conclusion": "A long-form pricing piece can include complete comparisons of proposals, reply templates, and cases where they do not apply; a short post can specifically answer 'which items should be deferred when the budget is insufficient,' giving a judgment and example before linking to the full text. The new issue 'accepting the price but continually adding revisions' merits a separate piece; repeated teasers for the same piece add no new answer.",
+      "conditions": [
+        "The example is editorial planning, not a platform rule",
+        "The question addressed by the short post corresponds to material in the long piece"
+      ],
+      "practical_meaning": "Turn each promotional post into a usable standalone answer; write separately about new follow-up questions after supplying the needed context.",
+      "check": {
+        "when": "When reviewing short posts promoting a long-form piece",
+        "needed": [
+          "Full-text material",
+          "Proposed short post",
+          "Readers' new questions"
+        ],
+        "verify": [
+          "Check whether the short post answers a specific question first",
+          "Check for a decision method and at least one example",
+          "Check whether it merely repeats promotion under a different title"
+        ],
+        "if_missing": "If an independent question or example is missing, add content or combine posts first."
+      },
+      "limits": [
+        "The pricing scenario is illustrative copy",
+        "The causal exposure effect of combining long and short formats has not been measured"
+      ],
+      "source_units": [
+        "U0045",
+        "U0046"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Posting frequency, October updates, recommendation stages, author diversity, threads, prediction weights, and reposts and replies (original report lines 1–438)",
+      "topic_file": "topic-01.json"
+    },
+    {
+      "id": "K02-085",
+      "title": "Use specific answerable situations to invite relevant readers' contributions",
+      "kind": "editorial",
+      "conclusion": "Small-restaurant content can list real constraints of two delivery-packaging options and ask owners which causes complaints more often; programming content can provide the error message, environment, and ruled-out causes so experienced readers can add cases.",
+      "conditions": [
+        "The question serves the body's topic, and the author provides sufficient context."
+      ],
+      "practical_meaning": "Let comments add cases and conditions, helping form a group that returns to read.",
+      "check": {
+        "when": "When an engagement question is too broad or exists only to increase comments.",
+        "needed": [
+          "Target readers",
+          "Actual constraints/errors",
+          "Environment",
+          "Ruled-out causes"
+        ],
+        "verify": [
+          "Can only people with relevant experience give useful answers?",
+          "Does the body provide the context needed to answer?"
+        ],
+        "if_missing": "Add context and the task first; do not substitute vague engagement slogans."
+      },
+      "limits": [
+        "This is not a validated fixed question template for improving recommendations."
+      ],
+      "source_units": [
+        "U0216"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q11",
+        "Q42"
+      ],
+      "topic": "Reader matching, reading-related retrieval and dwell modeling, like indexes, bookmarks, follow relationships, profiles, and negative feedback",
+      "topic_file": "topic-02.json"
+    },
+    {
+      "id": "K05-053",
+      "title": "Reusing old material should add information needed for the current question",
+      "kind": "editorial",
+      "conclusion": "When reusing old material, explain which current question it answers, retain its source, and add new context or developments; copying the same promotion into ten unrelated discussions adds no information for readers, even with synonyms or punctuation changes.",
+      "conditions": [],
+      "practical_meaning": "Check each reuse for relevance, traceability, and new contextual value before deciding to keep, rewrite, or remove it.",
+      "check": {
+        "when": "When reviewing copied promotions, citations of old posts, or repeated replies",
+        "needed": [
+          "Question in the current discussion",
+          "Source of the old material",
+          "New developments or applicable context"
+        ],
+        "verify": [
+          "Confirm relevance for each instance",
+          "Remove repetitive promotion that only changes wording"
+        ],
+        "if_missing": "Without a new purpose, consolidate or remove the promotional content."
+      },
+      "limits": [
+        "'Ten discussions' is an editorial example, not a detection threshold.",
+        "Content quality can be assessed without knowing the similarity threshold."
+      ],
+      "source_units": [
+        "U0470"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q40"
+      ],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K05-059",
+      "title": "Use engagement questions to help continue checking the content",
+      "kind": "editorial",
+      "conclusion": "After a tool comparison, ask 'Which test condition differs from your usage? Could you include the version and an example?' Specific answers help further verification. Repeatedly urging engagement without a clear question in the body leaves readers unsure what to answer.",
+      "conditions": [],
+      "practical_meaning": "Replace generic urging with specific questions about conditions, versions, and examples.",
+      "check": {
+        "when": "When reviewing a closing CTA or invitation to comment",
+        "needed": [
+          "Body's claim",
+          "Conditions still requiring verification",
+          "Materials readers are being asked to provide"
+        ],
+        "verify": [
+          "Does the question correspond to the body?",
+          "Can answers add evidence or a useful application?"
+        ],
+        "if_missing": "If there is no specific question, reduce the urging or clarify the type of feedback needed."
+      },
+      "limits": [
+        "This is question-writing advice, not a list of classifier-safe phrases."
+      ],
+      "source_units": [
+        "U0474"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q42"
+      ],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K05-064",
+      "title": "Choose hashtags directly related to the topic or event",
+      "kind": "editorial",
+      "conclusion": "Hashtags can help readers recognize and find related topics or events; the body must still clearly state tool names, versions, and results. Piling on trending tags cannot replace that information.",
+      "conditions": [],
+      "practical_meaning": "Keep only tags matching the body's purpose, and check that the test content is understandable without relying on them.",
+      "check": {
+        "when": "When reviewing hashtags alongside the body",
+        "needed": [
+          "Topic or event",
+          "Tool names, versions, and results",
+          "Proposed hashtags"
+        ],
+        "verify": [
+          "Check each for direct relevance",
+          "Verify key facts remain in the body"
+        ],
+        "if_missing": "Without a directly relevant purpose, reduce tags rather than applying an unknown optimal count."
+      },
+      "limits": [
+        "This is editorial advice.",
+        "Public code has not selected an optimal count for all accounts."
+      ],
+      "source_units": [
+        "U0478"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            6,
+            7,
+            8
+          ],
+          "supports": "Four is a local extractor cap, while hashtag behavioral inputs also exist; this evidence gives no optimal count for all accounts, and choosing for relevance is editorial advice.",
+          "title": "[54] Engagement baiting, hashtag abuse, and normal hashtag features.",
+          "links": [
+            {
+              "label": "SimClusters entity extractor takes at most four hashtags",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/simclusters/simclusters_v2/summingbird/common/TweetEntityExtractor.scala#L14-L40"
+            },
+            {
+              "label": "Phoenix history data includes CLICK_HASHTAG",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L25-L36"
+            },
+            {
+              "label": "Feature list containing CLICK_HASHTAG",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/id_list_features.py#L108-L120"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q43"
+      ],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K04-043",
+      "title": "Answer small questions in the original conversation and also publish a standalone update for major corrections",
+      "kind": "editorial",
+      "conclusion": "Questions about how to start something or an incorrect parameter can be answered in the original conversation; when new results change the original conclusion, clearly leave a correction in the original post or discussion and also prepare a new post that can be understood independently.",
+      "conditions": [
+        "There is a substantive correction or a specific reader question"
+      ],
+      "practical_meaning": "This lets people reading the older material find the correction and lets people who encounter only the new post understand the change.",
+      "check": {
+        "when": "When deciding where a correction should appear",
+        "needed": [
+          "The original conclusion",
+          "The new result that changes the conclusion",
+          "Whether the original post can be edited",
+          "The background readers need"
+        ],
+        "verify": [
+          "Distinguish a local clarification from an update that changes the main conclusion",
+          "Check that the old location contains a clear correction",
+          "Check that the new post provides a complete standalone explanation"
+        ],
+        "if_missing": "If new results have not yet been verified, mark them as awaiting validation instead of presenting a completed correction."
+      },
+      "limits": [
+        "This is advice about editing and access to information",
+        "It does not guarantee recommendation of the standalone update"
+      ],
+      "source_units": [
+        "U0371"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q24"
+      ],
+      "topic": "Cold start, FairShare, corrections and older posts, age and editing, reply scoring, multiple layers of reply spam, quote visibility, external links, and pinned posts",
+      "topic_file": "topic-04.json"
+    },
+    {
+      "id": "K04-044",
+      "title": "A standalone correction should state the omission, what is corrected, and what still holds",
+      "kind": "editorial",
+      "conclusion": "The original report's example opens with 'Yesterday's database test omitted the cold-cache condition after a restart,' explains that follow-up testing requires revising the first-query conclusion, and lists the test conditions, the parts being corrected, and the parts that still hold together. The original post and follow-up test materials are attached afterward; if follow-up testing is incomplete, state clearly which conclusion can no longer be maintained for now.",
+      "conditions": [
+        "A major update needs a standalone post"
+      ],
+      "practical_meaning": "A correction should be understandable to new readers, findable by old readers, and allow the basis for the change to be checked.",
+      "check": {
+        "when": "When reviewing a standalone correction post",
+        "needed": [
+          "The original claim",
+          "The omitted conditions",
+          "Follow-up test results",
+          "The original-post link",
+          "Follow-up test materials"
+        ],
+        "verify": [
+          "Make clear at the opening what changed",
+          "Distinguish what has been overturned, revised, remains valid, and awaits validation",
+          "Attach traceable materials"
+        ],
+        "if_missing": "If follow-up test results are missing, state which conclusions cannot currently be maintained and which tasks remain incomplete."
+      },
+      "limits": [
+        "The example demonstrates a way to write, not an algorithmically optimal opening"
+      ],
+      "source_units": [
+        "U0372",
+        "U0373"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Cold start, FairShare, corrections and older posts, age and editing, reply scoring, multiple layers of reply spam, quote visibility, external links, and pinned posts",
+      "topic_file": "topic-04.json"
+    },
+    {
+      "id": "K04-060",
+      "title": "When an error is found, first explain the correction clearly",
+      "kind": "editorial",
+      "conclusion": "When an error is found in an older post, prioritize clearly telling readers what changed; unsupported speculation that 'editing always causes downranking' should not lead to a vague correction.",
+      "conditions": [
+        "An error requiring correction has been identified"
+      ],
+      "practical_meaning": "Corrections should aim at accurate reader understanding, and version-related risks should be described using checkable evidence.",
+      "check": {
+        "when": "When deciding whether to edit or add a correction",
+        "needed": [
+          "The erroneous content",
+          "The basis for the correction",
+          "Where the correction appears",
+          "The affected conclusions"
+        ],
+        "verify": [
+          "Check that the correction is clear and traceable",
+          "Separate unverified impression effects from the factual correction"
+        ],
+        "if_missing": "If new facts are not yet confirmed, state the uncertainty and the items awaiting verification."
+      },
+      "limits": [
+        "Editorial advice does not predict traffic after editing"
+      ],
+      "source_units": [
+        "U0378"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Cold start, FairShare, corrections and older posts, age and editing, reply scoring, multiple layers of reply spam, quote visibility, external links, and pinned posts",
+      "topic_file": "topic-04.json"
+    },
+    {
+      "id": "K05-106",
+      "title": "Verify questions after publication and publish conclusion-changing findings as separate updates",
+      "kind": "editorial",
+      "conclusion": "If readers ask whether samples were compressed, verify before answering; if they point out an evaluation flaw, explain what needs correcting. Minor issues can remain in discussion, but conclusion-changing findings should become separate updates with corrections in the original so later readers can find the valid version.",
+      "conditions": [],
+      "practical_meaning": "Distinguish supplementary explanations from corrected conclusions, and clearly connect new updates with corrections in the original.",
+      "check": {
+        "when": "When receiving reader questions, counterexamples, or corrections",
+        "needed": [
+          "The samples in question and processing records",
+          "Original evaluation criteria",
+          "Scope of the effect on conclusions",
+          "Original text and update entry points"
+        ],
+        "verify": [
+          "Verify before answering",
+          "Explain specific corrections",
+          "Both new and returning readers can find the current conclusion"
+        ],
+        "if_missing": "If verification is pending, state what needs confirmation; do not maintain a definite conclusion whose basis is lost."
+      },
+      "limits": [
+        "Separate updates serve discoverability and accuracy, not guaranteed additional distribution."
+      ],
+      "source_units": [
+        "U0508"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K03-061",
+      "title": "First define which outcome a format test should improve",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: if the goal is discovery by relevant readers, record exposure, profile visits, and follows actually available to the account; if the goal is for readers to use a tutorial, record qualified inquiries, material access, or other clearly defined outcomes.",
+      "conditions": [
+        "Use fields actually available to the account",
+        "Define the goal before examining results"
+      ],
+      "practical_meaning": "Write down the primary outcome and its definition before the test; do not use views alone to represent every kind of value.",
+      "check": {
+        "when": "Comparing the performance of long Posts and Articles",
+        "needed": [
+          "Target readers and their task",
+          "Available dashboard fields",
+          "Outcome definitions"
+        ],
+        "verify": [
+          "Whether the metrics correspond to the goal",
+          "Whether they can be obtained consistently with the same definitions"
+        ],
+        "if_missing": "Use an actually observable proxy outcome and state its scope."
+      },
+      "limits": [
+        "These outcomes do not automatically establish format causality."
+      ],
+      "source_units": [
+        "U0277"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46",
+        "Q49"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-062",
+      "title": "Missing creator reading data cannot be invented from internal labels",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: leave reading duration and completion rate blank when the dashboard does not provide them; do not reconstruct creator data from similarly named internal model dwell or reading labels.",
+      "conditions": [
+        "The account dashboard genuinely lacks the corresponding fields or definitions"
+      ],
+      "practical_meaning": "Distinguish observed, unavailable, and undefined data in reports; do not treat internal names as measured values.",
+      "check": {
+        "when": "Reporting Article reading performance",
+        "needed": [
+          "The dashboard's actual fields",
+          "Definitions of denominator, deduplication, timing, and window"
+        ],
+        "verify": [
+          "Whether duration or completion is invented from internal model labels",
+          "Whether missing values are identified"
+        ],
+        "if_missing": "Retain missingness and use genuinely available metrics with clear definitions instead."
+      },
+      "limits": [
+        "Internal training fields and public statistics may use different attribution."
+      ],
+      "source_units": [
+        "U0277"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q45",
+        "Q49"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-063",
+      "title": "Public views are not counts of people who completed reading",
+      "kind": "official",
+      "conclusion": "The official views definition cited in the original report allows the author's own views and repeat views and includes entry points beyond Home; those counts are insufficient to establish that the full text was opened, much less that it was read to the end.",
+      "conditions": [
+        "The official Post-views definition; it cannot replace Article-specific metrics without verification"
+      ],
+      "practical_meaning": "Label views in reports as view counts, not unique readers, full-text openers, or completed readers.",
+      "check": {
+        "when": "Using public view counts to compare reading depth",
+        "needed": [
+          "The official views definition",
+          "Dashboard-field definitions"
+        ],
+        "verify": [
+          "Whether repeat views and the author's own views are included",
+          "Whether counts from different entry points are treated as Home impressions",
+          "Whether reading completion is inferred"
+        ],
+        "if_missing": "Retain only the view-count meaning and leave unconfirmed reading metrics blank."
+      },
+      "limits": [
+        "The official Post-views definition does not fill in every Article dashboard field."
+      ],
+      "source_units": [
+        "U0278"
+      ],
+      "evidence": [
+        {
+          "source_id": "S059",
+          "link_indices": [
+            0
+          ],
+          "supports": "Views allow repeat views, the author's own views, and views from multiple entry points",
+          "title": "[59] Official definition of public view counts.",
+          "links": [
+            {
+              "label": "X View counts",
+              "url": "https://help.x.com/en/using-x/view-counts"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q49"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K05-079",
+      "title": "Use actual analytics fields and preserve missing values",
+      "kind": "editorial",
+      "conclusion": "Use analytics already available to the account; if the platform actually provides profile clicks, follows, bookmarks, or other fields, record them according to their definitions, and leave unavailable fields blank.",
+      "conditions": [],
+      "practical_meaning": "Keep visible field names and definitions; do not invent official algorithm scores or fill gaps with substitute metrics.",
+      "check": {
+        "when": "When building a posting-analytics record",
+        "needed": [
+          "Fields actually available to the account",
+          "Each field's definition and measurement window"
+        ],
+        "verify": [
+          "Preserve each field's meaning",
+          "Distinguish nonexistent fields, unavailable data, and actual zero values"
+        ],
+        "if_missing": "Leave unavailable fields blank and mark them missing."
+      },
+      "limits": [
+        "Do not assume different accounts have identical available fields."
+      ],
+      "source_units": [
+        "U0491",
+        "U0492"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q49"
+      ],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K05-083",
+      "title": "Record shares, replies, profile clicks, follows, and similar metrics by definition; do not fill missing values with zero",
+      "kind": "editorial",
+      "conclusion": "Record shares, replies, profile clicks, follows, and other metrics actually provided by the platform, interpreting each by its definition; leave unavailable values blank rather than entering zero.",
+      "conditions": [],
+      "practical_meaning": "Record data availability separately from values, preserving field units and windows.",
+      "check": {
+        "when": "When cleaning an analytics table or comparing metrics across posts",
+        "needed": [
+          "Visible metrics",
+          "Definitions, denominators, and observation windows",
+          "Missing-data status"
+        ],
+        "verify": [
+          "Confirm zero means an observed zero rather than an unavailable value",
+          "Retain names of distinct actions"
+        ],
+        "if_missing": "Keep unavailable fields null."
+      },
+      "limits": [
+        "Even identically named fields should not be compared outside platform definitions."
+      ],
+      "source_units": [
+        "U0493"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q49"
+      ],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K05-084",
+      "title": "Account-goal outcomes can supplement exposure metrics",
+      "kind": "editorial",
+      "conclusion": "Qualified inquiries, useful visits, and other outcomes related to the account's goals are worth recording; content with ordinary exposure may still merit continuing if it attracts target readers.",
+      "conditions": [],
+      "practical_meaning": "Define useful account outcomes beforehand and examine them alongside visible distribution metrics.",
+      "check": {
+        "when": "When deciding which topics or content formats to retain",
+        "needed": [
+          "Account goals",
+          "Definitions of qualified inquiries or useful visits",
+          "Corresponding records"
+        ],
+        "verify": [
+          "Check the quality and relevance of goal outcomes",
+          "Avoid dropping topics solely by view rankings"
+        ],
+        "if_missing": "Without usable outcome records, do not speculate about commercial or audience value."
+      },
+      "limits": [
+        "This is goal-oriented editorial judgment, not a recommendation-bonus formula."
+      ],
+      "source_units": [
+        "U0493"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K03-065",
+      "title": "Separate a format-only comparison from an Article-plus-introduction comparison",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: first give both groups the same promotional conditions to observe format differences; create a separate group comparing 'Article plus introductory Post' with the existing publishing method to evaluate the complete arrangement, accounting for extra promotional Posts and time spent.",
+      "conditions": [
+        "The respective objectives are editor differences and publishing-package effects"
+      ],
+      "practical_meaning": "Report effort and outcomes separately for each group, so gains from repeated promotion are not attributed to the Article editor.",
+      "check": {
+        "when": "Testing the effect of introductory Posts accompanying an Article",
+        "needed": [
+          "Promotion count and timing",
+          "The two publishing methods",
+          "Effort records"
+        ],
+        "verify": [
+          "Whether promotional conditions are equal",
+          "Whether the combined approach requires extra effort",
+          "Whether the conclusion clearly identifies what is being evaluated"
+        ],
+        "if_missing": "Split the test into two questions and retain the effort differences."
+      },
+      "limits": [
+        "An effective combined approach cannot by itself prove a fixed format bonus."
+      ],
+      "source_units": [
+        "U0279"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-066",
+      "title": "Use consistent observation windows and record exceptional distribution factors",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: examine data for every piece at 24 hours and 7 days after publication, and separately record reposts by large accounts, paid promotion, trending events, and account growth.",
+      "conditions": [
+        "Each piece uses the same windows measured from publication",
+        "Data definitions are consistent"
+      ],
+      "practical_meaning": "Compare content of the same age and annotate exceptional distribution; do not mix different accumulation periods.",
+      "check": {
+        "when": "Creating a format-comparison table",
+        "needed": [
+          "Publication time",
+          "24-hour and 7-day data",
+          "Large-account reposts, promotion, trending events, and account growth"
+        ],
+        "verify": [
+          "Whether windows are consistent",
+          "Whether exceptional distribution factors are omitted"
+        ],
+        "if_missing": "Mark inconsistent windows or missing data and avoid directly ranking results to declare a winner."
+      },
+      "limits": [
+        "Recording confounders does not mean their effects have been completely eliminated."
+      ],
+      "source_units": [
+        "U0280"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46",
+        "Q49"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K03-067",
+      "title": "Record the Article, introductory Posts, and complete content group separately",
+      "kind": "editorial",
+      "conclusion": "Methodological advice: record the Article itself, its introductory Posts, and the complete group separately; their individual views cannot be added together and treated as unique readers.",
+      "conditions": [
+        "There are multiple entry points or multiple promotional pieces"
+      ],
+      "practical_meaning": "Retain each component's data and definition; explicitly allow repeats if reporting total views.",
+      "check": {
+        "when": "Summarizing the distribution of an Article series",
+        "needed": [
+          "Data for each piece and introductory Post",
+          "Whether a deduplicated-user definition exists"
+        ],
+        "verify": [
+          "Whether overlapping audiences are counted repeatedly as additional readers"
+        ],
+        "if_missing": "Report only component counts and leave the unique-person count blank."
+      },
+      "limits": [
+        "Public views provide no guarantee of deduplication across Posts."
+      ],
+      "source_units": [
+        "U0280"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q49"
+      ],
+      "topic": "Long Posts, Articles, lead images, video indexing, and safety-check thresholds",
+      "topic_file": "topic-03.json"
+    },
+    {
+      "id": "K05-078",
+      "title": "Choose only one main change per comparison",
+      "kind": "editorial",
+      "conclusion": "When comparing similar tool tests, keep material scale and observation duration as close as possible and change one main variable, such as replacing a decorative cover image with a result comparison; changing topic, format, audience, and timing together makes effects hard to attribute.",
+      "conditions": [
+        "Content tasks and observation conditions are as similar as possible"
+      ],
+      "practical_meaning": "First specify the comparison variable and background conditions kept similar, then record results.",
+      "check": {
+        "when": "When designing the next posting comparison",
+        "needed": [
+          "Similar topics and material scale",
+          "Consistent observation duration",
+          "One main change"
+        ],
+        "verify": [
+          "Confirm other changes are recorded",
+          "Do not attribute gains after multiple changes to one edit"
+        ],
+        "if_missing": "If conditions cannot be made similar, describe results as directional clues only."
+      },
+      "limits": [
+        "This does not control every change in the recommendation system or audience."
+      ],
+      "source_units": [
+        "U0490"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K05-081",
+      "title": "Comparison records should first retain content identity and publishing conditions",
+      "kind": "editorial",
+      "conclusion": "A basic comparison table should record post link, topic, format, publication time, reply or quote status, and external-link location, making it easier to find similar content rather than forcing different tasks together.",
+      "conditions": [],
+      "practical_meaning": "Use one record per post and these conditions to select comparable groups.",
+      "check": {
+        "when": "When building a minimal posting-comparison table",
+        "needed": [
+          "Link",
+          "Topic and format",
+          "Publication time",
+          "Reply or quote status",
+          "External-link location"
+        ],
+        "verify": [
+          "Records are sufficient to return to the original post",
+          "Compare content with similar tasks and formats"
+        ],
+        "if_missing": "Mark missing conditions; do not force records into the same sample category."
+      },
+      "limits": [
+        "These are recording recommendations, not official algorithm-scoring fields."
+      ],
+      "source_units": [
+        "U0492",
+        "U0493"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K05-082",
+      "title": "24 and 48 hours are consistent observation points, not independent samples",
+      "kind": "editorial",
+      "conclusion": "You can record visible data 24 and 48 hours after publication to standardize observation windows; two time points for the same post are tracking records, not two independent posts.",
+      "conditions": [
+        "Record by elapsed time since publication",
+        "24 and 48 hours are suggested observation points"
+      ],
+      "practical_meaning": "Keep the same ID and two time points for each post; align post age in comparisons.",
+      "check": {
+        "when": "When comparing performance after publication",
+        "needed": [
+          "Publication time",
+          "24-hour and 48-hour observation times",
+          "Post ID"
+        ],
+        "verify": [
+          "Align by elapsed time",
+          "Do not count two time records for one post as two independent posts"
+        ],
+        "if_missing": "If a time point is missed, record the actual elapsed duration; do not disguise it as the fixed window."
+      },
+      "limits": [
+        "24/48 hours is a comparison arrangement, not a platform-promised distribution lifecycle."
+      ],
+      "source_units": [
+        "U0493"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K05-085",
+      "title": "Record trending events, revisions, and known labels as comparison context",
+      "kind": "editorial",
+      "conclusion": "Also record concurrent trending events, content revisions, and known visibility labels to avoid attributing every change to one edit.",
+      "conditions": [],
+      "practical_meaning": "Attach contextual notes to each post's results and explicitly list potentially confounding changes when explaining comparisons.",
+      "check": {
+        "when": "When numbers rise or fall after an edit",
+        "needed": [
+          "Concurrent trending events",
+          "Revision records",
+          "Known labels and periods"
+        ],
+        "verify": [
+          "Check when changes occurred",
+          "Check for other explanations"
+        ],
+        "if_missing": "If context is incomplete, weaken attribution."
+      },
+      "limits": [
+        "Recording context cannot eliminate all confounding."
+      ],
+      "source_units": [
+        "U0493"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q26",
+        "Q27"
+      ],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K05-086",
+      "title": "Use distributions and medians across posts so a viral post does not dominate",
+      "kind": "editorial",
+      "conclusion": "When comparing multiple posts, inspect distributions and medians to avoid letting one accidentally viral post dominate the mean.",
+      "conditions": [
+        "Multiple comparable posts are available"
+      ],
+      "practical_meaning": "Retain per-post data and examine both typical performance and dispersion.",
+      "check": {
+        "when": "When comparing overall performance across topics, formats, or changes",
+        "needed": [
+          "Per-post metrics",
+          "Similar observation windows",
+          "Sample composition"
+        ],
+        "verify": [
+          "Inspect outliers' effects on the mean",
+          "Examine the median and distribution"
+        ],
+        "if_missing": "If samples are few or groups dissimilar, describe individual results honestly rather than forcing a stable pattern."
+      },
+      "limits": [
+        "The original text provides no minimum sample size guaranteed to be reliable."
+      ],
+      "source_units": [
+        "U0494"
+      ],
+      "evidence": [],
+      "related_unknowns": [],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "K05-107",
+      "title": "Keep distribution duration similar in the next comparison and acknowledge remaining changes",
+      "kind": "editorial",
+      "conclusion": "For the next similar test, you can again change only the results-first image or summary format and allow similar distribution time before comparing; do not compare total counts for a ten-minute-old post with a two-day-old post. This accumulates clues but cannot control every change in the recommendation system and audience.",
+      "conditions": [
+        "Similar content tasks",
+        "One main variable",
+        "Similar observation duration after publication"
+      ],
+      "practical_meaning": "Compare results for posts of similar age, recording uncontrolled background variables.",
+      "check": {
+        "when": "When reviewing the next round of first-image or summary changes",
+        "needed": [
+          "Publication time",
+          "Observation time",
+          "Main change",
+          "Content and audience context"
+        ],
+        "verify": [
+          "Align by elapsed time since publication",
+          "Avoid directly comparing 10-minute and 2-day totals",
+          "Describe results as clues rather than guaranteed causality"
+        ],
+        "if_missing": "If durations differ, continue observing or explicitly state that direct comparison is invalid."
+      },
+      "limits": [
+        "Ten minutes and two days illustrate an incomparable situation, not platform thresholds."
+      ],
+      "source_units": [
+        "U0509"
+      ],
+      "evidence": [],
+      "related_unknowns": [
+        "Q46"
+      ],
+      "topic": "Safety labels, account aggregation, duplication and engagement bait, transparency reports, data comparisons, and publishing examples",
+      "topic_file": "topic-05.json"
+    },
+    {
+      "id": "Q02",
+      "title": "Are the public defaults the live configuration for every reader?",
+      "kind": "unknown",
+      "conclusion": "The official explanation says cron mirrors the main production defaults; Home Mixer and VM Ranker have different values under the same names in the same commit, and the implementation also contains parameter-reading, caching, and fallback branches.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Describe them as the public main defaults and specify the applicable path; do not dismiss them as arbitrary examples or claim they are identical for every viewer.",
+      "check": {
+        "when": "The question or copy concerns: Are the public defaults the live configuration for every reader?",
+        "needed": [
+          "Per-request feature switches, all experiment assignments, and the correspondence between service deployments and checkpoints."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Per-request feature switches, all experiment assignments, and the correspondence between service deployments and checkpoints."
+      ],
+      "source_units": [
+        "U0516",
+        "U0517",
+        "U0518"
+      ],
+      "evidence": [
+        {
+          "source_id": "S012",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[12] Synchronization of public defaults and usage paths in Home Mixer and VM Ranker.",
+          "links": [
+            {
+              "label": "Cron synchronization explanation for main production defaults",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L434"
+            },
+            {
+              "label": "Synchronization time in the Home Mixer parameter file",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L1"
+            },
+            {
+              "label": "Local weighting, cold start, and RPC fallback",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker.rs#L59-L135"
+            },
+            {
+              "label": "VM request includes heads, cached scores, and compute_value_model",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L26-L68"
+            },
+            {
+              "label": "VM Ranker obtains coefficients from its own params",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/value_model.rs#L71-L118"
+            },
+            {
+              "label": "Handling when a cached weighted score is available",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L282-L327"
+            }
+          ]
+        },
+        {
+          "source_id": "S027",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[27] Current coefficients in two locations, probability multiplication, and mutual-follow conditions.",
+          "links": [
+            {
+              "label": "Home Mixer prediction coefficients and official interpretive annotations",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L367-L513"
+            },
+            {
+              "label": "Same-named VM Ranker defaults",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L155"
+            },
+            {
+              "label": "Prediction-term multiplication and summation",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L57-L139"
+            },
+            {
+              "label": "Subsequent shifting of positive and negative scores",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L161-L179"
+            },
+            {
+              "label": "Mutual-follow candidates must not be replies or reposts",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L19-L22"
+            },
+            {
+              "label": "General reply coefficient plus mutual-follow boost",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L84-L99"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q11",
+      "title": "Does the mutual-follow coefficient of 20 prove that extensive following back increases exposure?",
+      "kind": "unknown",
+      "conclusion": "For candidates that meet the mutual-follow condition and are neither replies nor retweets, the reply-prediction coefficient increases from 5 by 15 to 20; this does not multiply every engagement term by four.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Explain the personalized conditions and the counterexample that reply candidates do not qualify; do not turn a conditional multiplier into a promised result from a mutual-following strategy.",
+      "check": {
+        "when": "The question or copy concerns: Does the mutual-follow coefficient of 20 prove that extensive following back increases exposure?",
+        "needed": [
+          "Controlled experiments on how following back affects actual engagement predictions, candidate composition, audience quality, and exposure."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Controlled experiments on how following back affects actual engagement predictions, candidate composition, audience quality, and exposure."
+      ],
+      "source_units": [
+        "U0543",
+        "U0544",
+        "U0545"
+      ],
+      "evidence": [
+        {
+          "source_id": "S027",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[27] Current coefficients in two locations, probability multiplication, and mutual-follow conditions.",
+          "links": [
+            {
+              "label": "Home Mixer prediction coefficients and official interpretive annotations",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L367-L513"
+            },
+            {
+              "label": "Same-named VM Ranker defaults",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L155"
+            },
+            {
+              "label": "Prediction-term multiplication and summation",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L57-L139"
+            },
+            {
+              "label": "Subsequent shifting of positive and negative scores",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L161-L179"
+            },
+            {
+              "label": "Mutual-follow candidates must not be replies or reposts",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L19-L22"
+            },
+            {
+              "label": "General reply coefficient plus mutual-follow boost",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L84-L99"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q18",
+      "title": "Does a bookmark signal mean that the original content or the author’s next Post will be recommended again?",
+      "kind": "unknown",
+      "conclusion": "SimClusters combines the IDs of a reader’s bookmarked Posts with other engagement seeds; immersive retrieval training also lists bookmarks as positive examples, while the shared blending function has no separate bookmark field.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to say that bookmarks participate in some subsequent personalized retrieval and model training; do not count every bookmark as long-term traffic the author can redeem or guarantee another recommendation of the same Post or author.",
+      "check": {
+        "when": "The question or copy concerns: Does a bookmark signal mean that the original content or the author’s next Post will be recommended again?",
+        "needed": [
+          "There are no request or experimental data for this account showing which content a bookmark specifically retrieved in a later request or its net effect on an individual Post’s exposure."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "There are no request or experimental data for this account showing which content a bookmark specifically retrieved in a later request or its net effect on an individual Post’s exposure."
+      ],
+      "source_units": [
+        "U0564",
+        "U0565",
+        "U0566"
+      ],
+      "evidence": [
+        {
+          "source_id": "S041",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[41] Three locations for bookmarks: combined scoring, personal subsequent retrieval, and immersive training.",
+          "links": [
+            {
+              "label": "Shared combined-weight fields have no separate bookmark term",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L7-L47"
+            },
+            {
+              "label": "Actual terms in the shared weighted formula",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L92-L139"
+            },
+            {
+              "label": "Fetching interactions for the current reader and reading BookmarkMetadata",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/explicit_engagement_signals_query_hydrator.rs#L31-L111"
+            },
+            {
+              "label": "Interaction-signal switches, per-type caps, and candidate-age defaults",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L716-L738"
+            },
+            {
+              "label": "Public activation default for SimClusters",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L48-L53"
+            },
+            {
+              "label": "SimClusters seed-age, score, and count limits",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L25-L36"
+            },
+            {
+              "label": "SimClusters activation conditions, seeds, and candidate queries",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/simclusters_source.rs#L213-L329"
+            },
+            {
+              "label": "Immersive retrieval positive examples include bookmarks",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys_two_tower.py#L283-L293"
+            },
+            {
+              "label": "Immersive positive examples in model settings",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2868-L2878"
+            },
+            {
+              "label": "Each branch trains on its own positive and negative examples",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_two_tower_model.py#L2711-L2739"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q24",
+      "title": "Can a recent repost cause any original Post older than 48 hours to be recommended again?",
+      "kind": "unknown",
+      "conclusion": "AgeFilter reads the candidate’s own `tweet_id`; a repost separately retains the original Post ID. Conditions involving an original Post already being seen or served, deduplication, and visibility can still block the candidate.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "It is valid to say that a recent repost will not be removed by this age comparison solely because the original is older; do not say that reposting resets the original’s lifecycle or clears the reader’s seen records.",
+      "check": {
+        "when": "The question or copy concerns: Can a recent repost cause any original Post older than 48 hours to be recommended again?",
+        "needed": [
+          "The age filter alone cannot guarantee that a particular old Post is available from a source, can be retrieved, passes the remaining filters, and ranks into an actual page."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The age filter alone cannot guarantee that a particular old Post is available from a source, can be retrieved, passes the remaining filters, and ranks into an actual page."
+      ],
+      "source_units": [
+        "U0582",
+        "U0583",
+        "U0584"
+      ],
+      "evidence": [
+        {
+          "source_id": "S039",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[39] What the 48-hour check actually examines: candidate IDs, source windows, and repost originals.",
+          "links": [
+            {
+              "label": "48-hour constant",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43"
+            },
+            {
+              "label": "AgeFilter calculates age from the candidate ID and uses less than or equal to",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31"
+            },
+            {
+              "label": "Candidate pipeline containing the age filter",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L444"
+            },
+            {
+              "label": "Separate fields for a repost's own ID and original-post ID",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L103-L113"
+            },
+            {
+              "label": "Core-data hydration does not replace the candidate ID with the original-post ID",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/core_data_candidate_hydrator.rs#L141-L149"
+            },
+            {
+              "label": "Deduplicating originals and reposts by original-post ID",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/retweet_deduplication_filter.rs#L19-L29"
+            },
+            {
+              "label": "Original-post and parent-related IDs used for already-seen checks",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/util/candidates_util.rs#L13-L17"
+            },
+            {
+              "label": "Determining already-seen candidates",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_seen_posts_filter.rs#L16-L31"
+            },
+            {
+              "label": "Determining already-served candidates",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/previously_served_posts_filter.rs#L14-L30"
+            },
+            {
+              "label": "Visibility handling of attached content such as repost originals",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L70-L169"
+            },
+            {
+              "label": "Upper-level For You sources and their filters",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs#L219-L237"
+            },
+            {
+              "label": "Activation and data construction for the PushToHome source",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/push_to_home_source.rs#L18-L65"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q26",
+      "title": "Are these public defaults the current live configuration for every account?",
+      "kind": "unknown",
+      "conclusion": "The conditions, defaults, and call chains at the fixed version can be checked; the README states that tunable parameters are read through a configuration system and that live experiments are also retained. 606b254 did not change the labeling tasks covered in this chapter, and the relevant ordered lists remain identical after the visibility-rule reorganization.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Use “this public path/public default” to describe behavior that can be rechecked, and retain the results of the latest difference checks; do not promote it into a guarantee for every request across the platform.",
+      "check": {
+        "when": "The question or copy concerns: Are these public defaults the current live configuration for every account?",
+        "needed": [
+          "The feature-switch values actually encountered by each reader or author, experiment buckets, real-time deployment status, and all undisclosed rules were not obtained."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The feature-switch values actually encountered by each reader or author, experiment buckets, real-time deployment status, and all undisclosed rules were not obtained."
+      ],
+      "source_units": [
+        "U0588",
+        "U0589",
+        "U0590"
+      ],
+      "evidence": [
+        {
+          "source_id": "S076",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[76] Public scope of safety rules and verification of the October 29 refactor.",
+          "links": [
+            {
+              "label": "Public defaults, experiment configuration, and unpublished prompts/partial bot rules",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L447"
+            },
+            {
+              "label": "Home and HomeRecommendations rules in the original version",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L212"
+            },
+            {
+              "label": "Rule composition at the same entry points in the latest version",
+              "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/levels.rs#L195-L258"
+            },
+            {
+              "label": "Latest ClientSwitch and existing defaults",
+              "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/models/viewer.rs#L120-L143"
+            },
+            {
+              "label": "Latest insults conditions rewritten using ClientHas",
+              "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/tweet_rules.rs#L162-L205"
+            }
+          ]
+        },
+        {
+          "source_id": "S079",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[79] Default account-label aggregation for three of the latest five records.",
+          "links": [
+            {
+              "label": "Three-of-five, mediaOnly=false, 60 days, seven-day TTL, and author exclusions",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L395-L425"
+            },
+            {
+              "label": "Taking the window, then counting existing post labels",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L251-L283"
+            },
+            {
+              "label": "Evaluating trigger events and user exclusions",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L119-L142"
+            },
+            {
+              "label": "mediaOnly as a configurable option and its scan scope",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L152-L177"
+            },
+            {
+              "label": "Another possible-NSFW default requires eleven matches among ten records",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L360-L394"
+            },
+            {
+              "label": "Feature switches can override public JSON",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/safety-label-user-agg/postToUserLabelRules.strato#L430-L432"
+            }
+          ]
+        },
+        {
+          "source_id": "S051",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[51] Special-video eligibility at 64 likes and subsequent checks.",
+          "links": [
+            {
+              "label": "Public default for deluxe_fav_count_threshold",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py#L104-L120"
+            },
+            {
+              "label": "Author, video, likes, and motion_reveal",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_safety_ptos_special_video_filter.py#L16-L49"
+            },
+            {
+              "label": "Technique screen must still pass after video retrieval",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_special_video_screen.py#L13-L49"
+            },
+            {
+              "label": "Special-video classification, cross-validation, and write order",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/plan_safety_ptos_special_video.py#L23-L54"
+            },
+            {
+              "label": "Kafka entry points for special video, beginning frames, and media-injected",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/generators.py#L109-L144"
+            },
+            {
+              "label": "Sixty-second deduplication cache for related tasks",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_rate_limit.py#L11-L42"
+            }
+          ]
+        },
+        {
+          "source_id": "S054",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[54] Engagement baiting, hashtag abuse, and normal hashtag features.",
+          "links": [
+            {
+              "label": "Prerequisite handling of test accounts, PageRank, and gray badges",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194"
+            },
+            {
+              "label": "Baiting, farming, card manipulation, and other spam branches",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248"
+            },
+            {
+              "label": "Named classes including SpamHashTagAbuse",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/state.py#L37-L46"
+            },
+            {
+              "label": "Safety writes execute only in PTOS production",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L48-L49"
+            },
+            {
+              "label": "Disabling conditions outside PTOS production",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/disable_rules.py#L6-L11"
+            },
+            {
+              "label": "Spam-classification prompt is not public",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prompts.py#L11-L31"
+            },
+            {
+              "label": "SimClusters entity extractor takes at most four hashtags",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/simclusters/simclusters_v2/summingbird/common/TweetEntityExtractor.scala#L14-L40"
+            },
+            {
+              "label": "Phoenix history data includes CLICK_HASHTAG",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L25-L36"
+            },
+            {
+              "label": "Feature list containing CLICK_HASHTAG",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/id_list_features.py#L108-L120"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q27",
+      "title": "Does an insult label or account label make content invisible to all non-followers at every entry point?",
+      "kind": "unknown",
+      "conclusion": "Home, HomeRecommendations, and HomeHydration have different rules and audiences; named labels can remove candidates at specific entry points, while followers and the author may receive different treatment.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Specify the entry points and reader conditions that were verified; describe the corresponding effect as “restricting recommendations to non-followers,” without claiming that all external reach or all ways of opening the content fall to zero.",
+      "check": {
+        "when": "The question or copy concerns: Does an insult label or account label make content invisible to all non-followers at every entry point?",
+        "needed": [
+          "These rules do not provide complete proof of consistency across every entry point, such as search, profiles, conversation pages, direct messages, or direct links; nor are there observations of a real account at each entry point."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "These rules do not provide complete proof of consistency across every entry point, such as search, profiles, conversation pages, direct messages, or direct links; nor are there observations of a real account at each entry point."
+      ],
+      "source_units": [
+        "U0591",
+        "U0592",
+        "U0593"
+      ],
+      "evidence": [
+        {
+          "source_id": "S077",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[77] Insults-label application conditions, reader scope, and entry-point differences.",
+          "links": [
+            {
+              "label": "insults, followers, authors, and legacy-client fallback",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L161-L204"
+            },
+            {
+              "label": "Separate visibility queries for in-network, out-of-network, and attached content",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/vf_candidate_hydrator.rs#L67-L110"
+            },
+            {
+              "label": "Tests of the same label at different safety levels",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/oon_tweet_label.rs#L192-L268"
+            },
+            {
+              "label": "PTOS test-account and author-eligibility evaluation",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194"
+            },
+            {
+              "label": "English, specific insults classification, and author exceptions",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L258-L268"
+            },
+            {
+              "label": "Official report's explanation of insults-label effects",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato#L99-L104"
+            }
+          ]
+        },
+        {
+          "source_id": "S075",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[75] How specific account labels affect recommendation eligibility.",
+          "links": [
+            {
+              "label": "Author rules differ between Home and HomeRecommendations",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L164"
+            },
+            {
+              "label": "NSFW, spam, impersonation, abuse, and other named account rules",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L155-L243"
+            },
+            {
+              "label": "Exact definitions of NonAuthors and NonFollowers",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/engine.rs#L74-L76"
+            },
+            {
+              "label": "Official visibility explanations for account labels",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/under-the-hood/strato/lib/underTheHoodLabels.strato#L117-L180"
+            },
+            {
+              "label": "Home filtering distinguishes removal from content warnings",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/vf_filter.rs#L8-L26"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q38",
+      "title": "Can creators determine X’s `LOW_QUALITY` or BAD rating from a URL’s appearance?",
+      "kind": "unknown",
+      "conclusion": "The v1/v2 and pinned-Post bots use internal reputation results; v2 checks for any intermediate `LOW_QUALITY` and the final-hop GOOD/WHITELIST condition, but does not check mention.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Recommend checking redirects and landing-page content and explain that this can identify broken or misplaced links; do not guarantee that this obtains the platform’s internal rating or infer guilt directly from the form of an ordinary short URL or affiliate link.",
+      "check": {
+        "when": "The question or copy concerns: Can creators determine X’s `LOW_QUALITY` or BAD rating from a URL’s appearance?",
+        "needed": [
+          "The complete rules for generating URL ratings, their update times, misclassification mechanisms, and current values are not disclosed in these bots, and not all other malicious-URL rules are included here."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The complete rules for generating URL ratings, their update times, misclassification mechanisms, and current values are not disclosed in these bots, and not all other malicious-URL rules are included here."
+      ],
+      "source_units": [
+        "U0624",
+        "U0625",
+        "U0626"
+      ],
+      "evidence": [
+        {
+          "source_id": "S076",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[76] Public scope of safety rules and verification of the October 29 refactor.",
+          "links": [
+            {
+              "label": "Public defaults, experiment configuration, and unpublished prompts/partial bot rules",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L447"
+            },
+            {
+              "label": "Home and HomeRecommendations rules in the original version",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L96-L212"
+            },
+            {
+              "label": "Rule composition at the same entry points in the latest version",
+              "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/levels.rs#L195-L258"
+            },
+            {
+              "label": "Latest ClientSwitch and existing defaults",
+              "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/models/viewer.rs#L120-L143"
+            },
+            {
+              "label": "Latest insults conditions rewritten using ClientHas",
+              "url": "https://github.com/xai-org/x-algorithm/blob/606b254b45be798bfaecfa8c23f5a9c51bc8000c/visibility-filtering/rules/tweet_rules.rs#L162-L205"
+            }
+          ]
+        },
+        {
+          "source_id": "S073",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[73] Actual conditions of low-quality URL v1 and v2.",
+          "links": [
+            {
+              "label": "v1: not a reply or repost, and mentioned users do not follow the author",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower.bot#L2-L47"
+            },
+            {
+              "label": "v2 does not check mentions, only redirect chains and author conditions",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L2-L21"
+            },
+            {
+              "label": "Recommendation enforcement for the SPAM_HIGH_RECALL post label",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L933-L937"
+            },
+            {
+              "label": "This post rule is registered in HomeRecommendations",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L198-L212"
+            }
+          ]
+        },
+        {
+          "source_id": "S074",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[74] Seven-day account label for problematic pinned URLs.",
+          "links": [
+            {
+              "label": "Pinned after and before states, URL resolution, exemptions, and seven-day expiration",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/PinnedLowQualityOrBadUrl.bot#L2-L44"
+            },
+            {
+              "label": "SpamHighRecall account rule",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/author_rules.rs#L204-L208"
+            },
+            {
+              "label": "Recommendation entry point where the account rule executes",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L142-L164"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q40",
+      "title": "How many characters or repetitions cause content to enter a `COPYPASTA_SPAM` cluster?",
+      "kind": "unknown",
+      "conclusion": "The bot receives tweetIdCluster from specified general/reply/CJK scheduled jobs, then writes `COPYPASTA_SPAM` according to eligibility.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Explain that substantial amounts of highly similar content have a corresponding enforcement action; do not provide a “two repetitions guarantee a penalty” rule, a safe character count, or a synonym-rewriting formula for avoiding penalties.",
+      "check": {
+        "when": "The question or copy concerns: How many characters or repetitions cause content to enter a `COPYPASTA_SPAM` cluster?",
+        "needed": [
+          "The complete upstream queries that produce the cluster, similarity thresholds, time window, and repetition-count criteria are not shown in this public chain."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The complete upstream queries that produce the cluster, similarity thresholds, time window, and repetition-count criteria are not shown in this public chain."
+      ],
+      "source_units": [
+        "U0630",
+        "U0631",
+        "U0632"
+      ],
+      "evidence": [
+        {
+          "source_id": "S081",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[81] Processing duplicate-text clusters into COPYPASTA_SPAM.",
+          "links": [
+            {
+              "label": "General duplicate-text and CJK jobs, eligibility, and label writing",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextProd.bot#L2-L74"
+            },
+            {
+              "label": "Replies jobs, eligibility, and label writing",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/BBQDuplicateTextRepliesProd.bot#L2-L58"
+            },
+            {
+              "label": "The public repository does not include all spam rules",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L440-L447"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q42",
+      "title": "Which engagement call to action is certain to be engagement bait?",
+      "kind": "unknown",
+      "conclusion": "In the PTOS sink, baiting, farming, and card manipulation do not receive the high-PageRank/gray-badge exemption used here, but they still require model classification, a non-test account, and the applicable execution environment.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Identify the special treatment of the three write branches and provide editing examples in which questions serve the content; do not build a dictionary of phrases that guarantee a penalty or phrases that guarantee safety.",
+      "check": {
+        "when": "The question or copy concerns: Which engagement call to action is certain to be engagement bait?",
+        "needed": [
+          "The specific spam-classification prompts, contextual judgments, model performance, and causal experiments for different CTAs have not been disclosed."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The specific spam-classification prompts, contextual judgments, model performance, and causal experiments for different CTAs have not been disclosed."
+      ],
+      "source_units": [
+        "U0636",
+        "U0637",
+        "U0638"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[54] Engagement baiting, hashtag abuse, and normal hashtag features.",
+          "links": [
+            {
+              "label": "Prerequisite handling of test accounts, PageRank, and gray badges",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194"
+            },
+            {
+              "label": "Baiting, farming, card manipulation, and other spam branches",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248"
+            },
+            {
+              "label": "Named classes including SpamHashTagAbuse",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/state.py#L37-L46"
+            },
+            {
+              "label": "Safety writes execute only in PTOS production",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L48-L49"
+            },
+            {
+              "label": "Disabling conditions outside PTOS production",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/disable_rules.py#L6-L11"
+            },
+            {
+              "label": "Spam-classification prompt is not public",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prompts.py#L11-L31"
+            },
+            {
+              "label": "SimClusters entity extractor takes at most four hashtags",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/simclusters/simclusters_v2/summingbird/common/TweetEntityExtractor.scala#L14-L40"
+            },
+            {
+              "label": "Phoenix history data includes CLICK_HASHTAG",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L25-L36"
+            },
+            {
+              "label": "Feature list containing CLICK_HASHTAG",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/id_list_features.py#L108-L120"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q43",
+      "title": "Is the optimal number of hashtags zero, four, or some other fixed number?",
+      "kind": "unknown",
+      "conclusion": "There is a SpamHashTagAbuse category, a `CLICK_HASHTAG` historical feature, and a limit in one SimClusters extractor that takes only the first four hashtags.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Explain abuse risks and available features, interpreting four as a local data-selection limit; this does not prove that all hashtags have zero value or that penalties begin with the fifth.",
+      "check": {
+        "when": "The question or copy concerns: Is the optimal number of hashtags zero, four, or some other fixed number?",
+        "needed": [
+          "There is no complete account of usage and causal comparisons across all models and entry points for different hashtag counts, relevance levels, and topics; nor has a universal per-hashtag bonus or penalty formula been disclosed."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "There is no complete account of usage and causal comparisons across all models and entry points for different hashtag counts, relevance levels, and topics; nor has a universal per-hashtag bonus or penalty formula been disclosed."
+      ],
+      "source_units": [
+        "U0639",
+        "U0640",
+        "U0641"
+      ],
+      "evidence": [
+        {
+          "source_id": "S054",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[54] Engagement baiting, hashtag abuse, and normal hashtag features.",
+          "links": [
+            {
+              "label": "Prerequisite handling of test accounts, PageRank, and gray badges",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L175-L194"
+            },
+            {
+              "label": "Baiting, farming, card manipulation, and other spam branches",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L233-L248"
+            },
+            {
+              "label": "Named classes including SpamHashTagAbuse",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/state.py#L37-L46"
+            },
+            {
+              "label": "Safety writes execute only in PTOS production",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/task_write_safety_post_annotations_result_sink.py#L48-L49"
+            },
+            {
+              "label": "Disabling conditions outside PTOS production",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/disable_rules.py#L6-L11"
+            },
+            {
+              "label": "Spam-classification prompt is not public",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/ptos/prompts.py#L11-L31"
+            },
+            {
+              "label": "SimClusters entity extractor takes at most four hashtags",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/simclusters/simclusters_v2/summingbird/common/TweetEntityExtractor.scala#L14-L40"
+            },
+            {
+              "label": "Phoenix history data includes CLICK_HASHTAG",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L25-L36"
+            },
+            {
+              "label": "Feature list containing CLICK_HASHTAG",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/id_list_features.py#L108-L120"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q44",
+      "title": "How exactly do the full text of a long Post and the body of an Article enter the content representation?",
+      "kind": "unknown",
+      "conclusion": "The mapper passes post_metadata.text into full_text; Article metadata separately includes a title, cover, and media. V8.2 and V5 read these fields differently, as verified by local function checks.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Accurately describe the specified fields and processors; do not treat the name full_text as proof that the complete text of each format was obtained, or say that all models look only at the Article title.",
+      "check": {
+        "when": "The question or copy concerns: How exactly do the full text of a long Post and the body of an Article enter the content representation?",
+        "needed": [
+          "How the production content service populates the complete text of long Posts and the text of Posts carrying Articles, whether Article bodies enter models through other fields or services, and the actual consumers of the representations from different versions."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "How the production content service populates the complete text of long Posts and the text of Posts carrying Articles, whether Article bodies enter models through other fields or services, and the actual consumers of the representations from different versions."
+      ],
+      "source_units": [
+        "U0642",
+        "U0643",
+        "U0644"
+      ],
+      "evidence": [
+        {
+          "source_id": "S087",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[87] Article and NoteTweet identities, body-input fields, and upstream mappings.",
+          "links": [
+            {
+              "label": "Separate extraction of NoteTweet ID and Article ID",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java#L255-L263"
+            },
+            {
+              "label": "Dispatch conditions for the two object types",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java#L301-L311"
+            },
+            {
+              "label": "ArticleMetadata and Post fields",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/data_types.py#L637-L732"
+            },
+            {
+              "label": "Assigning post_metadata.text to full_text",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/post_mapper.py#L130-L174"
+            },
+            {
+              "label": "Article-title and media mapping",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/post_mapper.py#L273-L289"
+            },
+            {
+              "label": "External-content metadata retrieval entry point",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/strato_loader.py#L26-L56"
+            }
+          ]
+        },
+        {
+          "source_id": "S088",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[88] Differences between V5 and V8.2 content and media processing.",
+          "links": [
+            {
+              "label": "V5 reading order for Article covers, text, and media",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92"
+            },
+            {
+              "label": "V5 image budget and existing image data",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L107-L120"
+            },
+            {
+              "label": "V8.2 assembly of text, Article, and media",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L184"
+            },
+            {
+              "label": "V8.2 ordinary-media selection and Article title",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L320"
+            },
+            {
+              "label": "Passing V5 processing results to the embedding service",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder.py#L55-L90"
+            },
+            {
+              "label": "Media processing and vector generation in the V8.2 plan",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/plan_post_embedding_v82.py"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q45",
+      "title": "Do Article reading and long-Post expansion use the same labels and timing?",
+      "kind": "unknown",
+      "conclusion": "Clicks, show-more expansions, detail impressions, and detail dwell have different action values, and Article pages also have their own enums; training reads already-aggregated columns, without showing the complete client-to-label generation chain.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Do not treat the two reading entry points as having a verified common measurement definition, or translate the code threshold of 10 directly into “reading an Article for ten seconds earns a reward.”",
+      "check": {
+        "when": "The question or copy concerns: Do Article reading and long-Post expansion use the same labels and timing?",
+        "needed": [
+          "Timing start and stop, background processing, whether actions overlap, deduplication and attribution windows; the raw production units of CLICK_DWELL_TIME, and whether Article reading is counted in this slot."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Timing start and stop, background processing, whether actions overlap, deduplication and attribution windows; the raw production units of CLICK_DWELL_TIME, and whether Article reading is counted in this slot."
+      ],
+      "source_units": [
+        "U0645",
+        "U0646",
+        "U0647"
+      ],
+      "evidence": [
+        {
+          "source_id": "S090",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[90] Clicks, expansion, detail dwell, and Article page identifiers.",
+          "links": [
+            {
+              "label": "Action IDs for clicks, Show more expansion, and Recap dwell",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L443-L490"
+            },
+            {
+              "label": "IDs for detail impressions and detail dwell",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L513-L548"
+            },
+            {
+              "label": "Separate mappings for IsShowMoreExpanded and IsClicked",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/constants.py#L125-L163"
+            },
+            {
+              "label": "Show more expansion belongs to the historical interaction-event set",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L75-L98"
+            },
+            {
+              "label": "Separate slots for DWELL_TIME and CLICK_DWELL_TIME",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L684-L693"
+            },
+            {
+              "label": "Article page enumeration",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L1274-L1298"
+            }
+          ]
+        },
+        {
+          "source_id": "S091",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[91] Known paths and gaps from reading labels to training and serving.",
+          "links": [
+            {
+              "label": "Training reads existing action vectors and continuous values",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py#L810-L831"
+            },
+            {
+              "label": "Home Mixer fetches aggregated history from an external service",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/scoring_sequence_query_hydrator.rs#L92-L117"
+            },
+            {
+              "label": "The public repository lacks production data sources and internal telemetry",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md#L9-L21"
+            },
+            {
+              "label": "CLICK_DWELL_TIME binary-classification threshold 10",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783"
+            },
+            {
+              "label": "Labels use strictly greater than the threshold; output is probability",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L190-L212"
+            },
+            {
+              "label": "Binary outputs do not undergo continuous-value inverse scaling",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L532-L553"
+            },
+            {
+              "label": "Separate feature processing for historical dwell and click dwell",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_feature_prep.py#L945-L975"
+            }
+          ]
+        },
+        {
+          "source_id": "S098",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[98] Evidence for dwell-value units and upstream gaps for click dwell.",
+          "links": [
+            {
+              "label": "Proto path converts milliseconds to seconds only for DWELL_TIME",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/crates/serving/xai-recsys-engine/src/util.rs#L131-L149"
+            },
+            {
+              "label": "Arrow continuous values are copied unchanged, slot by slot",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/crates/serving/xai-recsys-engine/src/util.rs#L394-L404"
+            },
+            {
+              "label": "Training reads existing continuous-value columns",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py#L810-L831"
+            },
+            {
+              "label": "Click-dwell binary classification declares only the numeric threshold",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783"
+            },
+            {
+              "label": "Home's returned dwell_time is explicitly used for predicted_dwell_sec",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scored_posts_server.rs#L143-L148"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q46",
+      "title": "Can changing the same content to an Article increase exposure because of the format?",
+      "kind": "unknown",
+      "conclusion": "The scoring functions examined contain no fixed Article multiplier; creator samples have observed higher Article view counts, but their main comparisons were with Posts directing readers to the Articles.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "The product structure can support publishing choices, and observational samples can suggest directions for experiments; neither is sufficient to promise an exposure multiplier from changing the format of the same draft.",
+      "check": {
+        "when": "The question or copy concerns: Can changing the same content to an Article increase exposure because of the format?",
+        "needed": [
+          "Direct comparisons controlling for content, audience, publication time, promotional effort, and observation window, or platform-published format experiment results."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Direct comparisons controlling for content, audience, publication time, promotional effort, and observation window, or platform-published format experiment results."
+      ],
+      "source_units": [
+        "U0648",
+        "U0649",
+        "U0650"
+      ],
+      "evidence": [
+        {
+          "source_id": "S094",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[94] Scope of checks for candidate sources, format fields, and final prediction combination.",
+          "links": [
+            {
+              "label": "Public Phoenix candidate sources",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L345-L381"
+            },
+            {
+              "label": "Processing order after scoring and selection",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L446-L508"
+            },
+            {
+              "label": "FairShare groups by candidate source",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L44-L65"
+            },
+            {
+              "label": "Candidate input fields for the final value model",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L1-L22"
+            },
+            {
+              "label": "Prediction scores have no separate Article-completion or Show more term",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs#L1-L31"
+            },
+            {
+              "label": "Engagement-prediction combination function",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143"
+            }
+          ]
+        },
+        {
+          "source_id": "S096",
+          "link_indices": [
+            0
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[96] August 2026 observational sample of Article views, not a format experiment using the same text.",
+          "links": [
+            {
+              "label": "The original NotPeople author's sample, statistics table, and promotional-investment explanation",
+              "url": "https://notpeople.ai/blog/how-to-make-money-on-x-2026"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q47",
+      "title": "Which live traffic is covered by Article media fetching and the different content processors?",
+      "kind": "unknown",
+      "conclusion": "V5 and V8.2 directly read different media fields, and MediaLoader’s Article-media branch also has conditions such as is_high_fav. The relevant processor logic is identical in the two fixed commits.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "64 is a parameter from one observed media-fetching path, not an Article recommendation eligibility threshold or a threshold for guaranteed exposure.",
+      "check": {
+        "when": "The question or copy concerns: Which live traffic is covered by Article media fetching and the different content processors?",
+        "needed": [
+          "Whether upstream services have already populated the media or copied it into other fields, which representation different models and indexes actually consume, and the actual feature switches and coverage proportions."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Whether upstream services have already populated the media or copied it into other fields, which representation different models and indexes actually consume, and the actual feature switches and coverage proportions."
+      ],
+      "source_units": [
+        "U0651",
+        "U0652",
+        "U0653"
+      ],
+      "evidence": [
+        {
+          "source_id": "S088",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[88] Differences between V5 and V8.2 content and media processing.",
+          "links": [
+            {
+              "label": "V5 reading order for Article covers, text, and media",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92"
+            },
+            {
+              "label": "V5 image budget and existing image data",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L107-L120"
+            },
+            {
+              "label": "V8.2 assembly of text, Article, and media",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L184"
+            },
+            {
+              "label": "V8.2 ordinary-media selection and Article title",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L320"
+            },
+            {
+              "label": "Passing V5 processing results to the embedding service",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder.py#L55-L90"
+            },
+            {
+              "label": "Media processing and vector generation in the V8.2 plan",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/plan_post_embedding_v82.py"
+            }
+          ]
+        },
+        {
+          "source_id": "S089",
+          "link_indices": [
+            0,
+            1,
+            2
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[89] Upstream conditions for retrieving Article media.",
+          "links": [
+            {
+              "label": "is_high_fav and selection of posts to process",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/media_loader.py#L130-L170"
+            },
+            {
+              "label": "Article-cover and embedded-media retrieval branches",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/core/data_loaders/media_loader.py#L293-L303"
+            },
+            {
+              "label": "Public default media-retrieval threshold 64",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/config/config.py#L104-L120"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    },
+    {
+      "id": "Q49",
+      "title": "Can the Article metrics visible to creators represent completed reads or the model’s reading labels?",
+      "kind": "unknown",
+      "conclusion": "Public Post views allow repeated views and the author’s own views; the help pages examined do not define Article reading metrics sufficiently to map them to internal training labels.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Record each genuinely visible field separately and leave missing values empty; do not substitute view counts, bookmarks, or internal dwell names for the number of readers who finished.",
+      "check": {
+        "when": "The question or copy concerns: Can the Article metrics visible to creators represent completed reads or the model’s reading labels?",
+        "needed": [
+          "The open, reading, duration, and completion fields actually available to the account, and their denominators, deduplication, timing, statistical windows, and backend measurement definitions."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "The open, reading, duration, and completion fields actually available to the account, and their denominators, deduplication, timing, statistical windows, and backend measurement definitions."
+      ],
+      "source_units": [
+        "U0657",
+        "U0658",
+        "U0659"
+      ],
+      "evidence": [
+        {
+          "source_id": "S059",
+          "link_indices": [
+            0
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[59] Official definition of public view counts.",
+          "links": [
+            {
+              "label": "X View counts",
+              "url": "https://help.x.com/en/using-x/view-counts"
+            }
+          ]
+        },
+        {
+          "source_id": "S091",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[91] Known paths and gaps from reading labels to training and serving.",
+          "links": [
+            {
+              "label": "Training reads existing action vectors and continuous values",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py#L810-L831"
+            },
+            {
+              "label": "Home Mixer fetches aggregated history from an external service",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/scoring_sequence_query_hydrator.rs#L92-L117"
+            },
+            {
+              "label": "The public repository lacks production data sources and internal telemetry",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md#L9-L21"
+            },
+            {
+              "label": "CLICK_DWELL_TIME binary-classification threshold 10",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/configs/xrecsys.py#L776-L783"
+            },
+            {
+              "label": "Labels use strictly greater than the threshold; output is probability",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/loss_recsys.py#L190-L212"
+            },
+            {
+              "label": "Binary outputs do not undergo continuous-value inverse scaling",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_model.py#L532-L553"
+            },
+            {
+              "label": "Separate feature processing for historical dwell and click dwell",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/models/recsys_feature_prep.py#L945-L975"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    }
+  ]
+}

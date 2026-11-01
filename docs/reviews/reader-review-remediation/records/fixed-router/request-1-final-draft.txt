@@ -1,0 +1,7 @@
+Waiting for a build means waiting to see whether your code changes work.
+
+To find the median build time, arrange all measured build times from fastest to slowest and take the middle time. If there are two middle times, add them and divide by two. As an illustration, not a test result, build times of 5, 10 and 15 minutes have a median of 10 minutes because 10 is the middle value. In our tests, the median build time fell from 20 minutes to 10 minutes.
+
+Our tool saves the output of each completed build step. When a step's inputs have not changed, the tool reuses its saved output instead of running that step again. Skipping unchanged steps reduces the work needed to finish a build, so developers wait less before checking their changes.
+
+If your builds repeatedly perform steps whose inputs have not changed, try the tool on a test project and compare build times before adopting it.

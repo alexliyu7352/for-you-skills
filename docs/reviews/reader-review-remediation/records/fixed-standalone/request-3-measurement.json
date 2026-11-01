@@ -1,0 +1,17 @@
+{
+  "source_snapshot": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+  "text": {
+    "raw_characters": 185,
+    "raw_preview_4000": "Save your shopping list on your phone before leaving home. At the shop, open the saved list to check what you need. Having the list with you saves a return trip when you forget an item.",
+    "characters": 185,
+    "preview_4000": "Save your shopping list on your phone before leaving home. At the shop, open the saved list to check what you need. Having the list with you saves a return trip when you forget an item.",
+    "after_4000_characters": 0,
+    "article_title_preview_200": "",
+    "normalization": "characters and preview_4000 trim leading/trailing whitespace; raw_characters and raw_preview_4000 preserve the supplied string. Counts are Unicode code points, not grapheme clusters or X weighted-length units.",
+    "scope": "Editorial preview of supplied strings, not reconstructed production renderer input; not a publishing limit."
+  },
+  "video_index_partial_check": {
+    "status": "unknown",
+    "reason": "No media metadata supplied."
+  }
+}

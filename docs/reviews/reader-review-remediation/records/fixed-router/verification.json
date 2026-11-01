@@ -1,0 +1,24 @@
+[
+  {
+    "request": 1,
+    "final_matches_reviewed": true,
+    "unicode_code_points": 888
+  },
+  {
+    "request": 3,
+    "final_matches_reviewed": true,
+    "unicode_code_points": 185
+  },
+  {
+    "dispatches": 3,
+    "packet_match": "Exact dispatch message text, including terminal newline state",
+    "fresh_context_for_all": true,
+    "model_identifier_exposed": false
+  },
+  {
+    "request": 2,
+    "reader_status": "not_applicable",
+    "rounds": 0,
+    "scope_separate": true
+  }
+]

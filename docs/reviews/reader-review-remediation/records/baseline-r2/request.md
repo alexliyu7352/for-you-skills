@@ -1,0 +1,1 @@
+Use the standalone x-publish-checklist at /workspace/scratch/8875c799c753/reader-review-probes/baseline-r2/skill/SKILL.md. Review my publishing plan: an Article on Tuesday, an introductory Post on Wednesday, and three charts. The copy is not written yet. This is a full review of the plan. You have no account analytics or additional copy; work with what is supplied.

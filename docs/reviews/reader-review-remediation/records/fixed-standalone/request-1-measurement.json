@@ -1,0 +1,17 @@
+{
+  "source_snapshot": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+  "text": {
+    "raw_characters": 793,
+    "raw_preview_4000": "Waiting for a build means waiting to see whether your code changes work. In our tests, the median build time fell from 20 minutes to 10 minutes. The median is the middle time when all measured build times are arranged from fastest to slowest. For illustration only, build times of 5, 10 and 15 minutes have a median of 10 minutes because 10 is the middle time. Our tool saves the output of each completed build step. When a step's inputs have not changed, the tool reuses its saved output instead of running that step again. Skipping unchanged steps reduces the work needed to finish a build, so developers wait less before checking their changes. If your builds repeatedly perform steps whose inputs have not changed, try the tool on a test project and compare build times before adopting it.",
+    "characters": 793,
+    "preview_4000": "Waiting for a build means waiting to see whether your code changes work. In our tests, the median build time fell from 20 minutes to 10 minutes. The median is the middle time when all measured build times are arranged from fastest to slowest. For illustration only, build times of 5, 10 and 15 minutes have a median of 10 minutes because 10 is the middle time. Our tool saves the output of each completed build step. When a step's inputs have not changed, the tool reuses its saved output instead of running that step again. Skipping unchanged steps reduces the work needed to finish a build, so developers wait less before checking their changes. If your builds repeatedly perform steps whose inputs have not changed, try the tool on a test project and compare build times before adopting it.",
+    "after_4000_characters": 0,
+    "article_title_preview_200": "",
+    "normalization": "characters and preview_4000 trim leading/trailing whitespace; raw_characters and raw_preview_4000 preserve the supplied string. Counts are Unicode code points, not grapheme clusters or X weighted-length units.",
+    "scope": "Editorial preview of supplied strings, not reconstructed production renderer input; not a publishing limit."
+  },
+  "video_index_partial_check": {
+    "status": "unknown",
+    "reason": "No media metadata supplied."
+  }
+}

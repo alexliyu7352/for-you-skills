@@ -1,0 +1,32 @@
+[
+  {
+    "actual_call": {
+      "task_name": "request1_round1",
+      "fork_turns": "none",
+      "message": "You are a fresh cold reader. Read only /workspace/scratch/8875c799c753/reader-review-probes/fixed-standalone/request-1-round-1-prompt.md and evaluate its exact draft using its complete protocol and rubric. Do not read any other files. Evaluate only; do not rewrite, route to another skill, or delegate. Return the requested complete evaluation verbatim in your final answer."
+    },
+    "returned_task_name": "/root/fixed_standalone_requests/request1_round1",
+    "actual_model_identifier": null,
+    "model_note": "An actual model identifier was not exposed in the spawn call or result; no model override was supplied."
+  },
+  {
+    "actual_call": {
+      "task_name": "request1_round2",
+      "fork_turns": "none",
+      "message": "You are a fresh cold reader. Read only /workspace/scratch/8875c799c753/reader-review-probes/fixed-standalone/request-1-round-2-prompt.md and evaluate its exact draft using its complete protocol and rubric. Do not read any other files. Evaluate only; do not rewrite, route to another skill, or delegate. Return the requested complete evaluation verbatim in your final answer."
+    },
+    "returned_task_name": "/root/fixed_standalone_requests/request1_round2",
+    "actual_model_identifier": null,
+    "model_note": "An actual model identifier was not exposed in the spawn call or result; no model override was supplied."
+  },
+  {
+    "actual_call": {
+      "task_name": "request3_round1",
+      "fork_turns": "none",
+      "message": "You are a fresh cold reader. Read only /workspace/scratch/8875c799c753/reader-review-probes/fixed-standalone/request-3-round-1-prompt.md and evaluate its exact draft using its complete protocol and rubric. Do not read any other files. Evaluate only; do not rewrite, route to another skill, or delegate. Return the requested complete evaluation verbatim in your final answer."
+    },
+    "returned_task_name": "/root/fixed_standalone_requests/request3_round1",
+    "actual_model_identifier": null,
+    "model_note": "An actual model identifier was not exposed in the spawn call or result; no model override was supplied."
+  }
+]

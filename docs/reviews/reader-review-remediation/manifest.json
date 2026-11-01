@@ -1,0 +1,286 @@
+{
+  "baseline_commit": "1b6a8224ded9c25def1a86c97e58b0d2d07b4729",
+  "tested_workflow": "workflows/x-publish-checklist.md",
+  "tested_workflow_sha256": "7e8786f9a1321ce1c78756d6b6c970b9d32a00d87a030e5499e92bfcc6fe8d93",
+  "runtime": "Python 3.12.14; ChatGPT Work tool environment",
+  "coordinator_context": "fork_turns=none; skill/task inputs only; no expected verdicts supplied",
+  "model_identifier": null,
+  "model_identifier_note": "Host did not expose an actual model identifier. Default inherited model; no name inferred.",
+  "records": [
+    {
+      "path": "records/baseline-r1/request.md",
+      "bytes": 1519,
+      "sha256": "684eb20e3f37dcf365ef2d1639e3d5f240d37edf312c85335381c5877d5515af"
+    },
+    {
+      "path": "records/baseline-r1/response.md",
+      "bytes": 34,
+      "sha256": "14124158bd1eea7485f2c233c66ad690ea983e78931ab1d12c3f8a57b8c02a50"
+    },
+    {
+      "path": "records/baseline-r2/request.md",
+      "bytes": 368,
+      "sha256": "8b39133877b82db86ef8bf6a41115282f194ff259acfedfa8ad4e8bc671fd3c4"
+    },
+    {
+      "path": "records/baseline-r2/response.md",
+      "bytes": 10722,
+      "sha256": "3d214ab887d9643d8e592565e84ba00cc7d39b6c906b483583773e2799e10877"
+    },
+    {
+      "path": "records/baseline-tests.log",
+      "bytes": 180,
+      "sha256": "b4b95e53db86924e8cf8c50de2d1d8e6389dc1c17b1df280988c6cca25b40cf2"
+    },
+    {
+      "path": "records/fixed-boundaries/request-1-response.md",
+      "bytes": 2013,
+      "sha256": "3d8b1ddd10b665c9f982cac103ff8d025c9ad9681bf6448abceaf3e6d6637099"
+    },
+    {
+      "path": "records/fixed-boundaries/request-2-response.md",
+      "bytes": 3022,
+      "sha256": "090be1b0a3ebffe9be1a98f3a03ad96907708848738c3479ed401525da96c1e6"
+    },
+    {
+      "path": "records/fixed-boundaries/request-3-response.md",
+      "bytes": 2631,
+      "sha256": "41fcc15cf7f2558c217b2b4d99d915e82e3fcb70fb8eeaf538b531dd1dd48227"
+    },
+    {
+      "path": "records/fixed-boundaries/request-4-response.md",
+      "bytes": 891,
+      "sha256": "4e5ab4031db8c18b10278e521dd3d75eeb5b7151d4b4b8e133383af9e899d36d"
+    },
+    {
+      "path": "records/fixed-boundaries/request-5-response.md",
+      "bytes": 2267,
+      "sha256": "c46123a1ce2db3e4b38cdbdff2d9719e7f3bfe59a51294d98b904c2bbeb86e52"
+    },
+    {
+      "path": "records/fixed-boundaries/request-6-response.md",
+      "bytes": 1949,
+      "sha256": "77cfed6605922dcabd54d61d99078a1c3f451c8c1e72d8a1e596799f2ac2498e"
+    },
+    {
+      "path": "records/fixed-boundaries/request.md",
+      "bytes": 2989,
+      "sha256": "aca10e43f831cdee09ce167642b8800c01e8a2a7deafeb36679b719f10efc978"
+    },
+    {
+      "path": "records/fixed-router/dispatches.json",
+      "bytes": 14944,
+      "sha256": "4d3ccc646c23dd20362f5f4e0fd3a83e06eee2dc8f94d53dd71c384f28454bce"
+    },
+    {
+      "path": "records/fixed-router/reader-protocol.txt",
+      "bytes": 2873,
+      "sha256": "c9d9997022b95d816972334f93cdf7e9ac90c51f2ed6dde1975ad194db0c5406"
+    },
+    {
+      "path": "records/fixed-router/request-1-author-read.md",
+      "bytes": 704,
+      "sha256": "33944dbb13d48ff99f87b2607f28fef6d3f59721663e2c145b4ac5d165c1b639"
+    },
+    {
+      "path": "records/fixed-router/request-1-final-draft.txt",
+      "bytes": 888,
+      "sha256": "1042d88622e885af9543af0835bf06411dee64ac154b1399ab43cfe9e3f441dd"
+    },
+    {
+      "path": "records/fixed-router/request-1-original.txt",
+      "bytes": 675,
+      "sha256": "c188c123f24bef81b1353d4227cd6c7cb5201e9cd405722acd2aa9caedd29289"
+    },
+    {
+      "path": "records/fixed-router/request-1-response.md",
+      "bytes": 2389,
+      "sha256": "3c5aa60caf8ba35dc7c3aa6cb4182ecc292058e0d74d6f30db412c4d79c21e74"
+    },
+    {
+      "path": "records/fixed-router/request-1-round-1-prompt.md",
+      "bytes": 4785,
+      "sha256": "1bfc72ae6458438563a55d2f0b72b2b65b6c99290eee8aa3d46b283f4a21b443"
+    },
+    {
+      "path": "records/fixed-router/request-1-round-1-response.md",
+      "bytes": 1457,
+      "sha256": "004ce7b3ea098f96d023ac3075e148e85b0e994a6a50e6247fec85a6e6c00624"
+    },
+    {
+      "path": "records/fixed-router/request-1-round-2-prompt.md",
+      "bytes": 4998,
+      "sha256": "63c06510555a4deab41ad7e05043f7049200c26b446a877899470f566d442b03"
+    },
+    {
+      "path": "records/fixed-router/request-1-round-2-response.md",
+      "bytes": 1077,
+      "sha256": "716ca06b835ee1e481e5c93f4856dd94a6e20ba61511911adff9bc7621cf21c1"
+    },
+    {
+      "path": "records/fixed-router/request-2-response.md",
+      "bytes": 13399,
+      "sha256": "7f3800b04e09bd75ce06b883b61f19ef0782a6e92febb17c006bee4404d2eba1"
+    },
+    {
+      "path": "records/fixed-router/request-2-working-record.json",
+      "bytes": 1846,
+      "sha256": "07fc9a1389b839cbfeef1c9156edfc81c282cd82e260b123c92fc7492ac2080f"
+    },
+    {
+      "path": "records/fixed-router/request-3-author-read.md",
+      "bytes": 448,
+      "sha256": "6b570c847e392ac41960b6380c6a10fd332145ea78a53be6fae2a90152bf89fe"
+    },
+    {
+      "path": "records/fixed-router/request-3-final-draft.txt",
+      "bytes": 185,
+      "sha256": "f2b0afaccd6ec817f337d21e64464dd231c23c1678a0143e7ee34164f269a52c"
+    },
+    {
+      "path": "records/fixed-router/request-3-response.md",
+      "bytes": 1070,
+      "sha256": "7037a311d8b01051224d5f95a828eb4bf9870fd4621e1e18b71df2829919a6a5"
+    },
+    {
+      "path": "records/fixed-router/request-3-round-1-prompt.md",
+      "bytes": 3953,
+      "sha256": "81fca86c8212a5265f18068f1d2ab9c22480ace23fde81c4ab4af0517158335e"
+    },
+    {
+      "path": "records/fixed-router/request-3-round-1-response.md",
+      "bytes": 560,
+      "sha256": "f441fc68a9bf989f0f6b83eb5f5a20916e34d7b32a3e7cd2a7afaee37834b663"
+    },
+    {
+      "path": "records/fixed-router/request.md",
+      "bytes": 2413,
+      "sha256": "9cc892c744ab05af0302aacf6c9dae6a6553d01c8ff17b0bc8d4bb1dd7417845"
+    },
+    {
+      "path": "records/fixed-router/verification.json",
+      "bytes": 489,
+      "sha256": "c120ade72ddb7fed68f8a89508fe5a44b20e1c785e3e673f2351a03ec1204bfe"
+    },
+    {
+      "path": "records/fixed-standalone/dispatches.json",
+      "bytes": 2208,
+      "sha256": "2f8bde365879044f67d7251b65e9d29f16905aab7e4d938612436880a97646e0"
+    },
+    {
+      "path": "records/fixed-standalone/request-1-draft-final.txt",
+      "bytes": 793,
+      "sha256": "2e40d25185eec238dd8d9ec9a92d4f8112213f8f452937e2cc0a05348e912a8e"
+    },
+    {
+      "path": "records/fixed-standalone/request-1-draft-original.txt",
+      "bytes": 675,
+      "sha256": "c188c123f24bef81b1353d4227cd6c7cb5201e9cd405722acd2aa9caedd29289"
+    },
+    {
+      "path": "records/fixed-standalone/request-1-initial-read.md",
+      "bytes": 1314,
+      "sha256": "82b39f69b5b4cc1a984e520d93bca9c2568a3bc6138686be7f20c9e4b81be53a"
+    },
+    {
+      "path": "records/fixed-standalone/request-1-measurement.json",
+      "bytes": 2306,
+      "sha256": "9a801358bac93c6bf3d2b670b31e3541c8ee8fa6036bd77084e590084ed3f699"
+    },
+    {
+      "path": "records/fixed-standalone/request-1-response.md",
+      "bytes": 2460,
+      "sha256": "db573d2f1c87c9f809f9af3eba1886194f068bc4a3afd6e230fcf2a11dab8d30"
+    },
+    {
+      "path": "records/fixed-standalone/request-1-round-1-prompt.md",
+      "bytes": 5189,
+      "sha256": "3807d20b4a9f978002d29db4fbd8e1a63c6ce515c2ca6cfa501eb1fbeefcae61"
+    },
+    {
+      "path": "records/fixed-standalone/request-1-round-1-response.md",
+      "bytes": 1713,
+      "sha256": "a1da4d92c462c9639a9e2663ad6ae65fcf9409e8e5a9101369b36beef838566c"
+    },
+    {
+      "path": "records/fixed-standalone/request-1-round-2-prompt.md",
+      "bytes": 5307,
+      "sha256": "9f7ac3ed109b490457e2b1500445901c2179b70ea286884f1186492c0376cdbb"
+    },
+    {
+      "path": "records/fixed-standalone/request-1-round-2-response.md",
+      "bytes": 1219,
+      "sha256": "1d678ac7bcc52f778a47ace5a1e3fc671dcd8ce9743f9dbebc4317ce7f8558cc"
+    },
+    {
+      "path": "records/fixed-standalone/request-2-evidence-entries.json",
+      "bytes": 188604,
+      "sha256": "57578a7c8f00bf1c401f069e0455181119674e43fcfdd994ebc3b9379e49a33b"
+    },
+    {
+      "path": "records/fixed-standalone/request-2-evidence-record.md",
+      "bytes": 25105,
+      "sha256": "cc14a843fe0f5b030e360cffe4636516e2d4f1083d1fea9a2f78222e92c67657"
+    },
+    {
+      "path": "records/fixed-standalone/request-2-reader-record.json",
+      "bytes": 228,
+      "sha256": "1523a7065c8677fbf79b874c3e278fdf0cf4e61f2f63a9a6799ac7df4f675c60"
+    },
+    {
+      "path": "records/fixed-standalone/request-2-response.md",
+      "bytes": 10326,
+      "sha256": "f7ecb36e53beac122aa8075046f43dc244062d3e17560ed1946795a462c68ba4"
+    },
+    {
+      "path": "records/fixed-standalone/request-2-visual-brief.json",
+      "bytes": 2505,
+      "sha256": "72c0eb42e5280843397342a51e5b6dbe735ab79224e4164dc423371c50d2fd27"
+    },
+    {
+      "path": "records/fixed-standalone/request-3-draft-final.txt",
+      "bytes": 185,
+      "sha256": "f2b0afaccd6ec817f337d21e64464dd231c23c1678a0143e7ee34164f269a52c"
+    },
+    {
+      "path": "records/fixed-standalone/request-3-draft-original.txt",
+      "bytes": 185,
+      "sha256": "f2b0afaccd6ec817f337d21e64464dd231c23c1678a0143e7ee34164f269a52c"
+    },
+    {
+      "path": "records/fixed-standalone/request-3-initial-read.md",
+      "bytes": 892,
+      "sha256": "36f703b5e73ff6447d5dbf849474d2b8cb879aa6f4c1a6292f5660dce3a37e70"
+    },
+    {
+      "path": "records/fixed-standalone/request-3-measurement.json",
+      "bytes": 1090,
+      "sha256": "6a65307ccf5866bc115709c65facdf2dfe5233eb5d3c30b55e5435dd0b76e7b6"
+    },
+    {
+      "path": "records/fixed-standalone/request-3-response.md",
+      "bytes": 1077,
+      "sha256": "ecc241d643ff620a1ebcb163caf33f140fac71ca651a1f59dd15c8fe6fa85041"
+    },
+    {
+      "path": "records/fixed-standalone/request-3-round-1-prompt.md",
+      "bytes": 4459,
+      "sha256": "0a3041e0b24f8a032cfcf982526cd068554e8a47dcc3bf0bacb2bfca911e4066"
+    },
+    {
+      "path": "records/fixed-standalone/request-3-round-1-response.md",
+      "bytes": 836,
+      "sha256": "e3dbcfea8a1f70ebb75a289eb6fbfbd8811e126e293967e520d4248daf453632"
+    },
+    {
+      "path": "records/fixed-standalone/request.md",
+      "bytes": 2425,
+      "sha256": "46ea1e1a71af57613f3c2de842a34c8e6b1f5132b417af36c2afe178d73c5246"
+    },
+    {
+      "path": "records/fixed-tests.log",
+      "bytes": 180,
+      "sha256": "d59861e4b0eb3b5ad0d6328b6dd44a1d0027e324a6647811ec60dd3b1cf505f7"
+    }
+  ]
+}

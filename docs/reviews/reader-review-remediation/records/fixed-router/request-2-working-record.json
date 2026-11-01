@@ -1,0 +1,62 @@
+{
+  "goal": "Full review of the supplied Article/Post/three-chart publishing plan",
+  "scope": "Plan only; no copy, assets, account analytics or outside sources",
+  "routed_by": "x-assistant",
+  "completed_steps": [
+    "Screened all seven topic catalogs",
+    "Read applicable entries and related unknowns",
+    "Reviewed available publishing arrangements",
+    "Recorded media brief and source gaps",
+    "Completed no-copy reader-review disposition"
+  ],
+  "selected_format": {
+    "article": "Tuesday",
+    "introductory_post": "Wednesday"
+  },
+  "artifacts": [
+    "request-2-response.md"
+  ],
+  "observations": [
+    "No draft text",
+    "No chart files or source data",
+    "No audience or analytics supplied"
+  ],
+  "open_questions": [
+    "Topic and intended audience",
+    "Evidence and chart source data",
+    "Actual timing and time zone",
+    "Actual URLs and access requirements"
+  ],
+  "visual_brief": {
+    "draft_or_topic": "Unspecified Article topic",
+    "selected_format": "Article and introductory Post",
+    "audience": "Unspecified",
+    "images": [
+      {
+        "order": 1,
+        "purpose": "Main supported finding and key conditions",
+        "sources": "Missing real values, metric, comparator, period and sample"
+      },
+      {
+        "order": 2,
+        "purpose": "Supporting condition/group breakdown",
+        "sources": "Missing real breakdown data"
+      },
+      {
+        "order": 3,
+        "purpose": "Measured limits, variation or tradeoff",
+        "sources": "Missing data; reduce count if unsupported"
+      }
+    ],
+    "existing_assets": [],
+    "profile_scope": null,
+    "style_decision": "Not started; review only"
+  },
+  "reader_review": {
+    "mode": "none",
+    "status": "not_applicable",
+    "rounds": 0,
+    "reviewed_scope": "Publishing plan only",
+    "reason": "no draft text"
+  }
+}
