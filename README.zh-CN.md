@@ -140,7 +140,7 @@ npx skills add alexliyu7352/for-you-skills --skill x-publish-checklist -a openco
 <details>
 <summary><strong>维护与验证</strong></summary>
 
-维护源文件位于 `workflows/`、`shared/`、`knowledge/`、`routing.json`、`metadata/` 和 `tools/`。`skills/` 是生成后的可安装目录。修改源文件后运行：
+维护源文件位于 `workflows/`、`shared/`、`knowledge/`、`routing.json`、`metadata/` 和 `tools/`。`skills/` 是生成后的可安装目录。工作流源文件中的链接按安装后的目录编写，在 GitHub 的 `workflows/` 下直接点击可能返回 404；阅读时请从[工作流索引](workflows/README.md)进入对应的生成版本，其中的链接可以正常访问。修改源文件后运行：
 
 ```bash
 python3 tools/build.py

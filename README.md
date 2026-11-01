@@ -140,7 +140,7 @@ The package does not calculate a proprietary exposure score or guarantee distrib
 <details>
 <summary><strong>Maintain the package</strong></summary>
 
-Canonical sources are `workflows/`, `shared/`, `knowledge/`, `routing.json`, `metadata/` and `tools/`. The `skills/` directory is generated distribution output. Edit canonical files, then run:
+Canonical sources are `workflows/`, `shared/`, `knowledge/`, `routing.json`, `metadata/` and `tools/`. The `skills/` directory is generated distribution output. Workflow source links use the installed skill's directory layout and may return 404 when followed from `workflows/` on GitHub; use the [workflow index and generated copies](workflows/README.md) to browse working links. Edit canonical files, then run:
 
 ```bash
 python3 tools/build.py
