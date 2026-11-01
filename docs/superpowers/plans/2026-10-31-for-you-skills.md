@@ -50,4 +50,5 @@ Files: docs/validation/results.md, CHANGELOG.md.
 - [x] Review all outputs from fresh-context application probes and fix failures.
 - [x] Independent repository review; run full test suite after fixes.
 - [x] Verify installer discovery/installation where supported; label unavailable runtimes honestly.
-- [ ] Publish verified repository; install/update all seven personal skills and verify saved paths.
+- [x] Install/update all seven personal skills and verify saved paths.
+- [x] Verify published repository and remote installation.

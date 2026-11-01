@@ -1,13 +1,13 @@
 # Validation results
 
-Initial release validation: 2026-10-31. These checks establish packaging, evidence integrity and observed task behavior; they do not measure exposure improvement.
+Initial release validation: 2026-10-31; publication and cross-platform follow-up: 2026-11-01. These checks establish packaging, evidence integrity and observed task behavior; they do not measure exposure improvement.
 
 ## Automated checks
 
 - `python3 tools/validate.py`: passed. 578 English entries, 49 unresolved questions, 668/668 substantive source units, 100/100 reference groups and 396 unique URLs. No missing IDs, reference-index errors, untranslated knowledge prose or local-reference failures.
 - Immutable migration mapping: claim IDs/kinds, source-unit references, related unknowns, original source URLs and link order preserved. Original report SHA-256 verified.
 - `python3 tools/build.py --check`: passed for all seven generated skills.
-- `python3 -m unittest discover -s tests -v`: **30 tests passed**. Includes exact citation resolution, invalid references, English/Chinese retrieval, independent skill copies, build drift, raw/trimmed Unicode counts, strict video-duration predicate, unknown media, approximate metrics, Article/carrier identity, timestamp validity, URL-less observations and same-snapshot duplicate handling.
+- `python3 -m unittest discover -s tests -v`: **32 tests passed**. Includes exact citation resolution, invalid references, English/Chinese retrieval, independent skill copies, build drift, raw/trimmed Unicode counts, strict video-duration predicate, unknown media, approximate metrics, Article/carrier identity, timestamp validity, URL-less observations, same-snapshot duplicate handling, non-UTF-8 default file encoding and UTF-8 JSON output under a legacy console encoding.
 - Each skill passed the skill-creator frontmatter validator.
 - Each skill was copied alone to a temporary directory and successfully ran offline `audit`, `get` and `search` from an unrelated working directory.
 
@@ -15,9 +15,15 @@ Initial release validation: 2026-10-31. These checks establish packaging, eviden
 
 Test environment: Linux, Node.js 24.22.1, Skills CLI 1.7.4, Python 3.12.
 
-The real Skills CLI installed all seven skills with `--copy` to the six selected project targets: **Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and OpenCode**. Its JSON results reported every skill installed for all six targets. The installer uses a shared `.agents/skills` location for several targets and a separate Claude directory; these are not six model executions.
+The real Skills CLI installed all seven skills from both the local repository and the published `alexliyu7352/for-you-skills` GitHub source with `--copy` to the six selected project targets: **Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and OpenCode**. Its JSON results reported every skill installed for all six targets. The installer uses a shared `.agents/skills` location for several targets and a separate Claude directory; these are not six model executions.
 
 The initial discovery command combined `--list` and `--json`, which this CLI rejects. The successful noninteractive installation used `--skill '*' -a claude-code codex gemini-cli cursor github-copilot opencode --copy -y --json`. No unrelated global agent installation was changed.
+
+Every skill installed from GitHub also passed its offline evidence audit from an unrelated working directory. After the encoding fix, GitHub installation was repeated for all six targets; all 133 distributed files matched the canonical source byte for byte.
+
+## Personal installation
+
+All seven skills were saved and verified in the requesting user's skill environment, including the final UTF-8 helpers. The previous `x-review-draft` entry was updated to `x-publish-checklist`; `x-review-posts` was updated in place. Persisted workflow, reference and script content matched the distribution; host-managed optional UI metadata was checked semantically.
 
 ## Agent task probes
 
@@ -49,10 +55,15 @@ The previous two-skill baseline showed overlapping general-Q&A entry description
 
 An independent reviewer ran the automated suite and checked architecture, workflow boundaries and nine numeric/scope-sensitive translations against the original entries. The reviewer did not independently reread all 578 translations. The identified data-loss defect and portability/measurement points were addressed as above.
 
+## Cross-platform publication checks
+
+The first GitHub Actions run passed both Linux jobs (Python 3.9 and 3.12) and failed the Windows Python 3.12 validation step. A local regression reproduced implicit file decoding failure under CP1252; another reproduced Chinese JSON output failure under a legacy console encoding for all three helpers. Repository text reads now request UTF-8, helpers emit UTF-8 JSON, and `.gitattributes` preserves LF bytes for provenance hashes and generated files. Both regressions pass. A fresh clone with `core.autocrlf=true` passed the full integrity and generated-file checks.
+
+The corrected [GitHub Actions run](https://github.com/alexliyu7352/for-you-skills/actions/runs/41255040736) at commit `d3a217603e47f8a8153cceac90f8312e543cbac0` passed all three jobs: Ubuntu with Python 3.9, Ubuntu with Python 3.12 and Windows with Python 3.12. Each job ran integrity validation, generated-file comparison and the 32-test suite.
+
 ## Limits
 
 - Agent application probes ran in this session's agent harness. The six external CLI/model runtimes were **not** executed.
 - No live X account or end-to-end browser/Chrome MCP collection was tested. The published-content case used supplied synthetic records.
 - Some current primary-source web lookups succeeded; others returned access errors. The corpus retains its dated scope. There was no claim that all 396 URLs were freshly fetched or that live production configuration was verified.
 - No exposure-uplift experiment was run.
-- Windows and Python 3.9 are included in the repository CI configuration; their remote execution result is recorded separately if available after publication.

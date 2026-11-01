@@ -13,3 +13,8 @@ Final review: independent read-only review found a URL-less screenshot data-loss
 Forward test: same-snapshot sparse pinned duplicate overwrote richer data. Fixed with same-timestamp complementary merge and explicit conflicts; later snapshots do not inherit old coverage.
 Final: path ambiguity fixed with a root-relative fallback regression.
 Ruling: runtime claims are limited to actual installer/helper tests and this session's agent task probes; no six-client model execution or live X browsing claim.
+
+All seven personal skills, including the final UTF-8 helpers, were saved and verified against the persisted files. Host-managed optional UI metadata is checked semantically.
+GitHub publication uses the authorized connector because shell Git has no GitHub credential; content blob hashes are verified against local Git objects.
+
+Cross-platform follow-up: Windows validation exposed locale/line-ending portability concerns. Explicit UTF-8 input/output and LF attributes are covered by two new regressions. All 32 tests and integrity/build checks now pass in GitHub Actions on Windows/Python 3.12 and Ubuntu/Python 3.9 and 3.12. Final GitHub-source installation succeeded for seven skills and six targets; all 133 distribution files match.

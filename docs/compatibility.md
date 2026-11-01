@@ -14,7 +14,7 @@ Installation targets: Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and
 
 ## Runtime requirements
 
-The Skills CLI requires Node.js 22.20+. Optional helpers require Python 3.9+; no pip packages are needed. Agents without Python can read the English JSON evidence and resolve reference indices directly.
+The Skills CLI requires Node.js 22.20+. Optional helpers require Python 3.9+; no pip packages are needed. Helpers read UTF-8 files and emit UTF-8 JSON, including on Windows. Agents without Python can read the English JSON evidence and resolve reference indices directly.
 
 Native skill invocation is optional. The router includes all specialist workflows as local references; a host can execute them in the same agent. It does not require child agents. Hosts with automatic discovery select skills from their descriptions; this remains model- and host-dependent. A host lacking discovery can be given the installed `x-assistant/SKILL.md` path.
 
