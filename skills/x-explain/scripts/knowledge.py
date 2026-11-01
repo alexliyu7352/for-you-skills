@@ -144,6 +144,9 @@ def output(value):
 
 
 def main():
+    # JSON is always UTF-8, including redirected output on legacy Windows locales.
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
     catalog = sub.add_parser('catalog', help='List all topics; select a topic to read every rule and trigger.')

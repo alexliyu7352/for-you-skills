@@ -1,6 +1,7 @@
 """Inspect supplied draft text and a limited video-index predicate; no X scoring."""
 import argparse
 import json
+import sys
 import math
 from pathlib import Path
 
@@ -45,6 +46,9 @@ def inspect_video_gate(media, complete=True):
     }
 
 def main():
+    # JSON is always UTF-8, including redirected output on legacy Windows locales.
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--text", required=True, help="UTF-8 full draft path; not an X URL")
     parser.add_argument("--article-title", default="")
