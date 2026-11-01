@@ -3,7 +3,7 @@
   "implementation_base": "13834c3160e6f0e59fd19601001c6db46f213896",
   "date": "2026-10-31",
   "timezone": "America/Los_Angeles",
-  "status": "fixed_and_locally_verified",
+  "status": "fixed_and_verified_with_documented_limits",
   "findings": [
     {
       "id": "KA-001",
@@ -343,8 +343,117 @@
   "generated_files": 182,
   "remaining_original_findings": 0,
   "publication_verification": {
-    "ci": "pending",
-    "personal_skill_updates": "pending"
+    "ci": {
+      "status": "passed",
+      "commit": "30c1ed389c23353da1c06362ce84ca7624fa0a95",
+      "run_id": 41275934299,
+      "url": "https://github.com/alexliyu7352/for-you-skills/actions/runs/41275934299",
+      "jobs": [
+        {
+          "id": 124757991659,
+          "os": "ubuntu-latest",
+          "python": "3.12",
+          "conclusion": "success"
+        },
+        {
+          "id": 124757991787,
+          "os": "ubuntu-latest",
+          "python": "3.9",
+          "conclusion": "success"
+        },
+        {
+          "id": 124757991869,
+          "os": "windows-latest",
+          "python": "3.12",
+          "conclusion": "success"
+        }
+      ],
+      "checks_in_each_job": [
+        "Repository integrity",
+        "Generated-file comparison",
+        "81 automated tests"
+      ],
+      "first_run": {
+        "id": 41275658188,
+        "windows_failures": 3,
+        "cause": "Text-mode newline translation changed hash-sensitive temporary report fixture bytes.",
+        "fix": "Write fixture UTF-8 bytes without newline conversion; production hash validation remains unchanged."
+      }
+    },
+    "personal_skill_updates": {
+      "status": "saved_and_persisted_content_verified",
+      "skills": 8,
+      "byte_verified_files": 174,
+      "ui_files_semantically_verified": 8,
+      "host_icon_metadata": "preserved",
+      "user_visual_preferences": "not_created_or_changed",
+      "results": [
+        {
+          "name": "x-assistant",
+          "files_byte_verified": 30,
+          "ui_metadata": "canonical fields preserved; host icon metadata retained",
+          "validator": "passed",
+          "offline_audit": "passed",
+          "persisted_content": "verified"
+        },
+        {
+          "name": "x-explain",
+          "files_byte_verified": 20,
+          "ui_metadata": "canonical fields preserved; host icon metadata retained",
+          "validator": "passed",
+          "offline_audit": "passed",
+          "persisted_content": "verified"
+        },
+        {
+          "name": "x-myth-check",
+          "files_byte_verified": 20,
+          "ui_metadata": "canonical fields preserved; host icon metadata retained",
+          "validator": "passed",
+          "offline_audit": "passed",
+          "persisted_content": "verified"
+        },
+        {
+          "name": "x-format-advisor",
+          "files_byte_verified": 20,
+          "ui_metadata": "canonical fields preserved; host icon metadata retained",
+          "validator": "passed",
+          "offline_audit": "passed",
+          "persisted_content": "verified"
+        },
+        {
+          "name": "x-publish-checklist",
+          "files_byte_verified": 22,
+          "ui_metadata": "canonical fields preserved; host icon metadata retained",
+          "validator": "passed",
+          "offline_audit": "passed",
+          "persisted_content": "verified"
+        },
+        {
+          "name": "x-review-posts",
+          "files_byte_verified": 20,
+          "ui_metadata": "canonical fields preserved; host icon metadata retained",
+          "validator": "passed",
+          "offline_audit": "passed",
+          "persisted_content": "verified"
+        },
+        {
+          "name": "x-reach-diagnosis",
+          "files_byte_verified": 20,
+          "ui_metadata": "canonical fields preserved; host icon metadata retained",
+          "validator": "passed",
+          "offline_audit": "passed",
+          "persisted_content": "verified"
+        },
+        {
+          "name": "x-create-visuals",
+          "files_byte_verified": 22,
+          "ui_metadata": "canonical fields preserved; host icon metadata retained",
+          "validator": "passed",
+          "offline_audit": "passed",
+          "persisted_content": "verified"
+        }
+      ]
+    }
   },
   "followup_findings": [
     {
@@ -358,5 +467,6 @@
         "test_sparse_same_time_cards_preserve_complete_observed_coverage; all 81 tests pass; contradictory text still forces partial status."
       ]
     }
-  ]
+  ],
+  "verification_completed_utc": "2026-11-01"
 }

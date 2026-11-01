@@ -1,6 +1,6 @@
 # Review remediation — 1.1.1
 
-The **22 original findings are fixed and locally verified**. An independent engineering reviewer found one additional sparse-card coverage issue; that was also fixed with a regression that first failed. Remote CI and installed personal-skill verification are recorded separately below and are pending at this publication stage.
+The **22 original findings are fixed and verified within the scope below**. An independent engineering reviewer found one additional sparse-card coverage issue; that was also fixed with a regression that first failed. The changes are published on `main`, all three Linux/Windows CI jobs pass, and all eight installed personal skills have been saved and read back successfully.
 
 Date: 2026-10-31, America/Los_Angeles. The original review targeted `9193233`; remediation starts from `13834c3`. [Implementation plan](../../superpowers/plans/2026-10-31-review-remediation.md).
 
@@ -21,9 +21,10 @@ Date: 2026-10-31, America/Los_Angeles. The original review targeted `9193233`; r
 | Distribution build | Eight skills, **182 files**, zero drift |
 | Knowledge review | All 17 changed claims, 15 correction objects and 27 correction-cited code files independently checked; no actionable finding |
 | Engineering review | Original 10 fixes inspected; 410 malformed-schema probes, permutation checks and eight isolated packages checked; one P3 follow-up fixed afterward |
-| Compatibility syntax | 13 canonical tool/test files parse as Python 3.9; this is not a local 3.9 runtime run |
+| Cross-platform runtime | Ubuntu/Python 3.9, Ubuntu/Python 3.12 and Windows/Python 3.12 each pass integrity checks, build comparison and all 81 tests; [CI run](https://github.com/alexliyu7352/for-you-skills/actions/runs/41275934299) |
 | Real installer | Six targets; 16 physical skill copies, 364 byte-matched files and 16 passing isolated audits (Skills CLI 1.7.4) |
 | Task execution | Three fresh-context user requests exercise claim correction, label-period explanation and scope-separated observations; see the retained answers |
+| Personal installation | Eight skills saved separately; 174 files verified byte for byte against persisted content, eight host-managed UI files checked semantically, validators and offline audits passed |
 
 The engineering reviewer observed **80** tests at the reviewed implementation. The coordinator then added the sparse-card regression: all six permutations failed first, the fix passed, and the complete suite reached **81**. The original independent report is preserved; its finding is closed by the recorded follow-up rather than erased.
 
@@ -69,5 +70,7 @@ K00-002/K00-003's historical lineage records remain incompletely reconstructed. 
 
 ## Release verification updates
 
-- Remote Linux/Windows CI: pending publication and observation.
-- Personal skill updates: pending save and persisted-content verification.
+- The [successful CI run](https://github.com/alexliyu7352/for-you-skills/actions/runs/41275934299) at `30c1ed389c23353da1c06362ce84ca7624fa0a95` passed Ubuntu/Python 3.9, Ubuntu/Python 3.12 and Windows/Python 3.12. Every job ran integrity validation, generated-file comparison and all 81 tests. Verification completed on 2026-11-01 UTC.
+- The [first run](https://github.com/alexliyu7352/for-you-skills/actions/runs/41275658188) passed both Ubuntu jobs but failed three Windows tests: text-mode writing translated newlines in a temporary report fixture, invalidating its expected byte hash. The fixture now writes exact UTF-8 bytes; the runtime hash checks remain unchanged. The successful run above verifies this correction.
+- All eight existing personal skills were updated in place, validated, saved separately and verified from persisted content: **174 exact files** plus eight semantically checked UI metadata files. Host-managed icons were preserved. One transient HTTP 500 interrupted a readback fetch after a successful save; a subsequent fetch verified it and the remaining updates completed. No user visual preference store was created or changed.
+- The final closure publication only updates documentation and the machine-readable ledger; the tested runtime and installation contents are identical to the successful CI revision.

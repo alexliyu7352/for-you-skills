@@ -85,13 +85,13 @@
 
 **Owner/files:** Coordinator and fresh reviewers: generated `skills/`, new `docs/reviews/full-repository-review/remediation.md` and `remediation.json`, validation log, changelog and compatibility/count text only where needed.
 
-- [ ] Reconcile all 22 findings to changed files, source checks or regression tests; leave historical limitations visible.
-- [ ] Run `python3 tools/validate.py`, `python3 tools/build.py --check`, `python3 -m unittest discover -s tests -v`, syntax compatibility, and isolated helper execution.
-- [ ] Dispatch fresh independent source/engineering review and realistic task probes. Fix substantive new failures with a failing regression first.
-- [ ] Install all eight generated skills with the real cached Skills CLI into temporary six-target projects, compare bytes, and run bundled lookup/audit from an unrelated directory.
-- [ ] Publish the reviewed changes using the existing repository authorization; verify remote tree and Linux/Windows CI. Do not claim CI success before observing it.
-- [ ] Update each of the eight existing personal skills, validate its actual installed directory, save separately and verify persisted content after reconciliation.
-- [ ] Publish the closure record with exact validation evidence, unresolved limits and installation results. Report any remaining blocker explicitly.
+- [x] Reconcile all 22 findings to changed files, source checks or regression tests; leave historical limitations visible.
+- [x] Run `python3 tools/validate.py`, `python3 tools/build.py --check`, `python3 -m unittest discover -s tests -v`, syntax compatibility, and isolated helper execution.
+- [x] Dispatch fresh independent source/engineering review and realistic task probes. Fix substantive new failures with a failing regression first.
+- [x] Install all eight generated skills with the real cached Skills CLI into temporary six-target projects, compare bytes, and run bundled lookup/audit from an unrelated directory.
+- [x] Publish the reviewed changes using the existing repository authorization; verify remote tree and Linux/Windows CI. Do not claim CI success before observing it.
+- [x] Update each of the eight existing personal skills, validate its actual installed directory, save separately and verify persisted content after reconciliation.
+- [x] Publish the closure record with exact validation evidence, unresolved limits and installation results. Report any remaining blocker explicitly.
 
 ## Execution notes
 
@@ -100,3 +100,5 @@
 - A sibling Git worktree keeps the original checkout intact without introducing a nested worktree path into the package.
 
 Implementation note: canonical fixes and generated packages were committed together after integrated verification, to keep the corrected knowledge and its installable copies in one coherent revision. The independent review follow-up has a separate regression/fix commit.
+
+Completion: all 22 original findings and the independent engineering follow-up are closed. [Published closure and evidence](../../reviews/full-repository-review/remediation.md) records the successful three-job CI run, real installer checks, eight saved personal skills and unverified live capabilities.
