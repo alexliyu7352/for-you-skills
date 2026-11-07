@@ -2,33 +2,61 @@
 
 [English](README.md) | **简体中文**
 
-**让你的 AI 发帖助手，拿源码说话。**
+**“上午已经发了一条，下午这条要不要留到明天？”**
 
-For You Skills 把对 **X.com / Twitter 开源推荐算法的完整分析**，做成了一套可以直接安装的 Agent Skills。给它一篇草稿、一组截图，或者一句流传的“算法秘诀”，它会告诉你具体怎么改、依据在哪里、哪些问题还不能下结论。
-
-长文发 Post、Article 还是 Thread？首图该放什么？为什么 Article 发了一周还有新增浏览？你可以顺着回答，找到对应的代码、常量和适用条件。
+这就是你可以直接问 **For You Skills** 的运营问题，手里不用先有稿子。发帖频率怎么定？图片和外链在推荐里怎么处理？长文发 Post 还是 Article？它会查随技能安装的研究资料，把建议、适用条件和对应的 X.com / Twitter 推荐源码放在一起。手里有草稿，可以请它改；有帖子和后台数据，也可以请它一起查曝光变化的原因。
 
 **8 个技能 · 578 个知识条目 · 396 个原始来源链接 · 保留 49 个待解问题**
 
 [阅读完整研究文档](https://blog.go5.si/posts/zh/x-algorithm-teardown/) · [关注作者，了解最新进展](https://x.com/alexlee20122022)
 
+装一个总入口就能使用下面七项功能，之后用自己的话问就行。
+
 ```bash
-npx skills add alexliyu7352/for-you-skills --skill '*'
+npx skills add alexliyu7352/for-you-skills --skill x-assistant
 ```
 
-装好后，直接说：
+> 我上午已经在 X.com 发了一篇，下午有另一主题的新内容，今天能发吗？请给出建议，对照推荐源码解释依据，并说明还有哪些不能确定。
 
-> 帮我审这篇准备发到 X.com / Twitter 的稿子。告诉我哪里要改，应该发 Article 还是长 Post，第一张图该放什么。说明哪些建议有代码依据。
+**建议动作：** 新帖已经准备好，对读者有用，又有时效，今天就发。这是内容安排上的建议；代码没有规定一个最佳发布时间。
 
-已验证 **Claude Code、Codex、Gemini CLI、Cursor、GitHub Copilot、OpenCode** 的安装。技能和知识库用英文编写，回答跟随你的语言。[安装说明](#安装) · [验证报告](docs/validation/results.md)
+**代码能确定的：** `author_pool_counts` 把这次考虑推荐给某位读者的帖子按分数排序，再为每位作者从零计数。每次调用都重新计数。启用作者多样性、并采用 VM Ranker 排序服务的公开默认参数时，倍率是 `0.75 × 0.5^k + 0.25`，其中 `k` 就是这个计数：你分数最高的候选乘 `1`，第二名乘 `0.625`，第三名乘 `0.4375`。下午的新帖也可能排第一。**这次计算中排第二的候选，不一定是你今天发的第二篇。** [计数与倍率源码](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237) · [默认参数](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L169-L197)
+
+**还不能确定的：** `0.625` 是分数倍率，不能换算成“曝光剩 62.5%”。这个函数推不出每日发帖上限或“四小时恢复期”，也不能确定线上某次请求的候选、参数和你账号的最佳发布间隔。不同主题可以给读者新价值，但不能绕过按作者 ID 计数的规则。以上结论对应公开快照 `5ed7963`，不代表已核验当前全部线上配置。[完整原始回答与算例](docs/demo/run-record.zh-CN.md#原始运营问答输出)
+
+已验证 **Claude Code、Codex、Gemini CLI、Cursor、GitHub Copilot、OpenCode** 的安装。你用中文提问，它就用中文回答。[其他安装方式](#安装) · [验证报告](docs/validation/results.md)
+
+## 78 秒看两次实际使用
+
+**0:15**，打开源码，看“第二条”究竟指哪条帖子。**0:47**，换成作者报告的一组观察。一篇 Article 发了一周，曝光超过 3,000，其他 Post 最多几百。看它怎么把这段经历改成导读，也看它指出还需要哪些数据来研究差距的原因。
+
+[![在 GitHub 看演示：从第二条帖子的曝光问题查到推荐源码，再审一篇 Article 导读](docs/demo/for-you-skills-cover-zh.png)](docs/demo/README.md)
+
+[在 GitHub 看演示](docs/demo/README.md) · [查看完整提问、回答和源码](docs/demo/run-record.zh-CN.md) · [单看问答对照图](docs/demo/for-you-skills-qa-card-zh.png)
+
+视频由两次实际问答的结果剪辑而成，全程中文画面，无需开声音。[演示素材](docs/demo/README.md#demo-files)里有 1080p 视频、字幕、中英文封面和可复用的发布文案。
+
+## 从 Article 曝光问题，到一篇可用的导读
+
+第二例来自作者的实际观察：**“我的一篇 Article 发了一周，每天还有新曝光，总曝光超过 3K；其他 Post 最多也就几百。这是什么原因？”** 这次要求是把问题改成一篇导读 Post，面向正在选择长 Post 和 Article 的创作者。
+
+审稿保留了原观察，交付完整稿件，开头改成：
+
+> 我的一篇 Article 发了一周，每天还有新曝光，总曝光超过 3K（3000）；其他 Post 最多也就几百。这是为什么？长文就该改发 Article 吗？
+
+| 审查项 | 这次实际交付 |
+| --- | --- |
+| 完整稿与长度 | 一篇 546 个 Unicode 码点的中文稿，去首尾空白，计入链接和段落换行。这是文本测量，不等于 X 的加权字数，也不代表已确认账号发布权限。 |
+| 发布形式 | 这份材料用单条较长的导读 Post；有多节材料、图表和反复查阅的需要，再考虑 Article。这是编辑判断。 |
+| 首图 | 一张待制作的信息卡：“Post：一个问题，几段讲清”／“Article：多节内容、图表、反复查阅”；页脚保留个人观察及其限制。这次交付的是配图方案。 |
+| 依据与下一步 | 保留原数字，核对指标定义、发布时间、截数时间、主题与推广情况。统一比较发布后七天，Article 和介绍它的 Post 分开记录。仅凭这组观察，还不能认定差距由格式造成。 |
+
+[查看完整稿件和审稿意见](docs/demo/run-record.zh-CN.md#完整审稿输出) · [查看逐项依据记录](docs/demo/review-ledger.json)。原始输出保留了算法判断的源码链接和未取得的证据，读者可以继续核查。
 
 ## 查过代码，建议会有什么不同？
 
-一个数字可以是真的，用它推出来的发帖建议却可能是错的。下面三个例子，都来自技能内置的研究：
-
 | 你关心的问题 | 分析实际查到了什么 | 对发帖有什么用 |
 | --- | --- | --- |
-| **“每天第二篇，曝光就只剩六成？”** | 作者多样性计算中的 `0.625`，对应的是**同一次评分中，同一作者按分数排序的第二个候选**。这段函数没有统计每天发了几篇。[源码](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237) | 根据下一篇是否提供新问题、新证据或新进展安排发布。具体间隔应作为待测试的方案；这个系数推不出统一的每日上限或“四小时重置”。 |
 | **“多图帖子，第一张到底该放什么？”** | V8.2 的一条媒体选择路径，遇到**第一张有可用内容的图片就返回**。只放在第四张图里的结果，不会随这次选择一起送过去。[源码](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L314) | 把最有用、有依据的结果及关键条件放进首图，正文也说清主要发现。这个依据限定在该处理路径内，不保证换首图就涨曝光。 |
 | **“长 Post 必须控制在 4,000 字符以内？”** | V8.2 的一条文本处理路径，会把正文截到 **4,000 字符**。它说明的是特定处理流程的边界，不是平台统一的发文上限。[源码](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50) | 实测稿件长度，检查核心发现落在什么位置。有必要的论证可以保留；选发布形式前，先解释这个边界究竟影响哪一步。 |
 
@@ -109,7 +137,7 @@ npx skills add alexliyu7352/for-you-skills --skill '*'
 
 上方命令使用 [Skills CLI](https://github.com/vercel-labs/skills)，需要 **Node.js 22.20 或更新版本**。按提示选择 Agent，默认安装到当前项目；加上 `-g` 可安装到用户级目录。
 
-指定安装到某些 Agent：
+想让八个技能分别出现在列表里，可以用 `--skill '*'` 安装全套。如果只想安装到 Claude Code 和 Codex，再用 `-a` 指定这两个 Agent。
 
 ```bash
 npx skills add alexliyu7352/for-you-skills --skill '*' -a claude-code codex
