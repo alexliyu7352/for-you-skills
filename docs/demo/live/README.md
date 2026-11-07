@@ -1,12 +1,16 @@
-# Installation and Q&A: a real Work run
+# Installation and Q&A: execution evidence
 
 [项目中文说明](../../../README.zh-CN.md) · [English overview](../../../README.md) · [78 秒结果演示](../README.md)
 
-**[观看安装与问答实录 / Watch the recording](install-and-qa.mp4)** · [下载 / Download MP4](install-and-qa.mp4?raw=1) · [完整回答及原始源码链接](answer.zh-CN.md)
+[完整回答及原始源码链接 / Full answer and sources](answer.zh-CN.md) · [执行日志 / Execution log](execution-log.txt)
+
+原 3:49 安装录屏已从仓库及 Git 历史中移除，以减小下载体积；以下保留当次录制方法、日志与核验结果。观看推广演示请用 [中文版](https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r) 或 [English](https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip)，它们是另一次执行结果的 78 秒剪辑。
+
+The original 3:49 installation recording has been removed from Git and its history. This page preserves its recording method, execution log and verification results. The YouTube links above are the separate 78-second results demo. [History cleanup and commit mapping](../media-hosting.md).
 
 录制于 **2026-11-06（America/Los_Angeles）**。时长约 **3 分 49 秒**，816 × 484，无音轨。内容包括：在新项目目录安装 `x-assistant`、按自然语言问题查知识库、在线读取固定版本源码，以及本次生成的回答。终端里显示的是 **ChatGPT Work 的实际执行日志**；工具输出在运行过程中更新，回答完成后整段显示，没有模拟逐字输入。
 
-This records a real ChatGPT Work run: a fresh project installation, evidence lookup, source retrieval and a newly generated answer. The terminal is a live log viewer, **not a Codex or Claude Code client interface**. Some tool output is condensed and source URLs are abbreviated on screen; the complete answer and original URLs are retained alongside the recording.
+This records a real ChatGPT Work run: a fresh project installation, evidence lookup, source retrieval and a newly generated answer. The terminal is a live log viewer, **not a Codex or Claude Code client interface**. Some tool output is condensed and source URLs are abbreviated on screen; the complete answer and original URLs are retained in this evidence directory.
 
 ## What was actually executed
 
@@ -23,7 +27,7 @@ npx --yes skills@1.7.6 add alexliyu7352/for-you-skills --skill x-assistant -a co
 
 The clean boundary is the **project installation directory**. The answer was produced by the existing authenticated ChatGPT Work session using the installed skill's documented fallback procedure. This does not claim a fresh OS, a fresh model context, automatic skill discovery, or a successful external Codex CLI model call. The external CLI could not initialize in the execution environment; the desktop CLI was not signed in. No credentials were moved between those environments.
 
-## Video chapters
+## Archived recording chapters
 
 | Approximate time | What to inspect |
 | --- | --- |

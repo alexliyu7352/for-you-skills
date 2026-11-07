@@ -16,6 +16,10 @@
 
 支持 Claude Code、Codex、Cursor 等。安装后直接用自己的话问，不用记八个技能名。
 
+中文演示：https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r
+
+英文演示：https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip
+
 项目：https://github.com/alexliyu7352/for-you-skills
 
 拿一个你真正纠结过的 X.com 问题试试。
@@ -45,12 +49,12 @@ npx skills add alexliyu7352/for-you-skills --skill x-assistant
 ## 发布说明
 
 - 视频自带完整画面文字，无配音；无需开声音也能理解。
-- 影片为实际问答与审稿结果的剪辑回放，包含浏览器中的真实源码画面；不是实时模型生成或安装录屏。
-- 主帖用视频；封面和问答图可以用于视频封面、仓库展示，或另发图文版本，不必一帖塞入所有素材。
+- 影片为实际问答与审稿结果的剪辑回放；中文版使用浏览器中的真实源码画面，英文版排版呈现带行号的原始代码摘录。两者均不是实时模型生成或安装录屏。
+- 视频使用上述 YouTube 链接；封面和问答图可用于仓库展示或另发图文版本。
 - 上述文案尚未发布。
 
 
-## 安装与问答实录
+## 安装与问答执行证据
 
-还可附上新项目安装、查知识库、读源码与本次回答的 Work 实时日志录屏：
+还可附上新项目安装、查知识库、读源码与本次回答的完整日志和核验记录；原独立安装录屏已从 Git 移除：
 https://github.com/alexliyu7352/for-you-skills/tree/main/docs/demo/live

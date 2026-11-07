@@ -1,0 +1,74 @@
+1
+00:00:00,000 --> 00:00:06,000
+Does posting twice today cost you 40% of your reach?
+For You Skills checks the recommendation code.
+
+2
+00:00:06,000 --> 00:00:10,500
+A different topic is ready. Should you publish today?
+Yes, if it is ready and useful to your readers.
+
+3
+00:00:10,500 --> 00:00:15,000
+That is editorial advice. This code does not establish
+a daily quota or a guaranteed best posting time.
+
+4
+00:00:15,000 --> 00:00:20,500
+The function counts candidates by the same author,
+ordered by score within this ranking call.
+
+5
+00:00:20,500 --> 00:00:26,000
+Each call starts a fresh count. There is no daily
+counter or four-hour reset in this function.
+
+6
+00:00:26,000 --> 00:00:32,500
+With author diversity enabled and these published
+defaults, the second candidate gets a 0.625 multiplier.
+
+7
+00:00:32,500 --> 00:00:39,000
+This changes a score; it does not predict impressions.
+Your newest post could be the highest-scoring candidate.
+
+8
+00:00:39,000 --> 00:00:43,000
+Publish useful, timely material when ready.
+A new topic does not reset an author-ID count.
+
+9
+00:00:43,000 --> 00:00:47,000
+Your best interval, the live settings and
+the next post's reach remain unknown.
+
+10
+00:00:47,000 --> 00:00:52,000
+One Article passed 3K impressions after a week;
+other Posts had hundreds, the author reports.
+
+11
+00:00:52,000 --> 00:00:57,000
+The review keeps that observation and explains why
+it does not establish an advantage caused by format.
+
+12
+00:00:57,000 --> 00:01:02,000
+Use a Post for one question in a few paragraphs.
+Use an Article for sections, figures and later reference.
+
+13
+00:01:02,000 --> 00:01:07,000
+Get a revised opening, length review, format advice
+and a concrete first-image plan, with evidence limits.
+
+14
+00:01:07,000 --> 00:01:12,500
+Ask about posting frequency, links, images,
+ranking claims, drafts or reach.
+
+15
+00:01:12,500 --> 00:01:18,000
+Install x-assistant and ask in your own words.
+Find For You Skills on GitHub: alexliyu7352/for-you-skills.

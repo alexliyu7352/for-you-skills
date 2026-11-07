@@ -2,15 +2,18 @@
 
 [中文项目说明](../../README.zh-CN.md) · [English project overview](../../README.md) · [English transcript](#english-transcript)
 
-这段 78 秒演示呈现两次实际使用的结果。先回答“今天已经发过一篇，还能发吗？”，再把作者的 Article 曝光观察改成一篇导读 Post。画面来自问答结果、审稿结果和浏览器中的源码截图，经过摘录、排版与剪辑。视频全程中文、无音轨。
+这段 78 秒演示呈现两次实际使用的结果：回答“今天已经发过一篇，还能发吗？”，再把作者的 Article 曝光观察改成一篇导读 Post。中英文版本均为无声剪辑，影片托管在 YouTube。
 
-The 78-second video replays two actual runs, covering a posting-frequency question and an introductory Post based on an Article-reach observation. It combines excerpts from the outputs with a browser screenshot of the source code. All on-screen text is Simplified Chinese, with an English transcript below.
+The 78-second demo replays two actual runs: a posting-frequency question and an introductory Post based on an Article-reach observation. Both language versions are silent and hosted on YouTube. The English edition translates and re-typesets the archived results; it is not a separately rerun English agent session.
 
-[![78 秒演示，从发帖频率问题查到源码，再审查 Article 导读](preview-zh.gif)](for-you-skills-demo-zh.mp4)
+| 中文版 | English |
+| --- | --- |
+| [![观看中文演示](for-you-skills-cover-zh.png)](https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r) | [![Watch the English demo](for-you-skills-cover-en.png)](https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip) |
+| [在 YouTube 观看](https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r) · [中文字幕](captions.zh-CN.srt) | [Watch on YouTube](https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip) · [English subtitles](captions.en.srt) |
 
-[打开 1080p 视频 / Open MP4](for-you-skills-demo-zh.mp4) · [下载 MP4 / Download](for-you-skills-demo-zh.mp4?raw=1) · [中文字幕 / Chinese subtitles](captions.zh-CN.srt)
+中文片的源码画面来自原浏览器截图；英文片使用保留行号的原始代码摘录。The Chinese edition uses the original browser source screenshot; the English edition typesets selected original code lines with their line numbers.
 
-另有一段 [实际安装与问答日志录屏 / Live installation and Q&A](live/README.md)，记录新的 Work 执行过程，可与本页的 78 秒结果剪辑分别查看。
+仓库保留字幕、静态封面、文案和执行证据，视频与 GIF 预览已从 Git 历史中移除。[历史清理说明 / History cleanup](media-hosting.md)。另见[安装与问答执行证据 / Installation and Q&A evidence](live/README.md)；原 3:49 安装录屏已移除，该记录与上面的演示片是两次不同执行。
 
 ## 提问、回答与依据
 
@@ -33,15 +36,14 @@ The 78-second video replays two actual runs, covering a posting-frequency questi
 | 0:57–1:07 | The review provides a complete introductory Post, a measured length, a format recommendation and a first-image plan. The format recommendation follows the reader's needs. |
 | 1:07–1:18 | Install `x-assistant` and ask naturally about posting decisions, source code or a draft. |
 
-The demo records results produced on **2026-11-04** using the research cutoff and code revision stated above. The run record contains the complete Chinese prompts and answers, code excerpts and review evidence. The reported Article impressions are the author's observation, and the numerical scoring example is illustrative arithmetic.
+The English localization was prepared on **2026-11-07**. The original draft length measurement and reader-review results apply to the Chinese draft, not its English translation. The demo records results produced on **2026-11-04** using the research cutoff and code revision stated above. The run record contains the complete Chinese prompts and answers, code excerpts and review evidence. The reported Article impressions are the author's observation, and the numerical scoring example is illustrative arithmetic.
 
 ## Demo files
 
 | File | Contents |
 | --- | --- |
-| [for-you-skills-demo-zh.mp4](for-you-skills-demo-zh.mp4) | Full 78-second video, 1920 × 1080, H.264, 24 fps, silent |
-| [preview-zh.gif](preview-zh.gif) | Full 78-second preview, 1120 × 630, 2 fps |
 | [captions.zh-CN.srt](captions.zh-CN.srt) | Chinese subtitles |
+| [captions.en.srt](captions.en.srt) | English subtitles |
 | [for-you-skills-cover-zh.png](for-you-skills-cover-zh.png) | Chinese cover |
 | [for-you-skills-cover-en.png](for-you-skills-cover-en.png) | English cover |
 | [for-you-skills-qa-card-zh.png](for-you-skills-qa-card-zh.png) | Posting-frequency Q&A card in Chinese |
