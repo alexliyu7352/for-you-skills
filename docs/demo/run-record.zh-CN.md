@@ -1,6 +1,6 @@
 # For You Skills 演示运行记录
 
-当前影片入口：[中文版](https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r) · [English](https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip)。视频与 GIF 已从 Git 历史移除；下文文件名及制作状态是原始运行档案，不代表这些媒体仍可从仓库下载。见历史清理说明。
+当前影片入口：[中文版](https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r) · [English](https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip)。视频与 GIF 已从 Git 历史移除；下文文件名及制作状态是原始运行档案，不代表这些媒体仍可从仓库下载。
 
 本页存档 2026-11-04 的制作记录、两次完整提问与回答、固定版本代码摘录及审稿核验结果。文中的访问结果和完成状态对应当次执行。执行环境的绝对路径已缩成文件名。
 

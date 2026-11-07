@@ -10,3 +10,9 @@ __pycache__/
 *.mkv
 *.avi
 docs/demo/**/*.gif
+
+# Internal planning, review and execution records are not package content.
+/docs/superpowers/
+/docs/reviews/
+/docs/validation/progress.md
+/docs/demo/media-hosting.md

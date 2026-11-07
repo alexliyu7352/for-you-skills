@@ -38,7 +38,7 @@ npx skills add alexliyu7352/for-you-skills --skill x-assistant
 
 [在 YouTube 看中文版](https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r) · [Watch in English](https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip) · [演示说明](docs/demo/README.md) · [查看完整提问、回答和源码](docs/demo/run-record.zh-CN.md) · [单看问答对照图](docs/demo/for-you-skills-qa-card-zh.png)
 
-中英文影片均为两次实际问答结果的无声剪辑，英文版翻译并重新排版了原始结果。影片统一放在 YouTube；[演示素材](docs/demo/README.md#demo-files)保留中英文字幕、静态封面、发布文案与原始证据。视频托管与历史清理说明。
+中英文影片均为两次实际问答结果的无声剪辑，英文版翻译并重新排版了原始结果。影片统一放在 YouTube；[演示素材](docs/demo/README.md#demo-files)保留中英文字幕、静态封面、发布文案与原始证据。
 
 ## 从 Article 曝光问题，到一篇可用的导读
 
@@ -158,11 +158,9 @@ npx skills add alexliyu7352/for-you-skills --skill x-publish-checklist -a openco
 
 ## 已经验证到哪一步
 
-全库独立审查逐条检查了 **578 条知识**、八个技能和完整安装包，发现了原先 43 项测试未覆盖的 **22 项问题**。修复记录逐项列出更正、回归测试或源码核查，以及独立验收结果。
+[验证说明](docs/validation/results.md)列出可复现的知识完整性检查、生成文件一致性检查、**81 项自动测试**和 Linux／Windows CI 配置。某次提交是否通过，以链接中的 Actions 结果为准。
 
-[验证记录](docs/validation/results.md)分别记录自动测试、实际 Agent 任务、单技能离线执行、六种目标的安装和 Linux／Windows CI。具体数量与版本结果以该记录为准，避免把历史检查当成新版已经验证。
-
-任务案例覆盖多语言问答、复合请求、连续追问、稿件审查和提供的已发帖子记录。六种外部 CLI 各自的模型运行、实时访问 X.com 采集，以及曝光提升实验，**尚未实测**。[完整验证记录与修复项](docs/validation/results.md)
+已检查六种目标 Agent 的安装。公开演示保留[安装与问答执行证据](docs/demo/live/README.md)和[完整审稿案例](docs/demo/run-record.zh-CN.md)。安装成功不代表每个客户端的模型行为都已验证；六种外部 CLI 各自的模型运行、实时访问 X.com 采集，以及曝光提升实验，**尚未实测**。
 
 ## 研究范围
 

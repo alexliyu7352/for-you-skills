@@ -6,7 +6,7 @@
 
 原 3:49 安装录屏已从仓库及 Git 历史中移除，以减小下载体积；以下保留当次录制方法、日志与核验结果。观看推广演示请用 [中文版](https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r) 或 [English](https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip)，它们是另一次执行结果的 78 秒剪辑。
 
-The original 3:49 installation recording has been removed from Git and its history. This page preserves its recording method, execution log and verification results. The YouTube links above are the separate 78-second results demo. History cleanup and commit mapping.
+The original 3:49 installation recording has been removed from Git and its history. This page preserves its recording method, execution log and verification results. The YouTube links above are the separate 78-second results demo.
 
 录制于 **2026-11-06（America/Los_Angeles）**。时长约 **3 分 49 秒**，816 × 484，无音轨。内容包括：在新项目目录安装 `x-assistant`、按自然语言问题查知识库、在线读取固定版本源码，以及本次生成的回答。终端里显示的是 **ChatGPT Work 的实际执行日志**；工具输出在运行过程中更新，回答完成后整段显示，没有模拟逐字输入。
 

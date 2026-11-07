@@ -38,7 +38,7 @@ At **0:15**, see how the code counts posts by the same author. At **0:47**, the 
 
 [Watch in English on YouTube](https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip) · [中文版 / Chinese on YouTube](https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r) · [English transcript](docs/demo/README.md#english-transcript) · [Original prompts, answers and source links (Chinese)](docs/demo/run-record.zh-CN.md)
 
-Both language versions are silent, edited replays of the same two runs. The English version translates and re-typesets the original results. Videos are hosted on YouTube; the [demo files](docs/demo/README.md#demo-files) retain English and Chinese subtitles, static covers, launch copy and the original evidence. Media hosting and history cleanup.
+Both language versions are silent, edited replays of the same two runs. The English version translates and re-typesets the original results. Videos are hosted on YouTube; the [demo files](docs/demo/README.md#demo-files) retain English and Chinese subtitles, static covers, launch copy and the original evidence.
 
 ## An Article question becomes a draft you can use
 
@@ -158,11 +158,9 @@ For manual installation, copy the entire `skills/<name>/` directory into your ag
 
 ## What has been verified
 
-The full independent review examined **all 578 knowledge entries**, eight workflows and the complete package. It found **22 issues** that the original 43-test suite had not caught. The remediation record tracks each correction, its regression or source check, and independent acceptance.
+The [validation summary](docs/validation/results.md) lists reproducible commands for evidence integrity, generated-file consistency and **81 automated tests**, plus the Linux/Windows CI matrix. Consult the linked Actions results for the status of a specific commit.
 
-The [validation record](docs/validation/results.md) distinguishes automated tests, actual agent task cases, isolated helper execution, six-target installation and Linux/Windows CI. Test counts and exact release results live there so historical checks are not mistaken for verification of a later release.
-
-The task cases cover multilingual questions, combined requests, follow-ups, draft review and supplied published-post records. Six separate external CLI/model executions, live X.com browser collection and exposure-uplift experiments have **not** been performed. [Full results and fixes](docs/validation/results.md)
+Installation has been checked for six target agents. The public demonstrations preserve [installation and Q&A evidence](docs/demo/live/README.md) and a [complete draft-review example](docs/demo/run-record.zh-CN.md). Installation checks do not establish model behavior in every client. Six separate external CLI/model executions, live X.com browser collection and exposure-uplift experiments have **not** been performed.
 
 ## Research scope
 

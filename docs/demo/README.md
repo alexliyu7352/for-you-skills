@@ -13,7 +13,7 @@ The 78-second demo replays two actual runs: a posting-frequency question and an 
 
 中文片的源码画面来自原浏览器截图；英文片使用保留行号的原始代码摘录。The Chinese edition uses the original browser source screenshot; the English edition typesets selected original code lines with their line numbers.
 
-仓库保留字幕、静态封面、文案和执行证据，视频与 GIF 预览已从 Git 历史中移除。历史清理说明 / History cleanup。另见[安装与问答执行证据 / Installation and Q&A evidence](live/README.md)；原 3:49 安装录屏已移除，该记录与上面的演示片是两次不同执行。
+仓库保留字幕、静态封面、文案和执行证据，视频与 GIF 预览已从 Git 历史中移除。另见[安装与问答执行证据 / Installation and Q&A evidence](live/README.md)；原 3:49 安装录屏已移除，该记录与上面的演示片是两次不同执行。
 
 ## 提问、回答与依据
 
