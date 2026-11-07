@@ -26,19 +26,19 @@ npx skills add alexliyu7352/for-you-skills --skill x-assistant
 
 已验证 **Claude Code、Codex、Gemini CLI、Cursor、GitHub Copilot、OpenCode** 的安装。你用中文提问，它就用中文回答。[其他安装方式](#安装) · [验证报告](docs/validation/results.md)
 
-## 先看安装与问答实录
+## 查看安装与问答执行证据
 
-[观看 3 分 49 秒实录](docs/demo/live/README.md)：新项目目录安装技能，查知识库，读取原始代码，再给出本次回答。画面是 **ChatGPT Work 的实时执行日志**，回答完成后整段显示。[完整回答和源码链接](docs/demo/live/answer.zh-CN.md)。安装后的 31 个文件已与仓库逐位元组比对，差异为零。
+[查看安装日志与核验记录](docs/demo/live/README.md)：在新项目目录安装技能，查知识库，读取原始代码，再由 **ChatGPT Work** 给出本次回答。保留完整执行日志与源码核验记录；原独立录屏已从 Git 中移除。[完整回答和源码链接](docs/demo/live/answer.zh-CN.md)。安装后的 31 个文件已与仓库逐位元组比对，差异为零。
 
 ## 78 秒看两次实际使用
 
 **0:15**，打开源码，看“第二条”究竟指哪条帖子。**0:47**，换成作者报告的一组观察。一篇 Article 发了一周，曝光超过 3,000，其他 Post 最多几百。看它怎么把这段经历改成导读，也看它指出还需要哪些数据来研究差距的原因。
 
-[![在 GitHub 看演示：从第二条帖子的曝光问题查到推荐源码，再审一篇 Article 导读](docs/demo/for-you-skills-cover-zh.png)](docs/demo/README.md)
+[![在 YouTube 看中文演示：从第二条帖子的曝光问题查到推荐源码，再审一篇 Article 导读](docs/demo/for-you-skills-cover-zh.png)](https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r)
 
-[在 GitHub 看演示](docs/demo/README.md) · [查看完整提问、回答和源码](docs/demo/run-record.zh-CN.md) · [单看问答对照图](docs/demo/for-you-skills-qa-card-zh.png)
+[在 YouTube 看中文版](https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r) · [Watch in English](https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip) · [演示说明](docs/demo/README.md) · [查看完整提问、回答和源码](docs/demo/run-record.zh-CN.md) · [单看问答对照图](docs/demo/for-you-skills-qa-card-zh.png)
 
-视频由两次实际问答的结果剪辑而成，全程中文画面，无需开声音。[演示素材](docs/demo/README.md#demo-files)里有 1080p 视频、字幕、中英文封面和可复用的发布文案。
+中英文影片均为两次实际问答结果的无声剪辑，英文版翻译并重新排版了原始结果。影片统一放在 YouTube；[演示素材](docs/demo/README.md#demo-files)保留中英文字幕、静态封面、发布文案与原始证据。视频托管与历史清理说明。
 
 ## 从 Article 曝光问题，到一篇可用的导读
 

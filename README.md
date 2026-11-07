@@ -26,19 +26,19 @@ npx skills add alexliyu7352/for-you-skills --skill x-assistant
 
 Installation checked for **Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and OpenCode**. The assistant answers in your language. [Installation options](#installation) · [Validation report](docs/validation/results.md)
 
-## See the installation and Q&A run
+## Read the installation and Q&A evidence
 
-[Watch the 3-minute-49-second recording](docs/demo/live/README.md): a fresh project installation, knowledge lookup, original code retrieval and a newly generated answer. The screen shows the live execution log of **ChatGPT Work**, with completed answers displayed as a whole. [Full answer and sources (Chinese)](docs/demo/live/answer.zh-CN.md). The installation’s 31 files were checked against the repository with no differences.
+[Inspect the recorded execution evidence](docs/demo/live/README.md): a fresh project installation, knowledge lookup, original code retrieval and a newly generated answer from **ChatGPT Work**. The installation log and source checks remain available; the separate recording is no longer stored in Git. [Full answer and sources (Chinese)](docs/demo/live/answer.zh-CN.md). The installation’s 31 files were checked against the repository with no differences.
 
 ## Watch two real questions in 78 seconds
 
 At **0:15**, see how the code counts posts by the same author. At **0:47**, the author brings a different problem. They report that one Article passed 3,000 impressions in a week while their other Posts topped out in the hundreds. The review turns that observation into an introductory Post and explains which measurements would help investigate the difference.
 
-[![Watch the demo on GitHub: a posting-frequency question, the ranking code, and an Article draft review](docs/demo/for-you-skills-cover-en.png)](docs/demo/README.md)
+[![Watch the English demo on YouTube: a posting-frequency question, the ranking code, and an Article draft review](docs/demo/for-you-skills-cover-en.png)](https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip)
 
-[Watch on GitHub](docs/demo/README.md) · [English transcript](docs/demo/README.md#english-transcript) · [Original prompts, answers and source links (Chinese)](docs/demo/run-record.zh-CN.md)
+[Watch in English on YouTube](https://youtu.be/QSL0kNQvs_E?si=VXDbXhogFb7bq7ip) · [中文版 / Chinese on YouTube](https://youtu.be/TQfDplGaFXY?si=mNGTutX1lj7Py08r) · [English transcript](docs/demo/README.md#english-transcript) · [Original prompts, answers and source links (Chinese)](docs/demo/run-record.zh-CN.md)
 
-The video is a silent, edited replay of the two runs with Chinese on-screen text. The [demo files](docs/demo/README.md#demo-files) include the 1080p video, Chinese subtitles and Q&A card, plus covers and launch copy in both languages.
+Both language versions are silent, edited replays of the same two runs. The English version translates and re-typesets the original results. Videos are hosted on YouTube; the [demo files](docs/demo/README.md#demo-files) retain English and Chinese subtitles, static covers, launch copy and the original evidence. Media hosting and history cleanup.
 
 ## An Article question becomes a draft you can use
 

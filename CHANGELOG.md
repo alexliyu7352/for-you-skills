@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Host the Chinese and English demos on YouTube. Remove the two MP4 files and animated preview from Git history; retain captions, static covers and execution evidence. See media hosting and commit mapping.
+
 - Repair the fresh-reader handoff: include the full reading procedure, rubric and output rules, plus the actual draft scope and user constraints; keep previous verdicts and drafting notes out of the reviewer context.
 - Preserve plan-only and partial-draft review. Distinguish no-copy, missing-text and quick-check outcomes from a completed reader pass, and distinguish cold review from self-review.
 - Replace the unconditional revision loop with a default budget of three reviewer passes and explicit unresolved outcomes for unavailable facts, protected wording, repeated stalls or exhausted budget. Verify that a PASS and the final measurements refer to the delivered version.
