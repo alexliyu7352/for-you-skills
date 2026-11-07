@@ -26,6 +26,10 @@ npx skills add alexliyu7352/for-you-skills --skill x-assistant
 
 已验证 **Claude Code、Codex、Gemini CLI、Cursor、GitHub Copilot、OpenCode** 的安装。你用中文提问，它就用中文回答。[其他安装方式](#安装) · [验证报告](docs/validation/results.md)
 
+## 先看安装与问答实录
+
+[观看 3 分 49 秒实录](docs/demo/live/README.md)：新项目目录安装技能，查知识库，读取原始代码，再给出本次回答。画面是 **ChatGPT Work 的实时执行日志**，回答完成后整段显示。[完整回答和源码链接](docs/demo/live/answer.zh-CN.md)。安装后的 31 个文件已与仓库逐位元组比对，差异为零。
+
 ## 78 秒看两次实际使用
 
 **0:15**，打开源码，看“第二条”究竟指哪条帖子。**0:47**，换成作者报告的一组观察。一篇 Article 发了一周，曝光超过 3,000，其他 Post 最多几百。看它怎么把这段经历改成导读，也看它指出还需要哪些数据来研究差距的原因。

@@ -10,6 +10,8 @@ The 78-second video replays two actual runs, covering a posting-frequency questi
 
 [打开 1080p 视频 / Open MP4](for-you-skills-demo-zh.mp4) · [下载 MP4 / Download](for-you-skills-demo-zh.mp4?raw=1) · [中文字幕 / Chinese subtitles](captions.zh-CN.srt)
 
+另有一段 [实际安装与问答日志录屏 / Live installation and Q&A](live/README.md)，记录新的 Work 执行过程，可与本页的 78 秒结果剪辑分别查看。
+
 ## 提问、回答与依据
 
 **第一例问发帖频率。** 今天已经发过一篇，有另一主题的新内容，是否现在发？回答先给内容安排建议，再读 `author_pool_counts` 和倍率函数。使用演示所选的公开默认参数时，同作者在这次计算中按分数排第一、第二、第三的候选，倍率依次为 `1`、`0.625`、`0.4375`。哪些帖子进入这次候选、实际启用哪些参数和账号曝光表现，需要各自的证据。[计数与倍率函数](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237) · [公开默认参数](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L169-L197)

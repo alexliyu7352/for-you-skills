@@ -1,0 +1,162 @@
+{
+  "research_through": "2026-10-29",
+  "claims": [
+    {
+      "id": "K01-006",
+      "title": "The second candidate's 62.5% cannot be rewritten as a daily quota",
+      "kind": "myth",
+      "conclusion": "The daily author-quota interpretations in X Algorithm Playbook and SocialPilot extend the scope: 0.625 corresponds to an author's second-ranked candidate within one candidate pool; it does not imply the second post of a day, a maximum of three, or a gap of at least four hours.",
+      "conditions": [
+        "Using the author-diversity multiplier to explain 62.5%",
+        "Multiple candidates from the same author enter the same scoring operation"
+      ],
+      "practical_meaning": "Schedule according to whether content adds a new problem, evidence, or progress; distinguish competition within one batch from daily limits.",
+      "check": {
+        "when": "When a draft mentions downranking the second post, three posts daily, or recovery after four hours",
+        "needed": [
+          "Cited formula",
+          "Counting scope",
+          "Actual proposed timing rule"
+        ],
+        "verify": [
+          "Replace daily publication order with score order within the current candidate pool",
+          "Check for a separate time counter; this function has none"
+        ],
+        "if_missing": "If no independent timing rule can be supplied, remove the algorithmic guarantee of a fixed waiting period."
+      },
+      "limits": [
+        "Competition within the same batch may still exist",
+        "Correcting the daily-limit misreading does not mean rapid posting has no effect whatsoever"
+      ],
+      "source_units": [
+        "U0003",
+        "U0009",
+        "U0028"
+      ],
+      "evidence": [
+        {
+          "source_id": "S004",
+          "link_indices": [
+            0
+          ],
+          "supports": "The original third-party claim interpreting decay within a recommendation operation as daily post counts and spacing.",
+          "title": "[4] The X Algorithm Playbook frequency interpretation checked in the report.",
+          "links": [
+            {
+              "label": "Claims turning a single response into daily post counts and thread slots",
+              "url": "https://tang-vu.github.io/x-algorithm-playbook/rules/04-timing-frequency.html"
+            }
+          ]
+        },
+        {
+          "source_id": "S008",
+          "link_indices": [
+            0
+          ],
+          "supports": "Another daily author-quota interpretation examined in the report.",
+          "title": "[8] The original SocialPilot article checked in the report, dated September 2026 on the page.",
+          "links": [
+            {
+              "label": "Claims about daily author quotas and external links",
+              "url": "https://www.socialpilot.co/blog/twitter-algorithm"
+            }
+          ]
+        },
+        {
+          "source_id": "S002",
+          "link_indices": [
+            1
+          ],
+          "supports": "The code counts by author and rank within the current call, not by daily posting volume.",
+          "title": "[2] Updated weighted scoring and author diversity.",
+          "links": [
+            {
+              "label": "Author count and multiplier",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ],
+      "topic": "Posting frequency, October updates, recommendation stages, author diversity, threads, prediction weights, and reposts and replies (original report lines 1–438)",
+      "topic_file": "topic-01.json"
+    },
+    {
+      "id": "K01-032",
+      "title": "The author-diversity formula decays by score order within one batch",
+      "kind": "code",
+      "conclusion": "The author multiplier is (1−floor)×decay_factor^k＋floor; VM Ranker's public defaults are decay=0.5 and floor=0.25, giving m(k)=0.75×0.5^k＋0.25. Starting at 0, k follows score order among the same author's candidates in the current pool; the sequence is 1, 0.625, 0.4375 and approaches 0.25.",
+      "conditions": [
+        "Author-diversity processing is actually enabled",
+        "Same-author candidates within a single batch call",
+        "Publication order is not k; a later high-scoring post can also have k=0"
+      ],
+      "practical_meaning": "Explain competition within a batch using the current candidate order; prioritize independent content value when scheduling and choosing topics.",
+      "check": {
+        "when": "When a draft contains the author-decay formula, 62.5%, or calculations based on publication order",
+        "needed": [
+          "decay and floor",
+          "Author IDs and original scores of candidates in the same batch",
+          "Whether this processing is enabled"
+        ],
+        "verify": [
+          "Recalculate k=0/1/2 to obtain 1/0.625/0.4375",
+          "Order by score rather than time",
+          "Explain that the sequence approaches a floor rather than zero"
+        ],
+        "if_missing": "Without the candidate pool and actual parameters, illustrate only the public defaults; do not assign a multiplier to a specific post."
+      },
+      "limits": [
+        "This affects ranking scores, not exposure directly",
+        "Public defaults do not guarantee identical values for every request"
+      ],
+      "source_units": [
+        "U0029",
+        "U0030",
+        "U0031",
+        "U0032",
+        "U0033"
+      ],
+      "evidence": [
+        {
+          "source_id": "S002",
+          "link_indices": [
+            1
+          ],
+          "supports": "Implementation of author counting, score sorting, and multiplier application.",
+          "title": "[2] Updated weighted scoring and author diversity.",
+          "links": [
+            {
+              "label": "Author count and multiplier",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+            }
+          ]
+        },
+        {
+          "source_id": "S021",
+          "link_indices": [
+            0
+          ],
+          "supports": "VM Ranker's public author-diversity defaults.",
+          "title": "[21] Public defaults for weights and author diversity.",
+          "links": [
+            {
+              "label": "VM Ranker parameters",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ],
+      "topic": "Posting frequency, October updates, recommendation stages, author diversity, threads, prediction weights, and reposts and replies (original report lines 1–438)",
+      "topic_file": "topic-01.json"
+    }
+  ],
+  "related_unknowns": [
+    "Q02"
+  ]
+}

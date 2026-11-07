@@ -48,3 +48,9 @@ npx skills add alexliyu7352/for-you-skills --skill x-assistant
 - 影片为实际问答与审稿结果的剪辑回放，包含浏览器中的真实源码画面；不是实时模型生成或安装录屏。
 - 主帖用视频；封面和问答图可以用于视频封面、仓库展示，或另发图文版本，不必一帖塞入所有素材。
 - 上述文案尚未发布。
+
+
+## 安装与问答实录
+
+还可附上新项目安装、查知识库、读源码与本次回答的 Work 实时日志录屏：
+https://github.com/alexliyu7352/for-you-skills/tree/main/docs/demo/live

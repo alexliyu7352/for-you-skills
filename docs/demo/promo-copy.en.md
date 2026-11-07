@@ -33,3 +33,9 @@ Mainline-following research updates: https://x.com/alexlee20122022
 This demonstration uses public code snapshot `5ed7963` and a knowledge cutoff of 2026-10-29. Public code and defaults do not establish every live configuration.
 
 The current video is in Simplified Chinese, with all explanations on screen and no voiceover. It is an edited replay of actual results, not a live generation or installation recording. The complete English launch copy above is supplied for adaptation; it has not been posted.
+
+
+## Installation and Q&A recording
+
+A real Work execution-log recording covers fresh project installation, knowledge lookup, source retrieval and a newly generated answer:
+https://github.com/alexliyu7352/for-you-skills/tree/main/docs/demo/live
