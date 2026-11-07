@@ -1,0 +1,118 @@
+{
+  "research_through": "2026-10-29",
+  "claims": [
+    {
+      "id": "Q02",
+      "title": "Are the public defaults the live configuration for every reader?",
+      "kind": "unknown",
+      "conclusion": "The official explanation says cron mirrors the main production defaults; Home Mixer and VM Ranker have different values under the same names in the same commit, and the implementation also contains parameter-reading, caching, and fallback branches.",
+      "conditions": [
+        "Research is current through 2026-10-29; fixed public snapshots can establish the known portions, while incomplete links remain unknown."
+      ],
+      "practical_meaning": "Describe them as the public main defaults and specify the applicable path; do not dismiss them as arbitrary examples or claim they are identical for every viewer.",
+      "check": {
+        "when": "The question or copy concerns: Are the public defaults the live configuration for every reader?",
+        "needed": [
+          "Per-request feature switches, all experiment assignments, and the correspondence between service deployments and checkpoints."
+        ],
+        "verify": [
+          "Distinguish this known fact from the information still missing.",
+          "Check whether the user’s conclusion exceeds the known scope stated below; obtain the outstanding information when a definitive conclusion is required."
+        ],
+        "if_missing": "Clearly state what can currently be confirmed and why the rest cannot be determined; use practical_meaning to provide actions that can still be taken."
+      },
+      "limits": [
+        "Per-request feature switches, all experiment assignments, and the correspondence between service deployments and checkpoints."
+      ],
+      "source_units": [
+        "U0516",
+        "U0517",
+        "U0518"
+      ],
+      "evidence": [
+        {
+          "source_id": "S012",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[12] Synchronization of public defaults and usage paths in Home Mixer and VM Ranker.",
+          "links": [
+            {
+              "label": "Cron synchronization explanation for main production defaults",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/README.md#L428-L434"
+            },
+            {
+              "label": "Synchronization time in the Home Mixer parameter file",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L1"
+            },
+            {
+              "label": "Local weighting, cold start, and RPC fallback",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker.rs#L59-L135"
+            },
+            {
+              "label": "VM request includes heads, cached scores, and compute_value_model",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_request.rs#L26-L68"
+            },
+            {
+              "label": "VM Ranker obtains coefficients from its own params",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/scoring/value_model.rs#L71-L118"
+            },
+            {
+              "label": "Handling when a cached weighted score is available",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L282-L327"
+            }
+          ]
+        },
+        {
+          "source_id": "S027",
+          "link_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "supports": "The known mechanisms and evidence gaps for this question in the original report; retain the original materials in this citation group.",
+          "title": "[27] Current coefficients in two locations, probability multiplication, and mutual-follow conditions.",
+          "links": [
+            {
+              "label": "Home Mixer prediction coefficients and official interpretive annotations",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L367-L513"
+            },
+            {
+              "label": "Same-named VM Ranker defaults",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L155"
+            },
+            {
+              "label": "Prediction-term multiplication and summation",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L57-L139"
+            },
+            {
+              "label": "Subsequent shifting of positive and negative scores",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L161-L179"
+            },
+            {
+              "label": "Mutual-follow candidates must not be replies or reposts",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L19-L22"
+            },
+            {
+              "label": "General reply coefficient plus mutual-follow boost",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/weights.rs#L84-L99"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [],
+      "topic": "49 questions still awaiting confirmation",
+      "topic_file": "topic-06.json"
+    }
+  ],
+  "related_unknowns": []
+}

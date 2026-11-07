@@ -1,0 +1,37 @@
+{
+  "retrieval": "lexical with topic synonyms; read topic catalog if relevant coverage is unclear",
+  "results": [
+    {
+      "match_score": 25,
+      "id": "K01-006",
+      "title": "The second candidate's 62.5% cannot be rewritten as a daily quota",
+      "kind": "myth",
+      "topic_file": "topic-01.json",
+      "when": "When a draft mentions downranking the second post, three posts daily, or recovery after four hours"
+    },
+    {
+      "match_score": 25,
+      "id": "K03-042",
+      "title": "Switching to an Article does not reset the author count in the author-diversity function",
+      "kind": "code",
+      "topic_file": "topic-03.json",
+      "when": "The draft claims switching format grants a new author allowance"
+    },
+    {
+      "match_score": 23,
+      "id": "K01-032",
+      "title": "The author-diversity formula decays by score order within one batch",
+      "kind": "code",
+      "topic_file": "topic-01.json",
+      "when": "When a draft contains the author-decay formula, 62.5%, or calculations based on publication order"
+    },
+    {
+      "match_score": 23,
+      "id": "K01-091",
+      "title": "An actual repost puts the original author's content among candidates for the reposter's followers",
+      "kind": "code",
+      "topic_file": "topic-01.json",
+      "when": "When a draft discusses whether reposts can carry the original author beyond their follower network"
+    }
+  ]
+}

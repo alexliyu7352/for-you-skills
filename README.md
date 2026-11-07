@@ -26,6 +26,10 @@ npx skills add alexliyu7352/for-you-skills --skill x-assistant
 
 Installation checked for **Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and OpenCode**. The assistant answers in your language. [Installation options](#installation) · [Validation report](docs/validation/results.md)
 
+## See the installation and Q&A run
+
+[Watch the 3-minute-49-second recording](docs/demo/live/README.md): a fresh project installation, knowledge lookup, original code retrieval and a newly generated answer. The screen shows the live execution log of **ChatGPT Work**, with completed answers displayed as a whole. [Full answer and sources (Chinese)](docs/demo/live/answer.zh-CN.md). The installation’s 31 files were checked against the repository with no differences.
+
 ## Watch two real questions in 78 seconds
 
 At **0:15**, see how the code counts posts by the same author. At **0:47**, the author brings a different problem. They report that one Article passed 3,000 impressions in a week while their other Posts topped out in the hundreds. The review turns that observation into an introductory Post and explains which measurements would help investigate the difference.

@@ -1,0 +1,61 @@
+{
+  "research_through": "2026-10-29",
+  "claims": [
+    {
+      "id": "K01-033",
+      "title": "Author counts are rebuilt on each call and cannot accumulate across readers or days",
+      "kind": "code",
+      "conclusion": "This function rebuilds its author-count table for every call; its inputs are author IDs and ranking scores, with no count of today's posts, midnight reset, or four-hour recovery timer. For another reader whose pool contains only A2, A2 can become that author's first post.",
+      "conditions": [
+        "This statement concerns only this author-diversity function",
+        "Another reader's candidate pool may differ"
+      ],
+      "practical_meaning": "When checking daily-downranking claims, identify the request within which counting occurs; spacing can instead reflect readers' rhythms.",
+      "check": {
+        "when": "When a user infers a fixed multiplier for the next post from how many they published today",
+        "needed": [
+          "Candidate set for this call",
+          "Specific implementation of the claimed daily/four-hour rule"
+        ],
+        "verify": [
+          "Check whether count state persists across requests",
+          "Confirm this function has no date or timing parameters",
+          "Check the explanation using a candidate example containing only A2"
+        ],
+        "if_missing": "Without evidence of an independent timing rule, do not describe a four-hour break as restoring weight."
+      },
+      "limits": [
+        "Other sources in the repository may have time or count limits",
+        "This does not mean all rapid posting is mutually independent"
+      ],
+      "source_units": [
+        "U0037",
+        "U0039"
+      ],
+      "evidence": [
+        {
+          "source_id": "S002",
+          "link_indices": [
+            1
+          ],
+          "supports": "The function creates author counts internally and processes the current input.",
+          "title": "[2] Updated weighted scoring and author diversity.",
+          "links": [
+            {
+              "label": "Author count and multiplier",
+              "url": "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237"
+            }
+          ]
+        }
+      ],
+      "related_unknowns": [
+        "Q02"
+      ],
+      "topic": "Posting frequency, October updates, recommendation stages, author diversity, threads, prediction weights, and reposts and replies (original report lines 1–438)",
+      "topic_file": "topic-01.json"
+    }
+  ],
+  "related_unknowns": [
+    "Q02"
+  ]
+}

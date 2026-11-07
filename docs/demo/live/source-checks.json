@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs",
+    "sha256": "db4757ee53bbbaa7ef83226d5426e2cdf5c6b6c129374e71693aaef8981364e2"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs",
+    "sha256": "3315b375459c75a71d101cb35c55ca53db7adf7fa86af3258d20faf966a67aa9"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/xai-org/x-algorithm/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/value_model.rs",
+    "sha256": "0ac409b3f1a7a4a58210d2321eb1ce617de2e8cb16c059a5f1c87a32a54b1c78"
+  }
+]
