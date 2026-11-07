@@ -2,33 +2,61 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-**Make your AI posting assistant show its sources.**
+**“I posted this morning. I have a second post ready. Should I wait until tomorrow?”**
 
-For You Skills turns a detailed analysis of the **X.com / Twitter recommendation algorithm's public source code** into an assistant you can use on your next post. Give it a draft, a screenshot, or an algorithm claim. Get specific changes, the evidence behind them, and a clear account of what remains unknown.
-
-Choose between a long Post, an Article and a Thread. Check your opening and first image. Investigate why an Article keeps gaining views. Follow a recommendation back to its code, constants and applicable conditions.
+You can ask **For You Skills** questions like this before you have a draft. Ask about posting frequency, ranking weights, links, images, or whether to publish a long Post or an Article on X.com / Twitter. It looks up the research, links to the relevant lines of public recommendation code, and explains what you can decide from them. Bring a draft or post analytics and it can also suggest edits or help investigate a change in reach.
 
 **8 skills · 578 knowledge entries · 396 original source URLs · 49 unresolved questions preserved**
 
 [Read the full research](https://blog.go5.si/posts/x-algorithm-teardown/) · [Follow the author for updates](https://x.com/alexlee20122022)
 
+Install the entry skill and ask in your own words. It includes all seven workflows.
+
 ```bash
-npx skills add alexliyu7352/for-you-skills --skill '*'
+npx skills add alexliyu7352/for-you-skills --skill x-assistant
 ```
 
-Then ask in your own words:
+> I posted on X.com this morning and have a different topic ready for this afternoon. Should I publish it today? Give me a practical recommendation, check the relevant recommendation code, and explain what remains uncertain.
 
-> Review this draft for X.com / Twitter. Tell me what to change, whether it should be an Article or a long Post, and what the first image should show. Explain which recommendations the code supports.
+**Recommendation:** If the new post is ready, useful to your readers and timely, publish it today. That is an editorial recommendation; the code does not establish an ideal posting time.
 
-Installation checked for **Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and OpenCode**. Instructions and knowledge are English; replies follow your language. [Installation details](#installation) · [Validation report](docs/validation/results.md)
+**What the code establishes:** `author_pool_counts` sorts the posts being considered for a reader by score, then counts each author's posts from zero. The count starts afresh on every call. With author diversity enabled and the published VM Ranker defaults, the multiplier is `0.75 × 0.5^k + 0.25`, where `k` is that count: `1` for your highest-scoring candidate, `0.625` for your second and `0.4375` for your third. Your afternoon post could rank first. **The second-ranked candidate in this calculation is not necessarily your second post of the day.** [Counting and multiplier code](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237) · [Default settings](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L169-L197)
+
+**What remains uncertain:** `0.625` is a score multiplier, not a prediction that a post keeps 62.5% of its impressions. This function supplies no daily quota or four-hour reset. It also does not establish which candidates or settings a live request uses, or your account's best posting interval. A different topic can give readers something new; it does not bypass a count based on author ID. These conclusions refer to public snapshot `5ed7963`, not verified current production settings. [Complete original answer and worked example (Chinese)](docs/demo/run-record.zh-CN.md#原始运营问答输出)
+
+Installation checked for **Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and OpenCode**. The assistant answers in your language. [Installation options](#installation) · [Validation report](docs/validation/results.md)
+
+## Watch two real questions in 78 seconds
+
+At **0:15**, see how the code counts posts by the same author. At **0:47**, the author brings a different problem. They report that one Article passed 3,000 impressions in a week while their other Posts topped out in the hundreds. The review turns that observation into an introductory Post and explains which measurements would help investigate the difference.
+
+[![Watch the demo on GitHub: a posting-frequency question, the ranking code, and an Article draft review](docs/demo/for-you-skills-cover-en.png)](docs/demo/README.md)
+
+[Watch on GitHub](docs/demo/README.md) · [English transcript](docs/demo/README.md#english-transcript) · [Original prompts, answers and source links (Chinese)](docs/demo/run-record.zh-CN.md)
+
+The video is a silent, edited replay of the two runs with Chinese on-screen text. The [demo files](docs/demo/README.md#demo-files) include the 1080p video, Chinese subtitles and Q&A card, plus covers and launch copy in both languages.
+
+## An Article question becomes a draft you can use
+
+The second run starts with the author's observation: **“My Article has been up for a week and still gets new impressions every day—over 3K in total. My other Posts have hundreds at most. Why?”** The request was to turn this question into an introductory Post for creators choosing between a long Post and an Article.
+
+The review kept the observation and delivered a complete Chinese draft. Its revised opening, translated here:
+
+> One of my Articles has been up for a week and still gets new impressions every day, with more than 3K (3,000) in total; my other Posts have hundreds at most. Why? Should I switch my long posts to Articles?
+
+| Part of the review | What this run delivered |
+| --- | --- |
+| Complete copy and length | A 546-Unicode-code-point Chinese draft, including its link and paragraph breaks, after trimming surrounding whitespace. This is a text measurement, not X's weighted character count or a confirmation of publishing eligibility. |
+| Format | One longer introductory Post for this material. Use an Article when the material needs multiple sections, figures and later reference; that is an editorial decision. |
+| First image | A proposed comparison card: “Post: one question, a few paragraphs” / “Article: multiple sections, figures, later reference,” with the observation and its limits in the footer. The run supplied an image plan. |
+| Evidence and next step | Preserve the reported numbers; check metric definitions, publication and measurement times, topics and promotion. Compare the same first seven days and record an Article separately from a Post linking to it. The observation alone does not establish that the format caused the difference. |
+
+[Read the complete Chinese draft and review](docs/demo/run-record.zh-CN.md#完整审稿输出) · [Inspect the topic-by-topic evidence record](docs/demo/review-ledger.json). The code citations and missing evidence are retained with the original output; the English opening above is a translation, not a separately measured or reviewed draft.
 
 ## What changes when you check the code?
 
-A number can be real and the advice built around it can still be wrong. These examples come from the research bundled with the skills:
-
 | Question | What the analysis found | What to do with it |
 | --- | --- | --- |
-| **“Does my second post of the day lose about 40% of its reach?”** | The `0.625` author-diversity multiplier concerns an author's second-ranked candidate **within one scoring operation**. That function does not count daily posts. [Code](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237) | Plan the next post around a new question, evidence or update. Treat a proposed interval as something to test; this multiplier supplies no universal daily quota or four-hour reset. |
 | **“Which image should go first?”** | One V8.2 media-selection path returns the **first available image**. A result left only in image four is absent from that selection. [Code](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L314) | Put the most useful supported result and its key conditions in the first image; state the main finding in the text too. This is evidence about that processing path, not a promise of higher reach. |
 | **“Must a long Post stay under 4,000 characters?”** | A specific V8.2 text-rendering path truncates body text at **4,000 characters**. That establishes a processing boundary, not a universal publishing limit. [Code](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50) | Measure the draft and check where the central finding lands. Keep the full argument when it earns its length; explain the scope of the boundary before choosing a format. |
 
@@ -109,7 +137,7 @@ The research cutoff listed below describes the current bundled knowledge; instal
 
 Use the command above with the [Skills CLI](https://github.com/vercel-labs/skills), which requires **Node.js 22.20+**. Select your agent when prompted. Installation is project-local by default; add `-g` for a user-wide installation.
 
-To select specific agents:
+To install all eight skills as separate entries, use `--skill '*'`. To limit that installation to Claude Code and Codex, add `-a` and the agent names.
 
 ```bash
 npx skills add alexliyu7352/for-you-skills --skill '*' -a claude-code codex

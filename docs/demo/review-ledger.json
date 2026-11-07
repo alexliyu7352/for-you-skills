@@ -1,0 +1,436 @@
+{
+  "selected_format": "introductory Post",
+  "topic_screening": [
+    {
+      "topic": "00",
+      "applicability": "applicable",
+      "scope": "研究截止日、固定提交、个人观察与因果解释区分；非线上核验"
+    },
+    {
+      "topic": "01",
+      "applicability": "partly_applicable",
+      "scope": "图片展开预测与流程范围；频率、Thread配额、互惠回复权重不在B稿中，未强加"
+    },
+    {
+      "topic": "02",
+      "applicability": "partly_applicable",
+      "scope": "开头、阅读回报、图片可读性；无用户行为历史或阅读指标，不推断模型匹配"
+    },
+    {
+      "topic": "03",
+      "applicability": "applicable",
+      "scope": "格式六层、完整正文测量、首图；无视频，无实际Article正文/封面，视频阈值与成品图检查不适用"
+    },
+    {
+      "topic": "04",
+      "applicability": "partly_applicable",
+      "scope": "一周曝光的年龄边界与链接目的页；无冷启动、回复链、置顶或引用卡操作"
+    },
+    {
+      "topic": "05",
+      "applicability": "partly_applicable",
+      "scope": "观察对比、复用价值、具体问题与更正计划；无标签报告，不判账号正常或异常"
+    },
+    {
+      "topic": "06",
+      "applicability": "applicable",
+      "scope": "Q02/Q24/Q25/Q44-Q49保留为证据缺口；不把枚举、函数存在或个人数值当线上因果证明"
+    }
+  ],
+  "checks": [
+    {
+      "claim_ids": [
+        "K02-004",
+        "K03-057"
+      ],
+      "actual_evidence": "原文以“問題是我的一個article...”开头，没有独立标题；受众是犹豫 Post/Article 的创作者。",
+      "verdict": "change",
+      "action_or_retention": "保留直接提问，把“长文就该改发 Article 吗”补在观察之后。",
+      "explanation": "先说明具体数字，再明确创作者要做的选择；正文直接给出选择与证据边界。",
+      "original_citations": []
+    },
+    {
+      "claim_ids": [
+        "K03-009",
+        "K03-010"
+      ],
+      "actual_evidence": "原文65码点；最终v3去首尾空白546码点，原始含末尾换行547码点；首4000码点包含全稿。",
+      "verdict": "pass",
+      "action_or_retention": "保留完整稿，不为4000边界增加内容。",
+      "explanation": "脚本是Unicode码点测量；不模拟上游字段清理、X加权长度或发布权限。4000/200只是所引V8.2函数范围。",
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L165-L167",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L36-L52",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L174",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L317-L321"
+      ]
+    },
+    {
+      "claim_ids": [
+        "K03-001",
+        "K03-041",
+        "K03-043"
+      ],
+      "actual_evidence": "只有作者一篇Article与其他Post的未校准总量观察。",
+      "verdict": "change",
+      "action_or_retention": "不写“Article天然流量更好”或“两个格式算法完全相同”。",
+      "explanation": "最终输入和融合里没有显式固定Article项；不能排除上游表征、候选来源或实验差异。",
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L1-L22",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs#L1-L31",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L28-L139",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L345-L381"
+      ]
+    },
+    {
+      "claim_ids": [
+        "K03-002",
+        "K03-003",
+        "K03-057"
+      ],
+      "actual_evidence": "材料只有一个问题、一组观察和待核对项。",
+      "verdict": "pass",
+      "action_or_retention": "选单条导读Post；无需另开Article或拆Thread。",
+      "explanation": "这是组织材料的编辑建议；若以后有多节方法与截图再用Article承载。",
+      "original_citations": []
+    },
+    {
+      "claim_ids": [
+        "K03-031",
+        "K03-033",
+        "K03-034",
+        "K03-035",
+        "K03-062"
+      ],
+      "actual_evidence": "无后台截图、完读率、阅读时长或事件数据。",
+      "verdict": "missing",
+      "action_or_retention": "不把曝光写成完读人数或阅读奖励。",
+      "explanation": "事件枚举、最终预测字段和作者后台指标不是一回事；完整客户端到训练标签链仍未公开。",
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L443-L490",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L513-L548",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs#L1-L31",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/constants.py#L125-L163",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L75-L98",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L1274-L1298",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py#L810-L831",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/scoring_sequence_query_hydrator.rs#L92-L117",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md#L9-L21"
+      ]
+    },
+    {
+      "claim_ids": [
+        "K04-046",
+        "K04-048",
+        "K04-055"
+      ],
+      "actual_evidence": "作者说Article一周后仍每天有新曝光；无候选ID、路径与流量来源。",
+      "verdict": "missing",
+      "action_or_retention": "保留观察，不据此诊断Article专属推荐长尾。",
+      "explanation": "48h常量属于特定普通候选AgeFilter；读取本候选ID，成功解出年龄且<=48h才通过，年龄未知也失败；其局部规则不能定全站寿命。",
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/config.rs#L38-L43",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/age_filter.rs#L16-L31",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L420-L444",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/thunder_source.rs#L103-L113",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/core_data_candidate_hydrator.rs#L141-L149",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/for_you_candidate_pipeline.rs#L219-L237",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/sources/push_to_home_source.rs#L18-L65"
+      ]
+    },
+    {
+      "claim_ids": [
+        "K03-070",
+        "K01-078",
+        "K02-038"
+      ],
+      "actual_evidence": "用户没有提供配图；这是一条格式选择导读。",
+      "verdict": "change",
+      "action_or_retention": "建议一张格式选择信息卡；不要造曝光曲线或后台截图。",
+      "explanation": "图片能帮助读者复用选择标准。V8.2首个可用媒体选择与photo_expand预测不是上传加分保证。",
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L314",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/params/param.rs#L367-L513",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L3-L155",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L57-L139"
+      ]
+    },
+    {
+      "claim_ids": [
+        "K03-020",
+        "K03-021"
+      ],
+      "actual_evidence": "未提供Article封面/内文图片；本次不制作Article。",
+      "verdict": "not_applicable",
+      "action_or_retention": "保留两种处理器差异到格式证据表，不声称检查实际封面。",
+      "explanation": "V5会处理Article封面与嵌入媒体，V8.2直接选择post.media，生产覆盖未知。",
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L107-L120",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L184",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L320"
+      ]
+    },
+    {
+      "claim_ids": [
+        "K02-037",
+        "K03-057"
+      ],
+      "actual_evidence": "成稿第二段先交代无法归因，第三段给格式选择。",
+      "verdict": "pass",
+      "action_or_retention": "保留结论在链接之前。",
+      "explanation": "读者不点研究文也能完成最初决策；不拖延答案来追求停留。",
+      "original_citations": []
+    },
+    {
+      "claim_ids": [
+        "K03-066",
+        "K03-065",
+        "K03-067"
+      ],
+      "actual_evidence": "只有“一周、>3K、其他几百”概述，未给各条发布日期、同名指标或推广记录。",
+      "verdict": "change",
+      "action_or_retention": "建议用多篇相近内容的发布后7天窗口；Article、导读Post分开记录，并记额外推广。",
+      "explanation": "7天取自这次持续一周的观察，便于比较长尾；不是最优算法周期，也不是随机实验。",
+      "original_citations": []
+    },
+    {
+      "claim_ids": [
+        "K03-062"
+      ],
+      "actual_evidence": "未提供其他账户数据。",
+      "verdict": "missing",
+      "action_or_retention": "所有缺失指标留空；不以内部dwell字段推算作者成绩。",
+      "explanation": "无法核验本次曝光指Article阅读、载体Post浏览还是其他字段。",
+      "original_citations": []
+    },
+    {
+      "claim_ids": [
+        "K04-086",
+        "K04-088"
+      ],
+      "actual_evidence": "用户提供 https://blog.go5.si/posts/zh/x-algorithm-teardown/；web open失败。",
+      "verdict": "missing",
+      "action_or_retention": "只标“进一步阅读”；发布前需打开确认当前目的页与可访问性。",
+      "explanation": "未阅读当前网页，不能承诺它包含某个未核对结论，也未检查完整重定向链。",
+      "original_citations": []
+    },
+    {
+      "claim_ids": [
+        "K04-085"
+      ],
+      "actual_evidence": "成稿末尾直接放进一步阅读链接；未提出移到首条回复的算法理由。",
+      "verdict": "pass",
+      "action_or_retention": "按寻找材料的便利性保留末尾链接。",
+      "explanation": "没有本次链接的曝光实验或内部URL评级，不能许诺移回复免罚。",
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/models/content_features.rs#L8-L19",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/scorers/vm_ranker_debias_payload.rs",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L919-L937",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker-rules/scarecrow/bot/LQ_Tweets_With_LQ_URL_Verdict_At_Mention_To_NonFollower_v2.bot#L4-L21"
+      ]
+    },
+    {
+      "claim_ids": [
+        "K05-053"
+      ],
+      "actual_evidence": "当前仅提供一段原文；无同主题历史发帖或重复推广清单。",
+      "verdict": "pass",
+      "action_or_retention": "这次重写新增选择标准与核对方法，不照抄成推广口号。",
+      "explanation": "只能判断本稿的信息增量，不能对未提供的账号重复内容作出PASS。",
+      "original_citations": []
+    },
+    {
+      "claim_ids": [
+        "K05-059"
+      ],
+      "actual_evidence": "成稿问“这是为什么？长文就该改发Article吗？”并在正文回答；没有求赞求转或标签堆砌。",
+      "verdict": "pass",
+      "action_or_retention": "保留具体问题，不添加泛化互动召唤。",
+      "explanation": "编辑质量判断；没有声称某个短语获得分类器安全通行。",
+      "original_citations": []
+    },
+    {
+      "claim_ids": [
+        "K05-106"
+      ],
+      "actual_evidence": "未来原因或指标定义若核实，会影响当前未决归因。",
+      "verdict": "pass",
+      "action_or_retention": "若新增证据改变结论，在原帖说明更正并发布可独立理解的更新。",
+      "explanation": "这是准确性与可发现性建议，不承诺再次分发。",
+      "original_citations": []
+    },
+    {
+      "claim_ids": [
+        "K03-045",
+        "K03-047",
+        "K03-048"
+      ],
+      "actual_evidence": "没有现有Article链接、发布状态、受众权限或标签数据。",
+      "verdict": "missing",
+      "action_or_retention": "不诊断账号受限、不宣称所有Article可见性相同。",
+      "explanation": "规则必须限定入口、属性与受众；本稿没有相关实测。",
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L247-L252",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L215-L256",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/article.rs#L19-L70",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/compound.rs#L44-L66",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/subscription_hydrator.rs#L48-L80",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ineligible_subscription_filter.rs#L8-L29",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L383-L444"
+      ]
+    },
+    {
+      "claim_ids": [
+        "K05-109"
+      ],
+      "actual_evidence": "正文v3由第三个独立新上下文读者完整顺读，PASS且停顿日志为空；图片仅方案，未制作。",
+      "verdict": "missing",
+      "action_or_retention": "保持已评审正文完全不变；正文冷读通过不涵盖未来图片。图片可读性仍需制作后检查。",
+      "explanation": "不能把文字方案检查写成图像已看过。",
+      "original_citations": []
+    }
+  ],
+  "six_layer_format_evidence": [
+    {
+      "layer": "对象/内容身份",
+      "finding": "BotMaker分别提取noteTweetId与articleId；此处是反滥用特征，身份差异不等于排序奖励。",
+      "ids": [
+        "K03-007"
+      ],
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java#L255-L263",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/botmaker/scarecrow_features/src/main/java/com/twitter/scarecrow/features/FeaturesOfTweet.java#L301-L311"
+      ]
+    },
+    {
+      "layer": "V8.2表征",
+      "finding": "非空full_text经清理后最多取4000字符；Article标题最多200字符，两分支可同时出现；直接选择post.media，不能据此断言Article正文永远不进入其他模型。",
+      "ids": [
+        "K03-009",
+        "K03-010",
+        "K03-011",
+        "K03-021"
+      ],
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L33-L50",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L165-L167",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L36-L52",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L174",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L317-L321",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/embedder_v82.py#L69-L92",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L140-L184",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer_v82.py#L285-L320"
+      ]
+    },
+    {
+      "layer": "V5表征",
+      "finding": "读取Article标题、封面、Post正文与普通媒体，之后可读嵌入媒体；有可用图像与预算条件。不能套用V8.2首媒体规则。",
+      "ids": [
+        "K03-020"
+      ],
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L65-L92",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/grox/flows/mm_emb/renderer.py#L107-L120"
+      ]
+    },
+    {
+      "layer": "行为/事件",
+      "finding": "点击、展开、详情曝光与停留有不同事件；Article页面枚举不能补齐客户端到标签的映射；不等于完读统计。",
+      "ids": [
+        "K03-031",
+        "K03-033",
+        "K03-034",
+        "K03-035"
+      ],
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L443-L490",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L513-L548",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs#L1-L31",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/constants.py#L125-L163",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/history_id_lists.py#L75-L98",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/python/common/xai-proto/proto/recsys.proto#L1274-L1298",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/xrex/data/recsys/recsys_batch.py#L810-L831",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/query_hydrators/scoring_sequence_query_hydrator.rs#L92-L117",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/phoenix/README.md#L9-L21"
+      ]
+    },
+    {
+      "layer": "候选与评分",
+      "finding": "所查最终输入与融合没有显式Article倍率；研究限定流中没找到Article专属配额，FairShare按来源分组。不能推成全站完全相同或固定收益。",
+      "ids": [
+        "K03-039",
+        "K03-040",
+        "K03-041",
+        "K03-043"
+      ],
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L345-L381",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L446-L508",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/fair_share_ranking_filter.rs#L44-L65",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/inputs.rs#L1-L22",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/phoenix_scores.rs#L1-L31",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L68-L143",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L28-L139"
+      ]
+    },
+    {
+      "layer": "可见性",
+      "finding": "未发布Article过滤规则注册在TimelineHomeHydration；媒体和订阅属性也有具体检查；只通过一项不代表推荐保证。",
+      "ids": [
+        "K03-045",
+        "K03-047",
+        "K03-048"
+      ],
+      "original_citations": [
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/tweet_rules.rs#L247-L252",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/levels.rs#L215-L256",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/golden_corpus/article.rs#L19-L70",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/visibility-filtering/rules/rule_spec/features/compound.rs#L44-L66",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_hydrators/subscription_hydrator.rs#L48-L80",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/filters/ineligible_subscription_filter.rs#L8-L29",
+        "https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs#L383-L444"
+      ]
+    }
+  ],
+  "protected_observation_source": "user-original.txt",
+  "source_cutoff": "2026-10-29",
+  "baseline_commit": "5ed796374ea48ee26058aab66ab10c266bea2bef",
+  "corrections_consulted": "research-errata.md, 2026-10-31, especially KB-F02",
+  "production_configuration_verified": false,
+  "reader_review": {
+    "mode": "cold",
+    "status": "pass",
+    "completed_rounds": 3,
+    "budget": 3,
+    "reviewed_scope": "exact v3 introductory Post including opening, complete body, further-reading label and URL; text only, no media",
+    "final_draft": "revised-post-v3.txt",
+    "final_sha256": "b74183247bbbe2eb0e0f8b9edca347ec68fa1d6fce18bfe281d1f17dcb2bc487",
+    "unresolved_stalls": [],
+    "round_results": [
+      {
+        "round": 1,
+        "draft": "revised-post-v1.txt",
+        "result": "FAIL",
+        "record": "cold-review-v1.json"
+      },
+      {
+        "round": 2,
+        "draft": "revised-post-v2.txt",
+        "result": "FAIL",
+        "record": "cold-review-v2.json"
+      },
+      {
+        "round": 3,
+        "draft": "revised-post-v3.txt",
+        "result": "PASS",
+        "record": "cold-review-v3.json"
+      }
+    ],
+    "limits": "Editorial readability only; no factual verification, account analytics, image inspection or research webpage reading."
+  }
+}
