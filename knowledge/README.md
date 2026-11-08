@@ -2,6 +2,8 @@
 
 ## Structure
 
+- `algorithm-updates.json`: dated follow-up findings, affected historical IDs, fixed-revision evidence and the last reviewed upstream checkpoint. These are separate from the 578 original claims.
+
 - `topic-00.json` through `topic-06.json`: English claims, checks and unresolved questions.
 - `sources.json`: original reference registry with English descriptive labels and unchanged URLs.
 - `source-units.json`: exact report positions and original text hashes; section names are translated metadata.
@@ -22,6 +24,8 @@ Working claims can correct historical text without changing its provenance. The 
 From the repository root:
 
 ```bash
+python3 tools/knowledge.py updates
+python3 tools/knowledge.py updates A20261108-01
 python3 tools/knowledge.py catalog
 python3 tools/knowledge.py search "posting frequency"
 python3 tools/knowledge.py get K03-001
@@ -42,3 +46,9 @@ These commands are offline and require Python 3.9+. Inside an installed skill, r
 5. Rebuild, validate and exercise affected user scenarios. Offline structure checks are not source availability or live deployment verification.
 
 The initial corpus retains all original entries for traceability. Consolidation is possible in a future release only with an explicit old-to-new mapping and unchanged report coverage.
+
+## Repeatable upstream review
+
+The latest review and complete commit interval are in [ALGORITHM_CHANGELOG.md](../ALGORITHM_CHANGELOG.md). Run `python tools/check_upstream.py` from the repository root to compare the recorded checkpoint with upstream `main`. The weekly/manual GitHub workflow only reports differences; neither command edits the corpus or advances the checkpoint.
+
+For each synchronization, inspect the complete diff and intermediate commits (a setting can change and revert), trace relevant call sites and feature switches, then update the dated findings, affected-ID mappings, public research supplement and changelog together. Keep original research provenance unchanged. Archive each reviewed state through a version tag, append a new changelog section with exact base/head, and advance the checkpoint only after review and validation. Rebuild all eight skills and publish the tested version. Installed copies update when reinstalled or updated by their host; monitoring does not silently replace them.

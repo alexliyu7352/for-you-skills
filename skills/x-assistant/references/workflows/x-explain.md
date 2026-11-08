@@ -9,6 +9,8 @@ For a new natural-language request, use `x-assistant` first when installed. If t
 
 Answer the question in the user's language. Use [the evidence guide](../knowledge-guide.md) to retrieve all relevant English entries, their conditions, original sources and unresolved questions. This specialist works independently; the router is optional.
 
+For claims about the present algorithm, first read the dated-update procedure in [the knowledge guide](../knowledge-guide.md). Apply relevant current updates alongside historical claims, and state the reviewed revision when it matters.
+
 ## Procedure
 
 1. Identify the actual decision or mechanism. Reuse context. A general question needs no draft, account URL or analytics export.

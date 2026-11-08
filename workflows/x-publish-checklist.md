@@ -9,6 +9,8 @@ For a new natural-language request, use `x-assistant` first when installed. If t
 
 This is a full evidence-based draft review, including concrete edits. Use [the evidence guide](references/knowledge-guide.md); screen every topic, then evaluate all applicable entries. Answer in the user's language. General algorithm questions belong to the explanation workflow, not a forced draft audit.
 
+For claims about the present algorithm, first read the dated-update procedure in [the knowledge guide](references/knowledge-guide.md). Apply relevant current updates alongside historical claims, and state the reviewed revision when it matters.
+
 ## Review
 
 1. Read the full supplied draft and media. Identify format, target reader and intended result from the material. Keep Article title, introduction/carrier and body separate; review each Thread part. Missing media is not a reason to skip a media recommendation.

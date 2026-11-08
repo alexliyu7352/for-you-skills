@@ -2,11 +2,27 @@
 
 ## Scope and provenance
 
-This corpus distills the complete research report, including its 49 unresolved questions. Its research cutoff is **2026-10-29**, baseline code revision `5ed796374ea48ee26058aab66ab10c266bea2bef`, comparison revision `606b254b45be798bfaecfa8c23f5a9c51bc8000c`. A public default, a function existing, production deployment and measured exposure are different claims.
+This corpus distills the complete research report, including its 49 unresolved questions. Its original research cutoff is **2026-10-29**, baseline code revision `5ed796374ea48ee26058aab66ab10c266bea2bef`, comparison revision `606b254b45be798bfaecfa8c23f5a9c51bc8000c`. A public default, a function existing, production deployment and measured exposure are different claims.
 
 The English entries are the working reference. `research-report.md` retains the original Chinese source for provenance; an English-speaking user does not need to read it. Source IDs resolve to original URLs, not citations to this skill itself.
 
 Read [research errata](research-errata.md) when an entry has `correction` metadata or when comparing working knowledge with the archived report. Use the corrected entry's conditions and its `correction.sources` alongside the original citations. `origin=original_report` identifies an error inherited from the report; `origin=english_distillation` identifies a later wording error. The archived report and `original U...` command preserve the historical text and may therefore contain the documented error. Do not silently treat an archived sentence as overruling a verified correction, or present an unresolved historical check as independently reproduced.
+
+## Dated updates and present-tense answers
+
+The bundled follow-up review is dated **2026-11-08**, covering seven upstream commits after `606b254b45be798bfaecfa8c23f5a9c51bc8000c` through `3b6919f87532e57063bb3f1e85c2f509323b513e`. Read the update catalog before applying historical claims to a present-tense question:
+
+```bash
+python3 scripts/knowledge.py updates
+python3 scripts/knowledge.py updates A20261108-01
+python3 scripts/knowledge.py get K01-071 Q03
+```
+
+`get` returns the historical claims plus applicable `current_updates`; `search` returns both historical matches and matching current updates. `updates` without IDs lists every new finding, including subjects absent from the original report. Read the full relevant updates and their fixed-revision sources, not just a search summary. The `research_through` field always describes the original report; `current_coverage.reviewed_at` and `snapshot` describe the follow-up review. When Python is unavailable, read [algorithm-updates.json](knowledge/algorithm-updates.json) directly.
+
+For a current-code question, apply the later finding only to its named service, surface and condition; use the old entry for its historical context and unchanged details. For a historical question, identify the requested revision and retain that version's numbers. An unchanged finding means the compared code was rechecked, not that every model weight or production switch was verified. Unknowns stay open unless the new evidence actually resolves them. If the bundled update file is missing, say that only the original cutoff is available; do not claim current coverage.
+
+Answer in this order: what changed for the user's decision, what to do, what remains uncertain, and the supporting source. Explain a specialized term at first use. For example: "The published Home Mixer setting puts more weight on predicted reading time. That does not guarantee 25% more impressions. Keep the useful information easy to reach; do not pad the post." Name the service when giving its coefficient. Keep model-training settings, retrieval, scoring and display separate. Summarize technical internals only when they affect the decision or the user requests them.
 
 ## Topic map
 

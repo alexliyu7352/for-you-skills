@@ -16,3 +16,5 @@ Read and execute [the visual workflow](../visual-workflow.md). It contains the c
 5. Inspect the result for text, numbers, source fidelity, order, first-image meaning and style consistency. Deliver actual artifacts and concise alt text; verify any agreed preference save separately. Do not publish automatically.
 
 Preference operations can run alone when that is the user's whole request. Independent installation includes the helper and all necessary instructions; no sibling skill or particular image provider is required.
+
+For claims about the present algorithm, first read the dated-update procedure in [the knowledge guide](../knowledge-guide.md). Apply relevant current updates alongside historical claims, and state the reviewed revision when it matters.

@@ -16,3 +16,5 @@ Use [the evidence guide](references/knowledge-guide.md), especially topic 03 and
 5. Do not select a winner from unmatched lifetime view counts. If comparing performance, propose comparable topics, observation windows, audience/promotion context and metric scopes. Record assumptions rather than claim Article superiority or a format-specific bonus.
 
 Measure actual complete text with `python3 scripts/inspect_draft.py --text draft.txt` when Python is available; otherwise use the measurement fallback in the evidence guide. Treat 4000/200-character code paths according to their exact scope, not as universal publishing limits. A navigation/reading benefit is an editorial reason, not evidence of an algorithm bonus.
+
+For claims about the present algorithm, first read the dated-update procedure in [the knowledge guide](references/knowledge-guide.md). Apply relevant current updates alongside historical claims, and state the reviewed revision when it matters.

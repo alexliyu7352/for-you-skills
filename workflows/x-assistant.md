@@ -7,6 +7,8 @@ description: Use when a user mentions X.com or Twitter and asks for posting advi
 
 Handle natural-language requests without asking users to remember skill names. Respond in their language. Read [the routing table](references/routing.json), select the smallest useful workflow set, and read each selected workflow before execution. A letter x in an unrelated problem is not a platform request.
 
+For claims about the present algorithm, first read the dated-update procedure in [the knowledge guide](references/knowledge-guide.md). Apply relevant current updates alongside historical claims, and state the reviewed revision when it matters.
+
 ## Route and execute
 
 1. Recover the user's actual goal, supplied text/URLs/screenshots, selected format and relevant prior observations. A follow-up modifies the active task; do not restart completed collection or checks unless the material changed.

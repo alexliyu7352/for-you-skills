@@ -16,3 +16,5 @@ Use [the evidence guide](../knowledge-guide.md). Answer in the user's language. 
 5. If requested, return a corrected passage preserving the author's meaning and voice. Separate corrected copy from your explanation. Current or uncovered claims require fresh primary-source research, clearly labeled.
 
 Use a compact table when comparing multiple claims. For a single claim use a direct paragraph. Never turn predicted-action weights into fixed payouts per observed action, a candidate count into a daily quota, or a mechanism's existence into a measured reach increase. For “the second daily post loses 40%”, check exactly what the count and multiplier apply to before giving publishing advice.
+
+For claims about the present algorithm, first read the dated-update procedure in [the knowledge guide](../knowledge-guide.md). Apply relevant current updates alongside historical claims, and state the reviewed revision when it matters.

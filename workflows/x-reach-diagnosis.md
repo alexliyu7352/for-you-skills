@@ -18,3 +18,5 @@ Use [the evidence guide](references/knowledge-guide.md). For direct inspection u
 For “an Article has 3K views after a week; Posts have hundreds”, acknowledge the observed difference and ongoing exposure. Check the two measurement objects and ages, then inspect distribution/promotion and content differences. Explain plausible mechanisms with sources while retaining the unknown cause. Give a concrete next publishing/measurement decision without calling Article a universal winner.
 
 Lead with what the user should do, then known facts, unresolved causes and discriminating checks. Link original evidence next to explanations. No automatic reposts, settings changes, appeals or deletion.
+
+For claims about the present algorithm, first read the dated-update procedure in [the knowledge guide](references/knowledge-guide.md). Apply relevant current updates alongside historical claims, and state the reviewed revision when it matters.

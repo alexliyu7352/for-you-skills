@@ -72,6 +72,7 @@ def validate_repository(root=ROOT):
     try:
         original = (root/'provenance/research-report.zh-CN.md').read_bytes()
         registry, units, topics, claims = knowledge.load(root/'knowledge', report=original)
+        updates = knowledge.load_updates(root/'knowledge', {c['id'] for c in claims})
         baseline = knowledge.read_json(root/'provenance/migration-baseline.json')
     except knowledge.KnowledgeError as exc:
         return exc.errors, {}
@@ -116,6 +117,7 @@ def validate_repository(root=ROOT):
                     errors.append(f'Broken local reference {page.relative_to(root)} -> {target}')
     errors.extend('Generated drift: '+p for p in build.check(root))
     return errors, {'claims':len(claims), 'unknowns':49, 'source_groups':len(registry['sources']),
+                    'current_coverage':knowledge.update_coverage(updates),
                     'required_units':sum(u['kind']!='anchor' for u in units),
                     'covered_units':len({u for c in claims for u in c['source_units']}),
                     'unique_urls':len({url for group in urls.values() for url in group})}

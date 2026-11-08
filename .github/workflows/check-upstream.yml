@@ -1,0 +1,59 @@
+name: Check upstream algorithm
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - knowledge/algorithm-updates.json
+      - tools/check_upstream.py
+      - .github/workflows/check-upstream.yml
+  schedule:
+    - cron: '17 8 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compare upstream with reviewed snapshot
+        run: python tools/check_upstream.py > upstream-comparison.json
+      - name: Preserve complete comparison
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: upstream-comparison
+          path: upstream-comparison.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Record read-only comparison
+        if: always()
+        shell: python
+        run: |
+          import json
+          import os
+          from pathlib import Path
+
+          path = Path('upstream-comparison.json')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              try:
+                  report = json.loads(path.read_text(encoding='utf-8'))
+              except (OSError, ValueError):
+                  summary.write('Upstream comparison failed. See the check step logs; no clean result is available.\n')
+              else:
+                  summary.write('## Upstream algorithm comparison\n\n')
+                  summary.write(f"Status: **{report['status']}**\n\n")
+                  summary.write(f"Last reviewed: {report['reviewed_at']}\n\n")
+                  summary.write(f"Base: `{report['base']}`\n\nHead: `{report['head']}`\n\n")
+                  summary.write(f"Commits: {report['commit_count']}; changed paths: {report['changed_file_count']}.\n\n")
+                  summary.write(f"[Review upstream changes]({report['compare_url']})\n\n")
+                  summary.write('This check does not update the checkpoint, knowledge, or skills. '
+                                'A review_required result requires a separate source review.\n')

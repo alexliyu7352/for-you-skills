@@ -9,6 +9,8 @@ For a new natural-language request, use `x-assistant` first when installed. If t
 
 Use [the evidence guide](../knowledge-guide.md), [browsing procedure](../browsing.md) and [observation contract](../observations.md). Answer in the user's language. This specialist provides content review, not a causal verdict from view counts.
 
+For claims about the present algorithm, first read the dated-update procedure in [the knowledge guide](../knowledge-guide.md). Apply relevant current updates alongside historical claims, and state the reviewed revision when it matters.
+
 ## Collect
 
 Reuse confirmed URLs and prior observations. Follow the user's scope. With no count specified, review the latest 20 authored non-pinned items, plus the pinned item and up to five recent Articles, deduplicating actual content identities. This is a workload default, not posting advice. Related author Thread parts, corrections and quoted sources are supporting material. For an explicitly larger scope, continue in batches rather than present the default sample as the whole history.

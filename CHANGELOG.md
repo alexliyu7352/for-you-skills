@@ -1,6 +1,12 @@
 # Changelog
 
-## Unreleased
+## 1.3.0 — 2026-11-08
+
+- Review seven upstream algorithm commits through `3b6919f87532e57063bb3f1e85c2f509323b513e`; add 14 dated findings and rechecks linked to 73 historical entries, preserving all 578 original entries and their provenance.
+- Update all eight skills to retrieve current evidence alongside the historical report. Distinguish Home Mixer and VM Ranker defaults, feature gates, training changes and production uncertainty.
+- Add a separate [algorithm changelog](ALGORITHM_CHANGELOG.md), a [Chinese research update](docs/research-update.zh-CN.md), and a read-only weekly/manual upstream difference check. A new upstream commit requires review; it does not automatically rewrite skills.
+- Include the previously unreleased reader-review improvements described below and in 1.2.0.
+
 
 - Remove internal planning, review and progress documents from the repository and release-tag histories. Keep public validation instructions and demonstration evidence.
 - Pin the Python 3.9 CI job to Ubuntu 24.04, where the requested interpreter is available.
@@ -42,4 +48,4 @@
 - Add reproducible independent skill bundles, offline evidence helpers and distribution checks.
 - Replace the earlier `x-review-draft` role with `x-publish-checklist`; retain and narrow `x-review-posts` to published-content inspection.
 
-Research snapshot: 2026-10-29. Validation scope and runtime limitations are recorded in `docs/validation/results.md`.
+Original research snapshot: 2026-10-29; follow-up source review: 2026-11-08 through `3b6919f`. Validation scope and runtime limitations are recorded in `docs/validation/results.md`.

@@ -6,7 +6,9 @@
 
 You can ask **For You Skills** questions like this before you have a draft. Ask about posting frequency, ranking weights, links, images, or whether to publish a long Post or an Article on X.com / Twitter. It looks up the research, links to the relevant lines of public recommendation code, and explains what you can decide from them. Bring a draft or post analytics and it can also suggest edits or help investigate a change in reach.
 
-**8 skills · 578 knowledge entries · 396 original source URLs · 49 unresolved questions preserved**
+**8 skills · 578 original knowledge entries + 14 dated updates and rechecks · 49 unresolved questions preserved**
+
+**v1.3.0: upstream source reviewed through 2026-11-08.** [What changed](ALGORITHM_CHANGELOG.md) · [中文说明](docs/research-update.zh-CN.md) · [Release notes](CHANGELOG.md)
 
 [Read the full research](https://blog.go5.si/posts/x-algorithm-teardown/) · [Follow the author for updates](https://x.com/alexlee20122022)
 
@@ -22,7 +24,7 @@ npx skills add alexliyu7352/for-you-skills --skill x-assistant
 
 **What the code establishes:** `author_pool_counts` sorts the posts being considered for a reader by score, then counts each author's posts from zero. The count starts afresh on every call. With author diversity enabled and the published VM Ranker defaults, the multiplier is `0.75 × 0.5^k + 0.25`, where `k` is that count: `1` for your highest-scoring candidate, `0.625` for your second and `0.4375` for your third. Your afternoon post could rank first. **The second-ranked candidate in this calculation is not necessarily your second post of the day.** [Counting and multiplier code](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/xai-value-model/scoring.rs#L183-L237) · [Default settings](https://github.com/xai-org/x-algorithm/blob/5ed796374ea48ee26058aab66ab10c266bea2bef/vm-ranker/params.rs#L169-L197)
 
-**What remains uncertain:** `0.625` is a score multiplier, not a prediction that a post keeps 62.5% of its impressions. This function supplies no daily quota or four-hour reset. It also does not establish which candidates or settings a live request uses, or your account's best posting interval. A different topic can give readers something new; it does not bypass a count based on author ID. These conclusions refer to public snapshot `5ed7963`, not verified current production settings. [Complete original answer and worked example (Chinese)](docs/demo/run-record.zh-CN.md#原始运营问答输出)
+**What remains uncertain:** `0.625` is a score multiplier, not a prediction that a post keeps 62.5% of its impressions. This function supplies no daily quota or four-hour reset. It also does not establish which candidates or settings a live request uses, or your account's best posting interval. A different topic can give readers something new; it does not bypass a count based on author ID. This counting behavior was rechecked at `3b6919f`; effective production settings remain unverified. [Complete original answer and worked example (Chinese)](docs/demo/run-record.zh-CN.md#原始运营问答输出)
 
 Installation checked for **Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot and OpenCode**. The assistant answers in your language. [Installation options](#installation) · [Validation report](docs/validation/results.md)
 
@@ -118,7 +120,7 @@ Automatic discovery depends on the host and model. If needed, point your agent t
 
 ## The research ships with the skills
 
-The complete report was distilled into **578 English entries, including 49 unresolved questions**, covering **668 substantive source units**, **100 reference groups** and **396 unique original URLs**. The original Chinese report is retained for provenance.
+The complete report was distilled into **578 English entries, including 49 unresolved questions**, covering **668 substantive source units**, **100 reference groups** and **396 unique original URLs**. The original Chinese report is retained for provenance. A separate **14-entry follow-up review dated 2026-11-08** supplies current changes and rechecks; affected historical lookups return the newer evidence alongside the original claim.
 
 Each entry records the conclusion, its conditions, practical implications, what to check, what to say when evidence is missing, its limits and its original citations. Relevant references include source files, line ranges, constants, formulas and change history.
 
@@ -135,7 +137,7 @@ Want to understand the reasoning behind the skills? Read the original research f
 
 The research and skills will be updated as the [X.com / Twitter algorithm repository's main branch](https://github.com/xai-org/x-algorithm) evolves. Updates will identify the analyzed revision and research date so findings remain traceable. Follow [@alexlee20122022 on X.com](https://x.com/alexlee20122022) for new findings, research progress and skill updates.
 
-The research cutoff listed below describes the current bundled knowledge; installing the skills does not automatically pull future upstream changes.
+A weekly/manual repository check reports new upstream commits for review. It does not rewrite conclusions or publish skills automatically. Existing installations receive new evidence when their host updates or reinstalls the skills.
 
 ## Installation
 
@@ -164,7 +166,7 @@ Installation has been checked for six target agents. The public demonstrations p
 
 ## Research scope
 
-Research cutoff: **2026-10-29**. Baseline revision: `5ed796374ea48ee26058aab66ab10c266bea2bef`; comparison revision: `606b254b45be798bfaecfa8c23f5a9c51bc8000c`. These are public-code snapshots. Questions about current product behavior or deployment require fresh primary sources where available.
+Original report cutoff: **2026-10-29**, baseline `5ed7963`, comparison `606b254`. Follow-up review: **2026-11-08**, covering seven commits from `606b254` through `3b6919f`. The original report stays unchanged; later conclusions retain their date, scope and sources. Public code presence and defaults do not establish availability or effective settings for every production request.
 
 The package does not calculate a proprietary exposure score or guarantee distribution. Public views, Home impressions, Article page counts and unique readers retain their different meanings. It reviews and advises; publishing, editing, deleting or engaging with live posts requires a separate user request and the host's authorization.
 

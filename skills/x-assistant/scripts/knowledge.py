@@ -41,9 +41,19 @@ class KnowledgeError(ValueError):
         super().__init__('; '.join(errors))
 
 
-def read_json(path):
+def _unique_json_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError('duplicate JSON field ' + key)
+        result[key] = value
+    return result
+
+
+def read_json(path, reject_duplicate_keys=False):
     try:
-        return json.loads(path.read_text(encoding='utf-8'))
+        return json.loads(path.read_text(encoding='utf-8'),
+                          object_pairs_hook=_unique_json_object if reject_duplicate_keys else None)
     except (OSError, UnicodeError, ValueError) as exc:
         raise KnowledgeError([f'{path.name}: cannot read JSON: {exc}']) from exc
 
@@ -106,6 +116,191 @@ def load(root=ROOT, report=None):
     claims = [dict(c, topic=topic['topic'], topic_file=name)
               for name, topic in documents for c in topic['claims']]
     return registry, units, topics, claims
+
+
+def load_updates(root=ROOT, claim_ids=None):
+    """Load the independently versioned upstream review, without rewriting claims.
+
+    The file is required by this API. Historical corpora may still use load()
+    without it. Callers that already loaded the corpus can supply its claim IDs
+    to avoid loading and checking the same report twice.
+    """
+    root = Path(root)
+    document = read_json(root / 'algorithm-updates.json', reject_duplicate_keys=True)
+    errors = []
+    label = 'algorithm-updates.json'
+    fields = {'schema_version', 'repository', 'reviewed_at', 'base_snapshot',
+              'snapshot', 'commits', 'entries'}
+    if not isinstance(document, dict):
+        raise KnowledgeError([label + ': root must be an object'])
+    if set(document) != fields:
+        errors.append(label + ' must contain exactly ' + ', '.join(sorted(fields)))
+    if type(document.get('schema_version')) is not int or document['schema_version'] != 1:
+        errors.append(label + '.schema_version must be 1')
+    if document.get('repository') != 'xai-org/x-algorithm':
+        errors.append(label + '.repository must be xai-org/x-algorithm')
+    _date(document.get('reviewed_at'), label + '.reviewed_at', errors)
+    snapshots_valid = True
+    for field in ('base_snapshot', 'snapshot'):
+        snapshots_valid = _sha1(document.get(field), label + '.' + field, errors) and snapshots_valid
+    if snapshots_valid and document['base_snapshot'] == document['snapshot']:
+        errors.append(label + ': base_snapshot and snapshot must differ')
+    commits = document.get('commits')
+    commits_valid = _unique_strings(commits, label + '.commits', errors, nonempty=True)
+    if commits_valid:
+        for index, commit in enumerate(commits):
+            commits_valid = _sha1(commit, f'{label}.commits[{index}]', errors) and commits_valid
+        if snapshots_valid:
+            if commits[-1] != document['snapshot']:
+                errors.append(label + '.commits must end at snapshot')
+            if document['base_snapshot'] in commits:
+                errors.append(label + '.commits must exclude base_snapshot')
+    if claim_ids is None:
+        claim_ids = {c['id'] for c in load(root)[3]}
+    else:
+        try:
+            if isinstance(claim_ids, (str, bytes)):
+                raise TypeError
+            claim_ids = set(claim_ids)
+            if not all(isinstance(ident, str) for ident in claim_ids):
+                raise TypeError
+        except TypeError as exc:
+            raise KnowledgeError(['claim_ids must be an iterable of claim ID strings']) from exc
+    topic_ids = {match.group(1) for path in root.glob('topic-*.json')
+                 for match in [re.fullmatch(r'topic-(\d{2})\.json', path.name)] if match}
+    entries = document.get('entries')
+    entry_fields = {'id', 'title', 'status', 'topics', 'affects', 'summary',
+                    'details', 'practical_meaning', 'limits', 'evidence'}
+    ids = set()
+    if _list(entries, label + '.entries', errors, nonempty=True):
+        for index, entry in enumerate(entries):
+            location = f'{label}.entries[{index}]'
+            if not isinstance(entry, dict):
+                errors.append(location + ' must be an object')
+                continue
+            if set(entry) != entry_fields:
+                errors.append(location + ' must contain exactly ' + ', '.join(sorted(entry_fields)))
+            ident = entry.get('id')
+            if not isinstance(ident, str) or not re.fullmatch(r'A\d{8}-\d{2,}', ident):
+                errors.append(location + '.id must be an update ID such as A20261108-01')
+            else:
+                if ident in ids:
+                    errors.append('duplicate update ID ' + ident)
+                ids.add(ident)
+            for field in ('title', 'summary', 'practical_meaning'):
+                _string(entry.get(field), location + '.' + field, errors)
+            if entry.get('status') not in ('changed', 'unchanged'):
+                errors.append(location + '.status must be changed or unchanged')
+            for field in ('details', 'limits'):
+                _unique_strings(entry.get(field), location + '.' + field, errors, nonempty=True)
+            for field, allowed, description in (('topics', topic_ids, 'topic'),
+                                                 ('affects', claim_ids, 'affected claim')):
+                if _unique_strings(entry.get(field), location + '.' + field, errors,
+                                   nonempty=(field == 'topics')):
+                    for reference in entry[field]:
+                        if reference not in allowed:
+                            errors.append(f'{location}: unknown {description} {reference}')
+            evidence = entry.get('evidence')
+            if _list(evidence, location + '.evidence', errors, nonempty=True):
+                urls = set()
+                for number, item in enumerate(evidence):
+                    evidence_label = f'{location}.evidence[{number}]'
+                    if not isinstance(item, dict):
+                        errors.append(evidence_label + ' must be an object')
+                        continue
+                    if set(item) != {'label', 'url'}:
+                        errors.append(evidence_label + ' must contain exactly label, url')
+                    _string(item.get('label'), evidence_label + '.label', errors)
+                    url = item.get('url')
+                    if isinstance(url, str):
+                        if url in urls:
+                            errors.append(evidence_label + ': duplicate evidence URL')
+                        urls.add(url)
+                    if (not snapshots_valid or not commits_valid or
+                            not _pinned_update_url(url, document)):
+                        errors.append(evidence_label + '.url must be a pinned GitHub blob at base_snapshot '
+                                      'or snapshot, a reviewed commit, or the exact base...snapshot comparison')
+    if errors:
+        raise KnowledgeError(errors)
+    return document
+
+
+def _sha1(value, label, errors):
+    if not isinstance(value, str) or not re.fullmatch(r'[0-9a-f]{40}', value):
+        errors.append(label + ' must be a full commit SHA (40 lowercase hexadecimal characters)')
+        return False
+    return True
+
+
+def _unique_strings(value, label, errors, nonempty=False):
+    if not _list(value, label, errors, nonempty=nonempty):
+        return False
+    if not _strings(value, label, errors):
+        return False
+    if len(value) != len(set(value)):
+        errors.append(label + ' must not contain duplicates')
+        return False
+    return True
+
+
+def _pinned_update_url(url, document):
+    if not isinstance(url, str) or re.search(r'\s', url):
+        return False
+    try:
+        parsed = urlsplit(url)
+    except ValueError:
+        return False
+    prefix = '/xai-org/x-algorithm/'
+    if (parsed.scheme != 'https' or parsed.netloc != 'github.com' or
+            parsed.query or not parsed.path.startswith(prefix)):
+        return False
+    path = parsed.path[len(prefix):]
+    parts = path.split('/')
+    if parts[0] == 'blob' and len(parts) >= 3:
+        return (parts[1] in (document['base_snapshot'], document['snapshot']) and
+                all(part not in ('', '.', '..') and '%' not in part for part in parts[2:]))
+    if parts[0] == 'commit' and len(parts) == 2:
+        return parts[1] in [document['base_snapshot'], *document['commits']]
+    return path == 'compare/' + document['base_snapshot'] + '...' + document['snapshot']
+
+
+def update_coverage(document):
+    """Describe reviewed public source coverage separately from report dates."""
+    if document is None:
+        return None
+    entries = document['entries']
+    return {**{field: document[field] for field in
+               ('repository', 'reviewed_at', 'base_snapshot', 'snapshot')},
+            'commit_count': len(document['commits']), 'update_count': len(entries),
+            'changed_count': sum(e['status'] == 'changed' for e in entries),
+            'unchanged_count': sum(e['status'] == 'unchanged' for e in entries),
+            'affected_claim_count': len({ident for e in entries for ident in e['affects']}),
+            'scope': 'Reviewed public source changes; not current production deployment verification.'}
+
+
+def search_updates(entries, query, limit=8, claim_ids=()):
+    """Retrieve new vocabulary and reviews attached to historical matches."""
+    query_terms = terms(query)
+    literal_query = query.strip().lower()
+    selected = set(claim_ids)
+    ranked = []
+    for entry in entries:
+        title = entry['title'].lower()
+        body = ' '.join([entry['summary'], entry['practical_meaning'],
+                         *entry['details'], *entry['limits']]).lower()
+        score = sum((8 if term in title else 0) + (1 if term in body else 0)
+                    for term in query_terms)
+        # A new field's exact name must outrank broad synonym expansions such
+        # as "weight"; otherwise the new vocabulary can disappear at limit=1.
+        if query_terms and literal_query and (literal_query in title or literal_query in body):
+            score += 100
+        if query.lower() == entry['id'].lower():
+            score += 10000
+        if selected.intersection(entry['affects']):
+            score += 4
+        if score:
+            ranked.append((score, entry))
+    return sorted(ranked, key=lambda pair: (-pair[0], pair[1]['id']))[:limit]
 
 
 def expand_claim(claim, sources):
@@ -401,6 +596,8 @@ def main():
     catalog.add_argument('--all-rules', action='store_true', help='Include every rule and trigger; potentially large output.')
     get = sub.add_parser('get', help='Return exact claims and their resolved original links.')
     get.add_argument('ids', nargs='+')
+    updates_parser = sub.add_parser('updates', help='List versioned upstream findings, or read selected update IDs.')
+    updates_parser.add_argument('ids', nargs='*')
     search = sub.add_parser('search', help='Lexical/synonym retrieval; inspect results, not an exhaustive semantic oracle.')
     search.add_argument('query')
     search.add_argument('--limit', type=int, default=8)
@@ -413,6 +610,8 @@ def main():
     try:
         report = REPORT.read_bytes()
         registry, units, topics, claims = load(report=report)
+        updates = (load_updates(claim_ids={c['id'] for c in claims})
+                   if (ROOT / 'algorithm-updates.json').is_file() else None)
     except (KnowledgeError, OSError) as exc:
         errors = exc.errors if isinstance(exc, KnowledgeError) else [f'Cannot read report: {exc}']
         if args.command == 'audit':
@@ -421,12 +620,16 @@ def main():
         parser.error('Invalid knowledge corpus: ' + '; '.join(errors))
     sources = registry['sources']
     by_id = {c['id']:c for c in claims}
+    entries = updates['entries'] if updates else []
+    coverage = update_coverage(updates)
     if args.command == 'catalog':
         subset = claims
         if args.topic:
             subset = [c for c in claims if args.topic.lower() in (c['topic_file']+' '+c['topic']).lower()]
         result = {'snapshot':registry['snapshot'], 'research_through':registry['research_through'],
-                  'topics':[{'file':t['file'],'topic':t['topic'],'rule_count':len(t['ids'])} for t in topics]}
+                  'current_coverage':coverage,
+                  'topics':[{'file':t['file'],'topic':t['topic'],'rule_count':len(t['ids']),
+                             'update_count':sum(t['file'][6:8] in e['topics'] for e in entries)} for t in topics]}
         if args.topic or args.all_rules:
             result['rules'] = [{'id':c['id'],'title':c['title'],'kind':c['kind'],'when':c['check']['when']} for c in subset]
         else:
@@ -438,10 +641,30 @@ def main():
             parser.error('Unknown claim IDs: '+', '.join(missing))
         selected = [by_id[i] for i in args.ids]
         output({'research_through':registry['research_through'],'claims':[expand_claim(c,sources) for c in selected],
+                'original_snapshot':registry['snapshot'], 'current_coverage':coverage,
+                'current_updates':[e for e in entries if set(args.ids).intersection(e['affects'])],
                 'related_unknowns':sorted({q for c in selected for q in c['related_unknowns']})})
+    elif args.command == 'updates':
+        by_update_id = {e['id']:e for e in entries}
+        missing = [ident for ident in args.ids if ident not in by_update_id]
+        if missing:
+            parser.error('Unknown update IDs: ' + ', '.join(missing))
+        result = {'research_through':registry['research_through'],
+                  'original_snapshot':registry['snapshot'], 'current_coverage':coverage}
+        if args.ids:
+            result['entries'] = [by_update_id[ident] for ident in args.ids]
+        else:
+            result['entries'] = [{field:e[field] for field in
+                                  ('id', 'title', 'status', 'topics', 'affects', 'summary')} for e in entries]
+            result['next_step'] = 'Use updates AYYYYMMDD-NN for full findings and fixed source evidence.'
+        output(result)
     elif args.command == 'search':
+        matches = search_claims(claims, args.query, max(1, args.limit))
         output({'retrieval':'lexical with topic synonyms; read topic catalog if relevant coverage is unclear',
-                'results':[{'match_score':s,'id':c['id'],'title':c['title'],'kind':c['kind'],'topic_file':c['topic_file'],'when':c['check']['when']} for s,c in search_claims(claims,args.query,max(1,args.limit))]})
+                'research_through':registry['research_through'], 'current_coverage':coverage,
+                'results':[{'match_score':s,'id':c['id'],'title':c['title'],'kind':c['kind'],'topic_file':c['topic_file'],'when':c['check']['when']} for s,c in matches],
+                'current_updates':[dict(e, match_score=s) for s,e in search_updates(
+                    entries, args.query, max(1,args.limit), claim_ids=[c['id'] for _,c in matches])]})
     elif args.command == 'sources':
         missing = [i for i in args.ids if i not in sources]
         if missing:
@@ -457,6 +680,8 @@ def main():
         errors = []  # load validated schema, report snapshot and all source slices.
         cited = {e['source_id'] for c in claims for e in c['evidence']}
         output({'claims':len(claims),'unresolved_questions':sum(c['id'].startswith('Q') for c in claims),
+                'research_through':registry['research_through'], 'original_snapshot':registry['snapshot'],
+                'current_coverage':coverage,
                 'source_units':len(units),'required_units':sum(u['kind']!='anchor' for u in units),
                 'covered_units':len({u for c in claims for u in c['source_units']}),
                 'source_groups':len(sources),'cited_source_groups':len(cited),
