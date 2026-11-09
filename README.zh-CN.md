@@ -8,7 +8,7 @@
 
 **8 个技能 · 578 个原始知识条目 + 14 项更新核查 · 保留 49 个待解问题**
 
-**v1.3.0：已核对算法代码至 2026-11-08。** [这次改了什么，用人话说明](docs/research-update.zh-CN.md) · [算法更新记录](ALGORITHM_CHANGELOG.md) · [版本记录](CHANGELOG.md)
+**v1.3.0：已核对算法代码至 2026-11-08。** [这次算法改了什么](docs/research-update.zh-CN.md) · [English](docs/research-update.en.md) · [算法更新记录](ALGORITHM_CHANGELOG.md) · [版本记录](CHANGELOG.md)
 
 [阅读完整研究文档](https://blog.go5.si/posts/zh/x-algorithm-teardown/) · [关注作者，了解最新进展](https://x.com/alexlee20122022)
 

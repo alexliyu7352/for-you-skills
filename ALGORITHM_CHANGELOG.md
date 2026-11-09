@@ -1,6 +1,6 @@
 # Algorithm synchronization changelog
 
-This log records reviewed changes in [X's public algorithm](https://github.com/xai-org/x-algorithm), separately from this package's [release history](CHANGELOG.md). [中文说明](docs/research-update.zh-CN.md).
+This log records reviewed changes in [X's public algorithm](https://github.com/xai-org/x-algorithm), separately from this package's [release history](CHANGELOG.md). [Creator update in English](docs/research-update.en.md) / [中文说明](docs/research-update.zh-CN.md).
 
 ## 2026-11-08 — For You Skills 1.3.0
 

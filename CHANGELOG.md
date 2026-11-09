@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Rewrite the Chinese November research update as a continuous explanation, retaining its evidence and limits. Add a full English counterpart and link both versions from the READMEs and algorithm changelog. The reviewed algorithm revision remains unchanged.
+
 ## 1.3.0 — 2026-11-08
 
 - Review seven upstream algorithm commits through `3b6919f87532e57063bb3f1e85c2f509323b513e`; add 14 dated findings and rechecks linked to 73 historical entries, preserving all 578 original entries and their provenance.

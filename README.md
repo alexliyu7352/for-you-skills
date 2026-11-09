@@ -8,7 +8,7 @@ You can ask **For You Skills** questions like this before you have a draft. Ask 
 
 **8 skills · 578 original knowledge entries + 14 dated updates and rechecks · 49 unresolved questions preserved**
 
-**v1.3.0: upstream source reviewed through 2026-11-08.** [What changed](ALGORITHM_CHANGELOG.md) · [中文说明](docs/research-update.zh-CN.md) · [Release notes](CHANGELOG.md)
+**v1.3.0: upstream source reviewed through 2026-11-08.** [What changed for creators](docs/research-update.en.md) · [中文说明](docs/research-update.zh-CN.md) · [Algorithm changelog](ALGORITHM_CHANGELOG.md) · [Release notes](CHANGELOG.md)
 
 [Read the full research](https://blog.go5.si/posts/x-algorithm-teardown/) · [Follow the author for updates](https://x.com/alexlee20122022)
 
